@@ -1,12 +1,12 @@
 import {ChangeEvent, useEffect, type FC} from 'react';
 import {NavLink} from 'react-router-dom';
-import {useWanikaniUser} from '../hooks/useWanikaniUser';
+import {useUser} from '../contexts/UserContext';
 import {useSettingsStore} from '../store/settingsStore';
 
 interface NavigationProps {}
 
 const Navigation: FC<NavigationProps> = () => {
-    const {user} = useWanikaniUser();
+    const {user} = useUser();
     const {level, setLevel} = useSettingsStore();
 
     // Determine max level based on user data or default to 3 if no API key

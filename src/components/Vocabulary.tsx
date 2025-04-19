@@ -4,6 +4,7 @@ import {useWanikaniAssignments} from '../hooks/useWanikaniAssignments';
 import {useMemo, useState, useEffect, useCallback, type FC} from 'react';
 import VocabularyList from './VocabularyList';
 import ActiveVocabularyBlock from './ActiveVocabularyBlock';
+import {createDateSortFunction} from '../utils/sortUtils';
 
 // Define the VocabularyItem interface
 interface VocabularyItem {
@@ -24,25 +25,48 @@ interface VocabularyProps {}
 
 const Vocabulary: FC<VocabularyProps> = () => {
     const level = useSettingsStore((state) => state.level);
+    const limitToLearned = useSettingsStore((state) => state.limitToLearned);
+    const sortByNextReview = useSettingsStore((state) => state.sortByNextReview);
     const {data, loading: loadingVocabulary, error: vocabularyError} = useDataFiles<VocabularyItem>('vocabulary');
-    const {assignments, loading: loadingAssignments, error: assignmentsError} = useWanikaniAssignments();
+    const {assignments, loading: loadingAssignments, error: assignmentsError} = useWanikaniAssignments('vocabulary');
     const [selectedIndex, setSelectedIndex] = useState<number>(0);
     const [userInput, setUserInput] = useState<string>('');
     const [isInputValid, setIsInputValid] = useState<boolean | null>(null);
     const [correctlyEnteredIds, setCorrectlyEnteredIds] = useState<number[]>([]);
 
-    // Filter vocabulary data to only show items that have been started
+    // Filter vocabulary data to only show items that have been started if limitToLearned is true
+    // And sort by next review date if sortByNextReview is true
     const filteredData = useMemo(() => {
-        if (!data || !assignments) return null;
+        if (!data) return null;
+        if (!assignments) return data;
 
-        // Get the subject_ids of vocabulary assignments that have been started
-        const startedVocabularyIds = assignments
-            .filter(assignment => assignment.data.subject_type === 'vocabulary')
-            .map(assignment => assignment.data.subject_id);
+        // Create a map of subject_id to available_at date for sorting
+        const availableDatesMap = new Map();
+        assignments
+            .filter(assignment => assignment.data.subject_type === 'vocabulary' || assignment.data.subject_type === 'kana_vocabulary')
+            .forEach(assignment => {
+                availableDatesMap.set(assignment.data.subject_id, assignment.data.available_at);
+            });
 
-        // Filter the vocabulary data to only include items whose IDs are in the startedVocabularyIds array
-        return data.filter(item => startedVocabularyIds.includes(item.id));
-    }, [data, assignments]);
+        // Filter the data based on limitToLearned
+        let result = data;
+        if (limitToLearned) {
+            // Get the subject_ids of vocabulary assignments that have been started
+            const startedVocabularyIds = assignments
+                .filter(assignment => assignment.data.subject_type === 'vocabulary' || assignment.data.subject_type === 'kana_vocabulary')
+                .map(assignment => assignment.data.subject_id);
+
+            // Filter the vocabulary data to only include items whose IDs are in the startedVocabularyIds array
+            result = data.filter(item => startedVocabularyIds.includes(item.id));
+        }
+
+        // Sort by next review date if sortByNextReview is true
+        if (sortByNextReview) {
+            return [...result].sort(createDateSortFunction(availableDatesMap));
+        }
+
+        return result;
+    }, [data, assignments, limitToLearned, sortByNextReview]);
 
     // Reset selected index when data changes
     useEffect(() => {
@@ -137,20 +161,10 @@ const Vocabulary: FC<VocabularyProps> = () => {
 
                 {!loading && !error && filteredData && (
                     <div>
-                        <p className="text-gray-700 mb-4">
-                            Showing {filteredData.length} started vocabulary words for level {level}.
-                        </p>
-                        <VocabularyList
-                            filteredData={filteredData}
-                            selectedIndex={selectedIndex}
-                            correctlyEnteredIds={correctlyEnteredIds}
-                            handleItemClick={handleItemClick}
-                        />
-
-                        {/* Display currently active vocabulary */}
                         {filteredData.length > 0 && (
                             <ActiveVocabularyBlock
                                 vocabulary={filteredData[selectedIndex]}
+                                position={`${selectedIndex + 1} / ${filteredData.length}`}
                                 userInput={userInput}
                                 isInputValid={isInputValid}
                                 validReadings={getValidReadings}
@@ -158,6 +172,13 @@ const Vocabulary: FC<VocabularyProps> = () => {
                                 onValidate={handleValidate}
                             />
                         )}
+                        <VocabularyList
+                            filteredData={filteredData}
+                            selectedIndex={selectedIndex}
+                            correctlyEnteredIds={correctlyEnteredIds}
+                            handleItemClick={handleItemClick}
+                        />
+
                     </div>
                 )}
             </div>

@@ -15,7 +15,7 @@ interface WanikaniUserResponse {
     data: WanikaniUserData;
 }
 
-interface WanikaniUserData {
+export interface WanikaniUserData {
     id: string;
     username: string;
     level: number;
@@ -65,7 +65,7 @@ interface UseWanikaniUserResult {
 export function useWanikaniUser(): UseWanikaniUserResult {
     const apiKey = useSettingsStore((state) => state.apiKey);
     const [user, setUser] = useState<WanikaniUserData | null>(null);
-    const [loading, setLoading] = useState<boolean>(false);
+    const [loading, setLoading] = useState<boolean>(true);
     const [error, setError] = useState<Error | null>(null);
 
     // Check if this is a page reload
@@ -120,6 +120,7 @@ export function useWanikaniUser(): UseWanikaniUserResult {
             const cachedData = getCachedData();
             if (cachedData) {
                 setUser(cachedData.user);
+                setLoading(false);
                 return;
             }
         }

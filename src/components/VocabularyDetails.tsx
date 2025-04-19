@@ -39,7 +39,7 @@ const VocabularyDetails: FC<VocabularyDetailsProps> = ({vocabulary}) => {
                     <tbody className="bg-white divide-y divide-gray-200">
                     <tr>
                         <td className="px-6 py-4 whitespace-nowrap">
-                            <div className="flex flex-col">
+                            <div className="flex flex-row gap-2">
                                 {vocabulary.reading.map((reading, index) => (
                                     <span
                                         key={index}
@@ -51,7 +51,7 @@ const VocabularyDetails: FC<VocabularyDetailsProps> = ({vocabulary}) => {
                             </div>
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap">
-                            <div className="flex flex-col">
+                            <div className="flex flex-row gap-2">
                                 {vocabulary.meanings.map((meaning, index) => (
                                     <span
                                         key={index}

@@ -24,7 +24,7 @@ interface KanjiDetailsProps {
 
 const KanjiDetails: FC<KanjiDetailsProps> = ({kanji}) => {
     return (
-        <div className="mt-4">
+        <div className="mt-4 min-w-2/3">
             <h3 className="text-lg font-medium mb-2">Kanji Details</h3>
             <div className="overflow-x-auto">
                 <table className="min-w-full divide-y divide-gray-200">
@@ -47,7 +47,7 @@ const KanjiDetails: FC<KanjiDetailsProps> = ({kanji}) => {
                     <tbody className="bg-white divide-y divide-gray-200">
                     <tr>
                         <td className="px-6 py-4 whitespace-nowrap">
-                            <div className="flex flex-col">
+                            <div className="flex flex-row gap-2">
                                 {kanji.onyomi.map((reading, index) => (
                                     <span
                                         key={index}
@@ -59,7 +59,7 @@ const KanjiDetails: FC<KanjiDetailsProps> = ({kanji}) => {
                             </div>
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap">
-                            <div className="flex flex-col">
+                            <div className="flex flex-row gap-2">
                                 {kanji.kunyomi.map((reading, index) => (
                                     <span
                                         key={index}
@@ -71,7 +71,7 @@ const KanjiDetails: FC<KanjiDetailsProps> = ({kanji}) => {
                             </div>
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap">
-                            <div className="flex flex-col">
+                            <div className="flex flex-row gap-2">
                                 {kanji.meanings.map((meaning, index) => (
                                     <span
                                         key={index}

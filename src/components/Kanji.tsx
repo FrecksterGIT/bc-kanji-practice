@@ -4,6 +4,7 @@ import {useWanikaniAssignments} from '../hooks/useWanikaniAssignments';
 import {useMemo, useState, useEffect, useCallback, type FC} from 'react';
 import KanjiList from './KanjiList';
 import ActiveKanjiBlock from './ActiveKanjiBlock';
+import {createDateSortFunction} from '../utils/sortUtils';
 
 // Define the KanjiItem interface
 interface KanjiItem {
@@ -33,25 +34,48 @@ interface KanjiProps {}
 
 const Kanji: FC<KanjiProps> = () => {
     const level = useSettingsStore((state) => state.level);
+    const limitToLearned = useSettingsStore((state) => state.limitToLearned);
+    const sortByNextReview = useSettingsStore((state) => state.sortByNextReview);
     const {data, loading: loadingKanji, error: kanjiError} = useDataFiles<KanjiItem>('kanji');
-    const {assignments, loading: loadingAssignments, error: assignmentsError} = useWanikaniAssignments();
+    const {assignments, loading: loadingAssignments, error: assignmentsError} = useWanikaniAssignments('kanji');
     const [selectedIndex, setSelectedIndex] = useState<number>(0);
     const [userInput, setUserInput] = useState<string>('');
     const [isInputValid, setIsInputValid] = useState<boolean | null>(null);
     const [correctlyEnteredIds, setCorrectlyEnteredIds] = useState<number[]>([]);
 
-    // Filter kanji data to only show items that have been started
+    // Filter kanji data to only show items that have been started if limitToLearned is true
+    // And sort by next review date if sortByNextReview is true
     const filteredData = useMemo(() => {
-        if (!data || !assignments) return null;
+        if (!data) return null;
+        if (!assignments) return data;
 
-        // Get the subject_ids of kanji assignments that have been started
-        const startedKanjiIds = assignments
+        // Create a map of subject_id to available_at date for sorting
+        const availableDatesMap = new Map();
+        assignments
             .filter(assignment => assignment.data.subject_type === 'kanji')
-            .map(assignment => assignment.data.subject_id);
+            .forEach(assignment => {
+                availableDatesMap.set(assignment.data.subject_id, assignment.data.available_at);
+            });
 
-        // Filter the kanji data to only include items whose IDs are in the startedKanjiIds array
-        return data.filter(item => startedKanjiIds.includes(item.id));
-    }, [data, assignments]);
+        // Filter the data based on limitToLearned
+        let result = data;
+        if (limitToLearned) {
+            // Get the subject_ids of kanji assignments that have been started
+            const startedKanjiIds = assignments
+                .filter(assignment => assignment.data.subject_type === 'kanji')
+                .map(assignment => assignment.data.subject_id);
+
+            // Filter the kanji data to only include items whose IDs are in the startedKanjiIds array
+            result = data.filter(item => startedKanjiIds.includes(item.id));
+        }
+
+        // Sort by next review date if sortByNextReview is true
+        if (sortByNextReview) {
+            return [...result].sort(createDateSortFunction(availableDatesMap));
+        }
+
+        return result;
+    }, [data, assignments, limitToLearned, sortByNextReview]);
 
     // Reset selected index when data changes
     useEffect(() => {
@@ -155,19 +179,14 @@ const Kanji: FC<KanjiProps> = () => {
                 {!loading && !error && filteredData && (
                     <div>
                         <p className="text-gray-700 mb-4">
-                            Showing {filteredData.length} started kanji characters for level {level}.
+                            {limitToLearned
+                                ? `Showing ${filteredData.length} started kanji characters for level ${level}.`
+                                : `Showing ${filteredData.length} kanji characters for level ${level}.`}
                         </p>
-                        <KanjiList
-                            filteredData={filteredData}
-                            selectedIndex={selectedIndex}
-                            correctlyEnteredIds={correctlyEnteredIds}
-                            handleItemClick={handleItemClick}
-                        />
-
-                        {/* Display currently active kanji */}
                         {filteredData.length > 0 && (
                             <ActiveKanjiBlock
                                 kanji={filteredData[selectedIndex]}
+                                position={`${selectedIndex + 1} / ${filteredData.length}`}
                                 userInput={userInput}
                                 isInputValid={isInputValid}
                                 validReadings={getValidReadings}
@@ -175,6 +194,12 @@ const Kanji: FC<KanjiProps> = () => {
                                 onValidate={handleValidate}
                             />
                         )}
+                        <KanjiList
+                            filteredData={filteredData}
+                            selectedIndex={selectedIndex}
+                            correctlyEnteredIds={correctlyEnteredIds}
+                            handleItemClick={handleItemClick}
+                        />
                     </div>
                 )}
             </div>

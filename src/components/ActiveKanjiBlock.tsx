@@ -28,6 +28,7 @@ interface KanjiItem {
 
 interface ActiveKanjiBlockProps {
     kanji: KanjiItem;
+    position: string;
     userInput: string;
     isInputValid: boolean | null;
     validReadings: string[];
@@ -37,6 +38,7 @@ interface ActiveKanjiBlockProps {
 
 const ActiveKanjiBlock: FC<Readonly<ActiveKanjiBlockProps>> = ({
     kanji,
+    position,
     userInput,
     isInputValid,
     validReadings,
@@ -50,12 +52,12 @@ const ActiveKanjiBlock: FC<Readonly<ActiveKanjiBlockProps>> = ({
     }, [kanji]);
 
     return (
-        <div className="mt-8 p-4 border rounded-lg bg-white shadow-md">
+        <div className="mb-8 p-4 border rounded-lg bg-white shadow-md">
             <h2 className="text-xl font-bold mb-2">Currently Active Kanji</h2>
             <div className="flex flex-col items-center">
+                <div>{position}</div>
                 <div className="text-5xl mb-4">{kanji.kanji}</div>
 
-                {/* Reading input section */}
                 <div className="w-full max-w-md mb-4">
                     <label htmlFor="kanji-reading"
                            className="block text-sm font-medium text-gray-700 mb-1">

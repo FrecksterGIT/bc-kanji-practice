@@ -19,6 +19,7 @@ interface VocabularyItem {
 
 interface ActiveVocabularyBlockProps {
     vocabulary: VocabularyItem;
+    position: string;
     userInput: string;
     isInputValid: boolean | null;
     validReadings: string[];
@@ -28,6 +29,7 @@ interface ActiveVocabularyBlockProps {
 
 const ActiveVocabularyBlock: FC<Readonly<ActiveVocabularyBlockProps>> = ({
     vocabulary,
+    position,
     userInput,
     isInputValid,
     validReadings,
@@ -41,9 +43,10 @@ const ActiveVocabularyBlock: FC<Readonly<ActiveVocabularyBlockProps>> = ({
     }, [vocabulary]);
 
     return (
-        <div className="mt-8 p-4 border rounded-lg bg-white shadow-md">
+        <div className="mb-8 p-4 border rounded-lg bg-white shadow-md">
             <h2 className="text-xl font-bold mb-2">Currently Active Vocabulary</h2>
             <div className="flex flex-col items-center">
+                <div>{position}</div>
                 <div className="text-4xl mb-4">{vocabulary.word}</div>
 
                 {/* Reading input section */}
