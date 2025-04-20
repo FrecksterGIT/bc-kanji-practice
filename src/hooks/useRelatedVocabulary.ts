@@ -61,7 +61,7 @@ export function useRelatedVocabulary(kanji: string): UseRelatedVocabularyResult 
 
             try {
                 // Get vocabulary items directly from the index - O(1) lookup
-                const filtered: VocabularyItem[] = allVocabularyData.kanjiIndex.get(kanji) || [];
+                const filtered: VocabularyItem[] = allVocabularyData.kanjiIndex.get(kanji) ?? [];
 
                 // Sort by vocabulary level
                 return filtered.toSorted((a, b) => a.level - b.level);

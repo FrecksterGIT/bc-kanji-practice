@@ -65,8 +65,8 @@ const ActiveKanjiBlock: FC<Readonly<ActiveKanjiBlockProps>> = ({
                     {!vocabularyLoading && !vocabularyError && relatedVocabulary.length > 0 && (
                         <div className="flex gap-x-1 gap-y-4 flex-wrap justify-center">
                             {relatedVocabulary.map((vocab) => {
-                                const reading = vocab.reading.find(r => r.primary)?.reading || vocab.reading[0]?.reading;
-                                const meaning = vocab.meanings.find(m => m.primary)?.meaning || vocab.meanings[0]?.meaning;
+                                const reading = vocab.reading.find(r => r.primary)?.reading ?? vocab.reading[0]?.reading;
+                                const meaning = vocab.meanings.find(m => m.primary)?.meaning ?? vocab.meanings[0]?.meaning;
 
                                 return (
                                     <div key={vocab.id}>
