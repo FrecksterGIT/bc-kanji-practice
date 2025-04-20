@@ -1,5 +1,7 @@
 import React, {createContext, useContext, ReactNode, useMemo, useCallback, useEffect, useState} from 'react';
 import {useWanikaniUser} from '../hooks/useWanikaniUser';
+import {useSettingsStore} from '../store/settingsStore';
+import {loadDataFile} from '../utils/dataLoader';
 
 // Import the user data type from the hook file
 import type {WanikaniUserData} from '../hooks/useWanikaniUser';
@@ -22,9 +24,40 @@ interface UserProviderProps {
 }
 
 export const SessionProvider: React.FC<UserProviderProps> = ({children}) => {
-    const {user, loading, error, refetch} = useWanikaniUser();
+    const {user, loading: userLoading, error, refetch} = useWanikaniUser();
+    const apiKey = useSettingsStore((state) => state.apiKey);
 
     const [voice, setVoice] = useState<SpeechSynthesisVoice | null>(null);
+    const [prefetching, setPrefetching] = useState<boolean>(false);
+
+    // Combined loading state from user loading and prefetching
+    const loading = userLoading || prefetching;
+
+    // Preload kanji data files for all levels up to the user's max level
+    useEffect(() => {
+        // Determine max level - use user's level if available and API key is valid, otherwise default to 3
+        const maxLevel = (user?.level && apiKey) ? user.level : 3;
+
+        // Set prefetching to true before starting
+        setPrefetching(true);
+
+        // Create an array of promises for all levels
+        const prefetchPromises = [];
+        for (let i = 1; i <= maxLevel; i++) {
+            // Use the unified loadDataFile function from utils
+            prefetchPromises.push(
+                loadDataFile('kanji', i)
+                    .catch(err => console.error(`Error preloading kanji data for level ${i}:`, err))
+            );
+        }
+
+        // Wait for all prefetch operations to complete
+        Promise.all(prefetchPromises)
+            .finally(() => {
+                // Set prefetching to false when done
+                setPrefetching(false);
+            });
+    }, [user, apiKey]);
 
     useEffect(() => {
         if ("speechSynthesis" in window) {

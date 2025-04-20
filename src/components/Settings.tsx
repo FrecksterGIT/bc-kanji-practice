@@ -1,5 +1,6 @@
 import {useSettingsStore} from '../store/settingsStore';
-import {ChangeEvent, type FC} from "react";
+import {ChangeEvent, type FC, useState} from "react";
+import {clearAllDataFileCaches} from '../utils/dataLoader';
 
 interface SettingsProps {
 }
@@ -11,24 +12,29 @@ const Settings: FC<SettingsProps> = () => {
         limitToLearned,
         limitToCurrentLevel,
         sortByNextReview,
-        level,
         setApiKey,
         setLimitToLearned,
         setLimitToCurrentLevel,
         setSortByNextReview,
-        setLevel
     } = useSettingsStore();
+
+    // State for cache clearing feedback
+    const [cacheCleared, setCacheCleared] = useState(false);
 
     // Handle input changes
     const handleApiKeyChange = (e: ChangeEvent<HTMLInputElement>) => {
         setApiKey(e.target.value);
     };
 
-    const handleLevelChange = (e: ChangeEvent<HTMLInputElement>) => {
-        const newLevel = parseInt(e.target.value, 10);
-        if (!isNaN(newLevel) && newLevel > 0) {
-            setLevel(newLevel);
-        }
+    // Handle cache clearing
+    const handleClearCache = () => {
+        clearAllDataFileCaches();
+        setCacheCleared(true);
+
+        // Reset the message after 3 seconds
+        setTimeout(() => {
+            setCacheCleared(false);
+        }, 3000);
     };
 
     return (
@@ -51,22 +57,6 @@ const Settings: FC<SettingsProps> = () => {
                             onChange={handleApiKeyChange}
                             className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm p-2 border"
                             placeholder="Enter your API key"
-                        />
-                    </div>
-
-                    {/* Level Input */}
-                    <div className="space-y-2">
-                        <label htmlFor="level" className="block text-sm font-medium">
-                            Level
-                        </label>
-                        <input
-                            type="number"
-                            id="level"
-                            value={level}
-                            onChange={handleLevelChange}
-                            min="1"
-                            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm p-2 border"
-                            placeholder="Enter your level"
                         />
                     </div>
 
@@ -110,6 +100,26 @@ const Settings: FC<SettingsProps> = () => {
                                 Sort items by next review date
                             </label>
                         </div>
+                    </div>
+
+                    {/* Cache Management Section */}
+                    <div className="mt-6 pt-6 border-t border-gray-200">
+                        <h3 className="text-lg font-medium mb-4">Data Cache Management</h3>
+                        <p className="text-sm text-gray-600 mb-4">
+                            Clear all cached data files to fetch fresh data on next access.
+                        </p>
+                        <button
+                            onClick={handleClearCache}
+                            className="px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500"
+                        >
+                            Clear Data Cache
+                        </button>
+
+                        {cacheCleared && (
+                            <div className="mt-2 p-2 bg-green-100 text-green-800 rounded-md">
+                                Cache cleared successfully!
+                            </div>
+                        )}
                     </div>
                 </form>
             </div>
