@@ -20,7 +20,7 @@ interface VocabularyDetailsProps {
 
 const VocabularyDetails: FC<VocabularyDetailsProps> = ({vocabulary}) => {
     return (
-        <div className="mt-4">
+        <div className="mt-4 min-w-2/3">
             <h3 className="text-lg font-medium mb-2">Vocabulary Details</h3>
             <div className="overflow-x-auto">
                 <table className="min-w-full divide-y divide-gray-200">

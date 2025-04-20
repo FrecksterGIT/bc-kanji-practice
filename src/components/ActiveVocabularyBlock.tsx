@@ -44,10 +44,9 @@ const ActiveVocabularyBlock: FC<Readonly<ActiveVocabularyBlockProps>> = ({
 
     return (
         <div className="mb-8 p-4 border rounded-lg bg-white shadow-md">
-            <h2 className="text-xl font-bold mb-2">Currently Active Vocabulary</h2>
             <div className="flex flex-col items-center">
-                <div>{position}</div>
-                <div className="text-4xl mb-4">{vocabulary.word}</div>
+                <div className="mt-4">{position}</div>
+                <div className="text-8xl mb-4 mt-4">{vocabulary.word}</div>
 
                 {/* Reading input section */}
                 <div className="w-full max-w-md mb-4">
@@ -66,13 +65,11 @@ const ActiveVocabularyBlock: FC<Readonly<ActiveVocabularyBlockProps>> = ({
                     />
 
                     {/* Feedback message */}
-                    {userInput && (
-                        <p className={`mt-2 text-sm ${isInputValid ? 'text-green-600' : 'text-red-600'}`}>
-                            {isInputValid
-                                ? 'Correct reading!'
-                                : 'Incorrect reading. Try again.'}
-                        </p>
-                    )}
+                    <p className={`mt-2 text-sm ${!userInput ? '' : isInputValid ? 'text-green-600' : 'text-red-600'}`}>
+                        {userInput && isInputValid && ('Correct reading!')}
+                        {userInput && !isInputValid && ('Incorrect reading. Try again.')}
+                        {!userInput && ('Please enter the reading.')}
+                    </p>
                 </div>
 
                 {/* Vocabulary Details Table */}

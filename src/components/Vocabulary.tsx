@@ -24,7 +24,6 @@ interface VocabularyItem {
 interface VocabularyProps {}
 
 const Vocabulary: FC<VocabularyProps> = () => {
-    const level = useSettingsStore((state) => state.level);
     const limitToLearned = useSettingsStore((state) => state.limitToLearned);
     const sortByNextReview = useSettingsStore((state) => state.sortByNextReview);
     const {data, loading: loadingVocabulary, error: vocabularyError} = useDataFiles<VocabularyItem>('vocabulary');
@@ -149,7 +148,6 @@ const Vocabulary: FC<VocabularyProps> = () => {
 
     return (
         <div className="flex flex-col items-center py-8">
-            <h1 className="text-3xl font-bold mb-4">Vocabulary Practice (Level {level})</h1>
             <div className="bg-white p-6 rounded-lg shadow-md w-full">
                 {loading && (
                     <p className="text-gray-700">Loading vocabulary data...</p>

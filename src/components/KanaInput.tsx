@@ -1,4 +1,4 @@
-import {useState, useEffect, ChangeEvent, forwardRef} from 'react';
+import {useState, useEffect, ChangeEvent, forwardRef, useCallback} from 'react';
 import * as wanakana from 'wanakana';
 
 interface KanaInputProps {
@@ -56,6 +56,10 @@ const KanaInput = forwardRef<HTMLInputElement, KanaInputProps>(({
         }
     }, [externalValue, validValues]);
 
+    useEffect(() => {
+        setIsValid(null)
+    }, [validValues]);
+
     const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
         const input = e.target.value;
 
@@ -82,10 +86,10 @@ const KanaInput = forwardRef<HTMLInputElement, KanaInputProps>(({
     };
 
     // Determine border color based on validation status
-    const getBorderColorClass = () => {
+    const getBorderColorClass = useCallback(() => {
         if (isValid === null) return 'border-gray-300'; // Default
-        return isValid ? 'border-green-500' : 'border-red-500'; // Valid or Invalid
-    };
+        return isValid ? 'border-green-500 focus:border-green-500' : 'border-red-500 focus:border-red-500'; // Valid or Invalid
+    }, [isValid]);
 
     return (
         <input
@@ -93,7 +97,7 @@ const KanaInput = forwardRef<HTMLInputElement, KanaInputProps>(({
             value={internalValue}
             onChange={handleInputChange}
             placeholder={placeholder}
-            className={`mt-1 block w-full rounded-md shadow-sm focus:ring-blue-500 sm:text-sm p-2 border ${getBorderColorClass()} ${className}`}
+            className={`mt-1 block w-full rounded-md shadow-sm focus-visible:outline-none sm:text-sm p-2 border ${getBorderColorClass()} ${className}`}
             id={id}
             name={name}
             ref={ref}

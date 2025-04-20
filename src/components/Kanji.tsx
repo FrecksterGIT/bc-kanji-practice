@@ -33,7 +33,6 @@ interface KanjiItem {
 interface KanjiProps {}
 
 const Kanji: FC<KanjiProps> = () => {
-    const level = useSettingsStore((state) => state.level);
     const limitToLearned = useSettingsStore((state) => state.limitToLearned);
     const sortByNextReview = useSettingsStore((state) => state.sortByNextReview);
     const {data, loading: loadingKanji, error: kanjiError} = useDataFiles<KanjiItem>('kanji');
@@ -166,7 +165,6 @@ const Kanji: FC<KanjiProps> = () => {
 
     return (
         <div className="flex flex-col items-center py-8">
-            <h1 className="text-3xl font-bold mb-4">Kanji Practice (Level {level})</h1>
             <div className="bg-white p-6 rounded-lg shadow-md w-full">
                 {loading && (
                     <p className="text-gray-700">Loading kanji data...</p>
@@ -178,11 +176,6 @@ const Kanji: FC<KanjiProps> = () => {
 
                 {!loading && !error && filteredData && (
                     <div>
-                        <p className="text-gray-700 mb-4">
-                            {limitToLearned
-                                ? `Showing ${filteredData.length} started kanji characters for level ${level}.`
-                                : `Showing ${filteredData.length} kanji characters for level ${level}.`}
-                        </p>
                         {filteredData.length > 0 && (
                             <ActiveKanjiBlock
                                 kanji={filteredData[selectedIndex]}

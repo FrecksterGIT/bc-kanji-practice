@@ -16,8 +16,8 @@ interface SettingsState {
 }
 
 // Create the store with persistence
-export const useSettingsStore = create<SettingsState>()(
-    persist(
+export const useSettingsStore = create(
+    persist<SettingsState>(
         (set) => ({
             // Initial state
             apiKey: '',
