@@ -25,32 +25,31 @@ interface KanjiDetailsProps {
 const KanjiDetails: FC<KanjiDetailsProps> = ({kanji}) => {
     return (
         <div className="mt-4 min-w-2/3">
-            <h3 className="text-lg font-medium mb-2">Kanji Details</h3>
             <div className="overflow-x-auto">
                 <table className="min-w-full divide-y divide-gray-200">
-                    <thead className="bg-gray-50">
+                    <thead>
                     <tr>
                         <th scope="col"
-                            className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                            className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
                             Onyomi
                         </th>
                         <th scope="col"
-                            className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                            className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
                             Kunyomi
                         </th>
                         <th scope="col"
-                            className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                            className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
                             Meanings
                         </th>
                     </tr>
                     </thead>
-                    <tbody className="bg-white divide-y divide-gray-200">
+                    <tbody className="divide-y divide-gray-200">
                     <tr>
                         <td className="px-6 py-4 whitespace-nowrap">
                             {kanji.onyomi.map((reading) => (
                                 <span
                                     key={reading.reading}
-                                    className={`separated-comma ${reading.primary ? 'font-bold text-blue-600' : 'text-gray-700'}`}
+                                    className={`separated-comma ${reading.primary ? 'font-bold' : ''}`}
                                 >{reading.reading}</span>
                             ))}
                         </td>
@@ -58,7 +57,7 @@ const KanjiDetails: FC<KanjiDetailsProps> = ({kanji}) => {
                             {kanji.kunyomi.map((reading) => (
                                 <span
                                     key={reading.reading}
-                                    className={`separated-comma ${reading.primary ? 'font-bold text-blue-600' : 'text-gray-700'}`}
+                                    className={`separated-comma ${reading.primary ? 'font-bold' : ''}`}
                                 >{reading.reading}</span>
                             ))}
                         </td>
@@ -66,7 +65,7 @@ const KanjiDetails: FC<KanjiDetailsProps> = ({kanji}) => {
                             {kanji.meanings.map((meaning) => (
                                 <span
                                     key={meaning.meaning}
-                                    className={`separated-comma ${meaning.primary ? 'font-bold text-blue-600' : 'text-gray-700'}`}
+                                    className={`separated-comma ${meaning.primary ? 'font-bold' : ''}`}
                                 >{meaning.meaning}</span>
                             ))}
                         </td>

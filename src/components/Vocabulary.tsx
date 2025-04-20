@@ -148,9 +148,9 @@ const Vocabulary: FC<VocabularyProps> = () => {
 
     return (
         <div className="flex flex-col items-center py-8">
-            <div className="bg-white p-6 rounded-lg shadow-md w-full">
+            <div className="p-6 rounded-lg shadow-md w-full">
                 {loading && (
-                    <p className="text-gray-700">Loading vocabulary data...</p>
+                    <p>Loading vocabulary data...</p>
                 )}
 
                 {error && (

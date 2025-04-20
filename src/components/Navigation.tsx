@@ -31,19 +31,19 @@ const Navigation: FC<NavigationProps> = () => {
     }, [maxLevel, level, setLevel]);
 
     return (
-        <nav className="bg-blue-600 text-white p-4">
+        <nav className="sticky top-0 z-10 bg-gray-700 text-white p-4">
             <div className="container mx-auto flex flex-wrap items-center justify-between">
                 <div className="flex items-center">
                     <span className="text-xl font-bold">Kanji Practice</span>
                 </div>
                 <div className="flex items-center space-x-4">
                     <NavLink to="/kanji" className={({isActive}) =>
-                        `px-3 py-2 rounded hover:bg-blue-700 transition-colors ${isActive ? 'bg-blue-700' : ''}`
+                        `px-3 py-2 rounded hover:bg-pink-400 transition-colors ${isActive ? 'bg-pink-400' : ''}`
                     }>
                         Kanji
                     </NavLink>
                     <NavLink to="/vocabulary" className={({isActive}) =>
-                        `px-3 py-2 rounded hover:bg-blue-700 transition-colors ${isActive ? 'bg-blue-700' : ''}`
+                        `px-3 py-2 rounded hover:bg-purple-400 transition-colors ${isActive ? 'bg-purple-400' : ''}`
                     }>
                         Vocabulary
                     </NavLink>
@@ -53,7 +53,7 @@ const Navigation: FC<NavigationProps> = () => {
                             id="level-select"
                             value={level}
                             onChange={handleLevelChange}
-                            className="bg-blue-700 text-white rounded px-2 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-blue-300"
+                            className="bg-gray-800 text-white rounded px-2 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-blue-300"
                         >
                             {levelOptions.map((lvl) => (
                                 <option key={lvl} value={lvl}>
@@ -63,7 +63,7 @@ const Navigation: FC<NavigationProps> = () => {
                         </select>
                     </div>
                     <NavLink to="/settings" className={({isActive}) =>
-                        `px-3 py-2 rounded hover:bg-blue-700 transition-colors ${isActive ? 'bg-blue-700' : ''}`
+                        `px-3 py-2 rounded hover:bg-gray-600 transition-colors ${isActive ? 'bg-gray-600' : ''}`
                     }>
                         Settings
                     </NavLink>

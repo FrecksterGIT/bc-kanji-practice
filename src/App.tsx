@@ -8,7 +8,7 @@ const AppContent = () => {
 
     if (loading) {
         return (
-            <div className="flex min-h-screen flex-col bg-gray-100">
+            <div className="flex min-h-screen flex-col bg-gray-900 text-white">
                 <div className="flex-grow container mx-auto flex items-center justify-center">
                     <div className="text-xl">Loading user data...</div>
                 </div>
@@ -17,7 +17,7 @@ const AppContent = () => {
     }
 
     return (
-        <div className="flex min-h-screen flex-col bg-gray-100">
+        <div className="flex min-h-screen flex-col bg-gray-900 text-white">
             <Navigation/>
             <div className="flex-grow container mx-auto">
                 <Outlet />

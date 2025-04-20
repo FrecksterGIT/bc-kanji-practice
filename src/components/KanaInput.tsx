@@ -87,7 +87,7 @@ const KanaInput = forwardRef<HTMLInputElement, KanaInputProps>(({
 
     // Determine border color based on validation status
     const getBorderColorClass = useCallback(() => {
-        if (isValid === null || !internalValue) return 'border-gray-300'; // Default
+        if (isValid === null || !internalValue) return 'border-gray-600'; // Default
         return isValid ? 'border-green-500 focus:border-green-500' : 'border-red-500 focus:border-red-500'; // Valid or Invalid
     }, [isValid, internalValue]);
 
@@ -108,7 +108,7 @@ const KanaInput = forwardRef<HTMLInputElement, KanaInputProps>(({
             value={internalValue}
             onChange={handleInputChange}
             placeholder={placeholder}
-            className={`mt-1 block w-full rounded-md shadow-sm focus-visible:outline-none sm:text-sm p-2 border ${getBorderColorClass()} ${className}`}
+            className={`mt-1 block w-full rounded-md focus-visible:outline-none text-4xl p-2 border bg-gray-700 ${getBorderColorClass()} ${className}`}
             id={id}
             name={name}
             ref={ref}
