@@ -1,4 +1,5 @@
 import { type FC } from 'react';
+import SelectableButton from './SelectableButton';
 
 // Define the KanjiItem interface
 interface KanjiItem {
@@ -36,16 +37,13 @@ const KanjiList: FC<KanjiListProps> = ({ filteredData, selectedIndex, correctlyE
         <div className="grid gap-2 auto-rows-auto"
              style={{gridTemplateColumns: 'repeat(auto-fill, minmax(10rem, 1fr))'}}>
             {filteredData.map((item, index) => (
-                <button
+                <SelectableButton
                     key={item.id}
-                    className={`border p-2 text-center text-2xl cursor-pointer transition-colors 
-                    ${selectedIndex === index ? 'bg-blue-100 border-blue-500' : 
-                      correctlyEnteredIds.includes(item.id) ? 'bg-green-100 border-green-500' : 
-                      'hover:bg-gray-100'}`}
+                    selected={selectedIndex === index}
+                    valid={correctlyEnteredIds.includes(item.id)}
                     onClick={() => handleItemClick(index)}
-                >
-                    {item.kanji}
-                </button>
+                    term={item.kanji}
+                />
             ))}
         </div>
     );
