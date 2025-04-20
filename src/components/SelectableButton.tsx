@@ -1,10 +1,13 @@
 import {type FC, useCallback} from 'react';
+import {NoAnswer} from "./icons/NoAnswer.tsx";
+import {CorrectAnswer} from "./icons/CorrectAnswer.tsx";
 
 interface SelectableButtonProps {
     selected: boolean;
     valid: boolean;
     onClick: () => void;
     term: string;
+    type: "kanji" | "vocabulary";
 }
 
 const SelectableButton: FC<SelectableButtonProps> = ({
@@ -12,20 +15,21 @@ const SelectableButton: FC<SelectableButtonProps> = ({
                                                          selected,
                                                          valid,
                                                          onClick,
+    type,
                                                      }) => {
     const getButtonClass = useCallback(() => {
-        if (selected && !valid) return 'bg-blue-100 border-blue-500';
-        if (valid) return 'bg-green-100 border-green-500';
-        return 'hover:bg-gray-100';
+        if (selected) return type === 'kanji' ? 'bg-pink-400' : 'bg-purple-400';
+        return '';
     }, [selected, valid]);
 
     return (
         <button
-            className={`border p-2 text-center cursor-pointer transition-colors 
-                ${getButtonClass()}`}
+            className={`cursor-pointer transition-colors grid grid-cols-[min-content_auto] items-center gap-2`}
             onClick={onClick}
         >
-            <span className="text-xl">{term}</span>
+            {!valid && <NoAnswer/>}
+            {valid && <CorrectAnswer/>}
+            <div className={`text-xl text-nowrap text-left rounded-lg px-2 py-1 ${getButtonClass()}`}>{term}</div>
         </button>
     );
 };

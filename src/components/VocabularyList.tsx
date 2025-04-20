@@ -34,6 +34,7 @@ const VocabularyList: FC<VocabularyListProps> = ({filteredData, selectedIndex, c
                     valid={correctlyEnteredIds.includes(item.id)}
                     onClick={() => handleItemClick(index)}
                     term={item.word}
+                    type={"vocabulary"}
                 />
             ))}
         </div>

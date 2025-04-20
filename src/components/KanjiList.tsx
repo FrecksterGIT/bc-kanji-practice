@@ -43,6 +43,7 @@ const KanjiList: FC<KanjiListProps> = ({ filteredData, selectedIndex, correctlyE
                     valid={correctlyEnteredIds.includes(item.id)}
                     onClick={() => handleItemClick(index)}
                     term={item.kanji}
+                    type={"kanji"}
                 />
             ))}
         </div>
