@@ -1,5 +1,5 @@
 import {useSettingsStore} from '../store/settingsStore';
-import {ChangeEvent, type FC, useState} from "react";
+import {ChangeEvent, type FC, useState, useEffect} from "react";
 import {clearAllDataFileCaches} from '../utils/dataLoader';
 
 interface SettingsProps {
@@ -18,12 +18,25 @@ const Settings: FC<SettingsProps> = () => {
         setSortByNextReview,
     } = useSettingsStore();
 
+    // Local state for API key input
+    const [apiKeyInput, setApiKeyInput] = useState(apiKey);
+
+    // Synchronize local state with store value when apiKey changes
+    useEffect(() => {
+        setApiKeyInput(apiKey);
+    }, [apiKey]);
+
     // State for cache clearing feedback
     const [cacheCleared, setCacheCleared] = useState(false);
 
     // Handle input changes
     const handleApiKeyChange = (e: ChangeEvent<HTMLInputElement>) => {
-        setApiKey(e.target.value);
+        setApiKeyInput(e.target.value);
+    };
+
+    // Handle save API key
+    const handleSaveApiKey = () => {
+        setApiKey(apiKeyInput);
     };
 
     // Handle cache clearing
@@ -50,14 +63,23 @@ const Settings: FC<SettingsProps> = () => {
                         <label htmlFor="apiKey" className="block text-sm font-medium">
                             API Key
                         </label>
-                        <input
-                            type="text"
-                            id="apiKey"
-                            value={apiKey}
-                            onChange={handleApiKeyChange}
-                            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm p-2 border"
-                            placeholder="Enter your API key"
-                        />
+                        <div className="flex">
+                            <input
+                                type="text"
+                                id="apiKey"
+                                value={apiKeyInput}
+                                onChange={handleApiKeyChange}
+                                className="mt-1 block w-full rounded-l-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm p-2 border"
+                                placeholder="Enter your API key"
+                            />
+                            <button
+                                type="button"
+                                onClick={handleSaveApiKey}
+                                className="mt-1 px-4 py-2 bg-blue-600 text-white rounded-r-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            >
+                                Save
+                            </button>
+                        </div>
                     </div>
 
                     {/* Checkboxes */}
