@@ -20,7 +20,7 @@ export interface CachedData<T> {
  * Opens the IndexedDB database
  * @returns A promise that resolves to the database instance
  */
-const openDatabase = (): Promise<IDBDatabase> => {
+export const openDatabase = (): Promise<IDBDatabase> => {
     return new Promise((resolve, reject) => {
         const request = indexedDB.open(DB_NAME, DB_VERSION);
 

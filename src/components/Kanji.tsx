@@ -30,9 +30,7 @@ interface KanjiItem {
     }[];
 }
 
-interface KanjiProps {}
-
-const Kanji: FC<KanjiProps> = () => {
+const Kanji: FC = () => {
     const limitToLearned = useSettingsStore((state) => state.limitToLearned);
     const sortByNextReview = useSettingsStore((state) => state.sortByNextReview);
     const {data, loading: loadingKanji, error: kanjiError} = useDataFiles<KanjiItem>('kanji');

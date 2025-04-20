@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react';
+import {useState, useEffect, useCallback} from 'react';
 import {useSettingsStore} from '../store/settingsStore';
 import {
     loadDataFile,
@@ -46,7 +46,7 @@ export function useDataFiles<T extends KanjiItem | VocabularyItem>(
     const [loading, setLoading] = useState<boolean>(false);
     const [error, setError] = useState<Error | null>(null);
 
-    const fetchData = async (forceRefresh = false) => {
+    const fetchData = useCallback(async (forceRefresh = false) => {
         setLoading(true);
         setError(null);
 
@@ -59,13 +59,13 @@ export function useDataFiles<T extends KanjiItem | VocabularyItem>(
         } finally {
             setLoading(false);
         }
-    };
+    }, [dataType, level]);
 
     useEffect(() => {
         // Force refresh on page reload
         const shouldRefresh = isPageReload('data-files-page-load');
-        fetchData(shouldRefresh);
-    }, [dataType, level]);
+        fetchData(shouldRefresh).then();
+    }, [dataType, fetchData, level]);
 
     return {
         data,

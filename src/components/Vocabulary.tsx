@@ -21,9 +21,7 @@ interface VocabularyItem {
     }[];
 }
 
-interface VocabularyProps {}
-
-const Vocabulary: FC<VocabularyProps> = () => {
+const Vocabulary: FC = () => {
     const limitToLearned = useSettingsStore((state) => state.limitToLearned);
     const sortByNextReview = useSettingsStore((state) => state.sortByNextReview);
     const {data, loading: loadingVocabulary, error: vocabularyError} = useDataFiles<VocabularyItem>('vocabulary');

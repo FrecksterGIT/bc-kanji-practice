@@ -47,7 +47,7 @@ const KanaInput = forwardRef<HTMLInputElement, KanaInputProps>(({
     const [isValid, setIsValid] = useState<boolean | null>(null);
 
     // Validate the input value
-    const validateInput = (value: string) => {
+    const validateInput = useCallback((value: string) => {
         if (!validHiraganaValues || validHiraganaValues.length === 0) {
             return null; // No validation needed
         }
@@ -61,7 +61,7 @@ const KanaInput = forwardRef<HTMLInputElement, KanaInputProps>(({
         }
 
         return valid;
-    };
+    }, [onValidate, validHiraganaValues]);
 
     // Sync with external value if provided
     useEffect(() => {
@@ -69,7 +69,7 @@ const KanaInput = forwardRef<HTMLInputElement, KanaInputProps>(({
             setInternalValue(externalValue);
             validateInput(externalValue);
         }
-    }, [externalValue, validHiraganaValues]);
+    }, [externalValue, internalValue, validHiraganaValues, validateInput]);
 
     useEffect(() => {
         setIsValid(null)

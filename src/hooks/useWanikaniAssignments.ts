@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react';
+import {useState, useEffect, useCallback} from 'react';
 import {useSettingsStore} from '../store/settingsStore';
 
 // Cache key for localStorage
@@ -79,12 +79,12 @@ export function useWanikaniAssignments(subjectType: 'kanji' | 'vocabulary' = 'ka
     };
 
     // Get cache key based on level and subject type
-    const getCacheKey = () => {
+    const getCacheKey = useCallback(() => {
         return `${WANIKANI_ASSIGNMENTS_CACHE_KEY_PREFIX}${level}-${subjectType}`;
-    };
+    }, [level, subjectType]);
 
     // Get cached data from localStorage
-    const getCachedData = (): CachedData | null => {
+    const getCachedData = useCallback((): CachedData | null => {
         const cacheKey = getCacheKey();
         const cachedDataString = localStorage.getItem(cacheKey);
         if (!cachedDataString) return null;
@@ -104,7 +104,7 @@ export function useWanikaniAssignments(subjectType: 'kanji' | 'vocabulary' = 'ka
             console.error('Error parsing cached data:', err);
             return null;
         }
-    };
+    }, [getCacheKey, level]);
 
     // Helper function to convert string date to Date object
     const convertToDate = (dateString: string | null): Date | null => {
@@ -115,16 +115,16 @@ export function useWanikaniAssignments(subjectType: 'kanji' | 'vocabulary' = 'ka
     };
 
     // Save data to cache
-    const saveToCache = (assignmentsData: WanikaniAssignment[]) => {
+    const saveToCache = useCallback((assignmentsData: WanikaniAssignment[]) => {
         const cacheKey = getCacheKey();
         const cacheData: CachedData = {
             assignments: assignmentsData,
             timestamp: Date.now()
         };
         localStorage.setItem(cacheKey, JSON.stringify(cacheData));
-    };
+    }, [getCacheKey]);
 
-    const fetchAssignments = async (forceRefresh = false) => {
+    const fetchAssignments = useCallback(async (forceRefresh = false) => {
         if (!apiKey) {
             setError(new Error('API key is required'));
             return;
@@ -202,15 +202,15 @@ export function useWanikaniAssignments(subjectType: 'kanji' | 'vocabulary' = 'ka
         } finally {
             setLoading(false);
         }
-    };
+    }, [apiKey, getCachedData, level, saveToCache, subjectType]);
 
     useEffect(() => {
         if (apiKey) {
             // Force refresh on page reload
             const shouldRefresh = isPageReload();
-            fetchAssignments(shouldRefresh);
+            fetchAssignments(shouldRefresh).then();
         }
-    }, [apiKey, level, subjectType]);
+    }, [apiKey, fetchAssignments, level, subjectType]);
 
     return {
         assignments,

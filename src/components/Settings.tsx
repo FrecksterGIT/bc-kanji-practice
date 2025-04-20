@@ -2,10 +2,7 @@ import {useSettingsStore} from '../store/settingsStore';
 import {ChangeEvent, type FC, useState, useEffect} from "react";
 import {clearAllDataFileCaches} from '../utils/dataLoader';
 
-interface SettingsProps {
-}
-
-const Settings: FC<SettingsProps> = () => {
+const Settings: FC = () => {
     // Get state and actions from the settings store
     const {
         apiKey,

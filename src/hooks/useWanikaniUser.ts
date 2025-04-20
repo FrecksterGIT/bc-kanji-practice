@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react';
+import {useState, useEffect, useCallback} from 'react';
 import {useSettingsStore} from '../store/settingsStore';
 
 // Cache key for localStorage
@@ -109,7 +109,7 @@ export function useWanikaniUser(): UseWanikaniUserResult {
         localStorage.setItem(WANIKANI_USER_CACHE_KEY, JSON.stringify(cacheData));
     };
 
-    const fetchUserData = async (forceRefresh = false) => {
+    const fetchUserData = useCallback(async (forceRefresh = false) => {
         if (!apiKey) {
             setError(new Error('API key is required'));
             return;
@@ -148,7 +148,7 @@ export function useWanikaniUser(): UseWanikaniUserResult {
         } finally {
             setLoading(false);
         }
-    };
+    }, [apiKey]);
 
     useEffect(() => {
         if (apiKey) {
@@ -156,7 +156,7 @@ export function useWanikaniUser(): UseWanikaniUserResult {
             const shouldRefresh = isPageReload();
             fetchUserData(shouldRefresh);
         }
-    }, [apiKey]);
+    }, [apiKey, fetchUserData]);
 
     return {user, loading, error, refetch: () => fetchUserData(true)};
 }

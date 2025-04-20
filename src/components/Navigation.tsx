@@ -3,9 +3,7 @@ import {NavLink} from 'react-router-dom';
 import {useSession} from '../contexts/UserContext';
 import {useSettingsStore} from '../store/settingsStore';
 
-interface NavigationProps {}
-
-const Navigation: FC<NavigationProps> = () => {
+const Navigation: FC = () => {
     const {user} = useSession();
     const {level, setLevel} = useSettingsStore();
 
