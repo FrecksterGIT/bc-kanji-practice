@@ -72,7 +72,7 @@ export function useRelatedVocabulary(kanji: string): UseRelatedVocabularyResult 
                 const filtered = allVocabulary.filter(item => item.word.includes(kanji));
 
                 // Sort by vocabulary level
-                const sorted = filtered.sort((a, b) => a.level - b.level);
+                const sorted = filtered.toSorted((a, b) => a.level - b.level);
 
                 setRelatedVocabulary(sorted);
             } catch (err) {
