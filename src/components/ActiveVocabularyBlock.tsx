@@ -1,8 +1,8 @@
 import {type FC, useEffect, useRef} from 'react';
 import KanaInput from './KanaInput';
 import VocabularyDetails from './VocabularyDetails';
-import {useSession} from "../contexts/SessionContext.tsx";
 import {VocabularyItem} from '../types';
+import {useSession} from "../hooks/useSession.ts";
 
 interface ActiveVocabularyBlockProps {
     vocabulary: VocabularyItem;

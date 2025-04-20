@@ -1,6 +1,7 @@
 import {Outlet} from 'react-router-dom'
 import Navigation from './components/Navigation'
-import {SessionProvider, useSession} from './contexts/SessionContext.tsx'
+import {useSession} from "./hooks/useSession.ts";
+import {SessionProvider} from "./contexts/SessionProvider.tsx";
 
 // Wrapper component that handles loading state
 const AppContent = () => {
