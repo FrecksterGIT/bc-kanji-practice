@@ -1,4 +1,4 @@
-import {type FC} from "react";
+import {type FC, useEffect} from "react";
 import {isKatakana, toHiragana} from "wanakana";
 import {VocabularyItem} from '../types';
 import {useKanjiComposition} from '../hooks/useKanjiComposition';
@@ -10,7 +10,11 @@ interface VocabularyDetailsProps {
 
 const VocabularyDetails: FC<VocabularyDetailsProps> = ({vocabulary}) => {
     const {kanjiData, loading: loadingKanji} = useKanjiComposition(vocabulary.word);
-    const [show, toggle] = useToggle(false)
+    const [show, toggle, set] = useToggle(false)
+
+    useEffect(() => {
+        set(false)
+    }, [set, kanjiData]);
 
     const getReading = (reading: string) => {
         const containsKatakana = reading.split("").some(isKatakana);
@@ -22,7 +26,7 @@ const VocabularyDetails: FC<VocabularyDetailsProps> = ({vocabulary}) => {
 
     return (
         <button className={`min-w-2/3 ${show ? 'cursor-zoom-out' : 'blur-md cursor-zoom-in'}`} onClick={() => toggle()}>
-            <div className="overflow-x-auto">
+            <div className="overflow-x-auto min-h-[7rem]">
                 <table className="min-w-full divide-y divide-gray-200">
                     <thead>
                     <tr>

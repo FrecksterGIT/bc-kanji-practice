@@ -1,49 +1,7 @@
-import {useState, useEffect} from 'react';
-import {openDatabase, getStoreName} from '../utils/dataLoader';
-import {KanjiItem, UseKanjiCompositionResult} from '../types';
-
-/**
- * Gets all kanji data from IndexedDB
- * @returns A promise that resolves to all kanji data
- */
-const getAllKanjiData = async (): Promise<KanjiItem[]> => {
-    try {
-        const db = await openDatabase();
-        const storeName = getStoreName('kanji');
-
-        return new Promise<KanjiItem[]>((resolve, reject) => {
-            const transaction = db.transaction(storeName, 'readonly');
-            const store = transaction.objectStore(storeName);
-            const request = store.getAll();
-
-            request.onerror = (event) => {
-                console.error('Error getting kanji data:', event);
-                db.close();
-                reject(new Error('Failed to get kanji data'));
-            };
-
-            request.onsuccess = (event) => {
-                const result = (event.target as IDBRequest).result;
-                db.close();
-
-                // Extract and flatten all kanji data from all cache entries
-                const allKanji: KanjiItem[] = [];
-                if (result && Array.isArray(result)) {
-                    result.forEach(cacheEntry => {
-                        if (Array.isArray(cacheEntry?.data)) {
-                            allKanji.push(...cacheEntry.data);
-                        }
-                    });
-                }
-
-                resolve(allKanji);
-            };
-        });
-    } catch (err) {
-        console.error('Error accessing IndexedDB:', err);
-        return [];
-    }
-};
+import { useState } from 'react';
+import { useLiveQuery } from 'dexie-react-hooks';
+import { db } from '../utils/db';
+import { KanjiItem, UseKanjiCompositionResult } from '../types';
 
 /**
  * Hook to get kanji data for each character in a vocabulary word
@@ -51,49 +9,79 @@ const getAllKanjiData = async (): Promise<KanjiItem[]> => {
  * @returns Object containing kanji data, loading state, and error state
  */
 export function useKanjiComposition(word: string): UseKanjiCompositionResult {
-    const [kanjiData, setKanjiData] = useState<Map<string, KanjiItem>>(new Map());
-    const [loading, setLoading] = useState<boolean>(false);
-    const [error, setError] = useState<Error | null>(null);
+  const [error, setError] = useState<Error | null>(null);
 
-    useEffect(() => {
-        const fetchData = async () => {
-            if (!word) {
-                setKanjiData(new Map());
-                return;
-            }
+  // Use Dexie's useLiveQuery to reactively query all kanji data
+  const allKanjiData = useLiveQuery(
+    async () => {
+      try {
+        // Get all entries from the kanjiStore
+        const entries = await db.kanjiStore.toArray();
 
-            setLoading(true);
-            setError(null);
+        // Extract and flatten all kanji data from all cache entries
+        // Use a more efficient approach with reduce
+        const allKanji = entries.reduce<KanjiItem[]>((acc, cacheEntry) => {
+          if (Array.isArray(cacheEntry?.data)) {
+            acc.push(...cacheEntry.data);
+          }
+          return acc;
+        }, []);
 
-            try {
-                const allKanjiData = await getAllKanjiData();
-                const kanjiMap = new Map<string, KanjiItem>();
+        // Create an index map for faster lookups
+        const kanjiMap = new Map<string, KanjiItem>();
+        allKanji.forEach(item => {
+          kanjiMap.set(item.kanji, item);
+        });
 
-                // Extract unique kanji characters from the vocabulary word
-                const uniqueKanji = [...new Set(word.split(''))];
+        return { allKanji, kanjiMap };
+      } catch (err: unknown) {
+        console.error('Error accessing Dexie database:', err);
+        setError(err instanceof Error ? err : new Error('An unknown error occurred'));
+        return { allKanji: [], kanjiMap: new Map() };
+      }
+    },
+    // Dependencies array for useLiveQuery
+    []
+  );
 
-                // Find kanji data for each character
-                uniqueKanji.forEach(char => {
-                    const kanjiItem = allKanjiData.find(item => item.kanji === char);
-                    if (kanjiItem) {
-                        kanjiMap.set(char, kanjiItem);
-                    }
-                });
+  // Process the kanji data to find matches for the word
+  const kanjiData = useLiveQuery(
+    () => {
+      if (!word || !allKanjiData) {
+        return new Map<string, KanjiItem>();
+      }
 
-                setKanjiData(kanjiMap);
-            } catch (err) {
-                setError(err instanceof Error ? err : new Error('An unknown error occurred'));
-            } finally {
-                setLoading(false);
-            }
-        };
+      try {
+        const resultMap = new Map<string, KanjiItem>();
+        const { kanjiMap } = allKanjiData;
 
-        fetchData();
-    }, [word]);
+        // Extract unique kanji characters from the vocabulary word
+        const uniqueKanji = [...new Set(word.split(''))];
 
-    return {
-        kanjiData,
-        loading,
-        error
-    };
+        // Find kanji data for each character using the pre-built map for O(1) lookups
+        uniqueKanji.forEach(char => {
+          const kanjiItem = kanjiMap.get(char);
+          if (kanjiItem) {
+            resultMap.set(char, kanjiItem);
+          }
+        });
+
+        return resultMap;
+      } catch (err: unknown) {
+        setError(err instanceof Error ? err : new Error('An unknown error occurred'));
+        return new Map<string, KanjiItem>();
+      }
+    },
+    // Dependencies array for useLiveQuery - recompute when word or allKanjiData changes
+    [word, allKanjiData]
+  ) || new Map<string, KanjiItem>();
+
+  // Determine loading state
+  const loading = allKanjiData === undefined;
+
+  return {
+    kanjiData,
+    loading,
+    error
+  };
 }

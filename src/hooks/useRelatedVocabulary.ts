@@ -1,49 +1,7 @@
-import {useState, useEffect} from 'react';
-import {openDatabase, getStoreName} from '../utils/dataLoader';
+import {useState} from 'react';
+import {useLiveQuery} from 'dexie-react-hooks';
+import {db} from '../utils/db';
 import {VocabularyItem, UseRelatedVocabularyResult} from '../types';
-
-/**
- * Gets all vocabulary data from IndexedDB
- * @returns A promise that resolves to all vocabulary data
- */
-const getAllVocabularyData = async (): Promise<VocabularyItem[]> => {
-    try {
-        const db = await openDatabase();
-        const storeName = getStoreName('vocabulary');
-
-        return new Promise<VocabularyItem[]>((resolve, reject) => {
-            const transaction = db.transaction(storeName, 'readonly');
-            const store = transaction.objectStore(storeName);
-            const request = store.getAll();
-
-            request.onerror = (event) => {
-                console.error('Error getting vocabulary data:', event);
-                db.close();
-                reject(new Error('Failed to get vocabulary data'));
-            };
-
-            request.onsuccess = (event) => {
-                const result = (event.target as IDBRequest).result;
-                db.close();
-
-                // Extract and flatten all vocabulary data from all cache entries
-                const allVocabulary: VocabularyItem[] = [];
-                if (result && Array.isArray(result)) {
-                    result.forEach(cacheEntry => {
-                        if (Array.isArray(cacheEntry?.data)) {
-                            allVocabulary.push(...cacheEntry.data);
-                        }
-                    });
-                }
-
-                resolve(allVocabulary);
-            };
-        });
-    } catch (err) {
-        console.error('Error accessing IndexedDB:', err);
-        return [];
-    }
-};
 
 /**
  * Hook to get vocabulary that contains a specific kanji
@@ -51,39 +9,73 @@ const getAllVocabularyData = async (): Promise<VocabularyItem[]> => {
  * @returns Object containing related vocabulary, loading state, and error state
  */
 export function useRelatedVocabulary(kanji: string): UseRelatedVocabularyResult {
-    const [relatedVocabulary, setRelatedVocabulary] = useState<VocabularyItem[]>([]);
-    const [loading, setLoading] = useState<boolean>(false);
     const [error, setError] = useState<Error | null>(null);
 
-    useEffect(() => {
-        const fetchData = async () => {
-            if (!kanji) {
-                setRelatedVocabulary([]);
-                return;
-            }
+    // Use Dexie's useLiveQuery to reactively query all vocabulary data
+    const allVocabularyData = useLiveQuery(
+        async () => {
+            try {
+                // Get all entries from the vocabularyStore
+                const entries = await db.vocabularyStore.toArray();
 
-            setLoading(true);
-            setError(null);
+                // Extract and flatten all vocabulary data from all cache entries
+                // Use a more efficient approach with reduce
+                const allVocabulary = entries.reduce<VocabularyItem[]>((acc, cacheEntry) => {
+                    if (Array.isArray(cacheEntry?.data)) {
+                        acc.push(...cacheEntry.data);
+                    }
+                    return acc;
+                }, []);
+
+                // Create an index for faster filtering
+                // Group vocabulary by kanji characters they contain
+                const kanjiIndex = new Map<string, VocabularyItem[]>();
+
+                allVocabulary.forEach(item => {
+                    // For each character in the word
+                    [...new Set(item.word.split(''))].forEach(char => {
+                        if (!kanjiIndex.has(char)) {
+                            kanjiIndex.set(char, []);
+                        }
+                        kanjiIndex.get(char)?.push(item);
+                    });
+                });
+
+                return {allVocabulary, kanjiIndex};
+            } catch (err: unknown) {
+                console.error('Error accessing Dexie database:', err);
+                setError(err instanceof Error ? err : new Error('An unknown error occurred'));
+                return {allVocabulary: [], kanjiIndex: new Map()};
+            }
+        },
+        // Dependencies array for useLiveQuery
+        []
+    );
+
+    // Process the vocabulary data to find items containing the kanji
+    const relatedVocabulary = useLiveQuery(
+        () => {
+            if (!kanji || !allVocabularyData) {
+                return [];
+            }
 
             try {
-                const allVocabulary = await getAllVocabularyData();
-
-                // Filter vocabulary that contains the kanji
-                const filtered = allVocabulary.filter(item => item.word.includes(kanji));
+                // Get vocabulary items directly from the index - O(1) lookup
+                const filtered: VocabularyItem[] = allVocabularyData.kanjiIndex.get(kanji) || [];
 
                 // Sort by vocabulary level
-                const sorted = filtered.toSorted((a, b) => a.level - b.level);
-
-                setRelatedVocabulary(sorted);
-            } catch (err) {
+                return filtered.toSorted((a, b) => a.level - b.level);
+            } catch (err: unknown) {
                 setError(err instanceof Error ? err : new Error('An unknown error occurred'));
-            } finally {
-                setLoading(false);
+                return [];
             }
-        };
+        },
+        // Dependencies array for useLiveQuery - recompute when kanji or allVocabularyData changes
+        [kanji, allVocabularyData]
+    ) || [];
 
-        fetchData();
-    }, [kanji]);
+    // Determine loading state
+    const loading = allVocabularyData === undefined;
 
     return {
         relatedVocabulary,

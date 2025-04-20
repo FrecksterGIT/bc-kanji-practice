@@ -24,7 +24,7 @@ export function useDataFiles<T extends KanjiItem | VocabularyItem>(
             // Use the unified loadDataFile function from utils
             const fetchedData = await loadDataFile<T>(dataType, level, forceRefresh);
             setData(fetchedData);
-        } catch (err) {
+        } catch (err: unknown) {
             setError(err instanceof Error ? err : new Error('An unknown error occurred'));
         } finally {
             setLoading(false);

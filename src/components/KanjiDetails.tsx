@@ -1,4 +1,4 @@
-import {type FC} from "react";
+import {type FC, useEffect} from "react";
 import {KanjiItem} from '../types';
 import {useToggle} from "usehooks-ts";
 
@@ -7,7 +7,11 @@ interface KanjiDetailsProps {
 }
 
 const KanjiDetails: FC<KanjiDetailsProps> = ({kanji}) => {
-    const [show, toggle] = useToggle(false)
+    const [show, toggle, set] = useToggle(false)
+
+    useEffect(() => {
+        set(false)
+    }, [set, kanji]);
 
     return (
         <button className={`min-w-2/3 ${show ? 'cursor-zoom-out' : 'blur-md cursor-zoom-in'}`} onClick={() => toggle()}>
