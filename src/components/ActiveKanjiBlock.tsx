@@ -48,13 +48,8 @@ const ActiveKanjiBlock: FC<Readonly<ActiveKanjiBlockProps>> = ({
                     />
                 </div>
 
-                {/* Kanji Details Table */}
-                <KanjiDetails kanji={kanji}/>
-
                 {/* Related Vocabulary List */}
-                <div className="mt-8 w-full">
-                    <h3 className="text-xl font-bold mb-4">Related Vocabulary</h3>
-
+                <div className="mb-8 w-full">
                     {vocabularyLoading && (
                         <p>Loading related vocabulary...</p>
                     )}
@@ -88,6 +83,9 @@ const ActiveKanjiBlock: FC<Readonly<ActiveKanjiBlockProps>> = ({
                         </div>
                     )}
                 </div>
+
+                {/* Kanji Details Table */}
+                <KanjiDetails kanji={kanji}/>
             </div>
         </div>
     );

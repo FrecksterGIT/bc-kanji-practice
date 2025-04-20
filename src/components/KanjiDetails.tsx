@@ -1,13 +1,16 @@
 import {type FC} from "react";
 import {KanjiItem} from '../types';
+import {useToggle} from "usehooks-ts";
 
 interface KanjiDetailsProps {
     kanji: KanjiItem;
 }
 
 const KanjiDetails: FC<KanjiDetailsProps> = ({kanji}) => {
+    const [show, toggle] = useToggle(false)
+
     return (
-        <div className="min-w-2/3">
+        <button className={`min-w-2/3 ${show ? 'cursor-zoom-out' : 'blur-md cursor-zoom-in'}`} onClick={() => toggle()}>
             <div className="overflow-x-auto">
                 <table className="min-w-full divide-y divide-gray-200">
                     <thead>
@@ -56,7 +59,7 @@ const KanjiDetails: FC<KanjiDetailsProps> = ({kanji}) => {
                     </tbody>
                 </table>
             </div>
-        </div>
+        </button>
     );
 };
 

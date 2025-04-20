@@ -26,6 +26,13 @@ export interface UseRelatedVocabularyResult {
     error: Error | null;
 }
 
+// Define the return type for the useKanjiComposition hook
+export interface UseKanjiCompositionResult {
+    kanjiData: Map<string, KanjiItem>;
+    loading: boolean;
+    error: Error | null;
+}
+
 // Define the return type for the useDataFiles hook
 export interface UseDataFilesResult<T extends KanjiItem | VocabularyItem> {
     data: T[] | null;
