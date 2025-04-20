@@ -18,12 +18,14 @@ const SelectableButton: FC<SelectableButtonProps> = ({
                                                          type,
                                                      }) => {
     const getButtonClass = useCallback(() => {
-        if (selected) return type === 'kanji' ? 'bg-pink-400' : 'bg-purple-400';
-        return '';
+        const background = type === 'kanji' ? 'bg-pink-400' : 'bg-purple-400';
+        return selected ? `${background} text-white` : 'text-gray-400';
     }, [selected, valid]);
 
     const getTextColor = useCallback(() => {
-        return selected ? 'text-white' : 'text-gray-400';
+        if (selected) return 'text-white';
+        if (valid) return 'text-green-700';
+        return 'text-gray-400';
     }, [selected])
 
     return (

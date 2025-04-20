@@ -41,7 +41,7 @@ const ActiveVocabularyBlock: FC<Readonly<ActiveVocabularyBlockProps>> = ({
     }, [vocabulary]);
 
     return (
-        <div className="mb-12">
+        <div className="mb-6">
             <div className="flex flex-col items-center">
                 <div className="mb-12">{position}</div>
                 <div className="text-9xl mb-12 p-8 w-full text-center bg-gray-700 border-b-purple-400 border-b-2 text-white">{vocabulary.word}</div>

@@ -1,5 +1,6 @@
 import {useState, useEffect, ChangeEvent, forwardRef, useCallback, useMemo} from 'react';
 import {isKatakana, toHiragana} from 'wanakana';
+import {Correct} from "./icons/Correct.tsx";
 
 interface KanaInputProps {
     value?: string;
@@ -105,22 +106,8 @@ const KanaInput = forwardRef<HTMLInputElement, KanaInputProps>(({
         return isValid ? 'border-green-500 focus:border-green-500' : 'border-red-500 focus:border-red-500'; // Valid or Invalid
     }, [isValid, internalValue]);
 
-    const getNoteColorClass = useCallback(() => {
-        if (!internalValue) return ''; // Default
-        return isValid ? 'text-green-600' : 'text-red-600'; // Valid or Invalid
-    }, [isValid, internalValue])
-
-    const getNoteText = useCallback(() => {
-        if (!internalValue) return 'Please enter the reading.'; // Default
-        return isValid ? 'Correct reading!' : 'Incorrect reading. Try again.'; // Valid or Invalid
-    }, [isValid, internalValue])
-
     return (
-        <>
-            <label htmlFor={id}
-                   className="block text-sm font-medium mb-1">
-                Enter Reading:
-            </label>
+        <div className="relative">
             <input
                 type="text"
                 value={internalValue}
@@ -135,8 +122,9 @@ const KanaInput = forwardRef<HTMLInputElement, KanaInputProps>(({
                 autoCapitalize="off"
                 spellCheck="false"
             />
-            <p className={`mt-2 text-sm ${getNoteColorClass}`}>{getNoteText()}</p>
-        </>
+            {isValid && <span
+                className="absolute h-full top-0 right-2 grid items-center pointer-events-none"><Correct/></span>}
+        </div>
     );
 });
 
