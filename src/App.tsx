@@ -1,10 +1,10 @@
 import {Outlet} from 'react-router-dom'
 import Navigation from './components/Navigation'
-import {UserProvider, useUser} from './contexts/UserContext'
+import {SessionProvider, useSession} from './contexts/UserContext'
 
 // Wrapper component that handles loading state
 const AppContent = () => {
-    const {loading} = useUser();
+    const {loading} = useSession();
 
     if (loading) {
         return (
@@ -26,11 +26,11 @@ const AppContent = () => {
 
 function App() {
     return (
-        <UserProvider>
+        <SessionProvider>
             <div className="flex min-h-screen flex-col bg-gray-900 text-gray-400">
                 <AppContent/>
             </div>
-        </UserProvider>
+        </SessionProvider>
     );
 }
 
