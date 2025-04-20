@@ -103,20 +103,24 @@ const KanaInput = forwardRef<HTMLInputElement, KanaInputProps>(({
 
     return (
         <>
-        <input
-            type="text"
-            value={internalValue}
-            onChange={handleInputChange}
-            placeholder={placeholder}
-            className={`mt-1 block w-full rounded-md focus-visible:outline-none text-4xl p-2 border bg-gray-700 ${getBorderColorClass()} ${className}`}
-            id={id}
-            name={name}
-            ref={ref}
-            autoComplete="off"
-            autoCorrect="off"
-            autoCapitalize="off"
-            spellCheck="false"
-        />
+            <label htmlFor={id}
+                   className="block text-sm font-medium mb-1">
+                Enter Reading:
+            </label>
+            <input
+                type="text"
+                value={internalValue}
+                onChange={handleInputChange}
+                placeholder={placeholder}
+                className={`mt-1 block w-full rounded-md focus-visible:outline-none text-4xl p-2 border bg-gray-700 ${getBorderColorClass()} ${className}`}
+                id={id}
+                name={name}
+                ref={ref}
+                autoComplete="off"
+                autoCorrect="off"
+                autoCapitalize="off"
+                spellCheck="false"
+            />
             <p className={`mt-2 text-sm ${getNoteColorClass}`}>{getNoteText()}</p>
         </>
     );

@@ -31,7 +31,7 @@ const Navigation: FC<NavigationProps> = () => {
     }, [maxLevel, level, setLevel]);
 
     return (
-        <nav className="sticky top-0 z-10 bg-gray-700 text-white p-4">
+        <nav className="sticky top-0 z-10 bg-gray-700 text-white p-4 shadow-2xl">
             <div className="container mx-auto flex flex-wrap items-center justify-between">
                 <div className="flex items-center">
                     <span className="text-xl font-bold">Kanji Practice</span>

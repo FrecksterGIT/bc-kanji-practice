@@ -50,16 +50,12 @@ const ActiveKanjiBlock: FC<Readonly<ActiveKanjiBlockProps>> = ({
     }, [kanji]);
 
     return (
-        <div className="mb-8 p-4">
+        <div className="mb-12">
             <div className="flex flex-col items-center">
-                <div className="mt-4">{position}</div>
-                <div className="text-9xl mb-8 mt-4 p-4 border rounded-lg">{kanji.kanji}</div>
+                <div className="mb-12">{position}</div>
+                <div className="text-9xl mb-12 p-8 w-full text-center bg-gray-700 border-b-pink-400 border-b-2">{kanji.kanji}</div>
 
-                <div className="w-full max-w-1/2 mb-4">
-                    <label htmlFor="kanji-reading"
-                           className="block text-sm font-medium mb-1">
-                        Enter Reading:
-                    </label>
+                <div className="w-full max-w-1/2 mb-12">
                     <KanaInput
                         id="kanji-reading"
                         value={userInput}

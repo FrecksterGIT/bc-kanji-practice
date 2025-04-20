@@ -147,8 +147,8 @@ const Vocabulary: FC<VocabularyProps> = () => {
     const error = vocabularyError || assignmentsError;
 
     return (
-        <div className="flex flex-col items-center py-8">
-            <div className="p-6 rounded-lg shadow-md w-full">
+        <div className="flex flex-col items-center py-12">
+            <div className="w-full">
                 {loading && (
                     <p>Loading vocabulary data...</p>
                 )}

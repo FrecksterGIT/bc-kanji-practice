@@ -41,17 +41,13 @@ const ActiveVocabularyBlock: FC<Readonly<ActiveVocabularyBlockProps>> = ({
     }, [vocabulary]);
 
     return (
-        <div className="mb-8 p-4">
+        <div className="mb-12">
             <div className="flex flex-col items-center">
-                <div className="mt-4">{position}</div>
-                <div className="text-9xl mb-8 mt-4 p-4 border rounded-lg">{vocabulary.word}</div>
+                <div className="mb-12">{position}</div>
+                <div className="text-9xl mb-12 p-8 w-full text-center bg-gray-700 border-b-purple-400 border-b-2">{vocabulary.word}</div>
 
                 {/* Reading input section */}
-                <div className="w-full max-w-md mb-4">
-                    <label htmlFor="vocabulary-reading"
-                           className="block text-sm font-medium mb-1">
-                        Enter Reading:
-                    </label>
+                <div className="w-full max-w-1/2 mb-12">
                     <KanaInput
                         id="vocabulary-reading"
                         value={userInput}

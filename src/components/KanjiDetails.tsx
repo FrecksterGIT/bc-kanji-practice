@@ -24,7 +24,7 @@ interface KanjiDetailsProps {
 
 const KanjiDetails: FC<KanjiDetailsProps> = ({kanji}) => {
     return (
-        <div className="mt-4 min-w-2/3">
+        <div className="min-w-2/3">
             <div className="overflow-x-auto">
                 <table className="min-w-full divide-y divide-gray-200">
                     <thead>

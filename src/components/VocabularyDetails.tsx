@@ -20,7 +20,7 @@ interface VocabularyDetailsProps {
 
 const VocabularyDetails: FC<VocabularyDetailsProps> = ({vocabulary}) => {
     return (
-        <div className="mt-4 min-w-2/3">
+        <div className="min-w-2/3">
             <div className="overflow-x-auto">
                 <table className="min-w-full divide-y divide-gray-200">
                     <thead>
@@ -38,26 +38,21 @@ const VocabularyDetails: FC<VocabularyDetailsProps> = ({vocabulary}) => {
                     <tbody className="divide-y divide-gray-200">
                     <tr>
                         <td className="px-6 py-4 whitespace-nowrap">
-                            <div className="flex flex-row gap-2">
-                                {vocabulary.reading.map((reading, index) => (
-                                    <span
-                                        key={index}
-                                        className={`${reading.primary ? 'font-bold' : ''}`}
-                                    >
-                      {reading.reading}
-                    </span>
-                                ))}
-                            </div>
+                            {vocabulary.reading.map((reading, index) => (
+                                <span
+                                    key={index}
+                                    className={`separated-comma ${reading.primary ? 'font-bold' : ''}`}
+                                >{reading.reading}</span>
+                            ))}
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap">
-                            <div className="flex flex-row gap-2">
-                                {vocabulary.meanings.map((meaning, index) => (
-                                    <span
-                                        key={index}
-                                        className={`${meaning.primary ? 'font-bold' : ''}`}
-                                    >{meaning.meaning}</span>
-                                ))}
-                            </div>
+                            {vocabulary.meanings.map((meaning, index) => (
+                                <span
+                                    key={index}
+                                    className={`separated-comma ${meaning.primary ? 'font-bold' : ''}`}
+                                >{meaning.meaning}</span>
+                            ))}
+
                         </td>
                     </tr>
                     </tbody>
