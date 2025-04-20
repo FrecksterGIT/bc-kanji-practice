@@ -1,5 +1,10 @@
 import {useState, useEffect, useCallback} from 'react';
 import {useSettingsStore} from '../store/settingsStore';
+import {
+    WanikaniAssignmentsResponse,
+    WanikaniAssignment,
+    UseWanikaniAssignmentsResult
+} from '../types';
 
 // Cache key for localStorage
 const WANIKANI_ASSIGNMENTS_CACHE_KEY_PREFIX = 'wanikani-assignments-cache-';
@@ -7,53 +12,10 @@ const PAGE_LOAD_KEY = 'wanikani-assignments-page-load';
 // Cache expiration time in milliseconds (1 hour)
 const CACHE_EXPIRATION_TIME = 60 * 60 * 1000;
 
-// Define types for the Wanikani API response
-interface WanikaniAssignmentsResponse {
-    object: string;
-    url: string;
-    pages: {
-        per_page: number;
-        next_url: string | null;
-        previous_url: string | null;
-    };
-    total_count: number;
-    data_updated_at: string;
-    data: WanikaniAssignment[];
-}
-
-interface WanikaniAssignment {
-    id: number;
-    object: string;
-    url: string;
-    data_updated_at: string;
-    data: {
-        created_at: Date | null;
-        subject_id: number;
-        subject_type: string;
-        level: number;
-        srs_stage: number;
-        unlocked_at: Date | null;
-        started_at: Date | null;
-        passed_at: Date | null;
-        burned_at: Date | null;
-        available_at: Date | null;
-        resurrected_at: string | null;
-        hidden: boolean;
-    };
-}
-
 // Interface for cached data
 interface CachedData {
     assignments: WanikaniAssignment[];
     timestamp: number;
-}
-
-// Define the return type for the hook
-interface UseWanikaniAssignmentsResult {
-    assignments: WanikaniAssignment[] | null;
-    loading: boolean;
-    error: Error | null;
-    refetch: () => void;
 }
 
 /**

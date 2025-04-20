@@ -1,37 +1,7 @@
 import {useState, useEffect, useCallback} from 'react';
 import {useSettingsStore} from '../store/settingsStore';
-import {
-    loadDataFile,
-    isPageReload,
-    clearAllDataFileCaches as clearCaches,
-    DataType
-} from '../utils/dataLoader';
-
-// Re-export the clearAllDataFileCaches function
-export const clearAllDataFileCaches = clearCaches;
-
-// Define types for the data
-interface KanjiItem {
-    id: number;
-    level: number;
-    kanji: string;
-    // Add other properties as needed
-}
-
-interface VocabularyItem {
-    id: number;
-    level: number;
-    word: string;
-    // Add other properties as needed
-}
-
-// Define the return type for the hook
-interface UseDataFilesResult<T> {
-    data: T[] | null;
-    loading: boolean;
-    error: Error | null;
-    refetch: () => void;
-}
+import {loadDataFile, isPageReload} from '../utils/dataLoader';
+import {DataType, KanjiItem, VocabularyItem, UseDataFilesResult} from '../types';
 
 /**
  * Hook to fetch data files from the public data folder

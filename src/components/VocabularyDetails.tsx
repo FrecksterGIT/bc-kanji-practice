@@ -1,22 +1,9 @@
 import {type FC} from "react";
 import {isKatakana, toHiragana} from "wanakana";
-
-interface Reading {
-    reading: string;
-    primary: boolean;
-}
-
-interface Meaning {
-    meaning: string;
-    primary: boolean;
-}
+import {VocabularyItem} from '../types';
 
 interface VocabularyDetailsProps {
-    vocabulary: {
-        word: string;
-        reading: Reading[];
-        meanings: Meaning[];
-    };
+    vocabulary: VocabularyItem;
 }
 
 const VocabularyDetails: FC<VocabularyDetailsProps> = ({vocabulary}) => {

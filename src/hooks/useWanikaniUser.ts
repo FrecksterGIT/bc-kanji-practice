@@ -1,5 +1,10 @@
 import {useState, useEffect, useCallback} from 'react';
 import {useSettingsStore} from '../store/settingsStore';
+import {
+    WanikaniUserResponse,
+    WanikaniUserData,
+    UseWanikaniUserResult
+} from '../types';
 
 // Cache key for localStorage
 const WANIKANI_USER_CACHE_KEY = 'wanikani-user-cache';
@@ -7,55 +12,10 @@ const PAGE_LOAD_KEY = 'wanikani-page-load';
 // Cache expiration time in milliseconds (1 hour)
 const CACHE_EXPIRATION_TIME = 60 * 60 * 1000;
 
-// Define types for the Wanikani API response
-interface WanikaniUserResponse {
-    object: string;
-    url: string;
-    data_updated_at: string;
-    data: WanikaniUserData;
-}
-
-export interface WanikaniUserData {
-    id: string;
-    username: string;
-    level: number;
-    profile_url: string;
-    started_at: string;
-    current_vacation_started_at: string | null;
-    subscription: WanikaniSubscription;
-    preferences: WanikaniPreferences;
-}
-
-interface WanikaniSubscription {
-    active: boolean;
-    type: string;
-    max_level_granted: number;
-    period_ends_at: string;
-}
-
-interface WanikaniPreferences {
-    default_voice_actor_id: number;
-    extra_study_autoplay_audio: boolean;
-    lessons_autoplay_audio: boolean;
-    lessons_batch_size: number;
-    lessons_presentation_order: string;
-    reviews_autoplay_audio: boolean;
-    reviews_display_srs_indicator: boolean;
-    reviews_presentation_order: string;
-}
-
 // Interface for cached data
 interface CachedData {
     user: WanikaniUserData;
     timestamp: number;
-}
-
-// Define the return type for the hook
-interface UseWanikaniUserResult {
-    user: WanikaniUserData | null;
-    loading: boolean;
-    error: Error | null;
-    refetch: () => void;
 }
 
 /**

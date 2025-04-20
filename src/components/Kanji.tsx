@@ -5,30 +5,7 @@ import {useMemo, useState, useEffect, useCallback, type FC} from 'react';
 import KanjiList from './KanjiList';
 import ActiveKanjiBlock from './ActiveKanjiBlock';
 import {createDateSortFunction} from '../utils/sortUtils';
-
-// Define the KanjiItem interface
-interface KanjiItem {
-    id: number;
-    level: number;
-    kanji: string;
-    onyomi: {
-        reading: string;
-        primary: boolean;
-        accepted_answer: boolean;
-        type: string;
-    }[];
-    kunyomi: {
-        reading: string;
-        primary: boolean;
-        accepted_answer: boolean;
-        type: string;
-    }[];
-    meanings: {
-        meaning: string;
-        primary: boolean;
-        accepted_answer: boolean;
-    }[];
-}
+import {KanjiItem} from '../types';
 
 const Kanji: FC = () => {
     const limitToLearned = useSettingsStore((state) => state.limitToLearned);

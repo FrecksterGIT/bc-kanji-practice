@@ -5,21 +5,7 @@ import {useMemo, useState, useEffect, useCallback, type FC} from 'react';
 import VocabularyList from './VocabularyList';
 import ActiveVocabularyBlock from './ActiveVocabularyBlock';
 import {createDateSortFunction} from '../utils/sortUtils';
-
-// Define the VocabularyItem interface
-interface VocabularyItem {
-    id: number;
-    level: number;
-    word: string;
-    reading: {
-        reading: string;
-        primary: boolean;
-    }[];
-    meanings: {
-        meaning: string;
-        primary: boolean;
-    }[];
-}
+import {VocabularyItem} from '../types';
 
 const Vocabulary: FC = () => {
     const limitToLearned = useSettingsStore((state) => state.limitToLearned);

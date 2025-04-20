@@ -1,6 +1,6 @@
 import {ChangeEvent, useEffect, type FC} from 'react';
 import {NavLink} from 'react-router-dom';
-import {useSession} from '../contexts/UserContext';
+import {useSession} from '../contexts/SessionContext.tsx';
 import {useSettingsStore} from '../store/settingsStore';
 
 const Navigation: FC = () => {

@@ -1,25 +1,8 @@
 import {type FC} from "react";
-
-interface Reading {
-    reading: string;
-    primary: boolean;
-    accepted_answer: boolean;
-    type: string;
-}
-
-interface Meaning {
-    meaning: string;
-    primary: boolean;
-    accepted_answer: boolean;
-}
+import {KanjiItem} from '../types';
 
 interface KanjiDetailsProps {
-    kanji: {
-        kanji: string;
-        onyomi: Reading[];
-        kunyomi: Reading[];
-        meanings: Meaning[];
-    };
+    kanji: KanjiItem;
 }
 
 const KanjiDetails: FC<KanjiDetailsProps> = ({kanji}) => {

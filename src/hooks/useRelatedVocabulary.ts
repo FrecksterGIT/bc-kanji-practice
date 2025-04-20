@@ -1,26 +1,6 @@
 import {useState, useEffect} from 'react';
 import {openDatabase, getStoreName} from '../utils/dataLoader';
-
-// Define the VocabularyItem interface
-interface VocabularyItem {
-    id: number;
-    level: number;
-    word: string;
-    reading: {
-        reading: string;
-        primary: boolean;
-    }[];
-    meanings: {
-        meaning: string;
-        primary: boolean;
-    }[];
-}
-
-interface UseRelatedVocabularyResult {
-    relatedVocabulary: VocabularyItem[];
-    loading: boolean;
-    error: Error | null;
-}
+import {VocabularyItem, UseRelatedVocabularyResult} from '../types';
 
 /**
  * Gets all vocabulary data from IndexedDB

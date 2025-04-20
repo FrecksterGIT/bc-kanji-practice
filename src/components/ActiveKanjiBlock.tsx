@@ -2,30 +2,7 @@ import {type FC, useEffect, useRef} from 'react';
 import KanaInput from './KanaInput';
 import KanjiDetails from './KanjiDetails';
 import {useRelatedVocabulary} from '../hooks/useRelatedVocabulary';
-
-// Define the KanjiItem interface
-interface KanjiItem {
-    id: number;
-    level: number;
-    kanji: string;
-    onyomi: {
-        reading: string;
-        primary: boolean;
-        accepted_answer: boolean;
-        type: string;
-    }[];
-    kunyomi: {
-        reading: string;
-        primary: boolean;
-        accepted_answer: boolean;
-        type: string;
-    }[];
-    meanings: {
-        meaning: string;
-        primary: boolean;
-        accepted_answer: boolean;
-    }[];
-}
+import {KanjiItem} from '../types';
 
 interface ActiveKanjiBlockProps {
     kanji: KanjiItem;

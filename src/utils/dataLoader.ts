@@ -1,3 +1,5 @@
+import { DataType, CachedData } from '../types';
+
 // Constants for cache keys and IndexedDB
 export const KANJI_CACHE_KEY_PREFIX = 'kanji-data-cache-';
 export const VOCABULARY_CACHE_KEY_PREFIX = 'vocabulary-data-cache-';
@@ -6,15 +8,6 @@ export const DB_NAME = 'kanji-practice-db';
 export const DB_VERSION = 1;
 export const KANJI_STORE = 'kanji-store';
 export const VOCABULARY_STORE = 'vocabulary-store';
-
-// Type for the data type parameter
-export type DataType = 'kanji' | 'vocabulary';
-
-// Interface for cached data
-export interface CachedData<T> {
-    data: T[];
-    timestamp: number;
-}
 
 /**
  * Opens the IndexedDB database

@@ -1,20 +1,6 @@
 import { type FC } from 'react';
 import SelectableButton from './SelectableButton';
-
-// Define the VocabularyItem interface
-interface VocabularyItem {
-    id: number;
-    level: number;
-    word: string;
-    reading: {
-        reading: string;
-        primary: boolean;
-    }[];
-    meanings: {
-        meaning: string;
-        primary: boolean;
-    }[];
-}
+import { VocabularyItem } from '../types';
 
 interface VocabularyListProps {
     filteredData: VocabularyItem[];

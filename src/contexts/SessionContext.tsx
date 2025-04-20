@@ -2,18 +2,7 @@ import React, {createContext, useContext, ReactNode, useMemo, useCallback, useEf
 import {useWanikaniUser} from '../hooks/useWanikaniUser';
 import {useSettingsStore} from '../store/settingsStore';
 import {loadDataFile} from '../utils/dataLoader';
-
-// Import the user data type from the hook file
-import type {WanikaniUserData} from '../hooks/useWanikaniUser';
-
-// Define the shape of the context
-interface UserContextType {
-    user: WanikaniUserData | null;
-    loading: boolean;
-    error: Error | null;
-    refetch: () => void;
-    speak: (text: string) => void;
-}
+import {UserContextType} from '../types';
 
 // Create the context with a default value
 const SessionContext = createContext<UserContextType | undefined>(undefined);
@@ -135,7 +124,7 @@ export const SessionProvider: React.FC<UserProviderProps> = ({children}) => {
 export const useSession = (): UserContextType => {
     const context = useContext(SessionContext);
     if (context === undefined) {
-        throw new Error('useUser must be used within a UserProvider');
+        throw new Error('useUser must be used within a SessionProvider');
     }
     return context;
 };
