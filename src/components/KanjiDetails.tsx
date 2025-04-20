@@ -1,4 +1,4 @@
-import { type FC } from "react";
+import {type FC} from "react";
 
 interface Reading {
     reading: string;
@@ -47,40 +47,28 @@ const KanjiDetails: FC<KanjiDetailsProps> = ({kanji}) => {
                     <tbody className="bg-white divide-y divide-gray-200">
                     <tr>
                         <td className="px-6 py-4 whitespace-nowrap">
-                            <div className="flex flex-row gap-2">
-                                {kanji.onyomi.map((reading, index) => (
-                                    <span
-                                        key={index}
-                                        className={`${reading.primary ? 'font-bold text-blue-600' : 'text-gray-700'}`}
-                                    >
-                      {reading.reading}
-                    </span>
-                                ))}
-                            </div>
+                            {kanji.onyomi.map((reading) => (
+                                <span
+                                    key={reading.reading}
+                                    className={`separated-comma ${reading.primary ? 'font-bold text-blue-600' : 'text-gray-700'}`}
+                                >{reading.reading}</span>
+                            ))}
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap">
-                            <div className="flex flex-row gap-2">
-                                {kanji.kunyomi.map((reading, index) => (
-                                    <span
-                                        key={index}
-                                        className={`${reading.primary ? 'font-bold text-blue-600' : 'text-gray-700'}`}
-                                    >
-                      {reading.reading}
-                    </span>
-                                ))}
-                            </div>
+                            {kanji.kunyomi.map((reading) => (
+                                <span
+                                    key={reading.reading}
+                                    className={`separated-comma ${reading.primary ? 'font-bold text-blue-600' : 'text-gray-700'}`}
+                                >{reading.reading}</span>
+                            ))}
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap">
-                            <div className="flex flex-row gap-2">
-                                {kanji.meanings.map((meaning, index) => (
-                                    <span
-                                        key={index}
-                                        className={`${meaning.primary ? 'font-bold text-blue-600' : 'text-gray-700'}`}
-                                    >
-                      {meaning.meaning}
-                    </span>
-                                ))}
-                            </div>
+                            {kanji.meanings.map((meaning) => (
+                                <span
+                                    key={meaning.meaning}
+                                    className={`separated-comma ${meaning.primary ? 'font-bold text-blue-600' : 'text-gray-700'}`}
+                                >{meaning.meaning}</span>
+                            ))}
                         </td>
                     </tr>
                     </tbody>

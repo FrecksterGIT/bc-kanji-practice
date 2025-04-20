@@ -21,7 +21,6 @@ interface ActiveVocabularyBlockProps {
     vocabulary: VocabularyItem;
     position: string;
     userInput: string;
-    isInputValid: boolean | null;
     validReadings: string[];
     onInputChange: (value: string) => void;
     onValidate: (isValid: boolean) => void;
@@ -31,7 +30,6 @@ const ActiveVocabularyBlock: FC<Readonly<ActiveVocabularyBlockProps>> = ({
     vocabulary,
     position,
     userInput,
-    isInputValid,
     validReadings,
     onInputChange,
     onValidate
@@ -63,13 +61,6 @@ const ActiveVocabularyBlock: FC<Readonly<ActiveVocabularyBlockProps>> = ({
                         onValidate={onValidate}
                         ref={ref}
                     />
-
-                    {/* Feedback message */}
-                    <p className={`mt-2 text-sm ${!userInput ? '' : isInputValid ? 'text-green-600' : 'text-red-600'}`}>
-                        {userInput && isInputValid && ('Correct reading!')}
-                        {userInput && !isInputValid && ('Incorrect reading. Try again.')}
-                        {!userInput && ('Please enter the reading.')}
-                    </p>
                 </div>
 
                 {/* Vocabulary Details Table */}

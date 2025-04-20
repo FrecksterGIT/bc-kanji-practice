@@ -164,7 +164,6 @@ const Vocabulary: FC<VocabularyProps> = () => {
                                 vocabulary={filteredData[selectedIndex]}
                                 position={`${selectedIndex + 1} / ${filteredData.length}`}
                                 userInput={userInput}
-                                isInputValid={isInputValid}
                                 validReadings={getValidReadings}
                                 onInputChange={handleInputChange}
                                 onValidate={handleValidate}

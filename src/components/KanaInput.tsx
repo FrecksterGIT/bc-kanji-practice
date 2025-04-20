@@ -87,11 +87,22 @@ const KanaInput = forwardRef<HTMLInputElement, KanaInputProps>(({
 
     // Determine border color based on validation status
     const getBorderColorClass = useCallback(() => {
-        if (isValid === null) return 'border-gray-300'; // Default
+        if (isValid === null || !internalValue) return 'border-gray-300'; // Default
         return isValid ? 'border-green-500 focus:border-green-500' : 'border-red-500 focus:border-red-500'; // Valid or Invalid
-    }, [isValid]);
+    }, [isValid, internalValue]);
+
+    const getNoteColorClass = useCallback(() => {
+        if (!internalValue) return ''; // Default
+        return isValid ? 'text-green-600' : 'text-red-600'; // Valid or Invalid
+    }, [isValid, internalValue])
+
+    const getNoteText = useCallback(() => {
+        if (!internalValue) return 'Please enter the reading.'; // Default
+        return isValid ? 'Correct reading!' : 'Incorrect reading. Try again.'; // Valid or Invalid
+    }, [isValid, internalValue])
 
     return (
+        <>
         <input
             type="text"
             value={internalValue}
@@ -106,6 +117,8 @@ const KanaInput = forwardRef<HTMLInputElement, KanaInputProps>(({
             autoCapitalize="off"
             spellCheck="false"
         />
+            <p className={`mt-2 text-sm ${getNoteColorClass}`}>{getNoteText()}</p>
+        </>
     );
 });
 
