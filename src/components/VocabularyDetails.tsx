@@ -1,4 +1,5 @@
 import {type FC} from "react";
+import {isKatakana, toHiragana} from "wanakana";
 
 interface Reading {
     reading: string;
@@ -19,6 +20,14 @@ interface VocabularyDetailsProps {
 }
 
 const VocabularyDetails: FC<VocabularyDetailsProps> = ({vocabulary}) => {
+    const getReading = (reading: string) => {
+        const containsKatakana = reading.split("").some(isKatakana);
+        if (containsKatakana) {
+            return `${reading} (${reading.split("").map(c => toHiragana(c)).join("")})`;
+        }
+        return reading;
+    }
+
     return (
         <div className="min-w-2/3">
             <div className="overflow-x-auto">
@@ -41,15 +50,15 @@ const VocabularyDetails: FC<VocabularyDetailsProps> = ({vocabulary}) => {
                             {vocabulary.reading.map((reading, index) => (
                                 <span
                                     key={index}
-                                    className={`separated-comma ${reading.primary ? 'font-bold' : ''}`}
-                                >{reading.reading}</span>
+                                    className={`separated-comma ${reading.primary ? 'font-bold text-white' : ''}`}
+                                >{getReading(reading.reading)}</span>
                             ))}
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap">
                             {vocabulary.meanings.map((meaning, index) => (
                                 <span
                                     key={index}
-                                    className={`separated-comma ${meaning.primary ? 'font-bold' : ''}`}
+                                    className={`separated-comma ${meaning.primary ? 'font-bold text-white' : ''}`}
                                 >{meaning.meaning}</span>
                             ))}
 

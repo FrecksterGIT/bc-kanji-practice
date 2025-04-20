@@ -1,5 +1,5 @@
 import {useState, useEffect, ChangeEvent, forwardRef, useCallback, useMemo} from 'react';
-import {toHiragana} from 'wanakana';
+import {isKatakana, toHiragana} from 'wanakana';
 
 interface KanaInputProps {
     value?: string;
@@ -28,7 +28,16 @@ const KanaInput = forwardRef<HTMLInputElement, KanaInputProps>(({
                                                                 }, ref) => {
     const validHiraganaValues = useMemo(() => {
         if (!validValues || validValues.length === 0) return [];
-        return validValues.map(value => toHiragana(value));
+        return validValues.reduce<string[]>((acc, value) => {
+            acc.push(value);
+
+            const containsKatakana = value.split("").some(isKatakana);
+            if (containsKatakana) {
+                acc.push(value.split("").map(c => toHiragana(c)).join(""));
+            }
+            acc.push(toHiragana(value));
+            return acc;
+        }, []);
     }, [validValues])
 
     // Internal state to handle controlled/uncontrolled component

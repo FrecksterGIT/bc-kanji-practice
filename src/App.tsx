@@ -8,28 +8,28 @@ const AppContent = () => {
 
     if (loading) {
         return (
-            <div className="flex min-h-screen flex-col bg-gray-900 text-white">
-                <div className="flex-grow container mx-auto flex items-center justify-center">
-                    <div className="text-xl">Loading user data...</div>
-                </div>
+            <div className="flex-grow container mx-auto flex items-center justify-center">
+                <div className="text-xl">Loading user data...</div>
             </div>
         );
     }
 
     return (
-        <div className="flex min-h-screen flex-col bg-gray-900 text-white">
+        <>
             <Navigation/>
             <div className="flex-grow container mx-auto">
-                <Outlet />
+                <Outlet/>
             </div>
-        </div>
+        </>
     );
 };
 
 function App() {
     return (
         <UserProvider>
-            <AppContent />
+            <div className="flex min-h-screen flex-col bg-gray-900 text-gray-400">
+                <AppContent/>
+            </div>
         </UserProvider>
     );
 }

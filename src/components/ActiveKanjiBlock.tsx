@@ -53,7 +53,7 @@ const ActiveKanjiBlock: FC<Readonly<ActiveKanjiBlockProps>> = ({
         <div className="mb-12">
             <div className="flex flex-col items-center">
                 <div className="mb-12">{position}</div>
-                <div className="text-9xl mb-12 p-8 w-full text-center bg-gray-700 border-b-pink-400 border-b-2">{kanji.kanji}</div>
+                <div className="text-9xl mb-12 p-8 w-full text-center bg-gray-700 border-b-pink-400 border-b-2 text-white">{kanji.kanji}</div>
 
                 <div className="w-full max-w-1/2 mb-12">
                     <KanaInput

@@ -49,7 +49,7 @@ const KanjiDetails: FC<KanjiDetailsProps> = ({kanji}) => {
                             {kanji.onyomi.map((reading) => (
                                 <span
                                     key={reading.reading}
-                                    className={`separated-comma ${reading.primary ? 'font-bold' : ''}`}
+                                    className={`separated-comma ${reading.primary ? 'font-bold text-white' : ''}`}
                                 >{reading.reading}</span>
                             ))}
                         </td>
@@ -57,7 +57,7 @@ const KanjiDetails: FC<KanjiDetailsProps> = ({kanji}) => {
                             {kanji.kunyomi.map((reading) => (
                                 <span
                                     key={reading.reading}
-                                    className={`separated-comma ${reading.primary ? 'font-bold' : ''}`}
+                                    className={`separated-comma ${reading.primary ? 'font-bold text-white' : ''}`}
                                 >{reading.reading}</span>
                             ))}
                         </td>
@@ -65,7 +65,7 @@ const KanjiDetails: FC<KanjiDetailsProps> = ({kanji}) => {
                             {kanji.meanings.map((meaning) => (
                                 <span
                                     key={meaning.meaning}
-                                    className={`separated-comma ${meaning.primary ? 'font-bold' : ''}`}
+                                    className={`separated-comma ${meaning.primary ? 'font-bold text-white' : ''}`}
                                 >{meaning.meaning}</span>
                             ))}
                         </td>
