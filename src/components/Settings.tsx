@@ -40,14 +40,19 @@ const Settings: FC<SettingsProps> = () => {
     };
 
     // Handle cache clearing
-    const handleClearCache = () => {
-        clearAllDataFileCaches();
-        setCacheCleared(true);
+    const handleClearCache = async () => {
+        try {
+            await clearAllDataFileCaches();
+            setCacheCleared(true);
 
-        // Reset the message after 3 seconds
-        setTimeout(() => {
-            setCacheCleared(false);
-        }, 3000);
+            // Reset the message after 3 seconds
+            setTimeout(() => {
+                setCacheCleared(false);
+            }, 3000);
+        } catch (error) {
+            console.error('Error clearing cache:', error);
+            // Optionally, you could add error handling UI here
+        }
     };
 
     return (

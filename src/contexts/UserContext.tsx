@@ -59,6 +59,32 @@ export const SessionProvider: React.FC<UserProviderProps> = ({children}) => {
             });
     }, [user, apiKey]);
 
+    // Preload vocabulary data files for all levels, ignoring user level
+    useEffect(() => {
+        // Set prefetching to true before starting
+        setPrefetching(true);
+
+        // Use a fixed maximum level for vocabulary (WaniKani typically has 60 levels)
+        const maxVocabularyLevel = 60;
+
+        // Create an array of promises for all vocabulary levels
+        const prefetchVocabularyPromises = [];
+        for (let i = 1; i <= maxVocabularyLevel; i++) {
+            // Use the unified loadDataFile function from utils
+            prefetchVocabularyPromises.push(
+                loadDataFile('vocabulary', i)
+                    .catch(err => console.error(`Error preloading vocabulary data for level ${i}:`, err))
+            );
+        }
+
+        // Wait for all prefetch operations to complete
+        Promise.all(prefetchVocabularyPromises)
+            .finally(() => {
+                // Set prefetching to false when done
+                setPrefetching(false);
+            });
+    }, []);
+
     useEffect(() => {
         if ("speechSynthesis" in window) {
             const getVoice = () => {
