@@ -1,10 +1,10 @@
 import {useState, useEffect, useCallback} from 'react';
 import {useSettingsStore} from '../store/settingsStore';
 import {
-    WanikaniUserResponse,
     WanikaniUserData,
     UseWanikaniUserResult
 } from '../types';
+import {WaniKaniApiClient} from '../utils/wanikaniApi';
 
 // Cache key for localStorage
 const WANIKANI_USER_CACHE_KEY = 'wanikani-user-cache';
@@ -89,18 +89,8 @@ export function useWanikaniUser(): UseWanikaniUserResult {
         setError(null);
 
         try {
-            const response = await fetch('https://api.wanikani.com/v2/user', {
-                headers: {
-                    'Authorization': `Bearer ${apiKey}`,
-                    'Wanikani-Revision': '20170710',
-                },
-            });
-
-            if (!response.ok) {
-                throw new Error(`HTTP error! Status: ${response.status}`);
-            }
-
-            const data: WanikaniUserResponse = await response.json();
+            const client = new WaniKaniApiClient(apiKey);
+            const data = await client.getUser();
             setUser(data.data);
             saveToCache(data.data);
         } catch (err) {
@@ -114,7 +104,7 @@ export function useWanikaniUser(): UseWanikaniUserResult {
         if (apiKey) {
             // Force refresh on page reload
             const shouldRefresh = isPageReload();
-            fetchUserData(shouldRefresh);
+            fetchUserData(shouldRefresh).then();
         }
     }, [apiKey, fetchUserData]);
 

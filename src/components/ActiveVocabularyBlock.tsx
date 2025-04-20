@@ -11,6 +11,7 @@ interface ActiveVocabularyBlockProps {
     validReadings: string[];
     onInputChange: (value: string) => void;
     onValidate: (isValid: boolean) => void;
+    isValid: boolean | null;
 }
 
 const ActiveVocabularyBlock: FC<Readonly<ActiveVocabularyBlockProps>> = ({
@@ -19,7 +20,8 @@ const ActiveVocabularyBlock: FC<Readonly<ActiveVocabularyBlockProps>> = ({
                                                                              userInput,
                                                                              validReadings,
                                                                              onInputChange,
-                                                                             onValidate
+                                                                             onValidate,
+                                                                             isValid
                                                                          }) => {
     const ref = useRef<HTMLInputElement | null>(null)
     const {speak} = useSession()
@@ -52,7 +54,7 @@ const ActiveVocabularyBlock: FC<Readonly<ActiveVocabularyBlockProps>> = ({
                 </div>
 
                 {/* Vocabulary Details Table */}
-                <VocabularyDetails vocabulary={vocabulary}/>
+                <VocabularyDetails vocabulary={vocabulary} isValid={isValid}/>
             </div>
         </div>
     );

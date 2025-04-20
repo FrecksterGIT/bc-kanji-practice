@@ -151,6 +151,7 @@ const Vocabulary: FC = () => {
                                 validReadings={getValidReadings}
                                 onInputChange={handleInputChange}
                                 onValidate={handleValidate}
+                                isValid={isInputValid}
                             />
                         )}
                         <VocabularyList

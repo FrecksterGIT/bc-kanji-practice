@@ -16,19 +16,19 @@ const KanjiDetails: FC<KanjiDetailsProps> = ({kanji}) => {
     return (
         <button className={`min-w-2/3 ${show ? 'cursor-zoom-out' : 'blur-md cursor-zoom-in'}`} onClick={() => toggle()}>
             <div className="overflow-x-auto">
-                <table className="min-w-full divide-y divide-gray-200">
+                <table className="min-w-full divide-y divide-gray-200 text-left">
                     <thead>
                     <tr>
                         <th scope="col"
-                            className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
+                            className="px-6 py-3 text-xs font-medium uppercase tracking-wider">
                             Onyomi
                         </th>
                         <th scope="col"
-                            className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
+                            className="px-6 py-3 text-xs font-medium uppercase tracking-wider">
                             Kunyomi
                         </th>
                         <th scope="col"
-                            className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
+                            className="px-6 py-3 text-xs font-medium uppercase tracking-wider">
                             Meanings
                         </th>
                     </tr>

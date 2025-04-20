@@ -1,13 +1,5 @@
 import {DataType, CachedData, KanjiItem, VocabularyItem} from '../types';
-import {db, getCacheKey, isPageReload, KanjiPracticeDB, getStoreTable} from './db';
-
-/**
- * Opens the IndexedDB database (kept for backward compatibility)
- * @returns A promise that resolves to the database instance
- */
-export const openDatabase = (): Promise<KanjiPracticeDB> => {
-    return Promise.resolve(db);
-};
+import {db, getCacheKey, isPageReload, getStoreTable} from './db';
 
 /**
  * Checks if this is a page reload (re-exported from db.ts)
@@ -84,14 +76,14 @@ export const loadDataFile = async <T extends KanjiItem | VocabularyItem>(
         }
     }
 
+    const fileName = `${dataType}${level}.json`;
+    const response = await fetch(`/data/${fileName}`);
+
+    if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+
     try {
-        const fileName = `${dataType}${level}.json`;
-        const response = await fetch(`/data/${fileName}`);
-
-        if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-
         const fetchedData: T[] = await response.json();
         await saveToCache(cacheKey, fetchedData, dataType);
         console.log(`Loaded ${dataType} data for level ${level}`);

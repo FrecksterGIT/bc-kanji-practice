@@ -1,10 +1,10 @@
 import {useState, useEffect, useCallback} from 'react';
 import {useSettingsStore} from '../store/settingsStore';
 import {
-    WanikaniAssignmentsResponse,
     WanikaniAssignment,
     UseWanikaniAssignmentsResult
 } from '../types';
+import {WaniKaniApiClient} from '../utils/wanikaniApi';
 
 // Cache key for localStorage
 const WANIKANI_ASSIGNMENTS_CACHE_KEY_PREFIX = 'wanikani-assignments-cache-';
@@ -118,33 +118,28 @@ export function useWanikaniAssignments(subjectType: 'kanji' | 'vocabulary' = 'ka
         setError(null);
 
         try {
-            // Construct URL with query parameters
-            const url = new URL('https://api.wanikani.com/v2/assignments');
-            url.searchParams.append('started', 'true');
-            url.searchParams.append('levels', level.toString());
+            const client = new WaniKaniApiClient(apiKey);
 
-            // Add subject_types parameter based on the subjectType
-            if (subjectType === 'kanji') {
-                url.searchParams.append('subject_types', 'kanji');
-            } else if (subjectType === 'vocabulary') {
-                url.searchParams.append('subject_types', 'vocabulary,kana_vocabulary');
-            }
+            // Set up parameters for the API call
+            const params: {
+                started: boolean;
+                level: number;
+                subject_types: string;
+            } = {
+                started: true,
+                level: level,
+                subject_types: subjectType === 'kanji' ? 'kanji' : 'vocabulary,kana_vocabulary'
+            };
 
-            const response = await fetch(url.toString(), {
-                headers: {
-                    'Authorization': `Bearer ${apiKey}`,
-                    'Wanikani-Revision': '20170710',
-                },
-            });
+            // Get assignments using the client
+            const response = await client.getAssignments(params);
 
-            if (!response.ok) {
-                throw new Error(`HTTP error! Status: ${response.status}`);
-            }
-
-            const data: WanikaniAssignmentsResponse = await response.json();
+            // The response could be either WanikaniAssignmentsResponse or WanikaniAssignment[]
+            // We need to handle both cases
+            const assignmentsData = Array.isArray(response) ? response : response.data;
 
             // Convert date strings to Date objects
-            const processedAssignments = data.data.map(assignment => ({
+            const processedAssignments = assignmentsData.map(assignment => ({
                 ...assignment,
                 data: {
                     ...assignment.data,

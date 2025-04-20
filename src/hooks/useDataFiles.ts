@@ -1,6 +1,6 @@
 import {useState, useEffect, useCallback} from 'react';
 import {useSettingsStore} from '../store/settingsStore';
-import {loadDataFile, isPageReload} from '../utils/dataLoader';
+import {isPageReload, loadDataFile} from '../utils/dataLoader';
 import {DataType, KanjiItem, VocabularyItem, UseDataFilesResult} from '../types';
 
 /**

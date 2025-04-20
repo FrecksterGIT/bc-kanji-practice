@@ -24,7 +24,6 @@ export const db = new KanjiPracticeDB();
 // Constants for cache keys
 export const KANJI_CACHE_KEY_PREFIX = 'kanji-data-cache-';
 export const VOCABULARY_CACHE_KEY_PREFIX = 'vocabulary-data-cache-';
-export const PAGE_LOAD_KEY = 'data-files-page-load';
 
 /**
  * Checks if this is a page reload
