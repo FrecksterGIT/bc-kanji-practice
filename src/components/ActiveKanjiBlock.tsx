@@ -3,6 +3,7 @@ import KanaInput from './KanaInput';
 import KanjiDetails from './KanjiDetails';
 import {useRelatedVocabulary} from '../hooks/useRelatedVocabulary';
 import {KanjiItem} from '../types';
+import {Mark} from './Mark';
 
 interface ActiveKanjiBlockProps {
     kanji: KanjiItem;
@@ -14,15 +15,15 @@ interface ActiveKanjiBlockProps {
 }
 
 const ActiveKanjiBlock: FC<Readonly<ActiveKanjiBlockProps>> = ({
-    kanji,
-    position,
-    userInput,
-    validReadings,
-    onInputChange,
-    onValidate
-}) => {
+                                                                   kanji,
+                                                                   position,
+                                                                   userInput,
+                                                                   validReadings,
+                                                                   onInputChange,
+                                                                   onValidate
+                                                               }) => {
     const ref = useRef<HTMLInputElement | null>(null)
-    const { relatedVocabulary, loading: vocabularyLoading, error: vocabularyError } = useRelatedVocabulary(kanji.kanji)
+    const {relatedVocabulary, loading: vocabularyLoading, error: vocabularyError} = useRelatedVocabulary(kanji.kanji)
 
     useEffect(() => {
         ref.current?.focus();
@@ -32,7 +33,8 @@ const ActiveKanjiBlock: FC<Readonly<ActiveKanjiBlockProps>> = ({
         <div className="mb-6">
             <div className="flex flex-col items-center">
                 <div className="mb-12">{position}</div>
-                <div className="text-9xl mb-12 p-8 w-full text-center bg-gray-700 border-b-pink-400 border-b-2 text-white">{kanji.kanji}</div>
+                <div
+                    className="text-9xl mb-12 p-8 w-full text-center bg-gray-700 border-b-pink-400 border-b-2 text-white">{kanji.kanji}</div>
 
                 <div className="w-full max-w-1/2 mb-12">
                     <KanaInput
@@ -66,23 +68,23 @@ const ActiveKanjiBlock: FC<Readonly<ActiveKanjiBlockProps>> = ({
                     )}
 
                     {!vocabularyLoading && !vocabularyError && relatedVocabulary.length > 0 && (
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                            {relatedVocabulary.map((vocab) => (
-                                <div key={vocab.id} className="p-4 bg-gray-700 rounded-lg">
-                                    <div className="flex justify-between items-center mb-2">
-                                        <span className="text-xl font-bold">{vocab.word}</span>
-                                        <span className="text-sm bg-blue-500 px-2 py-1 rounded">Level {vocab.level}</span>
+                        <div className="flex gap-x-1 gap-y-4 flex-wrap justify-center">
+                            {relatedVocabulary.map((vocab) => {
+                                const reading = vocab.reading.find(r => r.primary)?.reading || vocab.reading[0]?.reading;
+                                const meaning = vocab.meanings.find(m => m.primary)?.meaning || vocab.meanings[0]?.meaning;
+
+                                return (
+                                    <div key={vocab.id}>
+                                    <Mark
+
+                                        level={vocab.level}
+                                        meaning={meaning}
+                                        word={vocab.word}
+                                        reading={reading}
+                                    />
                                     </div>
-                                    <div className="mb-2">
-                                        <span className="text-gray-300">Reading: </span>
-                                        <span>{vocab.reading.find(r => r.primary)?.reading || vocab.reading[0]?.reading}</span>
-                                    </div>
-                                    <div>
-                                        <span className="text-gray-300">Meaning: </span>
-                                        <span>{vocab.meanings.find(m => m.primary)?.meaning || vocab.meanings[0]?.meaning}</span>
-                                    </div>
-                                </div>
-                            ))}
+                                );
+                            })}
                         </div>
                     )}
                 </div>
