@@ -15,16 +15,20 @@ const SelectableButton: FC<SelectableButtonProps> = ({
                                                          selected,
                                                          valid,
                                                          onClick,
-    type,
+                                                         type,
                                                      }) => {
     const getButtonClass = useCallback(() => {
         if (selected) return type === 'kanji' ? 'bg-pink-400' : 'bg-purple-400';
         return '';
     }, [selected, valid]);
 
+    const getTextColor = useCallback(() => {
+        return selected ? 'text-white' : 'text-gray-400';
+    }, [selected])
+
     return (
         <button
-            className={`cursor-pointer transition-colors grid grid-cols-[min-content_auto] items-center gap-2`}
+            className={`cursor-pointer grid grid-cols-[min-content_auto] items-center gap-2 ${getTextColor()}`}
             onClick={onClick}
         >
             {!valid && <NoAnswer/>}

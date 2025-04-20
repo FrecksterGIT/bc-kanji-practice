@@ -1,5 +1,5 @@
-import {useState, useEffect, ChangeEvent, forwardRef, useCallback} from 'react';
-import * as wanakana from 'wanakana';
+import {useState, useEffect, ChangeEvent, forwardRef, useCallback, useMemo} from 'react';
+import {toHiragana} from 'wanakana';
 
 interface KanaInputProps {
     value?: string;
@@ -26,6 +26,11 @@ const KanaInput = forwardRef<HTMLInputElement, KanaInputProps>(({
                                                                     validValues,
                                                                     onValidate,
                                                                 }, ref) => {
+    const validHiraganaValues = useMemo(() => {
+        if (!validValues || validValues.length === 0) return [];
+        return validValues.map(value => toHiragana(value));
+    }, [validValues])
+
     // Internal state to handle controlled/uncontrolled component
     const [internalValue, setInternalValue] = useState<string>(externalValue ?? '');
     // State for validation status
@@ -33,11 +38,11 @@ const KanaInput = forwardRef<HTMLInputElement, KanaInputProps>(({
 
     // Validate the input value
     const validateInput = (value: string) => {
-        if (!validValues || validValues.length === 0) {
+        if (!validHiraganaValues || validHiraganaValues.length === 0) {
             return null; // No validation needed
         }
 
-        const valid = validValues.includes(value);
+        const valid = validHiraganaValues.includes(value);
         setIsValid(valid);
 
         // Call the onValidate handler if provided
@@ -54,11 +59,11 @@ const KanaInput = forwardRef<HTMLInputElement, KanaInputProps>(({
             setInternalValue(externalValue);
             validateInput(externalValue);
         }
-    }, [externalValue, validValues]);
+    }, [externalValue, validHiraganaValues]);
 
     useEffect(() => {
         setIsValid(null)
-    }, [validValues]);
+    }, [validHiraganaValues]);
 
     const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
         const input = e.target.value;
@@ -69,7 +74,7 @@ const KanaInput = forwardRef<HTMLInputElement, KanaInputProps>(({
         // Convert input to hiragana with custom mapping for "nn" only if the condition is false
         const convertedInput = shouldNotConvert
             ? input
-            : wanakana.toHiragana(input, {
+            : toHiragana(input, {
                 customKanaMapping: {nn: "ん"}
             });
 
