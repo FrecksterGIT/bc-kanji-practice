@@ -123,12 +123,12 @@ export function useWanikaniAssignments(subjectType: 'kanji' | 'vocabulary' = 'ka
             // Set up parameters for the API call
             const params: {
                 started: boolean;
-                level: number;
-                subject_types: string;
+                levels: number[];
+                subject_types: string[];
             } = {
                 started: true,
-                level: level,
-                subject_types: subjectType === 'kanji' ? 'kanji' : 'vocabulary,kana_vocabulary'
+                levels: [level],
+                subject_types: subjectType === 'kanji' ? ['kanji'] : ['vocabulary', 'kana_vocabulary']
             };
 
             // Get assignments using the client

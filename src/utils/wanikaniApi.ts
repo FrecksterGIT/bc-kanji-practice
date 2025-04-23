@@ -98,6 +98,53 @@ export class WaniKaniApiClient {
   }
 
   /**
+   * Builds query parameters for API requests
+   * @param params The parameters object to process
+   * @returns A record of string keys and string values for use in API requests
+   */
+  private buildQueryParams(params?: Record<string, string | number | boolean | Date | string[] | number[] | undefined>): Record<string, string> {
+    const queryParams: Record<string, string> = {};
+
+    if (!params) {
+      return queryParams;
+    }
+
+    // Process each parameter based on its type
+    Object.entries(params).forEach(([key, value]) => {
+      // Skip undefined values
+      if (value === undefined) {
+        return;
+      }
+
+      // Handle different types of values
+      if (value instanceof Date) {
+        // Date parameters
+        queryParams[key] = value.toISOString();
+      } else if (Array.isArray(value) && value.length > 0) {
+        // Array parameters (join with commas)
+        queryParams[key] = value.join(',');
+      } else if (typeof value === 'boolean') {
+        // Boolean parameters
+        queryParams[key] = value.toString();
+      } else if (typeof value === 'number') {
+        // Number parameters
+        queryParams[key] = value.toString();
+      } else if (typeof value === 'string') {
+        // String parameters
+        queryParams[key] = value;
+      } else if (value === null) {
+        // Special case for null values (skip)
+        return;
+      } else if (typeof value === 'object' && Object.keys(value).length === 0) {
+        // Special case for empty objects (used as flags)
+        queryParams[key] = '';
+      }
+    });
+
+    return queryParams;
+  }
+
+  /**
    * Gets the user's information
    * @returns The user data
    */
@@ -108,47 +155,62 @@ export class WaniKaniApiClient {
   /**
    * Gets the user's assignments
    * @param params Optional query parameters
+   * @param params.started Filter by assignments that have been started
+   * @param params.level Filter by a specific level (deprecated, use levels instead)
+   * @param params.subject_types Filter by subject types as a comma-separated string (deprecated, use subject_types array instead)
+   * @param params.page_after_id Get results after this ID
+   * @param params.page_before_id Get results before this ID
+   * @param params.updated_after Get assignments updated after this date
+   * @param params.available_after Get assignments available at or after this date
+   * @param params.available_before Get assignments available at or before this date
+   * @param params.burned Filter by assignments that have been burned
+   * @param params.hidden Filter by assignments that are hidden
+   * @param params.unlocked Filter by assignments that have been unlocked
+   * @param params.ids Filter by specific assignment IDs
+   * @param params.levels Filter by specific levels (1-60)
+   * @param params.srs_stages Filter by specific SRS stages (0-9)
+   * @param params.subject_ids Filter by specific subject IDs
+   * @param params.subject_types Filter by specific subject types (array of: "radical", "kanji", "vocabulary", "kana_vocabulary")
+   * @param params.immediately_available_for_lessons Get assignments immediately available for lessons
+   * @param params.immediately_available_for_review Get assignments immediately available for review
+   * @param params.in_review Get assignments that are in review
    * @param fetchAllPages Whether to fetch all pages of results (default: false)
    * @param maxPages Maximum number of pages to fetch when fetchAllPages is true (default: unlimited)
    * @returns The assignments data or all assignments if fetchAllPages is true
    */
   async getAssignments(
     params?: {
+      // Original parameters
       started?: boolean;
-      level?: number;
-      subject_types?: string;
       page_after_id?: number;
       page_before_id?: number;
       updated_after?: Date;
+
+      // New date filters
+      available_after?: Date;
+      available_before?: Date;
+
+      // New boolean filters
+      burned?: boolean;
+      hidden?: boolean;
+      unlocked?: boolean;
+
+      // New array filters
+      ids?: number[];
+      levels?: number[];
+      srs_stages?: number[];
+      subject_ids?: number[];
+      subject_types?: string[];
+
+      // Special filters
+      immediately_available_for_lessons?: boolean;
+      immediately_available_for_review?: boolean;
+      in_review?: boolean;
     },
     fetchAllPages: boolean = false,
     maxPages: number = Infinity
   ): Promise<WanikaniAssignmentsResponse | WanikaniAssignment[]> {
-    const queryParams: Record<string, string> = {};
-
-    if (params?.started !== undefined) {
-      queryParams.started = params.started.toString();
-    }
-
-    if (params?.level !== undefined) {
-      queryParams.levels = params.level.toString();
-    }
-
-    if (params?.subject_types) {
-      queryParams.subject_types = params.subject_types;
-    }
-
-    if (params?.page_after_id !== undefined) {
-      queryParams.page_after_id = params.page_after_id.toString();
-    }
-
-    if (params?.page_before_id !== undefined) {
-      queryParams.page_before_id = params.page_before_id.toString();
-    }
-
-    if (params?.updated_after) {
-      queryParams.updated_after = params.updated_after.toISOString();
-    }
+    const queryParams = this.buildQueryParams(params);
 
     const response = await this.request<WanikaniAssignmentsResponse>('/assignments', queryParams);
 
@@ -180,39 +242,7 @@ export class WaniKaniApiClient {
     fetchAllPages: boolean = false,
     maxPages: number = Infinity
   ): Promise<WanikaniSubjectsResponse | WanikaniSubject[]> {
-    const queryParams: Record<string, string> = {};
-
-    if (params?.ids && params.ids.length > 0) {
-      queryParams.ids = params.ids.join(',');
-    }
-
-    if (params?.types && params.types.length > 0) {
-      queryParams.types = params.types.join(',');
-    }
-
-    if (params?.levels && params.levels.length > 0) {
-      queryParams.levels = params.levels.join(',');
-    }
-
-    if (params?.slugs && params.slugs.length > 0) {
-      queryParams.slugs = params.slugs.join(',');
-    }
-
-    if (params?.hidden !== undefined) {
-      queryParams.hidden = params.hidden.toString();
-    }
-
-    if (params?.page_after_id !== undefined) {
-      queryParams.page_after_id = params.page_after_id.toString();
-    }
-
-    if (params?.page_before_id !== undefined) {
-      queryParams.page_before_id = params.page_before_id.toString();
-    }
-
-    if (params?.updated_after) {
-      queryParams.updated_after = params.updated_after.toISOString();
-    }
+    const queryParams = this.buildQueryParams(params);
 
     const response = await this.request<WanikaniSubjectsResponse>('/subjects', queryParams);
 
@@ -243,31 +273,7 @@ export class WaniKaniApiClient {
     fetchAllPages: boolean = false,
     maxPages: number = Infinity
   ): Promise<WanikaniReviewStatisticsResponse | WanikaniReviewStatistic[]> {
-    const queryParams: Record<string, string> = {};
-
-    if (params?.subject_ids && params.subject_ids.length > 0) {
-      queryParams.subject_ids = params.subject_ids.join(',');
-    }
-
-    if (params?.percentages_greater_than !== undefined) {
-      queryParams.percentages_greater_than = params.percentages_greater_than.toString();
-    }
-
-    if (params?.percentages_less_than !== undefined) {
-      queryParams.percentages_less_than = params.percentages_less_than.toString();
-    }
-
-    if (params?.page_after_id !== undefined) {
-      queryParams.page_after_id = params.page_after_id.toString();
-    }
-
-    if (params?.page_before_id !== undefined) {
-      queryParams.page_before_id = params.page_before_id.toString();
-    }
-
-    if (params?.updated_after) {
-      queryParams.updated_after = params.updated_after.toISOString();
-    }
+    const queryParams = this.buildQueryParams(params);
 
     const response = await this.request<WanikaniReviewStatisticsResponse>('/review_statistics', queryParams);
 
@@ -296,27 +302,7 @@ export class WaniKaniApiClient {
     fetchAllPages: boolean = false,
     maxPages: number = Infinity
   ): Promise<WanikaniStudyMaterialsResponse | WanikaniStudyMaterial[]> {
-    const queryParams: Record<string, string> = {};
-
-    if (params?.subject_ids && params.subject_ids.length > 0) {
-      queryParams.subject_ids = params.subject_ids.join(',');
-    }
-
-    if (params?.subject_types && params.subject_types.length > 0) {
-      queryParams.subject_types = params.subject_types.join(',');
-    }
-
-    if (params?.page_after_id !== undefined) {
-      queryParams.page_after_id = params.page_after_id.toString();
-    }
-
-    if (params?.page_before_id !== undefined) {
-      queryParams.page_before_id = params.page_before_id.toString();
-    }
-
-    if (params?.updated_after) {
-      queryParams.updated_after = params.updated_after.toISOString();
-    }
+    const queryParams = this.buildQueryParams(params);
 
     const response = await this.request<WanikaniStudyMaterialsResponse>('/study_materials', queryParams);
 
@@ -352,23 +338,7 @@ export class WaniKaniApiClient {
     fetchAllPages: boolean = false,
     maxPages: number = Infinity
   ): Promise<WanikaniReviewsResponse | WanikaniReview[]> {
-    const queryParams: Record<string, string> = {};
-
-    if (params?.subject_ids && params.subject_ids.length > 0) {
-      queryParams.subject_ids = params.subject_ids.join(',');
-    }
-
-    if (params?.updated_after) {
-      queryParams.updated_after = params.updated_after.toISOString();
-    }
-
-    if (params?.page_after_id !== undefined) {
-      queryParams.page_after_id = params.page_after_id.toString();
-    }
-
-    if (params?.page_before_id !== undefined) {
-      queryParams.page_before_id = params.page_before_id.toString();
-    }
+    const queryParams = this.buildQueryParams(params);
 
     const response = await this.request<WanikaniReviewsResponse>('/reviews', queryParams);
 
@@ -395,19 +365,7 @@ export class WaniKaniApiClient {
     fetchAllPages: boolean = false,
     maxPages: number = Infinity
   ): Promise<WanikaniLevelProgressionsResponse | WanikaniLevelProgression[]> {
-    const queryParams: Record<string, string> = {};
-
-    if (params?.page_after_id !== undefined) {
-      queryParams.page_after_id = params.page_after_id.toString();
-    }
-
-    if (params?.page_before_id !== undefined) {
-      queryParams.page_before_id = params.page_before_id.toString();
-    }
-
-    if (params?.updated_after) {
-      queryParams.updated_after = params.updated_after.toISOString();
-    }
+    const queryParams = this.buildQueryParams(params);
 
     const response = await this.request<WanikaniLevelProgressionsResponse>('/level_progressions', queryParams);
 
@@ -434,19 +392,7 @@ export class WaniKaniApiClient {
     fetchAllPages: boolean = false,
     maxPages: number = Infinity
   ): Promise<WanikaniVoiceActorsResponse | WanikaniVoiceActor[]> {
-    const queryParams: Record<string, string> = {};
-
-    if (params?.page_after_id !== undefined) {
-      queryParams.page_after_id = params.page_after_id.toString();
-    }
-
-    if (params?.page_before_id !== undefined) {
-      queryParams.page_before_id = params.page_before_id.toString();
-    }
-
-    if (params?.updated_after) {
-      queryParams.updated_after = params.updated_after.toISOString();
-    }
+    const queryParams = this.buildQueryParams(params);
 
     const response = await this.request<WanikaniVoiceActorsResponse>('/voice_actors', queryParams);
 
@@ -473,19 +419,7 @@ export class WaniKaniApiClient {
     fetchAllPages: boolean = false,
     maxPages: number = Infinity
   ): Promise<WanikaniResetsResponse | WanikaniReset[]> {
-    const queryParams: Record<string, string> = {};
-
-    if (params?.page_after_id !== undefined) {
-      queryParams.page_after_id = params.page_after_id.toString();
-    }
-
-    if (params?.page_before_id !== undefined) {
-      queryParams.page_before_id = params.page_before_id.toString();
-    }
-
-    if (params?.updated_after) {
-      queryParams.updated_after = params.updated_after.toISOString();
-    }
+    const queryParams = this.buildQueryParams(params);
 
     const response = await this.request<WanikaniResetsResponse>('/resets', queryParams);
 

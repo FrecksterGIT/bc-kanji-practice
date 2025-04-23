@@ -1,0 +1,871 @@
+openapi: 3.0.0
+info:
+  title: WaniKani API
+  description: |
+    The WaniKani API provides programmatic access to user data and learning resources.
+    This API allows developers to access and integrate WaniKani's Japanese language learning content with other applications.
+  version: 2.0.0
+  contact:
+    url: https://www.wanikani.com/
+
+servers:
+  - url: https://api.wanikani.com/v2
+    description: WaniKani API v2
+
+security:
+  - bearerAuth: []
+
+paths:
+  /assignments:
+    get:
+      summary: Get a collection of assignments
+      description: Returns a collection of assignments, ordered by ascending created_at, 500 at a time.
+      parameters:
+        - name: available_after
+          in: query
+          description: Return assignments available after this time
+          schema:
+            type: string
+            format: date-time
+        - name: available_before
+          in: query
+          description: Return assignments available before this time
+          schema:
+            type: string
+            format: date-time
+        - name: burned
+          in: query
+          description: Return assignments that have been burned
+          schema:
+            type: boolean
+        - name: hidden
+          in: query
+          description: Return assignments that are hidden
+          schema:
+            type: boolean
+        - name: ids
+          in: query
+          description: Return assignments with the specified IDs
+          schema:
+            type: array
+            items:
+              type: integer
+        - name: immediately_available_for_lessons
+          in: query
+          description: Return assignments that are immediately available for lessons
+          schema:
+            type: boolean
+        - name: immediately_available_for_review
+          in: query
+          description: Return assignments that are immediately available for review
+          schema:
+            type: boolean
+        - name: in_review
+          in: query
+          description: Return assignments that are in review
+          schema:
+            type: boolean
+        - name: levels
+          in: query
+          description: Return assignments for the specified levels
+          schema:
+            type: array
+            items:
+              type: integer
+        - name: srs_stages
+          in: query
+          description: Return assignments for the specified SRS stages
+          schema:
+            type: array
+            items:
+              type: integer
+        - name: started
+          in: query
+          description: Return assignments that have been started
+          schema:
+            type: boolean
+        - name: subject_ids
+          in: query
+          description: Return assignments for the specified subjects
+          schema:
+            type: array
+            items:
+              type: integer
+        - name: subject_types
+          in: query
+          description: Return assignments for the specified subject types
+          schema:
+            type: array
+            items:
+              type: string
+              enum: [radical, kanji, vocabulary, kana_vocabulary]
+        - name: unlocked
+          in: query
+          description: Return assignments that have been unlocked
+          schema:
+            type: boolean
+        - name: updated_after
+          in: query
+          description: Return assignments updated after this time
+          schema:
+            type: string
+            format: date-time
+      responses:
+        '200':
+          description: A collection of assignments
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AssignmentCollection'
+
+  /assignments/{id}:
+    get:
+      summary: Get a specific assignment
+      description: Returns a specific assignment by its ID.
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID of the assignment to retrieve
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: The requested assignment
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Assignment'
+
+  /level_progressions:
+    get:
+      summary: Get a collection of level progressions
+      description: Returns a collection of level progressions, ordered by ascending created_at, 500 at a time.
+      parameters:
+        - name: ids
+          in: query
+          description: Return level progressions with the specified IDs
+          schema:
+            type: array
+            items:
+              type: integer
+        - name: updated_after
+          in: query
+          description: Return level progressions updated after this time
+          schema:
+            type: string
+            format: date-time
+      responses:
+        '200':
+          description: A collection of level progressions
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LevelProgressionCollection'
+
+  /level_progressions/{id}:
+    get:
+      summary: Get a specific level progression
+      description: Returns a specific level progression by its ID.
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID of the level progression to retrieve
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: The requested level progression
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LevelProgression'
+
+  /subjects:
+    get:
+      summary: Get a collection of subjects
+      description: Returns a collection of subjects, ordered by ascending created_at, 1000 at a time.
+      parameters:
+        - name: ids
+          in: query
+          description: Return subjects with the specified IDs
+          schema:
+            type: array
+            items:
+              type: integer
+        - name: types
+          in: query
+          description: Return subjects with the specified types
+          schema:
+            type: array
+            items:
+              type: string
+              enum: [radical, kanji, vocabulary, kana_vocabulary]
+        - name: slugs
+          in: query
+          description: Return subjects with the specified slugs
+          schema:
+            type: array
+            items:
+              type: string
+        - name: levels
+          in: query
+          description: Return subjects at the specified levels
+          schema:
+            type: array
+            items:
+              type: integer
+        - name: hidden
+          in: query
+          description: Return subjects that are hidden
+          schema:
+            type: boolean
+        - name: updated_after
+          in: query
+          description: Return subjects updated after this time
+          schema:
+            type: string
+            format: date-time
+      responses:
+        '200':
+          description: A collection of subjects
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SubjectCollection'
+
+  /subjects/{id}:
+    get:
+      summary: Get a specific subject
+      description: Returns a specific subject by its ID.
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID of the subject to retrieve
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: The requested subject
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Subject'
+
+  /user:
+    get:
+      summary: Get user information
+      description: Returns information about the user associated with the API token.
+      responses:
+        '200':
+          description: User information
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: token
+      description: API token from WaniKani
+
+  schemas:
+    Collection:
+      type: object
+      properties:
+        object:
+          type: string
+          example: collection
+        url:
+          type: string
+          format: uri
+        pages:
+          type: object
+          properties:
+            per_page:
+              type: integer
+            next_url:
+              type: string
+              format: uri
+              nullable: true
+            previous_url:
+              type: string
+              format: uri
+              nullable: true
+        total_count:
+          type: integer
+        data_updated_at:
+          type: string
+          format: date-time
+        data:
+          type: array
+          items:
+            type: object
+
+    AssignmentCollection:
+      allOf:
+        - $ref: '#/components/schemas/Collection'
+        - type: object
+          properties:
+            data:
+              type: array
+              items:
+                $ref: '#/components/schemas/AssignmentResource'
+
+    AssignmentResource:
+      type: object
+      properties:
+        id:
+          type: integer
+        object:
+          type: string
+          example: assignment
+        url:
+          type: string
+          format: uri
+        data_updated_at:
+          type: string
+          format: date-time
+        data:
+          $ref: '#/components/schemas/AssignmentData'
+
+    Assignment:
+      type: object
+      properties:
+        id:
+          type: integer
+        object:
+          type: string
+          example: assignment
+        url:
+          type: string
+          format: uri
+        data_updated_at:
+          type: string
+          format: date-time
+        data:
+          $ref: '#/components/schemas/AssignmentData'
+
+    AssignmentData:
+      type: object
+      properties:
+        created_at:
+          type: string
+          format: date-time
+        subject_id:
+          type: integer
+        subject_type:
+          type: string
+          enum: [radical, kanji, vocabulary, kana_vocabulary]
+        level:
+          type: integer
+        srs_stage:
+          type: integer
+        unlocked_at:
+          type: string
+          format: date-time
+          nullable: true
+        started_at:
+          type: string
+          format: date-time
+          nullable: true
+        passed_at:
+          type: string
+          format: date-time
+          nullable: true
+        burned_at:
+          type: string
+          format: date-time
+          nullable: true
+        available_at:
+          type: string
+          format: date-time
+          nullable: true
+        resurrected_at:
+          type: string
+          format: date-time
+          nullable: true
+
+    LevelProgressionCollection:
+      allOf:
+        - $ref: '#/components/schemas/Collection'
+        - type: object
+          properties:
+            data:
+              type: array
+              items:
+                $ref: '#/components/schemas/LevelProgressionResource'
+
+    LevelProgressionResource:
+      type: object
+      properties:
+        id:
+          type: integer
+        object:
+          type: string
+          example: level_progression
+        url:
+          type: string
+          format: uri
+        data_updated_at:
+          type: string
+          format: date-time
+        data:
+          $ref: '#/components/schemas/LevelProgressionData'
+
+    LevelProgression:
+      type: object
+      properties:
+        id:
+          type: integer
+        object:
+          type: string
+          example: level_progression
+        url:
+          type: string
+          format: uri
+        data_updated_at:
+          type: string
+          format: date-time
+        data:
+          $ref: '#/components/schemas/LevelProgressionData'
+
+    LevelProgressionData:
+      type: object
+      properties:
+        created_at:
+          type: string
+          format: date-time
+        level:
+          type: integer
+        unlocked_at:
+          type: string
+          format: date-time
+          nullable: true
+        started_at:
+          type: string
+          format: date-time
+          nullable: true
+        passed_at:
+          type: string
+          format: date-time
+          nullable: true
+        completed_at:
+          type: string
+          format: date-time
+          nullable: true
+        abandoned_at:
+          type: string
+          format: date-time
+          nullable: true
+
+    SubjectCollection:
+      allOf:
+        - $ref: '#/components/schemas/Collection'
+        - type: object
+          properties:
+            data:
+              type: array
+              items:
+                $ref: '#/components/schemas/SubjectResource'
+
+    SubjectResource:
+      type: object
+      properties:
+        id:
+          type: integer
+        object:
+          type: string
+          enum: [radical, kanji, vocabulary, kana_vocabulary]
+        url:
+          type: string
+          format: uri
+        data_updated_at:
+          type: string
+          format: date-time
+        data:
+          oneOf:
+            - $ref: '#/components/schemas/RadicalData'
+            - $ref: '#/components/schemas/KanjiData'
+            - $ref: '#/components/schemas/VocabularyData'
+            - $ref: '#/components/schemas/KanaVocabularyData'
+
+    Subject:
+      type: object
+      properties:
+        id:
+          type: integer
+        object:
+          type: string
+          enum: [radical, kanji, vocabulary, kana_vocabulary]
+        url:
+          type: string
+          format: uri
+        data_updated_at:
+          type: string
+          format: date-time
+        data:
+          oneOf:
+            - $ref: '#/components/schemas/RadicalData'
+            - $ref: '#/components/schemas/KanjiData'
+            - $ref: '#/components/schemas/VocabularyData'
+            - $ref: '#/components/schemas/KanaVocabularyData'
+
+    Meaning:
+      type: object
+      properties:
+        meaning:
+          type: string
+        primary:
+          type: boolean
+        accepted_answer:
+          type: boolean
+
+    AuxiliaryMeaning:
+      type: object
+      properties:
+        meaning:
+          type: string
+        type:
+          type: string
+          enum: [whitelist, blacklist]
+
+    Reading:
+      type: object
+      properties:
+        type:
+          type: string
+          enum: [onyomi, kunyomi, nanori]
+        primary:
+          type: boolean
+        accepted_answer:
+          type: boolean
+        reading:
+          type: string
+
+    PronunciationAudio:
+      type: object
+      properties:
+        url:
+          type: string
+          format: uri
+        metadata:
+          type: object
+          properties:
+            gender:
+              type: string
+              enum: [male, female]
+            source_id:
+              type: integer
+            pronunciation:
+              type: string
+            voice_actor_id:
+              type: integer
+            voice_actor_name:
+              type: string
+            voice_description:
+              type: string
+        content_type:
+          type: string
+          enum: [audio/mpeg, audio/ogg, audio/webm]
+
+    ContextSentence:
+      type: object
+      properties:
+        en:
+          type: string
+        ja:
+          type: string
+
+    CharacterImage:
+      type: object
+      properties:
+        url:
+          type: string
+          format: uri
+        metadata:
+          type: object
+          properties:
+            inline_styles:
+              type: boolean
+        content_type:
+          type: string
+
+    RadicalData:
+      type: object
+      properties:
+        amalgamation_subject_ids:
+          type: array
+          items:
+            type: integer
+        auxiliary_meanings:
+          type: array
+          items:
+            $ref: '#/components/schemas/AuxiliaryMeaning'
+        characters:
+          type: string
+          nullable: true
+        character_images:
+          type: array
+          items:
+            $ref: '#/components/schemas/CharacterImage'
+        created_at:
+          type: string
+          format: date-time
+        document_url:
+          type: string
+          format: uri
+        hidden_at:
+          type: string
+          format: date-time
+          nullable: true
+        lesson_position:
+          type: integer
+        level:
+          type: integer
+        meanings:
+          type: array
+          items:
+            $ref: '#/components/schemas/Meaning'
+        meaning_mnemonic:
+          type: string
+        slug:
+          type: string
+        spaced_repetition_system_id:
+          type: integer
+
+    KanjiData:
+      type: object
+      properties:
+        amalgamation_subject_ids:
+          type: array
+          items:
+            type: integer
+        auxiliary_meanings:
+          type: array
+          items:
+            $ref: '#/components/schemas/AuxiliaryMeaning'
+        characters:
+          type: string
+        component_subject_ids:
+          type: array
+          items:
+            type: integer
+        created_at:
+          type: string
+          format: date-time
+        document_url:
+          type: string
+          format: uri
+        hidden_at:
+          type: string
+          format: date-time
+          nullable: true
+        lesson_position:
+          type: integer
+        level:
+          type: integer
+        meanings:
+          type: array
+          items:
+            $ref: '#/components/schemas/Meaning'
+        meaning_hint:
+          type: string
+          nullable: true
+        meaning_mnemonic:
+          type: string
+        readings:
+          type: array
+          items:
+            $ref: '#/components/schemas/Reading'
+        reading_mnemonic:
+          type: string
+        reading_hint:
+          type: string
+          nullable: true
+        slug:
+          type: string
+        visually_similar_subject_ids:
+          type: array
+          items:
+            type: integer
+        spaced_repetition_system_id:
+          type: integer
+
+    VocabularyData:
+      type: object
+      properties:
+        auxiliary_meanings:
+          type: array
+          items:
+            $ref: '#/components/schemas/AuxiliaryMeaning'
+        characters:
+          type: string
+        component_subject_ids:
+          type: array
+          items:
+            type: integer
+        context_sentences:
+          type: array
+          items:
+            $ref: '#/components/schemas/ContextSentence'
+        created_at:
+          type: string
+          format: date-time
+        document_url:
+          type: string
+          format: uri
+        hidden_at:
+          type: string
+          format: date-time
+          nullable: true
+        lesson_position:
+          type: integer
+        level:
+          type: integer
+        meanings:
+          type: array
+          items:
+            $ref: '#/components/schemas/Meaning'
+        meaning_mnemonic:
+          type: string
+        parts_of_speech:
+          type: array
+          items:
+            type: string
+        pronunciation_audios:
+          type: array
+          items:
+            $ref: '#/components/schemas/PronunciationAudio'
+        readings:
+          type: array
+          items:
+            type: object
+            properties:
+              primary:
+                type: boolean
+              reading:
+                type: string
+              accepted_answer:
+                type: boolean
+        reading_mnemonic:
+          type: string
+        slug:
+          type: string
+        spaced_repetition_system_id:
+          type: integer
+
+    KanaVocabularyData:
+      type: object
+      properties:
+        auxiliary_meanings:
+          type: array
+          items:
+            $ref: '#/components/schemas/AuxiliaryMeaning'
+        characters:
+          type: string
+        context_sentences:
+          type: array
+          items:
+            $ref: '#/components/schemas/ContextSentence'
+        created_at:
+          type: string
+          format: date-time
+        document_url:
+          type: string
+          format: uri
+        hidden_at:
+          type: string
+          format: date-time
+          nullable: true
+        lesson_position:
+          type: integer
+        level:
+          type: integer
+        meanings:
+          type: array
+          items:
+            $ref: '#/components/schemas/Meaning'
+        meaning_mnemonic:
+          type: string
+        parts_of_speech:
+          type: array
+          items:
+            type: string
+        pronunciation_audios:
+          type: array
+          items:
+            $ref: '#/components/schemas/PronunciationAudio'
+        slug:
+          type: string
+        spaced_repetition_system_id:
+          type: integer
+
+    User:
+      type: object
+      properties:
+        object:
+          type: string
+          example: user
+        url:
+          type: string
+          format: uri
+        data_updated_at:
+          type: string
+          format: date-time
+        data:
+          type: object
+          properties:
+            id:
+              type: string
+              format: uuid
+            username:
+              type: string
+            level:
+              type: integer
+            profile_url:
+              type: string
+              format: uri
+            started_at:
+              type: string
+              format: date-time
+            current_vacation_started_at:
+              type: string
+              format: date-time
+              nullable: true
+            subscription:
+              type: object
+              properties:
+                active:
+                  type: boolean
+                type:
+                  type: string
+                max_level_granted:
+                  type: integer
+                period_ends_at:
+                  type: string
+                  format: date-time
+            preferences:
+              type: object
+              properties:
+                default_voice_actor_id:
+                  type: integer
+                extra_study_autoplay_audio:
+                  type: boolean
+                lessons_autoplay_audio:
+                  type: boolean
+                lessons_batch_size:
+                  type: integer
+                lessons_presentation_order:
+                  type: string
+                reviews_autoplay_audio:
+                  type: boolean
+                reviews_display_srs_indicator:
+                  type: boolean
+                reviews_presentation_order:
+                  type: string
