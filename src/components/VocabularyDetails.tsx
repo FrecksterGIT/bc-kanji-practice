@@ -23,11 +23,13 @@ const VocabularyDetails: FC<VocabularyDetailsProps> = ({vocabulary, isValid}) =>
         }
     }, [set, isValid]);
 
-    const getReading = (reading: string) => {
+    const getReading = (reading: string, allReadings: VocabularyItem["reading"]) => {
         const containsKatakana = reading.split("").some(isKatakana);
         if (containsKatakana) {
-            const pureHiragana = reading.split("").map(c => toHiragana(c)).join("")
-            return `${reading} (${pureHiragana})`;
+            const pureHiragana = reading.split("").map(c => toHiragana(c)).join("");
+            if (!allReadings.some(r => r.reading === pureHiragana)) {
+                return `${reading} (${pureHiragana})`;
+            }
         }
         return reading;
     }
@@ -59,7 +61,7 @@ const VocabularyDetails: FC<VocabularyDetailsProps> = ({vocabulary, isValid}) =>
                                 <span
                                     key={reading.reading}
                                     className={`separated-comma ${reading.primary ? 'font-bold text-white' : ''}`}
-                                >{getReading(reading.reading)}</span>
+                                >{getReading(reading.reading, vocabulary.reading)}</span>
                             ))}
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap">
