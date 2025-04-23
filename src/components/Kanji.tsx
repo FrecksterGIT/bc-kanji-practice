@@ -159,6 +159,7 @@ const Kanji: FC = () => {
                                 validReadings={getValidReadings}
                                 onInputChange={handleInputChange}
                                 onValidate={handleValidate}
+                                isValid={isInputValid}
                             />
                         )}
                         <KanjiList

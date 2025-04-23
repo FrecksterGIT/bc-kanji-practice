@@ -4,14 +4,21 @@ import {useToggle} from "usehooks-ts";
 
 interface KanjiDetailsProps {
     kanji: KanjiItem;
+    isValid: boolean | null;
 }
 
-const KanjiDetails: FC<KanjiDetailsProps> = ({kanji}) => {
+const KanjiDetails: FC<KanjiDetailsProps> = ({kanji, isValid}) => {
     const [show, toggle, set] = useToggle(false)
 
     useEffect(() => {
         set(false)
     }, [set, kanji]);
+
+    useEffect(() => {
+        if (isValid) {
+            set(true)
+        }
+    }, [set, isValid]);
 
     return (
         <button className={`min-w-2/3 ${show ? 'cursor-zoom-out' : 'blur-md cursor-zoom-in'}`} onClick={() => toggle()}>

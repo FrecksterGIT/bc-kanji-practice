@@ -12,6 +12,7 @@ interface ActiveKanjiBlockProps {
     validReadings: string[];
     onInputChange: (value: string) => void;
     onValidate: (isValid: boolean) => void;
+    isValid: boolean | null;
 }
 
 const ActiveKanjiBlock: FC<Readonly<ActiveKanjiBlockProps>> = ({
@@ -20,7 +21,8 @@ const ActiveKanjiBlock: FC<Readonly<ActiveKanjiBlockProps>> = ({
                                                                    userInput,
                                                                    validReadings,
                                                                    onInputChange,
-                                                                   onValidate
+                                                                   onValidate,
+                                                                   isValid
                                                                }) => {
     const ref = useRef<HTMLInputElement | null>(null)
     const {relatedVocabulary, loading: vocabularyLoading, error: vocabularyError} = useRelatedVocabulary(kanji.kanji)
@@ -70,13 +72,13 @@ const ActiveKanjiBlock: FC<Readonly<ActiveKanjiBlockProps>> = ({
 
                                 return (
                                     <div key={vocab.id}>
-                                    <Mark
+                                        <Mark
 
-                                        level={vocab.level}
-                                        meaning={meaning}
-                                        word={vocab.word}
-                                        reading={reading}
-                                    />
+                                            level={vocab.level}
+                                            meaning={meaning}
+                                            word={vocab.word}
+                                            reading={reading}
+                                        />
                                     </div>
                                 );
                             })}
@@ -85,7 +87,7 @@ const ActiveKanjiBlock: FC<Readonly<ActiveKanjiBlockProps>> = ({
                 </div>
 
                 {/* Kanji Details Table */}
-                <KanjiDetails kanji={kanji}/>
+                <KanjiDetails kanji={kanji} isValid={isValid} />
             </div>
         </div>
     );

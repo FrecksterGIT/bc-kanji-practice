@@ -18,13 +18,16 @@ const VocabularyDetails: FC<VocabularyDetailsProps> = ({vocabulary, isValid}) =>
     }, [set, kanjiData]);
 
     useEffect(() => {
-        set(true)
+        if (isValid) {
+            set(true)
+        }
     }, [set, isValid]);
 
     const getReading = (reading: string) => {
         const containsKatakana = reading.split("").some(isKatakana);
         if (containsKatakana) {
-            return `${reading} (${reading.split("").map(c => toHiragana(c)).join("")})`;
+            const pureHiragana = reading.split("").map(c => toHiragana(c)).join("")
+            return `${reading} (${pureHiragana})`;
         }
         return reading;
     }
