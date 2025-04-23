@@ -72,6 +72,7 @@ export function useWanikaniUser(): UseWanikaniUserResult {
     const fetchUserData = useCallback(async (forceRefresh = false) => {
         if (!apiKey) {
             setError(new Error('API key is required'));
+            setLoading(false);
             return;
         }
 
@@ -95,6 +96,7 @@ export function useWanikaniUser(): UseWanikaniUserResult {
             saveToCache(data.data);
         } catch (err) {
             setError(err instanceof Error ? err : new Error('An unknown error occurred'));
+            setLoading(false);
         } finally {
             setLoading(false);
         }
