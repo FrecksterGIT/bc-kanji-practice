@@ -45,6 +45,7 @@ const Settings: FC = () => {
             // Reset the message after 3 seconds
             setTimeout(() => {
                 setCacheCleared(false);
+                window.location.reload();
             }, 3000);
         } catch (error) {
             console.error('Error clearing cache:', error);
@@ -59,7 +60,7 @@ const Settings: FC = () => {
                 <p className="mb-4">
                     Configure your application preferences here.
                 </p>
-                <form className="space-y-6">
+                <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
                     {/* API Key Input */}
                     <div className="space-y-2">
                         <label htmlFor="apiKey" className="block text-sm font-medium">
