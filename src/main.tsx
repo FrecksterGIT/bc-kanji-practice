@@ -9,7 +9,7 @@ import Settings from './components/Settings'
 
 const router = createBrowserRouter([
     {
-        path: import.meta.env.BASE_URL ?? '/',
+        path: '/',
         element: <App />,
         children: [
             {
