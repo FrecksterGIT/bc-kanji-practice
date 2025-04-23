@@ -107,6 +107,8 @@ export function useWanikaniUser(): UseWanikaniUserResult {
             // Force refresh on page reload
             const shouldRefresh = isPageReload();
             fetchUserData(shouldRefresh).then();
+        } else {
+            setLoading(false);
         }
     }, [apiKey, fetchUserData]);
 
