@@ -35,12 +35,12 @@ const Navigation: FC = () => {
                     <span className="text-xl font-bold">Kanji Practice</span>
                 </div>
                 <div className="flex items-center space-x-4">
-                    <NavLink to="/kanji" className={({isActive}) =>
+                    <NavLink to="kanji" className={({isActive}) =>
                         `px-3 py-2 rounded hover:bg-pink-400 transition-colors ${isActive ? 'bg-pink-400' : ''}`
                     }>
                         Kanji
                     </NavLink>
-                    <NavLink to="/vocabulary" className={({isActive}) =>
+                    <NavLink to="vocabulary" className={({isActive}) =>
                         `px-3 py-2 rounded hover:bg-purple-400 transition-colors ${isActive ? 'bg-purple-400' : ''}`
                     }>
                         Vocabulary
@@ -60,7 +60,7 @@ const Navigation: FC = () => {
                             ))}
                         </select>
                     </div>
-                    <NavLink to="/settings" className={({isActive}) =>
+                    <NavLink to="settings" className={({isActive}) =>
                         `px-3 py-2 rounded hover:bg-gray-600 transition-colors ${isActive ? 'bg-gray-600' : ''}`
                     }>
                         Settings

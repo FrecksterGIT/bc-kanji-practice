@@ -14,7 +14,7 @@ const router = createBrowserRouter([
         children: [
             {
                 path: '',
-                element: <Navigate to="/kanji" replace />
+                element: <Navigate to="kanji" replace />
             },
             {
                 path: 'kanji',
