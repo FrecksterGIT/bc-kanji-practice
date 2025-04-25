@@ -1,27 +1,22 @@
 import Dexie, { Table } from 'dexie';
 import { KanjiItem, VocabularyItem, CachedData } from '../types';
 
-// Database class
 export class KanjiPracticeDB extends Dexie {
-  // Tables
   kanjiStore!: Table<CachedData<KanjiItem>>;
   vocabularyStore!: Table<CachedData<VocabularyItem>>;
 
   constructor() {
     super('kanji-practice-db');
 
-    // Define tables and schema
     this.version(1).stores({
-      kanjiStore: '', // Primary key is provided when putting data
-      vocabularyStore: '', // Primary key is provided when putting data
+      kanjiStore: '',
+      vocabularyStore: '',
     });
   }
 }
 
-// Create and export a single instance of the database
 export const db = new KanjiPracticeDB();
 
-// Constants for cache keys
 export const KANJI_CACHE_KEY_PREFIX = 'kanji-data-cache-';
 export const VOCABULARY_CACHE_KEY_PREFIX = 'vocabulary-data-cache-';
 

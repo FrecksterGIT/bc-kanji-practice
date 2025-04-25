@@ -12,7 +12,6 @@ export function compareDates(
   dateA: Date | null | undefined,
   dateB: Date | null | undefined
 ): number {
-  // If both dates exist, compare them
   if (dateA && dateB) {
     return dateA.getTime() - dateB.getTime();
   }

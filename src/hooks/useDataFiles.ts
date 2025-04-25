@@ -22,7 +22,6 @@ export function useDataFiles<T extends KanjiItem | VocabularyItem>(
       setError(null);
 
       try {
-        // Use the unified loadDataFile function from utils
         const fetchedData = await loadDataFile<T>(dataType, level, forceRefresh);
         setData(fetchedData);
       } catch (err: unknown) {
@@ -35,7 +34,6 @@ export function useDataFiles<T extends KanjiItem | VocabularyItem>(
   );
 
   useEffect(() => {
-    // Force refresh on page reload
     const shouldRefresh = isPageReload('data-files-page-load');
     fetchData(shouldRefresh).then();
   }, [dataType, fetchData, level]);

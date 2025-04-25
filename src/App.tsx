@@ -3,7 +3,6 @@ import Navigation from './components/navigation/Navigation.tsx';
 import { useSession } from './hooks/useSession.ts';
 import { SessionProvider } from './contexts/SessionProvider.tsx';
 
-// Wrapper component that handles loading state
 const AppContent = () => {
   const { loading } = useSession();
 

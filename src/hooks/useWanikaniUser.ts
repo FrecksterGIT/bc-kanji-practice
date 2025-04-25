@@ -3,13 +3,10 @@ import { useSettingsStore } from '../store/settingsStore';
 import { WanikaniUserData, UseWanikaniUserResult } from '../types';
 import { WaniKaniApiClient } from '../utils/wanikaniApi';
 
-// Cache key for localStorage
 const WANIKANI_USER_CACHE_KEY = 'wanikani-user-cache';
 const PAGE_LOAD_KEY = 'wanikani-page-load';
-// Cache expiration time in milliseconds (1 hour)
 const CACHE_EXPIRATION_TIME = 60 * 60 * 1000;
 
-// Interface for cached data
 interface CachedData {
   user: WanikaniUserData;
   timestamp: number;
@@ -25,7 +22,6 @@ export function useWanikaniUser(): UseWanikaniUserResult {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<Error | null>(null);
 
-  // Check if this is a page reload
   const isPageReload = () => {
     const pageLoad = sessionStorage.getItem(PAGE_LOAD_KEY);
     if (!pageLoad) {
@@ -35,7 +31,6 @@ export function useWanikaniUser(): UseWanikaniUserResult {
     return false;
   };
 
-  // Get cached data from localStorage
   const getCachedData = (): CachedData | null => {
     const cachedDataString = localStorage.getItem(WANIKANI_USER_CACHE_KEY);
     if (!cachedDataString) return null;
@@ -43,7 +38,6 @@ export function useWanikaniUser(): UseWanikaniUserResult {
     try {
       const cachedData = JSON.parse(cachedDataString) as CachedData;
 
-      // Check if cache is expired
       const now = Date.now();
       if (now - cachedData.timestamp > CACHE_EXPIRATION_TIME) {
         console.log('Cache expired, fetching fresh data');
@@ -57,7 +51,6 @@ export function useWanikaniUser(): UseWanikaniUserResult {
     }
   };
 
-  // Save data to cache
   const saveToCache = (userData: WanikaniUserData) => {
     const cacheData: CachedData = {
       user: userData,
@@ -74,7 +67,6 @@ export function useWanikaniUser(): UseWanikaniUserResult {
         return;
       }
 
-      // Check cache first if not forcing a refresh
       if (!forceRefresh) {
         const cachedData = getCachedData();
         if (cachedData) {
@@ -104,7 +96,6 @@ export function useWanikaniUser(): UseWanikaniUserResult {
 
   useEffect(() => {
     if (apiKey) {
-      // Force refresh on page reload
       const shouldRefresh = isPageReload();
       fetchUserData(shouldRefresh).then();
     } else {

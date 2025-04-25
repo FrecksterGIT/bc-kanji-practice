@@ -1,39 +1,21 @@
-import { type FC, useEffect, useRef } from 'react';
+import { type FC, useContext } from 'react';
 import KanaInput from '../shared/KanaInput.tsx';
 import Info from './Info.tsx';
 import { VocabularyItem } from '../../types';
 import { useSession } from '../../hooks/useSession.ts';
+import { ValidationContext } from '../../contexts/ValidationContext.tsx';
 
-interface DetailsProps {
-  vocabulary: VocabularyItem;
-  position: string;
-  userInput: string;
-  validReadings: string[];
-  onInputChange: (value: string) => void;
-  onValidate: (isValid: boolean) => void;
-  isValid: boolean | null;
-}
-
-const Details: FC<Readonly<DetailsProps>> = ({
-  vocabulary,
-  position,
-  userInput,
-  validReadings,
-  onInputChange,
-  onValidate,
-  isValid,
-}) => {
-  const ref = useRef<HTMLInputElement | null>(null);
+const Details: FC = () => {
   const { speak } = useSession();
-
-  useEffect(() => {
-    ref.current?.focus();
-  }, [vocabulary]);
+  const { isValid, item, selectedIndex: position, items } = useContext(ValidationContext);
+  const vocabulary = item as VocabularyItem;
 
   return (
     <div className="mb-6">
       <div className="flex flex-col items-center">
-        <div className="mb-12">{position}</div>
+        <div className="mb-12">
+          {position + 1} / {items.length}
+        </div>
         <button
           className="text-9xl mb-12 p-8 w-full text-center bg-gray-700 border-b-purple-400 border-b-2 text-white cursor-pointer"
           onClick={() => speak(vocabulary.word)}
@@ -43,15 +25,7 @@ const Details: FC<Readonly<DetailsProps>> = ({
 
         {/* Reading input section */}
         <div className="w-full max-w-1/2 mb-12">
-          <KanaInput
-            id="vocabulary-reading"
-            value={userInput}
-            onChange={onInputChange}
-            placeholder="Type the reading in hiragana..."
-            validValues={validReadings}
-            onValidate={onValidate}
-            ref={ref}
-          />
+          <KanaInput id="reading" />
         </div>
 
         {/* VocabularyPage Details Table */}

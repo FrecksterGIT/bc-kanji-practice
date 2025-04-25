@@ -7,13 +7,10 @@ const Navigation: FC = () => {
   const { user } = useSession();
   const { level, setLevel } = useSettingsStore();
 
-  // Determine max level based on user data or default to 3 if no API key
   const maxLevel = user?.level ?? 3;
 
-  // Generate options for the dropdown
   const levelOptions = Array.from({ length: maxLevel }, (_, i) => i + 1);
 
-  // Handle level change
   const handleLevelChange = (e: ChangeEvent<HTMLSelectElement>) => {
     const newLevel = parseInt(e.target.value, 10);
     if (!isNaN(newLevel) && newLevel > 0) {
@@ -21,7 +18,6 @@ const Navigation: FC = () => {
     }
   };
 
-  // Ensure level is within valid range
   useEffect(() => {
     if (level > maxLevel) {
       setLevel(maxLevel);

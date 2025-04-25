@@ -3,7 +3,6 @@ import { ChangeEvent, type FC, useState, useEffect } from 'react';
 import { clearAllDataFileCaches } from '../../utils/dataLoader.ts';
 
 const Settings: FC = () => {
-  // Get state and actions from the settings store
   const {
     apiKey,
     limitToLearned,
@@ -15,41 +14,33 @@ const Settings: FC = () => {
     setSortByNextReview,
   } = useSettingsStore();
 
-  // Local state for API key input
   const [apiKeyInput, setApiKeyInput] = useState(apiKey);
 
-  // Synchronize local state with store value when apiKey changes
   useEffect(() => {
     setApiKeyInput(apiKey);
   }, [apiKey]);
 
-  // State for cache clearing feedback
   const [cacheCleared, setCacheCleared] = useState(false);
 
-  // Handle input changes
   const handleApiKeyChange = (e: ChangeEvent<HTMLInputElement>) => {
     setApiKeyInput(e.target.value);
   };
 
-  // Handle save API key
   const handleSaveApiKey = () => {
     setApiKey(apiKeyInput);
   };
 
-  // Handle cache clearing
   const handleClearCache = async () => {
     try {
       await clearAllDataFileCaches();
       setCacheCleared(true);
 
-      // Reset the message after 3 seconds
       setTimeout(() => {
         setCacheCleared(false);
         window.location.reload();
       }, 3000);
     } catch (error) {
       console.error('Error clearing cache:', error);
-      // Optionally, you could add error handling UI here
     }
   };
 

@@ -1,4 +1,3 @@
-// Custom hook to use the context
 import { UserContextType } from '../types';
 import { useContext } from 'react';
 import { SessionContext } from '../contexts/SessionContext.tsx';

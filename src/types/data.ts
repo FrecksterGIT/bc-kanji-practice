@@ -1,9 +1,5 @@
-// Data types for the application
-
-// Type for the data type parameter
 export type DataType = 'kanji' | 'vocabulary';
 
-// KanjiPage data types
 export interface KanjiItem {
   id: number;
   level: number;
@@ -37,7 +33,6 @@ export interface KanjiItem {
   }>;
 }
 
-// VocabularyPage data types
 export interface VocabularyItem {
   id: number;
   level: number;
