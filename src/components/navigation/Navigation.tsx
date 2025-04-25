@@ -27,8 +27,9 @@ const Navigation: FC = () => {
   return (
     <nav className="sticky top-0 z-10 bg-gray-700 text-white p-4 shadow-2xl">
       <div className="container mx-auto flex flex-wrap items-center justify-between">
-        <div className="flex items-center">
+        <div className="flex items-start space-x-2">
           <span className="text-xl font-bold">Kanji Practice</span>
+          <span className="text-sm">v{__APP_VERSION__}</span>
         </div>
         <div className="flex items-center space-x-4">
           <NavLink

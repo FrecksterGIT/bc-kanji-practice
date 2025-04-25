@@ -16,11 +16,17 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
+
+      - uses: paulhatch/semantic-version@v5.4.0
+        with:
+          bump_each_commit: true
 
       - name: Build
         env:
