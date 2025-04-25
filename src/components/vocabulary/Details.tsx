@@ -22,13 +22,9 @@ const Details: FC = () => {
         >
           {vocabulary.word}
         </button>
-
-        {/* Reading input section */}
         <div className="w-full max-w-1/2 mb-12">
           <KanaInput id="reading" />
         </div>
-
-        {/* VocabularyPage Details Table */}
         <Info vocabulary={vocabulary} isValid={isValid} />
       </div>
     </div>
