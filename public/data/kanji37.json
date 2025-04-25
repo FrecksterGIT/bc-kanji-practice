@@ -1,1 +1,718 @@
-[{"id":8837,"level":37,"kanji":"串","onyomi":[],"kunyomi":[{"reading":"くし","primary":true,"accepted_answer":true,"type":"kunyomi"}],"meanings":[{"meaning":"Skewer","primary":true,"accepted_answer":true},{"meaning":"Spit","primary":false,"accepted_answer":true}],"meaning_mnemonic":"The <radical>skewer</radical> radical and the <kanji>skewer</kanji> kanji are exactly the same!","meaning_hint":"Know your radicals, yo.","reading_mnemonic":"Uh oh, this <kanji>skewer</kanji> is really... <reading>cushy</reading> (くし). It's so soft and cushy you can't get any meat or vegetables onto it.","reading_hint":"Imagine trying to use this cushy skewer. It's the right shape (long, thin, pointy at one end), but every time you try to put something on it it squishes in on itself like a long marshmallow.","vocabulary":[{"word":"串焼き","level":37,"meaning":"Grilled Skewers","reading":"くしやき"}]},{"id":1646,"level":37,"kanji":"償","onyomi":[{"reading":"しょう","primary":true,"accepted_answer":true,"type":"onyomi"}],"kunyomi":[{"reading":"つぐな","primary":false,"accepted_answer":false,"type":"kunyomi"}],"meanings":[{"meaning":"Reparation","primary":true,"accepted_answer":true}],"meaning_mnemonic":"The <radical>leader</radical> presents you with a <radical>prize</radical> as <kanji>reparation</kanji> for his past deeds. This leader wronged you in the past and wishes to make amends. Therefore the leader presents you with a reparation in the form of a glittering prize.","meaning_hint":"Imagine receiving your reparation prize. Feel the prize in your hand. It’s all wrapped up but it’s heavy and feels expensive. What could it be?","reading_mnemonic":"The leader who presented you with this <kanji>reparation</kanji> is the <reading>Shou</reading>gun (しょう) of Japan. He's trying to make up for all the threats he made to you and some of the things you saw (which he's now trying to cover up for).","reading_hint":"Imagine receiving your reparations from the Shougun himself. You're angry at him for threatening you, wounding people, and cutting off the heads of people who go against him, but you take it anyway.","vocabulary":[{"word":"償う","level":37,"meaning":"To Compensate For","reading":"つぐなう"},{"word":"弁償","level":37,"meaning":"Reimbursement","reading":"べんしょう"},{"word":"賠償","level":52,"meaning":"Reparations","reading":"ばいしょう"},{"word":"賠償金","level":54,"meaning":"Reparations","reading":"ばいしょうきん"}]},{"id":1666,"level":37,"kanji":"兆","onyomi":[{"reading":"ちょう","primary":true,"accepted_answer":true,"type":"onyomi"}],"kunyomi":[{"reading":"きざ","primary":false,"accepted_answer":false,"type":"kunyomi"}],"meanings":[{"meaning":"Omen","primary":true,"accepted_answer":true},{"meaning":"Trillion","primary":false,"accepted_answer":true}],"meaning_mnemonic":"The <radical>omen</radical> radical and the <kanji>omen</kanji> kanji are the same!","meaning_hint":"If you know the omen radical, you know the omen kanji as well!","reading_mnemonic":"You listen to the <kanji>omen</kanji>, in it, it tells of an event in the future when Mrs. <reading>Chou</reading> (ちょう) will destroy the world.","reading_hint":"You can clarify with the person telling you the omen several things: \"Do you believe in the omen about Mrs. Chou destroying the world?\" \"When will this omen about Mrs. Chou come true?\" etc. As long as you're associating omen with Mrs. Chou you should be good, so keep harping on that.\n\nAnyway, whenever you hear any kind of omen (omen is a radical in the kanji), there's a good chance it's going to be about Mrs. Chou.","vocabulary":[{"word":"兆候","level":37,"meaning":"Sign","reading":"ちょうこう"},{"word":"前兆","level":37,"meaning":"Omen","reading":"ぜんちょう"}]},{"id":1647,"level":37,"kanji":"刑","onyomi":[{"reading":"けい","primary":true,"accepted_answer":true,"type":"onyomi"}],"kunyomi":[],"meanings":[{"meaning":"Punish","primary":true,"accepted_answer":true}],"meaning_mnemonic":"Destroy a <radical>lantern</radical> with your <radical>knife</radical> and you'll be <kanji>punish</kanji>ed.","meaning_hint":"Even if it was your own lantern, why stab it with a knife? You could have recycled that. I will punish you for lantern stabbing and pollution!","reading_mnemonic":"I will <kanji>punish</kanji> you by taking away your <reading>ca</reading>ke (けい)! You'll never eat cake again. Not for birthdays, not for holidays. This is your punishment.","reading_hint":"The next time you want to stab a lantern with a knife, think about how good cake tastes and stop. Remember, DARE (Don't Attack Reusable Electronics)!","vocabulary":[{"word":"刑務所","level":37,"meaning":"Jail","reading":"けいむしょ"},{"word":"死刑","level":37,"meaning":"Death Penalty","reading":"しけい"},{"word":"刑事","level":37,"meaning":"Police Detective","reading":"けいじ"},{"word":"刑期","level":37,"meaning":"Prison Term","reading":"けいき"},{"word":"刑罰","level":37,"meaning":"Punishment","reading":"けいばつ"},{"word":"終身刑","level":37,"meaning":"Life Sentence","reading":"しゅうしんけい"},{"word":"死刑囚","level":39,"meaning":"Condemned Criminal","reading":"しけいしゅう"}]},{"id":1668,"level":37,"kanji":"削","onyomi":[{"reading":"さく","primary":true,"accepted_answer":true,"type":"onyomi"}],"kunyomi":[{"reading":"けず","primary":false,"accepted_answer":false,"type":"kunyomi"}],"meanings":[{"meaning":"Whittle Down","primary":true,"accepted_answer":true}],"meaning_mnemonic":"A <radical>triceratops</radical> with a <radical>moon</radical> <radical>knife</radical> can <kanji>whittle down</kanji> anything.","meaning_hint":"Imagine the triceratops with its little moon knife, doing some whittling. Hand it anything and it will whittle it down.","reading_mnemonic":"Everything it will <kanji>whittle down</kanji> shall be put in a <reading>sack</reading> (さく).","reading_hint":"Check out the sack that holds all the things that the triceratops whittled down. Go ahead and look through it, it's quite filled.","vocabulary":[{"word":"削る","level":37,"meaning":"To Whittle Something Down","reading":"けずる"},{"word":"削除","level":37,"meaning":"Deletion","reading":"さくじょ"},{"word":"削減","level":37,"meaning":"Reduction","reading":"さくげん"},{"word":"削除する","level":39,"meaning":"To Delete","reading":"さくじょする"}]},{"id":1648,"level":37,"kanji":"募","onyomi":[{"reading":"ぼ","primary":true,"accepted_answer":true,"type":"onyomi"}],"kunyomi":[{"reading":"つの","primary":false,"accepted_answer":false,"type":"kunyomi"}],"meanings":[{"meaning":"Recruit","primary":true,"accepted_answer":true}],"meaning_mnemonic":"A <radical>greenhouse</radical> is the newest <radical>power</radical> of the city you decided to <kanji>recruit</kanji>. You’re trying to recruit all the buildings in town and the greenhouse was the next on your list. It adds just a little bit of power to the town, but it's important nonetheless.","meaning_hint":"Imagine what you had to do to recruit this greenhouse. Imagine schmoozing with the previous greenhouse owners to recruit them to your cause and sell you the greenhouse.","reading_mnemonic":"After you <kanji>recruit</kanji> the greenhouse, you recruit <reading>Bo</reading>bo (ぼ) the clown to guard it for you. Bobo the clown has a terrifying amount of power so he’ll make an excellent guard for the greenhouse.","reading_hint":"Recruit Bobo the clown. Look at him. He’s terrifying. Bobo will make for a great deterrent for entry to your greenhouse.","vocabulary":[{"word":"募る","level":37,"meaning":"To Appeal For Something","reading":"つのる"},{"word":"募金","level":37,"meaning":"Fundraising","reading":"ぼきん"},{"word":"募集","level":37,"meaning":"Recruiting","reading":"ぼしゅう"},{"word":"応募","level":37,"meaning":"Application","reading":"おうぼ"},{"word":"応募する","level":39,"meaning":"To Apply For","reading":"おうぼする"},{"word":"募集中","level":39,"meaning":"Now Hiring","reading":"ぼしゅうちゅう"}]},{"id":1649,"level":37,"kanji":"執","onyomi":[{"reading":"しゅう","primary":true,"accepted_answer":true,"type":"onyomi"},{"reading":"しつ","primary":false,"accepted_answer":true,"type":"onyomi"}],"kunyomi":[{"reading":"と","primary":false,"accepted_answer":false,"type":"kunyomi"}],"meanings":[{"meaning":"Tenacious","primary":true,"accepted_answer":true}],"meaning_mnemonic":"<radical>Happiness</radical> is a <radical>circle</radical> that's <kanji>tenacious</kanji>. In other words, we're all in this circle/cycle where we do whatever we can to grab onto happiness and hold it as tightly as we can.","meaning_hint":"Be tenacious about happiness in your life. No matter how many times it slips away, don't give up. Keep going after it, because it will absolutely come back if you're tenacious enough.","reading_mnemonic":"Happiness is as <kanji>tenacious</kanji> as a <reading>shih tzu</reading> (しつ) with a <reading>shoe</reading> (しゅう). That little dog does not want to give up on the shoe, no matter what's happening around it.","reading_hint":"Will someone take the shoe sometimes? Yeah, but the shih tzu doesn't give up. That's how you need to be with happiness. Kids, be tenacious!","vocabulary":[{"word":"執る","level":37,"meaning":"To Take Control","reading":"とる"},{"word":"執着","level":37,"meaning":"Attachment To","reading":"しゅうちゃく"},{"word":"執筆","level":37,"meaning":"Writing","reading":"しっぴつ"},{"word":"執行猶予","level":58,"meaning":"Suspended Sentence","reading":"しっこうゆうよ"}]},{"id":1650,"level":37,"kanji":"塁","onyomi":[{"reading":"るい","primary":true,"accepted_answer":true,"type":"onyomi"}],"kunyomi":[],"meanings":[{"meaning":"Base","primary":true,"accepted_answer":true},{"meaning":"Baseball Base","primary":false,"accepted_answer":true}],"meaning_mnemonic":"There's an <radical>explosion</radical> in the <radical>dirt</radical> under a <radical>rice paddy</radical>, exposing the hidden <kanji>base</kanji> under there. A base from baseball! I guess this rice paddy was built on top of an old baseball field...","meaning_hint":"Picture a serene rice paddy. Now watch the whole thing explode, rice and dirt going everywhere, and a secret, underground baseball base is left there, smoldering.","reading_mnemonic":"Unfortunately, thanks to the explosion, the <kanji>base</kanji> is in <reading>rui</reading>ns (るい). It's dark and smokey and kinda half burned. You probably can't get this in a regulation game.","reading_hint":"Hold this ruined base in your hands. Darn, you love baseball. At least it's a collectible.","vocabulary":[{"word":"塁打","level":37,"meaning":"Base Hit","reading":"るいだ"},{"word":"塁審","level":37,"meaning":"Baseball Umpire","reading":"るいしん"},{"word":"本塁打","level":39,"meaning":"Home Run","reading":"ほんるいだ"}]},{"id":1669,"level":37,"kanji":"契","onyomi":[{"reading":"けい","primary":true,"accepted_answer":true,"type":"onyomi"}],"kunyomi":[],"meanings":[{"meaning":"Pledge","primary":true,"accepted_answer":true}],"meaning_mnemonic":"The weight of <radical>life</radical> on your <radical>sword</radical> is <radical>big</radical> when you <kanji>pledge</kanji> to protect your city. That's the big, big weight of every single person's life in that city pressing down on you every time you take out that sword.","meaning_hint":"Imagine holding up your sword and pledging to protect the lives of everyone in this city. It's a big deal!","reading_mnemonic":"Until the city is safe, you <kanji>pledge</kanji> to give up <reading>ca</reading>ke (けい), your favorite food.","reading_hint":"Would you pledge to give up cake to show everyone how serious you are about protecting life?","vocabulary":[{"word":"契約","level":37,"meaning":"Contract","reading":"けいやく"},{"word":"契機","level":37,"meaning":"Chance","reading":"けいき"}]},{"id":1651,"level":37,"kanji":"崩","onyomi":[{"reading":"ほう","primary":true,"accepted_answer":true,"type":"onyomi"}],"kunyomi":[{"reading":"くず","primary":false,"accepted_answer":false,"type":"kunyomi"}],"meanings":[{"meaning":"Crumble","primary":true,"accepted_answer":true}],"meaning_mnemonic":"Below this <radical>mountain</radical>, a <radical>moon</radical> and another <radical>moon</radical> crash into each other and the entire thing <kanji>crumble</kanji>s to pieces.","meaning_hint":"Watch as the moons crumble together, and then the mountain slowly crumbles down into them too.","reading_mnemonic":"As the mountain <kanji>crumble</kanji>s you see your <reading>ho</reading>me (ほう), which is at the very top of the mountain, come crumbling down too.","reading_hint":"Your home crumbles like a dry cookie until it's nothing more than a bunch of dust, mixed in with the mountain and the moon. Now where will you live?","vocabulary":[{"word":"崩す","level":37,"meaning":"To Demolish","reading":"くずす"},{"word":"崩壊","level":37,"meaning":"Collapse","reading":"ほうかい"},{"word":"崩れる","level":39,"meaning":"To Crumble","reading":"くずれる"}]},{"id":1659,"level":37,"kanji":"弾","onyomi":[{"reading":"だん","primary":true,"accepted_answer":true,"type":"onyomi"}],"kunyomi":[{"reading":"ひ","primary":false,"accepted_answer":false,"type":"kunyomi"},{"reading":"はず","primary":false,"accepted_answer":false,"type":"kunyomi"},{"reading":"たま","primary":false,"accepted_answer":false,"type":"kunyomi"}],"meanings":[{"meaning":"Bullet","primary":true,"accepted_answer":true}],"meaning_mnemonic":"What's more <radical>simple</radical> than a <radical>bow</radical>? A <kanji>bullet</kanji>. Bullets just have to be shot out of a gun and somebody dies. Bows you have to load with an arrow and pull it back and aim, yuck. Bullets are the new bows, people.","meaning_hint":"Imagine how simple life would be if we replaced all the bows in the world with bullets. (Insert sarcastic crying face here.)","reading_mnemonic":"If you want to shoot <kanji>bullet</kanji>s, you need to do it at <reading>dawn</reading> (だん). Back in the old days, it wasn't bright enough to shoot arrows at dawn, but you can shoot bullets at dawn because they're simpler to use!","reading_hint":"Imagine shooting bullets into the sun at dawn. Pow pow, take that history! Blam blam, take that dawn!","vocabulary":[{"word":"爆弾","level":37,"meaning":"Bomb","reading":"ばくだん"},{"word":"弾む","level":37,"meaning":"To Bounce","reading":"はずむ"},{"word":"弾丸","level":37,"meaning":"Bullet","reading":"だんがん"},{"word":"弾力","level":37,"meaning":"Elasticity","reading":"だんりょく"},{"word":"第一弾","level":38,"meaning":"First Installment","reading":"だいいちだん"},{"word":"弾く","level":39,"meaning":"To Play A Stringed Instrument","reading":"ひく"},{"word":"原子爆弾","level":39,"meaning":"Atomic Bomb","reading":"げんしばくだん"},{"word":"銃弾","level":39,"meaning":"Rifle Bullet","reading":"じゅうだん"},{"word":"糾弾","level":42,"meaning":"Blame","reading":"きゅうだん"},{"word":"弾劾","level":60,"meaning":"Impeachment","reading":"だんがい"}]},{"id":1670,"level":37,"kanji":"恵","onyomi":[{"reading":"え","primary":true,"accepted_answer":true,"type":"onyomi"},{"reading":"けい","primary":false,"accepted_answer":true,"type":"onyomi"}],"kunyomi":[{"reading":"めぐ","primary":false,"accepted_answer":false,"type":"kunyomi"}],"meanings":[{"meaning":"Favor","primary":true,"accepted_answer":true}],"meaning_mnemonic":"You carry a <radical>cross</radical> across a <radical>rice paddy</radical> with a <radical>heart</radical> on it to return a <kanji>favor</kanji> for your friend. The heart needs to be purified so that’s why you have it on the cross and your friend lives on a rice paddy farm so that’s why you’re running through that. The favor you are paying your friend back with is getting him this heart. He needs a new one and you’re providing it.","meaning_hint":"This is a pretty big favor. Imagine running through a rice paddy carrying a cross with a warm beating heart on it. Thump thump. Thump thump.","reading_mnemonic":"You arrive at your friend’s place and you can finally return the <kanji>favor</kanji> you owe him by presenting him with the heart. “<reading>Eh</reading> (え)? What’s this? I didn’t ask for this!” “Eh!?!?” you reply. Apparently he didn’t want a real heart, he wanted a candy one. He wanted a Valentine!","reading_hint":"Imagine how dumb you feel at this miscommunication. Eh? You don’t feel dumb? Well you should!","vocabulary":[{"word":"恵む","level":37,"meaning":"To Do A Favor","reading":"めぐむ"},{"word":"知恵","level":37,"meaning":"Wisdom","reading":"ちえ"}]},{"id":1652,"level":37,"kanji":"患","onyomi":[{"reading":"かん","primary":true,"accepted_answer":true,"type":"onyomi"}],"kunyomi":[{"reading":"わずら","primary":false,"accepted_answer":false,"type":"kunyomi"}],"meanings":[{"meaning":"Afflicted","primary":true,"accepted_answer":true}],"meaning_mnemonic":"A <radical>skewer</radical> to the <radical>heart</radical> has <kanji>afflicted</kanji> your health. You’ve been afflicted with a disease from the skewer to your heart. Your affliction is death. You’re dying.","meaning_hint":"You did not wish to be afflicted as such. Feel the skewer in your heart and the great pain it gives you. You know you’re dying.","reading_mnemonic":"Since you’re <kanji>afflicted</kanji> with the death, you start to hallucinate and the ghost of Genghis <reading>Khan</reading> (かん) appears before you. \"Ah, I was afflicted of the same disease. It killed me, you know.\"","reading_hint":"You look on in horror as the affliction grabs hold and everything starts to fade, but Genghis Khan still floats before you, watching you closely.","vocabulary":[{"word":"患う","level":37,"meaning":"To Be Afflicted With","reading":"わずらう"},{"word":"患者","level":37,"meaning":"A Patient","reading":"かんじゃ"},{"word":"急患","level":37,"meaning":"Emergency Patient","reading":"きゅうかん"},{"word":"疾患","level":54,"meaning":"Disease","reading":"しっかん"}]},{"id":1653,"level":37,"kanji":"戻","onyomi":[{"reading":"れい","primary":false,"accepted_answer":false,"type":"onyomi"}],"kunyomi":[{"reading":"もど","primary":true,"accepted_answer":true,"type":"kunyomi"}],"meanings":[{"meaning":"Return","primary":true,"accepted_answer":true}],"meaning_mnemonic":"This <radical>door</radical> is <radical>big</radical> and you need to <kanji>return</kanji> it to its rightful owner. This door is too big and important looking to not belong to someone. You need to find its owner and return it to them.","meaning_hint":"Heft this big door in your arms. It’s very heavy. Feel your arms tire as you look for who to return the door to.","reading_mnemonic":"You are in <kanji>return</kanji> <reading>mode</reading> (もど). When you enter this mode, you concentrate only on returning something. Nothing else matters in this mode. You’re in full on return mode.","reading_hint":"You’re obsessed with returning this big door. Once you enter this mode, the only way to get out is to return the thing you have.","vocabulary":[{"word":"戻る","level":37,"meaning":"To Return","reading":"もどる"},{"word":"戻す","level":38,"meaning":"To Return","reading":"もどす"},{"word":"払い戻す","level":39,"meaning":"To Repay","reading":"はらいもどす"},{"word":"戻り道","level":39,"meaning":"Way Back","reading":"もどりみち"},{"word":"取り戻す","level":39,"meaning":"To Take Back","reading":"とりもどす"}]},{"id":1654,"level":37,"kanji":"抗","onyomi":[{"reading":"こう","primary":true,"accepted_answer":true,"type":"onyomi"}],"kunyomi":[{"reading":"あらが","primary":false,"accepted_answer":false,"type":"kunyomi"}],"meanings":[{"meaning":"Confront","primary":true,"accepted_answer":true}],"meaning_mnemonic":"You take your <radical>fingers</radical> and slam a <radical>lid</radical> on the <radical>table</radical>. You make this big noise to <kanji>confront</kanji> the person in front of you. ","meaning_hint":"They weren't listening, which is why you slammed that lid down. You'll have to confront them more directly.","reading_mnemonic":"You are trying to <kanji>confront</kanji> Emperor <reading>こう</reading>いち. You're confronting him about all the kanji he's forcing you, and everyone else, to learn. \"Look here こういち! I know you said I'd learn like 2000 kanji in no time, but this is way too efficient! What will the people do when they're done? Do you think they will sit idly by?\"","reading_hint":"こういち is laughing at you as you confront him. Which makes you angrier, so you bang the lid on the table some more.","vocabulary":[{"word":"反抗する","level":37,"meaning":"To Rebel","reading":"はんこうする"},{"word":"抗戦","level":37,"meaning":"Resistance","reading":"こうせん"},{"word":"抗体","level":37,"meaning":"Antibody","reading":"こうたい"},{"word":"抵抗する","level":37,"meaning":"To Resist","reading":"ていこうする"}]},{"id":1671,"level":37,"kanji":"抱","onyomi":[{"reading":"ほう","primary":false,"accepted_answer":false,"type":"onyomi"}],"kunyomi":[{"reading":"だ","primary":true,"accepted_answer":true,"type":"kunyomi"},{"reading":"かか","primary":false,"accepted_answer":true,"type":"kunyomi"},{"reading":"いだ","primary":false,"accepted_answer":true,"type":"kunyomi"}],"meanings":[{"meaning":"Hug","primary":true,"accepted_answer":true}],"meaning_mnemonic":"Take your <radical>fingers</radical> and <radical>wrap</radical> them around another person. This is called a <kanji>hug</kanji>. Just make sure you include all the stuff attached to your fingers, like your hands and arms too, otherwise it's more of a squeeze, and we don't want to do that to people.","meaning_hint":"Picture it like you're a baby who is new to hugs. You start with your fingers, spread them out and move forward. Now wrap all that stuff attached to your fingers around another person. You did it! You're hugging now!","reading_mnemonic":"Who do you love to <kanji>hug</kanji> the most? Your <reading>da</reading>d (だ)! He gives the best hugs. They're warm and big and tight and comforting. The kind of hug dads are really good at giving.","reading_hint":"Imagine getting a nice, big hug from your dad. Mm. It's cozy and feels like home.","vocabulary":[{"word":"抱く","level":37,"meaning":"To Embrace","reading":"だく"},{"word":"抱っこ","level":37,"meaning":"Holding In One's Arms","reading":"だっこ"},{"word":"辛抱","level":38,"meaning":"Patience","reading":"しんぼう"},{"word":"抱擁","level":52,"meaning":"Embrace","reading":"ほうよう"}]},{"id":1655,"level":37,"kanji":"抵","onyomi":[{"reading":"てい","primary":true,"accepted_answer":true,"type":"onyomi"}],"kunyomi":[],"meanings":[{"meaning":"Resist","primary":true,"accepted_answer":true}],"meaning_mnemonic":"Everyone from your <radical>clan</radical> puts their <radical>fingers</radical> in the <radical>ground</radical> as a way to <kanji>resist</kanji> their lords. Your clan is made of a bunch of peasants, but you aren't going to work the land for other people anymore. You're going to resist. This is a protest! Your fingers work for no one but yourselves from now on!","meaning_hint":"Imagine your entire clan putting their fingers in the ground in unison as a form of resistance. It's a moving sight.","reading_mnemonic":"You're all <kanji>resist</kanji>ing with your fingers in the ground, when the lords appear, angry. \"You resist us by hiding your fingers with potatoes in the ground?! You want your fingers to be useless potatoes so badly? We'll chop them up and turn them into <reading>ta</reading>ter (てい) tots!\"","reading_hint":"You make your choice to resist. He orders his guards to pull your fingers out of the ground, chop them into the size of tater tots, and then deep fry them. After they're done, the lord pops one in his mouth and says, \"Oooh, resistance is delicious.\"","vocabulary":[{"word":"抵抗する","level":37,"meaning":"To Resist","reading":"ていこうする"},{"word":"大抵","level":37,"meaning":"Generally","reading":"たいてい"}]},{"id":1672,"level":37,"kanji":"掲","onyomi":[{"reading":"けい","primary":true,"accepted_answer":true,"type":"onyomi"}],"kunyomi":[{"reading":"かか","primary":false,"accepted_answer":false,"type":"kunyomi"}],"meanings":[{"meaning":"Display","primary":true,"accepted_answer":true}],"meaning_mnemonic":"You're in <radical>prison</radical>, but you can use your <radical>fingers</radical> and a <radical>spoon</radical> in the light of the <radical>sun</radical> to <kanji>display</kanji> little moving pictures on your cell wall. It's like a shadow puppet display except you can only make a few characters with your limited hand tools.","meaning_hint":"Imagine displaying your two favorite characters in the shadows on your prison cell walls. This one is mister fingers and this one is missus spoon. They're best friends.","reading_mnemonic":"There is one thing you <kanji>display</kanji> more than anything else and it's <reading>ca</reading>ke (けい). You smush your fingers to make a cake shape and use the spoon to pretend you're eating it.","reading_hint":"Imagine displaying cake on the wall. Now pretend to eat the shadow cake with your spoon. You can almost taste it. Except you can't, because this is still prison.","vocabulary":[{"word":"掲げる","level":37,"meaning":"To Put Up A Sign","reading":"かかげる"},{"word":"掲示","level":37,"meaning":"Notice","reading":"けいじ"},{"word":"掲載","level":37,"meaning":"Publication","reading":"けいさい"},{"word":"掲示板","level":39,"meaning":"Bulletin Board","reading":"けいじばん"},{"word":"掲載する","level":39,"meaning":"To Publish","reading":"けいさいする"}]},{"id":1656,"level":37,"kanji":"旬","onyomi":[{"reading":"しゅん","primary":true,"accepted_answer":true,"type":"onyomi"},{"reading":"じゅん","primary":false,"accepted_answer":true,"type":"onyomi"}],"kunyomi":[],"meanings":[{"meaning":"In Season","primary":true,"accepted_answer":true},{"meaning":"Ten Days","primary":false,"accepted_answer":true}],"meaning_mnemonic":"When a <radical>prison</radical> holds the <radical>sun</radical> inside it, everything will always be <kanji>in season</kanji>. Obviously if the sun is in prison, the seasons can't change. Want to eat perfect apples all year round? Just put the sun in prison when they're ripe — usually a short window of <kanji>ten days</kanji>.","meaning_hint":"You're welcome. Now you know how to keep everything in season. Lifehack!","reading_mnemonic":"When things are <kanji>in season</kanji> for more than <kanji>ten days</kanji>, people are going to wonder what's going on. When's Christmas? When's Golden Week? <reading>Soon</reading> (しゅん), you say. Soon enough, it's <reading>June</reading> (じゅん). Which is the middle of the year, so now everything is soon.","reading_hint":"Joke's on them though. Soon it will be apple season. Soon it will always be time for apples. Soon June will end and people will forget about everything else, living forever inside that period of ten days when apples are most in season.","vocabulary":[{"word":"上旬","level":37,"meaning":"First Ten Days Of The Month","reading":"じょうじゅん"},{"word":"下旬","level":37,"meaning":"Last Ten Days Of The Month","reading":"げじゅん"},{"word":"中旬","level":37,"meaning":"Middle Ten Days Of The Month","reading":"ちゅうじゅん"}]},{"id":1644,"level":37,"kanji":"昭","onyomi":[{"reading":"しょう","primary":true,"accepted_answer":true,"type":"onyomi"}],"kunyomi":[],"meanings":[{"meaning":"Shining","primary":true,"accepted_answer":true}],"meaning_mnemonic":"The <radical>sun</radical> <radical>call</radical>s out to the earth by <kanji>shining</kanji> down on it.","meaning_hint":"The sun doesn't have a voice, unfortunately, so it calls out the only way it can, with its shining rays.","reading_mnemonic":"This <kanji>shining</kanji> is aimed directly at the <reading>Shou</reading>gun (しょう). The sun is shining on the Shougun to not only show its support for his leadership, but to let him shine brighter than anyone else in Japan.","reading_hint":"Picture the Shougun standing in the shining sunlight. He's so bright and beautiful!","vocabulary":[{"word":"昭和","level":37,"meaning":"Showa Era","reading":"しょうわ"}]},{"id":1657,"level":37,"kanji":"湾","onyomi":[{"reading":"わん","primary":true,"accepted_answer":true,"type":"onyomi"}],"kunyomi":[],"meanings":[{"meaning":"Gulf","primary":true,"accepted_answer":true}],"meaning_mnemonic":"<radical>Tsunami</radical>s hit these lands <radical>again</radical> and again, molding it into some kind of <radical>bow</radical> shape. Or in other words, creating a <kanji>gulf</kanji>. ","meaning_hint":"Picture these extremely violent tsunamis hitting a shore again and again, turning it into a bow-shaped gulf. That's how gulfs are created in this part of the world!","reading_mnemonic":"How many <kanji>gulf</kanji>s will this create? Just <reading>one</reading> (<ja>わん</ja>).","reading_hint":"Many tsunamis, again and again, for just one gulf? Yep, that's just how life goes. Gulfs are in high demand, but you'll need many tsunamis to create just one.","vocabulary":[{"word":"台湾","level":37,"meaning":"Taiwan","reading":"たいわん"}]},{"id":1645,"level":37,"kanji":"漁","onyomi":[{"reading":"ぎょ","primary":true,"accepted_answer":true,"type":"onyomi"},{"reading":"りょう","primary":false,"accepted_answer":true,"type":"onyomi"}],"kunyomi":[{"reading":"あさ","primary":false,"accepted_answer":false,"type":"kunyomi"}],"meanings":[{"meaning":"Fishing","primary":true,"accepted_answer":true}],"meaning_mnemonic":"A <radical>tsunami</radical> pushes all the <radical>fish</radical> closer to land, making for some easy <kanji>fishing</kanji>. The tsunami starts out in the middle of the ocean and pushes all the fish towards the coast where everyone does their fishing. With all the fish pushed closer to land and closer together, it’s very easy for people to go fishing in one spot and catch a lot of fish.","meaning_hint":"Imagine going fishing for fish in a fishing spot after a tsunami. There are SO many fish here. Your hook barely touches the water and there’s already a fish on it. Man, fishing like this is easy! Smell the smell of fish and sea air around you.","reading_mnemonic":"To get to the best <kanji>fishing</kanji> spot you need to <reading>go</reading> (ぎょ) <reading>row</reading> (りょう) out to the middle of the ocean. You go by means of rowing. To get to the fish and do the fishing, you need to go and row out to sea.","reading_hint":"Go! Go row! Go and row for the fishing! How do you go? You row! The row part should be pretty easy to remember since you gotta row your boat out to sea, but if you’re having trouble with the go part, just remember that it has the same reading as 魚.","vocabulary":[{"word":"漁師","level":37,"meaning":"Fisherman","reading":"りょうし"},{"word":"漁船","level":37,"meaning":"Fishing Boat","reading":"ぎょせん"},{"word":"漁業","level":37,"meaning":"Fishing Industry","reading":"ぎょぎょう"}]},{"id":1658,"level":37,"kanji":"爆","onyomi":[{"reading":"ばく","primary":true,"accepted_answer":true,"type":"onyomi"}],"kunyomi":[{"reading":"は","primary":false,"accepted_answer":false,"type":"kunyomi"}],"meanings":[{"meaning":"Explode","primary":true,"accepted_answer":true}],"meaning_mnemonic":"If you combine <radical>fire</radical> with <radical>violence</radical>, it will <kanji>explode</kanji>! A fire, once full of violence, will surely explode. The fire can’t handle all that violence so the fire just rumbles and shakes and then finally explodes. BOOM!","meaning_hint":"Imagine the fire explode. Feel the heat of the fire and the explosion. It’s very violent. BOOM BOOM BA-BOOM!","reading_mnemonic":"As you watch the fire <kanji>explode</kanji>, you start to <reading>back</reading> (ばく) away. I don’t blame you. You need to back away or else you’ll get caught in the violent explosion. Back away a little more just to be safe.","reading_hint":"Imagine yourself as you back away from the explosion. As you back away, see the fire dance and feel the heat of the explosion on your face.","vocabulary":[{"word":"爆発","level":37,"meaning":"Explosion","reading":"ばくはつ"},{"word":"爆弾","level":37,"meaning":"Bomb","reading":"ばくだん"},{"word":"爆笑","level":37,"meaning":"Explosive Laughter","reading":"ばくしょう"},{"word":"自爆","level":37,"meaning":"Suicide Bomb","reading":"じばく"},{"word":"爆撃","level":37,"meaning":"Bombing","reading":"ばくげき"},{"word":"原子爆弾","level":39,"meaning":"Atomic Bomb","reading":"げんしばくだん"},{"word":"原爆","level":41,"meaning":"Atomic Bomb","reading":"げんばく"}]},{"id":1673,"level":37,"kanji":"狙","onyomi":[{"reading":"そ","primary":true,"accepted_answer":true,"type":"onyomi"}],"kunyomi":[{"reading":"ねら","primary":false,"accepted_answer":false,"type":"kunyomi"}],"meanings":[{"meaning":"Aim","primary":true,"accepted_answer":true}],"meaning_mnemonic":"You see an <radical>animal</radical> wearing a <radical>top hat</radical> and decide to <kanji>aim</kanji> at it. The top hat is a perfect, giant target you use to take down this animal.","meaning_hint":"It's much easier to aim for an animal wearing a top hat than one without.","reading_mnemonic":"Ready, steady, <kanji>aim</kanji>... fire! You throw a bar of <reading>so</reading>ap (そ) at the animal. Yes, soap. You were sitting in your bathtub, washing and scrubbing, then the animal in the top hat caught your eye.","reading_hint":"Your aim with the soap is perfect! The soap knocked the animal's hat right off.","vocabulary":[{"word":"狙い","level":37,"meaning":"Aim","reading":"ねらい"},{"word":"狙撃","level":37,"meaning":"Shooting","reading":"そげき"},{"word":"狙う","level":39,"meaning":"To Aim At","reading":"ねらう"}]},{"id":8862,"level":37,"kanji":"眉","onyomi":[{"reading":"み","primary":true,"accepted_answer":true,"type":"onyomi"},{"reading":"び","primary":false,"accepted_answer":true,"type":"onyomi"}],"kunyomi":[{"reading":"まゆ","primary":false,"accepted_answer":false,"type":"kunyomi"}],"meanings":[{"meaning":"Eyebrows","primary":true,"accepted_answer":true}],"meaning_mnemonic":"You're holding a <radical>flag</radical> on a <radical>stick</radical> above your <radical>eye</radical>s to imitate <kanji>eyebrows</kanji>. You can't grow any of your own, but you really love eyebrows, so this was the best you could do.","meaning_hint":"Look at yourself in the mirror. You can see the stick holding up the flag and it's very clear you drew some eyebrows onto the flag with some markers, but you still look pretty good (in your opinion).","reading_mnemonic":"Underneath your fake <kanji>eyebrows</kanji> are two slabs of <reading>me</reading>at (み). Meat helps hair grow, according to many Internet specialists who also happen to sell meat. You're waiting for this meat to foster eyebrow hair, and when that sweet day comes you won't need these flags.","reading_hint":"Imagine walking around town, holding your eyebrow flags. You can feel the meat sticking above your eyes. They stink and they're weirdly lukewarm, but you know your real eyebrows will grow under them any day now.","vocabulary":[{"word":"眉間","level":37,"meaning":"Brow","reading":"みけん"},{"word":"眉毛","level":39,"meaning":"Eyebrow","reading":"まゆげ"}]},{"id":2384,"level":37,"kanji":"絹","onyomi":[{"reading":"けん","primary":false,"accepted_answer":false,"type":"onyomi"}],"kunyomi":[{"reading":"きぬ","primary":true,"accepted_answer":true,"type":"kunyomi"}],"meanings":[{"meaning":"Silk","primary":true,"accepted_answer":true}],"meaning_mnemonic":"Put <radical>thread</radical> in the <radical>mouth</radical> of a worm while the <radical>moon</radical> is out and it will poop out some <kanji>silk</kanji>. That's why they call them silkworms, didn't you know? But it has to be while the moon is out, otherwise normal thread will come right back out the other end of the worm. The moon is what makes the magic happen.","meaning_hint":"Picture feeding some thread into the mouth of a worm as the light from the full moon shines in on you. See the silk come out of the worm's butt and into your hands.","reading_mnemonic":"Wearing <kanji>silk</kanji> is the <reading>key</reading> (き) to not being <reading>nude</reading> (ぬ). Wear it!","reading_hint":"Picture yourself wearing nothing but silk. Silk shirt, silk pants, even silk underwear. It feels great against the skin! And most importantly, you're not nude.","vocabulary":[{"word":"絹糸","level":58,"meaning":"Silk Thread","reading":"けんし"}]},{"id":1660,"level":37,"kanji":"聴","onyomi":[{"reading":"ちょう","primary":true,"accepted_answer":true,"type":"onyomi"}],"kunyomi":[{"reading":"き","primary":false,"accepted_answer":false,"type":"kunyomi"}],"meanings":[{"meaning":"Listen","primary":true,"accepted_answer":true}],"meaning_mnemonic":"When your <radical>ear</radical> is <radical>cross</radical>ed with sound, it catches it like a <radical>net</radical>, and sends it to your <radical>heart</radical> for processing. Because you're using your heart to process this sound, it means you're giving it a proper <kanji>listen</kanji>.","meaning_hint":"Imagine the whole process of sound going through your ear and to your heart, then the gears turning to really understand what someone is saying. It's a real listen, not a fake non-heart listen.","reading_mnemonic":"You are <kanji>listen</kanji>ing so well to what someone is saying. What are they telling you that is so important? They are telling you of the omen of Mrs. <reading>Chou</reading> (ちょう), who will destroy the earth.","reading_hint":"Focus on listening, and focus on their message about Mrs. Chou. Feel afraid about the future because of it.","vocabulary":[{"word":"聴力","level":37,"meaning":"Hearing Ability","reading":"ちょうりょく"},{"word":"聴者","level":37,"meaning":"Listener","reading":"ちょうしゃ"},{"word":"聴く","level":37,"meaning":"To Listen To","reading":"きく"},{"word":"盗聴","level":37,"meaning":"Wiretapping","reading":"とうちょう"}]},{"id":1667,"level":37,"kanji":"臨","onyomi":[{"reading":"りん","primary":true,"accepted_answer":true,"type":"onyomi"}],"kunyomi":[{"reading":"のぞ","primary":false,"accepted_answer":false,"type":"kunyomi"}],"meanings":[{"meaning":"Look To","primary":true,"accepted_answer":true}],"meaning_mnemonic":"You give your <radical>servant</radical> a <radical>gun</radical> along with some other <radical>products</radical> to <kanji>look to</kanji>. You can’t look to them yourself since you are very busy. You allow your servant to look to your gun and the other products.","meaning_hint":"Imagine your servant as he looks to your gun and products. You can always look to him to take care of your menial tasks. You feel smug.","reading_mnemonic":"After your servant is done with your gun and other products you want him to <kanji>look to</kanji> your car’s o-<reading>rin</reading>g (りん). There’s something wrong with the o-ring so you want your servant to look to that as well.","reading_hint":"Imagine your servant as he looks to your car’s o-ring. Hear him clinking and clanking around in the garage as he does so.","vocabulary":[{"word":"臨む","level":37,"meaning":"To Face","reading":"のぞむ"},{"word":"臨海","level":37,"meaning":"Seaside","reading":"りんかい"},{"word":"臨時","level":37,"meaning":"Temporary","reading":"りんじ"}]},{"id":1674,"level":37,"kanji":"葬","onyomi":[{"reading":"そう","primary":true,"accepted_answer":true,"type":"onyomi"}],"kunyomi":[{"reading":"ほうむ","primary":false,"accepted_answer":false,"type":"kunyomi"}],"meanings":[{"meaning":"Burial","primary":true,"accepted_answer":true}],"meaning_mnemonic":"You brought <radical>flowers</radical> to place on top of the place where a <radical>yakuza</radical> took a <radical>spoon</radical> and killed <radical>twenty</radical> people, and there is now a <kanji>burial</kanji> happening. You carefully toss the flowers in with the dirt and everything is buried together.","meaning_hint":"This is the biggest burial you've ever seen. The hole is huge. It has to fit twenty people, after all, and the spoon didn't cut them up to make things any easier.","reading_mnemonic":"Once the <kanji>burial</kanji> is complete the <reading>sou</reading>ls (そう) of all the dead people come floating up and out of the ground. \"Thaaannk YooOoOO~\" they moan, as they ascend to the sky.","reading_hint":"I guess the twenty souls couldn't go up to... wherever... until they had a proper burial.","vocabulary":[{"word":"葬式","level":37,"meaning":"Funeral","reading":"そうしき"},{"word":"葬る","level":37,"meaning":"To Bury","reading":"ほうむる"},{"word":"火葬","level":37,"meaning":"Cremation","reading":"かそう"},{"word":"葬儀","level":41,"meaning":"Funeral","reading":"そうぎ"}]},{"id":1661,"level":37,"kanji":"跡","onyomi":[{"reading":"せき","primary":true,"accepted_answer":true,"type":"onyomi"}],"kunyomi":[{"reading":"あと","primary":false,"accepted_answer":false,"type":"kunyomi"}],"meanings":[{"meaning":"Traces","primary":true,"accepted_answer":true}],"meaning_mnemonic":"When you're stepping around with your <radical>foot</radical> <radical>again</radical> and again, you'll leave behind <kanji>traces</kanji> all over the place.","meaning_hint":"Picture yourself stepping around with your foot again and again, leaving traces all over the place. Anyone would be able to trace you like this, but you just love a good little stomping around.","reading_mnemonic":"Turns out you leaving <kanji>traces</kanji> everywhere is quite <reading>sexy</reading> (<ja>せき</ja>) to a lot of people.","reading_hint":"You're absolutely surrounded by all these people attracted to your sexy stomping around with your foot, again and again. Look, no shaming here, whatever floats your boat.","vocabulary":[{"word":"奇跡","level":37,"meaning":"Miracle","reading":"きせき"},{"word":"証跡","level":37,"meaning":"Evidence","reading":"しょうせき"},{"word":"遺跡","level":37,"meaning":"Ruins","reading":"いせき"},{"word":"跡継ぎ","level":39,"meaning":"Heir","reading":"あとつぎ"},{"word":"足跡","level":39,"meaning":"Footprint","reading":"あしあと"},{"word":"軌跡","level":50,"meaning":"Track","reading":"きせき"}]},{"id":1643,"level":37,"kanji":"跳","onyomi":[{"reading":"ちょう","primary":true,"accepted_answer":true,"type":"onyomi"}],"kunyomi":[{"reading":"と","primary":false,"accepted_answer":false,"type":"kunyomi"},{"reading":"は","primary":false,"accepted_answer":false,"type":"kunyomi"}],"meanings":[{"meaning":"Hop","primary":true,"accepted_answer":true}],"meaning_mnemonic":"Your <radical>foot</radical> heard an <radical>omen</radical> and now it's making you <kanji>hop</kanji> over things.","meaning_hint":"Imagine your foot hearing this omen, \"If you step on a crack, you'll break your mother's back.\" Now your foot hops over all of the tiny cracks in the street and the sidewalk and you look really silly.","reading_mnemonic":"As you hop you start to hear an awful scream coming down the street. It's Mrs. <reading>Chou</reading> (ちょう) and she's running straight for you yelling, \"STEP ON MY STREET'S CRACKS! STOP HOPPING OR YOUR MOTHER WILL NEVER BREAK HER BACK!\"","reading_hint":"Now you're hopping away in fear from Mrs. Chou!","vocabulary":[{"word":"跳ぶ","level":37,"meaning":"To Jump","reading":"とぶ"},{"word":"跳ねる","level":39,"meaning":"To Jump","reading":"はねる"},{"word":"縄跳び","level":39,"meaning":"Jump Rope","reading":"なわとび"},{"word":"跳躍","level":39,"meaning":"Jump","reading":"ちょうやく"}]},{"id":1662,"level":37,"kanji":"遣","onyomi":[{"reading":"けん","primary":true,"accepted_answer":true,"type":"onyomi"}],"kunyomi":[{"reading":"つか","primary":false,"accepted_answer":false,"type":"kunyomi"},{"reading":"や","primary":false,"accepted_answer":false,"type":"kunyomi"}],"meanings":[{"meaning":"Dispatch","primary":true,"accepted_answer":true}],"meaning_mnemonic":"On the <radical>scooter</radical> is an <radical>insect</radical> and a <radical>bear</radical>. The bear immediately stomps the insect, squishing it flat. \"My god, the insect is smashed. Someone call <kanji>dispatch</kanji>!\"","meaning_hint":"Imagine the conversation with emergency services. They say they will dispatch an ambulance immediately.","reading_mnemonic":"Out of the <kanji>dispatch</kanji>ed ambulance jumps <reading>Ken</reading> (けん) the samurai. \"Dispatch sent me! I'm here to fix that insect.\"","reading_hint":"He takes out a very tiny katana and performs surgery right there. The insect dies on the scooter. \"It looks like I've dispatched this insect to the afterlife.\"","vocabulary":[{"word":"遣う","level":37,"meaning":"To Consider","reading":"つかう"},{"word":"派遣","level":37,"meaning":"Dispatch","reading":"はけん"},{"word":"言葉遣い","level":39,"meaning":"Choice Of Words","reading":"ことばづかい"},{"word":"小遣い","level":39,"meaning":"Allowance","reading":"こづかい"},{"word":"思い遣り","level":41,"meaning":"Consideration","reading":"おもいやり"}]},{"id":1663,"level":37,"kanji":"闘","onyomi":[{"reading":"とう","primary":true,"accepted_answer":true,"type":"onyomi"}],"kunyomi":[{"reading":"たたか","primary":false,"accepted_answer":false,"type":"kunyomi"}],"meanings":[{"meaning":"Struggle","primary":true,"accepted_answer":true}],"meaning_mnemonic":"At this <radical>gate</radical> you're trying to get some <radical>beans</radical> through, but the <radical>measurements</radical> were off and you're starting to <kanji>struggle</kanji>. No matter how you push or pull these beans, they're just too big to get through the gate.","meaning_hint":"\"I'm really struggling here, I thought you said you measured these beans?\" you ask the bean seller. \"I did! I mean, I struggled with the measurements, I'm not very good at math...\" Ugh.","reading_mnemonic":"You continue to <kanji>struggle</kanji> because you need to get these beans to the other side of the gate and into <reading>とう</reading>きょう. You usually struggle a little when people want to bring things through the gate to とうきょう, but this is ridiculous.","reading_hint":"\"How am I supposed to sell my beans if you struggle this much just to get them into とうきょう!\" the bean seller shouts. It's making you struggle more, and beans start falling on your head, ripping their way out of their sack.","vocabulary":[{"word":"闘う","level":37,"meaning":"To Struggle","reading":"たたかう"},{"word":"戦闘","level":37,"meaning":"Battle","reading":"せんとう"},{"word":"闘志","level":37,"meaning":"Fighting Spirit","reading":"とうし"},{"word":"敢闘","level":57,"meaning":"Fight Bravely","reading":"かんとう"}]},{"id":1664,"level":37,"kanji":"陣","onyomi":[{"reading":"じん","primary":true,"accepted_answer":true,"type":"onyomi"}],"kunyomi":[],"meanings":[{"meaning":"Army Camp","primary":true,"accepted_answer":true}],"meaning_mnemonic":"This <radical>building</radical> is full of <radical>car</radical>s because it's an <kanji>army camp</kanji>. The cars (and tanks and planes) need to be ready to go at any moment just like the soldiers.","meaning_hint":"Picture an army camp housing all of the different cars the army needs at any given time.","reading_mnemonic":"All of the people in the <kanji>army camp</kanji> are wearing <reading>jean</reading>s (じん). You thought soldiers were supposed to wear uniforms, but it looks like when they're in the camp they have to wear jeans.","reading_hint":"Jeans are pretty durable, now that you think about it. And if the soldiers are working on these cars in the camp while they're there, it makes sense to wear a nice pair of jeans.","vocabulary":[{"word":"陣営","level":37,"meaning":"Camp","reading":"じんえい"}]},{"id":1665,"level":37,"kanji":"香","onyomi":[{"reading":"こう","primary":true,"accepted_answer":true,"type":"onyomi"},{"reading":"きょう","primary":false,"accepted_answer":true,"type":"onyomi"}],"kunyomi":[{"reading":"かお","primary":false,"accepted_answer":false,"type":"kunyomi"},{"reading":"か","primary":false,"accepted_answer":false,"type":"kunyomi"}],"meanings":[{"meaning":"Fragrance","primary":true,"accepted_answer":true}],"meaning_mnemonic":"<radical>Grain</radical> left in the <radical>sun</radical> blossom and give off a wonderful <kanji>fragrance</kanji>. They smell fresh and delicious. There's nothing better than the fragrance of fresh, sun-kissed grain.","meaning_hint":"Imagine this warm, grain fragrance. What does it smell like to you? Cooked rice? Gentle flowers? A warm summer's day?","reading_mnemonic":"As you sniff this lovely <kanji>fragrance</kanji> you get lost in the smell. When you open your eyes again, you see a farming <reading>こう</reading>いち standing in front of you. With... his... arm... up. \"Do you like my fragrance? I was genetically modified to have a unique fragrance compared to the other こういちs.\"","reading_hint":"This fragrance was こういち's armpits the whole time. You thought it was warm grains. Or... maybe he smells like... grains?","vocabulary":[{"word":"香水","level":37,"meaning":"Perfume","reading":"こうすい"},{"word":"香辛料","level":38,"meaning":"Spices","reading":"こうしんりょう"},{"word":"香り","level":39,"meaning":"Fragrance","reading":"かおり"},{"word":"香川県","level":40,"meaning":"Kagawa Prefecture","reading":"かがわけん"},{"word":"香港","level":41,"meaning":"Hong Kong","reading":"ほんこん"},{"word":"芳香","level":52,"meaning":"Perfume","reading":"ほうこう"}]}]
+[
+  {
+    "id": 8837,
+    "level": 37,
+    "kanji": "串",
+    "onyomi": [],
+    "kunyomi": [{ "reading": "くし", "primary": true, "accepted_answer": true, "type": "kunyomi" }],
+    "meanings": [
+      { "meaning": "Skewer", "primary": true, "accepted_answer": true },
+      { "meaning": "Spit", "primary": false, "accepted_answer": true }
+    ],
+    "meaning_mnemonic": "The <radical>skewer</radical> radical and the <kanji>skewer</kanji> kanji are exactly the same!",
+    "meaning_hint": "Know your radicals, yo.",
+    "reading_mnemonic": "Uh oh, this <kanji>skewer</kanji> is really... <reading>cushy</reading> (くし). It's so soft and cushy you can't get any meat or vegetables onto it.",
+    "reading_hint": "Imagine trying to use this cushy skewer. It's the right shape (long, thin, pointy at one end), but every time you try to put something on it it squishes in on itself like a long marshmallow.",
+    "vocabulary": [
+      { "word": "串焼き", "level": 37, "meaning": "Grilled Skewers", "reading": "くしやき" }
+    ]
+  },
+  {
+    "id": 1646,
+    "level": 37,
+    "kanji": "償",
+    "onyomi": [{ "reading": "しょう", "primary": true, "accepted_answer": true, "type": "onyomi" }],
+    "kunyomi": [
+      { "reading": "つぐな", "primary": false, "accepted_answer": false, "type": "kunyomi" }
+    ],
+    "meanings": [{ "meaning": "Reparation", "primary": true, "accepted_answer": true }],
+    "meaning_mnemonic": "The <radical>leader</radical> presents you with a <radical>prize</radical> as <kanji>reparation</kanji> for his past deeds. This leader wronged you in the past and wishes to make amends. Therefore the leader presents you with a reparation in the form of a glittering prize.",
+    "meaning_hint": "Imagine receiving your reparation prize. Feel the prize in your hand. It’s all wrapped up but it’s heavy and feels expensive. What could it be?",
+    "reading_mnemonic": "The leader who presented you with this <kanji>reparation</kanji> is the <reading>Shou</reading>gun (しょう) of Japan. He's trying to make up for all the threats he made to you and some of the things you saw (which he's now trying to cover up for).",
+    "reading_hint": "Imagine receiving your reparations from the Shougun himself. You're angry at him for threatening you, wounding people, and cutting off the heads of people who go against him, but you take it anyway.",
+    "vocabulary": [
+      { "word": "償う", "level": 37, "meaning": "To Compensate For", "reading": "つぐなう" },
+      { "word": "弁償", "level": 37, "meaning": "Reimbursement", "reading": "べんしょう" },
+      { "word": "賠償", "level": 52, "meaning": "Reparations", "reading": "ばいしょう" },
+      { "word": "賠償金", "level": 54, "meaning": "Reparations", "reading": "ばいしょうきん" }
+    ]
+  },
+  {
+    "id": 1666,
+    "level": 37,
+    "kanji": "兆",
+    "onyomi": [{ "reading": "ちょう", "primary": true, "accepted_answer": true, "type": "onyomi" }],
+    "kunyomi": [
+      { "reading": "きざ", "primary": false, "accepted_answer": false, "type": "kunyomi" }
+    ],
+    "meanings": [
+      { "meaning": "Omen", "primary": true, "accepted_answer": true },
+      { "meaning": "Trillion", "primary": false, "accepted_answer": true }
+    ],
+    "meaning_mnemonic": "The <radical>omen</radical> radical and the <kanji>omen</kanji> kanji are the same!",
+    "meaning_hint": "If you know the omen radical, you know the omen kanji as well!",
+    "reading_mnemonic": "You listen to the <kanji>omen</kanji>, in it, it tells of an event in the future when Mrs. <reading>Chou</reading> (ちょう) will destroy the world.",
+    "reading_hint": "You can clarify with the person telling you the omen several things: \"Do you believe in the omen about Mrs. Chou destroying the world?\" \"When will this omen about Mrs. Chou come true?\" etc. As long as you're associating omen with Mrs. Chou you should be good, so keep harping on that.\n\nAnyway, whenever you hear any kind of omen (omen is a radical in the kanji), there's a good chance it's going to be about Mrs. Chou.",
+    "vocabulary": [
+      { "word": "兆候", "level": 37, "meaning": "Sign", "reading": "ちょうこう" },
+      { "word": "前兆", "level": 37, "meaning": "Omen", "reading": "ぜんちょう" }
+    ]
+  },
+  {
+    "id": 1647,
+    "level": 37,
+    "kanji": "刑",
+    "onyomi": [{ "reading": "けい", "primary": true, "accepted_answer": true, "type": "onyomi" }],
+    "kunyomi": [],
+    "meanings": [{ "meaning": "Punish", "primary": true, "accepted_answer": true }],
+    "meaning_mnemonic": "Destroy a <radical>lantern</radical> with your <radical>knife</radical> and you'll be <kanji>punish</kanji>ed.",
+    "meaning_hint": "Even if it was your own lantern, why stab it with a knife? You could have recycled that. I will punish you for lantern stabbing and pollution!",
+    "reading_mnemonic": "I will <kanji>punish</kanji> you by taking away your <reading>ca</reading>ke (けい)! You'll never eat cake again. Not for birthdays, not for holidays. This is your punishment.",
+    "reading_hint": "The next time you want to stab a lantern with a knife, think about how good cake tastes and stop. Remember, DARE (Don't Attack Reusable Electronics)!",
+    "vocabulary": [
+      { "word": "刑務所", "level": 37, "meaning": "Jail", "reading": "けいむしょ" },
+      { "word": "死刑", "level": 37, "meaning": "Death Penalty", "reading": "しけい" },
+      { "word": "刑事", "level": 37, "meaning": "Police Detective", "reading": "けいじ" },
+      { "word": "刑期", "level": 37, "meaning": "Prison Term", "reading": "けいき" },
+      { "word": "刑罰", "level": 37, "meaning": "Punishment", "reading": "けいばつ" },
+      { "word": "終身刑", "level": 37, "meaning": "Life Sentence", "reading": "しゅうしんけい" },
+      { "word": "死刑囚", "level": 39, "meaning": "Condemned Criminal", "reading": "しけいしゅう" }
+    ]
+  },
+  {
+    "id": 1668,
+    "level": 37,
+    "kanji": "削",
+    "onyomi": [{ "reading": "さく", "primary": true, "accepted_answer": true, "type": "onyomi" }],
+    "kunyomi": [
+      { "reading": "けず", "primary": false, "accepted_answer": false, "type": "kunyomi" }
+    ],
+    "meanings": [{ "meaning": "Whittle Down", "primary": true, "accepted_answer": true }],
+    "meaning_mnemonic": "A <radical>triceratops</radical> with a <radical>moon</radical> <radical>knife</radical> can <kanji>whittle down</kanji> anything.",
+    "meaning_hint": "Imagine the triceratops with its little moon knife, doing some whittling. Hand it anything and it will whittle it down.",
+    "reading_mnemonic": "Everything it will <kanji>whittle down</kanji> shall be put in a <reading>sack</reading> (さく).",
+    "reading_hint": "Check out the sack that holds all the things that the triceratops whittled down. Go ahead and look through it, it's quite filled.",
+    "vocabulary": [
+      { "word": "削る", "level": 37, "meaning": "To Whittle Something Down", "reading": "けずる" },
+      { "word": "削除", "level": 37, "meaning": "Deletion", "reading": "さくじょ" },
+      { "word": "削減", "level": 37, "meaning": "Reduction", "reading": "さくげん" },
+      { "word": "削除する", "level": 39, "meaning": "To Delete", "reading": "さくじょする" }
+    ]
+  },
+  {
+    "id": 1648,
+    "level": 37,
+    "kanji": "募",
+    "onyomi": [{ "reading": "ぼ", "primary": true, "accepted_answer": true, "type": "onyomi" }],
+    "kunyomi": [
+      { "reading": "つの", "primary": false, "accepted_answer": false, "type": "kunyomi" }
+    ],
+    "meanings": [{ "meaning": "Recruit", "primary": true, "accepted_answer": true }],
+    "meaning_mnemonic": "A <radical>greenhouse</radical> is the newest <radical>power</radical> of the city you decided to <kanji>recruit</kanji>. You’re trying to recruit all the buildings in town and the greenhouse was the next on your list. It adds just a little bit of power to the town, but it's important nonetheless.",
+    "meaning_hint": "Imagine what you had to do to recruit this greenhouse. Imagine schmoozing with the previous greenhouse owners to recruit them to your cause and sell you the greenhouse.",
+    "reading_mnemonic": "After you <kanji>recruit</kanji> the greenhouse, you recruit <reading>Bo</reading>bo (ぼ) the clown to guard it for you. Bobo the clown has a terrifying amount of power so he’ll make an excellent guard for the greenhouse.",
+    "reading_hint": "Recruit Bobo the clown. Look at him. He’s terrifying. Bobo will make for a great deterrent for entry to your greenhouse.",
+    "vocabulary": [
+      { "word": "募る", "level": 37, "meaning": "To Appeal For Something", "reading": "つのる" },
+      { "word": "募金", "level": 37, "meaning": "Fundraising", "reading": "ぼきん" },
+      { "word": "募集", "level": 37, "meaning": "Recruiting", "reading": "ぼしゅう" },
+      { "word": "応募", "level": 37, "meaning": "Application", "reading": "おうぼ" },
+      { "word": "応募する", "level": 39, "meaning": "To Apply For", "reading": "おうぼする" },
+      { "word": "募集中", "level": 39, "meaning": "Now Hiring", "reading": "ぼしゅうちゅう" }
+    ]
+  },
+  {
+    "id": 1649,
+    "level": 37,
+    "kanji": "執",
+    "onyomi": [
+      { "reading": "しゅう", "primary": true, "accepted_answer": true, "type": "onyomi" },
+      { "reading": "しつ", "primary": false, "accepted_answer": true, "type": "onyomi" }
+    ],
+    "kunyomi": [{ "reading": "と", "primary": false, "accepted_answer": false, "type": "kunyomi" }],
+    "meanings": [{ "meaning": "Tenacious", "primary": true, "accepted_answer": true }],
+    "meaning_mnemonic": "<radical>Happiness</radical> is a <radical>circle</radical> that's <kanji>tenacious</kanji>. In other words, we're all in this circle/cycle where we do whatever we can to grab onto happiness and hold it as tightly as we can.",
+    "meaning_hint": "Be tenacious about happiness in your life. No matter how many times it slips away, don't give up. Keep going after it, because it will absolutely come back if you're tenacious enough.",
+    "reading_mnemonic": "Happiness is as <kanji>tenacious</kanji> as a <reading>shih tzu</reading> (しつ) with a <reading>shoe</reading> (しゅう). That little dog does not want to give up on the shoe, no matter what's happening around it.",
+    "reading_hint": "Will someone take the shoe sometimes? Yeah, but the shih tzu doesn't give up. That's how you need to be with happiness. Kids, be tenacious!",
+    "vocabulary": [
+      { "word": "執る", "level": 37, "meaning": "To Take Control", "reading": "とる" },
+      { "word": "執着", "level": 37, "meaning": "Attachment To", "reading": "しゅうちゃく" },
+      { "word": "執筆", "level": 37, "meaning": "Writing", "reading": "しっぴつ" },
+      {
+        "word": "執行猶予",
+        "level": 58,
+        "meaning": "Suspended Sentence",
+        "reading": "しっこうゆうよ"
+      }
+    ]
+  },
+  {
+    "id": 1650,
+    "level": 37,
+    "kanji": "塁",
+    "onyomi": [{ "reading": "るい", "primary": true, "accepted_answer": true, "type": "onyomi" }],
+    "kunyomi": [],
+    "meanings": [
+      { "meaning": "Base", "primary": true, "accepted_answer": true },
+      { "meaning": "Baseball Base", "primary": false, "accepted_answer": true }
+    ],
+    "meaning_mnemonic": "There's an <radical>explosion</radical> in the <radical>dirt</radical> under a <radical>rice paddy</radical>, exposing the hidden <kanji>base</kanji> under there. A base from baseball! I guess this rice paddy was built on top of an old baseball field...",
+    "meaning_hint": "Picture a serene rice paddy. Now watch the whole thing explode, rice and dirt going everywhere, and a secret, underground baseball base is left there, smoldering.",
+    "reading_mnemonic": "Unfortunately, thanks to the explosion, the <kanji>base</kanji> is in <reading>rui</reading>ns (るい). It's dark and smokey and kinda half burned. You probably can't get this in a regulation game.",
+    "reading_hint": "Hold this ruined base in your hands. Darn, you love baseball. At least it's a collectible.",
+    "vocabulary": [
+      { "word": "塁打", "level": 37, "meaning": "Base Hit", "reading": "るいだ" },
+      { "word": "塁審", "level": 37, "meaning": "Baseball Umpire", "reading": "るいしん" },
+      { "word": "本塁打", "level": 39, "meaning": "Home Run", "reading": "ほんるいだ" }
+    ]
+  },
+  {
+    "id": 1669,
+    "level": 37,
+    "kanji": "契",
+    "onyomi": [{ "reading": "けい", "primary": true, "accepted_answer": true, "type": "onyomi" }],
+    "kunyomi": [],
+    "meanings": [{ "meaning": "Pledge", "primary": true, "accepted_answer": true }],
+    "meaning_mnemonic": "The weight of <radical>life</radical> on your <radical>sword</radical> is <radical>big</radical> when you <kanji>pledge</kanji> to protect your city. That's the big, big weight of every single person's life in that city pressing down on you every time you take out that sword.",
+    "meaning_hint": "Imagine holding up your sword and pledging to protect the lives of everyone in this city. It's a big deal!",
+    "reading_mnemonic": "Until the city is safe, you <kanji>pledge</kanji> to give up <reading>ca</reading>ke (けい), your favorite food.",
+    "reading_hint": "Would you pledge to give up cake to show everyone how serious you are about protecting life?",
+    "vocabulary": [
+      { "word": "契約", "level": 37, "meaning": "Contract", "reading": "けいやく" },
+      { "word": "契機", "level": 37, "meaning": "Chance", "reading": "けいき" }
+    ]
+  },
+  {
+    "id": 1651,
+    "level": 37,
+    "kanji": "崩",
+    "onyomi": [{ "reading": "ほう", "primary": true, "accepted_answer": true, "type": "onyomi" }],
+    "kunyomi": [
+      { "reading": "くず", "primary": false, "accepted_answer": false, "type": "kunyomi" }
+    ],
+    "meanings": [{ "meaning": "Crumble", "primary": true, "accepted_answer": true }],
+    "meaning_mnemonic": "Below this <radical>mountain</radical>, a <radical>moon</radical> and another <radical>moon</radical> crash into each other and the entire thing <kanji>crumble</kanji>s to pieces.",
+    "meaning_hint": "Watch as the moons crumble together, and then the mountain slowly crumbles down into them too.",
+    "reading_mnemonic": "As the mountain <kanji>crumble</kanji>s you see your <reading>ho</reading>me (ほう), which is at the very top of the mountain, come crumbling down too.",
+    "reading_hint": "Your home crumbles like a dry cookie until it's nothing more than a bunch of dust, mixed in with the mountain and the moon. Now where will you live?",
+    "vocabulary": [
+      { "word": "崩す", "level": 37, "meaning": "To Demolish", "reading": "くずす" },
+      { "word": "崩壊", "level": 37, "meaning": "Collapse", "reading": "ほうかい" },
+      { "word": "崩れる", "level": 39, "meaning": "To Crumble", "reading": "くずれる" }
+    ]
+  },
+  {
+    "id": 1659,
+    "level": 37,
+    "kanji": "弾",
+    "onyomi": [{ "reading": "だん", "primary": true, "accepted_answer": true, "type": "onyomi" }],
+    "kunyomi": [
+      { "reading": "ひ", "primary": false, "accepted_answer": false, "type": "kunyomi" },
+      { "reading": "はず", "primary": false, "accepted_answer": false, "type": "kunyomi" },
+      { "reading": "たま", "primary": false, "accepted_answer": false, "type": "kunyomi" }
+    ],
+    "meanings": [{ "meaning": "Bullet", "primary": true, "accepted_answer": true }],
+    "meaning_mnemonic": "What's more <radical>simple</radical> than a <radical>bow</radical>? A <kanji>bullet</kanji>. Bullets just have to be shot out of a gun and somebody dies. Bows you have to load with an arrow and pull it back and aim, yuck. Bullets are the new bows, people.",
+    "meaning_hint": "Imagine how simple life would be if we replaced all the bows in the world with bullets. (Insert sarcastic crying face here.)",
+    "reading_mnemonic": "If you want to shoot <kanji>bullet</kanji>s, you need to do it at <reading>dawn</reading> (だん). Back in the old days, it wasn't bright enough to shoot arrows at dawn, but you can shoot bullets at dawn because they're simpler to use!",
+    "reading_hint": "Imagine shooting bullets into the sun at dawn. Pow pow, take that history! Blam blam, take that dawn!",
+    "vocabulary": [
+      { "word": "爆弾", "level": 37, "meaning": "Bomb", "reading": "ばくだん" },
+      { "word": "弾む", "level": 37, "meaning": "To Bounce", "reading": "はずむ" },
+      { "word": "弾丸", "level": 37, "meaning": "Bullet", "reading": "だんがん" },
+      { "word": "弾力", "level": 37, "meaning": "Elasticity", "reading": "だんりょく" },
+      { "word": "第一弾", "level": 38, "meaning": "First Installment", "reading": "だいいちだん" },
+      {
+        "word": "弾く",
+        "level": 39,
+        "meaning": "To Play A Stringed Instrument",
+        "reading": "ひく"
+      },
+      { "word": "原子爆弾", "level": 39, "meaning": "Atomic Bomb", "reading": "げんしばくだん" },
+      { "word": "銃弾", "level": 39, "meaning": "Rifle Bullet", "reading": "じゅうだん" },
+      { "word": "糾弾", "level": 42, "meaning": "Blame", "reading": "きゅうだん" },
+      { "word": "弾劾", "level": 60, "meaning": "Impeachment", "reading": "だんがい" }
+    ]
+  },
+  {
+    "id": 1670,
+    "level": 37,
+    "kanji": "恵",
+    "onyomi": [
+      { "reading": "え", "primary": true, "accepted_answer": true, "type": "onyomi" },
+      { "reading": "けい", "primary": false, "accepted_answer": true, "type": "onyomi" }
+    ],
+    "kunyomi": [
+      { "reading": "めぐ", "primary": false, "accepted_answer": false, "type": "kunyomi" }
+    ],
+    "meanings": [{ "meaning": "Favor", "primary": true, "accepted_answer": true }],
+    "meaning_mnemonic": "You carry a <radical>cross</radical> across a <radical>rice paddy</radical> with a <radical>heart</radical> on it to return a <kanji>favor</kanji> for your friend. The heart needs to be purified so that’s why you have it on the cross and your friend lives on a rice paddy farm so that’s why you’re running through that. The favor you are paying your friend back with is getting him this heart. He needs a new one and you’re providing it.",
+    "meaning_hint": "This is a pretty big favor. Imagine running through a rice paddy carrying a cross with a warm beating heart on it. Thump thump. Thump thump.",
+    "reading_mnemonic": "You arrive at your friend’s place and you can finally return the <kanji>favor</kanji> you owe him by presenting him with the heart. “<reading>Eh</reading> (え)? What’s this? I didn’t ask for this!” “Eh!?!?” you reply. Apparently he didn’t want a real heart, he wanted a candy one. He wanted a Valentine!",
+    "reading_hint": "Imagine how dumb you feel at this miscommunication. Eh? You don’t feel dumb? Well you should!",
+    "vocabulary": [
+      { "word": "恵む", "level": 37, "meaning": "To Do A Favor", "reading": "めぐむ" },
+      { "word": "知恵", "level": 37, "meaning": "Wisdom", "reading": "ちえ" }
+    ]
+  },
+  {
+    "id": 1652,
+    "level": 37,
+    "kanji": "患",
+    "onyomi": [{ "reading": "かん", "primary": true, "accepted_answer": true, "type": "onyomi" }],
+    "kunyomi": [
+      { "reading": "わずら", "primary": false, "accepted_answer": false, "type": "kunyomi" }
+    ],
+    "meanings": [{ "meaning": "Afflicted", "primary": true, "accepted_answer": true }],
+    "meaning_mnemonic": "A <radical>skewer</radical> to the <radical>heart</radical> has <kanji>afflicted</kanji> your health. You’ve been afflicted with a disease from the skewer to your heart. Your affliction is death. You’re dying.",
+    "meaning_hint": "You did not wish to be afflicted as such. Feel the skewer in your heart and the great pain it gives you. You know you’re dying.",
+    "reading_mnemonic": "Since you’re <kanji>afflicted</kanji> with the death, you start to hallucinate and the ghost of Genghis <reading>Khan</reading> (かん) appears before you. \"Ah, I was afflicted of the same disease. It killed me, you know.\"",
+    "reading_hint": "You look on in horror as the affliction grabs hold and everything starts to fade, but Genghis Khan still floats before you, watching you closely.",
+    "vocabulary": [
+      { "word": "患う", "level": 37, "meaning": "To Be Afflicted With", "reading": "わずらう" },
+      { "word": "患者", "level": 37, "meaning": "A Patient", "reading": "かんじゃ" },
+      { "word": "急患", "level": 37, "meaning": "Emergency Patient", "reading": "きゅうかん" },
+      { "word": "疾患", "level": 54, "meaning": "Disease", "reading": "しっかん" }
+    ]
+  },
+  {
+    "id": 1653,
+    "level": 37,
+    "kanji": "戻",
+    "onyomi": [{ "reading": "れい", "primary": false, "accepted_answer": false, "type": "onyomi" }],
+    "kunyomi": [{ "reading": "もど", "primary": true, "accepted_answer": true, "type": "kunyomi" }],
+    "meanings": [{ "meaning": "Return", "primary": true, "accepted_answer": true }],
+    "meaning_mnemonic": "This <radical>door</radical> is <radical>big</radical> and you need to <kanji>return</kanji> it to its rightful owner. This door is too big and important looking to not belong to someone. You need to find its owner and return it to them.",
+    "meaning_hint": "Heft this big door in your arms. It’s very heavy. Feel your arms tire as you look for who to return the door to.",
+    "reading_mnemonic": "You are in <kanji>return</kanji> <reading>mode</reading> (もど). When you enter this mode, you concentrate only on returning something. Nothing else matters in this mode. You’re in full on return mode.",
+    "reading_hint": "You’re obsessed with returning this big door. Once you enter this mode, the only way to get out is to return the thing you have.",
+    "vocabulary": [
+      { "word": "戻る", "level": 37, "meaning": "To Return", "reading": "もどる" },
+      { "word": "戻す", "level": 38, "meaning": "To Return", "reading": "もどす" },
+      { "word": "払い戻す", "level": 39, "meaning": "To Repay", "reading": "はらいもどす" },
+      { "word": "戻り道", "level": 39, "meaning": "Way Back", "reading": "もどりみち" },
+      { "word": "取り戻す", "level": 39, "meaning": "To Take Back", "reading": "とりもどす" }
+    ]
+  },
+  {
+    "id": 1654,
+    "level": 37,
+    "kanji": "抗",
+    "onyomi": [{ "reading": "こう", "primary": true, "accepted_answer": true, "type": "onyomi" }],
+    "kunyomi": [
+      { "reading": "あらが", "primary": false, "accepted_answer": false, "type": "kunyomi" }
+    ],
+    "meanings": [{ "meaning": "Confront", "primary": true, "accepted_answer": true }],
+    "meaning_mnemonic": "You take your <radical>fingers</radical> and slam a <radical>lid</radical> on the <radical>table</radical>. You make this big noise to <kanji>confront</kanji> the person in front of you. ",
+    "meaning_hint": "They weren't listening, which is why you slammed that lid down. You'll have to confront them more directly.",
+    "reading_mnemonic": "You are trying to <kanji>confront</kanji> Emperor <reading>こう</reading>いち. You're confronting him about all the kanji he's forcing you, and everyone else, to learn. \"Look here こういち! I know you said I'd learn like 2000 kanji in no time, but this is way too efficient! What will the people do when they're done? Do you think they will sit idly by?\"",
+    "reading_hint": "こういち is laughing at you as you confront him. Which makes you angrier, so you bang the lid on the table some more.",
+    "vocabulary": [
+      { "word": "反抗する", "level": 37, "meaning": "To Rebel", "reading": "はんこうする" },
+      { "word": "抗戦", "level": 37, "meaning": "Resistance", "reading": "こうせん" },
+      { "word": "抗体", "level": 37, "meaning": "Antibody", "reading": "こうたい" },
+      { "word": "抵抗する", "level": 37, "meaning": "To Resist", "reading": "ていこうする" }
+    ]
+  },
+  {
+    "id": 1671,
+    "level": 37,
+    "kanji": "抱",
+    "onyomi": [{ "reading": "ほう", "primary": false, "accepted_answer": false, "type": "onyomi" }],
+    "kunyomi": [
+      { "reading": "だ", "primary": true, "accepted_answer": true, "type": "kunyomi" },
+      { "reading": "かか", "primary": false, "accepted_answer": true, "type": "kunyomi" },
+      { "reading": "いだ", "primary": false, "accepted_answer": true, "type": "kunyomi" }
+    ],
+    "meanings": [{ "meaning": "Hug", "primary": true, "accepted_answer": true }],
+    "meaning_mnemonic": "Take your <radical>fingers</radical> and <radical>wrap</radical> them around another person. This is called a <kanji>hug</kanji>. Just make sure you include all the stuff attached to your fingers, like your hands and arms too, otherwise it's more of a squeeze, and we don't want to do that to people.",
+    "meaning_hint": "Picture it like you're a baby who is new to hugs. You start with your fingers, spread them out and move forward. Now wrap all that stuff attached to your fingers around another person. You did it! You're hugging now!",
+    "reading_mnemonic": "Who do you love to <kanji>hug</kanji> the most? Your <reading>da</reading>d (だ)! He gives the best hugs. They're warm and big and tight and comforting. The kind of hug dads are really good at giving.",
+    "reading_hint": "Imagine getting a nice, big hug from your dad. Mm. It's cozy and feels like home.",
+    "vocabulary": [
+      { "word": "抱く", "level": 37, "meaning": "To Embrace", "reading": "だく" },
+      { "word": "抱っこ", "level": 37, "meaning": "Holding In One's Arms", "reading": "だっこ" },
+      { "word": "辛抱", "level": 38, "meaning": "Patience", "reading": "しんぼう" },
+      { "word": "抱擁", "level": 52, "meaning": "Embrace", "reading": "ほうよう" }
+    ]
+  },
+  {
+    "id": 1655,
+    "level": 37,
+    "kanji": "抵",
+    "onyomi": [{ "reading": "てい", "primary": true, "accepted_answer": true, "type": "onyomi" }],
+    "kunyomi": [],
+    "meanings": [{ "meaning": "Resist", "primary": true, "accepted_answer": true }],
+    "meaning_mnemonic": "Everyone from your <radical>clan</radical> puts their <radical>fingers</radical> in the <radical>ground</radical> as a way to <kanji>resist</kanji> their lords. Your clan is made of a bunch of peasants, but you aren't going to work the land for other people anymore. You're going to resist. This is a protest! Your fingers work for no one but yourselves from now on!",
+    "meaning_hint": "Imagine your entire clan putting their fingers in the ground in unison as a form of resistance. It's a moving sight.",
+    "reading_mnemonic": "You're all <kanji>resist</kanji>ing with your fingers in the ground, when the lords appear, angry. \"You resist us by hiding your fingers with potatoes in the ground?! You want your fingers to be useless potatoes so badly? We'll chop them up and turn them into <reading>ta</reading>ter (てい) tots!\"",
+    "reading_hint": "You make your choice to resist. He orders his guards to pull your fingers out of the ground, chop them into the size of tater tots, and then deep fry them. After they're done, the lord pops one in his mouth and says, \"Oooh, resistance is delicious.\"",
+    "vocabulary": [
+      { "word": "抵抗する", "level": 37, "meaning": "To Resist", "reading": "ていこうする" },
+      { "word": "大抵", "level": 37, "meaning": "Generally", "reading": "たいてい" }
+    ]
+  },
+  {
+    "id": 1672,
+    "level": 37,
+    "kanji": "掲",
+    "onyomi": [{ "reading": "けい", "primary": true, "accepted_answer": true, "type": "onyomi" }],
+    "kunyomi": [
+      { "reading": "かか", "primary": false, "accepted_answer": false, "type": "kunyomi" }
+    ],
+    "meanings": [{ "meaning": "Display", "primary": true, "accepted_answer": true }],
+    "meaning_mnemonic": "You're in <radical>prison</radical>, but you can use your <radical>fingers</radical> and a <radical>spoon</radical> in the light of the <radical>sun</radical> to <kanji>display</kanji> little moving pictures on your cell wall. It's like a shadow puppet display except you can only make a few characters with your limited hand tools.",
+    "meaning_hint": "Imagine displaying your two favorite characters in the shadows on your prison cell walls. This one is mister fingers and this one is missus spoon. They're best friends.",
+    "reading_mnemonic": "There is one thing you <kanji>display</kanji> more than anything else and it's <reading>ca</reading>ke (けい). You smush your fingers to make a cake shape and use the spoon to pretend you're eating it.",
+    "reading_hint": "Imagine displaying cake on the wall. Now pretend to eat the shadow cake with your spoon. You can almost taste it. Except you can't, because this is still prison.",
+    "vocabulary": [
+      { "word": "掲げる", "level": 37, "meaning": "To Put Up A Sign", "reading": "かかげる" },
+      { "word": "掲示", "level": 37, "meaning": "Notice", "reading": "けいじ" },
+      { "word": "掲載", "level": 37, "meaning": "Publication", "reading": "けいさい" },
+      { "word": "掲示板", "level": 39, "meaning": "Bulletin Board", "reading": "けいじばん" },
+      { "word": "掲載する", "level": 39, "meaning": "To Publish", "reading": "けいさいする" }
+    ]
+  },
+  {
+    "id": 1656,
+    "level": 37,
+    "kanji": "旬",
+    "onyomi": [
+      { "reading": "しゅん", "primary": true, "accepted_answer": true, "type": "onyomi" },
+      { "reading": "じゅん", "primary": false, "accepted_answer": true, "type": "onyomi" }
+    ],
+    "kunyomi": [],
+    "meanings": [
+      { "meaning": "In Season", "primary": true, "accepted_answer": true },
+      { "meaning": "Ten Days", "primary": false, "accepted_answer": true }
+    ],
+    "meaning_mnemonic": "When a <radical>prison</radical> holds the <radical>sun</radical> inside it, everything will always be <kanji>in season</kanji>. Obviously if the sun is in prison, the seasons can't change. Want to eat perfect apples all year round? Just put the sun in prison when they're ripe — usually a short window of <kanji>ten days</kanji>.",
+    "meaning_hint": "You're welcome. Now you know how to keep everything in season. Lifehack!",
+    "reading_mnemonic": "When things are <kanji>in season</kanji> for more than <kanji>ten days</kanji>, people are going to wonder what's going on. When's Christmas? When's Golden Week? <reading>Soon</reading> (しゅん), you say. Soon enough, it's <reading>June</reading> (じゅん). Which is the middle of the year, so now everything is soon.",
+    "reading_hint": "Joke's on them though. Soon it will be apple season. Soon it will always be time for apples. Soon June will end and people will forget about everything else, living forever inside that period of ten days when apples are most in season.",
+    "vocabulary": [
+      {
+        "word": "上旬",
+        "level": 37,
+        "meaning": "First Ten Days Of The Month",
+        "reading": "じょうじゅん"
+      },
+      {
+        "word": "下旬",
+        "level": 37,
+        "meaning": "Last Ten Days Of The Month",
+        "reading": "げじゅん"
+      },
+      {
+        "word": "中旬",
+        "level": 37,
+        "meaning": "Middle Ten Days Of The Month",
+        "reading": "ちゅうじゅん"
+      }
+    ]
+  },
+  {
+    "id": 1644,
+    "level": 37,
+    "kanji": "昭",
+    "onyomi": [{ "reading": "しょう", "primary": true, "accepted_answer": true, "type": "onyomi" }],
+    "kunyomi": [],
+    "meanings": [{ "meaning": "Shining", "primary": true, "accepted_answer": true }],
+    "meaning_mnemonic": "The <radical>sun</radical> <radical>call</radical>s out to the earth by <kanji>shining</kanji> down on it.",
+    "meaning_hint": "The sun doesn't have a voice, unfortunately, so it calls out the only way it can, with its shining rays.",
+    "reading_mnemonic": "This <kanji>shining</kanji> is aimed directly at the <reading>Shou</reading>gun (しょう). The sun is shining on the Shougun to not only show its support for his leadership, but to let him shine brighter than anyone else in Japan.",
+    "reading_hint": "Picture the Shougun standing in the shining sunlight. He's so bright and beautiful!",
+    "vocabulary": [{ "word": "昭和", "level": 37, "meaning": "Showa Era", "reading": "しょうわ" }]
+  },
+  {
+    "id": 1657,
+    "level": 37,
+    "kanji": "湾",
+    "onyomi": [{ "reading": "わん", "primary": true, "accepted_answer": true, "type": "onyomi" }],
+    "kunyomi": [],
+    "meanings": [{ "meaning": "Gulf", "primary": true, "accepted_answer": true }],
+    "meaning_mnemonic": "<radical>Tsunami</radical>s hit these lands <radical>again</radical> and again, molding it into some kind of <radical>bow</radical> shape. Or in other words, creating a <kanji>gulf</kanji>. ",
+    "meaning_hint": "Picture these extremely violent tsunamis hitting a shore again and again, turning it into a bow-shaped gulf. That's how gulfs are created in this part of the world!",
+    "reading_mnemonic": "How many <kanji>gulf</kanji>s will this create? Just <reading>one</reading> (<ja>わん</ja>).",
+    "reading_hint": "Many tsunamis, again and again, for just one gulf? Yep, that's just how life goes. Gulfs are in high demand, but you'll need many tsunamis to create just one.",
+    "vocabulary": [{ "word": "台湾", "level": 37, "meaning": "Taiwan", "reading": "たいわん" }]
+  },
+  {
+    "id": 1645,
+    "level": 37,
+    "kanji": "漁",
+    "onyomi": [
+      { "reading": "ぎょ", "primary": true, "accepted_answer": true, "type": "onyomi" },
+      { "reading": "りょう", "primary": false, "accepted_answer": true, "type": "onyomi" }
+    ],
+    "kunyomi": [
+      { "reading": "あさ", "primary": false, "accepted_answer": false, "type": "kunyomi" }
+    ],
+    "meanings": [{ "meaning": "Fishing", "primary": true, "accepted_answer": true }],
+    "meaning_mnemonic": "A <radical>tsunami</radical> pushes all the <radical>fish</radical> closer to land, making for some easy <kanji>fishing</kanji>. The tsunami starts out in the middle of the ocean and pushes all the fish towards the coast where everyone does their fishing. With all the fish pushed closer to land and closer together, it’s very easy for people to go fishing in one spot and catch a lot of fish.",
+    "meaning_hint": "Imagine going fishing for fish in a fishing spot after a tsunami. There are SO many fish here. Your hook barely touches the water and there’s already a fish on it. Man, fishing like this is easy! Smell the smell of fish and sea air around you.",
+    "reading_mnemonic": "To get to the best <kanji>fishing</kanji> spot you need to <reading>go</reading> (ぎょ) <reading>row</reading> (りょう) out to the middle of the ocean. You go by means of rowing. To get to the fish and do the fishing, you need to go and row out to sea.",
+    "reading_hint": "Go! Go row! Go and row for the fishing! How do you go? You row! The row part should be pretty easy to remember since you gotta row your boat out to sea, but if you’re having trouble with the go part, just remember that it has the same reading as 魚.",
+    "vocabulary": [
+      { "word": "漁師", "level": 37, "meaning": "Fisherman", "reading": "りょうし" },
+      { "word": "漁船", "level": 37, "meaning": "Fishing Boat", "reading": "ぎょせん" },
+      { "word": "漁業", "level": 37, "meaning": "Fishing Industry", "reading": "ぎょぎょう" }
+    ]
+  },
+  {
+    "id": 1658,
+    "level": 37,
+    "kanji": "爆",
+    "onyomi": [{ "reading": "ばく", "primary": true, "accepted_answer": true, "type": "onyomi" }],
+    "kunyomi": [{ "reading": "は", "primary": false, "accepted_answer": false, "type": "kunyomi" }],
+    "meanings": [{ "meaning": "Explode", "primary": true, "accepted_answer": true }],
+    "meaning_mnemonic": "If you combine <radical>fire</radical> with <radical>violence</radical>, it will <kanji>explode</kanji>! A fire, once full of violence, will surely explode. The fire can’t handle all that violence so the fire just rumbles and shakes and then finally explodes. BOOM!",
+    "meaning_hint": "Imagine the fire explode. Feel the heat of the fire and the explosion. It’s very violent. BOOM BOOM BA-BOOM!",
+    "reading_mnemonic": "As you watch the fire <kanji>explode</kanji>, you start to <reading>back</reading> (ばく) away. I don’t blame you. You need to back away or else you’ll get caught in the violent explosion. Back away a little more just to be safe.",
+    "reading_hint": "Imagine yourself as you back away from the explosion. As you back away, see the fire dance and feel the heat of the explosion on your face.",
+    "vocabulary": [
+      { "word": "爆発", "level": 37, "meaning": "Explosion", "reading": "ばくはつ" },
+      { "word": "爆弾", "level": 37, "meaning": "Bomb", "reading": "ばくだん" },
+      { "word": "爆笑", "level": 37, "meaning": "Explosive Laughter", "reading": "ばくしょう" },
+      { "word": "自爆", "level": 37, "meaning": "Suicide Bomb", "reading": "じばく" },
+      { "word": "爆撃", "level": 37, "meaning": "Bombing", "reading": "ばくげき" },
+      { "word": "原子爆弾", "level": 39, "meaning": "Atomic Bomb", "reading": "げんしばくだん" },
+      { "word": "原爆", "level": 41, "meaning": "Atomic Bomb", "reading": "げんばく" }
+    ]
+  },
+  {
+    "id": 1673,
+    "level": 37,
+    "kanji": "狙",
+    "onyomi": [{ "reading": "そ", "primary": true, "accepted_answer": true, "type": "onyomi" }],
+    "kunyomi": [
+      { "reading": "ねら", "primary": false, "accepted_answer": false, "type": "kunyomi" }
+    ],
+    "meanings": [{ "meaning": "Aim", "primary": true, "accepted_answer": true }],
+    "meaning_mnemonic": "You see an <radical>animal</radical> wearing a <radical>top hat</radical> and decide to <kanji>aim</kanji> at it. The top hat is a perfect, giant target you use to take down this animal.",
+    "meaning_hint": "It's much easier to aim for an animal wearing a top hat than one without.",
+    "reading_mnemonic": "Ready, steady, <kanji>aim</kanji>... fire! You throw a bar of <reading>so</reading>ap (そ) at the animal. Yes, soap. You were sitting in your bathtub, washing and scrubbing, then the animal in the top hat caught your eye.",
+    "reading_hint": "Your aim with the soap is perfect! The soap knocked the animal's hat right off.",
+    "vocabulary": [
+      { "word": "狙い", "level": 37, "meaning": "Aim", "reading": "ねらい" },
+      { "word": "狙撃", "level": 37, "meaning": "Shooting", "reading": "そげき" },
+      { "word": "狙う", "level": 39, "meaning": "To Aim At", "reading": "ねらう" }
+    ]
+  },
+  {
+    "id": 8862,
+    "level": 37,
+    "kanji": "眉",
+    "onyomi": [
+      { "reading": "み", "primary": true, "accepted_answer": true, "type": "onyomi" },
+      { "reading": "び", "primary": false, "accepted_answer": true, "type": "onyomi" }
+    ],
+    "kunyomi": [
+      { "reading": "まゆ", "primary": false, "accepted_answer": false, "type": "kunyomi" }
+    ],
+    "meanings": [{ "meaning": "Eyebrows", "primary": true, "accepted_answer": true }],
+    "meaning_mnemonic": "You're holding a <radical>flag</radical> on a <radical>stick</radical> above your <radical>eye</radical>s to imitate <kanji>eyebrows</kanji>. You can't grow any of your own, but you really love eyebrows, so this was the best you could do.",
+    "meaning_hint": "Look at yourself in the mirror. You can see the stick holding up the flag and it's very clear you drew some eyebrows onto the flag with some markers, but you still look pretty good (in your opinion).",
+    "reading_mnemonic": "Underneath your fake <kanji>eyebrows</kanji> are two slabs of <reading>me</reading>at (み). Meat helps hair grow, according to many Internet specialists who also happen to sell meat. You're waiting for this meat to foster eyebrow hair, and when that sweet day comes you won't need these flags.",
+    "reading_hint": "Imagine walking around town, holding your eyebrow flags. You can feel the meat sticking above your eyes. They stink and they're weirdly lukewarm, but you know your real eyebrows will grow under them any day now.",
+    "vocabulary": [
+      { "word": "眉間", "level": 37, "meaning": "Brow", "reading": "みけん" },
+      { "word": "眉毛", "level": 39, "meaning": "Eyebrow", "reading": "まゆげ" }
+    ]
+  },
+  {
+    "id": 2384,
+    "level": 37,
+    "kanji": "絹",
+    "onyomi": [{ "reading": "けん", "primary": false, "accepted_answer": false, "type": "onyomi" }],
+    "kunyomi": [{ "reading": "きぬ", "primary": true, "accepted_answer": true, "type": "kunyomi" }],
+    "meanings": [{ "meaning": "Silk", "primary": true, "accepted_answer": true }],
+    "meaning_mnemonic": "Put <radical>thread</radical> in the <radical>mouth</radical> of a worm while the <radical>moon</radical> is out and it will poop out some <kanji>silk</kanji>. That's why they call them silkworms, didn't you know? But it has to be while the moon is out, otherwise normal thread will come right back out the other end of the worm. The moon is what makes the magic happen.",
+    "meaning_hint": "Picture feeding some thread into the mouth of a worm as the light from the full moon shines in on you. See the silk come out of the worm's butt and into your hands.",
+    "reading_mnemonic": "Wearing <kanji>silk</kanji> is the <reading>key</reading> (き) to not being <reading>nude</reading> (ぬ). Wear it!",
+    "reading_hint": "Picture yourself wearing nothing but silk. Silk shirt, silk pants, even silk underwear. It feels great against the skin! And most importantly, you're not nude.",
+    "vocabulary": [{ "word": "絹糸", "level": 58, "meaning": "Silk Thread", "reading": "けんし" }]
+  },
+  {
+    "id": 1660,
+    "level": 37,
+    "kanji": "聴",
+    "onyomi": [{ "reading": "ちょう", "primary": true, "accepted_answer": true, "type": "onyomi" }],
+    "kunyomi": [{ "reading": "き", "primary": false, "accepted_answer": false, "type": "kunyomi" }],
+    "meanings": [{ "meaning": "Listen", "primary": true, "accepted_answer": true }],
+    "meaning_mnemonic": "When your <radical>ear</radical> is <radical>cross</radical>ed with sound, it catches it like a <radical>net</radical>, and sends it to your <radical>heart</radical> for processing. Because you're using your heart to process this sound, it means you're giving it a proper <kanji>listen</kanji>.",
+    "meaning_hint": "Imagine the whole process of sound going through your ear and to your heart, then the gears turning to really understand what someone is saying. It's a real listen, not a fake non-heart listen.",
+    "reading_mnemonic": "You are <kanji>listen</kanji>ing so well to what someone is saying. What are they telling you that is so important? They are telling you of the omen of Mrs. <reading>Chou</reading> (ちょう), who will destroy the earth.",
+    "reading_hint": "Focus on listening, and focus on their message about Mrs. Chou. Feel afraid about the future because of it.",
+    "vocabulary": [
+      { "word": "聴力", "level": 37, "meaning": "Hearing Ability", "reading": "ちょうりょく" },
+      { "word": "聴者", "level": 37, "meaning": "Listener", "reading": "ちょうしゃ" },
+      { "word": "聴く", "level": 37, "meaning": "To Listen To", "reading": "きく" },
+      { "word": "盗聴", "level": 37, "meaning": "Wiretapping", "reading": "とうちょう" }
+    ]
+  },
+  {
+    "id": 1667,
+    "level": 37,
+    "kanji": "臨",
+    "onyomi": [{ "reading": "りん", "primary": true, "accepted_answer": true, "type": "onyomi" }],
+    "kunyomi": [
+      { "reading": "のぞ", "primary": false, "accepted_answer": false, "type": "kunyomi" }
+    ],
+    "meanings": [{ "meaning": "Look To", "primary": true, "accepted_answer": true }],
+    "meaning_mnemonic": "You give your <radical>servant</radical> a <radical>gun</radical> along with some other <radical>products</radical> to <kanji>look to</kanji>. You can’t look to them yourself since you are very busy. You allow your servant to look to your gun and the other products.",
+    "meaning_hint": "Imagine your servant as he looks to your gun and products. You can always look to him to take care of your menial tasks. You feel smug.",
+    "reading_mnemonic": "After your servant is done with your gun and other products you want him to <kanji>look to</kanji> your car’s o-<reading>rin</reading>g (りん). There’s something wrong with the o-ring so you want your servant to look to that as well.",
+    "reading_hint": "Imagine your servant as he looks to your car’s o-ring. Hear him clinking and clanking around in the garage as he does so.",
+    "vocabulary": [
+      { "word": "臨む", "level": 37, "meaning": "To Face", "reading": "のぞむ" },
+      { "word": "臨海", "level": 37, "meaning": "Seaside", "reading": "りんかい" },
+      { "word": "臨時", "level": 37, "meaning": "Temporary", "reading": "りんじ" }
+    ]
+  },
+  {
+    "id": 1674,
+    "level": 37,
+    "kanji": "葬",
+    "onyomi": [{ "reading": "そう", "primary": true, "accepted_answer": true, "type": "onyomi" }],
+    "kunyomi": [
+      { "reading": "ほうむ", "primary": false, "accepted_answer": false, "type": "kunyomi" }
+    ],
+    "meanings": [{ "meaning": "Burial", "primary": true, "accepted_answer": true }],
+    "meaning_mnemonic": "You brought <radical>flowers</radical> to place on top of the place where a <radical>yakuza</radical> took a <radical>spoon</radical> and killed <radical>twenty</radical> people, and there is now a <kanji>burial</kanji> happening. You carefully toss the flowers in with the dirt and everything is buried together.",
+    "meaning_hint": "This is the biggest burial you've ever seen. The hole is huge. It has to fit twenty people, after all, and the spoon didn't cut them up to make things any easier.",
+    "reading_mnemonic": "Once the <kanji>burial</kanji> is complete the <reading>sou</reading>ls (そう) of all the dead people come floating up and out of the ground. \"Thaaannk YooOoOO~\" they moan, as they ascend to the sky.",
+    "reading_hint": "I guess the twenty souls couldn't go up to... wherever... until they had a proper burial.",
+    "vocabulary": [
+      { "word": "葬式", "level": 37, "meaning": "Funeral", "reading": "そうしき" },
+      { "word": "葬る", "level": 37, "meaning": "To Bury", "reading": "ほうむる" },
+      { "word": "火葬", "level": 37, "meaning": "Cremation", "reading": "かそう" },
+      { "word": "葬儀", "level": 41, "meaning": "Funeral", "reading": "そうぎ" }
+    ]
+  },
+  {
+    "id": 1661,
+    "level": 37,
+    "kanji": "跡",
+    "onyomi": [{ "reading": "せき", "primary": true, "accepted_answer": true, "type": "onyomi" }],
+    "kunyomi": [
+      { "reading": "あと", "primary": false, "accepted_answer": false, "type": "kunyomi" }
+    ],
+    "meanings": [{ "meaning": "Traces", "primary": true, "accepted_answer": true }],
+    "meaning_mnemonic": "When you're stepping around with your <radical>foot</radical> <radical>again</radical> and again, you'll leave behind <kanji>traces</kanji> all over the place.",
+    "meaning_hint": "Picture yourself stepping around with your foot again and again, leaving traces all over the place. Anyone would be able to trace you like this, but you just love a good little stomping around.",
+    "reading_mnemonic": "Turns out you leaving <kanji>traces</kanji> everywhere is quite <reading>sexy</reading> (<ja>せき</ja>) to a lot of people.",
+    "reading_hint": "You're absolutely surrounded by all these people attracted to your sexy stomping around with your foot, again and again. Look, no shaming here, whatever floats your boat.",
+    "vocabulary": [
+      { "word": "奇跡", "level": 37, "meaning": "Miracle", "reading": "きせき" },
+      { "word": "証跡", "level": 37, "meaning": "Evidence", "reading": "しょうせき" },
+      { "word": "遺跡", "level": 37, "meaning": "Ruins", "reading": "いせき" },
+      { "word": "跡継ぎ", "level": 39, "meaning": "Heir", "reading": "あとつぎ" },
+      { "word": "足跡", "level": 39, "meaning": "Footprint", "reading": "あしあと" },
+      { "word": "軌跡", "level": 50, "meaning": "Track", "reading": "きせき" }
+    ]
+  },
+  {
+    "id": 1643,
+    "level": 37,
+    "kanji": "跳",
+    "onyomi": [{ "reading": "ちょう", "primary": true, "accepted_answer": true, "type": "onyomi" }],
+    "kunyomi": [
+      { "reading": "と", "primary": false, "accepted_answer": false, "type": "kunyomi" },
+      { "reading": "は", "primary": false, "accepted_answer": false, "type": "kunyomi" }
+    ],
+    "meanings": [{ "meaning": "Hop", "primary": true, "accepted_answer": true }],
+    "meaning_mnemonic": "Your <radical>foot</radical> heard an <radical>omen</radical> and now it's making you <kanji>hop</kanji> over things.",
+    "meaning_hint": "Imagine your foot hearing this omen, \"If you step on a crack, you'll break your mother's back.\" Now your foot hops over all of the tiny cracks in the street and the sidewalk and you look really silly.",
+    "reading_mnemonic": "As you hop you start to hear an awful scream coming down the street. It's Mrs. <reading>Chou</reading> (ちょう) and she's running straight for you yelling, \"STEP ON MY STREET'S CRACKS! STOP HOPPING OR YOUR MOTHER WILL NEVER BREAK HER BACK!\"",
+    "reading_hint": "Now you're hopping away in fear from Mrs. Chou!",
+    "vocabulary": [
+      { "word": "跳ぶ", "level": 37, "meaning": "To Jump", "reading": "とぶ" },
+      { "word": "跳ねる", "level": 39, "meaning": "To Jump", "reading": "はねる" },
+      { "word": "縄跳び", "level": 39, "meaning": "Jump Rope", "reading": "なわとび" },
+      { "word": "跳躍", "level": 39, "meaning": "Jump", "reading": "ちょうやく" }
+    ]
+  },
+  {
+    "id": 1662,
+    "level": 37,
+    "kanji": "遣",
+    "onyomi": [{ "reading": "けん", "primary": true, "accepted_answer": true, "type": "onyomi" }],
+    "kunyomi": [
+      { "reading": "つか", "primary": false, "accepted_answer": false, "type": "kunyomi" },
+      { "reading": "や", "primary": false, "accepted_answer": false, "type": "kunyomi" }
+    ],
+    "meanings": [{ "meaning": "Dispatch", "primary": true, "accepted_answer": true }],
+    "meaning_mnemonic": "On the <radical>scooter</radical> is an <radical>insect</radical> and a <radical>bear</radical>. The bear immediately stomps the insect, squishing it flat. \"My god, the insect is smashed. Someone call <kanji>dispatch</kanji>!\"",
+    "meaning_hint": "Imagine the conversation with emergency services. They say they will dispatch an ambulance immediately.",
+    "reading_mnemonic": "Out of the <kanji>dispatch</kanji>ed ambulance jumps <reading>Ken</reading> (けん) the samurai. \"Dispatch sent me! I'm here to fix that insect.\"",
+    "reading_hint": "He takes out a very tiny katana and performs surgery right there. The insect dies on the scooter. \"It looks like I've dispatched this insect to the afterlife.\"",
+    "vocabulary": [
+      { "word": "遣う", "level": 37, "meaning": "To Consider", "reading": "つかう" },
+      { "word": "派遣", "level": 37, "meaning": "Dispatch", "reading": "はけん" },
+      { "word": "言葉遣い", "level": 39, "meaning": "Choice Of Words", "reading": "ことばづかい" },
+      { "word": "小遣い", "level": 39, "meaning": "Allowance", "reading": "こづかい" },
+      { "word": "思い遣り", "level": 41, "meaning": "Consideration", "reading": "おもいやり" }
+    ]
+  },
+  {
+    "id": 1663,
+    "level": 37,
+    "kanji": "闘",
+    "onyomi": [{ "reading": "とう", "primary": true, "accepted_answer": true, "type": "onyomi" }],
+    "kunyomi": [
+      { "reading": "たたか", "primary": false, "accepted_answer": false, "type": "kunyomi" }
+    ],
+    "meanings": [{ "meaning": "Struggle", "primary": true, "accepted_answer": true }],
+    "meaning_mnemonic": "At this <radical>gate</radical> you're trying to get some <radical>beans</radical> through, but the <radical>measurements</radical> were off and you're starting to <kanji>struggle</kanji>. No matter how you push or pull these beans, they're just too big to get through the gate.",
+    "meaning_hint": "\"I'm really struggling here, I thought you said you measured these beans?\" you ask the bean seller. \"I did! I mean, I struggled with the measurements, I'm not very good at math...\" Ugh.",
+    "reading_mnemonic": "You continue to <kanji>struggle</kanji> because you need to get these beans to the other side of the gate and into <reading>とう</reading>きょう. You usually struggle a little when people want to bring things through the gate to とうきょう, but this is ridiculous.",
+    "reading_hint": "\"How am I supposed to sell my beans if you struggle this much just to get them into とうきょう!\" the bean seller shouts. It's making you struggle more, and beans start falling on your head, ripping their way out of their sack.",
+    "vocabulary": [
+      { "word": "闘う", "level": 37, "meaning": "To Struggle", "reading": "たたかう" },
+      { "word": "戦闘", "level": 37, "meaning": "Battle", "reading": "せんとう" },
+      { "word": "闘志", "level": 37, "meaning": "Fighting Spirit", "reading": "とうし" },
+      { "word": "敢闘", "level": 57, "meaning": "Fight Bravely", "reading": "かんとう" }
+    ]
+  },
+  {
+    "id": 1664,
+    "level": 37,
+    "kanji": "陣",
+    "onyomi": [{ "reading": "じん", "primary": true, "accepted_answer": true, "type": "onyomi" }],
+    "kunyomi": [],
+    "meanings": [{ "meaning": "Army Camp", "primary": true, "accepted_answer": true }],
+    "meaning_mnemonic": "This <radical>building</radical> is full of <radical>car</radical>s because it's an <kanji>army camp</kanji>. The cars (and tanks and planes) need to be ready to go at any moment just like the soldiers.",
+    "meaning_hint": "Picture an army camp housing all of the different cars the army needs at any given time.",
+    "reading_mnemonic": "All of the people in the <kanji>army camp</kanji> are wearing <reading>jean</reading>s (じん). You thought soldiers were supposed to wear uniforms, but it looks like when they're in the camp they have to wear jeans.",
+    "reading_hint": "Jeans are pretty durable, now that you think about it. And if the soldiers are working on these cars in the camp while they're there, it makes sense to wear a nice pair of jeans.",
+    "vocabulary": [{ "word": "陣営", "level": 37, "meaning": "Camp", "reading": "じんえい" }]
+  },
+  {
+    "id": 1665,
+    "level": 37,
+    "kanji": "香",
+    "onyomi": [
+      { "reading": "こう", "primary": true, "accepted_answer": true, "type": "onyomi" },
+      { "reading": "きょう", "primary": false, "accepted_answer": true, "type": "onyomi" }
+    ],
+    "kunyomi": [
+      { "reading": "かお", "primary": false, "accepted_answer": false, "type": "kunyomi" },
+      { "reading": "か", "primary": false, "accepted_answer": false, "type": "kunyomi" }
+    ],
+    "meanings": [{ "meaning": "Fragrance", "primary": true, "accepted_answer": true }],
+    "meaning_mnemonic": "<radical>Grain</radical> left in the <radical>sun</radical> blossom and give off a wonderful <kanji>fragrance</kanji>. They smell fresh and delicious. There's nothing better than the fragrance of fresh, sun-kissed grain.",
+    "meaning_hint": "Imagine this warm, grain fragrance. What does it smell like to you? Cooked rice? Gentle flowers? A warm summer's day?",
+    "reading_mnemonic": "As you sniff this lovely <kanji>fragrance</kanji> you get lost in the smell. When you open your eyes again, you see a farming <reading>こう</reading>いち standing in front of you. With... his... arm... up. \"Do you like my fragrance? I was genetically modified to have a unique fragrance compared to the other こういちs.\"",
+    "reading_hint": "This fragrance was こういち's armpits the whole time. You thought it was warm grains. Or... maybe he smells like... grains?",
+    "vocabulary": [
+      { "word": "香水", "level": 37, "meaning": "Perfume", "reading": "こうすい" },
+      { "word": "香辛料", "level": 38, "meaning": "Spices", "reading": "こうしんりょう" },
+      { "word": "香り", "level": 39, "meaning": "Fragrance", "reading": "かおり" },
+      { "word": "香川県", "level": 40, "meaning": "Kagawa Prefecture", "reading": "かがわけん" },
+      { "word": "香港", "level": 41, "meaning": "Hong Kong", "reading": "ほんこん" },
+      { "word": "芳香", "level": 52, "meaning": "Perfume", "reading": "ほうこう" }
+    ]
+  }
+]

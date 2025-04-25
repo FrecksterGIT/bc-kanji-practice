@@ -1,1 +1,1762 @@
-[{"id":5075,"level":29,"word":"お腹","meanings":[{"meaning":"Belly","primary":true},{"meaning":"Stomach","primary":false},{"meaning":"Abdomen","primary":false}],"reading":[{"reading":"おなか","primary":true}],"reading_mnemonic":"The reading is an exception, but it isn't too hard to remember. It's the same as <reading>中</reading> (なか), so if you think about it it makes sense. It's your insides, just like your <vocabulary>belly</vocabulary> is your insides!","allMeanings":[{"meaning":"Belly","primary":true},{"meaning":"Stomach","primary":false},{"meaning":"Abdomen","primary":false}]},{"id":5224,"level":29,"word":"一人娘","meanings":[{"meaning":"Only Daughter","primary":true}],"reading":[{"reading":"ひとりむすめ","primary":true}],"reading_mnemonic":"The readings are 一人 plus 娘 put together into one, single (daughter) word.","allMeanings":[{"meaning":"Only Daughter","primary":true}]},{"id":5237,"level":29,"word":"一杯","meanings":[{"meaning":"One Cup","primary":true},{"meaning":"A Drink","primary":false},{"meaning":"Full","primary":false},{"meaning":"A Lot","primary":false}],"reading":[{"reading":"いっぱい","primary":true}],"reading_mnemonic":"This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well. Just remember that 一 becomes いっ, and 杯 becomes ぱい.","allMeanings":[{"meaning":"One Cup","primary":true},{"meaning":"A Drink","primary":false},{"meaning":"Full","primary":false},{"meaning":"A Lot","primary":false}]},{"id":5239,"level":29,"word":"三杯","meanings":[{"meaning":"Three Cups","primary":true},{"meaning":"Three Drinks","primary":false},{"meaning":"Three Glasses","primary":false}],"reading":[{"reading":"さんばい","primary":true}],"reading_mnemonic":"This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well. Just watch out for 杯, which becomes ばい thanks to our old friend rendaku.","allMeanings":[{"meaning":"Three Cups","primary":true},{"meaning":"Three Drinks","primary":false},{"meaning":"Three Glasses","primary":false}]},{"id":5230,"level":29,"word":"不健康","meanings":[{"meaning":"Unhealthy","primary":true},{"meaning":"Not Healthy","primary":false}],"reading":[{"reading":"ふけんこう","primary":true}],"reading_mnemonic":"This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well. Will help to know 健康 first.","allMeanings":[{"meaning":"Unhealthy","primary":true},{"meaning":"Not Healthy","primary":false}]},{"id":5245,"level":29,"word":"中欧","meanings":[{"meaning":"Central Europe","primary":true}],"reading":[{"reading":"ちゅうおう","primary":true}],"reading_mnemonic":"This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.","allMeanings":[{"meaning":"Central Europe","primary":true}]},{"id":5219,"level":29,"word":"主催","meanings":[{"meaning":"Host","primary":true},{"meaning":"Hosting","primary":false},{"meaning":"Sponsor","primary":false}],"reading":[{"reading":"しゅさい","primary":true}],"reading_mnemonic":"This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.","allMeanings":[{"meaning":"Host","primary":true},{"meaning":"Hosting","primary":false},{"meaning":"Sponsor","primary":false}]},{"id":9048,"level":29,"word":"乗車券","meanings":[{"meaning":"Passenger Ticket","primary":true},{"meaning":"Ticket","primary":false}],"reading":[{"reading":"じょうしゃけん","primary":true}],"reading_mnemonic":"This is a jukugo word that uses the on'yomi readings of the kanji. You should be able to read this on your own.","allMeanings":[{"meaning":"Passenger Ticket","primary":true},{"meaning":"Ticket","primary":false}]},{"id":5213,"level":29,"word":"乾く","meanings":[{"meaning":"To Get Dry","primary":true},{"meaning":"To Become Dry","primary":false},{"meaning":"To Be Dried","primary":false}],"reading":[{"reading":"かわく","primary":true}],"reading_mnemonic":"The <reading>川</reading> (かわ) has started <vocabulary>to get dry</vocabulary>. Need to use less water around here otherwise it'll become completely dry.","allMeanings":[{"meaning":"To Get Dry","primary":true},{"meaning":"To Become Dry","primary":false},{"meaning":"To Be Dried","primary":false}]},{"id":5214,"level":29,"word":"乾季","meanings":[{"meaning":"Dry Season","primary":true}],"reading":[{"reading":"かんき","primary":true}],"reading_mnemonic":"This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.","allMeanings":[{"meaning":"Dry Season","primary":true}]},{"id":5215,"level":29,"word":"乾杯","meanings":[{"meaning":"Kanpai","primary":true},{"meaning":"Cheers","primary":false},{"meaning":"Toast","primary":false}],"reading":[{"reading":"かんぱい","primary":true}],"reading_mnemonic":"This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well. Just watch out for the はい turning into ぱい!","allMeanings":[{"meaning":"Kanpai","primary":true},{"meaning":"Cheers","primary":false},{"meaning":"Toast","primary":false}]},{"id":5238,"level":29,"word":"二杯","meanings":[{"meaning":"Two Cups","primary":true},{"meaning":"Two Drinks","primary":false},{"meaning":"Two Glasses","primary":false}],"reading":[{"reading":"にはい","primary":true}],"reading_mnemonic":"This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.","allMeanings":[{"meaning":"Two Cups","primary":true},{"meaning":"Two Drinks","primary":false},{"meaning":"Two Glasses","primary":false}]},{"id":9045,"level":29,"word":"任す","meanings":[{"meaning":"To Entrust Something","primary":true},{"meaning":"To Delegate Something","primary":false},{"meaning":"To Leave Something To","primary":false}],"reading":[{"reading":"まかす","primary":true}],"reading_mnemonic":"This uses the same reading you learned with 任せる. ","allMeanings":[{"meaning":"To Entrust Something","primary":true},{"meaning":"To Delegate Something","primary":false},{"meaning":"To Leave Something To","primary":false}]},{"id":5268,"level":29,"word":"体積","meanings":[{"meaning":"Volume","primary":true}],"reading":[{"reading":"たいせき","primary":true}],"reading_mnemonic":"This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.","allMeanings":[{"meaning":"Volume","primary":true}]},{"id":5216,"level":29,"word":"促す","meanings":[{"meaning":"To Urge","primary":true},{"meaning":"To Pressure","primary":false}],"reading":[{"reading":"うながす","primary":true}],"reading_mnemonic":"Someone with a weird accent is trying <vocabulary>to urge</vocabulary> you to eat \"Unagah\" (うなが). This person really means \"unagi,\" and this person also doesn't realize how delicious unagi is (and thinks he's tricking you). You ask him what \"Unagah\" is. Go ahead and say it out loud.","allMeanings":[{"meaning":"To Urge","primary":true},{"meaning":"To Pressure","primary":false}]},{"id":5222,"level":29,"word":"倒壊","meanings":[{"meaning":"Collapse","primary":true},{"meaning":"Destruction","primary":false},{"meaning":"Crumbling","primary":false}],"reading":[{"reading":"とうかい","primary":true}],"reading_mnemonic":"This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.","allMeanings":[{"meaning":"Collapse","primary":true},{"meaning":"Destruction","primary":false},{"meaning":"Crumbling","primary":false}]},{"id":5217,"level":29,"word":"催促","meanings":[{"meaning":"Urge","primary":true},{"meaning":"Press For","primary":false},{"meaning":"Demand","primary":false}],"reading":[{"reading":"さいそく","primary":true}],"reading_mnemonic":"This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.","allMeanings":[{"meaning":"Urge","primary":true},{"meaning":"Press For","primary":false},{"meaning":"Demand","primary":false}]},{"id":5218,"level":29,"word":"催告","meanings":[{"meaning":"Notice","primary":true},{"meaning":"Officially Notifying","primary":false},{"meaning":"Formal Notice","primary":false}],"reading":[{"reading":"さいこく","primary":true}],"reading_mnemonic":"This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.","allMeanings":[{"meaning":"Notice","primary":true},{"meaning":"Officially Notifying","primary":false},{"meaning":"Formal Notice","primary":false}]},{"id":5248,"level":29,"word":"入り江","meanings":[{"meaning":"Inlet","primary":true},{"meaning":"Cove","primary":false}],"reading":[{"reading":"いりえ","primary":true}],"reading_mnemonic":"For this reading, just imagine this as 入り with 江 pushed on at the end! Also note this is commonly written as 入江, but the reading stays the same!","allMeanings":[{"meaning":"Inlet","primary":true},{"meaning":"Cove","primary":false}]},{"id":5221,"level":29,"word":"全壊","meanings":[{"meaning":"Complete Destruction","primary":true},{"meaning":"Total Destruction","primary":false}],"reading":[{"reading":"ぜんかい","primary":true}],"reading_mnemonic":"This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.","allMeanings":[{"meaning":"Complete Destruction","primary":true},{"meaning":"Total Destruction","primary":false}]},{"id":4892,"level":29,"word":"再建","meanings":[{"meaning":"Rebuilding","primary":true},{"meaning":"Reconstruction","primary":false}],"reading":[{"reading":"さいけん","primary":true}],"reading_mnemonic":"This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well. Just don't forget that extra い!","allMeanings":[{"meaning":"Rebuilding","primary":true},{"meaning":"Reconstruction","primary":false}]},{"id":4808,"level":29,"word":"効力","meanings":[{"meaning":"Effectiveness","primary":true},{"meaning":"In Effect","primary":false},{"meaning":"Efficacy","primary":false}],"reading":[{"reading":"こうりょく","primary":true}],"reading_mnemonic":"This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.","allMeanings":[{"meaning":"Effectiveness","primary":true},{"meaning":"In Effect","primary":false},{"meaning":"Efficacy","primary":false}]},{"id":6295,"level":29,"word":"勧める","meanings":[{"meaning":"To Recommend","primary":true},{"meaning":"To Suggest","primary":false},{"meaning":"To Advise","primary":false},{"meaning":"To Offer","primary":false}],"reading":[{"reading":"すすめる","primary":true}],"reading_mnemonic":"To remember the reading think about how you are going <vocabulary>to recommend</vocabulary> this restaurant to your friends, <reading>Sue</reading> and <reading>Sue</reading> (すす). You refer to them as \"Sue Sue\" to make things easier on yourself, and they're always looking for recommendations.","allMeanings":[{"meaning":"To Recommend","primary":true},{"meaning":"To Suggest","primary":false},{"meaning":"To Advise","primary":false},{"meaning":"To Offer","primary":false}]},{"id":6297,"level":29,"word":"勧誘","meanings":[{"meaning":"Solicitation","primary":true},{"meaning":"Invitation","primary":false}],"reading":[{"reading":"かんゆう","primary":true}],"reading_mnemonic":"This is a jukugo word that uses the on'yomi readings of the kanji. You should be able to read this on your own.","allMeanings":[{"meaning":"Solicitation","primary":true},{"meaning":"Invitation","primary":false}]},{"id":5117,"level":29,"word":"同僚","meanings":[{"meaning":"Colleague","primary":true},{"meaning":"Coworker","primary":false}],"reading":[{"reading":"どうりょう","primary":true}],"reading_mnemonic":"This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.","allMeanings":[{"meaning":"Colleague","primary":true},{"meaning":"Coworker","primary":false}]},{"id":5278,"level":29,"word":"商店街","meanings":[{"meaning":"Shopping Street","primary":true},{"meaning":"Shopping Arcade","primary":false}],"reading":[{"reading":"しょうてんがい","primary":true}],"reading_mnemonic":"This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.","allMeanings":[{"meaning":"Shopping Street","primary":true},{"meaning":"Shopping Arcade","primary":false}]},{"id":5220,"level":29,"word":"壊す","meanings":[{"meaning":"To Break Something","primary":true},{"meaning":"To Break","primary":false}],"reading":[{"reading":"こわす","primary":true}],"reading_mnemonic":"The thing you broke? A beautiful ceramic <reading>koa</reading>la (こわ). Watch it shatter to the ground, because you threw it there. What a jerk you are.","allMeanings":[{"meaning":"To Break Something","primary":true},{"meaning":"To Break","primary":false}]},{"id":5259,"level":29,"word":"大略","meanings":[{"meaning":"Broad Outline","primary":true},{"meaning":"Outline","primary":false},{"meaning":"Overview","primary":false}],"reading":[{"reading":"たいりゃく","primary":true}],"reading_mnemonic":"This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.","allMeanings":[{"meaning":"Broad Outline","primary":true},{"meaning":"Outline","primary":false},{"meaning":"Overview","primary":false}]},{"id":5274,"level":29,"word":"大臣","meanings":[{"meaning":"Minister","primary":true},{"meaning":"Cabinet Member","primary":false}],"reading":[{"reading":"だいじん","primary":true}],"reading_mnemonic":"This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.","allMeanings":[{"meaning":"Minister","primary":true},{"meaning":"Cabinet Member","primary":false}]},{"id":5307,"level":29,"word":"奇妙","meanings":[{"meaning":"Strange","primary":true},{"meaning":"Curious","primary":false},{"meaning":"Odd","primary":false}],"reading":[{"reading":"きみょう","primary":true}],"reading_mnemonic":"This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.","allMeanings":[{"meaning":"Strange","primary":true},{"meaning":"Curious","primary":false},{"meaning":"Odd","primary":false}]},{"id":5306,"level":29,"word":"奇数","meanings":[{"meaning":"Odd Number","primary":true}],"reading":[{"reading":"きすう","primary":true}],"reading_mnemonic":"This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.","allMeanings":[{"meaning":"Odd Number","primary":true}]},{"id":5305,"level":29,"word":"好奇心","meanings":[{"meaning":"Curiosity","primary":true}],"reading":[{"reading":"こうきしん","primary":true}],"reading_mnemonic":"This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.","allMeanings":[{"meaning":"Curiosity","primary":true}]},{"id":5223,"level":29,"word":"娘","meanings":[{"meaning":"Daughter","primary":true},{"meaning":"Young Woman","primary":false}],"reading":[{"reading":"むすめ","primary":true}],"reading_mnemonic":"The reading is the same as what you learned with the kanji.","allMeanings":[{"meaning":"Daughter","primary":true},{"meaning":"Young Woman","primary":false}]},{"id":5225,"level":29,"word":"宗教","meanings":[{"meaning":"Religion","primary":true}],"reading":[{"reading":"しゅうきょう","primary":true}],"reading_mnemonic":"This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.","allMeanings":[{"meaning":"Religion","primary":true}]},{"id":5226,"level":29,"word":"宗派","meanings":[{"meaning":"Sect","primary":true},{"meaning":"Denomination","primary":false}],"reading":[{"reading":"しゅうは","primary":true}],"reading_mnemonic":"This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.","allMeanings":[{"meaning":"Sect","primary":true},{"meaning":"Denomination","primary":false}]},{"id":5118,"level":29,"word":"官僚","meanings":[{"meaning":"Bureaucrat","primary":true},{"meaning":"Government Official","primary":false},{"meaning":"Bureaucracy","primary":false}],"reading":[{"reading":"かんりょう","primary":true}],"reading_mnemonic":"This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.","allMeanings":[{"meaning":"Bureaucrat","primary":true},{"meaning":"Government Official","primary":false},{"meaning":"Bureaucracy","primary":false}]},{"id":5229,"level":29,"word":"宴","meanings":[{"meaning":"Banquet","primary":true},{"meaning":"Dinner Party","primary":false},{"meaning":"Party","primary":false},{"meaning":"Feast","primary":false}],"reading":[{"reading":"うたげ","primary":true}],"reading_mnemonic":"At a <vocabulary>banquet</vocabulary> or <vocabulary>dinner party</vocabulary>, you don't only get food, you also <reading>歌 GE</reading>T (うたげ), which is you getting a song from a singer, because entertainment is just as important as the food when you have a <vocabulary>feast</vocabulary> such as this.","allMeanings":[{"meaning":"Banquet","primary":true},{"meaning":"Dinner Party","primary":false},{"meaning":"Party","primary":false},{"meaning":"Feast","primary":false}]},{"id":5228,"level":29,"word":"宴会","meanings":[{"meaning":"Banquet","primary":true},{"meaning":"Dinner Party","primary":false}],"reading":[{"reading":"えんかい","primary":true}],"reading_mnemonic":"This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.","allMeanings":[{"meaning":"Banquet","primary":true},{"meaning":"Dinner Party","primary":false}]},{"id":8684,"level":29,"word":"寄る","meanings":[{"meaning":"To Draw Near","primary":true},{"meaning":"To Stop By","primary":false}],"reading":[{"reading":"よる","primary":true}],"reading_mnemonic":"Since this word consists of a kanji with hiragana attached, you can bet that it will use the kun'yomi reading. You haven't learned this reading yet so here's a mnemonic to help you:\n\nIf you're too shy to <vocabulary>draw near</vocabulary> to people, just learn how to use a <reading>yo</reading>-yo (よ)! Then people will draw near to YOU to compliment you on your sick skills. You won't have to do it yourself!","allMeanings":[{"meaning":"To Draw Near","primary":true},{"meaning":"To Stop By","primary":false}]},{"id":7604,"level":29,"word":"寄与","meanings":[{"meaning":"Contribution","primary":true}],"reading":[{"reading":"きよ","primary":true}],"reading_mnemonic":"This is a jukugo word that uses the on'yomi readings of the kanji. You should be able to read this on your own.","allMeanings":[{"meaning":"Contribution","primary":true}]},{"id":7658,"level":29,"word":"寄付","meanings":[{"meaning":"Donation","primary":true},{"meaning":"Donating","primary":false}],"reading":[{"reading":"きふ","primary":true}],"reading_mnemonic":"This is a jukugo word that uses the on'yomi readings of the kanji. You should be able to read this on your own.","allMeanings":[{"meaning":"Donation","primary":true},{"meaning":"Donating","primary":false}]},{"id":5009,"level":29,"word":"就く","meanings":[{"meaning":"To Get A Position","primary":true},{"meaning":"To Get A Job","primary":false}],"reading":[{"reading":"つく","primary":true}],"reading_mnemonic":"If you want <vocabulary>to get a position</vocabulary>, there are <reading>two</reading> (つ) interviews. Just pass the two interviews to get a job!","allMeanings":[{"meaning":"To Get A Position","primary":true},{"meaning":"To Get A Job","primary":false}]},{"id":7718,"level":29,"word":"居眠り","meanings":[{"meaning":"Nap","primary":true},{"meaning":"Doze","primary":false},{"meaning":"Dozing","primary":false},{"meaning":"Nodding Off","primary":false},{"meaning":"Dozing Off","primary":false}],"reading":[{"reading":"いねむり","primary":true}],"reading_mnemonic":"The readings for this word are both kun'yomi readings. You've learned both of these readings by now so you should be able to read this on your own.","allMeanings":[{"meaning":"Nap","primary":true},{"meaning":"Doze","primary":false},{"meaning":"Dozing","primary":false},{"meaning":"Nodding Off","primary":false},{"meaning":"Dozing Off","primary":false}]},{"id":5251,"level":29,"word":"強烈","meanings":[{"meaning":"Very Strong","primary":true},{"meaning":"Intense","primary":false},{"meaning":"Shocking","primary":false},{"meaning":"Striking","primary":false}],"reading":[{"reading":"きょうれつ","primary":true}],"reading_mnemonic":"This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.","allMeanings":[{"meaning":"Very Strong","primary":true},{"meaning":"Intense","primary":false},{"meaning":"Shocking","primary":false},{"meaning":"Striking","primary":false}]},{"id":7772,"level":29,"word":"怒らせる","meanings":[{"meaning":"To Anger Someone","primary":true},{"meaning":"To Provoke","primary":false},{"meaning":"To Offend Someone","primary":false}],"reading":[{"reading":"おこらせる","primary":true}],"reading_mnemonic":"Since this word consists of a kanji with hiragana attached, you can bet that it will use the kun'yomi reading. You learned this reading when you learned 怒る, so you should know this one too!","allMeanings":[{"meaning":"To Anger Someone","primary":true},{"meaning":"To Provoke","primary":false},{"meaning":"To Offend Someone","primary":false}]},{"id":5232,"level":29,"word":"怒り","meanings":[{"meaning":"Anger","primary":true},{"meaning":"Wrath","primary":false}],"reading":[{"reading":"いかり","primary":true}],"reading_mnemonic":"Since this word consists of a kanji with hiragana attached, you can bet that it will use the kun'yomi reading. You haven't learned this reading yet, so here's a mnemonic to help you:\n\nI have a lot of <vocabulary>anger</vocabulary> because <reading>I ca</reading>rry (いか) all of my own things (books, luggage, drinks) and no one will ever carry them for me. Plus, the more things I carry, the more anger I carry inside. Ahh!\n\n\n\n","allMeanings":[{"meaning":"Anger","primary":true},{"meaning":"Wrath","primary":false}]},{"id":5393,"level":29,"word":"怒気","meanings":[{"meaning":"Anger","primary":true}],"reading":[{"reading":"どき","primary":true}],"reading_mnemonic":"This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.","allMeanings":[{"meaning":"Anger","primary":true}]},{"id":5233,"level":29,"word":"怖い","meanings":[{"meaning":"Scary","primary":true}],"reading":[{"reading":"こわい","primary":true}],"reading_mnemonic":"You know what's really <vocabulary>scary</vocabulary>, like double scary (because kanji and vocab both mean scary)? How about your <reading>cowo</reading>rkers (こわ). They are all insane, and you know it. Absolute nutjobs they are.","allMeanings":[{"meaning":"Scary","primary":true}]},{"id":5236,"level":29,"word":"恐ろしい","meanings":[{"meaning":"Terrifying","primary":true},{"meaning":"Frightening","primary":false},{"meaning":"Dreadful","primary":false}],"reading":[{"reading":"おそろしい","primary":true}],"reading_mnemonic":"Since this word consists of a kanji with hiragana attached, you can bet that it will use the kun'yomi reading. You didn't learn that reading with this kanji, so here's a mnemonic to help you:\n\nHow <vocabulary>terrifying</vocabulary> is it? It's <reading>Oh so</reading> (おそ) terrifying!","allMeanings":[{"meaning":"Terrifying","primary":true},{"meaning":"Frightening","primary":false},{"meaning":"Dreadful","primary":false}]},{"id":5234,"level":29,"word":"恐怖","meanings":[{"meaning":"Terror","primary":true},{"meaning":"Fear","primary":false}],"reading":[{"reading":"きょうふ","primary":true}],"reading_mnemonic":"This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.","allMeanings":[{"meaning":"Terror","primary":true},{"meaning":"Fear","primary":false}]},{"id":5235,"level":29,"word":"恐怖症","meanings":[{"meaning":"Phobia","primary":true}],"reading":[{"reading":"きょうふしょう","primary":true}],"reading_mnemonic":"This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.","allMeanings":[{"meaning":"Phobia","primary":true}]},{"id":5395,"level":29,"word":"招き猫","meanings":[{"meaning":"Beckoning Cat","primary":true},{"meaning":"Maneki Neko","primary":false}],"reading":[{"reading":"まねきねこ","primary":true}],"reading_mnemonic":"This word uses the kun'yomi readings for both kanji, which you know already!","allMeanings":[{"meaning":"Beckoning Cat","primary":true},{"meaning":"Maneki Neko","primary":false}]},{"id":8759,"level":29,"word":"捜索","meanings":[{"meaning":"Search","primary":true},{"meaning":"Investigation","primary":false}],"reading":[{"reading":"そうさく","primary":true}],"reading_mnemonic":"This is a jukugo word that uses the on'yomi readings of the kanji. You should be able to read this on your own.","allMeanings":[{"meaning":"Search","primary":true},{"meaning":"Investigation","primary":false}]},{"id":5246,"level":29,"word":"日欧","meanings":[{"meaning":"Japan And Europe","primary":true},{"meaning":"Japanese-European","primary":false}],"reading":[{"reading":"にちおう","primary":true}],"reading_mnemonic":"This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.","allMeanings":[{"meaning":"Japan And Europe","primary":true},{"meaning":"Japanese-European","primary":false}]},{"id":5295,"level":29,"word":"日韓","meanings":[{"meaning":"Japan And South Korea","primary":true},{"meaning":"Japan And Korea","primary":false}],"reading":[{"reading":"にっかん","primary":true}],"reading_mnemonic":"This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.","allMeanings":[{"meaning":"Japan And South Korea","primary":true},{"meaning":"Japan And Korea","primary":false}]},{"id":5031,"level":29,"word":"昇る","meanings":[{"meaning":"To Ascend","primary":true},{"meaning":"To Rise","primary":false}],"reading":[{"reading":"のぼる","primary":true}],"reading_mnemonic":"The reading is the kun'yomi reading, but it's pretty easy. How do you read all the other \"to climb\" words? 登る is one example. 上る is another. They're all <reading>のぼ</reading>る, and so is this. Unlike the other climbing words, though, this suggests there's no effort involved. That's why you're \"ascending\" and not climbing, because climbing is a bit of work.","allMeanings":[{"meaning":"To Ascend","primary":true},{"meaning":"To Rise","primary":false}]},{"id":5240,"level":29,"word":"板","meanings":[{"meaning":"Board","primary":true},{"meaning":"Plank","primary":false},{"meaning":"Slab","primary":false},{"meaning":"Plate","primary":false}],"reading":[{"reading":"いた","primary":true}],"reading_mnemonic":"Since this word is made up of a single kanji, it uses the kun'yomi reading. You did not learn this reading, so here's a mnemonic to help you:\n\nWho can make good use of various <vocabulary>board</vocabulary>s? An avid <reading>eater</reading> (いた)! If you’re an avid eater, you’ll need lots of (cutting) boards to prepare all the delicious food you’re going to eat. This makes boards and eaters the perfect match.","allMeanings":[{"meaning":"Board","primary":true},{"meaning":"Plank","primary":false},{"meaning":"Slab","primary":false},{"meaning":"Plate","primary":false}]},{"id":5269,"level":29,"word":"検索","meanings":[{"meaning":"Lookup","primary":true},{"meaning":"Internet Search","primary":false}],"reading":[{"reading":"けんさく","primary":true}],"reading_mnemonic":"This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.","allMeanings":[{"meaning":"Lookup","primary":true},{"meaning":"Internet Search","primary":false}]},{"id":5243,"level":29,"word":"極めて","meanings":[{"meaning":"Extremely","primary":true}],"reading":[{"reading":"きわめて","primary":true}],"reading_mnemonic":"The reading comes from 極める.","allMeanings":[{"meaning":"Extremely","primary":true}]},{"id":5396,"level":29,"word":"構える","meanings":[{"meaning":"To Set Up","primary":true},{"meaning":"To Assume A Stance","primary":false},{"meaning":"To Hold In Preparation","primary":false}],"reading":[{"reading":"かまえる","primary":true}],"reading_mnemonic":"The reading is like 構う, so as long as you know that you know this too.","allMeanings":[{"meaning":"To Set Up","primary":true},{"meaning":"To Assume A Stance","primary":false},{"meaning":"To Hold In Preparation","primary":false}]},{"id":5244,"level":29,"word":"欧米","meanings":[{"meaning":"Europe And America","primary":true},{"meaning":"Europe And USA","primary":false},{"meaning":"The West","primary":false}],"reading":[{"reading":"おうべい","primary":true}],"reading_mnemonic":"This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.","allMeanings":[{"meaning":"Europe And America","primary":true},{"meaning":"Europe And USA","primary":false},{"meaning":"The West","primary":false}]},{"id":5247,"level":29,"word":"江戸","meanings":[{"meaning":"Edo","primary":true},{"meaning":"Tokyo","primary":false}],"reading":[{"reading":"えど","primary":true}],"reading_mnemonic":"The readings are the ones you learned with the kanji. Of course, it will be easy if you know the word <vocabulary>Edo</vocabulary> already.","allMeanings":[{"meaning":"Edo","primary":true},{"meaning":"Tokyo","primary":false}]},{"id":5249,"level":29,"word":"添える","meanings":[{"meaning":"To Add Something To","primary":true},{"meaning":"To Include Something","primary":false},{"meaning":"To Accompany","primary":false},{"meaning":"To Garnish","primary":false}],"reading":[{"reading":"そえる","primary":true}],"reading_mnemonic":"Since this word consists of a kanji with hiragana attached, you can bet that it will use the kun'yomi reading. You didn't learn that reading with this kanji, so here's a mnemonic to help you: One way <vocabulary>to add something to</vocabulary> something else is to just <reading>sew</reading> (そ) it on!","allMeanings":[{"meaning":"To Add Something To","primary":true},{"meaning":"To Include Something","primary":false},{"meaning":"To Accompany","primary":false},{"meaning":"To Garnish","primary":false}]},{"id":5250,"level":29,"word":"添付","meanings":[{"meaning":"Attachment","primary":true},{"meaning":"Attaching","primary":false}],"reading":[{"reading":"てんぷ","primary":true}],"reading_mnemonic":"The reading for 添 is what you'd expect. The reading for 付 is the on'yomi reading ふ, which you've learned with 付近. But for this word it becomes ぷ from the rendaku fairies. Just think of an <vocabulary>attachment</vocabulary> where instead of a document or something, you get an attachment of <reading>poo</reading>p (ぷ). What a gross attachment. Your friend who likes to send poop attachments is dumb.","allMeanings":[{"meaning":"Attachment","primary":true},{"meaning":"Attaching","primary":false}]},{"id":9094,"level":29,"word":"激怒","meanings":[{"meaning":"Rage","primary":true},{"meaning":"Be Enraged","primary":false}],"reading":[{"reading":"げきど","primary":true}],"reading_mnemonic":"This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.","allMeanings":[{"meaning":"Rage","primary":true},{"meaning":"Be Enraged","primary":false}]},{"id":5253,"level":29,"word":"熱烈","meanings":[{"meaning":"Fervent","primary":true},{"meaning":"Ardent","primary":false},{"meaning":"Passionate","primary":false},{"meaning":"Impassioned","primary":false}],"reading":[{"reading":"ねつれつ","primary":true}],"reading_mnemonic":"This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.","allMeanings":[{"meaning":"Fervent","primary":true},{"meaning":"Ardent","primary":false},{"meaning":"Passionate","primary":false},{"meaning":"Impassioned","primary":false}]},{"id":5254,"level":29,"word":"猛〜","meanings":[{"meaning":"Fierce","primary":true},{"meaning":"Energetic","primary":false}],"reading":[{"reading":"もう","primary":true}],"reading_mnemonic":"The reading is the same as what you learned with the kanji, probably because it's stuck onto things making it all jukugo and such.","allMeanings":[{"meaning":"Fierce","primary":true},{"meaning":"Energetic","primary":false}]},{"id":5252,"level":29,"word":"猛烈","meanings":[{"meaning":"Fierce","primary":true},{"meaning":"Violent","primary":false},{"meaning":"Intense","primary":false}],"reading":[{"reading":"もうれつ","primary":true}],"reading_mnemonic":"This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.","allMeanings":[{"meaning":"Fierce","primary":true},{"meaning":"Violent","primary":false},{"meaning":"Intense","primary":false}]},{"id":7812,"level":29,"word":"玄米","meanings":[{"meaning":"Unpolished Rice","primary":true},{"meaning":"Unmilled Rice","primary":false},{"meaning":"Brown Rice","primary":false}],"reading":[{"reading":"げんまい","primary":true}],"reading_mnemonic":"This is a jukugo word that uses the on'yomi readings of the kanji. You didn't learn this reading for 米 so here's a mnemonic to help you:\n\nThe biggest problem when you buy <vocabulary>unpolished rice</vocabulary> is the <reading>mic</reading>e (まい)! Mice like to eat and sleep in unpolished rice, so you have to be careful when you buy a bag that you get rid of all the sleeping mice before you try to cook it.","allMeanings":[{"meaning":"Unpolished Rice","primary":true},{"meaning":"Unmilled Rice","primary":false},{"meaning":"Brown Rice","primary":false}]},{"id":7811,"level":29,"word":"玄関","meanings":[{"meaning":"Entranceway","primary":true},{"meaning":"Entry Hall","primary":false},{"meaning":"Foyer","primary":false},{"meaning":"Entryway","primary":false}],"reading":[{"reading":"げんかん","primary":true}],"reading_mnemonic":"This is a jukugo word that uses the on'yomi readings of the kanji. You should be able to read this on your own.","allMeanings":[{"meaning":"Entranceway","primary":true},{"meaning":"Entry Hall","primary":false},{"meaning":"Foyer","primary":false},{"meaning":"Entryway","primary":false}]},{"id":9308,"level":29,"word":"申請","meanings":[{"meaning":"Application","primary":true},{"meaning":"Applying","primary":false}],"reading":[{"reading":"しんせい","primary":true}],"reading_mnemonic":"This is a jukugo word, which means on'yomi readings from the kanji. You already know this reading for 請, but not for 申, so here's a mnemonic to help you:\n\nToday you finally submitted your <vocabulary>application</vocabulary> for a new <reading>shin</reading> (しん). Your old one had to be painstakingly removed after you banged it against a table. Anyway, congrats on the application for your new shin!","allMeanings":[{"meaning":"Application","primary":true},{"meaning":"Applying","primary":false}]},{"id":5255,"level":29,"word":"略す","meanings":[{"meaning":"To Abbreviate","primary":true},{"meaning":"To Omit","primary":false}],"reading":[{"reading":"りゃくす","primary":true}],"reading_mnemonic":"The reading is, strangely, the same as the reading you learned with the kanji. <reading>りゃく</reading>す.","allMeanings":[{"meaning":"To Abbreviate","primary":true},{"meaning":"To Omit","primary":false}]},{"id":5258,"level":29,"word":"略図","meanings":[{"meaning":"Rough Diagram","primary":true},{"meaning":"Rough Map","primary":false}],"reading":[{"reading":"りゃくず","primary":true}],"reading_mnemonic":"This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.","allMeanings":[{"meaning":"Rough Diagram","primary":true},{"meaning":"Rough Map","primary":false}]},{"id":5257,"level":29,"word":"略語","meanings":[{"meaning":"Abbreviation","primary":true}],"reading":[{"reading":"りゃくご","primary":true}],"reading_mnemonic":"This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.","allMeanings":[{"meaning":"Abbreviation","primary":true}]},{"id":5260,"level":29,"word":"痛み","meanings":[{"meaning":"A Pain","primary":true},{"meaning":"Pain","primary":false}],"reading":[{"reading":"いたみ","primary":true}],"reading_mnemonic":"The reading is the same as 痛い. No pain here.","allMeanings":[{"meaning":"A Pain","primary":true},{"meaning":"Pain","primary":false}]},{"id":5261,"level":29,"word":"痛み止め","meanings":[{"meaning":"Painkiller","primary":true}],"reading":[{"reading":"いたみどめ","primary":true}],"reading_mnemonic":"The reading is 痛み and 止める put together into one word. Not too painful, right? Just remember the rendaku on the ど.","allMeanings":[{"meaning":"Painkiller","primary":true}]},{"id":5431,"level":29,"word":"監督","meanings":[{"meaning":"Supervision","primary":true},{"meaning":"Head Coach","primary":false},{"meaning":"Director","primary":false}],"reading":[{"reading":"かんとく","primary":true}],"reading_mnemonic":"This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.","allMeanings":[{"meaning":"Supervision","primary":true},{"meaning":"Head Coach","primary":false},{"meaning":"Director","primary":false}]},{"id":5430,"level":29,"word":"監視","meanings":[{"meaning":"Observation","primary":true},{"meaning":"Monitor","primary":false},{"meaning":"Keep Watch Over","primary":false},{"meaning":"Surveillance","primary":false}],"reading":[{"reading":"かんし","primary":true}],"reading_mnemonic":"This is a jukugo word that uses the on'yomi readings of the kanji. You should be able to read this on your own.","allMeanings":[{"meaning":"Observation","primary":true},{"meaning":"Monitor","primary":false},{"meaning":"Keep Watch Over","primary":false},{"meaning":"Surveillance","primary":false}]},{"id":5277,"level":29,"word":"直航","meanings":[{"meaning":"Nonstop Flight","primary":true},{"meaning":"Direct Voyage","primary":false}],"reading":[{"reading":"ちょっこう","primary":true}],"reading_mnemonic":"This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.","allMeanings":[{"meaning":"Nonstop Flight","primary":true},{"meaning":"Direct Voyage","primary":false}]},{"id":9296,"level":29,"word":"相次ぐ","meanings":[{"meaning":"To Happen Successively","primary":true},{"meaning":"To Happen One After Another","primary":false}],"reading":[{"reading":"あいつぐ","primary":true}],"reading_mnemonic":"Since this word consists of kanji with hiragana attached, you can bet that it will use the kun'yomi readings. You've learned this reading for 相, but not for 次. Instead of giving you a mnemonic, we think it's easier to remember that 次ぐ being read つぐ comes from the 次 reading つぎ. Not too hard! All in all, that makes this あいつぐ.","allMeanings":[{"meaning":"To Happen Successively","primary":true},{"meaning":"To Happen One After Another","primary":false}]},{"id":5256,"level":29,"word":"省略","meanings":[{"meaning":"Abbreviation","primary":true},{"meaning":"Omission","primary":false},{"meaning":"Abbreviate","primary":false},{"meaning":"Leave Out","primary":false}],"reading":[{"reading":"しょうりゃく","primary":true}],"reading_mnemonic":"This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.","allMeanings":[{"meaning":"Abbreviation","primary":true},{"meaning":"Omission","primary":false},{"meaning":"Abbreviate","primary":false},{"meaning":"Leave Out","primary":false}]},{"id":5241,"level":29,"word":"看板","meanings":[{"meaning":"Signboard","primary":true},{"meaning":"Billboard","primary":false},{"meaning":"Store Sign","primary":false}],"reading":[{"reading":"かんばん","primary":true}],"reading_mnemonic":"This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.","allMeanings":[{"meaning":"Signboard","primary":true},{"meaning":"Billboard","primary":false},{"meaning":"Store Sign","primary":false}]},{"id":5264,"level":29,"word":"眠り薬","meanings":[{"meaning":"Sleeping Potion","primary":true},{"meaning":"Sleep Remedy","primary":false}],"reading":[{"reading":"ねむりぐすり","primary":true}],"reading_mnemonic":"The reading is 眠い plus 薬 put together in one ... zz zzzzzZZZzz\nJust remember that くすり turns into ぐすり here because of rendaku. ","allMeanings":[{"meaning":"Sleeping Potion","primary":true},{"meaning":"Sleep Remedy","primary":false}]},{"id":5263,"level":29,"word":"眠る","meanings":[{"meaning":"To Sleep","primary":true},{"meaning":"To Fall Asleep","primary":false}],"reading":[{"reading":"ねむる","primary":true}],"reading_mnemonic":"The reading comes from 眠い.","allMeanings":[{"meaning":"To Sleep","primary":true},{"meaning":"To Fall Asleep","primary":false}]},{"id":5265,"level":29,"word":"睡眠薬","meanings":[{"meaning":"Sleeping Pills","primary":true},{"meaning":"Sleeping Medication","primary":false}],"reading":[{"reading":"すいみんやく","primary":true}],"reading_mnemonic":"This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.","allMeanings":[{"meaning":"Sleeping Pills","primary":true},{"meaning":"Sleeping Medication","primary":false}]},{"id":5227,"level":29,"word":"禅宗","meanings":[{"meaning":"Zen Sect","primary":true}],"reading":[{"reading":"ぜんしゅう","primary":true}],"reading_mnemonic":"This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.","allMeanings":[{"meaning":"Zen Sect","primary":true}]},{"id":5266,"level":29,"word":"積もる","meanings":[{"meaning":"To Accumulate","primary":true},{"meaning":"To Get Piled Up","primary":false}],"reading":[{"reading":"つもる","primary":true}],"reading_mnemonic":"If something accumulates, you can start with one, but you need at least <reading>two</reading> (つ) things to say it has accumulated. If you don't, then there's nothing accumulating at all.","allMeanings":[{"meaning":"To Accumulate","primary":true},{"meaning":"To Get Piled Up","primary":false}]},{"id":5270,"level":29,"word":"索引","meanings":[{"meaning":"Index","primary":true}],"reading":[{"reading":"さくいん","primary":true}],"reading_mnemonic":"This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well. Just think of the first part of the word <reading>in</reading>dex (いん). Where do you search? In the index.","allMeanings":[{"meaning":"Index","primary":true}]},{"id":5231,"level":29,"word":"緊張","meanings":[{"meaning":"Stress","primary":true},{"meaning":"Tension","primary":false},{"meaning":"Nervous","primary":false}],"reading":[{"reading":"きんちょう","primary":true}],"reading_mnemonic":"This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.","allMeanings":[{"meaning":"Stress","primary":true},{"meaning":"Tension","primary":false},{"meaning":"Nervous","primary":false}]},{"id":5271,"level":29,"word":"緊急","meanings":[{"meaning":"Urgent","primary":true},{"meaning":"Emergency","primary":false}],"reading":[{"reading":"きんきゅう","primary":true}],"reading_mnemonic":"This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.","allMeanings":[{"meaning":"Urgent","primary":true},{"meaning":"Emergency","primary":false}]},{"id":5273,"level":29,"word":"締まる","meanings":[{"meaning":"To Tighten","primary":true},{"meaning":"To Become Tight","primary":false},{"meaning":"To Be Toned","primary":false}],"reading":[{"reading":"しまる","primary":true}],"reading_mnemonic":"What can you do if you want something <vocabulary>to tighten</vocabulary> or <vocabulary>to become tight</vocabulary>? You need to hug your <reading>shee</reading>p (し) really close until...\n\nThe sheep tightens into a tiny little ball. Cute!","allMeanings":[{"meaning":"To Tighten","primary":true},{"meaning":"To Become Tight","primary":false},{"meaning":"To Be Toned","primary":false}]},{"id":5272,"level":29,"word":"締切","meanings":[{"meaning":"Deadline","primary":true},{"meaning":"Due Date","primary":false}],"reading":[{"reading":"しめきり","primary":true}],"reading_mnemonic":"The reading for this is the stem form of both verbs, so 締め (しめ) and 切り (きり), put together! ","allMeanings":[{"meaning":"Deadline","primary":true},{"meaning":"Due Date","primary":false}]},{"id":5391,"level":29,"word":"織物","meanings":[{"meaning":"Textile","primary":true},{"meaning":"Fabric","primary":false}],"reading":[{"reading":"おりもの","primary":true}],"reading_mnemonic":"The readings are the kun'yomi readings. With 織 you can pull the reading from 織る. With 物 you've probably seen it enough to know that it's often もの and not ぶつ. Just think of a piece of <vocabulary>cloth</vocabulary> that is <reading>mono</reading>chrome.","allMeanings":[{"meaning":"Textile","primary":true},{"meaning":"Fabric","primary":false}]},{"id":5394,"level":29,"word":"腹が減った","meanings":[{"meaning":"Hungry","primary":true},{"meaning":"I'm Hungry","primary":false}],"reading":[{"reading":"はらがへった","primary":true}],"reading_mnemonic":"The reading is 腹 plus 減る put together. With these two combined, you have はらがへった.\n\nIn casual speech, you might hear 腹減った without the が more often. The version with が is more common in writing or fixed expressions like 腹が減っては戦ができぬ (you can't fight on an empty stomach).","allMeanings":[{"meaning":"Hungry","primary":true},{"meaning":"I'm Hungry","primary":false}]},{"id":5078,"level":29,"word":"腹切り","meanings":[{"meaning":"Harakiri","primary":true},{"meaning":"Ritual Suicide","primary":false}],"reading":[{"reading":"はらきり","primary":true}],"reading_mnemonic":"The readings come from 腹 and 切る. If you're lucky, you already know the word harakiri as it's made its way into English as well.","allMeanings":[{"meaning":"Harakiri","primary":true},{"meaning":"Ritual Suicide","primary":false}]},{"id":5076,"level":29,"word":"腹立つ","meanings":[{"meaning":"To Get Mad","primary":true},{"meaning":"To Get Angry","primary":false}],"reading":[{"reading":"はらだつ","primary":true},{"reading":"はらたつ","primary":false}],"reading_mnemonic":"The readings are 腹 plus 立つ put together. The たつ becomes だつ as a standard reading though.\n\nWhile はらだつ is the standard reading for 腹立つ, it's usually found in more formal settings or writing. You'll probably hear はらたつ more often in everyday conversations, as it’s a shorter, more colloquial way of expressing 腹が立つ!","allMeanings":[{"meaning":"To Get Mad","primary":true},{"meaning":"To Get Angry","primary":false}]},{"id":5275,"level":29,"word":"航法","meanings":[{"meaning":"Navigation","primary":true}],"reading":[{"reading":"こうほう","primary":true}],"reading_mnemonic":"This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.","allMeanings":[{"meaning":"Navigation","primary":true}]},{"id":5276,"level":29,"word":"航空","meanings":[{"meaning":"Aviation","primary":true},{"meaning":"Flight","primary":false}],"reading":[{"reading":"こうくう","primary":true}],"reading_mnemonic":"This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.","allMeanings":[{"meaning":"Aviation","primary":true},{"meaning":"Flight","primary":false}]},{"id":5293,"level":29,"word":"英雄","meanings":[{"meaning":"Hero","primary":true}],"reading":[{"reading":"えいゆう","primary":true}],"reading_mnemonic":"This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.","allMeanings":[{"meaning":"Hero","primary":true}]},{"id":5279,"level":29,"word":"街道","meanings":[{"meaning":"Main Road","primary":true},{"meaning":"Highroad","primary":false}],"reading":[{"reading":"かいどう","primary":true}],"reading_mnemonic":"This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well. One thing to note though:\n\nThis word uses the かい reading for 街 (not がい). And even when 街道 is a suffix, it never gets rendaku'd! Remember this by imagining every <vocabulary>main road</vocabulary> being full of <reading>kay</reading>aks (かい) for some reason. Just a traffic jam of kayaks up and down the 街道.","allMeanings":[{"meaning":"Main Road","primary":true},{"meaning":"Highroad","primary":false}]},{"id":5242,"level":29,"word":"見極める","meanings":[{"meaning":"To Get To The Bottom Of","primary":true},{"meaning":"To Identify Something","primary":false}],"reading":[{"reading":"みきわめる","primary":true}],"reading_mnemonic":"The readings come from the words 見る and 極める put together. Get to the bottom of this word and learn it.","allMeanings":[{"meaning":"To Get To The Bottom Of","primary":true},{"meaning":"To Identify Something","primary":false}]},{"id":5397,"level":29,"word":"訪れる","meanings":[{"meaning":"To Visit","primary":true}],"reading":[{"reading":"おとずれる","primary":true}],"reading_mnemonic":"The reading isn't the same as 訪ねる, though, I'm afraid. It's おとず. Remember how this means just visiting a place? Unfortunately, you completely forgot what you were visiting. When you finally remember, it's because you were looking down to think. It's to look at the toes of the giant Buddha statue. \"<reading>Oh Toes</reading>!\" (おとず), you exclaim.","allMeanings":[{"meaning":"To Visit","primary":true}]},{"id":5280,"level":29,"word":"診る","meanings":[{"meaning":"To Examine A Patient","primary":true},{"meaning":"To Examine","primary":false}],"reading":[{"reading":"みる","primary":true}],"reading_mnemonic":"The reading is the same as 見る, which you have to do when you are examining a patient. So, you look and see all you can about the patient while you examine them, making this reading <reading>み</reading>る as well.","allMeanings":[{"meaning":"To Examine A Patient","primary":true},{"meaning":"To Examine","primary":false}]},{"id":5281,"level":29,"word":"診察","meanings":[{"meaning":"Medical Exam","primary":true},{"meaning":"Medical Examination","primary":false}],"reading":[{"reading":"しんさつ","primary":true}],"reading_mnemonic":"This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.","allMeanings":[{"meaning":"Medical Exam","primary":true},{"meaning":"Medical Examination","primary":false}]},{"id":5166,"level":29,"word":"診断","meanings":[{"meaning":"Diagnosis","primary":true},{"meaning":"Diagnose","primary":false}],"reading":[{"reading":"しんだん","primary":true}],"reading_mnemonic":"This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.","allMeanings":[{"meaning":"Diagnosis","primary":true},{"meaning":"Diagnose","primary":false}]},{"id":5282,"level":29,"word":"詰める","meanings":[{"meaning":"To Stuff In","primary":true},{"meaning":"To Cram In","primary":false}],"reading":[{"reading":"つめる","primary":true}],"reading_mnemonic":"Since this word consists of a kanji with hiragana attached, you can bet that it will use the kun'yomi reading. You learned that reading with the kanji, so you should have no troubles here.","allMeanings":[{"meaning":"To Stuff In","primary":true},{"meaning":"To Cram In","primary":false}]},{"id":5081,"level":29,"word":"誘う","meanings":[{"meaning":"To Invite","primary":true},{"meaning":"To Tempt","primary":false},{"meaning":"To Entice","primary":false}],"reading":[{"reading":"さそう","primary":true}],"reading_mnemonic":"Since this word consists of a kanji with hiragana attached, you can bet that it will use the kun'yomi reading. You didn't learn that reading with this kanji, so here's a mnemonic to help you: You <reading>saw so</reading> (さそ) much in this person that you decided <vocabulary>to invite</vocabulary> them to dinner.","allMeanings":[{"meaning":"To Invite","primary":true},{"meaning":"To Tempt","primary":false},{"meaning":"To Entice","primary":false}]},{"id":5288,"level":29,"word":"請ける","meanings":[{"meaning":"To Take","primary":true},{"meaning":"To Undertake","primary":false},{"meaning":"To Accept","primary":false},{"meaning":"To Receive","primary":false}],"reading":[{"reading":"うける","primary":true}],"reading_mnemonic":"What's another word for \"to accept\" or \"to receive\"? How about 受ける? They share a reading!","allMeanings":[{"meaning":"To Take","primary":true},{"meaning":"To Undertake","primary":false},{"meaning":"To Accept","primary":false},{"meaning":"To Receive","primary":false}]},{"id":5285,"level":29,"word":"請求","meanings":[{"meaning":"Demand","primary":true},{"meaning":"Claim","primary":false},{"meaning":"Request","primary":false},{"meaning":"Charge","primary":false}],"reading":[{"reading":"せいきゅう","primary":true}],"reading_mnemonic":"This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.","allMeanings":[{"meaning":"Demand","primary":true},{"meaning":"Claim","primary":false},{"meaning":"Request","primary":false},{"meaning":"Charge","primary":false}]},{"id":9090,"level":29,"word":"豚カツ","meanings":[{"meaning":"Tonkatsu","primary":true},{"meaning":"Breaded Pork Cutlet","primary":false}],"reading":[{"reading":"とんかつ","primary":true},{"reading":"とんカツ","primary":false}],"reading_mnemonic":"This word uses the on'yomi of 豚. You haven't learned that yet, so here's a mnemonic to help you:\n\nYou really like <vocabulary>tonkatsu</vocabulary> so you just ate a whole <reading>ton</reading> (とん) of it. Imagine how you feel after eating a ton of <vocabulary>breaded pork cutlet</vocabulary>.","allMeanings":[{"meaning":"Tonkatsu","primary":true},{"meaning":"Breaded Pork Cutlet","primary":false}]},{"id":5289,"level":29,"word":"貸し〜","meanings":[{"meaning":"Rental","primary":true}],"reading":[{"reading":"かし","primary":true}],"reading_mnemonic":"The reading is the same as 貸す.","allMeanings":[{"meaning":"Rental","primary":true}]},{"id":8720,"level":29,"word":"迷い","meanings":[{"meaning":"Hesitation","primary":true},{"meaning":"Indecision","primary":false},{"meaning":"Doubt","primary":false}],"reading":[{"reading":"まよい","primary":true}],"reading_mnemonic":"You learned this reading already when you learned 迷う! Just swap the う for an い.","allMeanings":[{"meaning":"Hesitation","primary":true},{"meaning":"Indecision","primary":false},{"meaning":"Doubt","primary":false}]},{"id":7501,"level":29,"word":"迷惑メール","meanings":[{"meaning":"Spam","primary":true},{"meaning":"Spam Mail","primary":false},{"meaning":"Junk Mail","primary":false},{"meaning":"Unsolicited Mail","primary":false}],"reading":[{"reading":"めいわくめーる","primary":true},{"reading":"めいわくメール","primary":false}],"reading_mnemonic":"The reading comes from 迷惑, so if you know that you know this (and then this vocab word won't be unsolicited as well!)","allMeanings":[{"meaning":"Spam","primary":true},{"meaning":"Spam Mail","primary":false},{"meaning":"Junk Mail","primary":false},{"meaning":"Unsolicited Mail","primary":false}]},{"id":5290,"level":29,"word":"道に迷う","meanings":[{"meaning":"To Get Lost","primary":true},{"meaning":"To Be Lost","primary":false}],"reading":[{"reading":"みちにまよう","primary":true}],"reading_mnemonic":"The reading comes from the words 道 and 迷う.","allMeanings":[{"meaning":"To Get Lost","primary":true},{"meaning":"To Be Lost","primary":false}]},{"id":5291,"level":29,"word":"閣僚","meanings":[{"meaning":"Cabinet Ministers","primary":true}],"reading":[{"reading":"かくりょう","primary":true}],"reading_mnemonic":"This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.","allMeanings":[{"meaning":"Cabinet Ministers","primary":true}]},{"id":5292,"level":29,"word":"閣議","meanings":[{"meaning":"Cabinet Meeting","primary":true}],"reading":[{"reading":"かくぎ","primary":true}],"reading_mnemonic":"This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.","allMeanings":[{"meaning":"Cabinet Meeting","primary":true}]},{"id":5267,"level":29,"word":"面積","meanings":[{"meaning":"Area","primary":true}],"reading":[{"reading":"めんせき","primary":true}],"reading_mnemonic":"This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.","allMeanings":[{"meaning":"Area","primary":true}]},{"id":5294,"level":29,"word":"韓国","meanings":[{"meaning":"South Korea","primary":true},{"meaning":"Korea","primary":false}],"reading":[{"reading":"かんこく","primary":true}],"reading_mnemonic":"This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.","allMeanings":[{"meaning":"South Korea","primary":true},{"meaning":"Korea","primary":false}]},{"id":7470,"level":29,"word":"黒板","meanings":[{"meaning":"Blackboard","primary":true}],"reading":[{"reading":"こくばん","primary":true}],"reading_mnemonic":"This is a jukugo word that uses the on'yomi readings of the kanji. You should be able to read this on your own.","allMeanings":[{"meaning":"Blackboard","primary":true}]}]
+[
+  {
+    "id": 5075,
+    "level": 29,
+    "word": "お腹",
+    "meanings": [
+      { "meaning": "Belly", "primary": true },
+      { "meaning": "Stomach", "primary": false },
+      { "meaning": "Abdomen", "primary": false }
+    ],
+    "reading": [{ "reading": "おなか", "primary": true }],
+    "reading_mnemonic": "The reading is an exception, but it isn't too hard to remember. It's the same as <reading>中</reading> (なか), so if you think about it it makes sense. It's your insides, just like your <vocabulary>belly</vocabulary> is your insides!",
+    "allMeanings": [
+      { "meaning": "Belly", "primary": true },
+      { "meaning": "Stomach", "primary": false },
+      { "meaning": "Abdomen", "primary": false }
+    ]
+  },
+  {
+    "id": 5224,
+    "level": 29,
+    "word": "一人娘",
+    "meanings": [{ "meaning": "Only Daughter", "primary": true }],
+    "reading": [{ "reading": "ひとりむすめ", "primary": true }],
+    "reading_mnemonic": "The readings are 一人 plus 娘 put together into one, single (daughter) word.",
+    "allMeanings": [{ "meaning": "Only Daughter", "primary": true }]
+  },
+  {
+    "id": 5237,
+    "level": 29,
+    "word": "一杯",
+    "meanings": [
+      { "meaning": "One Cup", "primary": true },
+      { "meaning": "A Drink", "primary": false },
+      { "meaning": "Full", "primary": false },
+      { "meaning": "A Lot", "primary": false }
+    ],
+    "reading": [{ "reading": "いっぱい", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well. Just remember that 一 becomes いっ, and 杯 becomes ぱい.",
+    "allMeanings": [
+      { "meaning": "One Cup", "primary": true },
+      { "meaning": "A Drink", "primary": false },
+      { "meaning": "Full", "primary": false },
+      { "meaning": "A Lot", "primary": false }
+    ]
+  },
+  {
+    "id": 5239,
+    "level": 29,
+    "word": "三杯",
+    "meanings": [
+      { "meaning": "Three Cups", "primary": true },
+      { "meaning": "Three Drinks", "primary": false },
+      { "meaning": "Three Glasses", "primary": false }
+    ],
+    "reading": [{ "reading": "さんばい", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well. Just watch out for 杯, which becomes ばい thanks to our old friend rendaku.",
+    "allMeanings": [
+      { "meaning": "Three Cups", "primary": true },
+      { "meaning": "Three Drinks", "primary": false },
+      { "meaning": "Three Glasses", "primary": false }
+    ]
+  },
+  {
+    "id": 5230,
+    "level": 29,
+    "word": "不健康",
+    "meanings": [
+      { "meaning": "Unhealthy", "primary": true },
+      { "meaning": "Not Healthy", "primary": false }
+    ],
+    "reading": [{ "reading": "ふけんこう", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well. Will help to know 健康 first.",
+    "allMeanings": [
+      { "meaning": "Unhealthy", "primary": true },
+      { "meaning": "Not Healthy", "primary": false }
+    ]
+  },
+  {
+    "id": 5245,
+    "level": 29,
+    "word": "中欧",
+    "meanings": [{ "meaning": "Central Europe", "primary": true }],
+    "reading": [{ "reading": "ちゅうおう", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.",
+    "allMeanings": [{ "meaning": "Central Europe", "primary": true }]
+  },
+  {
+    "id": 5219,
+    "level": 29,
+    "word": "主催",
+    "meanings": [
+      { "meaning": "Host", "primary": true },
+      { "meaning": "Hosting", "primary": false },
+      { "meaning": "Sponsor", "primary": false }
+    ],
+    "reading": [{ "reading": "しゅさい", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.",
+    "allMeanings": [
+      { "meaning": "Host", "primary": true },
+      { "meaning": "Hosting", "primary": false },
+      { "meaning": "Sponsor", "primary": false }
+    ]
+  },
+  {
+    "id": 9048,
+    "level": 29,
+    "word": "乗車券",
+    "meanings": [
+      { "meaning": "Passenger Ticket", "primary": true },
+      { "meaning": "Ticket", "primary": false }
+    ],
+    "reading": [{ "reading": "じょうしゃけん", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word that uses the on'yomi readings of the kanji. You should be able to read this on your own.",
+    "allMeanings": [
+      { "meaning": "Passenger Ticket", "primary": true },
+      { "meaning": "Ticket", "primary": false }
+    ]
+  },
+  {
+    "id": 5213,
+    "level": 29,
+    "word": "乾く",
+    "meanings": [
+      { "meaning": "To Get Dry", "primary": true },
+      { "meaning": "To Become Dry", "primary": false },
+      { "meaning": "To Be Dried", "primary": false }
+    ],
+    "reading": [{ "reading": "かわく", "primary": true }],
+    "reading_mnemonic": "The <reading>川</reading> (かわ) has started <vocabulary>to get dry</vocabulary>. Need to use less water around here otherwise it'll become completely dry.",
+    "allMeanings": [
+      { "meaning": "To Get Dry", "primary": true },
+      { "meaning": "To Become Dry", "primary": false },
+      { "meaning": "To Be Dried", "primary": false }
+    ]
+  },
+  {
+    "id": 5214,
+    "level": 29,
+    "word": "乾季",
+    "meanings": [{ "meaning": "Dry Season", "primary": true }],
+    "reading": [{ "reading": "かんき", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.",
+    "allMeanings": [{ "meaning": "Dry Season", "primary": true }]
+  },
+  {
+    "id": 5215,
+    "level": 29,
+    "word": "乾杯",
+    "meanings": [
+      { "meaning": "Kanpai", "primary": true },
+      { "meaning": "Cheers", "primary": false },
+      { "meaning": "Toast", "primary": false }
+    ],
+    "reading": [{ "reading": "かんぱい", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well. Just watch out for the はい turning into ぱい!",
+    "allMeanings": [
+      { "meaning": "Kanpai", "primary": true },
+      { "meaning": "Cheers", "primary": false },
+      { "meaning": "Toast", "primary": false }
+    ]
+  },
+  {
+    "id": 5238,
+    "level": 29,
+    "word": "二杯",
+    "meanings": [
+      { "meaning": "Two Cups", "primary": true },
+      { "meaning": "Two Drinks", "primary": false },
+      { "meaning": "Two Glasses", "primary": false }
+    ],
+    "reading": [{ "reading": "にはい", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.",
+    "allMeanings": [
+      { "meaning": "Two Cups", "primary": true },
+      { "meaning": "Two Drinks", "primary": false },
+      { "meaning": "Two Glasses", "primary": false }
+    ]
+  },
+  {
+    "id": 9045,
+    "level": 29,
+    "word": "任す",
+    "meanings": [
+      { "meaning": "To Entrust Something", "primary": true },
+      { "meaning": "To Delegate Something", "primary": false },
+      { "meaning": "To Leave Something To", "primary": false }
+    ],
+    "reading": [{ "reading": "まかす", "primary": true }],
+    "reading_mnemonic": "This uses the same reading you learned with 任せる. ",
+    "allMeanings": [
+      { "meaning": "To Entrust Something", "primary": true },
+      { "meaning": "To Delegate Something", "primary": false },
+      { "meaning": "To Leave Something To", "primary": false }
+    ]
+  },
+  {
+    "id": 5268,
+    "level": 29,
+    "word": "体積",
+    "meanings": [{ "meaning": "Volume", "primary": true }],
+    "reading": [{ "reading": "たいせき", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.",
+    "allMeanings": [{ "meaning": "Volume", "primary": true }]
+  },
+  {
+    "id": 5216,
+    "level": 29,
+    "word": "促す",
+    "meanings": [
+      { "meaning": "To Urge", "primary": true },
+      { "meaning": "To Pressure", "primary": false }
+    ],
+    "reading": [{ "reading": "うながす", "primary": true }],
+    "reading_mnemonic": "Someone with a weird accent is trying <vocabulary>to urge</vocabulary> you to eat \"Unagah\" (うなが). This person really means \"unagi,\" and this person also doesn't realize how delicious unagi is (and thinks he's tricking you). You ask him what \"Unagah\" is. Go ahead and say it out loud.",
+    "allMeanings": [
+      { "meaning": "To Urge", "primary": true },
+      { "meaning": "To Pressure", "primary": false }
+    ]
+  },
+  {
+    "id": 5222,
+    "level": 29,
+    "word": "倒壊",
+    "meanings": [
+      { "meaning": "Collapse", "primary": true },
+      { "meaning": "Destruction", "primary": false },
+      { "meaning": "Crumbling", "primary": false }
+    ],
+    "reading": [{ "reading": "とうかい", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.",
+    "allMeanings": [
+      { "meaning": "Collapse", "primary": true },
+      { "meaning": "Destruction", "primary": false },
+      { "meaning": "Crumbling", "primary": false }
+    ]
+  },
+  {
+    "id": 5217,
+    "level": 29,
+    "word": "催促",
+    "meanings": [
+      { "meaning": "Urge", "primary": true },
+      { "meaning": "Press For", "primary": false },
+      { "meaning": "Demand", "primary": false }
+    ],
+    "reading": [{ "reading": "さいそく", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.",
+    "allMeanings": [
+      { "meaning": "Urge", "primary": true },
+      { "meaning": "Press For", "primary": false },
+      { "meaning": "Demand", "primary": false }
+    ]
+  },
+  {
+    "id": 5218,
+    "level": 29,
+    "word": "催告",
+    "meanings": [
+      { "meaning": "Notice", "primary": true },
+      { "meaning": "Officially Notifying", "primary": false },
+      { "meaning": "Formal Notice", "primary": false }
+    ],
+    "reading": [{ "reading": "さいこく", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.",
+    "allMeanings": [
+      { "meaning": "Notice", "primary": true },
+      { "meaning": "Officially Notifying", "primary": false },
+      { "meaning": "Formal Notice", "primary": false }
+    ]
+  },
+  {
+    "id": 5248,
+    "level": 29,
+    "word": "入り江",
+    "meanings": [
+      { "meaning": "Inlet", "primary": true },
+      { "meaning": "Cove", "primary": false }
+    ],
+    "reading": [{ "reading": "いりえ", "primary": true }],
+    "reading_mnemonic": "For this reading, just imagine this as 入り with 江 pushed on at the end! Also note this is commonly written as 入江, but the reading stays the same!",
+    "allMeanings": [
+      { "meaning": "Inlet", "primary": true },
+      { "meaning": "Cove", "primary": false }
+    ]
+  },
+  {
+    "id": 5221,
+    "level": 29,
+    "word": "全壊",
+    "meanings": [
+      { "meaning": "Complete Destruction", "primary": true },
+      { "meaning": "Total Destruction", "primary": false }
+    ],
+    "reading": [{ "reading": "ぜんかい", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.",
+    "allMeanings": [
+      { "meaning": "Complete Destruction", "primary": true },
+      { "meaning": "Total Destruction", "primary": false }
+    ]
+  },
+  {
+    "id": 4892,
+    "level": 29,
+    "word": "再建",
+    "meanings": [
+      { "meaning": "Rebuilding", "primary": true },
+      { "meaning": "Reconstruction", "primary": false }
+    ],
+    "reading": [{ "reading": "さいけん", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well. Just don't forget that extra い!",
+    "allMeanings": [
+      { "meaning": "Rebuilding", "primary": true },
+      { "meaning": "Reconstruction", "primary": false }
+    ]
+  },
+  {
+    "id": 4808,
+    "level": 29,
+    "word": "効力",
+    "meanings": [
+      { "meaning": "Effectiveness", "primary": true },
+      { "meaning": "In Effect", "primary": false },
+      { "meaning": "Efficacy", "primary": false }
+    ],
+    "reading": [{ "reading": "こうりょく", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.",
+    "allMeanings": [
+      { "meaning": "Effectiveness", "primary": true },
+      { "meaning": "In Effect", "primary": false },
+      { "meaning": "Efficacy", "primary": false }
+    ]
+  },
+  {
+    "id": 6295,
+    "level": 29,
+    "word": "勧める",
+    "meanings": [
+      { "meaning": "To Recommend", "primary": true },
+      { "meaning": "To Suggest", "primary": false },
+      { "meaning": "To Advise", "primary": false },
+      { "meaning": "To Offer", "primary": false }
+    ],
+    "reading": [{ "reading": "すすめる", "primary": true }],
+    "reading_mnemonic": "To remember the reading think about how you are going <vocabulary>to recommend</vocabulary> this restaurant to your friends, <reading>Sue</reading> and <reading>Sue</reading> (すす). You refer to them as \"Sue Sue\" to make things easier on yourself, and they're always looking for recommendations.",
+    "allMeanings": [
+      { "meaning": "To Recommend", "primary": true },
+      { "meaning": "To Suggest", "primary": false },
+      { "meaning": "To Advise", "primary": false },
+      { "meaning": "To Offer", "primary": false }
+    ]
+  },
+  {
+    "id": 6297,
+    "level": 29,
+    "word": "勧誘",
+    "meanings": [
+      { "meaning": "Solicitation", "primary": true },
+      { "meaning": "Invitation", "primary": false }
+    ],
+    "reading": [{ "reading": "かんゆう", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word that uses the on'yomi readings of the kanji. You should be able to read this on your own.",
+    "allMeanings": [
+      { "meaning": "Solicitation", "primary": true },
+      { "meaning": "Invitation", "primary": false }
+    ]
+  },
+  {
+    "id": 5117,
+    "level": 29,
+    "word": "同僚",
+    "meanings": [
+      { "meaning": "Colleague", "primary": true },
+      { "meaning": "Coworker", "primary": false }
+    ],
+    "reading": [{ "reading": "どうりょう", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.",
+    "allMeanings": [
+      { "meaning": "Colleague", "primary": true },
+      { "meaning": "Coworker", "primary": false }
+    ]
+  },
+  {
+    "id": 5278,
+    "level": 29,
+    "word": "商店街",
+    "meanings": [
+      { "meaning": "Shopping Street", "primary": true },
+      { "meaning": "Shopping Arcade", "primary": false }
+    ],
+    "reading": [{ "reading": "しょうてんがい", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.",
+    "allMeanings": [
+      { "meaning": "Shopping Street", "primary": true },
+      { "meaning": "Shopping Arcade", "primary": false }
+    ]
+  },
+  {
+    "id": 5220,
+    "level": 29,
+    "word": "壊す",
+    "meanings": [
+      { "meaning": "To Break Something", "primary": true },
+      { "meaning": "To Break", "primary": false }
+    ],
+    "reading": [{ "reading": "こわす", "primary": true }],
+    "reading_mnemonic": "The thing you broke? A beautiful ceramic <reading>koa</reading>la (こわ). Watch it shatter to the ground, because you threw it there. What a jerk you are.",
+    "allMeanings": [
+      { "meaning": "To Break Something", "primary": true },
+      { "meaning": "To Break", "primary": false }
+    ]
+  },
+  {
+    "id": 5259,
+    "level": 29,
+    "word": "大略",
+    "meanings": [
+      { "meaning": "Broad Outline", "primary": true },
+      { "meaning": "Outline", "primary": false },
+      { "meaning": "Overview", "primary": false }
+    ],
+    "reading": [{ "reading": "たいりゃく", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.",
+    "allMeanings": [
+      { "meaning": "Broad Outline", "primary": true },
+      { "meaning": "Outline", "primary": false },
+      { "meaning": "Overview", "primary": false }
+    ]
+  },
+  {
+    "id": 5274,
+    "level": 29,
+    "word": "大臣",
+    "meanings": [
+      { "meaning": "Minister", "primary": true },
+      { "meaning": "Cabinet Member", "primary": false }
+    ],
+    "reading": [{ "reading": "だいじん", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.",
+    "allMeanings": [
+      { "meaning": "Minister", "primary": true },
+      { "meaning": "Cabinet Member", "primary": false }
+    ]
+  },
+  {
+    "id": 5307,
+    "level": 29,
+    "word": "奇妙",
+    "meanings": [
+      { "meaning": "Strange", "primary": true },
+      { "meaning": "Curious", "primary": false },
+      { "meaning": "Odd", "primary": false }
+    ],
+    "reading": [{ "reading": "きみょう", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.",
+    "allMeanings": [
+      { "meaning": "Strange", "primary": true },
+      { "meaning": "Curious", "primary": false },
+      { "meaning": "Odd", "primary": false }
+    ]
+  },
+  {
+    "id": 5306,
+    "level": 29,
+    "word": "奇数",
+    "meanings": [{ "meaning": "Odd Number", "primary": true }],
+    "reading": [{ "reading": "きすう", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.",
+    "allMeanings": [{ "meaning": "Odd Number", "primary": true }]
+  },
+  {
+    "id": 5305,
+    "level": 29,
+    "word": "好奇心",
+    "meanings": [{ "meaning": "Curiosity", "primary": true }],
+    "reading": [{ "reading": "こうきしん", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.",
+    "allMeanings": [{ "meaning": "Curiosity", "primary": true }]
+  },
+  {
+    "id": 5223,
+    "level": 29,
+    "word": "娘",
+    "meanings": [
+      { "meaning": "Daughter", "primary": true },
+      { "meaning": "Young Woman", "primary": false }
+    ],
+    "reading": [{ "reading": "むすめ", "primary": true }],
+    "reading_mnemonic": "The reading is the same as what you learned with the kanji.",
+    "allMeanings": [
+      { "meaning": "Daughter", "primary": true },
+      { "meaning": "Young Woman", "primary": false }
+    ]
+  },
+  {
+    "id": 5225,
+    "level": 29,
+    "word": "宗教",
+    "meanings": [{ "meaning": "Religion", "primary": true }],
+    "reading": [{ "reading": "しゅうきょう", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.",
+    "allMeanings": [{ "meaning": "Religion", "primary": true }]
+  },
+  {
+    "id": 5226,
+    "level": 29,
+    "word": "宗派",
+    "meanings": [
+      { "meaning": "Sect", "primary": true },
+      { "meaning": "Denomination", "primary": false }
+    ],
+    "reading": [{ "reading": "しゅうは", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.",
+    "allMeanings": [
+      { "meaning": "Sect", "primary": true },
+      { "meaning": "Denomination", "primary": false }
+    ]
+  },
+  {
+    "id": 5118,
+    "level": 29,
+    "word": "官僚",
+    "meanings": [
+      { "meaning": "Bureaucrat", "primary": true },
+      { "meaning": "Government Official", "primary": false },
+      { "meaning": "Bureaucracy", "primary": false }
+    ],
+    "reading": [{ "reading": "かんりょう", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.",
+    "allMeanings": [
+      { "meaning": "Bureaucrat", "primary": true },
+      { "meaning": "Government Official", "primary": false },
+      { "meaning": "Bureaucracy", "primary": false }
+    ]
+  },
+  {
+    "id": 5229,
+    "level": 29,
+    "word": "宴",
+    "meanings": [
+      { "meaning": "Banquet", "primary": true },
+      { "meaning": "Dinner Party", "primary": false },
+      { "meaning": "Party", "primary": false },
+      { "meaning": "Feast", "primary": false }
+    ],
+    "reading": [{ "reading": "うたげ", "primary": true }],
+    "reading_mnemonic": "At a <vocabulary>banquet</vocabulary> or <vocabulary>dinner party</vocabulary>, you don't only get food, you also <reading>歌 GE</reading>T (うたげ), which is you getting a song from a singer, because entertainment is just as important as the food when you have a <vocabulary>feast</vocabulary> such as this.",
+    "allMeanings": [
+      { "meaning": "Banquet", "primary": true },
+      { "meaning": "Dinner Party", "primary": false },
+      { "meaning": "Party", "primary": false },
+      { "meaning": "Feast", "primary": false }
+    ]
+  },
+  {
+    "id": 5228,
+    "level": 29,
+    "word": "宴会",
+    "meanings": [
+      { "meaning": "Banquet", "primary": true },
+      { "meaning": "Dinner Party", "primary": false }
+    ],
+    "reading": [{ "reading": "えんかい", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.",
+    "allMeanings": [
+      { "meaning": "Banquet", "primary": true },
+      { "meaning": "Dinner Party", "primary": false }
+    ]
+  },
+  {
+    "id": 8684,
+    "level": 29,
+    "word": "寄る",
+    "meanings": [
+      { "meaning": "To Draw Near", "primary": true },
+      { "meaning": "To Stop By", "primary": false }
+    ],
+    "reading": [{ "reading": "よる", "primary": true }],
+    "reading_mnemonic": "Since this word consists of a kanji with hiragana attached, you can bet that it will use the kun'yomi reading. You haven't learned this reading yet so here's a mnemonic to help you:\n\nIf you're too shy to <vocabulary>draw near</vocabulary> to people, just learn how to use a <reading>yo</reading>-yo (よ)! Then people will draw near to YOU to compliment you on your sick skills. You won't have to do it yourself!",
+    "allMeanings": [
+      { "meaning": "To Draw Near", "primary": true },
+      { "meaning": "To Stop By", "primary": false }
+    ]
+  },
+  {
+    "id": 7604,
+    "level": 29,
+    "word": "寄与",
+    "meanings": [{ "meaning": "Contribution", "primary": true }],
+    "reading": [{ "reading": "きよ", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word that uses the on'yomi readings of the kanji. You should be able to read this on your own.",
+    "allMeanings": [{ "meaning": "Contribution", "primary": true }]
+  },
+  {
+    "id": 7658,
+    "level": 29,
+    "word": "寄付",
+    "meanings": [
+      { "meaning": "Donation", "primary": true },
+      { "meaning": "Donating", "primary": false }
+    ],
+    "reading": [{ "reading": "きふ", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word that uses the on'yomi readings of the kanji. You should be able to read this on your own.",
+    "allMeanings": [
+      { "meaning": "Donation", "primary": true },
+      { "meaning": "Donating", "primary": false }
+    ]
+  },
+  {
+    "id": 5009,
+    "level": 29,
+    "word": "就く",
+    "meanings": [
+      { "meaning": "To Get A Position", "primary": true },
+      { "meaning": "To Get A Job", "primary": false }
+    ],
+    "reading": [{ "reading": "つく", "primary": true }],
+    "reading_mnemonic": "If you want <vocabulary>to get a position</vocabulary>, there are <reading>two</reading> (つ) interviews. Just pass the two interviews to get a job!",
+    "allMeanings": [
+      { "meaning": "To Get A Position", "primary": true },
+      { "meaning": "To Get A Job", "primary": false }
+    ]
+  },
+  {
+    "id": 7718,
+    "level": 29,
+    "word": "居眠り",
+    "meanings": [
+      { "meaning": "Nap", "primary": true },
+      { "meaning": "Doze", "primary": false },
+      { "meaning": "Dozing", "primary": false },
+      { "meaning": "Nodding Off", "primary": false },
+      { "meaning": "Dozing Off", "primary": false }
+    ],
+    "reading": [{ "reading": "いねむり", "primary": true }],
+    "reading_mnemonic": "The readings for this word are both kun'yomi readings. You've learned both of these readings by now so you should be able to read this on your own.",
+    "allMeanings": [
+      { "meaning": "Nap", "primary": true },
+      { "meaning": "Doze", "primary": false },
+      { "meaning": "Dozing", "primary": false },
+      { "meaning": "Nodding Off", "primary": false },
+      { "meaning": "Dozing Off", "primary": false }
+    ]
+  },
+  {
+    "id": 5251,
+    "level": 29,
+    "word": "強烈",
+    "meanings": [
+      { "meaning": "Very Strong", "primary": true },
+      { "meaning": "Intense", "primary": false },
+      { "meaning": "Shocking", "primary": false },
+      { "meaning": "Striking", "primary": false }
+    ],
+    "reading": [{ "reading": "きょうれつ", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.",
+    "allMeanings": [
+      { "meaning": "Very Strong", "primary": true },
+      { "meaning": "Intense", "primary": false },
+      { "meaning": "Shocking", "primary": false },
+      { "meaning": "Striking", "primary": false }
+    ]
+  },
+  {
+    "id": 7772,
+    "level": 29,
+    "word": "怒らせる",
+    "meanings": [
+      { "meaning": "To Anger Someone", "primary": true },
+      { "meaning": "To Provoke", "primary": false },
+      { "meaning": "To Offend Someone", "primary": false }
+    ],
+    "reading": [{ "reading": "おこらせる", "primary": true }],
+    "reading_mnemonic": "Since this word consists of a kanji with hiragana attached, you can bet that it will use the kun'yomi reading. You learned this reading when you learned 怒る, so you should know this one too!",
+    "allMeanings": [
+      { "meaning": "To Anger Someone", "primary": true },
+      { "meaning": "To Provoke", "primary": false },
+      { "meaning": "To Offend Someone", "primary": false }
+    ]
+  },
+  {
+    "id": 5232,
+    "level": 29,
+    "word": "怒り",
+    "meanings": [
+      { "meaning": "Anger", "primary": true },
+      { "meaning": "Wrath", "primary": false }
+    ],
+    "reading": [{ "reading": "いかり", "primary": true }],
+    "reading_mnemonic": "Since this word consists of a kanji with hiragana attached, you can bet that it will use the kun'yomi reading. You haven't learned this reading yet, so here's a mnemonic to help you:\n\nI have a lot of <vocabulary>anger</vocabulary> because <reading>I ca</reading>rry (いか) all of my own things (books, luggage, drinks) and no one will ever carry them for me. Plus, the more things I carry, the more anger I carry inside. Ahh!\n\n\n\n",
+    "allMeanings": [
+      { "meaning": "Anger", "primary": true },
+      { "meaning": "Wrath", "primary": false }
+    ]
+  },
+  {
+    "id": 5393,
+    "level": 29,
+    "word": "怒気",
+    "meanings": [{ "meaning": "Anger", "primary": true }],
+    "reading": [{ "reading": "どき", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.",
+    "allMeanings": [{ "meaning": "Anger", "primary": true }]
+  },
+  {
+    "id": 5233,
+    "level": 29,
+    "word": "怖い",
+    "meanings": [{ "meaning": "Scary", "primary": true }],
+    "reading": [{ "reading": "こわい", "primary": true }],
+    "reading_mnemonic": "You know what's really <vocabulary>scary</vocabulary>, like double scary (because kanji and vocab both mean scary)? How about your <reading>cowo</reading>rkers (こわ). They are all insane, and you know it. Absolute nutjobs they are.",
+    "allMeanings": [{ "meaning": "Scary", "primary": true }]
+  },
+  {
+    "id": 5236,
+    "level": 29,
+    "word": "恐ろしい",
+    "meanings": [
+      { "meaning": "Terrifying", "primary": true },
+      { "meaning": "Frightening", "primary": false },
+      { "meaning": "Dreadful", "primary": false }
+    ],
+    "reading": [{ "reading": "おそろしい", "primary": true }],
+    "reading_mnemonic": "Since this word consists of a kanji with hiragana attached, you can bet that it will use the kun'yomi reading. You didn't learn that reading with this kanji, so here's a mnemonic to help you:\n\nHow <vocabulary>terrifying</vocabulary> is it? It's <reading>Oh so</reading> (おそ) terrifying!",
+    "allMeanings": [
+      { "meaning": "Terrifying", "primary": true },
+      { "meaning": "Frightening", "primary": false },
+      { "meaning": "Dreadful", "primary": false }
+    ]
+  },
+  {
+    "id": 5234,
+    "level": 29,
+    "word": "恐怖",
+    "meanings": [
+      { "meaning": "Terror", "primary": true },
+      { "meaning": "Fear", "primary": false }
+    ],
+    "reading": [{ "reading": "きょうふ", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.",
+    "allMeanings": [
+      { "meaning": "Terror", "primary": true },
+      { "meaning": "Fear", "primary": false }
+    ]
+  },
+  {
+    "id": 5235,
+    "level": 29,
+    "word": "恐怖症",
+    "meanings": [{ "meaning": "Phobia", "primary": true }],
+    "reading": [{ "reading": "きょうふしょう", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.",
+    "allMeanings": [{ "meaning": "Phobia", "primary": true }]
+  },
+  {
+    "id": 5395,
+    "level": 29,
+    "word": "招き猫",
+    "meanings": [
+      { "meaning": "Beckoning Cat", "primary": true },
+      { "meaning": "Maneki Neko", "primary": false }
+    ],
+    "reading": [{ "reading": "まねきねこ", "primary": true }],
+    "reading_mnemonic": "This word uses the kun'yomi readings for both kanji, which you know already!",
+    "allMeanings": [
+      { "meaning": "Beckoning Cat", "primary": true },
+      { "meaning": "Maneki Neko", "primary": false }
+    ]
+  },
+  {
+    "id": 8759,
+    "level": 29,
+    "word": "捜索",
+    "meanings": [
+      { "meaning": "Search", "primary": true },
+      { "meaning": "Investigation", "primary": false }
+    ],
+    "reading": [{ "reading": "そうさく", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word that uses the on'yomi readings of the kanji. You should be able to read this on your own.",
+    "allMeanings": [
+      { "meaning": "Search", "primary": true },
+      { "meaning": "Investigation", "primary": false }
+    ]
+  },
+  {
+    "id": 5246,
+    "level": 29,
+    "word": "日欧",
+    "meanings": [
+      { "meaning": "Japan And Europe", "primary": true },
+      { "meaning": "Japanese-European", "primary": false }
+    ],
+    "reading": [{ "reading": "にちおう", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.",
+    "allMeanings": [
+      { "meaning": "Japan And Europe", "primary": true },
+      { "meaning": "Japanese-European", "primary": false }
+    ]
+  },
+  {
+    "id": 5295,
+    "level": 29,
+    "word": "日韓",
+    "meanings": [
+      { "meaning": "Japan And South Korea", "primary": true },
+      { "meaning": "Japan And Korea", "primary": false }
+    ],
+    "reading": [{ "reading": "にっかん", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.",
+    "allMeanings": [
+      { "meaning": "Japan And South Korea", "primary": true },
+      { "meaning": "Japan And Korea", "primary": false }
+    ]
+  },
+  {
+    "id": 5031,
+    "level": 29,
+    "word": "昇る",
+    "meanings": [
+      { "meaning": "To Ascend", "primary": true },
+      { "meaning": "To Rise", "primary": false }
+    ],
+    "reading": [{ "reading": "のぼる", "primary": true }],
+    "reading_mnemonic": "The reading is the kun'yomi reading, but it's pretty easy. How do you read all the other \"to climb\" words? 登る is one example. 上る is another. They're all <reading>のぼ</reading>る, and so is this. Unlike the other climbing words, though, this suggests there's no effort involved. That's why you're \"ascending\" and not climbing, because climbing is a bit of work.",
+    "allMeanings": [
+      { "meaning": "To Ascend", "primary": true },
+      { "meaning": "To Rise", "primary": false }
+    ]
+  },
+  {
+    "id": 5240,
+    "level": 29,
+    "word": "板",
+    "meanings": [
+      { "meaning": "Board", "primary": true },
+      { "meaning": "Plank", "primary": false },
+      { "meaning": "Slab", "primary": false },
+      { "meaning": "Plate", "primary": false }
+    ],
+    "reading": [{ "reading": "いた", "primary": true }],
+    "reading_mnemonic": "Since this word is made up of a single kanji, it uses the kun'yomi reading. You did not learn this reading, so here's a mnemonic to help you:\n\nWho can make good use of various <vocabulary>board</vocabulary>s? An avid <reading>eater</reading> (いた)! If you’re an avid eater, you’ll need lots of (cutting) boards to prepare all the delicious food you’re going to eat. This makes boards and eaters the perfect match.",
+    "allMeanings": [
+      { "meaning": "Board", "primary": true },
+      { "meaning": "Plank", "primary": false },
+      { "meaning": "Slab", "primary": false },
+      { "meaning": "Plate", "primary": false }
+    ]
+  },
+  {
+    "id": 5269,
+    "level": 29,
+    "word": "検索",
+    "meanings": [
+      { "meaning": "Lookup", "primary": true },
+      { "meaning": "Internet Search", "primary": false }
+    ],
+    "reading": [{ "reading": "けんさく", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.",
+    "allMeanings": [
+      { "meaning": "Lookup", "primary": true },
+      { "meaning": "Internet Search", "primary": false }
+    ]
+  },
+  {
+    "id": 5243,
+    "level": 29,
+    "word": "極めて",
+    "meanings": [{ "meaning": "Extremely", "primary": true }],
+    "reading": [{ "reading": "きわめて", "primary": true }],
+    "reading_mnemonic": "The reading comes from 極める.",
+    "allMeanings": [{ "meaning": "Extremely", "primary": true }]
+  },
+  {
+    "id": 5396,
+    "level": 29,
+    "word": "構える",
+    "meanings": [
+      { "meaning": "To Set Up", "primary": true },
+      { "meaning": "To Assume A Stance", "primary": false },
+      { "meaning": "To Hold In Preparation", "primary": false }
+    ],
+    "reading": [{ "reading": "かまえる", "primary": true }],
+    "reading_mnemonic": "The reading is like 構う, so as long as you know that you know this too.",
+    "allMeanings": [
+      { "meaning": "To Set Up", "primary": true },
+      { "meaning": "To Assume A Stance", "primary": false },
+      { "meaning": "To Hold In Preparation", "primary": false }
+    ]
+  },
+  {
+    "id": 5244,
+    "level": 29,
+    "word": "欧米",
+    "meanings": [
+      { "meaning": "Europe And America", "primary": true },
+      { "meaning": "Europe And USA", "primary": false },
+      { "meaning": "The West", "primary": false }
+    ],
+    "reading": [{ "reading": "おうべい", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.",
+    "allMeanings": [
+      { "meaning": "Europe And America", "primary": true },
+      { "meaning": "Europe And USA", "primary": false },
+      { "meaning": "The West", "primary": false }
+    ]
+  },
+  {
+    "id": 5247,
+    "level": 29,
+    "word": "江戸",
+    "meanings": [
+      { "meaning": "Edo", "primary": true },
+      { "meaning": "Tokyo", "primary": false }
+    ],
+    "reading": [{ "reading": "えど", "primary": true }],
+    "reading_mnemonic": "The readings are the ones you learned with the kanji. Of course, it will be easy if you know the word <vocabulary>Edo</vocabulary> already.",
+    "allMeanings": [
+      { "meaning": "Edo", "primary": true },
+      { "meaning": "Tokyo", "primary": false }
+    ]
+  },
+  {
+    "id": 5249,
+    "level": 29,
+    "word": "添える",
+    "meanings": [
+      { "meaning": "To Add Something To", "primary": true },
+      { "meaning": "To Include Something", "primary": false },
+      { "meaning": "To Accompany", "primary": false },
+      { "meaning": "To Garnish", "primary": false }
+    ],
+    "reading": [{ "reading": "そえる", "primary": true }],
+    "reading_mnemonic": "Since this word consists of a kanji with hiragana attached, you can bet that it will use the kun'yomi reading. You didn't learn that reading with this kanji, so here's a mnemonic to help you: One way <vocabulary>to add something to</vocabulary> something else is to just <reading>sew</reading> (そ) it on!",
+    "allMeanings": [
+      { "meaning": "To Add Something To", "primary": true },
+      { "meaning": "To Include Something", "primary": false },
+      { "meaning": "To Accompany", "primary": false },
+      { "meaning": "To Garnish", "primary": false }
+    ]
+  },
+  {
+    "id": 5250,
+    "level": 29,
+    "word": "添付",
+    "meanings": [
+      { "meaning": "Attachment", "primary": true },
+      { "meaning": "Attaching", "primary": false }
+    ],
+    "reading": [{ "reading": "てんぷ", "primary": true }],
+    "reading_mnemonic": "The reading for 添 is what you'd expect. The reading for 付 is the on'yomi reading ふ, which you've learned with 付近. But for this word it becomes ぷ from the rendaku fairies. Just think of an <vocabulary>attachment</vocabulary> where instead of a document or something, you get an attachment of <reading>poo</reading>p (ぷ). What a gross attachment. Your friend who likes to send poop attachments is dumb.",
+    "allMeanings": [
+      { "meaning": "Attachment", "primary": true },
+      { "meaning": "Attaching", "primary": false }
+    ]
+  },
+  {
+    "id": 9094,
+    "level": 29,
+    "word": "激怒",
+    "meanings": [
+      { "meaning": "Rage", "primary": true },
+      { "meaning": "Be Enraged", "primary": false }
+    ],
+    "reading": [{ "reading": "げきど", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.",
+    "allMeanings": [
+      { "meaning": "Rage", "primary": true },
+      { "meaning": "Be Enraged", "primary": false }
+    ]
+  },
+  {
+    "id": 5253,
+    "level": 29,
+    "word": "熱烈",
+    "meanings": [
+      { "meaning": "Fervent", "primary": true },
+      { "meaning": "Ardent", "primary": false },
+      { "meaning": "Passionate", "primary": false },
+      { "meaning": "Impassioned", "primary": false }
+    ],
+    "reading": [{ "reading": "ねつれつ", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.",
+    "allMeanings": [
+      { "meaning": "Fervent", "primary": true },
+      { "meaning": "Ardent", "primary": false },
+      { "meaning": "Passionate", "primary": false },
+      { "meaning": "Impassioned", "primary": false }
+    ]
+  },
+  {
+    "id": 5254,
+    "level": 29,
+    "word": "猛〜",
+    "meanings": [
+      { "meaning": "Fierce", "primary": true },
+      { "meaning": "Energetic", "primary": false }
+    ],
+    "reading": [{ "reading": "もう", "primary": true }],
+    "reading_mnemonic": "The reading is the same as what you learned with the kanji, probably because it's stuck onto things making it all jukugo and such.",
+    "allMeanings": [
+      { "meaning": "Fierce", "primary": true },
+      { "meaning": "Energetic", "primary": false }
+    ]
+  },
+  {
+    "id": 5252,
+    "level": 29,
+    "word": "猛烈",
+    "meanings": [
+      { "meaning": "Fierce", "primary": true },
+      { "meaning": "Violent", "primary": false },
+      { "meaning": "Intense", "primary": false }
+    ],
+    "reading": [{ "reading": "もうれつ", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.",
+    "allMeanings": [
+      { "meaning": "Fierce", "primary": true },
+      { "meaning": "Violent", "primary": false },
+      { "meaning": "Intense", "primary": false }
+    ]
+  },
+  {
+    "id": 7812,
+    "level": 29,
+    "word": "玄米",
+    "meanings": [
+      { "meaning": "Unpolished Rice", "primary": true },
+      { "meaning": "Unmilled Rice", "primary": false },
+      { "meaning": "Brown Rice", "primary": false }
+    ],
+    "reading": [{ "reading": "げんまい", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word that uses the on'yomi readings of the kanji. You didn't learn this reading for 米 so here's a mnemonic to help you:\n\nThe biggest problem when you buy <vocabulary>unpolished rice</vocabulary> is the <reading>mic</reading>e (まい)! Mice like to eat and sleep in unpolished rice, so you have to be careful when you buy a bag that you get rid of all the sleeping mice before you try to cook it.",
+    "allMeanings": [
+      { "meaning": "Unpolished Rice", "primary": true },
+      { "meaning": "Unmilled Rice", "primary": false },
+      { "meaning": "Brown Rice", "primary": false }
+    ]
+  },
+  {
+    "id": 7811,
+    "level": 29,
+    "word": "玄関",
+    "meanings": [
+      { "meaning": "Entranceway", "primary": true },
+      { "meaning": "Entry Hall", "primary": false },
+      { "meaning": "Foyer", "primary": false },
+      { "meaning": "Entryway", "primary": false }
+    ],
+    "reading": [{ "reading": "げんかん", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word that uses the on'yomi readings of the kanji. You should be able to read this on your own.",
+    "allMeanings": [
+      { "meaning": "Entranceway", "primary": true },
+      { "meaning": "Entry Hall", "primary": false },
+      { "meaning": "Foyer", "primary": false },
+      { "meaning": "Entryway", "primary": false }
+    ]
+  },
+  {
+    "id": 9308,
+    "level": 29,
+    "word": "申請",
+    "meanings": [
+      { "meaning": "Application", "primary": true },
+      { "meaning": "Applying", "primary": false }
+    ],
+    "reading": [{ "reading": "しんせい", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word, which means on'yomi readings from the kanji. You already know this reading for 請, but not for 申, so here's a mnemonic to help you:\n\nToday you finally submitted your <vocabulary>application</vocabulary> for a new <reading>shin</reading> (しん). Your old one had to be painstakingly removed after you banged it against a table. Anyway, congrats on the application for your new shin!",
+    "allMeanings": [
+      { "meaning": "Application", "primary": true },
+      { "meaning": "Applying", "primary": false }
+    ]
+  },
+  {
+    "id": 5255,
+    "level": 29,
+    "word": "略す",
+    "meanings": [
+      { "meaning": "To Abbreviate", "primary": true },
+      { "meaning": "To Omit", "primary": false }
+    ],
+    "reading": [{ "reading": "りゃくす", "primary": true }],
+    "reading_mnemonic": "The reading is, strangely, the same as the reading you learned with the kanji. <reading>りゃく</reading>す.",
+    "allMeanings": [
+      { "meaning": "To Abbreviate", "primary": true },
+      { "meaning": "To Omit", "primary": false }
+    ]
+  },
+  {
+    "id": 5258,
+    "level": 29,
+    "word": "略図",
+    "meanings": [
+      { "meaning": "Rough Diagram", "primary": true },
+      { "meaning": "Rough Map", "primary": false }
+    ],
+    "reading": [{ "reading": "りゃくず", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.",
+    "allMeanings": [
+      { "meaning": "Rough Diagram", "primary": true },
+      { "meaning": "Rough Map", "primary": false }
+    ]
+  },
+  {
+    "id": 5257,
+    "level": 29,
+    "word": "略語",
+    "meanings": [{ "meaning": "Abbreviation", "primary": true }],
+    "reading": [{ "reading": "りゃくご", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.",
+    "allMeanings": [{ "meaning": "Abbreviation", "primary": true }]
+  },
+  {
+    "id": 5260,
+    "level": 29,
+    "word": "痛み",
+    "meanings": [
+      { "meaning": "A Pain", "primary": true },
+      { "meaning": "Pain", "primary": false }
+    ],
+    "reading": [{ "reading": "いたみ", "primary": true }],
+    "reading_mnemonic": "The reading is the same as 痛い. No pain here.",
+    "allMeanings": [
+      { "meaning": "A Pain", "primary": true },
+      { "meaning": "Pain", "primary": false }
+    ]
+  },
+  {
+    "id": 5261,
+    "level": 29,
+    "word": "痛み止め",
+    "meanings": [{ "meaning": "Painkiller", "primary": true }],
+    "reading": [{ "reading": "いたみどめ", "primary": true }],
+    "reading_mnemonic": "The reading is 痛み and 止める put together into one word. Not too painful, right? Just remember the rendaku on the ど.",
+    "allMeanings": [{ "meaning": "Painkiller", "primary": true }]
+  },
+  {
+    "id": 5431,
+    "level": 29,
+    "word": "監督",
+    "meanings": [
+      { "meaning": "Supervision", "primary": true },
+      { "meaning": "Head Coach", "primary": false },
+      { "meaning": "Director", "primary": false }
+    ],
+    "reading": [{ "reading": "かんとく", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.",
+    "allMeanings": [
+      { "meaning": "Supervision", "primary": true },
+      { "meaning": "Head Coach", "primary": false },
+      { "meaning": "Director", "primary": false }
+    ]
+  },
+  {
+    "id": 5430,
+    "level": 29,
+    "word": "監視",
+    "meanings": [
+      { "meaning": "Observation", "primary": true },
+      { "meaning": "Monitor", "primary": false },
+      { "meaning": "Keep Watch Over", "primary": false },
+      { "meaning": "Surveillance", "primary": false }
+    ],
+    "reading": [{ "reading": "かんし", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word that uses the on'yomi readings of the kanji. You should be able to read this on your own.",
+    "allMeanings": [
+      { "meaning": "Observation", "primary": true },
+      { "meaning": "Monitor", "primary": false },
+      { "meaning": "Keep Watch Over", "primary": false },
+      { "meaning": "Surveillance", "primary": false }
+    ]
+  },
+  {
+    "id": 5277,
+    "level": 29,
+    "word": "直航",
+    "meanings": [
+      { "meaning": "Nonstop Flight", "primary": true },
+      { "meaning": "Direct Voyage", "primary": false }
+    ],
+    "reading": [{ "reading": "ちょっこう", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.",
+    "allMeanings": [
+      { "meaning": "Nonstop Flight", "primary": true },
+      { "meaning": "Direct Voyage", "primary": false }
+    ]
+  },
+  {
+    "id": 9296,
+    "level": 29,
+    "word": "相次ぐ",
+    "meanings": [
+      { "meaning": "To Happen Successively", "primary": true },
+      { "meaning": "To Happen One After Another", "primary": false }
+    ],
+    "reading": [{ "reading": "あいつぐ", "primary": true }],
+    "reading_mnemonic": "Since this word consists of kanji with hiragana attached, you can bet that it will use the kun'yomi readings. You've learned this reading for 相, but not for 次. Instead of giving you a mnemonic, we think it's easier to remember that 次ぐ being read つぐ comes from the 次 reading つぎ. Not too hard! All in all, that makes this あいつぐ.",
+    "allMeanings": [
+      { "meaning": "To Happen Successively", "primary": true },
+      { "meaning": "To Happen One After Another", "primary": false }
+    ]
+  },
+  {
+    "id": 5256,
+    "level": 29,
+    "word": "省略",
+    "meanings": [
+      { "meaning": "Abbreviation", "primary": true },
+      { "meaning": "Omission", "primary": false },
+      { "meaning": "Abbreviate", "primary": false },
+      { "meaning": "Leave Out", "primary": false }
+    ],
+    "reading": [{ "reading": "しょうりゃく", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.",
+    "allMeanings": [
+      { "meaning": "Abbreviation", "primary": true },
+      { "meaning": "Omission", "primary": false },
+      { "meaning": "Abbreviate", "primary": false },
+      { "meaning": "Leave Out", "primary": false }
+    ]
+  },
+  {
+    "id": 5241,
+    "level": 29,
+    "word": "看板",
+    "meanings": [
+      { "meaning": "Signboard", "primary": true },
+      { "meaning": "Billboard", "primary": false },
+      { "meaning": "Store Sign", "primary": false }
+    ],
+    "reading": [{ "reading": "かんばん", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.",
+    "allMeanings": [
+      { "meaning": "Signboard", "primary": true },
+      { "meaning": "Billboard", "primary": false },
+      { "meaning": "Store Sign", "primary": false }
+    ]
+  },
+  {
+    "id": 5264,
+    "level": 29,
+    "word": "眠り薬",
+    "meanings": [
+      { "meaning": "Sleeping Potion", "primary": true },
+      { "meaning": "Sleep Remedy", "primary": false }
+    ],
+    "reading": [{ "reading": "ねむりぐすり", "primary": true }],
+    "reading_mnemonic": "The reading is 眠い plus 薬 put together in one ... zz zzzzzZZZzz\nJust remember that くすり turns into ぐすり here because of rendaku. ",
+    "allMeanings": [
+      { "meaning": "Sleeping Potion", "primary": true },
+      { "meaning": "Sleep Remedy", "primary": false }
+    ]
+  },
+  {
+    "id": 5263,
+    "level": 29,
+    "word": "眠る",
+    "meanings": [
+      { "meaning": "To Sleep", "primary": true },
+      { "meaning": "To Fall Asleep", "primary": false }
+    ],
+    "reading": [{ "reading": "ねむる", "primary": true }],
+    "reading_mnemonic": "The reading comes from 眠い.",
+    "allMeanings": [
+      { "meaning": "To Sleep", "primary": true },
+      { "meaning": "To Fall Asleep", "primary": false }
+    ]
+  },
+  {
+    "id": 5265,
+    "level": 29,
+    "word": "睡眠薬",
+    "meanings": [
+      { "meaning": "Sleeping Pills", "primary": true },
+      { "meaning": "Sleeping Medication", "primary": false }
+    ],
+    "reading": [{ "reading": "すいみんやく", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.",
+    "allMeanings": [
+      { "meaning": "Sleeping Pills", "primary": true },
+      { "meaning": "Sleeping Medication", "primary": false }
+    ]
+  },
+  {
+    "id": 5227,
+    "level": 29,
+    "word": "禅宗",
+    "meanings": [{ "meaning": "Zen Sect", "primary": true }],
+    "reading": [{ "reading": "ぜんしゅう", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.",
+    "allMeanings": [{ "meaning": "Zen Sect", "primary": true }]
+  },
+  {
+    "id": 5266,
+    "level": 29,
+    "word": "積もる",
+    "meanings": [
+      { "meaning": "To Accumulate", "primary": true },
+      { "meaning": "To Get Piled Up", "primary": false }
+    ],
+    "reading": [{ "reading": "つもる", "primary": true }],
+    "reading_mnemonic": "If something accumulates, you can start with one, but you need at least <reading>two</reading> (つ) things to say it has accumulated. If you don't, then there's nothing accumulating at all.",
+    "allMeanings": [
+      { "meaning": "To Accumulate", "primary": true },
+      { "meaning": "To Get Piled Up", "primary": false }
+    ]
+  },
+  {
+    "id": 5270,
+    "level": 29,
+    "word": "索引",
+    "meanings": [{ "meaning": "Index", "primary": true }],
+    "reading": [{ "reading": "さくいん", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well. Just think of the first part of the word <reading>in</reading>dex (いん). Where do you search? In the index.",
+    "allMeanings": [{ "meaning": "Index", "primary": true }]
+  },
+  {
+    "id": 5231,
+    "level": 29,
+    "word": "緊張",
+    "meanings": [
+      { "meaning": "Stress", "primary": true },
+      { "meaning": "Tension", "primary": false },
+      { "meaning": "Nervous", "primary": false }
+    ],
+    "reading": [{ "reading": "きんちょう", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.",
+    "allMeanings": [
+      { "meaning": "Stress", "primary": true },
+      { "meaning": "Tension", "primary": false },
+      { "meaning": "Nervous", "primary": false }
+    ]
+  },
+  {
+    "id": 5271,
+    "level": 29,
+    "word": "緊急",
+    "meanings": [
+      { "meaning": "Urgent", "primary": true },
+      { "meaning": "Emergency", "primary": false }
+    ],
+    "reading": [{ "reading": "きんきゅう", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.",
+    "allMeanings": [
+      { "meaning": "Urgent", "primary": true },
+      { "meaning": "Emergency", "primary": false }
+    ]
+  },
+  {
+    "id": 5273,
+    "level": 29,
+    "word": "締まる",
+    "meanings": [
+      { "meaning": "To Tighten", "primary": true },
+      { "meaning": "To Become Tight", "primary": false },
+      { "meaning": "To Be Toned", "primary": false }
+    ],
+    "reading": [{ "reading": "しまる", "primary": true }],
+    "reading_mnemonic": "What can you do if you want something <vocabulary>to tighten</vocabulary> or <vocabulary>to become tight</vocabulary>? You need to hug your <reading>shee</reading>p (し) really close until...\n\nThe sheep tightens into a tiny little ball. Cute!",
+    "allMeanings": [
+      { "meaning": "To Tighten", "primary": true },
+      { "meaning": "To Become Tight", "primary": false },
+      { "meaning": "To Be Toned", "primary": false }
+    ]
+  },
+  {
+    "id": 5272,
+    "level": 29,
+    "word": "締切",
+    "meanings": [
+      { "meaning": "Deadline", "primary": true },
+      { "meaning": "Due Date", "primary": false }
+    ],
+    "reading": [{ "reading": "しめきり", "primary": true }],
+    "reading_mnemonic": "The reading for this is the stem form of both verbs, so 締め (しめ) and 切り (きり), put together! ",
+    "allMeanings": [
+      { "meaning": "Deadline", "primary": true },
+      { "meaning": "Due Date", "primary": false }
+    ]
+  },
+  {
+    "id": 5391,
+    "level": 29,
+    "word": "織物",
+    "meanings": [
+      { "meaning": "Textile", "primary": true },
+      { "meaning": "Fabric", "primary": false }
+    ],
+    "reading": [{ "reading": "おりもの", "primary": true }],
+    "reading_mnemonic": "The readings are the kun'yomi readings. With 織 you can pull the reading from 織る. With 物 you've probably seen it enough to know that it's often もの and not ぶつ. Just think of a piece of <vocabulary>cloth</vocabulary> that is <reading>mono</reading>chrome.",
+    "allMeanings": [
+      { "meaning": "Textile", "primary": true },
+      { "meaning": "Fabric", "primary": false }
+    ]
+  },
+  {
+    "id": 5394,
+    "level": 29,
+    "word": "腹が減った",
+    "meanings": [
+      { "meaning": "Hungry", "primary": true },
+      { "meaning": "I'm Hungry", "primary": false }
+    ],
+    "reading": [{ "reading": "はらがへった", "primary": true }],
+    "reading_mnemonic": "The reading is 腹 plus 減る put together. With these two combined, you have はらがへった.\n\nIn casual speech, you might hear 腹減った without the が more often. The version with が is more common in writing or fixed expressions like 腹が減っては戦ができぬ (you can't fight on an empty stomach).",
+    "allMeanings": [
+      { "meaning": "Hungry", "primary": true },
+      { "meaning": "I'm Hungry", "primary": false }
+    ]
+  },
+  {
+    "id": 5078,
+    "level": 29,
+    "word": "腹切り",
+    "meanings": [
+      { "meaning": "Harakiri", "primary": true },
+      { "meaning": "Ritual Suicide", "primary": false }
+    ],
+    "reading": [{ "reading": "はらきり", "primary": true }],
+    "reading_mnemonic": "The readings come from 腹 and 切る. If you're lucky, you already know the word harakiri as it's made its way into English as well.",
+    "allMeanings": [
+      { "meaning": "Harakiri", "primary": true },
+      { "meaning": "Ritual Suicide", "primary": false }
+    ]
+  },
+  {
+    "id": 5076,
+    "level": 29,
+    "word": "腹立つ",
+    "meanings": [
+      { "meaning": "To Get Mad", "primary": true },
+      { "meaning": "To Get Angry", "primary": false }
+    ],
+    "reading": [
+      { "reading": "はらだつ", "primary": true },
+      { "reading": "はらたつ", "primary": false }
+    ],
+    "reading_mnemonic": "The readings are 腹 plus 立つ put together. The たつ becomes だつ as a standard reading though.\n\nWhile はらだつ is the standard reading for 腹立つ, it's usually found in more formal settings or writing. You'll probably hear はらたつ more often in everyday conversations, as it’s a shorter, more colloquial way of expressing 腹が立つ!",
+    "allMeanings": [
+      { "meaning": "To Get Mad", "primary": true },
+      { "meaning": "To Get Angry", "primary": false }
+    ]
+  },
+  {
+    "id": 5275,
+    "level": 29,
+    "word": "航法",
+    "meanings": [{ "meaning": "Navigation", "primary": true }],
+    "reading": [{ "reading": "こうほう", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.",
+    "allMeanings": [{ "meaning": "Navigation", "primary": true }]
+  },
+  {
+    "id": 5276,
+    "level": 29,
+    "word": "航空",
+    "meanings": [
+      { "meaning": "Aviation", "primary": true },
+      { "meaning": "Flight", "primary": false }
+    ],
+    "reading": [{ "reading": "こうくう", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.",
+    "allMeanings": [
+      { "meaning": "Aviation", "primary": true },
+      { "meaning": "Flight", "primary": false }
+    ]
+  },
+  {
+    "id": 5293,
+    "level": 29,
+    "word": "英雄",
+    "meanings": [{ "meaning": "Hero", "primary": true }],
+    "reading": [{ "reading": "えいゆう", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.",
+    "allMeanings": [{ "meaning": "Hero", "primary": true }]
+  },
+  {
+    "id": 5279,
+    "level": 29,
+    "word": "街道",
+    "meanings": [
+      { "meaning": "Main Road", "primary": true },
+      { "meaning": "Highroad", "primary": false }
+    ],
+    "reading": [{ "reading": "かいどう", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well. One thing to note though:\n\nThis word uses the かい reading for 街 (not がい). And even when 街道 is a suffix, it never gets rendaku'd! Remember this by imagining every <vocabulary>main road</vocabulary> being full of <reading>kay</reading>aks (かい) for some reason. Just a traffic jam of kayaks up and down the 街道.",
+    "allMeanings": [
+      { "meaning": "Main Road", "primary": true },
+      { "meaning": "Highroad", "primary": false }
+    ]
+  },
+  {
+    "id": 5242,
+    "level": 29,
+    "word": "見極める",
+    "meanings": [
+      { "meaning": "To Get To The Bottom Of", "primary": true },
+      { "meaning": "To Identify Something", "primary": false }
+    ],
+    "reading": [{ "reading": "みきわめる", "primary": true }],
+    "reading_mnemonic": "The readings come from the words 見る and 極める put together. Get to the bottom of this word and learn it.",
+    "allMeanings": [
+      { "meaning": "To Get To The Bottom Of", "primary": true },
+      { "meaning": "To Identify Something", "primary": false }
+    ]
+  },
+  {
+    "id": 5397,
+    "level": 29,
+    "word": "訪れる",
+    "meanings": [{ "meaning": "To Visit", "primary": true }],
+    "reading": [{ "reading": "おとずれる", "primary": true }],
+    "reading_mnemonic": "The reading isn't the same as 訪ねる, though, I'm afraid. It's おとず. Remember how this means just visiting a place? Unfortunately, you completely forgot what you were visiting. When you finally remember, it's because you were looking down to think. It's to look at the toes of the giant Buddha statue. \"<reading>Oh Toes</reading>!\" (おとず), you exclaim.",
+    "allMeanings": [{ "meaning": "To Visit", "primary": true }]
+  },
+  {
+    "id": 5280,
+    "level": 29,
+    "word": "診る",
+    "meanings": [
+      { "meaning": "To Examine A Patient", "primary": true },
+      { "meaning": "To Examine", "primary": false }
+    ],
+    "reading": [{ "reading": "みる", "primary": true }],
+    "reading_mnemonic": "The reading is the same as 見る, which you have to do when you are examining a patient. So, you look and see all you can about the patient while you examine them, making this reading <reading>み</reading>る as well.",
+    "allMeanings": [
+      { "meaning": "To Examine A Patient", "primary": true },
+      { "meaning": "To Examine", "primary": false }
+    ]
+  },
+  {
+    "id": 5281,
+    "level": 29,
+    "word": "診察",
+    "meanings": [
+      { "meaning": "Medical Exam", "primary": true },
+      { "meaning": "Medical Examination", "primary": false }
+    ],
+    "reading": [{ "reading": "しんさつ", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.",
+    "allMeanings": [
+      { "meaning": "Medical Exam", "primary": true },
+      { "meaning": "Medical Examination", "primary": false }
+    ]
+  },
+  {
+    "id": 5166,
+    "level": 29,
+    "word": "診断",
+    "meanings": [
+      { "meaning": "Diagnosis", "primary": true },
+      { "meaning": "Diagnose", "primary": false }
+    ],
+    "reading": [{ "reading": "しんだん", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.",
+    "allMeanings": [
+      { "meaning": "Diagnosis", "primary": true },
+      { "meaning": "Diagnose", "primary": false }
+    ]
+  },
+  {
+    "id": 5282,
+    "level": 29,
+    "word": "詰める",
+    "meanings": [
+      { "meaning": "To Stuff In", "primary": true },
+      { "meaning": "To Cram In", "primary": false }
+    ],
+    "reading": [{ "reading": "つめる", "primary": true }],
+    "reading_mnemonic": "Since this word consists of a kanji with hiragana attached, you can bet that it will use the kun'yomi reading. You learned that reading with the kanji, so you should have no troubles here.",
+    "allMeanings": [
+      { "meaning": "To Stuff In", "primary": true },
+      { "meaning": "To Cram In", "primary": false }
+    ]
+  },
+  {
+    "id": 5081,
+    "level": 29,
+    "word": "誘う",
+    "meanings": [
+      { "meaning": "To Invite", "primary": true },
+      { "meaning": "To Tempt", "primary": false },
+      { "meaning": "To Entice", "primary": false }
+    ],
+    "reading": [{ "reading": "さそう", "primary": true }],
+    "reading_mnemonic": "Since this word consists of a kanji with hiragana attached, you can bet that it will use the kun'yomi reading. You didn't learn that reading with this kanji, so here's a mnemonic to help you: You <reading>saw so</reading> (さそ) much in this person that you decided <vocabulary>to invite</vocabulary> them to dinner.",
+    "allMeanings": [
+      { "meaning": "To Invite", "primary": true },
+      { "meaning": "To Tempt", "primary": false },
+      { "meaning": "To Entice", "primary": false }
+    ]
+  },
+  {
+    "id": 5288,
+    "level": 29,
+    "word": "請ける",
+    "meanings": [
+      { "meaning": "To Take", "primary": true },
+      { "meaning": "To Undertake", "primary": false },
+      { "meaning": "To Accept", "primary": false },
+      { "meaning": "To Receive", "primary": false }
+    ],
+    "reading": [{ "reading": "うける", "primary": true }],
+    "reading_mnemonic": "What's another word for \"to accept\" or \"to receive\"? How about 受ける? They share a reading!",
+    "allMeanings": [
+      { "meaning": "To Take", "primary": true },
+      { "meaning": "To Undertake", "primary": false },
+      { "meaning": "To Accept", "primary": false },
+      { "meaning": "To Receive", "primary": false }
+    ]
+  },
+  {
+    "id": 5285,
+    "level": 29,
+    "word": "請求",
+    "meanings": [
+      { "meaning": "Demand", "primary": true },
+      { "meaning": "Claim", "primary": false },
+      { "meaning": "Request", "primary": false },
+      { "meaning": "Charge", "primary": false }
+    ],
+    "reading": [{ "reading": "せいきゅう", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.",
+    "allMeanings": [
+      { "meaning": "Demand", "primary": true },
+      { "meaning": "Claim", "primary": false },
+      { "meaning": "Request", "primary": false },
+      { "meaning": "Charge", "primary": false }
+    ]
+  },
+  {
+    "id": 9090,
+    "level": 29,
+    "word": "豚カツ",
+    "meanings": [
+      { "meaning": "Tonkatsu", "primary": true },
+      { "meaning": "Breaded Pork Cutlet", "primary": false }
+    ],
+    "reading": [
+      { "reading": "とんかつ", "primary": true },
+      { "reading": "とんカツ", "primary": false }
+    ],
+    "reading_mnemonic": "This word uses the on'yomi of 豚. You haven't learned that yet, so here's a mnemonic to help you:\n\nYou really like <vocabulary>tonkatsu</vocabulary> so you just ate a whole <reading>ton</reading> (とん) of it. Imagine how you feel after eating a ton of <vocabulary>breaded pork cutlet</vocabulary>.",
+    "allMeanings": [
+      { "meaning": "Tonkatsu", "primary": true },
+      { "meaning": "Breaded Pork Cutlet", "primary": false }
+    ]
+  },
+  {
+    "id": 5289,
+    "level": 29,
+    "word": "貸し〜",
+    "meanings": [{ "meaning": "Rental", "primary": true }],
+    "reading": [{ "reading": "かし", "primary": true }],
+    "reading_mnemonic": "The reading is the same as 貸す.",
+    "allMeanings": [{ "meaning": "Rental", "primary": true }]
+  },
+  {
+    "id": 8720,
+    "level": 29,
+    "word": "迷い",
+    "meanings": [
+      { "meaning": "Hesitation", "primary": true },
+      { "meaning": "Indecision", "primary": false },
+      { "meaning": "Doubt", "primary": false }
+    ],
+    "reading": [{ "reading": "まよい", "primary": true }],
+    "reading_mnemonic": "You learned this reading already when you learned 迷う! Just swap the う for an い.",
+    "allMeanings": [
+      { "meaning": "Hesitation", "primary": true },
+      { "meaning": "Indecision", "primary": false },
+      { "meaning": "Doubt", "primary": false }
+    ]
+  },
+  {
+    "id": 7501,
+    "level": 29,
+    "word": "迷惑メール",
+    "meanings": [
+      { "meaning": "Spam", "primary": true },
+      { "meaning": "Spam Mail", "primary": false },
+      { "meaning": "Junk Mail", "primary": false },
+      { "meaning": "Unsolicited Mail", "primary": false }
+    ],
+    "reading": [
+      { "reading": "めいわくめーる", "primary": true },
+      { "reading": "めいわくメール", "primary": false }
+    ],
+    "reading_mnemonic": "The reading comes from 迷惑, so if you know that you know this (and then this vocab word won't be unsolicited as well!)",
+    "allMeanings": [
+      { "meaning": "Spam", "primary": true },
+      { "meaning": "Spam Mail", "primary": false },
+      { "meaning": "Junk Mail", "primary": false },
+      { "meaning": "Unsolicited Mail", "primary": false }
+    ]
+  },
+  {
+    "id": 5290,
+    "level": 29,
+    "word": "道に迷う",
+    "meanings": [
+      { "meaning": "To Get Lost", "primary": true },
+      { "meaning": "To Be Lost", "primary": false }
+    ],
+    "reading": [{ "reading": "みちにまよう", "primary": true }],
+    "reading_mnemonic": "The reading comes from the words 道 and 迷う.",
+    "allMeanings": [
+      { "meaning": "To Get Lost", "primary": true },
+      { "meaning": "To Be Lost", "primary": false }
+    ]
+  },
+  {
+    "id": 5291,
+    "level": 29,
+    "word": "閣僚",
+    "meanings": [{ "meaning": "Cabinet Ministers", "primary": true }],
+    "reading": [{ "reading": "かくりょう", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.",
+    "allMeanings": [{ "meaning": "Cabinet Ministers", "primary": true }]
+  },
+  {
+    "id": 5292,
+    "level": 29,
+    "word": "閣議",
+    "meanings": [{ "meaning": "Cabinet Meeting", "primary": true }],
+    "reading": [{ "reading": "かくぎ", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.",
+    "allMeanings": [{ "meaning": "Cabinet Meeting", "primary": true }]
+  },
+  {
+    "id": 5267,
+    "level": 29,
+    "word": "面積",
+    "meanings": [{ "meaning": "Area", "primary": true }],
+    "reading": [{ "reading": "めんせき", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.",
+    "allMeanings": [{ "meaning": "Area", "primary": true }]
+  },
+  {
+    "id": 5294,
+    "level": 29,
+    "word": "韓国",
+    "meanings": [
+      { "meaning": "South Korea", "primary": true },
+      { "meaning": "Korea", "primary": false }
+    ],
+    "reading": [{ "reading": "かんこく", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.",
+    "allMeanings": [
+      { "meaning": "South Korea", "primary": true },
+      { "meaning": "Korea", "primary": false }
+    ]
+  },
+  {
+    "id": 7470,
+    "level": 29,
+    "word": "黒板",
+    "meanings": [{ "meaning": "Blackboard", "primary": true }],
+    "reading": [{ "reading": "こくばん", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word that uses the on'yomi readings of the kanji. You should be able to read this on your own.",
+    "allMeanings": [{ "meaning": "Blackboard", "primary": true }]
+  }
+]
