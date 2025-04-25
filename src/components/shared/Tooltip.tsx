@@ -1,4 +1,4 @@
-import { FC, PropsWithChildren, useRef } from "react";
+import { FC, PropsWithChildren, useRef } from 'react';
 
 export const Tooltip: FC<PropsWithChildren> = ({ children }) => {
   const ref = useRef<HTMLDivElement>(null);

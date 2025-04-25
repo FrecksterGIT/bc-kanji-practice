@@ -1,39 +1,39 @@
-import {StrictMode} from 'react'
-import {createRoot} from 'react-dom/client'
-import {createBrowserRouter, RouterProvider, Navigate} from 'react-router-dom'
-import './index.css'
-import App from './App.tsx'
-import Kanji from './components/Kanji'
-import Vocabulary from './components/Vocabulary'
-import Settings from './components/Settings'
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom';
+import './index.css';
+import App from './App.tsx';
+import KanjiPage from './components/kanji/KanjiPage.tsx';
+import VocabularyPage from './components/vocabulary/VocabularyPage.tsx';
+import Settings from './components/settings/Settings.tsx';
 
 const router = createBrowserRouter([
-    {
-        path: '/',
-        element: <App />,
-        children: [
-            {
-                path: '',
-                element: <Navigate to="kanji" replace />
-            },
-            {
-                path: 'kanji',
-                element: <Kanji />
-            },
-            {
-                path: 'vocabulary',
-                element: <Vocabulary />
-            },
-            {
-                path: 'settings',
-                element: <Settings />
-            }
-        ]
-    }
+  {
+    path: '/',
+    element: <App />,
+    children: [
+      {
+        path: '',
+        element: <Navigate to="kanji" replace />,
+      },
+      {
+        path: 'kanji',
+        element: <KanjiPage />,
+      },
+      {
+        path: 'vocabulary',
+        element: <VocabularyPage />,
+      },
+      {
+        path: 'settings',
+        element: <Settings />,
+      },
+    ],
+  },
 ]);
 
 createRoot(document.getElementById('root')!).render(
-    <StrictMode>
-        <RouterProvider router={router} />
-    </StrictMode>,
-)
+  <StrictMode>
+    <RouterProvider router={router} />
+  </StrictMode>
+);

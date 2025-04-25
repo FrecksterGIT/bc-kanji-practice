@@ -29,7 +29,7 @@ export function useKanjiComposition(word: string): UseKanjiCompositionResult {
 
         // Create an index map for faster lookups
         const kanjiMap = new Map<string, KanjiItem>();
-        allKanji.forEach(item => {
+        allKanji.forEach((item) => {
           kanjiMap.set(item.kanji, item);
         });
 
@@ -45,36 +45,37 @@ export function useKanjiComposition(word: string): UseKanjiCompositionResult {
   );
 
   // Process the kanji data to find matches for the word
-  const kanjiData = useLiveQuery(
-    () => {
-      if (!word || !allKanjiData) {
-        return new Map<string, KanjiItem>();
-      }
+  const kanjiData =
+    useLiveQuery(
+      () => {
+        if (!word || !allKanjiData) {
+          return new Map<string, KanjiItem>();
+        }
 
-      try {
-        const resultMap = new Map<string, KanjiItem>();
-        const { kanjiMap } = allKanjiData;
+        try {
+          const resultMap = new Map<string, KanjiItem>();
+          const { kanjiMap } = allKanjiData;
 
-        // Extract unique kanji characters from the vocabulary word
-        const uniqueKanji = [...new Set(word.split(''))];
+          // Extract unique kanji characters from the vocabulary word
+          const uniqueKanji = [...new Set(word.split(''))];
 
-        // Find kanji data for each character using the pre-built map for O(1) lookups
-        uniqueKanji.forEach(char => {
-          const kanjiItem = kanjiMap.get(char);
-          if (kanjiItem) {
-            resultMap.set(char, kanjiItem);
-          }
-        });
+          // Find kanji data for each character using the pre-built map for O(1) lookups
+          uniqueKanji.forEach((char) => {
+            const kanjiItem = kanjiMap.get(char);
+            if (kanjiItem) {
+              resultMap.set(char, kanjiItem);
+            }
+          });
 
-        return resultMap;
-      } catch (err: unknown) {
-        setError(err instanceof Error ? err : new Error('An unknown error occurred'));
-        return new Map<string, KanjiItem>();
-      }
-    },
-    // Dependencies array for useLiveQuery - recompute when word or allKanjiData changes
-    [word, allKanjiData]
-  ) || new Map<string, KanjiItem>();
+          return resultMap;
+        } catch (err: unknown) {
+          setError(err instanceof Error ? err : new Error('An unknown error occurred'));
+          return new Map<string, KanjiItem>();
+        }
+      },
+      // Dependencies array for useLiveQuery - recompute when word or allKanjiData changes
+      [word, allKanjiData]
+    ) || new Map<string, KanjiItem>();
 
   // Determine loading state
   const loading = allKanjiData === undefined;
@@ -82,6 +83,6 @@ export function useKanjiComposition(word: string): UseKanjiCompositionResult {
   return {
     kanjiData,
     loading,
-    error
+    error,
   };
 }

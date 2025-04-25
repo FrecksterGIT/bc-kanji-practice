@@ -14,7 +14,10 @@ import {
   WanikaniSubject,
   WanikaniReviewStatistic,
   WanikaniStudyMaterial,
-  WanikaniLevelProgression, WanikaniReview, WanikaniVoiceActor, WanikaniReset
+  WanikaniLevelProgression,
+  WanikaniReview,
+  WanikaniVoiceActor,
+  WanikaniReset,
 } from '../types';
 
 /**
@@ -33,7 +36,7 @@ export class WaniKaniApiClient {
   constructor(apiKey: string) {
     this.apiKey = apiKey;
     this.headers = {
-      'Authorization': `Bearer ${apiKey}`,
+      Authorization: `Bearer ${apiKey}`,
       'Wanikani-Revision': '20170710',
     };
   }
@@ -51,9 +54,7 @@ export class WaniKaniApiClient {
 
     // Determine if the input is a full URL or an endpoint
     const isFullUrl = endpointOrUrl.startsWith('http');
-    const url = isFullUrl
-      ? new URL(endpointOrUrl)
-      : new URL(`${this.baseUrl}${endpointOrUrl}`);
+    const url = isFullUrl ? new URL(endpointOrUrl) : new URL(`${this.baseUrl}${endpointOrUrl}`);
 
     // Add query parameters if provided
     if (params) {
@@ -70,7 +71,7 @@ export class WaniKaniApiClient {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
 
-    return await response.json() as T;
+    return (await response.json()) as T;
   }
 
   /**
@@ -102,7 +103,9 @@ export class WaniKaniApiClient {
    * @param params The parameters object to process
    * @returns A record of string keys and string values for use in API requests
    */
-  private buildQueryParams(params?: Record<string, string | number | boolean | Date | string[] | number[] | undefined>): Record<string, string> {
+  private buildQueryParams(
+    params?: Record<string, string | number | boolean | Date | string[] | number[] | undefined>
+  ): Record<string, string> {
     const queryParams: Record<string, string> = {};
 
     if (!params) {
@@ -248,7 +251,6 @@ export class WaniKaniApiClient {
 
     if (fetchAllPages) {
       return await this.fetchAllPages(response, maxPages);
-
     }
 
     return response;
@@ -275,7 +277,10 @@ export class WaniKaniApiClient {
   ): Promise<WanikaniReviewStatisticsResponse | WanikaniReviewStatistic[]> {
     const queryParams = this.buildQueryParams(params);
 
-    const response = await this.request<WanikaniReviewStatisticsResponse>('/review_statistics', queryParams);
+    const response = await this.request<WanikaniReviewStatisticsResponse>(
+      '/review_statistics',
+      queryParams
+    );
 
     if (fetchAllPages) {
       return await this.fetchAllPages(response, maxPages);
@@ -304,7 +309,10 @@ export class WaniKaniApiClient {
   ): Promise<WanikaniStudyMaterialsResponse | WanikaniStudyMaterial[]> {
     const queryParams = this.buildQueryParams(params);
 
-    const response = await this.request<WanikaniStudyMaterialsResponse>('/study_materials', queryParams);
+    const response = await this.request<WanikaniStudyMaterialsResponse>(
+      '/study_materials',
+      queryParams
+    );
 
     if (fetchAllPages) {
       return await this.fetchAllPages(response, maxPages);
@@ -367,7 +375,10 @@ export class WaniKaniApiClient {
   ): Promise<WanikaniLevelProgressionsResponse | WanikaniLevelProgression[]> {
     const queryParams = this.buildQueryParams(params);
 
-    const response = await this.request<WanikaniLevelProgressionsResponse>('/level_progressions', queryParams);
+    const response = await this.request<WanikaniLevelProgressionsResponse>(
+      '/level_progressions',
+      queryParams
+    );
 
     if (fetchAllPages) {
       return await this.fetchAllPages(response, maxPages);

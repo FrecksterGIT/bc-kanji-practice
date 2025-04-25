@@ -1,26 +1,26 @@
 @import 'tailwindcss';
 
 @utility separated-comma {
-    &:not(:empty) ~ &:not(:empty):before {
-        content: ", ";
-    }
+  &:not(:empty) ~ &:not(:empty):before {
+    content: ', ';
+  }
 }
 
 @theme {
-    --font-*: initial;
-    --font-sans: Noto Sans JP;
+  --font-*: initial;
+  --font-sans: Noto Sans JP;
 
-    --grid-template-columns-pager: 32px auto 32px;
-    --grid-template-columns-header: auto repeat(3, max-content);
-    --grid-template-columns-header-mobile: auto repeat(2, max-content);
+  --grid-template-columns-pager: 32px auto 32px;
+  --grid-template-columns-header: auto repeat(3, max-content);
+  --grid-template-columns-header-mobile: auto repeat(2, max-content);
 
-    --text-kanji: 14rem;
-    --text-kanji-mobile: 8rem;
-    --text-vocabulary: 9rem;
-    --text-vocabulary-mobile: 2.5rem;
+  --text-kanji: 14rem;
+  --text-kanji-mobile: 8rem;
+  --text-vocabulary: 9rem;
+  --text-vocabulary-mobile: 2.5rem;
 
-    --width-kanji: 24rem;
-    --width-kanji-mobile: 14rem;
+  --width-kanji: 24rem;
+  --width-kanji-mobile: 14rem;
 }
 
 /*
@@ -32,11 +32,11 @@
   color utility to any element that depends on these defaults.
 */
 @layer base {
-    *,
-    ::after,
-    ::before,
-    ::backdrop,
-    ::file-selector-button {
-        border-color: var(--color-gray-200, currentColor);
-    }
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
 }

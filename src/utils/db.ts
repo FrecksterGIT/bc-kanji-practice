@@ -55,6 +55,8 @@ export const getCacheKey = (dataType: 'kanji' | 'vocabulary', level: number): st
  * @param dataType The type of data ('kanji' or 'vocabulary')
  * @returns The store table for the data type
  */
-export const getStoreTable = <T extends KanjiItem | VocabularyItem>(dataType: 'kanji' | 'vocabulary'): Table<CachedData<T>> => {
+export const getStoreTable = <T extends KanjiItem | VocabularyItem>(
+  dataType: 'kanji' | 'vocabulary'
+): Table<CachedData<T>> => {
   return (dataType === 'kanji' ? db.kanjiStore : db.vocabularyStore) as Table<CachedData<T>>;
 };

@@ -3,47 +3,58 @@
 // Type for the data type parameter
 export type DataType = 'kanji' | 'vocabulary';
 
-// Kanji data types
+// KanjiPage data types
 export interface KanjiItem {
-    id: number;
+  id: number;
+  level: number;
+  kanji: string;
+  onyomi: {
+    reading: string;
+    primary: boolean;
+    accepted_answer: boolean;
+    type: string;
+  }[];
+  kunyomi: {
+    reading: string;
+    primary: boolean;
+    accepted_answer: boolean;
+    type: string;
+  }[];
+  meanings: {
+    meaning: string;
+    primary: boolean;
+    accepted_answer: boolean;
+  }[];
+  meaning_mnemonic: string;
+  meaning_hint: string;
+  reading_mnemonic: string;
+  reading_hint: string;
+  vocabulary: Array<{
+    word: string;
     level: number;
-    kanji: string;
-    onyomi: {
-        reading: string;
-        primary: boolean;
-        accepted_answer: boolean;
-        type: string;
-    }[];
-    kunyomi: {
-        reading: string;
-        primary: boolean;
-        accepted_answer: boolean;
-        type: string;
-    }[];
-    meanings: {
-        meaning: string;
-        primary: boolean;
-        accepted_answer: boolean;
-    }[];
+    meaning: string;
+    reading: string;
+  }>;
 }
 
-// Vocabulary data types
+// VocabularyPage data types
 export interface VocabularyItem {
-    id: number;
-    level: number;
-    word: string;
-    reading: {
-        reading: string;
-        primary: boolean;
-    }[];
-    meanings: {
-        meaning: string;
-        primary: boolean;
-    }[];
+  id: number;
+  level: number;
+  word: string;
+  reading: {
+    reading: string;
+    primary: boolean;
+  }[];
+  meanings: {
+    meaning: string;
+    primary: boolean;
+  }[];
+  reading_mnemonic: string;
 }
 
 // Interface for cached data
 export interface CachedData<T> {
-    data: T[];
-    timestamp: number;
+  data: T[];
+  timestamp: number;
 }
