@@ -15,8 +15,8 @@ const SelectableButton: FC<SelectableButtonProps> = ({ position }) => {
 
   const backgroundColor = useMemo(() => {
     if (selected) return 'kanji' in items[position] ? 'bg-pink-500' : 'bg-purple-500';
-    return 'text-gray-400';
-  }, [selected, items, position]);
+    return (valid) ? 'text-green-700' : 'text-gray-400';
+  }, [selected, items, position, valid]);
 
   const textColor = useMemo(() => {
     if (selected) return 'text-white';
