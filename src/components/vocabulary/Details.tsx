@@ -21,7 +21,7 @@ const Details: FC = () => {
           <button className="text-9xl cursor-pointer" onClick={() => speak(vocabulary.word)}>
             {vocabulary.word}
           </button>
-          <div className="absolute top-0 right-0">
+          <div className="absolute top-2 right-1">
             <MarkButton />
           </div>
         </div>
