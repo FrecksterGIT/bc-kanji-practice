@@ -1,3 +1,10 @@
+## [1.4.7](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v1.4.6...v1.4.7) (2025-04-26)
+
+
+### Bug Fixes
+
+* cycle to next invalid on enter ([1b8230c](https://github.com/FrecksterGIT/bc-kanji-practice/commit/1b8230cce4f1ebef5072e63a6f0e9a27c25a4135))
+
 ## [1.4.6](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v1.4.5...v1.4.6) (2025-04-26)
 
 
