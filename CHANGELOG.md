@@ -1,3 +1,10 @@
+## [1.4.6](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v1.4.5...v1.4.6) (2025-04-26)
+
+
+### Bug Fixes
+
+* mark button positioning ([0d998cc](https://github.com/FrecksterGIT/bc-kanji-practice/commit/0d998cc6a31aa72d5b905a8605fc629964ce3dee))
+
 ## [1.4.5](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v1.4.4...v1.4.5) (2025-04-26)
 
 
