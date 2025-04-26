@@ -60,6 +60,20 @@ const ValidationProvider: FC<ValidationProviderProps> = ({ items, children }) =>
     [item, validValues]
   );
 
+  const nextValidIndex = useCallback(
+    (start: number) => {
+      let next = (start + 1) % items.length;
+      while (validItems.includes(items[next].id)) {
+        next = (next + 1) % items.length;
+        if (next === start) {
+          return (start + 1) % items.length;
+        }
+      }
+      return next;
+    },
+    [items, validItems]
+  );
+
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       switch (e.key) {
@@ -71,7 +85,7 @@ const ValidationProvider: FC<ValidationProviderProps> = ({ items, children }) =>
           break;
         case 'Enter':
           if (isValid) {
-            setSelectedIndex((prev) => (prev + 1) % items.length);
+            setSelectedIndex((prev) => nextValidIndex(prev));
           }
           break;
       }
@@ -81,7 +95,7 @@ const ValidationProvider: FC<ValidationProviderProps> = ({ items, children }) =>
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
     };
-  }, [isValid, items]);
+  }, [isValid, items, nextValidIndex]);
 
   useEffect(() => {
     if (items && items.length > 0) {

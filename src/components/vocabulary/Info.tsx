@@ -11,17 +11,11 @@ interface InfoProps {
 }
 
 const Info: FC<InfoProps> = ({ vocabulary, isValid }) => {
-  const [show, toggle, set] = useToggle(false);
+  const [show, toggle, set] = useToggle(isValid ?? false);
 
   useEffect(() => {
-    set(false);
-  }, [set, vocabulary.word]);
-
-  useEffect(() => {
-    if (isValid) {
-      set(true);
-    }
-  }, [set, isValid]);
+    set(isValid ?? false);
+  }, [set, vocabulary.word, isValid]);
 
   const getReading = (reading: string, allReadings: VocabularyItem['reading']) => {
     const containsKatakana = reading.split('').some(isKatakana);
@@ -63,7 +57,7 @@ const Info: FC<InfoProps> = ({ vocabulary, isValid }) => {
                 {vocabulary.reading.map((reading) => (
                   <span
                     key={reading.reading}
-                    className={`separated-comma ${reading.primary ? 'font-bold text-white' : ''}`}
+                    className={`separated-comma ${reading.primary ? 'text-white' : ''}`}
                   >
                     {getReading(reading.reading, vocabulary.reading)}
                   </span>
@@ -73,7 +67,7 @@ const Info: FC<InfoProps> = ({ vocabulary, isValid }) => {
                 {vocabulary.meanings.map((meaning) => (
                   <span
                     key={meaning.meaning}
-                    className={`separated-comma ${meaning.primary ? 'font-bold text-white' : ''}`}
+                    className={`separated-comma ${meaning.primary ? 'text-white' : ''}`}
                   >
                     {meaning.meaning}
                   </span>

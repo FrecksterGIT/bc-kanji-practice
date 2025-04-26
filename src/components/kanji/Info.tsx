@@ -9,17 +9,11 @@ interface InfoProps {
 }
 
 const Info: FC<InfoProps> = ({ kanji, isValid }) => {
-  const [show, toggle, set] = useToggle(false);
+  const [show, toggle, set] = useToggle(isValid ?? false);
 
   useEffect(() => {
-    set(false);
-  }, [set, kanji]);
-
-  useEffect(() => {
-    if (isValid) {
-      set(true);
-    }
-  }, [set, isValid]);
+    set(isValid ?? false);
+  }, [set, kanji, isValid]);
 
   return (
     <button
@@ -47,7 +41,7 @@ const Info: FC<InfoProps> = ({ kanji, isValid }) => {
                 {kanji.onyomi.map((reading) => (
                   <span
                     key={reading.reading}
-                    className={`separated-comma ${reading.primary ? 'font-bold text-white' : ''}`}
+                    className={`separated-comma ${reading.primary ? 'text-white' : ''}`}
                   >
                     {reading.reading}
                   </span>
@@ -57,7 +51,7 @@ const Info: FC<InfoProps> = ({ kanji, isValid }) => {
                 {kanji.kunyomi.map((reading) => (
                   <span
                     key={reading.reading}
-                    className={`separated-comma ${reading.primary ? 'font-bold text-white' : ''}`}
+                    className={`separated-comma ${reading.primary ? 'text-white' : ''}`}
                   >
                     {reading.reading}
                   </span>
