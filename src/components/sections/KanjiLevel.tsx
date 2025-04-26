@@ -1,10 +1,9 @@
-import { type FC } from 'react';
-import List from './List.tsx';
-import Details from './Details.tsx';
-import { ValidationProvider } from '../../contexts/ValidationProvider.tsx';
-import { useFilteredData } from '../../hooks/useFilteredData.ts';
+import { FC } from 'react';
+import useFilteredData from '../../hooks/useFilteredData.ts';
+import ValidationProvider from '../../contexts/ValidationProvider.tsx';
+import MainKanji from '../kanji/MainKanji.tsx';
 
-const KanjiPage: FC = () => {
+const KanjiLevel: FC = () => {
   const { data, loading, error } = useFilteredData('kanji');
 
   return (
@@ -14,8 +13,7 @@ const KanjiPage: FC = () => {
         {error && <p className="text-red-500">Error loading kanji data: {error.message}</p>}
         {!loading && !error && data && (
           <ValidationProvider items={data}>
-            <Details />
-            <List />
+            <MainKanji />
           </ValidationProvider>
         )}
       </div>
@@ -23,4 +21,4 @@ const KanjiPage: FC = () => {
   );
 };
 
-export default KanjiPage;
+export default KanjiLevel;

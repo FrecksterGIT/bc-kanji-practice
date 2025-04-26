@@ -1,8 +1,8 @@
 import { createDateSortFunction } from '../utils/sortUtils.ts';
 import { KanjiItem, VocabularyItem } from '../types';
 import { useSettingsStore } from '../store/settingsStore.ts';
-import { useWanikaniAssignments } from './useWanikaniAssignments.ts';
-import { useDataFiles } from './useDataFiles.ts';
+import useWanikaniAssignments from './useWanikaniAssignments.ts';
+import useDataFiles from './useDataFiles.ts';
 
 type UseFilteredDataResult<T extends KanjiItem | VocabularyItem> = {
   data: T[] | null;
@@ -10,7 +10,7 @@ type UseFilteredDataResult<T extends KanjiItem | VocabularyItem> = {
   error: Error | null;
 };
 
-export function useFilteredData<T extends KanjiItem | VocabularyItem>(
+function useFilteredData<T extends KanjiItem | VocabularyItem>(
   type: 'kanji' | 'vocabulary'
 ): UseFilteredDataResult<T> {
   const limitToLearned = useSettingsStore((state) => state.limitToLearned);
@@ -43,3 +43,5 @@ export function useFilteredData<T extends KanjiItem | VocabularyItem>(
 
   return { data: result, loading, error };
 }
+
+export default useFilteredData;

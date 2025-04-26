@@ -1,11 +1,14 @@
 import { ChangeEvent, useEffect, type FC } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useSettingsStore } from '../../store/settingsStore.ts';
-import { useSession } from '../../hooks/useSession.ts';
+import useSession from '../../hooks/useSession.ts';
+import { useLocalStorage } from 'usehooks-ts';
+import type { MarkedItem } from '../../types';
 
 const Navigation: FC = () => {
   const { user } = useSession();
   const { level, setLevel } = useSettingsStore();
+  const [markedItems] = useLocalStorage<MarkedItem[]>('markedItems', []);
 
   const maxLevel = user?.level ?? 3;
 
@@ -35,7 +38,7 @@ const Navigation: FC = () => {
           <NavLink
             to="kanji"
             className={({ isActive }) =>
-              `px-3 py-2 rounded hover:bg-pink-400 transition-colors ${isActive ? 'bg-pink-400' : ''}`
+              `px-3 py-2 rounded hover:bg-pink-400 ${isActive ? 'bg-pink-400' : ''}`
             }
           >
             Kanji
@@ -43,7 +46,7 @@ const Navigation: FC = () => {
           <NavLink
             to="vocabulary"
             className={({ isActive }) =>
-              `px-3 py-2 rounded hover:bg-purple-400 transition-colors ${isActive ? 'bg-purple-400' : ''}`
+              `px-3 py-2 rounded hover:bg-purple-400 ${isActive ? 'bg-purple-400' : ''}`
             }
           >
             Vocabulary
@@ -65,6 +68,14 @@ const Navigation: FC = () => {
               ))}
             </select>
           </div>
+          <NavLink
+            to="marked"
+            className={({ isActive }) =>
+              `px-3 py-2 rounded hover:bg-gradient-to-br from-pink-400 to-purple-400 ${isActive ? 'bg-gradient-to-br' : ''}`
+            }
+          >
+            Marked Items <span className="text-xs">({markedItems.length})</span>
+          </NavLink>
           <NavLink
             to="settings"
             className={({ isActive }) =>

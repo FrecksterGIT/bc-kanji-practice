@@ -1,5 +1,5 @@
 import { FC, ReactNode, useCallback, useEffect, useMemo, useState } from 'react';
-import { useWanikaniUser } from '../hooks/useWanikaniUser.ts';
+import useWanikaniUser from '../hooks/useWanikaniUser.ts';
 import { useSettingsStore } from '../store/settingsStore.ts';
 import { loadDataFile } from '../utils/dataLoader.ts';
 import { SessionContext } from './SessionContext.tsx';

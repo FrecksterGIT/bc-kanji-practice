@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import Navigation from './components/navigation/Navigation.tsx';
-import { useSession } from './hooks/useSession.ts';
+import useSession from './hooks/useSession.ts';
 import { SessionProvider } from './contexts/SessionProvider.tsx';
 
 const AppContent = () => {

@@ -16,7 +16,7 @@ interface CachedData {
  * Hook to fetch user data from the Wanikani API
  * @returns Object containing user data, loading state, error state, and refetch function
  */
-export function useWanikaniUser(): UseWanikaniUserResult {
+function useWanikaniUser(): UseWanikaniUserResult {
   const apiKey = useSettingsStore((state) => state.apiKey);
   const [user, setUser] = useState<WanikaniUserData | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
@@ -105,3 +105,5 @@ export function useWanikaniUser(): UseWanikaniUserResult {
 
   return { user, loading, error, refetch: () => fetchUserData(true) };
 }
+
+export default useWanikaniUser;

@@ -1,6 +1,6 @@
 import { FC, RefObject, useRef } from 'react';
 import { useHover } from 'usehooks-ts';
-import { useSession } from '../../hooks/useSession.ts';
+import useSession from '../../hooks/useSession.ts';
 import { Tooltip } from './Tooltip.tsx';
 
 interface MarkProps {

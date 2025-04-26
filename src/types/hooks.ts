@@ -1,4 +1,4 @@
-import { WanikaniUserData, WanikaniAssignment } from './wanikani';
+import { WanikaniAssignment, WanikaniUserData } from './wanikani';
 import { KanjiItem, VocabularyItem } from './data';
 
 export interface UseWanikaniUserResult {
@@ -53,3 +53,9 @@ export interface ValidationContextType {
   validItems: number[];
   isValid: boolean;
 }
+
+export type MarkedItem = {
+  id: number;
+  type: 'kanji' | 'vocabulary';
+  level: number;
+};

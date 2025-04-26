@@ -8,7 +8,7 @@ import { DataType, KanjiItem, VocabularyItem, UseDataFilesResult } from '../type
  * @param dataType The type of data to fetch ('kanji' or 'vocabulary')
  * @returns Object containing data, loading state, error state, and refetch function
  */
-export function useDataFiles<T extends KanjiItem | VocabularyItem>(
+function useDataFiles<T extends KanjiItem | VocabularyItem>(
   dataType: DataType
 ): UseDataFilesResult<T> {
   const level = useSettingsStore((state) => state.level);
@@ -45,3 +45,5 @@ export function useDataFiles<T extends KanjiItem | VocabularyItem>(
     refetch: () => fetchData(true),
   };
 }
+
+export default useDataFiles;

@@ -7,7 +7,7 @@ type ValidationProviderProps = PropsWithChildren<{
   items: Array<KanjiItem | VocabularyItem>;
 }>;
 
-export const ValidationProvider: FC<ValidationProviderProps> = ({ items, children }) => {
+const ValidationProvider: FC<ValidationProviderProps> = ({ items, children }) => {
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
   const item = useMemo(() => items?.[selectedIndex], [items, selectedIndex]);
   const [validItems, setValidItems] = useState<number[]>([]);
@@ -104,3 +104,5 @@ export const ValidationProvider: FC<ValidationProviderProps> = ({ items, childre
 
   return <ValidationContext value={contextValue}>{children}</ValidationContext>;
 };
+
+export default ValidationProvider;

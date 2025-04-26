@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { useKanjiComposition } from '../../hooks/useKanjiComposition.ts';
+import useKanjiComposition from '../../hooks/useKanjiComposition.ts';
 
 type CompositionProps = {
   word: string;

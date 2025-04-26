@@ -8,7 +8,7 @@ import { KanjiItem, UseKanjiCompositionResult } from '../types';
  * @param word The vocabulary word to get kanji data for
  * @returns Object containing kanji data, loading state, and error state
  */
-export function useKanjiComposition(word: string): UseKanjiCompositionResult {
+function useKanjiComposition(word: string): UseKanjiCompositionResult {
   const [error, setError] = useState<Error | null>(null);
 
   // Use Dexie's useLiveQuery to reactively query all kanji data
@@ -86,3 +86,5 @@ export function useKanjiComposition(word: string): UseKanjiCompositionResult {
     error,
   };
 }
+
+export default useKanjiComposition;

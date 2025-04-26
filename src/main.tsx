@@ -3,9 +3,10 @@ import { createRoot } from 'react-dom/client';
 import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom';
 import './index.css';
 import App from './App.tsx';
-import KanjiPage from './components/kanji/KanjiPage.tsx';
-import VocabularyPage from './components/vocabulary/VocabularyPage.tsx';
 import Settings from './components/settings/Settings.tsx';
+import KanjiLevel from './components/sections/KanjiLevel.tsx';
+import VocabularyLevel from './components/sections/VocabularyLevel.tsx';
+import MarkedItems from './components/sections/MarkedItems.tsx';
 
 const router = createBrowserRouter([
   {
@@ -18,11 +19,15 @@ const router = createBrowserRouter([
       },
       {
         path: 'kanji',
-        element: <KanjiPage />,
+        element: <KanjiLevel />,
       },
       {
         path: 'vocabulary',
-        element: <VocabularyPage />,
+        element: <VocabularyLevel />,
+      },
+      {
+        path: 'marked',
+        element: <MarkedItems />,
       },
       {
         path: 'settings',

@@ -17,7 +17,7 @@ interface CachedData {
  * @param subjectType - The type of subjects to fetch: 'kanji' or 'vocabulary'
  * @returns Object containing assignments data, loading state, error state, and refetch function
  */
-export function useWanikaniAssignments(
+function useWanikaniAssignments(
   subjectType: 'kanji' | 'vocabulary' = 'kanji'
 ): UseWanikaniAssignmentsResult {
   const apiKey = useSettingsStore((state) => state.apiKey);
@@ -164,3 +164,5 @@ export function useWanikaniAssignments(
     refetch: () => fetchAssignments(true),
   };
 }
+
+export default useWanikaniAssignments;
