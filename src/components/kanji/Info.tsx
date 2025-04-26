@@ -82,21 +82,26 @@ const Info: FC<InfoProps> = ({ kanji, isValid }) => {
               <th className="px-6 py-4 leading-6 text-xs font-medium uppercase text-nowrap tracking-wider align-top">
                 Meaning Mnemonic
               </th>
-              <td
-                className="px-6 py-4 align-top"
-                dangerouslySetInnerHTML={{ __html: formatHint(kanji.meaning_mnemonic) }}
-              />
+              <td className="px-6 py-4 align-top">
+                <p
+                  className="max-w-2/3"
+                  dangerouslySetInnerHTML={{ __html: formatHint(kanji.meaning_mnemonic) }}
+                />
+              </td>
             </tr>
             <tr>
               <th className="px-6 py-4 leading-6 text-xs font-medium uppercase text-nowrap tracking-wider align-top">
                 Reading Mnemonic
               </th>
               <td className="px-6 py-4 align-top">
-                <p dangerouslySetInnerHTML={{ __html: formatHint(kanji.reading_mnemonic) }}></p>
                 <p
-                  className="text-sm text-gray-500 align-top"
+                  className="max-w-2/3"
+                  dangerouslySetInnerHTML={{ __html: formatHint(kanji.reading_mnemonic) }}
+                />
+                <p
+                  className="max-w-2/3 text-sm text-gray-500"
                   dangerouslySetInnerHTML={{ __html: formatHint(kanji.reading_hint) }}
-                ></p>
+                />
               </td>
             </tr>
           </tbody>

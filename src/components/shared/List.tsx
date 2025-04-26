@@ -10,7 +10,7 @@ const List: FC<ListProps> = ({ type }) => {
   const { items, validItems } = useContext(ValidationContext);
   const borderColor = type === 'kanji' ? 'border-t-pink-400' : 'border-t-purple-400';
   const bgColor = type === 'kanji' ? 'bg-pink-400' : 'bg-purple-400';
-  const correct = Math.min(validItems.length / items.length * 100, 100);
+  const correct = Math.min((validItems.length / items.length) * 100, 100);
 
   return (
     <div

@@ -93,7 +93,8 @@ const Info: FC<InfoProps> = ({ vocabulary, isValid }) => {
                   Reading Mnemonic
                 </th>
                 <td className="px-6 py-4 align-top">
-                  <p className="max-w-2/3"
+                  <p
+                    className="max-w-2/3"
                     dangerouslySetInnerHTML={{ __html: formatHint(vocabulary.reading_mnemonic) }}
                   ></p>
                 </td>
