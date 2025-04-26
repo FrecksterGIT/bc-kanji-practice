@@ -39,7 +39,7 @@ const Info: FC<InfoProps> = ({ vocabulary, isValid }) => {
 
   return (
     <button
-      className={`min-w-2/3 ${show ? 'cursor-zoom-out' : 'blur-md cursor-zoom-in'}`}
+      className={`w-full ${show ? 'cursor-zoom-out' : 'blur-md cursor-zoom-in'}`}
       onClick={() => toggle()}
     >
       <div className="overflow-x-auto min-h-[7rem]">
@@ -52,7 +52,7 @@ const Info: FC<InfoProps> = ({ vocabulary, isValid }) => {
               <th scope="col" className="px-6 py-3 tracking-wider">
                 Meanings
               </th>
-              <th scope="col" className="px-6 py-3 tracking-wider">
+              <th scope="col" className="px-6 py-3 tracking-wider w-px">
                 Composition
               </th>
             </tr>
@@ -89,11 +89,11 @@ const Info: FC<InfoProps> = ({ vocabulary, isValid }) => {
           <table className="min-w-full text-left">
             <tbody>
               <tr>
-                <th className="px-6 py-4 text-xs font-medium uppercase tracking-wider text-nowrap">
+                <th className="px-6 py-4 leading-6 text-xs font-medium uppercase text-nowrap tracking-wider align-top">
                   Reading Mnemonic
                 </th>
-                <td className="px-6 py-4">
-                  <p
+                <td className="px-6 py-4 align-top">
+                  <p className="max-w-2/3"
                     dangerouslySetInnerHTML={{ __html: formatHint(vocabulary.reading_mnemonic) }}
                   ></p>
                 </td>

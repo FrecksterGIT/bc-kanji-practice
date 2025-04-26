@@ -92,8 +92,8 @@
     ],
     "meaning_mnemonic": "If you're on the edge of a <radical>cliff</radical> with a <radical>snake</radical>, that's a <kanji>misfortune</kanji>. You're hanging off the edge of this cliff and you can't pull yourself back up. Then you notice a snake approaching your fingers, looking like it's gonna bite you. What a misfortune!",
     "meaning_hint": "What will you do? You can either let go and fall off the cliff, or hold on and get bitten by the snake. Man, talk about misfortune.",
-    "reading_mnemonic": "Despite your <kanji>misfortune</kanji>, you decide to take your chances and let go of the cliff. Amazingly, a <reading>yak</reading> (やく) runs below you and catches you as you fall. Saved by the yak!",
-    "reading_hint": "What a nice yak this is. Perhaps your fortune has turned around. Perhaps you aren't as plagued by misfortune as you thought. Your butt sure does hurt from that fall though...",
+    "reading_mnemonic": "You decide to let go, but at the bottom of the cliff is an even greater <kanji>misfortune</kanji>: <reading>yak</reading> (やく). A whole stampeding herd of yak is passing just as you fall. Oops! You've accidentally committed yourself to the ultimate misfortune, death by yak trampling. ",
+    "reading_hint": "Imagine the glittering maze of hooves and yak horns that enclose you now. Ahhh! Then the yak pass, and you find yourself alive but beaten. Life is one misfortune after another, but misfortunes, like the yak, eventually pass…",
     "vocabulary": [{ "word": "厄介", "level": 35, "meaning": "Troublesome", "reading": "やっかい" }]
   },
   {
@@ -621,10 +621,10 @@
     "onyomi": [{ "reading": "すい", "primary": true, "accepted_answer": true, "type": "onyomi" }],
     "kunyomi": [{ "reading": "よ", "primary": false, "accepted_answer": false, "type": "kunyomi" }],
     "meanings": [{ "meaning": "Drunk", "primary": true, "accepted_answer": true }],
-    "meaning_mnemonic": "You have an <radical>alcohol</radical> <radical>nine</radical> times stronger than any other drink in a bottle shaped like a <radical>cross</radical> and you drink it all and become <kanji>drunk</kanji>. You’re like, so drunk right now from all that alcohol. Nine times more drunk than ever before.",
+    "meaning_mnemonic": "You have an <radical>alcohol</radical> <radical>nine</radical> times stronger than any other drink, in a bottle shaped like a <radical>cross</radical>, and you drink it all and become <kanji>drunk</kanji>. You're like, so drunk right now from all that alcohol. Nine times more drunk than ever before.",
     "meaning_hint": "Feel how drunk you are as you look at the cross shaped bottle that once held the alcohol. See the cross start to blur in front of you from how drunk you are.",
-    "reading_mnemonic": "If you drink so much that you become <kanji>drunk</kanji>, then your alcohol will begin to taste like water. What is the reading of 水? It's <reading>すい</reading>, which is the reading for this kanji.",
-    "reading_hint": "Speaking of 水, you need to drink some. You need to rehydrate and 水 is the best way to do it. Drink a lot of 水. Go. Now.",
+    "reading_mnemonic": "Everything's spinning now, you're so <kanji>drunk</kanji> it feels like you're on a <reading>swi</reading>ng (すい). Lurching back and forth in your drunkenness, feeling more and more nauseated by all this horrible swinging. Ugh.",
+    "reading_hint": "Imagine that vertigo that comes over you if you lean your head back when you're drunk. It feels like leaning back on a playground swing, in a way. Oh, wait… what if we got drunk and swung on the playground swings? Double swing effect! Actually, never mind. Bad idea.",
     "vocabulary": [
       { "word": "酔う", "level": 35, "meaning": "To Be Drunk", "reading": "よう" },
       { "word": "泥酔", "level": 35, "meaning": "Dead Drunk", "reading": "でいすい" },

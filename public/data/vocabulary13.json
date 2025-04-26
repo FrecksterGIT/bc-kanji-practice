@@ -639,13 +639,17 @@
     "word": "当然",
     "meanings": [
       { "meaning": "Natural", "primary": true },
-      { "meaning": "Obvious", "primary": false }
+      { "meaning": "Obvious", "primary": false },
+      { "meaning": "Of Course", "primary": false },
+      { "meaning": "Naturally", "primary": false }
     ],
     "reading": [{ "reading": "とうぜん", "primary": true }],
     "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.",
     "allMeanings": [
       { "meaning": "Natural", "primary": true },
-      { "meaning": "Obvious", "primary": false }
+      { "meaning": "Obvious", "primary": false },
+      { "meaning": "Of Course", "primary": false },
+      { "meaning": "Naturally", "primary": false }
     ]
   },
   {

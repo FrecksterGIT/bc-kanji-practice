@@ -380,15 +380,17 @@
     "word": "悔しい",
     "meanings": [
       { "meaning": "Regrettable", "primary": true },
+      { "meaning": "Frustrating", "primary": false },
       { "meaning": "Vexing", "primary": false },
-      { "meaning": "Annoying", "primary": false }
+      { "meaning": "Disappointing", "primary": false }
     ],
     "reading": [{ "reading": "くやしい", "primary": true }],
     "reading_mnemonic": "It's <vocabulary>regrettable</vocabulary> if you're not <reading>coo</reading>l, <reading>yah</reading> (くや)? Yah, that would be pretty <vocabulary>vexing</vocabulary>. ",
     "allMeanings": [
       { "meaning": "Regrettable", "primary": true },
+      { "meaning": "Frustrating", "primary": false },
       { "meaning": "Vexing", "primary": false },
-      { "meaning": "Annoying", "primary": false }
+      { "meaning": "Disappointing", "primary": false }
     ]
   },
   {
@@ -842,24 +844,30 @@
     "id": 7211,
     "level": 48,
     "word": "耐火",
-    "meanings": [{ "meaning": "Fireproof", "primary": true }],
+    "meanings": [
+      { "meaning": "Fire Resistant", "primary": true },
+      { "meaning": "Fireproof", "primary": false }
+    ],
     "reading": [{ "reading": "たいか", "primary": true }],
     "reading_mnemonic": "This is a jukugo word that uses the on'yomi readings of the kanji. You should be able to read this on your own.",
-    "allMeanings": [{ "meaning": "Fireproof", "primary": true }]
+    "allMeanings": [
+      { "meaning": "Fire Resistant", "primary": true },
+      { "meaning": "Fireproof", "primary": false }
+    ]
   },
   {
     "id": 7210,
     "level": 48,
     "word": "耐熱",
     "meanings": [
-      { "meaning": "Heat Resisting", "primary": true },
-      { "meaning": "Heat Resistant", "primary": false }
+      { "meaning": "Heat Resistant", "primary": true },
+      { "meaning": "Heatproof", "primary": false }
     ],
     "reading": [{ "reading": "たいねつ", "primary": true }],
     "reading_mnemonic": "This is a jukugo word that uses the on'yomi readings of the kanji. You should be able to read this on your own.",
     "allMeanings": [
-      { "meaning": "Heat Resisting", "primary": true },
-      { "meaning": "Heat Resistant", "primary": false }
+      { "meaning": "Heat Resistant", "primary": true },
+      { "meaning": "Heatproof", "primary": false }
     ]
   },
   {
@@ -1177,13 +1185,13 @@
     "word": "辱める",
     "meanings": [
       { "meaning": "To Humiliate", "primary": true },
-      { "meaning": "To Embarrass", "primary": false }
+      { "meaning": "To Disgrace", "primary": false }
     ],
     "reading": [{ "reading": "はずかしめる", "primary": true }],
     "reading_mnemonic": "Remember the word 恥ずかしい? It has the same reading as this one, and a similar meaning as well.",
     "allMeanings": [
       { "meaning": "To Humiliate", "primary": true },
-      { "meaning": "To Embarrass", "primary": false }
+      { "meaning": "To Disgrace", "primary": false }
     ]
   },
   {

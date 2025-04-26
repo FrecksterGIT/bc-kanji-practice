@@ -25,11 +25,11 @@
     "kunyomi": [
       { "reading": "うかが", "primary": true, "accepted_answer": true, "type": "kunyomi" }
     ],
-    "meanings": [{ "meaning": "Pay Respects", "primary": true, "accepted_answer": true }],
-    "meaning_mnemonic": "Your <radical>leader</radical> is also a <radical>director</radical> so you need to <kanji>pay respects</kanji> to him before you can start filming. He’s a huge big-shot and you don’t want to offend him by not paying the proper respects, so you make sure to bow every time you go on stage.",
-    "meaning_hint": "Imagine bowing really really low as you walk on set. Don’t look him in the eye! He might get upset. Just do as you’re told!",
-    "reading_mnemonic": "It turns out you're filming Iron Chef, and the leader and director is Chairman Kaga. You <kanji>pay respects</kanji> to him by saying <reading>Ooh! Kaga</reading> (うかが).",
-    "reading_hint": "Imagine Chairman Kaga looking down on you and you bow, slowly walking onto the stage. You say \"<reading>Ooh! Kaga</reading>\" but in your mind, not out loud, because the \"Ooh\" part would be rude. He is the leader of this show. You see him, think \"Ooh, Kaga\" and pay respects before cooking (and filming).",
+    "meanings": [{ "meaning": "Inquire", "primary": true, "accepted_answer": true }],
+    "meaning_mnemonic": "Being a <radical>leader</radical> or <radical>director</radical> in a company means you have to <kanji>inquire</kanji> about lots of things. Have you started this yet? Have you finished that yet? Did you get that thing I sent you? Where's my coffee? Basically if you're a leader or director, your main job is to inquire about these very important things.",
+    "meaning_hint": "Just make sure you don't inquire about anything inappropriate, or you'll end up facing an inquiry from HR…",
+    "reading_mnemonic": "Turns out the leader and director of your company is Chairman Kaga from the TV show Iron Chef. Every time he tries to <kanji>inquire</kanji> about weird stuff, you have to say <reading>Ooh, Kaga</reading> (うかが) disapprovingly. \"What are you doing for dinner tonight?\" he inquires. Ooh, Kaga! \"What's the best way to soften an eggplant?\" he inquires. Ooh, Kaga!",
+    "reading_hint": "Imagine saying \"Ooh, Kaga!\" to this overly curious leader-director-chef. Say it out loud, like he's just inquired about something weird. He just really loves cooking, okay? But he inquires too much about it in the workplace, so you have to let him know how you feel.",
     "vocabulary": [
       { "word": "伺う", "level": 41, "meaning": "To Inquire", "reading": "うかがう" },
       { "word": "伺い", "level": 43, "meaning": "Inquiry", "reading": "うかがい" }

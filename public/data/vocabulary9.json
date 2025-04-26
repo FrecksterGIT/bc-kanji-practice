@@ -1624,15 +1624,13 @@
     "word": "茶屋",
     "meanings": [
       { "meaning": "Tea Shop", "primary": true },
-      { "meaning": "Tea Store", "primary": false },
-      { "meaning": "Tea House", "primary": false }
+      { "meaning": "Teahouse", "primary": false }
     ],
     "reading": [{ "reading": "ちゃや", "primary": true }],
     "reading_mnemonic": "This word uses the readings you learned with the kanji. If you know the readings of your kanji you'll know how to read this as well.",
     "allMeanings": [
       { "meaning": "Tea Shop", "primary": true },
-      { "meaning": "Tea Store", "primary": false },
-      { "meaning": "Tea House", "primary": false }
+      { "meaning": "Teahouse", "primary": false }
     ]
   },
   {

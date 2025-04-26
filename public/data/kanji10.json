@@ -260,7 +260,10 @@
     "id": 773,
     "level": 10,
     "kanji": "病",
-    "onyomi": [{ "reading": "びょう", "primary": true, "accepted_answer": true, "type": "onyomi" }],
+    "onyomi": [
+      { "reading": "びょう", "primary": true, "accepted_answer": true, "type": "onyomi" },
+      { "reading": "へい", "primary": false, "accepted_answer": true, "type": "onyomi" }
+    ],
     "kunyomi": [
       { "reading": "や", "primary": false, "accepted_answer": false, "type": "kunyomi" },
       { "reading": "やまい", "primary": false, "accepted_answer": false, "type": "kunyomi" }
@@ -420,7 +423,7 @@
     "vocabulary": [
       { "word": "聞く", "level": 10, "meaning": "To Hear", "reading": "きく" },
       { "word": "新聞", "level": 10, "meaning": "Newspaper", "reading": "しんぶん" },
-      { "word": "聞こえる", "level": 12, "meaning": "Hearable", "reading": "きこえる" },
+      { "word": "聞こえる", "level": 12, "meaning": "To Be Hearable", "reading": "きこえる" },
       { "word": "醜聞", "level": 60, "meaning": "Scandal", "reading": "しゅうぶん" }
     ]
   },
@@ -443,10 +446,10 @@
       { "word": "落ち着く", "level": 14, "meaning": "To Calm Down", "reading": "おちつく" },
       { "word": "落書き", "level": 18, "meaning": "Graffiti", "reading": "らくがき" },
       { "word": "落雷", "level": 44, "meaning": "Thunderbolt", "reading": "らくらい" },
-      { "word": "墜落", "level": 47, "meaning": "Falling", "reading": "ついらく" },
+      { "word": "墜落", "level": 47, "meaning": "Crashing", "reading": "ついらく" },
       { "word": "没落", "level": 52, "meaning": "Ruin", "reading": "ぼつらく" },
       { "word": "陥落", "level": 52, "meaning": "Fall", "reading": "かんらく" },
-      { "word": "堕落", "level": 57, "meaning": "Corruption", "reading": "だらく" },
+      { "word": "堕落", "level": 57, "meaning": "Depravity", "reading": "だらく" },
       { "word": "落胆", "level": 59, "meaning": "Discouragement", "reading": "らくたん" }
     ]
   },
@@ -564,7 +567,7 @@
         "reading": "えいごけん"
       },
       { "word": "謙譲語", "level": 39, "meaning": "Humble Japanese", "reading": "けんじょうご" },
-      { "word": "俗語", "level": 49, "meaning": "Colloquialism", "reading": "ぞくご" }
+      { "word": "俗語", "level": 49, "meaning": "Slang", "reading": "ぞくご" }
     ]
   },
   {

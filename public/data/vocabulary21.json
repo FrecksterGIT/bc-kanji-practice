@@ -426,15 +426,15 @@
     "word": "大敵",
     "meanings": [
       { "meaning": "Arch Enemy", "primary": true },
-      { "meaning": "Rival", "primary": false },
-      { "meaning": "Enemy", "primary": false }
+      { "meaning": "Formidable Adversary", "primary": false },
+      { "meaning": "Great Enemy", "primary": false }
     ],
     "reading": [{ "reading": "たいてき", "primary": true }],
-    "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.",
+    "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. Both kanji have a couple different on'yomi readings though, so here's a mnemonic to help you remember which ones to pick:\n\nYour <vocabulary>arch enemy</vocabulary> is the <reading>tie techie</reading> (たいてき). Who's the tie techie? He's the tech support guy at work who always wears the same tie and never helps you. He just says \"try restarting your computer\" to every problem, which isn't helpful. He's not just a great enemy, he's basically your nemesis. You hate that tie techie.",
     "allMeanings": [
       { "meaning": "Arch Enemy", "primary": true },
-      { "meaning": "Rival", "primary": false },
-      { "meaning": "Enemy", "primary": false }
+      { "meaning": "Formidable Adversary", "primary": false },
+      { "meaning": "Great Enemy", "primary": false }
     ]
   },
   {
@@ -718,13 +718,19 @@
     "id": 4403,
     "level": 21,
     "word": "敵",
-    "meanings": [{ "meaning": "Enemy", "primary": true }],
+    "meanings": [
+      { "meaning": "Enemy", "primary": true },
+      { "meaning": "Opponent", "primary": false }
+    ],
     "reading": [
       { "reading": "てき", "primary": true },
       { "reading": "かたき", "primary": false }
     ],
-    "reading_mnemonic": "The reading is the same as what you learned with the kanji. No enemies here!",
-    "allMeanings": [{ "meaning": "Enemy", "primary": true }]
+    "reading_mnemonic": "The main reading is the same one you learned with the kanji. But there's also a secondary かたき reading you haven't seen yet, so here's a mnemonic for that:\n\nYou love to call your <vocabulary>enemy</vocabulary>'s <reading>car tacky</reading> (かたき). They're always driving around in some tacky sports car, you can't stand it. Every time they drive by you shout, \"Your car is tacky, enemy!\"\n\nNote: In terms of differences, the てき reading just means \"enemy,\" whereas かたき typically refers to someone you hold a deep grudge against, often on behalf of another. ",
+    "allMeanings": [
+      { "meaning": "Enemy", "primary": true },
+      { "meaning": "Opponent", "primary": false }
+    ]
   },
   {
     "id": 4443,
@@ -1574,7 +1580,7 @@
       { "meaning": "Brink", "primary": false }
     ],
     "reading": [{ "reading": "きわ", "primary": true }],
-    "reading_mnemonic": "You're on the very <vocabulary>edge</vocabulary> of the world. You heard that at the edge of the world are the <reading>key wo</reading>rds (きわ) written there in big fiery letters, telling you the meaning of life. Supposedly these are the words of God himself. They say: \"We apologize for the inconvenience.\" WHAT? THESE ARE THE <reading>KEY WO</reading>RDS???\n\nNote that when 際 is used in this word to mean \"edge,\" it's often written as きわ or キワ to avoid confusion with other 際 words that use different readings.",
+    "reading_mnemonic": "You're on the very <vocabulary>edge</vocabulary> of the world. You heard that at the edge of the world are the <reading>key wo</reading>rds (きわ) written there in big fiery letters, telling you the meaning of life. Supposedly these are the words of God himself. They say: \"We apologize for the inconvenience.\" WHAT? THESE ARE THE <reading>KEY WO</reading>RDS???\n\nNote that this word is often written in kana, as きわ or キワ.",
     "allMeanings": [
       { "meaning": "Side", "primary": true },
       { "meaning": "Edge", "primary": false },

@@ -373,7 +373,7 @@
       { "word": "味噌汁", "level": 37, "meaning": "Miso Soup", "reading": "みそしる" },
       { "word": "珍味", "level": 43, "meaning": "Delicacy", "reading": "ちんみ" },
       { "word": "趣味", "level": 43, "meaning": "Hobby", "reading": "しゅみ" },
-      { "word": "悪趣味", "level": 45, "meaning": "Bad Habit", "reading": "あくしゅみ" },
+      { "word": "悪趣味", "level": 45, "meaning": "Bad Taste", "reading": "あくしゅみ" },
       { "word": "吟味", "level": 59, "meaning": "Scrutiny", "reading": "ぎんみ" }
     ]
   },

@@ -1111,20 +1111,16 @@
     "word": "逸れる",
     "meanings": [
       { "meaning": "To Stray", "primary": true },
-      { "meaning": "To Turn Away", "primary": false },
-      { "meaning": "To Digress", "primary": false },
-      { "meaning": "To Deviate", "primary": false }
+      { "meaning": "To Get Separated", "primary": false }
     ],
     "reading": [
       { "reading": "それる", "primary": true },
       { "reading": "はぐれる", "primary": false }
     ],
-    "reading_mnemonic": "Since this word consists of a kanji with hiragana attached, you can bet that it will use the kun'yomi reading.  You've already learned this mnemonic but here's a quick review: \n\nIf you're the type of person who starts <vocabulary>to stray</vocabulary> easily, you'll end up saying <reading>sorry</reading> (それ) a lot. Even if you don't do it often, if you stray, say sorry!",
+    "reading_mnemonic": "Since this word consists of a kanji with hiragana attached, you can bet that it will use the kun'yomi reading. The two kun'yomi readings have difference nuances, so here's a mnemonic to help you with those:\n\nIn conversation you always seem <vocabulary>to stray</vocabulary> from the point and talk about <reading>so</reading>ap (そ). You just love soap — the scents, the bubbles, the cleanliness. The one thing you never stray from is… straying from the topic just to bring up soap.\n\nAnd because you're lost in thoughts about suds all the time, you tend <vocabulary>to get separated</vocabulary> from your friends whenever you're out together. When they finally come find you, they give you a big <reading>hug</reading> (はぐ). It's only natural to give someone a hug after you've been separated a while, right?",
     "allMeanings": [
       { "meaning": "To Stray", "primary": true },
-      { "meaning": "To Turn Away", "primary": false },
-      { "meaning": "To Digress", "primary": false },
-      { "meaning": "To Deviate", "primary": false }
+      { "meaning": "To Get Separated", "primary": false }
     ]
   },
   {

@@ -297,7 +297,7 @@
     "reading_mnemonic": "<kanji>Delight</kanji> is what Genghis <reading>Khan</reading> (かん) felt when he saw his turkey friend, sans an arrow.",
     "reading_hint": "He loves his turkey friend, and every time he sees it he squeals with delight.",
     "vocabulary": [
-      { "word": "歓迎", "level": 34, "meaning": "A Welcome", "reading": "かんげい" },
+      { "word": "歓迎", "level": 34, "meaning": "Welcome", "reading": "かんげい" },
       { "word": "歓楽街", "level": 34, "meaning": "Pleasure Quarter", "reading": "かんらくがい" }
     ]
   },
@@ -425,8 +425,8 @@
       { "meaning": "Deep Red", "primary": true, "accepted_answer": true },
       { "meaning": "Crimson", "primary": false, "accepted_answer": true }
     ],
-    "meaning_mnemonic": "In this <radical>construction</radical> project, they will be using <radical>thread</radical> to hold everything together. The color of the thread is a <kanji>deep red</kanji>, and it gives everything a <kanji>crimson</kanji> look.",
-    "meaning_hint": "Because thread isn't that strong, you have to use A LOT (to hold things like beams in place). So, the deep red / crimson thread actually stands out a lot in this construction project.",
+    "meaning_mnemonic": "You use <radical>thread</radical> in your <radical>construction</radical> project to hold everything together. The color of the thread is a <kanji>deep red</kanji>, and it gives everything a <kanji>crimson</kanji> look.",
+    "meaning_hint": "Because thread isn't that strong, you have to use A LOT (to hold things like beams in place). So, the deep red or crimson thread actually stands out a lot in this construction project.",
     "reading_mnemonic": "You're done, and the whole building is a <kanji>deep red</kanji> <kanji>crimson</kanji> color (it takes a lot of thread to hold a whole building in place). It's time to show the client, Emperor <reading>こう</reading>いち, the finished product. ",
     "reading_hint": "こういち walks up with a big smile on his face. \"I love the color crimson!\" he exclaims. \"It's the same deep red color as my enemies.\"\n\nHint: When you see 工 in a kanji it will often take the こう reading.",
     "vocabulary": [

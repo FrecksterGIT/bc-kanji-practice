@@ -94,16 +94,15 @@
     "word": "元凶",
     "meanings": [
       { "meaning": "Ringleader", "primary": true },
-      { "meaning": "Main Culprit", "primary": false }
+      { "meaning": "Main Culprit", "primary": false },
+      { "meaning": "Root Cause", "primary": false }
     ],
-    "reading": [
-      { "reading": "げんきょう", "primary": true },
-      { "reading": "がんきょう", "primary": false }
-    ],
-    "reading_mnemonic": "This is a jukugo word that uses the on'yomi readings of the kanji. You should be able to read this on your own.",
+    "reading": [{ "reading": "げんきょう", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word that uses the on'yomi readings of the kanji. You've learned these, but since 元 has two on'yomi readings, here's a mnemonic to help you out:\n\nThe <vocabulary>ringleader</vocabulary> of all these problems is <reading>Gen</reading>ji (<ja>げん</ja>). He's the <vocabulary>main culprit</vocabulary> behind this mess. Remember all that trouble he stirred up by flirting with too many women in \"The Tale of Genji\"? Everyone admired his beauty, but there's no doubt he was the <vocabulary>root cause</vocabulary> of a lot of chaos.",
     "allMeanings": [
       { "meaning": "Ringleader", "primary": true },
-      { "meaning": "Main Culprit", "primary": false }
+      { "meaning": "Main Culprit", "primary": false },
+      { "meaning": "Root Cause", "primary": false }
     ]
   },
   {
@@ -134,10 +133,16 @@
     "id": 6850,
     "level": 45,
     "word": "入籍",
-    "meanings": [{ "meaning": "Entry In Family Register", "primary": true }],
+    "meanings": [
+      { "meaning": "Entry In Family Register", "primary": true },
+      { "meaning": "Registration Of Marriage", "primary": false }
+    ],
     "reading": [{ "reading": "にゅうせき", "primary": true }],
     "reading_mnemonic": "This is a jukugo word that uses the on'yomi readings of the kanji. You should be able to read this on your own.",
-    "allMeanings": [{ "meaning": "Entry In Family Register", "primary": true }]
+    "allMeanings": [
+      { "meaning": "Entry In Family Register", "primary": true },
+      { "meaning": "Registration Of Marriage", "primary": false }
+    ]
   },
   {
     "id": 6894,
@@ -463,16 +468,10 @@
     "id": 6951,
     "level": 45,
     "word": "悪趣味",
-    "meanings": [
-      { "meaning": "Bad Habit", "primary": true },
-      { "meaning": "Bad Taste", "primary": false }
-    ],
+    "meanings": [{ "meaning": "Bad Taste", "primary": true }],
     "reading": [{ "reading": "あくしゅみ", "primary": true }],
     "reading_mnemonic": "This is a jukugo word that uses the on'yomi readings of the kanji. You should be able to read this on your own.",
-    "allMeanings": [
-      { "meaning": "Bad Habit", "primary": true },
-      { "meaning": "Bad Taste", "primary": false }
-    ]
+    "allMeanings": [{ "meaning": "Bad Taste", "primary": true }]
   },
   {
     "id": 6916,
@@ -696,15 +695,13 @@
     "word": "溝",
     "meanings": [
       { "meaning": "Gutter", "primary": true },
-      { "meaning": "Ditch", "primary": false },
-      { "meaning": "Drain", "primary": false }
+      { "meaning": "Ditch", "primary": false }
     ],
     "reading": [{ "reading": "みぞ", "primary": true }],
-    "reading_mnemonic": "Since this word is made up of a single kanji, it probably uses the kun'yomi reading. You did not learn this reading, so here's a mnemonic to help you: \n\nWhat goes in the <vocabulary>gutter</vocabulary>? 水. But, the reading isn't exactly right. It's <reading>みぞ</reading>not みず, but close enough to create a hook.",
+    "reading_mnemonic": "Since this word is made up of a single kanji, it probably uses the kun'yomi reading. You did not learn this reading, so here's a mnemonic to help you:\n\nIf you step in that <vocabulary>gutter</vocabulary> you'll catch <reading>measle</reading>s (みぞ). A gutter or <vocabulary>ditch</vocabulary> has all kinds of dirt and germs in it, including measles, so don't go stepping in it or drinking from it!",
     "allMeanings": [
       { "meaning": "Gutter", "primary": true },
-      { "meaning": "Ditch", "primary": false },
-      { "meaning": "Drain", "primary": false }
+      { "meaning": "Ditch", "primary": false }
     ]
   },
   {

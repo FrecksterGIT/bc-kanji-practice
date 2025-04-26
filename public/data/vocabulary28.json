@@ -408,10 +408,16 @@
     "id": 5174,
     "level": 28,
     "word": "利益",
-    "meanings": [{ "meaning": "Profit", "primary": true }],
+    "meanings": [
+      { "meaning": "Profit", "primary": true },
+      { "meaning": "Benefit", "primary": false }
+    ],
     "reading": [{ "reading": "りえき", "primary": true }],
     "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.",
-    "allMeanings": [{ "meaning": "Profit", "primary": true }]
+    "allMeanings": [
+      { "meaning": "Profit", "primary": true },
+      { "meaning": "Benefit", "primary": false }
+    ]
   },
   {
     "id": 5130,

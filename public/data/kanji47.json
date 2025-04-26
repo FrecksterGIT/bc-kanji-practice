@@ -98,7 +98,7 @@
     "reading_hint": "Imagine trying to explain to the pig that it's a pig, and not a bird. \"Tweet, tweet, tweet!\" says the pig again. Oh dear.",
     "vocabulary": [
       { "word": "撃墜", "level": 47, "meaning": "Shooting Down", "reading": "げきつい" },
-      { "word": "墜落", "level": 47, "meaning": "Falling", "reading": "ついらく" }
+      { "word": "墜落", "level": 47, "meaning": "Crashing", "reading": "ついらく" }
     ]
   },
   {
@@ -340,11 +340,11 @@
     "kunyomi": [
       { "reading": "てのひら", "primary": false, "accepted_answer": false, "type": "kunyomi" }
     ],
-    "meanings": [{ "meaning": "Manipulate", "primary": true, "accepted_answer": true }],
-    "meaning_mnemonic": "A <radical>Viking</radical> moves your <radical>mouth</radical> with his <radical>hand</radical> to <kanji>manipulate</kanji> it. He sticks his hand into your mouth. With the Viking's hand in your mouth, he can make you look like you’re saying anything he wants.",
-    "meaning_hint": "Imagine the Viking having his hand in your mouth. Taste his salty flesh on your tongue. Imagine him manipulating your mouth and your jaw and making it look like you are saying all sorts of funny things.",
-    "reading_mnemonic": "The Viking is manipulating you so that he can <kanji>manipulate</kanji> the <reading>Shou</reading>gun (しょう)! You and the Shougun have grown pretty close over the last year or so, and this Viking is going to take advantage!",
-    "reading_hint": "You don't want to manipulate the Shougun, but you can't seem to get the Viking's hand out of your mouth. You frantically imagine all the manipulative things the Viking could get the Shougun to do for him like this.",
+    "meanings": [{ "meaning": "Palm", "primary": true, "accepted_answer": true }],
+    "meaning_mnemonic": "If you want to cover a <radical>Viking</radical>'s <radical>mouth</radical> with your <radical>hand</radical>, you have to use your <kanji>palm</kanji>. Why the palm? Well, if you do it knuckles-to-mouth, you're sort of just punching the Viking… and you don't want a punch a Viking. That's why you use the palm.",
+    "meaning_hint": "And don't use your fingers either, 'cause they'll just get bitten off. You absolutely want to make sure it's the palm — a nice flat open palm. It's a lot like feeding a horse, I guess.",
+    "reading_mnemonic": "This Viking-touching technique of using the <kanji>palm</kanji> was developed by the <reading>Shou</reading>gun (しょう). The Shogun has to deal with a lot of loudmouthed Vikings, so he's learned to use his palm to cover their mouths.",
+    "reading_hint": "Imagine if a Shogun and a Viking had actually met in history (never mind that the dates don't overlap). You can definitely picture the quiet, refined Shogun putting his palm over the mouth of some noisy Viking during a tough diplomatic meeting.",
     "vocabulary": [
       { "word": "車掌", "level": 47, "meaning": "Train Conductor", "reading": "しゃしょう" },
       { "word": "掌握", "level": 47, "meaning": "Grasping", "reading": "しょうあく" }

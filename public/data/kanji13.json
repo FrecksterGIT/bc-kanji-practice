@@ -288,10 +288,10 @@
       { "meaning": "Arrange", "primary": true, "accepted_answer": true },
       { "meaning": "Organize", "primary": false, "accepted_answer": true }
     ],
-    "meaning_mnemonic": "Putting your wood in <radical>bundle</radical>s for <radical>winter</radical> is the <radical>correct</radical> way to <kanji>arrange</kanji> it. You want to make sure you <kanji>organize</kanji> all of your wood before winter comes, or the loose logs could get blown away in the first winter storm.",
-    "meaning_hint": "Picture all of the bundles, neatly arranged and organized, as the first snowflakes begin to fall.",
-    "reading_mnemonic": "Right after you've finished <kanji>arrang</kanji>ing the bundles, you take out your <reading>sa</reading>ber (せい) and do one final slice. All of the bundles are now perfectly organized AND cut.",
-    "reading_hint": "You can't just throw an entire bundle of logs onto a fire, you have to saber them into smaller chunks. And it's easier to arrange them first, saber them all in half, and then you have two nicely arranged rows!",
+    "meaning_mnemonic": "A <radical>bundle</radical> in <radical>winter</radical> is the <radical>correct</radical> way to <kanji>arrange</kanji> things. Just make sure you <kanji>organize</kanji> it all before winter comes, or it'll be too late.",
+    "meaning_hint": "Picture all the things you've arranged correctly ahead of winter — logs bundled for the fire, blankets for the night, and yourself, all bundled up in your neatly organized home — just as the first snowflakes begin to fall.",
+    "reading_mnemonic": "But the most important things to <kanji>arrange</kanji> and <kanji>organize</kanji> are your <reading>sa</reading>bers (せい). You have an extensive saber collection that you simply must organize before winter arrives.",
+    "reading_hint": "Last winter you tripped and fell on a saber you'd left lying around. Ouch, lesson learned. That's when your passion for organizing things in bundles started. You know better than anyone the value of arranging your sabers as safely and tidily as possible.",
     "vocabulary": [
       { "word": "整理", "level": 13, "meaning": "Arrangement", "reading": "せいり" },
       { "word": "整理する", "level": 14, "meaning": "To Arrange", "reading": "せいりする" },
@@ -342,10 +342,10 @@
       { "reading": "くれ", "primary": false, "accepted_answer": false, "type": "kunyomi" }
     ],
     "meanings": [{ "meaning": "Dark", "primary": true, "accepted_answer": true }],
-    "meaning_mnemonic": "If you yourself are a <radical>sun</radical>, and you <radical>stand</radical> next to another <radical>sun</radical>, no area around you will be <kanji>dark</kanji>. The two suns are very bright and standing right next to each other, so all the area will be lit up and nothing will be dark.",
-    "meaning_hint": "Think of how bright the sun is. Now multiply that by two. Suns are especially bright right after you come out of a dark area. Imagine yourself looking at these suns and feeling the pain as your eyes are blinded by the bright light.",
-    "reading_mnemonic": "Since the sun has blinded you, your vision is now very <kanji>dark</kanji>. You can’t see anything, but you are hungry so you reach around for some food and eat it. Yuck! It’s <reading>an</reading>chovies (あん). You don’t even like anchovies, how did they get in your house?",
-    "reading_hint": "Picture yourself eating anchovies. The anchovies taste particularly fishy and salty. Taste the anchovies on your tongue as you eat them in darkness.",
+    "meaning_mnemonic": "When the <radical>sun</radical> tries to <radical>stand</radical> on another <radical>sun</radical>, they collapse in on each other to create something <kanji>dark</kanji>. Almost like a dark hole… Is there a term for that? Probably not. Just know that suns standing on suns = instant night mode, total darkness.",
+    "meaning_hint": "No shadows, no light escaping at all — just pure, overwhelming dark. Why did the sun go and do that?! Now the whole solar system is totally dark, including right here in your house.",
+    "reading_mnemonic": "Wandering around your house in the <kanji>dark</kanji> you start to feel hungry, so you reach blindly for some food and take a bite. Yuck! It's <reading>an</reading>chovies (あん). You don't even like anchovies, how did they get in your house? Hmm… Dark forces are at work here…",
+    "reading_hint": "And because it's so dark, the anchovy taste is all you can concentrate on. Imagine that fishy, salty taste on your tongue, the little softened bones sticking between your teeth. Ugh.",
     "vocabulary": [
       { "word": "暗い", "level": 13, "meaning": "Dark", "reading": "くらい" },
       { "word": "暗殺", "level": 13, "meaning": "Assassination", "reading": "あんさつ" },
@@ -407,10 +407,10 @@
     ],
     "kunyomi": [{ "reading": "はし", "primary": true, "accepted_answer": true, "type": "kunyomi" }],
     "meanings": [{ "meaning": "Bridge", "primary": true, "accepted_answer": true }],
-    "meaning_mnemonic": "A <radical>tree</radical> from <radical>heaven</radical> with a <radical>mustache</radical> above his <radical>mouth</radical> valiantly crosses a <kanji>bridge</kanji>. This holy tree from heaven was sent down to earth to cross this very bridge. It is the tree’s angelic mission. Also the tree has a mouth and a mustache.",
-    "meaning_hint": "Picture this majestic tree as it crosses the bridge. Its mustache is very distinguished. Hear its roots and branches swaying, creaking, and cracking in the wind.",
-    "reading_mnemonic": "The tree finishes crossing the <kanji>bridge</kanji> and on the other side is a plate of steaming <reading>hash</reading> (はし) browns! That's why it has a mouth. To eat yummy bridge hash browns.",
-    "reading_hint": "Imagine sitting on the bridge with the tree and eating hash browns with it. It's heavenly! ",
+    "meaning_mnemonic": "This <radical>tree</radical> must've been sent from <radical>heaven</radical>, because it has a <radical>mouth</radical> and a <radical>mustache</radical>. Like some kind of special heaven tree that talks. And why was it sent? To be a <kanji>bridge</kanji>. To be the great heavenly bridge that we all, someday, must cross.",
+    "meaning_hint": "Picture this majestic tree bridge laid on its side, beckoning you into heaven with its mustachioed mouth. \"Cross over!\" it says in its bridge voice. Do… do you just step over the mouth? Can you wipe your shoes on the mustache, like it's a bristly doormat to heaven?",
+    "reading_mnemonic": "Actually, to get across this <kanji>bridge</kanji> you have to give it some <reading>hash</reading> (はし) browns. That's what the bridge's mouth is for. Hash browns to get across the heaven bridge? Small price to pay, really.",
+    "reading_hint": "Hear the bridge shouting \"HASH BROWNS\" in its bridge voice. You stuff some hash into its mouth and it starts to chew loudly. Oh, ew… Little hash brown bits are getting stuck in its mustache. Fortunately, the bridge lets you across. Unfortunately, it turns out all of heaven smells like hash browns.",
     "vocabulary": [{ "word": "桟橋", "level": 60, "meaning": "Pier", "reading": "さんばし" }]
   },
   {
@@ -505,7 +505,7 @@
       { "word": "熱い", "level": 13, "meaning": "Hot Thing", "reading": "あつい" },
       { "word": "熱心", "level": 13, "meaning": "Enthusiasm", "reading": "ねっしん" },
       { "word": "熱烈", "level": 29, "meaning": "Fervent", "reading": "ねつれつ" },
-      { "word": "耐熱", "level": 48, "meaning": "Heat Resisting", "reading": "たいねつ" }
+      { "word": "耐熱", "level": 48, "meaning": "Heat Resistant", "reading": "たいねつ" }
     ]
   },
   {
@@ -564,10 +564,10 @@
       { "reading": "みどり", "primary": true, "accepted_answer": true, "type": "kunyomi" }
     ],
     "meanings": [{ "meaning": "Green", "primary": true, "accepted_answer": true }],
-    "meaning_mnemonic": "If you see a <radical>wolverine</radical> in the <radical>water</radical> playing with a piece of <radical>thread</radical>, there’s no doubt that it’s <kanji>green</kanji>. Wolverines love green thread. Almost as much as they love the water.",
-    "meaning_hint": "Picture this wolverine playing with the green thread. It’s like a little kitten with yarn. That wolverine loves that green thread. Picture how cute it is as it plays with the thread and coos in happiness.",
-    "reading_mnemonic": "<reading>Midori</reading> (みどり) is a <kanji>green</kanji> colored melon liqueur with a sweet, fruity taste. This wolverine is too young to drink alcohol like Midori, so he just sticks to drinking water.",
-    "reading_hint": "If you’ve ever had Midori before, imagine that taste. It’s also green, so that’s an easy way to remember this kanji. If you haven’t had it, just picture the taste of melon and imagine that flavor on your tongue.",
+    "meaning_mnemonic": "If you tie a <radical>thread</radical> around <radical>Wolverine</radical> and dip him in <radical>water</radical>, he'll turn <kanji>green</kanji>, like the Hulk. Some kind of weird chemical reaction. But I… I wouldn't try it if I were you. You wouldn't like him when he's green. ",
+    "meaning_hint": "Still, imagine pulling Wolverine from X-Men out of the water with that thread, and seeing him looking kinda green. Pretty green, but he could be greener. We have to go greener! We have to make the Hulk green with envy! So you put him back in the water, again and again…",
+    "reading_mnemonic": "As the flailing Wolverine begins to turn even more <kanji>green</kanji>, he calls out, \"HELP <reading>ME DORY</reading> (みどり)!\" Me, Dory? No, not you. He's calling out to that fish from Finding Nemo, another Disney IP. \"Help me Dory, I'm green!\" Then Dory leaps out of the water to bites through the thread and save Wolverine… THE END. Fade to green.",
+    "reading_hint": "These Marvel crossovers are getting ridiculous.",
     "vocabulary": [{ "word": "緑色", "level": 13, "meaning": "Green", "reading": "みどりいろ" }]
   },
   {

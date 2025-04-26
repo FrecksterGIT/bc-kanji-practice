@@ -166,13 +166,13 @@
       { "reading": "お", "primary": false, "accepted_answer": false, "type": "kunyomi" },
       { "reading": "くず", "primary": false, "accepted_answer": false, "type": "kunyomi" }
     ],
-    "meanings": [{ "meaning": "Degenerate", "primary": true, "accepted_answer": true }],
-    "meaning_mnemonic": "Even if you <radical>have</radical> a <radical>building</radical>, it will eventually turn back into <radical>dirt</radical>. Everything will <kanji>degenerate</kanji> eventually. A brick falls off here, a door comes loose there. Nothing can last forever.",
-    "meaning_hint": "Imagine a time lapse video of a building degenerating.",
-    "reading_mnemonic": "As you watch the building <kanji>degenerate</kanji>, you can't help but think of your <reading>da</reading>d (だ). You had to watch him waste away the same way of a degenerative disease. Why do people have to die, dad?",
-    "reading_hint": "This may not be a happy thing to think about, but it will help you remember this kanji better. Imagine your dad fighting a degenerative disease. Imagine helping him fight through this. Everything will be okay eventually. I promise.",
+    "meanings": [{ "meaning": "Degradation", "primary": true, "accepted_answer": true }],
+    "meaning_mnemonic": "When <radical>building</radical>s <radical>have</radical> <radical>dirt</radical> piling up all around them, it's a sign of their <kanji>degradation</kanji>.\n",
+    "meaning_hint": "Picture a street where nothing is maintained. The buildings crumble in the dirt, but the people have lost the will to care. It's not just physical, it's spiritual degradation too…",
+    "reading_mnemonic": "And who's leading this charge into <kanji>degradation</kanji>? Your <reading>da</reading>d (だ), of course.",
+    "reading_hint": "Your dad isn't just part of the degradation — he's the ringleader. He's sitting in a broken lawn chair, surrounded by empty beer cans, takeout containers, and piles of dirt. He waves his hand, and more junk food wrappers fall around him, almost like he's commanding this lazy, degenerate lifestyle.",
     "vocabulary": [
-      { "word": "堕落", "level": 57, "meaning": "Corruption", "reading": "だらく" },
+      { "word": "堕落", "level": 57, "meaning": "Depravity", "reading": "だらく" },
       { "word": "堕胎", "level": 57, "meaning": "Abortion", "reading": "だたい" }
     ]
   },
@@ -239,7 +239,7 @@
       { "word": "敢えて", "level": 57, "meaning": "Dare To", "reading": "あえて" },
       { "word": "敢行", "level": 57, "meaning": "Decisive Action", "reading": "かんこう" },
       { "word": "敢然", "level": 57, "meaning": "Boldly", "reading": "かんぜん" },
-      { "word": "敢闘", "level": 57, "meaning": "Fight Bravely", "reading": "かんとう" },
+      { "word": "敢闘", "level": 57, "meaning": "Fighting Bravely", "reading": "かんとう" },
       { "word": "勇敢", "level": 57, "meaning": "Brave", "reading": "ゆうかん" },
       {
         "word": "取り敢えず",
@@ -494,8 +494,8 @@
     "meanings": [{ "meaning": "Equilibrium", "primary": true, "accepted_answer": true }],
     "meaning_mnemonic": "You <radical>go</radical> to a <radical>big</radical> <radical>rice paddy</radical> and establish a <radical>prison</radical> right in the middle of it to restore the <kanji>equilibrium</kanji> of the area.",
     "meaning_hint": "There was a lot of crime right here in this rice paddy, so you just built a big prison right there to lower the crime rate so this region can experience equilibrium once again.",
-    "reading_mnemonic": "To restore <kanji>equilibrium</kanji> in these parts, you throw all the 耕ing <reading>こう</reading>いち clones into the prison. ",
-    "reading_hint": "The cloned こういちs were causing all the crime in these parts (or so Emperor こういち said), so by throwing them in a prison built right there just for them, this area could once again achieve equilibrium.",
+    "reading_mnemonic": "To restore <kanji>equilibrium</kanji>, you throw all the <reading>こう</reading>いち clones into the prison.",
+    "reading_hint": "You might remember from the kanji 耕 that there were こういち clones working in these rice paddy fields. Well, they were the ones disturbing the equilibrium. At least that's what Emperor こういち said. So by throwing them in a prison built right here, the area could once again achieve equilibrium.  ",
     "vocabulary": [
       { "word": "均衡", "level": 57, "meaning": "Equilibrium", "reading": "きんこう" },
       { "word": "平衡", "level": 57, "meaning": "Balance", "reading": "へいこう" },

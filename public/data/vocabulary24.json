@@ -629,14 +629,18 @@
     "level": 24,
     "word": "差す",
     "meanings": [
-      { "meaning": "To Shine At", "primary": true },
-      { "meaning": "To Shine On", "primary": false }
+      { "meaning": "To Shine", "primary": true },
+      { "meaning": "To Project", "primary": false },
+      { "meaning": "To Extend Outward", "primary": false },
+      { "meaning": "To Appear", "primary": false }
     ],
     "reading": [{ "reading": "さす", "primary": true }],
     "reading_mnemonic": "The reading of the kanji is actually the same as the reading for this word, making things easy (both on'yomi and kun'yomi are さ).",
     "allMeanings": [
-      { "meaning": "To Shine At", "primary": true },
-      { "meaning": "To Shine On", "primary": false }
+      { "meaning": "To Shine", "primary": true },
+      { "meaning": "To Project", "primary": false },
+      { "meaning": "To Extend Outward", "primary": false },
+      { "meaning": "To Appear", "primary": false }
     ]
   },
   {
@@ -790,14 +794,14 @@
     "level": 24,
     "word": "提供",
     "meanings": [
-      { "meaning": "Offer", "primary": true },
-      { "meaning": "Program Sponsoring", "primary": false }
+      { "meaning": "Offering", "primary": true },
+      { "meaning": "Providing", "primary": false }
     ],
     "reading": [{ "reading": "ていきょう", "primary": true }],
     "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.",
     "allMeanings": [
-      { "meaning": "Offer", "primary": true },
-      { "meaning": "Program Sponsoring", "primary": false }
+      { "meaning": "Offering", "primary": true },
+      { "meaning": "Providing", "primary": false }
     ]
   },
   {

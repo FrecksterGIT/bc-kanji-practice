@@ -464,7 +464,7 @@
       { "meaning": "Quit", "primary": true, "accepted_answer": true },
       { "meaning": "Leave", "primary": false, "accepted_answer": true }
     ],
-    "meaning_mnemonic": "You're in a <radical>net</radical> but you have the <radical>ability</radical> to quit playing along and <kanji>leave</kanji> at any time. ",
+    "meaning_mnemonic": "You're in a <radical>net</radical> but you have the <radical>ability</radical> to <kanji>quit</kanji> playing along and <kanji>leave</kanji> at any time. ",
     "meaning_hint": "Your captors think they have you trapped, but you know you can leave whenever you feel like it.",
     "reading_mnemonic": "You don't know if you want to <kanji>quit</kanji> this charade until you feel an uncomfortable <reading>hea</reading>t (ひ). You look down and the net you're in is being hung above a large fire.",
     "reading_hint": "As the heat spreads you decide to leave. You hop out of the net and watch the shock spread in your captors eyes.",

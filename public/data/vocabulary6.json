@@ -455,7 +455,7 @@
       { "meaning": "To Be In A Photograph", "primary": false }
     ],
     "reading": [{ "reading": "うつる", "primary": true }],
-    "reading_mnemonic": "Since this word consists of a kanji with hiragana attached, you can bet that it will use the kun'yomi reading. You didn't learn that reading with this kanji, so here's a mnemonic to help you: \n\nYou have to remember the うつ part. You're being rude, right? That's why you got photographed. Why are you rude? You're doing beatboxing, constantly saying <reading>うつ</reading>うつうつ over and over again. Say it out loud, too.",
+    "reading_mnemonic": "Since this word consists of a kanji with hiragana attached, you can bet that it will use the kun'yomi reading. You learned that reading with the 写る vocab, but here's a refresher just in case:\n\nYou have to remember the うつ part. You're being rude, right? That's why you got photographed. Why are you rude? You're doing beatboxing, constantly saying <reading>うつ</reading>うつうつ over and over again. Say it out loud, too.",
     "allMeanings": [
       { "meaning": "To Be Photographed", "primary": true },
       { "meaning": "To Be In A Photograph", "primary": false }
@@ -1373,7 +1373,7 @@
       { "meaning": "Honestly", "primary": false }
     ],
     "reading": [{ "reading": "しょうじき", "primary": true }],
-    "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. This is the case here too, but both kanji use their slightly less common secondary readings. You do know both of those, but in case you need a little help, here's a mnemonic anyway:\n\nBe completely <vocabulary>honest</vocabulary>, what's the strangest sound you've ever heard? The <reading>Shou</reading>gun (しょう) going \"<reading>jiki</reading>jiki (じき)\"?! <vocabulary>Honestly</vocabulary>, that does sound quite strange... ",
+    "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. This is the case here too, but both kanji use their slightly less common secondary readings. You do know both of those, but in case you need a little help, here's a mnemonic anyway:\n\nBe completely <vocabulary>honest</vocabulary>, what's the strangest sound you've ever heard? The <reading>Shou</reading>gun (しょう) going \"<reading>jiki</reading> jiki (じき)\"?! <vocabulary>Honestly</vocabulary>, that does sound quite strange... ",
     "allMeanings": [
       { "meaning": "Honest", "primary": true },
       { "meaning": "Honestly", "primary": false }

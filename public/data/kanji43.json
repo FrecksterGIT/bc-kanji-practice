@@ -504,14 +504,14 @@
     "kanji": "籍",
     "onyomi": [{ "reading": "せき", "primary": true, "accepted_answer": true, "type": "onyomi" }],
     "kunyomi": [],
-    "meanings": [{ "meaning": "Enroll", "primary": true, "accepted_answer": true }],
-    "meaning_mnemonic": "People had to ride their <radical>bamboo</radical> <radical>plow</radical>s <radical>long ago</radical> to <kanji>enroll</kanji> in things. There were no cars yet, so they would hitch a cow to their bamboo plow, and dig their way to the government office or school to enroll.",
-    "meaning_hint": "Picture the little hut that passed for school long ago. All of the bamboo plows are parked around it, as the people enroll themselves and their kids up for classes.",
-    "reading_mnemonic": "If you <kanji>enroll</kanji> in something new people will find you very <reading>sexy</reading> (せき). This was true long ago too. There's nothing sexier than trying to improve yourself.",
-    "reading_hint": "Picture a line of people enrolling for new classes, sports, citizenship, etc. The moment they've enrolled they poof into the perfect, sexy person (in your eyes).",
+    "meanings": [{ "meaning": "Register", "primary": true, "accepted_answer": true }],
+    "meaning_mnemonic": "People had to use their <radical>bamboo</radical> <radical>plow</radical>s <radical>long ago</radical> to put their name in a <kanji>register</kanji>. This is because there was no paper yet, so they would hitch a cow to their bamboo plow, and dig their names into the dirt to create all kinds of registers.",
+    "meaning_hint": "School registers, family registers, member registers — you name it. Picture the fields and hillsides back then, full of names scraped into the dirt. ",
+    "reading_mnemonic": "If your name is in a <kanji>register</kanji>, people will find you very <reading>sexy</reading> (せき). This was true long ago too. There's nothing sexier than someone whose existence is accounted for in official documentation.",
+    "reading_hint": "No wonder people went to the trouble of plowing their names into the dirt back then. They understood the sex appeal of registers.",
     "vocabulary": [
       { "word": "戸籍", "level": 43, "meaning": "Family Register", "reading": "こせき" },
-      { "word": "国籍", "level": 43, "meaning": "Citizenship", "reading": "こくせき" },
+      { "word": "国籍", "level": 43, "meaning": "Nationality", "reading": "こくせき" },
       {
         "word": "入籍",
         "level": 45,
@@ -597,7 +597,7 @@
     "reading_hint": "As you watch, you really see the charm of this game. Some people are throwing the stool down the chute, some people are sliding down it on their ears...how charming. ",
     "vocabulary": [
       { "word": "趣味", "level": 43, "meaning": "Hobby", "reading": "しゅみ" },
-      { "word": "悪趣味", "level": 45, "meaning": "Bad Habit", "reading": "あくしゅみ" }
+      { "word": "悪趣味", "level": 45, "meaning": "Bad Taste", "reading": "あくしゅみ" }
     ]
   },
   {

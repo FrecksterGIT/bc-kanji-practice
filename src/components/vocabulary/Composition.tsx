@@ -9,19 +9,19 @@ export const Composition: FC<CompositionProps> = ({ word }) => {
   const { kanjiData, loading: loadingKanji } = useKanjiComposition(word);
 
   return (
-    <table className="min-w-full divide-y divide-gray-200 text-left">
+    <table className="max-w-min divide-y divide-gray-200 text-left">
       <thead>
         <tr className="text-xs font-medium uppercase">
           <th scope="col" className="px-2 pb-2 tracking-wider">
             Kanji
           </th>
-          <th scope="col" className="px-2 tracking-wider">
+          <th scope="col" className="px-2 pb-2 tracking-wider">
             Onyomi
           </th>
-          <th scope="col" className="px-2 tracking-wider">
+          <th scope="col" className="px-2 pb-2 tracking-wider">
             Kunyomi
           </th>
-          <th scope="col" className="px-2 tracking-wider">
+          <th scope="col" className="px-2 pb-2 tracking-wider">
             Meaning
           </th>
         </tr>

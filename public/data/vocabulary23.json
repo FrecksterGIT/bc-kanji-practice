@@ -836,10 +836,16 @@
     "id": 4599,
     "level": 23,
     "word": "有職",
-    "meanings": [{ "meaning": "Employed", "primary": true }],
+    "meanings": [
+      { "meaning": "Having A Job", "primary": true },
+      { "meaning": "Being Employed", "primary": false }
+    ],
     "reading": [{ "reading": "ゆうしょく", "primary": true }],
     "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.",
-    "allMeanings": [{ "meaning": "Employed", "primary": true }]
+    "allMeanings": [
+      { "meaning": "Having A Job", "primary": true },
+      { "meaning": "Being Employed", "primary": false }
+    ]
   },
   {
     "id": 6832,

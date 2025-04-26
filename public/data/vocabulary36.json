@@ -11,7 +11,7 @@
       { "reading": "うなぎどんぶり", "primary": true },
       { "reading": "うなぎどん", "primary": false }
     ],
-    "reading_mnemonic": "This is a jukugo word that uses the on'yomi readings of the kanji. You should be able to read this on your own.",
+    "reading_mnemonic": "This is うなぎ plus 丼. The full name is うなぎどんぶり, but people usually call it うなぎどん for short. That said, you haven't learned the full どんぶり reading for 丼, so here's a mnemonic to help you out:\n\n<kanji>Rice bowl</kanji>s keep disappearing, and everyone's terrified. Who's behind it? <reading>Don Brie</reading> (どんぶり), the feared cheese-loving mafia boss. He wants those rice bowls to eat all his brie out of, because I guess plates aren't good enough. That's why they call him Don Brie.\n\nNote that sometimes people even shorten this to うなどん. But since the ぎ is included here, make sure to type it out when reviewing!",
     "allMeanings": [
       { "meaning": "Eel Bowl", "primary": true },
       { "meaning": "Eel Rice Bowl", "primary": false }
@@ -1164,7 +1164,7 @@
       { "reading": "おやこどんぶり", "primary": true },
       { "reading": "おやこどん", "primary": false }
     ],
-    "reading_mnemonic": "The reading is 親 and 子 and 丼 combined together.",
+    "reading_mnemonic": "This is 親子 (おやこ) plus 丼. The full name is おやこどんぶり, but people usually say おやこどん for short. You leaned the full どんぶり reading for 丼 with うなぎ丼, but here's a refresher:\n\n<kanji>Rice bowls</kanji> keep disappearing, and everyone's terrified. Who's behind it? <reading>Don Brie</reading> (どんぶり), the feared cheese-loving mafia boss. He wants those rice bowls to eat all his brie out of, because I guess plates aren't good enough. That's why they call him Don Brie.",
     "allMeanings": [
       { "meaning": "Chicken And Egg Rice Bowl", "primary": true },
       { "meaning": "Parent And Child Rice Bowl", "primary": false },

@@ -706,7 +706,7 @@
       { "meaning": "Little", "primary": false }
     ],
     "reading": [{ "reading": "ちいさい", "primary": true }],
-    "reading_mnemonic": "Since this word consists of a kanji with hiragana attached, you can bet that it will use the kun'yomi reading. You didn't learn that reading with this kanji, so here's a mnemonic to help you to remember the ちい portion: \n\nWhen you think of the word <vocabulary>small</vocabulary>, try to think of this <reading>chee</reading>se (ちい) store. You go inside, and all of their cheeses are so small. They hand you a magnifying glass to see all the cheeses. You look at them and exclaim: \"Why are these cheeses so small???\"",
+    "reading_mnemonic": "Since this word consists of a kanji with hiragana attached, you can bet that it will use the kun'yomi reading. You didn't learn that reading with this kanji, so here's a mnemonic to help you to remember the ちい portion:\n\nWhen you think of the word <vocabulary>small</vocabulary>, try to think of this <reading>chee</reading>se <reading>ea</reading>tery (ちい). You go inside, and all of their cheeses are so small. They hand you a magnifying glass to see all the cheeses. You look at them and exclaim: \"Why are these cheeses so small???\"",
     "allMeanings": [
       { "meaning": "Small", "primary": true },
       { "meaning": "Little", "primary": false }

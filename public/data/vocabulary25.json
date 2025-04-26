@@ -1663,7 +1663,7 @@
       { "meaning": "To Do One's Best", "primary": false }
     ],
     "reading": [{ "reading": "がんばる", "primary": true }],
-    "reading_mnemonic": "The reading for this word is the reading for 頑 and 張る put together but the 張る part gets rendaku'd so keep that in mind.",
+    "reading_mnemonic": "This word gets its reading from the kanji 頑 and the verb 張る put together, but the 張る part gets rendaku'd to ばる. Here's a mnemonic to help you remember that rendaku:\n\nWhen you have <vocabulary>to persevere</vocabulary>, you always scream <reading>baa</reading> (ば)! Not sure why, you just think when someone has <vocabulary>to do one's best</vocabulary>, screaming \"baa!\" is a great motivator. Kinda like how weightlifters and tennis players grunt when they're doing their best, you know? Baa!",
     "allMeanings": [
       { "meaning": "To Persevere", "primary": true },
       { "meaning": "To Do One's Best", "primary": false }

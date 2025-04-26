@@ -57,7 +57,7 @@
       { "word": "催促", "level": 29, "meaning": "Urge", "reading": "さいそく" },
       { "word": "催告", "level": 29, "meaning": "Notice", "reading": "さいこく" },
       { "word": "主催", "level": 29, "meaning": "Host", "reading": "しゅさい" },
-      { "word": "主催する", "level": 31, "meaning": "To Sponsor", "reading": "しゅさいする" },
+      { "word": "主催する", "level": 31, "meaning": "To Host", "reading": "しゅさいする" },
       { "word": "催促する", "level": 31, "meaning": "To Urge", "reading": "さいそくする" }
     ]
   },
@@ -521,9 +521,9 @@
     "reading_mnemonic": "You ask the servant why they're so <kanji>tense</kanji>, and they say they've been assigned to assassinate the <reading>Kin</reading>g (きん) of England with this piece of thread.",
     "reading_hint": "Imagine how tense you would be if you were about to try to murder the King! Your entire body would tense up, maybe to the point that you wouldn't be able to actually go through with it.",
     "vocabulary": [
-      { "word": "緊張", "level": 29, "meaning": "Stress", "reading": "きんちょう" },
+      { "word": "緊張", "level": 29, "meaning": "Nervousness", "reading": "きんちょう" },
       { "word": "緊急", "level": 29, "meaning": "Urgent", "reading": "きんきゅう" },
-      { "word": "緊張する", "level": 31, "meaning": "To Stress", "reading": "きんちょうする" }
+      { "word": "緊張する", "level": 31, "meaning": "To Feel Nervous", "reading": "きんちょうする" }
     ]
   },
   {
@@ -708,10 +708,11 @@
     ],
     "meanings": [
       { "meaning": "Male", "primary": true, "accepted_answer": true },
+      { "meaning": "Manly", "primary": false, "accepted_answer": true },
       { "meaning": "Brave", "primary": false, "accepted_answer": true }
     ],
-    "meaning_mnemonic": "The <radical>narwhal</radical> and the <radical>turkey</radical> are meeting in <radical>private</radical> to uh, show each other some private things. Doing this they realize they're both <kanji>male</kanji>!",
-    "meaning_hint": "Picture a male narwhal and a male turkey meeting together in private. Whispering. Giggling. Pointing at each other's male bits.",
+    "meaning_mnemonic": "The <radical>narwhal</radical> is meeting in <radical>private</radical> with the <radical>turkey</radical> so they can, uh, show each other some private things. Doing this they realize they're both <kanji>male</kanji>! You gotta be pretty <kanji>manly</kanji> and <kanji>brave</kanji> to do something like that.",
+    "meaning_hint": "Picture a male narwhal and a male turkey meeting together in private. Whispering. Giggling. Pointing at each other's male bits, each admiring how manly and brave the other is.",
     "reading_mnemonic": "These <kanji>male</kanji> animals are obviously experimenting with things still. Ah, they must be <reading>you</reading>ths (ゆう)!  To be a youth, again!",
     "reading_hint": "It's just nature. Youths like to learn and try new things. And if two male youth animals wanna get together in private that's their business.",
     "vocabulary": [

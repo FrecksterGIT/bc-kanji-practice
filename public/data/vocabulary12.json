@@ -949,19 +949,14 @@
     "word": "根本",
     "meanings": [
       { "meaning": "Root", "primary": true },
-      { "meaning": "Source", "primary": false },
-      { "meaning": "Origin", "primary": false },
+      { "meaning": "Basis", "primary": false },
       { "meaning": "Foundation", "primary": false }
     ],
-    "reading": [
-      { "reading": "こんぽん", "primary": true },
-      { "reading": "ねもと", "primary": false }
-    ],
-    "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well. Careful, 本 is ぽん, which is a weird rendaku.",
+    "reading": [{ "reading": "こんぽん", "primary": true }],
+    "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well. Careful, 本 is ぽん, which is a weird rendaku. In case you need help with this rendaku reading, here's a mnemonic:\n\nWhat's the <vocabulary>root</vocabulary> cause of your unhappiness? A <reading>pon</reading>y (ぽん). Getting a pony was basically the <vocabulary>basis</vocabulary> of all your childhood dreams. Unfortunately your parents couldn't afford a pony, so now you're in therapy. Oh yes, you still think of that pony, down there at the root of all your many, many issues…",
     "allMeanings": [
       { "meaning": "Root", "primary": true },
-      { "meaning": "Source", "primary": false },
-      { "meaning": "Origin", "primary": false },
+      { "meaning": "Basis", "primary": false },
       { "meaning": "Foundation", "primary": false }
     ]
   },
@@ -1616,22 +1611,16 @@
     "level": 12,
     "word": "聞こえる",
     "meanings": [
-      { "meaning": "Hearable", "primary": true },
-      { "meaning": "Audible", "primary": false },
-      { "meaning": "To Be Able To Hear", "primary": false },
-      { "meaning": "To Be Heard", "primary": false },
+      { "meaning": "To Be Hearable", "primary": true },
       { "meaning": "To Be Audible", "primary": false },
-      { "meaning": "Can Hear", "primary": false }
+      { "meaning": "To Be Able To Hear", "primary": false }
     ],
     "reading": [{ "reading": "きこえる", "primary": true }],
     "reading_mnemonic": "The reading comes from 聞く, so if you know the reading of that word, you can apply it here.",
     "allMeanings": [
-      { "meaning": "Hearable", "primary": true },
-      { "meaning": "Audible", "primary": false },
-      { "meaning": "To Be Able To Hear", "primary": false },
-      { "meaning": "To Be Heard", "primary": false },
+      { "meaning": "To Be Hearable", "primary": true },
       { "meaning": "To Be Audible", "primary": false },
-      { "meaning": "Can Hear", "primary": false }
+      { "meaning": "To Be Able To Hear", "primary": false }
     ]
   },
   {

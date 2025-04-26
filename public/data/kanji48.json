@@ -318,8 +318,8 @@
     "vocabulary": [
       { "word": "耐える", "level": 48, "meaning": "To Endure", "reading": "たえる" },
       { "word": "忍耐", "level": 48, "meaning": "Endurance", "reading": "にんたい" },
-      { "word": "耐熱", "level": 48, "meaning": "Heat Resisting", "reading": "たいねつ" },
-      { "word": "耐火", "level": 48, "meaning": "Fireproof", "reading": "たいか" },
+      { "word": "耐熱", "level": 48, "meaning": "Heat Resistant", "reading": "たいねつ" },
+      { "word": "耐火", "level": 48, "meaning": "Fire Resistant", "reading": "たいか" },
       { "word": "耐久性", "level": 48, "meaning": "Durability", "reading": "たいきゅうせい" }
     ]
   },

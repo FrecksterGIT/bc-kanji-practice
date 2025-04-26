@@ -577,7 +577,7 @@
     "word": "椅子",
     "meanings": [{ "meaning": "Chair", "primary": true }],
     "reading": [{ "reading": "いす", "primary": true }],
-    "reading_mnemonic": "The reading for 子 is weird. It's す, so think about how you sat on this chair and it broke, so you <reading>sue</reading>d (す) the person who made the chair (who happened to be a child).",
+    "reading_mnemonic": "This is a jukugo word that uses the on'yomi readings of the kanji. But the す reading for 子 here is less common and you haven't really seen it yet, so here's a mnemonic to help you out:\n\nThink about how you broke this <vocabulary>chair</vocabulary> when you sat on it, so you <reading>sue</reading> (す) the person who made the chair. (Who happened to be a child, I guess).",
     "allMeanings": [{ "meaning": "Chair", "primary": true }]
   },
   {
@@ -898,7 +898,7 @@
     "word": "瞳",
     "meanings": [{ "meaning": "Pupil", "primary": true }],
     "reading": [{ "reading": "ひとみ", "primary": true }],
-    "reading_mnemonic": "A <reading>person</reading>'s (ひと) <reading>see</reading>ing (見) ability comes from their <vocabulary>pupil</vocabulary>. That's how you can remember ひとみ.",
+    "reading_mnemonic": "What part of the eye lets a person see? The <vocabulary>pupil</vocabulary>! The pupil lets a <reading>人 見</reading>る (ひとみ). That's how you can remember ひとみ.",
     "allMeanings": [{ "meaning": "Pupil", "primary": true }]
   },
   {

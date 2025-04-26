@@ -330,7 +330,7 @@
       { "meaning": "End Of A Queue", "primary": false }
     ],
     "reading": [{ "reading": "さいこうび", "primary": true }],
-    "reading_mnemonic": "This is a jukugo word that uses the on'yomi readings of the kanji. Be careful, because this is 最 + 後尾, and not 最後 + 尾, meaning that 後 is read こう, not ご! ",
+    "reading_mnemonic": "This is a jukugo word that uses the on'yomi readings of the kanji. Be careful, because this is 最 + 後尾, and not 最後 + 尾, meaning that 後 is read こう, not ご! You learned the こう reading with the kanji, but this might be your first time seeing it in a word, so here's a mnemonic to help you out:\n\nWho's always waiting at the <vocabulary>end of a line</vocabulary>? It's <reading>こう</reading>いち. The dude is always the last one to get to places, and he lines up after literally everybody else, which is why he's at the end of the queue. In middle school the bullies called him \"End of the Queue こういち.\" Poor guy.",
     "allMeanings": [
       { "meaning": "End Of A Line", "primary": true },
       { "meaning": "End Of A Queue", "primary": false }

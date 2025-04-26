@@ -4,895 +4,237 @@
     "level": 1,
     "kanji": "一",
     "onyomi": [
-      {
-        "reading": "いち",
-        "primary": true,
-        "accepted_answer": true,
-        "type": "onyomi"
-      },
-      {
-        "reading": "いつ",
-        "primary": false,
-        "accepted_answer": true,
-        "type": "onyomi"
-      }
+      { "reading": "いち", "primary": true, "accepted_answer": true, "type": "onyomi" },
+      { "reading": "いつ", "primary": false, "accepted_answer": true, "type": "onyomi" }
     ],
     "kunyomi": [
-      {
-        "reading": "ひと",
-        "primary": false,
-        "accepted_answer": false,
-        "type": "kunyomi"
-      }
+      { "reading": "ひと", "primary": false, "accepted_answer": false, "type": "kunyomi" }
     ],
-    "meanings": [
-      {
-        "meaning": "One",
-        "primary": true,
-        "accepted_answer": true
-      }
-    ],
+    "meanings": [{ "meaning": "One", "primary": true, "accepted_answer": true }],
     "meaning_mnemonic": "Lying on the <radical>ground</radical> is something that looks just like the ground, the number <kanji>One</kanji>. Why is this One lying down? It's been shot by the number two. It's lying there, bleeding out and dying. The number One doesn't have long to live.",
     "meaning_hint": "To remember the meaning of <kanji>One</kanji>, imagine yourself there at the scene of the crime. You grab <kanji>One</kanji> in your arms, trying to prop it up, trying to hear its last words. Instead, it just splatters some blood on your face. \"Who did this to you?\" you ask. The number One points weakly, and you see number Two running off into an alleyway. He's always been jealous of number One and knows he can be number one now that he's taken the real number one out.",
     "reading_mnemonic": "As you're sitting there next to <kanji>One</kanji>, holding him up, you start feeling a weird sensation all over your skin. From the wound comes a fine powder (obviously coming from the special bullet used to kill One) that causes the person it touches to get extremely <reading>itchy</reading> (いち).",
     "reading_hint": "Make sure you feel the ridiculously <reading>itchy</reading> sensation covering your body. It climbs from your hands, where you're holding the number <kanji>One</kanji> up, and then goes through your arms, crawls up your neck, goes down your body, and then covers everything. It becomes uncontrollable, and you're scratching everywhere, writhing on the ground. It's so itchy that it's the most painful thing you've ever experienced (you should imagine this vividly, so you remember the reading of this kanji).",
     "vocabulary": [
-      {
-        "word": "一つ",
-        "level": 1,
-        "meaning": "One Thing",
-        "reading": "ひとつ"
-      },
-      {
-        "word": "一人",
-        "level": 1,
-        "meaning": "Alone",
-        "reading": "ひとり"
-      },
-      {
-        "word": "一千",
-        "level": 2,
-        "meaning": "One Thousand",
-        "reading": "いっせん"
-      },
-      {
-        "word": "一月",
-        "level": 2,
-        "meaning": "January",
-        "reading": "いちがつ"
-      },
-      {
-        "word": "一日",
-        "level": 2,
-        "meaning": "One Day",
-        "reading": "いちにち"
-      },
-      {
-        "word": "一万",
-        "level": 3,
-        "meaning": "Ten Thousand",
-        "reading": "いちまん"
-      },
-      {
-        "word": "一台",
-        "level": 3,
-        "meaning": "One Machine",
-        "reading": "いちだい"
-      },
-      {
-        "word": "一文字",
-        "level": 4,
-        "meaning": "Straight Line",
-        "reading": "いちもんじ"
-      },
-      {
-        "word": "一年生",
-        "level": 4,
-        "meaning": "First Year Student",
-        "reading": "いちねんせい"
-      },
-      {
-        "word": "一気",
-        "level": 4,
-        "meaning": "One Breath",
-        "reading": "いっき"
-      },
-      {
-        "word": "一本気",
-        "level": 4,
-        "meaning": "One-Track Mind",
-        "reading": "いっぽんぎ"
-      },
-      {
-        "word": "一打",
-        "level": 4,
-        "meaning": "One Hit",
-        "reading": "いちだ"
-      },
-      {
-        "word": "一回",
-        "level": 5,
-        "meaning": "One Time",
-        "reading": "いっかい"
-      },
-      {
-        "word": "一生",
-        "level": 5,
-        "meaning": "Whole Life",
-        "reading": "いっしょう"
-      },
-      {
-        "word": "一歩",
-        "level": 6,
-        "meaning": "One Step",
-        "reading": "いっぽ"
-      },
-      {
-        "word": "一時",
-        "level": 7,
-        "meaning": "One O'clock",
-        "reading": "いちじ"
-      },
-      {
-        "word": "一体",
-        "level": 7,
-        "meaning": "The Heck",
-        "reading": "いったい"
-      },
-      {
-        "word": "一斤",
-        "level": 7,
-        "meaning": "One Loaf of Bread",
-        "reading": "いっきん"
-      },
-      {
-        "word": "一番",
-        "level": 8,
-        "meaning": "Number One",
-        "reading": "いちばん"
-      },
-      {
-        "word": "一ヶ月",
-        "level": 9,
-        "meaning": "One Month",
-        "reading": "いっかげつ"
-      },
-      {
-        "word": "一番目",
-        "level": 10,
-        "meaning": "First Thing",
-        "reading": "いちばんめ"
-      },
-      {
-        "word": "一ヶ所",
-        "level": 10,
-        "meaning": "One Place",
-        "reading": "いっかしょ"
-      },
-      {
-        "word": "一位",
-        "level": 11,
-        "meaning": "First Place",
-        "reading": "いちい"
-      },
-      {
-        "word": "一代",
-        "level": 12,
-        "meaning": "Lifetime",
-        "reading": "いちだい"
-      },
-      {
-        "word": "一流",
-        "level": 12,
-        "meaning": "First Rate",
-        "reading": "いちりゅう"
-      },
-      {
-        "word": "第一",
-        "level": 12,
-        "meaning": "The First",
-        "reading": "だいいち"
-      },
-      {
-        "word": "第一位",
-        "level": 12,
-        "meaning": "First Place",
-        "reading": "だいいちい"
-      },
-      {
-        "word": "一階",
-        "level": 12,
-        "meaning": "First Floor",
-        "reading": "いっかい"
-      },
-      {
-        "word": "一億",
-        "level": 13,
-        "meaning": "One Hundred Million",
-        "reading": "いちおく"
-      },
+      { "word": "一つ", "level": 1, "meaning": "One Thing", "reading": "ひとつ" },
+      { "word": "一人", "level": 1, "meaning": "Alone", "reading": "ひとり" },
+      { "word": "一千", "level": 2, "meaning": "One Thousand", "reading": "いっせん" },
+      { "word": "一月", "level": 2, "meaning": "January", "reading": "いちがつ" },
+      { "word": "一日", "level": 2, "meaning": "One Day", "reading": "いちにち" },
+      { "word": "一万", "level": 3, "meaning": "Ten Thousand", "reading": "いちまん" },
+      { "word": "一台", "level": 3, "meaning": "One Machine", "reading": "いちだい" },
+      { "word": "一文字", "level": 4, "meaning": "Straight Line", "reading": "いちもんじ" },
+      { "word": "一年生", "level": 4, "meaning": "First Year Student", "reading": "いちねんせい" },
+      { "word": "一気", "level": 4, "meaning": "One Breath", "reading": "いっき" },
+      { "word": "一本気", "level": 4, "meaning": "One-Track Mind", "reading": "いっぽんぎ" },
+      { "word": "一打", "level": 4, "meaning": "One Hit", "reading": "いちだ" },
+      { "word": "一回", "level": 5, "meaning": "One Time", "reading": "いっかい" },
+      { "word": "一生", "level": 5, "meaning": "Whole Life", "reading": "いっしょう" },
+      { "word": "一歩", "level": 6, "meaning": "One Step", "reading": "いっぽ" },
+      { "word": "一時", "level": 7, "meaning": "One O'clock", "reading": "いちじ" },
+      { "word": "一体", "level": 7, "meaning": "The Heck", "reading": "いったい" },
+      { "word": "一斤", "level": 7, "meaning": "One Loaf of Bread", "reading": "いっきん" },
+      { "word": "一番", "level": 8, "meaning": "Number One", "reading": "いちばん" },
+      { "word": "一ヶ月", "level": 9, "meaning": "One Month", "reading": "いっかげつ" },
+      { "word": "一番目", "level": 10, "meaning": "First Thing", "reading": "いちばんめ" },
+      { "word": "一ヶ所", "level": 10, "meaning": "One Place", "reading": "いっかしょ" },
+      { "word": "一位", "level": 11, "meaning": "First Place", "reading": "いちい" },
+      { "word": "一代", "level": 12, "meaning": "Lifetime", "reading": "いちだい" },
+      { "word": "一流", "level": 12, "meaning": "First Rate", "reading": "いちりゅう" },
+      { "word": "第一", "level": 12, "meaning": "The First", "reading": "だいいち" },
+      { "word": "第一位", "level": 12, "meaning": "First Place", "reading": "だいいちい" },
+      { "word": "一階", "level": 12, "meaning": "First Floor", "reading": "いっかい" },
+      { "word": "一億", "level": 13, "meaning": "One Hundred Million", "reading": "いちおく" },
       {
         "word": "一億円",
         "level": 13,
         "meaning": "One Hundred Million Yen",
         "reading": "いちおくえん"
       },
-      {
-        "word": "一例",
-        "level": 14,
-        "meaning": "Instance",
-        "reading": "いちれい"
-      },
-      {
-        "word": "一周",
-        "level": 14,
-        "meaning": "One Time Around",
-        "reading": "いっしゅう"
-      },
-      {
-        "word": "一昨日",
-        "level": 17,
-        "meaning": "Day Before Last",
-        "reading": "おととい"
-      },
-      {
-        "word": "一等",
-        "level": 18,
-        "meaning": "First Class",
-        "reading": "いっとう"
-      },
-      {
-        "word": "一冊",
-        "level": 19,
-        "meaning": "One Book",
-        "reading": "いっさつ"
-      },
-      {
-        "word": "一匹",
-        "level": 19,
-        "meaning": "One Small Animal",
-        "reading": "いっぴき"
-      },
-      {
-        "word": "一昨年",
-        "level": 19,
-        "meaning": "Year Before Last",
-        "reading": "おととし"
-      },
-      {
-        "word": "一個",
-        "level": 20,
-        "meaning": "One Small Thing",
-        "reading": "いっこ"
-      },
-      {
-        "word": "一夫多妻",
-        "level": 20,
-        "meaning": "Polygamy",
-        "reading": "いっぷたさい"
-      },
-      {
-        "word": "一応",
-        "level": 22,
-        "meaning": "For Now",
-        "reading": "いちおう"
-      },
-      {
-        "word": "一割",
-        "level": 23,
-        "meaning": "Ten Percent",
-        "reading": "いちわり"
-      },
-      {
-        "word": "一層",
-        "level": 24,
-        "meaning": "Much More",
-        "reading": "いっそう"
-      },
-      {
-        "word": "一巻",
-        "level": 25,
-        "meaning": "One Volume",
-        "reading": "いっかん"
-      },
+      { "word": "一例", "level": 14, "meaning": "Instance", "reading": "いちれい" },
+      { "word": "一周", "level": 14, "meaning": "One Time Around", "reading": "いっしゅう" },
+      { "word": "一昨日", "level": 17, "meaning": "Day Before Last", "reading": "おととい" },
+      { "word": "一等", "level": 18, "meaning": "First Class", "reading": "いっとう" },
+      { "word": "一冊", "level": 19, "meaning": "One Book", "reading": "いっさつ" },
+      { "word": "一匹", "level": 19, "meaning": "One Small Animal", "reading": "いっぴき" },
+      { "word": "一昨年", "level": 19, "meaning": "Year Before Last", "reading": "おととし" },
+      { "word": "一個", "level": 20, "meaning": "One Small Thing", "reading": "いっこ" },
+      { "word": "一夫多妻", "level": 20, "meaning": "Polygamy", "reading": "いっぷたさい" },
+      { "word": "一応", "level": 22, "meaning": "For Now", "reading": "いちおう" },
+      { "word": "一割", "level": 23, "meaning": "Ten Percent", "reading": "いちわり" },
+      { "word": "一層", "level": 24, "meaning": "Much More", "reading": "いっそう" },
+      { "word": "一巻", "level": 25, "meaning": "One Volume", "reading": "いっかん" },
       {
         "word": "第一印象",
         "level": 26,
         "meaning": "First Impression",
         "reading": "だいいちいんしょう"
       },
-      {
-        "word": "第一段",
-        "level": 27,
-        "meaning": "The First Step",
-        "reading": "だいいちだん"
-      },
-      {
-        "word": "統一",
-        "level": 27,
-        "meaning": "Unity",
-        "reading": "とういつ"
-      },
-      {
-        "word": "一人娘",
-        "level": 29,
-        "meaning": "Only Daughter",
-        "reading": "ひとりむすめ"
-      },
-      {
-        "word": "一杯",
-        "level": 29,
-        "meaning": "One Cup",
-        "reading": "いっぱい"
-      },
+      { "word": "第一段", "level": 27, "meaning": "The First Step", "reading": "だいいちだん" },
+      { "word": "統一", "level": 27, "meaning": "Unity", "reading": "とういつ" },
+      { "word": "一人娘", "level": 29, "meaning": "Only Daughter", "reading": "ひとりむすめ" },
+      { "word": "一杯", "level": 29, "meaning": "One Cup", "reading": "いっぱい" },
       {
         "word": "精一杯",
         "level": 30,
         "meaning": "With All One's Might",
         "reading": "せいいっぱい"
       },
-      {
-        "word": "一覧",
-        "level": 30,
-        "meaning": "A Look",
-        "reading": "いちらん"
-      },
-      {
-        "word": "一筋",
-        "level": 35,
-        "meaning": "Single Mindedly",
-        "reading": "ひとすじ"
-      },
-      {
-        "word": "一般",
-        "level": 36,
-        "meaning": "General",
-        "reading": "いっぱん"
-      },
-      {
-        "word": "一人暮らし",
-        "level": 37,
-        "meaning": "Living Alone",
-        "reading": "ひとりぐらし"
-      },
-      {
-        "word": "一般的",
-        "level": 38,
-        "meaning": "Ordinary",
-        "reading": "いっぱんてき"
-      },
-      {
-        "word": "一致する",
-        "level": 38,
-        "meaning": "To Match",
-        "reading": "いっちする"
-      },
-      {
-        "word": "一人称",
-        "level": 38,
-        "meaning": "First Person",
-        "reading": "いちにんしょう"
-      },
-      {
-        "word": "一緒",
-        "level": 38,
-        "meaning": "Together",
-        "reading": "いっしょ"
-      },
-      {
-        "word": "第一弾",
-        "level": 38,
-        "meaning": "First Installment",
-        "reading": "だいいちだん"
-      },
+      { "word": "一覧", "level": 30, "meaning": "A List", "reading": "いちらん" },
+      { "word": "一筋", "level": 35, "meaning": "Single Mindedly", "reading": "ひとすじ" },
+      { "word": "一般", "level": 36, "meaning": "General", "reading": "いっぱん" },
+      { "word": "一人暮らし", "level": 37, "meaning": "Living Alone", "reading": "ひとりぐらし" },
+      { "word": "一般的", "level": 38, "meaning": "Ordinary", "reading": "いっぱんてき" },
+      { "word": "一致する", "level": 38, "meaning": "To Match", "reading": "いっちする" },
+      { "word": "一人称", "level": 38, "meaning": "First Person", "reading": "いちにんしょう" },
+      { "word": "一緒", "level": 38, "meaning": "Together", "reading": "いっしょ" },
+      { "word": "第一弾", "level": 38, "meaning": "First Installment", "reading": "だいいちだん" },
       {
         "word": "一生懸命",
         "level": 40,
         "meaning": "With All One's Might",
         "reading": "いっしょうけんめい"
       },
-      {
-        "word": "一括",
-        "level": 42,
-        "meaning": "All Together",
-        "reading": "いっかつ"
-      },
-      {
-        "word": "一泊",
-        "level": 42,
-        "meaning": "One Night's Stay",
-        "reading": "いっぱく"
-      },
-      {
-        "word": "一斉",
-        "level": 43,
-        "meaning": "Simultaneous",
-        "reading": "いっせい"
-      },
-      {
-        "word": "一翼",
-        "level": 44,
-        "meaning": "A Part",
-        "reading": "いちよく"
-      },
+      { "word": "一括", "level": 42, "meaning": "All Together", "reading": "いっかつ" },
+      { "word": "一泊", "level": 42, "meaning": "One Night's Stay", "reading": "いっぱく" },
+      { "word": "一斉", "level": 43, "meaning": "Simultaneous", "reading": "いっせい" },
+      { "word": "一翼", "level": 44, "meaning": "A Part", "reading": "いちよく" },
       {
         "word": "一斗缶",
         "level": 44,
         "meaning": "Eighteen-Liter Container",
         "reading": "いっとかん"
       },
-      {
-        "word": "一斉に",
-        "level": 45,
-        "meaning": "Simultaneously",
-        "reading": "いっせいに"
-      },
-      {
-        "word": "一瞬",
-        "level": 46,
-        "meaning": "An Instant",
-        "reading": "いっしゅん"
-      },
-      {
-        "word": "唯一",
-        "level": 49,
-        "meaning": "Only",
-        "reading": "ゆいつ"
-      },
-      {
-        "word": "一概に",
-        "level": 49,
-        "meaning": "Unconditionally",
-        "reading": "いちがいに"
-      },
-      {
-        "word": "一蹴する",
-        "level": 49,
-        "meaning": "To Kick",
-        "reading": "いっしゅうする"
-      },
-      {
-        "word": "一貫",
-        "level": 52,
-        "meaning": "One Piece Of Sushi",
-        "reading": "いっかん"
-      },
-      {
-        "word": "諒一郎",
-        "level": 53,
-        "meaning": "Ryoichiro",
-        "reading": "りょういちろう"
-      },
-      {
-        "word": "一抹",
-        "level": 55,
-        "meaning": "A Little",
-        "reading": "いちまつ"
-      },
-      {
-        "word": "一旦",
-        "level": 55,
-        "meaning": "Once",
-        "reading": "いったん"
-      },
-      {
-        "word": "一遍",
-        "level": 57,
-        "meaning": "Once",
-        "reading": "いっぺん"
-      },
+      { "word": "一斉に", "level": 45, "meaning": "Simultaneously", "reading": "いっせいに" },
+      { "word": "一瞬", "level": 46, "meaning": "An Instant", "reading": "いっしゅん" },
+      { "word": "唯一", "level": 49, "meaning": "Only", "reading": "ゆいつ" },
+      { "word": "一概に", "level": 49, "meaning": "Unconditionally", "reading": "いちがいに" },
+      { "word": "一蹴する", "level": 49, "meaning": "To Kick", "reading": "いっしゅうする" },
+      { "word": "一貫", "level": 52, "meaning": "One Piece Of Sushi", "reading": "いっかん" },
+      { "word": "諒一郎", "level": 53, "meaning": "Ryoichiro", "reading": "りょういちろう" },
+      { "word": "一抹", "level": 55, "meaning": "A Little", "reading": "いちまつ" },
+      { "word": "一旦", "level": 55, "meaning": "Once", "reading": "いったん" },
+      { "word": "一遍", "level": 57, "meaning": "Once", "reading": "いっぺん" },
       {
         "word": "一周忌",
         "level": 59,
         "meaning": "First Anniversary Of Death",
         "reading": "いっしゅうき"
       },
-      {
-        "word": "一遍に",
-        "level": 59,
-        "meaning": "At Once",
-        "reading": "いっぺんに"
-      }
+      { "word": "一遍に", "level": 59, "meaning": "At Once", "reading": "いっぺんに" }
     ]
   },
   {
     "id": 443,
     "level": 1,
     "kanji": "七",
-    "onyomi": [
-      {
-        "reading": "しち",
-        "primary": true,
-        "accepted_answer": true,
-        "type": "onyomi"
-      }
-    ],
+    "onyomi": [{ "reading": "しち", "primary": true, "accepted_answer": true, "type": "onyomi" }],
     "kunyomi": [
-      {
-        "reading": "なな",
-        "primary": false,
-        "accepted_answer": false,
-        "type": "kunyomi"
-      },
-      {
-        "reading": "なの",
-        "primary": false,
-        "accepted_answer": false,
-        "type": "kunyomi"
-      }
+      { "reading": "なな", "primary": false, "accepted_answer": false, "type": "kunyomi" },
+      { "reading": "なの", "primary": false, "accepted_answer": false, "type": "kunyomi" }
     ],
-    "meanings": [
-      {
-        "meaning": "Seven",
-        "primary": true,
-        "accepted_answer": true
-      }
-    ],
+    "meanings": [{ "meaning": "Seven", "primary": true, "accepted_answer": true }],
     "meaning_mnemonic": "Lucky for you (as is the case with many of the lower-stroke kanji), this kanji is the same as the radical you've already learned. The radical that makes up this kanji is <radical>seven</radical> and the kanji (which is exactly the same) is also <kanji>seven</kanji>. So, if you know the radical, you know the meaning of the kanji as well.",
     "meaning_hint": "Make sure you know your radicals well and you'll be A-Okay on this one!",
     "reading_mnemonic": "You know this kanji means <kanji>seven</kanji>, so let's use that to remember the reading too. <kanji>Seven</kanji> is a lucky number, usually, but this time it isn't so good: \n\n<kanji>Seven</kanji> percent is all she got on her test after <reading>she chea</reading>ted (しち) on it.",
     "reading_hint": "How unbelievable is it that someone got <kanji>seven</kanji> percent on a test, especially if you try to cheat? Imagine the girl you loathe the most from school, and imagine her cheating on the test (it's important it's a girl, because of the \"she\" part in <reading>she chea</reading>ted (しち). Then, imagine your happiness when she's super upset about getting seven percent on it. Serves her right, obviously.",
     "vocabulary": [
-      {
-        "word": "七つ",
-        "level": 1,
-        "meaning": "Seven Things",
-        "reading": "ななつ"
-      },
-      {
-        "word": "七日",
-        "level": 2,
-        "meaning": "Seventh Day",
-        "reading": "なのか"
-      },
-      {
-        "word": "北斗七星",
-        "level": 44,
-        "meaning": "The Big Dipper",
-        "reading": "ほくとしちせい"
-      }
+      { "word": "七つ", "level": 1, "meaning": "Seven Things", "reading": "ななつ" },
+      { "word": "七日", "level": 2, "meaning": "Seventh Day", "reading": "なのか" },
+      { "word": "北斗七星", "level": 44, "meaning": "The Big Dipper", "reading": "ほくとしちせい" }
     ]
   },
   {
     "id": 449,
     "level": 1,
     "kanji": "三",
-    "onyomi": [
-      {
-        "reading": "さん",
-        "primary": true,
-        "accepted_answer": true,
-        "type": "onyomi"
-      }
-    ],
-    "kunyomi": [
-      {
-        "reading": "み",
-        "primary": false,
-        "accepted_answer": false,
-        "type": "kunyomi"
-      }
-    ],
-    "meanings": [
-      {
-        "meaning": "Three",
-        "primary": true,
-        "accepted_answer": true
-      }
-    ],
+    "onyomi": [{ "reading": "さん", "primary": true, "accepted_answer": true, "type": "onyomi" }],
+    "kunyomi": [{ "reading": "み", "primary": false, "accepted_answer": false, "type": "kunyomi" }],
+    "meanings": [{ "meaning": "Three", "primary": true, "accepted_answer": true }],
     "meaning_mnemonic": "This kanji is made up of the ground radical (which also happens to be the kanji for \"one\") and the radical for two. Combine <radical>one</radical> and <radical>two</radical> together and what do you get? <kanji>Three</kanji>!",
     "meaning_hint": "This one should be pretty self explanatory! Even easier, you can look at this kanji and see it has three straight lines. You know what one looks like. You know what two looks like. So... this is three!",
     "reading_mnemonic": "<kanji>Three</kanji> is the number of chances you get with <reading>San</reading>ta-san (さん). He has a list, and when you get to three \"naughty things\" lines, that's it. You're on Santa-san's three strikes and you're out list.",
     "reading_hint": "Picture Santa-san sitting at his desk at the North Pole, eating cookies, and marking one, two, then finally three lines next to names. Once the third line appears, the kid doesn't get presents anymore.",
     "vocabulary": [
-      {
-        "word": "三つ",
-        "level": 1,
-        "meaning": "Three Things",
-        "reading": "みっつ"
-      },
-      {
-        "word": "三人",
-        "level": 1,
-        "meaning": "Three People",
-        "reading": "さんにん"
-      },
-      {
-        "word": "三日",
-        "level": 2,
-        "meaning": "Third Day",
-        "reading": "みっか"
-      },
-      {
-        "word": "三世",
-        "level": 4,
-        "meaning": "Third Generation",
-        "reading": "さんせい"
-      },
-      {
-        "word": "三角",
-        "level": 5,
-        "meaning": "Triangle",
-        "reading": "さんかく"
-      },
-      {
-        "word": "三日月",
-        "level": 5,
-        "meaning": "Crescent Moon",
-        "reading": "みかづき"
-      },
-      {
-        "word": "三十代",
-        "level": 5,
-        "meaning": "One's Thirties",
-        "reading": "さんじゅうだい"
-      },
-      {
-        "word": "三百",
-        "level": 6,
-        "meaning": "Three Hundred",
-        "reading": "さんびゃく"
-      },
-      {
-        "word": "三角形",
-        "level": 7,
-        "meaning": "Triangle",
-        "reading": "さんかくけい"
-      },
+      { "word": "三つ", "level": 1, "meaning": "Three Things", "reading": "みっつ" },
+      { "word": "三人", "level": 1, "meaning": "Three People", "reading": "さんにん" },
+      { "word": "三日", "level": 2, "meaning": "Third Day", "reading": "みっか" },
+      { "word": "三世", "level": 4, "meaning": "Third Generation", "reading": "さんせい" },
+      { "word": "三角", "level": 5, "meaning": "Triangle", "reading": "さんかく" },
+      { "word": "三日月", "level": 5, "meaning": "Crescent Moon", "reading": "みかづき" },
+      { "word": "三十代", "level": 5, "meaning": "One's Thirties", "reading": "さんじゅうだい" },
+      { "word": "三百", "level": 6, "meaning": "Three Hundred", "reading": "さんびゃく" },
+      { "word": "三角形", "level": 7, "meaning": "Triangle", "reading": "さんかくけい" },
       {
         "word": "ナポレオン三世",
         "level": 7,
         "meaning": "Napoleon The Third",
         "reading": "なぽれおんさんせい"
       },
-      {
-        "word": "三番目",
-        "level": 12,
-        "meaning": "Third Thing",
-        "reading": "さんばんめ"
-      },
-      {
-        "word": "三冊",
-        "level": 19,
-        "meaning": "Three Books",
-        "reading": "さんさつ"
-      },
-      {
-        "word": "三個",
-        "level": 20,
-        "meaning": "Three Small Things",
-        "reading": "さんこ"
-      },
-      {
-        "word": "三杯",
-        "level": 29,
-        "meaning": "Three Cups",
-        "reading": "さんばい"
-      },
-      {
-        "word": "三つ編み",
-        "level": 35,
-        "meaning": "Braided Hair",
-        "reading": "みつあみ"
-      }
+      { "word": "三番目", "level": 12, "meaning": "Third Thing", "reading": "さんばんめ" },
+      { "word": "三冊", "level": 19, "meaning": "Three Books", "reading": "さんさつ" },
+      { "word": "三個", "level": 20, "meaning": "Three Small Things", "reading": "さんこ" },
+      { "word": "三杯", "level": 29, "meaning": "Three Cups", "reading": "さんばい" },
+      { "word": "三つ編み", "level": 35, "meaning": "Braided Hair", "reading": "みつあみ" }
     ]
   },
   {
     "id": 450,
     "level": 1,
     "kanji": "上",
-    "onyomi": [
-      {
-        "reading": "じょう",
-        "primary": true,
-        "accepted_answer": true,
-        "type": "onyomi"
-      }
-    ],
+    "onyomi": [{ "reading": "じょう", "primary": true, "accepted_answer": true, "type": "onyomi" }],
     "kunyomi": [
-      {
-        "reading": "うえ",
-        "primary": false,
-        "accepted_answer": false,
-        "type": "kunyomi"
-      },
-      {
-        "reading": "あ",
-        "primary": false,
-        "accepted_answer": false,
-        "type": "kunyomi"
-      },
-      {
-        "reading": "のぼ",
-        "primary": false,
-        "accepted_answer": false,
-        "type": "kunyomi"
-      },
-      {
-        "reading": "うわ",
-        "primary": false,
-        "accepted_answer": false,
-        "type": "kunyomi"
-      },
-      {
-        "reading": "かみ",
-        "primary": false,
-        "accepted_answer": false,
-        "type": "kunyomi"
-      }
+      { "reading": "うえ", "primary": false, "accepted_answer": false, "type": "kunyomi" },
+      { "reading": "あ", "primary": false, "accepted_answer": false, "type": "kunyomi" },
+      { "reading": "のぼ", "primary": false, "accepted_answer": false, "type": "kunyomi" },
+      { "reading": "うわ", "primary": false, "accepted_answer": false, "type": "kunyomi" },
+      { "reading": "かみ", "primary": false, "accepted_answer": false, "type": "kunyomi" }
     ],
     "meanings": [
-      {
-        "meaning": "Above",
-        "primary": true,
-        "accepted_answer": true
-      },
-      {
-        "meaning": "Up",
-        "primary": false,
-        "accepted_answer": true
-      },
-      {
-        "meaning": "Over",
-        "primary": false,
-        "accepted_answer": true
-      }
+      { "meaning": "Above", "primary": true, "accepted_answer": true },
+      { "meaning": "Up", "primary": false, "accepted_answer": true },
+      { "meaning": "Over", "primary": false, "accepted_answer": true }
     ],
     "meaning_mnemonic": "You find a <radical>toe</radical> on the <radical>ground</radical>. It's weird, because it's <kanji>above</kanji> the ground, not where toes belong.",
     "meaning_hint": "Focus your imagination on how body parts should be buried, not above ground like this. Sure, finding a toe is a little strange, but finding a toe above the ground? Downright silly.",
     "reading_mnemonic": "Of course when you find a toe <kanji>above</kanji> the ground, you want to know where the toe came from. When you examine it, you see a name written on there. This toe belongs to the local clumsy farmhand, <reading>Joe</reading> (じょう).",
     "reading_hint": "Try to remember Joe, the local farmhand. He is a recurring character that will come up anytime the reading for a kanji is じょう.\n\nHe is a very big man, and he wears farmer's clothes. It's important to imagine your version of Joe as very big, because it will help us to differentiate him from Jo-Anne, who is the character associated with the similar, but shorter reading (and character) じょ. Although Joe will develop as you go through all the じょう reading kanji, for now, just imagine him as a big, kinda slow dude, who works for a local farmer. Also, he only has nine or fewer toes, apparently.",
     "vocabulary": [
-      {
-        "word": "上げる",
-        "level": 1,
-        "meaning": "To Lift Something",
-        "reading": "あげる"
-      },
-      {
-        "word": "上る",
-        "level": 2,
-        "meaning": "To Climb",
-        "reading": "のぼる"
-      },
-      {
-        "word": "上手",
-        "level": 2,
-        "meaning": "Good At",
-        "reading": "じょうず"
-      },
+      { "word": "上げる", "level": 1, "meaning": "To Lift Something", "reading": "あげる" },
+      { "word": "上る", "level": 2, "meaning": "To Climb", "reading": "のぼる" },
+      { "word": "上手", "level": 2, "meaning": "Good At", "reading": "じょうず" },
       {
         "word": "テーブルの上",
         "level": 3,
         "meaning": "On The Table",
         "reading": "てーぶるのうえ"
       },
-      {
-        "word": "上がる",
-        "level": 5,
-        "meaning": "To Go Up",
-        "reading": "あがる"
-      },
-      {
-        "word": "上手い",
-        "level": 5,
-        "meaning": "Good At",
-        "reading": "うまい"
-      },
-      {
-        "word": "年上",
-        "level": 6,
-        "meaning": "Older",
-        "reading": "としうえ"
-      },
-      {
-        "word": "以上",
-        "level": 7,
-        "meaning": "More Than",
-        "reading": "いじょう"
-      },
-      {
-        "word": "出来上がる",
-        "level": 8,
-        "meaning": "To Be Finished",
-        "reading": "できあがる"
-      },
-      {
-        "word": "地上",
-        "level": 8,
-        "meaning": "Above Ground",
-        "reading": "ちじょう"
-      },
-      {
-        "word": "売り上げ",
-        "level": 11,
-        "meaning": "Amount Sold",
-        "reading": "うりあげ"
-      },
-      {
-        "word": "上級",
-        "level": 11,
-        "meaning": "Advanced Level",
-        "reading": "じょうきゅう"
-      },
-      {
-        "word": "屋上",
-        "level": 11,
-        "meaning": "Rooftop",
-        "reading": "おくじょう"
-      },
-      {
-        "word": "上司",
-        "level": 15,
-        "meaning": "Boss",
-        "reading": "じょうし"
-      },
-      {
-        "word": "上品",
-        "level": 18,
-        "meaning": "Elegant",
-        "reading": "じょうひん"
-      },
-      {
-        "word": "上演",
-        "level": 23,
-        "meaning": "Performance",
-        "reading": "じょうえん"
-      },
-      {
-        "word": "上述",
-        "level": 24,
-        "meaning": "Above Mentioned",
-        "reading": "じょうじゅつ"
-      },
-      {
-        "word": "上巻",
-        "level": 25,
-        "meaning": "First Volume",
-        "reading": "じょうかん"
-      },
-      {
-        "word": "差し上げる",
-        "level": 26,
-        "meaning": "To Give",
-        "reading": "さしあげる"
-      },
-      {
-        "word": "盛り上げる",
-        "level": 35,
-        "meaning": "To Heap Up",
-        "reading": "もりあげる"
-      },
-      {
-        "word": "盛り上がる",
-        "level": 37,
-        "meaning": "To Swell",
-        "reading": "もりあがる"
-      },
+      { "word": "上がる", "level": 5, "meaning": "To Go Up", "reading": "あがる" },
+      { "word": "上手い", "level": 5, "meaning": "Good At", "reading": "うまい" },
+      { "word": "年上", "level": 6, "meaning": "Older", "reading": "としうえ" },
+      { "word": "以上", "level": 7, "meaning": "More Than", "reading": "いじょう" },
+      { "word": "出来上がる", "level": 8, "meaning": "To Be Finished", "reading": "できあがる" },
+      { "word": "地上", "level": 8, "meaning": "Above Ground", "reading": "ちじょう" },
+      { "word": "売り上げ", "level": 11, "meaning": "Amount Sold", "reading": "うりあげ" },
+      { "word": "上級", "level": 11, "meaning": "Advanced Level", "reading": "じょうきゅう" },
+      { "word": "屋上", "level": 11, "meaning": "Rooftop", "reading": "おくじょう" },
+      { "word": "上司", "level": 15, "meaning": "Boss", "reading": "じょうし" },
+      { "word": "上品", "level": 18, "meaning": "Elegant", "reading": "じょうひん" },
+      { "word": "上演", "level": 23, "meaning": "Performance", "reading": "じょうえん" },
+      { "word": "上述", "level": 24, "meaning": "Above Mentioned", "reading": "じょうじゅつ" },
+      { "word": "上巻", "level": 25, "meaning": "First Volume", "reading": "じょうかん" },
+      { "word": "差し上げる", "level": 26, "meaning": "To Give", "reading": "さしあげる" },
+      { "word": "盛り上げる", "level": 35, "meaning": "To Heap Up", "reading": "もりあげる" },
+      { "word": "盛り上がる", "level": 37, "meaning": "To Swell", "reading": "もりあがる" },
       {
         "word": "上旬",
         "level": 37,
         "meaning": "First Ten Days Of The Month",
         "reading": "じょうじゅん"
       },
-      {
-        "word": "至上",
-        "level": 41,
-        "meaning": "Supremacy",
-        "reading": "しじょう"
-      },
-      {
-        "word": "上唇",
-        "level": 47,
-        "meaning": "Upper Lip",
-        "reading": "うわくちびる"
-      },
-      {
-        "word": "召し上がる",
-        "level": 53,
-        "meaning": "To Eat",
-        "reading": "めしあがる"
-      }
+      { "word": "至上", "level": 41, "meaning": "Supremacy", "reading": "しじょう" },
+      { "word": "上唇", "level": 47, "meaning": "Upper Lip", "reading": "うわくちびる" },
+      { "word": "召し上がる", "level": 53, "meaning": "To Eat", "reading": "めしあがる" }
     ]
   },
   {
@@ -900,246 +242,65 @@
     "level": 1,
     "kanji": "下",
     "onyomi": [
-      {
-        "reading": "か",
-        "primary": true,
-        "accepted_answer": true,
-        "type": "onyomi"
-      },
-      {
-        "reading": "げ",
-        "primary": false,
-        "accepted_answer": true,
-        "type": "onyomi"
-      }
+      { "reading": "か", "primary": true, "accepted_answer": true, "type": "onyomi" },
+      { "reading": "げ", "primary": false, "accepted_answer": true, "type": "onyomi" }
     ],
     "kunyomi": [
-      {
-        "reading": "した",
-        "primary": false,
-        "accepted_answer": false,
-        "type": "kunyomi"
-      },
-      {
-        "reading": "さ",
-        "primary": false,
-        "accepted_answer": false,
-        "type": "kunyomi"
-      },
-      {
-        "reading": "くだ",
-        "primary": false,
-        "accepted_answer": false,
-        "type": "kunyomi"
-      },
-      {
-        "reading": "お",
-        "primary": false,
-        "accepted_answer": false,
-        "type": "kunyomi"
-      },
-      {
-        "reading": "しも",
-        "primary": false,
-        "accepted_answer": false,
-        "type": "kunyomi"
-      },
-      {
-        "reading": "もと",
-        "primary": false,
-        "accepted_answer": false,
-        "type": "kunyomi"
-      }
+      { "reading": "した", "primary": false, "accepted_answer": false, "type": "kunyomi" },
+      { "reading": "さ", "primary": false, "accepted_answer": false, "type": "kunyomi" },
+      { "reading": "くだ", "primary": false, "accepted_answer": false, "type": "kunyomi" },
+      { "reading": "お", "primary": false, "accepted_answer": false, "type": "kunyomi" },
+      { "reading": "しも", "primary": false, "accepted_answer": false, "type": "kunyomi" },
+      { "reading": "もと", "primary": false, "accepted_answer": false, "type": "kunyomi" }
     ],
     "meanings": [
-      {
-        "meaning": "Below",
-        "primary": true,
-        "accepted_answer": true
-      },
-      {
-        "meaning": "Down",
-        "primary": false,
-        "accepted_answer": true
-      },
-      {
-        "meaning": "Under",
-        "primary": false,
-        "accepted_answer": true
-      },
-      {
-        "meaning": "Beneath",
-        "primary": false,
-        "accepted_answer": true
-      }
+      { "meaning": "Below", "primary": true, "accepted_answer": true },
+      { "meaning": "Down", "primary": false, "accepted_answer": true },
+      { "meaning": "Under", "primary": false, "accepted_answer": true },
+      { "meaning": "Beneath", "primary": false, "accepted_answer": true }
     ],
     "meaning_mnemonic": "There's a <radical>toe</radical> <kanji>below</kanji> <radical>ground</radical>.",
     "meaning_hint": "So, where is the <radical>toe</radical> now? It's <kanji>below</kanji> ground. Imagine yourself digging it out, and thinking... ugh, why does it have to be <kanji>below</kanji> ground like this? So irritating. Will I be able to sew it back on in time to save it?",
     "reading_mnemonic": "You keep digging for the <radical>toe</radical> <kanji>below</kanji> the <radical>ground</radical>, and instead of hitting a <radical>toe</radical> you hit something hard and metallic. You keep digging and digging around it, but it's huge. Turns out, you found yourself a <reading>car</reading> (か). Keep digging until you unearth the car. Inside, you find the toe you were looking for.",
     "reading_hint": "There's another useful on'yomi reading that just isn't useful enough for you to learn now. That reading is げ, but we're only going to worry about that much, much later when you have to learn one or two vocab words that read 下 as げ. That's the problem with really common kanji - too many readings.",
     "vocabulary": [
-      {
-        "word": "下げる",
-        "level": 1,
-        "meaning": "To Lower Something",
-        "reading": "さげる"
-      },
-      {
-        "word": "下さい",
-        "level": 1,
-        "meaning": "Please Give Me",
-        "reading": "ください"
-      },
-      {
-        "word": "下手",
-        "level": 2,
-        "meaning": "Unskillful",
-        "reading": "へた"
-      },
-      {
-        "word": "ベッドの下",
-        "level": 3,
-        "meaning": "Under The Bed",
-        "reading": "べっどのした"
-      },
-      {
-        "word": "下がる",
-        "level": 5,
-        "meaning": "To Get Lower",
-        "reading": "さがる"
-      },
-      {
-        "word": "下町",
-        "level": 5,
-        "meaning": "Downtown",
-        "reading": "したまち"
-      },
-      {
-        "word": "地下",
-        "level": 6,
-        "meaning": "Underground",
-        "reading": "ちか"
-      },
-      {
-        "word": "年下",
-        "level": 6,
-        "meaning": "Younger",
-        "reading": "としした"
-      },
-      {
-        "word": "以下",
-        "level": 7,
-        "meaning": "Less Than",
-        "reading": "いか"
-      },
-      {
-        "word": "下る",
-        "level": 9,
-        "meaning": "To Descend",
-        "reading": "くだる"
-      },
-      {
-        "word": "地下鉄",
-        "level": 10,
-        "meaning": "Subway",
-        "reading": "ちかてつ"
-      },
-      {
-        "word": "下着",
-        "level": 14,
-        "meaning": "Underwear",
-        "reading": "したぎ"
-      },
-      {
-        "word": "下りる",
-        "level": 15,
-        "meaning": "To Go Down",
-        "reading": "おりる"
-      },
-      {
-        "word": "下品",
-        "level": 16,
-        "meaning": "Crude",
-        "reading": "げひん"
-      },
-      {
-        "word": "下書き",
-        "level": 18,
-        "meaning": "Rough Draft",
-        "reading": "したがき"
-      },
-      {
-        "word": "下巻",
-        "level": 25,
-        "meaning": "Last Volume",
-        "reading": "げかん"
-      },
-      {
-        "word": "靴下",
-        "level": 27,
-        "meaning": "Socks",
-        "reading": "くつした"
-      },
+      { "word": "下げる", "level": 1, "meaning": "To Lower Something", "reading": "さげる" },
+      { "word": "下さい", "level": 1, "meaning": "Please Give Me", "reading": "ください" },
+      { "word": "下手", "level": 2, "meaning": "Unskillful", "reading": "へた" },
+      { "word": "ベッドの下", "level": 3, "meaning": "Under The Bed", "reading": "べっどのした" },
+      { "word": "下がる", "level": 5, "meaning": "To Get Lower", "reading": "さがる" },
+      { "word": "下町", "level": 5, "meaning": "Downtown", "reading": "したまち" },
+      { "word": "地下", "level": 6, "meaning": "Underground", "reading": "ちか" },
+      { "word": "年下", "level": 6, "meaning": "Younger", "reading": "としした" },
+      { "word": "以下", "level": 7, "meaning": "Less Than", "reading": "いか" },
+      { "word": "下る", "level": 9, "meaning": "To Descend", "reading": "くだる" },
+      { "word": "地下鉄", "level": 10, "meaning": "Subway", "reading": "ちかてつ" },
+      { "word": "下着", "level": 14, "meaning": "Underwear", "reading": "したぎ" },
+      { "word": "下りる", "level": 15, "meaning": "To Go Down", "reading": "おりる" },
+      { "word": "下品", "level": 16, "meaning": "Crude", "reading": "げひん" },
+      { "word": "下書き", "level": 18, "meaning": "Rough Draft", "reading": "したがき" },
+      { "word": "下巻", "level": 25, "meaning": "Last Volume", "reading": "げかん" },
+      { "word": "靴下", "level": 27, "meaning": "Socks", "reading": "くつした" },
       {
         "word": "地下街",
         "level": 31,
         "meaning": "Underground Shopping Mall",
         "reading": "ちかがい"
       },
-      {
-        "word": "廊下",
-        "level": 31,
-        "meaning": "Corridor",
-        "reading": "ろうか"
-      },
-      {
-        "word": "股下",
-        "level": 35,
-        "meaning": "Inseam",
-        "reading": "またした"
-      },
+      { "word": "廊下", "level": 31, "meaning": "Corridor", "reading": "ろうか" },
+      { "word": "股下", "level": 35, "meaning": "Inseam", "reading": "またした" },
       {
         "word": "下旬",
         "level": 37,
         "meaning": "Last Ten Days Of The Month",
         "reading": "げじゅん"
       },
-      {
-        "word": "却下",
-        "level": 38,
-        "meaning": "Rejection",
-        "reading": "きゃっか"
-      },
-      {
-        "word": "零下",
-        "level": 46,
-        "meaning": "Below Zero",
-        "reading": "れいか"
-      },
-      {
-        "word": "下唇",
-        "level": 47,
-        "meaning": "Lower Lip",
-        "reading": "したくちびる"
-      },
-      {
-        "word": "陛下",
-        "level": 49,
-        "meaning": "Your Majesty",
-        "reading": "へいか"
-      },
-      {
-        "word": "下駄",
-        "level": 50,
-        "meaning": "Geta",
-        "reading": "げた"
-      },
-      {
-        "word": "下痢",
-        "level": 60,
-        "meaning": "Diarrhea",
-        "reading": "げり"
-      }
+      { "word": "却下", "level": 38, "meaning": "Rejection", "reading": "きゃっか" },
+      { "word": "零下", "level": 46, "meaning": "Below Zero", "reading": "れいか" },
+      { "word": "下唇", "level": 47, "meaning": "Lower Lip", "reading": "したくちびる" },
+      { "word": "陛下", "level": 49, "meaning": "Your Majesty", "reading": "へいか" },
+      { "word": "下駄", "level": 50, "meaning": "Geta", "reading": "げた" },
+      { "word": "下痢", "level": 60, "meaning": "Diarrhea", "reading": "げり" }
     ]
   },
   {
@@ -1147,235 +308,66 @@
     "level": 1,
     "kanji": "九",
     "onyomi": [
-      {
-        "reading": "く",
-        "primary": true,
-        "accepted_answer": true,
-        "type": "onyomi"
-      },
-      {
-        "reading": "きゅう",
-        "primary": false,
-        "accepted_answer": true,
-        "type": "onyomi"
-      }
+      { "reading": "く", "primary": true, "accepted_answer": true, "type": "onyomi" },
+      { "reading": "きゅう", "primary": false, "accepted_answer": true, "type": "onyomi" }
     ],
     "kunyomi": [
-      {
-        "reading": "ここの",
-        "primary": false,
-        "accepted_answer": false,
-        "type": "kunyomi"
-      }
+      { "reading": "ここの", "primary": false, "accepted_answer": false, "type": "kunyomi" }
     ],
-    "meanings": [
-      {
-        "meaning": "Nine",
-        "primary": true,
-        "accepted_answer": true
-      }
-    ],
+    "meanings": [{ "meaning": "Nine", "primary": true, "accepted_answer": true }],
     "meaning_mnemonic": "Nice! This kanji is the same as the radical that looks just like it (down to the meaning, even!). The radical is <radical>nine</radical> and the kanji is <kanji>nine</kanji>, making the meaning of this kanji really easy to remember as long as you know the radical first.",
     "meaning_hint": "If you know your radicals well, this kanji will be a breeze!",
     "reading_mnemonic": "Although this kanji has two on'yomi to learn, the pronunciations of those two on'yomi are very similar, so that should make them easier to remember.\n\nWhen you were <kanji>nine</kanji> your favorite foods were <reading>coo</reading>kies (く) and <reading>cu</reading>cumbers (きゅう). Yum yum!",
     "reading_hint": "Picture nine-year-old you, lining up nine cookies and nine cucumbers. You dip a cookie in milk and bite into it, then dip a cucumber in and take a bite. Nine bites each until they're all gone. Ah, you miss being nine.",
     "vocabulary": [
-      {
-        "word": "九つ",
-        "level": 1,
-        "meaning": "Nine Things",
-        "reading": "ここのつ"
-      },
-      {
-        "word": "九日",
-        "level": 2,
-        "meaning": "Ninth Day",
-        "reading": "ここのか"
-      },
-      {
-        "word": "九州",
-        "level": 6,
-        "meaning": "Kyuushuu",
-        "reading": "きゅうしゅう"
-      }
+      { "word": "九つ", "level": 1, "meaning": "Nine Things", "reading": "ここのつ" },
+      { "word": "九日", "level": 2, "meaning": "Ninth Day", "reading": "ここのか" },
+      { "word": "九州", "level": 6, "meaning": "Kyuushuu", "reading": "きゅうしゅう" }
     ]
   },
   {
     "id": 441,
     "level": 1,
     "kanji": "二",
-    "onyomi": [
-      {
-        "reading": "に",
-        "primary": true,
-        "accepted_answer": true,
-        "type": "onyomi"
-      }
-    ],
+    "onyomi": [{ "reading": "に", "primary": true, "accepted_answer": true, "type": "onyomi" }],
     "kunyomi": [
-      {
-        "reading": "ふた",
-        "primary": false,
-        "accepted_answer": false,
-        "type": "kunyomi"
-      }
+      { "reading": "ふた", "primary": false, "accepted_answer": false, "type": "kunyomi" }
     ],
-    "meanings": [
-      {
-        "meaning": "Two",
-        "primary": true,
-        "accepted_answer": true
-      }
-    ],
+    "meanings": [{ "meaning": "Two", "primary": true, "accepted_answer": true }],
     "meaning_mnemonic": "The kanji <kanji>two</kanji> and the radical <radical>two</radical> are the exact same things. Therefore, you know the kanji for two already!",
     "meaning_hint": "More simply put, you can just know that this kanji is the double of one. It's two lines, that's not all that hard to remember!",
     "reading_mnemonic": "How do you count to <vocabulary>two</vocabulary>? Just use someone's <reading>knee</reading> (に), and then their other knee. There — two knees!",
     "reading_hint": "Imagine asking to borrow the two knees of a stranger in the street, just so you can count to two. They're confused at first, but then they present each knee to you in a loving sort of way. Yep, that's two knees alright. ",
     "vocabulary": [
-      {
-        "word": "二つ",
-        "level": 1,
-        "meaning": "Two Things",
-        "reading": "ふたつ"
-      },
-      {
-        "word": "二人",
-        "level": 1,
-        "meaning": "Two People",
-        "reading": "ふたり"
-      },
-      {
-        "word": "二月",
-        "level": 2,
-        "meaning": "February",
-        "reading": "にがつ"
-      },
-      {
-        "word": "二日",
-        "level": 2,
-        "meaning": "Second Day",
-        "reading": "ふつか"
-      },
-      {
-        "word": "二万",
-        "level": 3,
-        "meaning": "Twenty Thousand",
-        "reading": "にまん"
-      },
-      {
-        "word": "二台",
-        "level": 3,
-        "meaning": "Two Machines",
-        "reading": "にだい"
-      },
-      {
-        "word": "二百",
-        "level": 4,
-        "meaning": "Two Hundred",
-        "reading": "にひゃく"
-      },
-      {
-        "word": "二世",
-        "level": 4,
-        "meaning": "Second Generation",
-        "reading": "にせい"
-      },
-      {
-        "word": "二十日",
-        "level": 4,
-        "meaning": "Twentieth Day",
-        "reading": "はつか"
-      },
-      {
-        "word": "四十二",
-        "level": 6,
-        "meaning": "Forty Two",
-        "reading": "よんじゅうに"
-      },
-      {
-        "word": "二時半",
-        "level": 7,
-        "meaning": "Two Thirty",
-        "reading": "にじはん"
-      },
-      {
-        "word": "二斤",
-        "level": 7,
-        "meaning": "Two Loaves of Bread",
-        "reading": "にきん"
-      },
-      {
-        "word": "二番",
-        "level": 8,
-        "meaning": "Number Two",
-        "reading": "にばん"
-      },
-      {
-        "word": "二重",
-        "level": 9,
-        "meaning": "Double",
-        "reading": "にじゅう"
-      },
-      {
-        "word": "二倍",
-        "level": 12,
-        "meaning": "Double",
-        "reading": "にばい"
-      },
-      {
-        "word": "第二章",
-        "level": 12,
-        "meaning": "Chapter Two",
-        "reading": "だいにしょう"
-      },
-      {
-        "word": "二階",
-        "level": 12,
-        "meaning": "Second Floor",
-        "reading": "にかい"
-      },
+      { "word": "二つ", "level": 1, "meaning": "Two Things", "reading": "ふたつ" },
+      { "word": "二人", "level": 1, "meaning": "Two People", "reading": "ふたり" },
+      { "word": "二月", "level": 2, "meaning": "February", "reading": "にがつ" },
+      { "word": "二日", "level": 2, "meaning": "Second Day", "reading": "ふつか" },
+      { "word": "二万", "level": 3, "meaning": "Twenty Thousand", "reading": "にまん" },
+      { "word": "二台", "level": 3, "meaning": "Two Machines", "reading": "にだい" },
+      { "word": "二百", "level": 4, "meaning": "Two Hundred", "reading": "にひゃく" },
+      { "word": "二世", "level": 4, "meaning": "Second Generation", "reading": "にせい" },
+      { "word": "二十日", "level": 4, "meaning": "Twentieth Day", "reading": "はつか" },
+      { "word": "四十二", "level": 6, "meaning": "Forty Two", "reading": "よんじゅうに" },
+      { "word": "二時半", "level": 7, "meaning": "Two Thirty", "reading": "にじはん" },
+      { "word": "二斤", "level": 7, "meaning": "Two Loaves of Bread", "reading": "にきん" },
+      { "word": "二番", "level": 8, "meaning": "Number Two", "reading": "にばん" },
+      { "word": "二重", "level": 9, "meaning": "Double", "reading": "にじゅう" },
+      { "word": "二倍", "level": 12, "meaning": "Double", "reading": "にばい" },
+      { "word": "第二章", "level": 12, "meaning": "Chapter Two", "reading": "だいにしょう" },
+      { "word": "二階", "level": 12, "meaning": "Second Floor", "reading": "にかい" },
       {
         "word": "四十二階",
         "level": 12,
         "meaning": "Forty Second Floor",
         "reading": "よんじゅうにかい"
       },
-      {
-        "word": "二枚舌",
-        "level": 19,
-        "meaning": "Forked Tongue",
-        "reading": "にまいじた"
-      },
-      {
-        "word": "二巻",
-        "level": 25,
-        "meaning": "Second Volume",
-        "reading": "にかん"
-      },
-      {
-        "word": "二杯",
-        "level": 29,
-        "meaning": "Two Cups",
-        "reading": "にはい"
-      },
-      {
-        "word": "二日酔い",
-        "level": 37,
-        "meaning": "Hangover",
-        "reading": "ふつかよい"
-      },
-      {
-        "word": "二泊",
-        "level": 42,
-        "meaning": "Two Night's Stay",
-        "reading": "にはく"
-      },
-      {
-        "word": "二十歳",
-        "level": 46,
-        "meaning": "Twenty Years Old",
-        "reading": "はたち"
-      }
+      { "word": "二枚舌", "level": 19, "meaning": "Forked Tongue", "reading": "にまいじた" },
+      { "word": "二巻", "level": 25, "meaning": "Second Volume", "reading": "にかん" },
+      { "word": "二杯", "level": 29, "meaning": "Two Cups", "reading": "にはい" },
+      { "word": "二日酔い", "level": 37, "meaning": "Hangover", "reading": "ふつかよい" },
+      { "word": "二泊", "level": 42, "meaning": "Two Night's Stay", "reading": "にはく" },
+      { "word": "二十歳", "level": 46, "meaning": "Twenty Years Old", "reading": "はたち" }
     ]
   },
   {
@@ -1383,911 +375,199 @@
     "level": 1,
     "kanji": "人",
     "onyomi": [
-      {
-        "reading": "にん",
-        "primary": true,
-        "accepted_answer": true,
-        "type": "onyomi"
-      },
-      {
-        "reading": "じん",
-        "primary": false,
-        "accepted_answer": true,
-        "type": "onyomi"
-      }
+      { "reading": "にん", "primary": true, "accepted_answer": true, "type": "onyomi" },
+      { "reading": "じん", "primary": false, "accepted_answer": true, "type": "onyomi" }
     ],
     "kunyomi": [
-      {
-        "reading": "ひと",
-        "primary": false,
-        "accepted_answer": false,
-        "type": "kunyomi"
-      },
-      {
-        "reading": "と",
-        "primary": false,
-        "accepted_answer": false,
-        "type": "kunyomi"
-      }
+      { "reading": "ひと", "primary": false, "accepted_answer": false, "type": "kunyomi" },
+      { "reading": "と", "primary": false, "accepted_answer": false, "type": "kunyomi" }
     ],
-    "meanings": [
-      {
-        "meaning": "Person",
-        "primary": true,
-        "accepted_answer": true
-      }
-    ],
+    "meanings": [{ "meaning": "Person", "primary": true, "accepted_answer": true }],
     "meaning_mnemonic": "Remember how the radical version of this kanji meant <radical>person</radical> because it looks like a person with their arms down and their legs spread out? Well this is a <kanji>person</kanji> too!",
     "meaning_hint": "Know the radicals, and you shall know the kanji.",
     "reading_mnemonic": "Only one <kanji>person</kanji> at <reading>Nin</reading>tendo (にん) complained about the new <reading>jean</reading>s (じん) policy, and that person was you.",
     "reading_hint": "Imagine how angry you were about the policy. You'll have to come up with something to be angry about yourself (pick something that would actually make you angry, like maybe you're only allowed to wear cut off short-shorts jeans at Nintendo now), but if you pick something good, you'll definitely remember the two readings for this. Just remember you're working at <reading>Nin</reading>tendo, and the policy has to be something about <reading>jean</reading>s. Then, imagine yourself as the only <kanji>person</kanji> complaining and everyone else in their dumb jeans (or lack-thereof) shaking their head at you because you're being a fool.",
     "vocabulary": [
-      {
-        "word": "二人",
-        "level": 1,
-        "meaning": "Two People",
-        "reading": "ふたり"
-      },
-      {
-        "word": "一人",
-        "level": 1,
-        "meaning": "Alone",
-        "reading": "ひとり"
-      },
-      {
-        "word": "三人",
-        "level": 1,
-        "meaning": "Three People",
-        "reading": "さんにん"
-      },
-      {
-        "word": "大人",
-        "level": 1,
-        "meaning": "Adult",
-        "reading": "おとな"
-      },
-      {
-        "word": "人口",
-        "level": 1,
-        "meaning": "Population",
-        "reading": "じんこう"
-      },
-      {
-        "word": "人工",
-        "level": 1,
-        "meaning": "Artificial",
-        "reading": "じんこう"
-      },
-      {
-        "word": "白人",
-        "level": 2,
-        "meaning": "White Person",
-        "reading": "はくじん"
-      },
-      {
-        "word": "人々",
-        "level": 2,
-        "meaning": "People",
-        "reading": "ひとびと"
-      },
-      {
-        "word": "アメリカ人",
-        "level": 3,
-        "meaning": "American Person",
-        "reading": "あめりかじん"
-      },
-      {
-        "word": "フランス人",
-        "level": 3,
-        "meaning": "French Person",
-        "reading": "ふらんすじん"
-      },
-      {
-        "word": "友人",
-        "level": 3,
-        "meaning": "Friend",
-        "reading": "ゆうじん"
-      },
-      {
-        "word": "外人",
-        "level": 3,
-        "meaning": "Foreigner",
-        "reading": "がいじん"
-      },
-      {
-        "word": "人生",
-        "level": 3,
-        "meaning": "One's Life",
-        "reading": "じんせい"
-      },
-      {
-        "word": "イギリス人",
-        "level": 3,
-        "meaning": "British Person",
-        "reading": "いぎりすじん"
-      },
-      {
-        "word": "〜人",
-        "level": 3,
-        "meaning": "Number Of People",
-        "reading": "にん"
-      },
-      {
-        "word": "大人しい",
-        "level": 3,
-        "meaning": "Obedient",
-        "reading": "おとなしい"
-      },
-      {
-        "word": "女の人",
-        "level": 3,
-        "meaning": "Woman",
-        "reading": "おんなのひと"
-      },
-      {
-        "word": "名人",
-        "level": 4,
-        "meaning": "Expert",
-        "reading": "めいじん"
-      },
-      {
-        "word": "人気",
-        "level": 4,
-        "meaning": "Popular",
-        "reading": "にんき"
-      },
-      {
-        "word": "村人",
-        "level": 4,
-        "meaning": "Villager",
-        "reading": "むらびと"
-      },
-      {
-        "word": "主人",
-        "level": 4,
-        "meaning": "Head Of Household",
-        "reading": "しゅじん"
-      },
-      {
-        "word": "他人",
-        "level": 4,
-        "meaning": "Another Person",
-        "reading": "たにん"
-      },
-      {
-        "word": "何人",
-        "level": 5,
-        "meaning": "How Many People",
-        "reading": "なんにん"
-      },
-      {
-        "word": "男の人",
-        "level": 5,
-        "meaning": "Man",
-        "reading": "おとこのひと"
-      },
-      {
-        "word": "外国人",
-        "level": 6,
-        "meaning": "Foreign Person",
-        "reading": "がいこくじん"
-      },
-      {
-        "word": "他の人",
-        "level": 6,
-        "meaning": "Someone Else",
-        "reading": "ほかのひと"
-      },
-      {
-        "word": "黒人",
-        "level": 7,
-        "meaning": "Black Person",
-        "reading": "こくじん"
-      },
-      {
-        "word": "人形",
-        "level": 7,
-        "meaning": "Doll",
-        "reading": "にんぎょう"
-      },
-      {
-        "word": "不人気",
-        "level": 7,
-        "meaning": "Unpopular",
-        "reading": "ふにんき"
-      },
-      {
-        "word": "人里",
-        "level": 7,
-        "meaning": "Human Habitation",
-        "reading": "ひとざと"
-      },
-      {
-        "word": "住人",
-        "level": 8,
-        "meaning": "Resident",
-        "reading": "じゅうにん"
-      },
-      {
-        "word": "役人",
-        "level": 8,
-        "meaning": "Public Official",
-        "reading": "やくにん"
-      },
-      {
-        "word": "人間",
-        "level": 8,
-        "meaning": "Human",
-        "reading": "にんげん"
-      },
-      {
-        "word": "人数",
-        "level": 8,
-        "meaning": "The Number Of People",
-        "reading": "にんずう"
-      },
-      {
-        "word": "美人",
-        "level": 9,
-        "meaning": "Beautiful Woman",
-        "reading": "びじん"
-      },
-      {
-        "word": "鉄人",
-        "level": 10,
-        "meaning": "Strong Man",
-        "reading": "てつじん"
-      },
-      {
-        "word": "病人",
-        "level": 10,
-        "meaning": "Sick Person",
-        "reading": "びょうにん"
-      },
-      {
-        "word": "老人",
-        "level": 11,
-        "meaning": "Old Person",
-        "reading": "ろうじん"
-      },
-      {
-        "word": "別人",
-        "level": 11,
-        "meaning": "Different Person",
-        "reading": "べつじん"
-      },
-      {
-        "word": "商人",
-        "level": 12,
-        "meaning": "Merchant",
-        "reading": "しょうにん"
-      },
-      {
-        "word": "悪人",
-        "level": 12,
-        "meaning": "Bad Person",
-        "reading": "あくにん"
-      },
-      {
-        "word": "人情",
-        "level": 13,
-        "meaning": "Human Feelings",
-        "reading": "にんじょう"
-      },
-      {
-        "word": "殺人",
-        "level": 13,
-        "meaning": "Murder",
-        "reading": "さつじん"
-      },
-      {
-        "word": "詩人",
-        "level": 13,
-        "meaning": "Poet",
-        "reading": "しじん"
-      },
-      {
-        "word": "人性",
-        "level": 14,
-        "meaning": "Human Nature",
-        "reading": "じんせい"
-      },
-      {
-        "word": "人格",
-        "level": 14,
-        "meaning": "Character",
-        "reading": "じんかく"
-      },
-      {
-        "word": "芸人",
-        "level": 14,
-        "meaning": "Comedian",
-        "reading": "げいにん"
-      },
-      {
-        "word": "人参",
-        "level": 14,
-        "meaning": "Carrot",
-        "reading": "にんじん"
-      },
-      {
-        "word": "変人",
-        "level": 15,
-        "meaning": "An Eccentric",
-        "reading": "へんじん"
-      },
-      {
-        "word": "軍人",
-        "level": 15,
-        "meaning": "Soldier",
-        "reading": "ぐんじん"
-      },
-      {
-        "word": "人殺し",
-        "level": 15,
-        "meaning": "Murder",
-        "reading": "ひとごろし"
-      },
-      {
-        "word": "殺人者",
-        "level": 15,
-        "meaning": "Murderer",
-        "reading": "さつじんしゃ"
-      },
-      {
-        "word": "証人",
-        "level": 16,
-        "meaning": "Witness",
-        "reading": "しょうにん"
-      },
-      {
-        "word": "料理人",
-        "level": 16,
-        "meaning": "A Cook",
-        "reading": "りょうりにん"
-      },
-      {
-        "word": "愛人",
-        "level": 17,
-        "meaning": "Lover",
-        "reading": "あいじん"
-      },
-      {
-        "word": "人種",
-        "level": 18,
-        "meaning": "Race Of People",
-        "reading": "じんしゅ"
-      },
-      {
-        "word": "達人",
-        "level": 18,
-        "meaning": "Master",
-        "reading": "たつじん"
-      },
-      {
-        "word": "人類",
-        "level": 18,
-        "meaning": "Mankind",
-        "reading": "じんるい"
-      },
-      {
-        "word": "求人",
-        "level": 19,
-        "meaning": "Job Posting",
-        "reading": "きゅうじん"
-      },
-      {
-        "word": "恋人",
-        "level": 19,
-        "meaning": "Lover",
-        "reading": "こいびと"
-      },
-      {
-        "word": "個人",
-        "level": 20,
-        "meaning": "Personal",
-        "reading": "こじん"
-      },
-      {
-        "word": "犯人",
-        "level": 20,
-        "meaning": "Culprit",
-        "reading": "はんにん"
-      },
-      {
-        "word": "人類学",
-        "level": 20,
-        "meaning": "Anthropology",
-        "reading": "じんるいがく"
-      },
-      {
-        "word": "人達",
-        "level": 20,
-        "meaning": "People",
-        "reading": "ひとたち"
-      },
-      {
-        "word": "宇宙人",
-        "level": 21,
-        "meaning": "Alien",
-        "reading": "うちゅうじん"
-      },
-      {
-        "word": "人権",
-        "level": 21,
-        "meaning": "Human Rights",
-        "reading": "じんけん"
-      },
-      {
-        "word": "人狼",
-        "level": 25,
-        "meaning": "Werewolf",
-        "reading": "じんろう"
-      },
-      {
-        "word": "人差し指",
-        "level": 26,
-        "meaning": "Index Finger",
-        "reading": "ひとさしゆび"
-      },
-      {
-        "word": "管理人",
-        "level": 26,
-        "meaning": "Superintendent",
-        "reading": "かんりにん"
-      },
-      {
-        "word": "人造",
-        "level": 26,
-        "meaning": "Man Made",
-        "reading": "じんぞう"
-      },
-      {
-        "word": "人違い",
-        "level": 26,
-        "meaning": "Mistaken Identity",
-        "reading": "ひとちがい"
-      },
-      {
-        "word": "巨人",
-        "level": 28,
-        "meaning": "A Giant",
-        "reading": "きょじん"
-      },
-      {
-        "word": "婦人",
-        "level": 28,
-        "meaning": "Lady",
-        "reading": "ふじん"
-      },
-      {
-        "word": "一人娘",
-        "level": 29,
-        "meaning": "Only Daughter",
-        "reading": "ひとりむすめ"
-      },
-      {
-        "word": "人脈",
-        "level": 32,
-        "meaning": "Personal Connections",
-        "reading": "じんみゃく"
-      },
-      {
-        "word": "貧乏人",
-        "level": 32,
-        "meaning": "Poor Person",
-        "reading": "びんぼうにん"
-      },
-      {
-        "word": "恩人",
-        "level": 32,
-        "meaning": "Benefactor",
-        "reading": "おんじん"
-      },
-      {
-        "word": "人込み",
-        "level": 34,
-        "meaning": "Crowd Of People",
-        "reading": "ひとごみ"
-      },
-      {
-        "word": "素人",
-        "level": 35,
-        "meaning": "Amateur",
-        "reading": "しろうと"
-      },
-      {
-        "word": "一人暮らし",
-        "level": 37,
-        "meaning": "Living Alone",
-        "reading": "ひとりぐらし"
-      },
-      {
-        "word": "依頼人",
-        "level": 38,
-        "meaning": "Client",
-        "reading": "いらいにん"
-      },
-      {
-        "word": "一人称",
-        "level": 38,
-        "meaning": "First Person",
-        "reading": "いちにんしょう"
-      },
-      {
-        "word": "邦人",
-        "level": 39,
-        "meaning": "Fellow Countryman",
-        "reading": "ほうじん"
-      },
-      {
-        "word": "仙人",
-        "level": 39,
-        "meaning": "Hermit",
-        "reading": "せんにん"
-      },
-      {
-        "word": "囚人",
-        "level": 39,
-        "meaning": "Prisoner",
-        "reading": "しゅうじん"
-      },
-      {
-        "word": "隣人",
-        "level": 40,
-        "meaning": "Neighbor",
-        "reading": "りんじん"
-      },
-      {
-        "word": "人柄",
-        "level": 42,
-        "meaning": "Personal Character",
-        "reading": "ひとがら"
-      },
-      {
-        "word": "万人",
-        "level": 42,
-        "meaning": "All People",
-        "reading": "ばんにん"
-      },
-      {
-        "word": "狩人",
-        "level": 45,
-        "meaning": "Hunter",
-        "reading": "かりゅうど"
-      },
-      {
-        "word": "賢人",
-        "level": 48,
-        "meaning": "Sage",
-        "reading": "けんじん"
-      },
-      {
-        "word": "偉人",
-        "level": 51,
-        "meaning": "Great Person",
-        "reading": "いじん"
-      },
-      {
-        "word": "玄人",
-        "level": 53,
-        "meaning": "Expert",
-        "reading": "くろうと"
-      },
-      {
-        "word": "凡人",
-        "level": 56,
-        "meaning": "Ordinary Person",
-        "reading": "ぼんじん"
-      },
-      {
-        "word": "盲人",
-        "level": 57,
-        "meaning": "Blind Person",
-        "reading": "もうじん"
-      },
-      {
-        "word": "浪人",
-        "level": 59,
-        "meaning": "Ronin",
-        "reading": "ろうにん"
-      }
+      { "word": "二人", "level": 1, "meaning": "Two People", "reading": "ふたり" },
+      { "word": "一人", "level": 1, "meaning": "Alone", "reading": "ひとり" },
+      { "word": "三人", "level": 1, "meaning": "Three People", "reading": "さんにん" },
+      { "word": "大人", "level": 1, "meaning": "Adult", "reading": "おとな" },
+      { "word": "人口", "level": 1, "meaning": "Population", "reading": "じんこう" },
+      { "word": "人工", "level": 1, "meaning": "Artificial", "reading": "じんこう" },
+      { "word": "白人", "level": 2, "meaning": "White Person", "reading": "はくじん" },
+      { "word": "人々", "level": 2, "meaning": "People", "reading": "ひとびと" },
+      { "word": "アメリカ人", "level": 3, "meaning": "American Person", "reading": "あめりかじん" },
+      { "word": "フランス人", "level": 3, "meaning": "French Person", "reading": "ふらんすじん" },
+      { "word": "友人", "level": 3, "meaning": "Friend", "reading": "ゆうじん" },
+      { "word": "外人", "level": 3, "meaning": "Foreigner", "reading": "がいじん" },
+      { "word": "人生", "level": 3, "meaning": "One's Life", "reading": "じんせい" },
+      { "word": "イギリス人", "level": 3, "meaning": "British Person", "reading": "いぎりすじん" },
+      { "word": "〜人", "level": 3, "meaning": "Number Of People", "reading": "にん" },
+      { "word": "大人しい", "level": 3, "meaning": "Obedient", "reading": "おとなしい" },
+      { "word": "女の人", "level": 3, "meaning": "Woman", "reading": "おんなのひと" },
+      { "word": "名人", "level": 4, "meaning": "Expert", "reading": "めいじん" },
+      { "word": "人気", "level": 4, "meaning": "Popular", "reading": "にんき" },
+      { "word": "村人", "level": 4, "meaning": "Villager", "reading": "むらびと" },
+      { "word": "主人", "level": 4, "meaning": "Head Of Household", "reading": "しゅじん" },
+      { "word": "他人", "level": 4, "meaning": "Another Person", "reading": "たにん" },
+      { "word": "何人", "level": 5, "meaning": "How Many People", "reading": "なんにん" },
+      { "word": "男の人", "level": 5, "meaning": "Man", "reading": "おとこのひと" },
+      { "word": "外国人", "level": 6, "meaning": "Foreign Person", "reading": "がいこくじん" },
+      { "word": "他の人", "level": 6, "meaning": "Someone Else", "reading": "ほかのひと" },
+      { "word": "黒人", "level": 7, "meaning": "Black Person", "reading": "こくじん" },
+      { "word": "人形", "level": 7, "meaning": "Doll", "reading": "にんぎょう" },
+      { "word": "不人気", "level": 7, "meaning": "Unpopular", "reading": "ふにんき" },
+      { "word": "人里", "level": 7, "meaning": "Human Habitation", "reading": "ひとざと" },
+      { "word": "住人", "level": 8, "meaning": "Resident", "reading": "じゅうにん" },
+      { "word": "役人", "level": 8, "meaning": "Public Official", "reading": "やくにん" },
+      { "word": "人間", "level": 8, "meaning": "Human", "reading": "にんげん" },
+      { "word": "人数", "level": 8, "meaning": "The Number Of People", "reading": "にんずう" },
+      { "word": "美人", "level": 9, "meaning": "Beautiful Woman", "reading": "びじん" },
+      { "word": "鉄人", "level": 10, "meaning": "Strong Man", "reading": "てつじん" },
+      { "word": "病人", "level": 10, "meaning": "Sick Person", "reading": "びょうにん" },
+      { "word": "老人", "level": 11, "meaning": "Old Person", "reading": "ろうじん" },
+      { "word": "別人", "level": 11, "meaning": "Different Person", "reading": "べつじん" },
+      { "word": "商人", "level": 12, "meaning": "Merchant", "reading": "しょうにん" },
+      { "word": "悪人", "level": 12, "meaning": "Bad Person", "reading": "あくにん" },
+      { "word": "人情", "level": 13, "meaning": "Human Feelings", "reading": "にんじょう" },
+      { "word": "殺人", "level": 13, "meaning": "Murder", "reading": "さつじん" },
+      { "word": "詩人", "level": 13, "meaning": "Poet", "reading": "しじん" },
+      { "word": "人性", "level": 14, "meaning": "Human Nature", "reading": "じんせい" },
+      { "word": "人格", "level": 14, "meaning": "Character", "reading": "じんかく" },
+      { "word": "芸人", "level": 14, "meaning": "Comedian", "reading": "げいにん" },
+      { "word": "人参", "level": 14, "meaning": "Carrot", "reading": "にんじん" },
+      { "word": "変人", "level": 15, "meaning": "An Eccentric", "reading": "へんじん" },
+      { "word": "軍人", "level": 15, "meaning": "Soldier", "reading": "ぐんじん" },
+      { "word": "人殺し", "level": 15, "meaning": "Murder", "reading": "ひとごろし" },
+      { "word": "殺人者", "level": 15, "meaning": "Murderer", "reading": "さつじんしゃ" },
+      { "word": "証人", "level": 16, "meaning": "Witness", "reading": "しょうにん" },
+      { "word": "料理人", "level": 16, "meaning": "A Cook", "reading": "りょうりにん" },
+      { "word": "愛人", "level": 17, "meaning": "Lover", "reading": "あいじん" },
+      { "word": "人種", "level": 18, "meaning": "Race Of People", "reading": "じんしゅ" },
+      { "word": "達人", "level": 18, "meaning": "Master", "reading": "たつじん" },
+      { "word": "人類", "level": 18, "meaning": "Mankind", "reading": "じんるい" },
+      { "word": "求人", "level": 19, "meaning": "Job Posting", "reading": "きゅうじん" },
+      { "word": "恋人", "level": 19, "meaning": "Lover", "reading": "こいびと" },
+      { "word": "個人", "level": 20, "meaning": "Personal", "reading": "こじん" },
+      { "word": "犯人", "level": 20, "meaning": "Culprit", "reading": "はんにん" },
+      { "word": "人類学", "level": 20, "meaning": "Anthropology", "reading": "じんるいがく" },
+      { "word": "人達", "level": 20, "meaning": "People", "reading": "ひとたち" },
+      { "word": "宇宙人", "level": 21, "meaning": "Alien", "reading": "うちゅうじん" },
+      { "word": "人権", "level": 21, "meaning": "Human Rights", "reading": "じんけん" },
+      { "word": "人狼", "level": 25, "meaning": "Werewolf", "reading": "じんろう" },
+      { "word": "人差し指", "level": 26, "meaning": "Index Finger", "reading": "ひとさしゆび" },
+      { "word": "管理人", "level": 26, "meaning": "Superintendent", "reading": "かんりにん" },
+      { "word": "人造", "level": 26, "meaning": "Man Made", "reading": "じんぞう" },
+      { "word": "人違い", "level": 26, "meaning": "Mistaken Identity", "reading": "ひとちがい" },
+      { "word": "巨人", "level": 28, "meaning": "A Giant", "reading": "きょじん" },
+      { "word": "婦人", "level": 28, "meaning": "Lady", "reading": "ふじん" },
+      { "word": "一人娘", "level": 29, "meaning": "Only Daughter", "reading": "ひとりむすめ" },
+      { "word": "人脈", "level": 32, "meaning": "Personal Connections", "reading": "じんみゃく" },
+      { "word": "貧乏人", "level": 32, "meaning": "Poor Person", "reading": "びんぼうにん" },
+      { "word": "恩人", "level": 32, "meaning": "Benefactor", "reading": "おんじん" },
+      { "word": "人込み", "level": 34, "meaning": "Crowd Of People", "reading": "ひとごみ" },
+      { "word": "素人", "level": 35, "meaning": "Amateur", "reading": "しろうと" },
+      { "word": "一人暮らし", "level": 37, "meaning": "Living Alone", "reading": "ひとりぐらし" },
+      { "word": "依頼人", "level": 38, "meaning": "Client", "reading": "いらいにん" },
+      { "word": "一人称", "level": 38, "meaning": "First Person", "reading": "いちにんしょう" },
+      { "word": "邦人", "level": 39, "meaning": "Fellow Countryman", "reading": "ほうじん" },
+      { "word": "仙人", "level": 39, "meaning": "Hermit", "reading": "せんにん" },
+      { "word": "囚人", "level": 39, "meaning": "Prisoner", "reading": "しゅうじん" },
+      { "word": "隣人", "level": 40, "meaning": "Neighbor", "reading": "りんじん" },
+      { "word": "人柄", "level": 42, "meaning": "Personal Character", "reading": "ひとがら" },
+      { "word": "万人", "level": 42, "meaning": "All People", "reading": "ばんにん" },
+      { "word": "狩人", "level": 45, "meaning": "Hunter", "reading": "かりゅうど" },
+      { "word": "賢人", "level": 48, "meaning": "Sage", "reading": "けんじん" },
+      { "word": "偉人", "level": 51, "meaning": "Great Person", "reading": "いじん" },
+      { "word": "玄人", "level": 53, "meaning": "Expert", "reading": "くろうと" },
+      { "word": "凡人", "level": 56, "meaning": "Ordinary Person", "reading": "ぼんじん" },
+      { "word": "盲人", "level": 57, "meaning": "Blind Person", "reading": "もうじん" },
+      { "word": "浪人", "level": 59, "meaning": "Ronin", "reading": "ろうにん" }
     ]
   },
   {
     "id": 445,
     "level": 1,
     "kanji": "入",
-    "onyomi": [
-      {
-        "reading": "にゅう",
-        "primary": true,
-        "accepted_answer": true,
-        "type": "onyomi"
-      }
-    ],
+    "onyomi": [{ "reading": "にゅう", "primary": true, "accepted_answer": true, "type": "onyomi" }],
     "kunyomi": [
-      {
-        "reading": "はい",
-        "primary": false,
-        "accepted_answer": false,
-        "type": "kunyomi"
-      },
-      {
-        "reading": "い",
-        "primary": false,
-        "accepted_answer": false,
-        "type": "kunyomi"
-      }
+      { "reading": "はい", "primary": false, "accepted_answer": false, "type": "kunyomi" },
+      { "reading": "い", "primary": false, "accepted_answer": false, "type": "kunyomi" }
     ],
-    "meanings": [
-      {
-        "meaning": "Enter",
-        "primary": true,
-        "accepted_answer": true
-      }
-    ],
+    "meanings": [{ "meaning": "Enter", "primary": true, "accepted_answer": true }],
     "meaning_mnemonic": "The kanji and the radical are the same, so remembering the meaning of this kanji is as simple as making sure you know the radical for <radical>enter</radical> first! If you know the radical, you know this kanji means <kanji>enter</kanji> as well.",
     "meaning_hint": "Make sure you know those radicals, yo!",
     "reading_mnemonic": "Turns out, after you <kanji>enter</kanji> the tent (remember how the person in the radical is entering one?), you're given a <reading>new</reading> (にゅう) one! Why? No idea, but hey — it's new!",
     "reading_hint": "Imagine lights turning on and flashing, and an entire audience inside. You're at a game show, and the announcer announces the neeeeew tent in his announcey voice. Feel the surprise. Feel the happiness. Feel the excitement. A beautiful new tent all for you! ",
     "vocabulary": [
-      {
-        "word": "入る",
-        "level": 1,
-        "meaning": "To Enter",
-        "reading": "はいる"
-      },
-      {
-        "word": "入り口",
-        "level": 1,
-        "meaning": "Entrance",
-        "reading": "いりぐち"
-      },
-      {
-        "word": "入力",
-        "level": 2,
-        "meaning": "Input",
-        "reading": "にゅうりょく"
-      },
-      {
-        "word": "気に入る",
-        "level": 4,
-        "meaning": "To Take A Liking",
-        "reading": "きにいる"
-      },
-      {
-        "word": "入れる",
-        "level": 5,
-        "meaning": "To Insert",
-        "reading": "いれる"
-      },
-      {
-        "word": "入学",
-        "level": 5,
-        "meaning": "School Admission",
-        "reading": "にゅうがく"
-      },
-      {
-        "word": "入社",
-        "level": 5,
-        "meaning": "Joining A Company",
-        "reading": "にゅうしゃ"
-      },
-      {
-        "word": "入場",
-        "level": 8,
-        "meaning": "Entrance",
-        "reading": "にゅうじょう"
-      },
-      {
-        "word": "入院",
-        "level": 10,
-        "meaning": "Hospitalization",
-        "reading": "にゅういん"
-      },
-      {
-        "word": "入所",
-        "level": 11,
-        "meaning": "Admission",
-        "reading": "にゅうしょ"
-      },
+      { "word": "入る", "level": 1, "meaning": "To Enter", "reading": "はいる" },
+      { "word": "入り口", "level": 1, "meaning": "Entrance", "reading": "いりぐち" },
+      { "word": "入力", "level": 2, "meaning": "Input", "reading": "にゅうりょく" },
+      { "word": "気に入る", "level": 4, "meaning": "To Take A Liking", "reading": "きにいる" },
+      { "word": "入れる", "level": 5, "meaning": "To Insert", "reading": "いれる" },
+      { "word": "入学", "level": 5, "meaning": "School Admission", "reading": "にゅうがく" },
+      { "word": "入社", "level": 5, "meaning": "Joining A Company", "reading": "にゅうしゃ" },
+      { "word": "入場", "level": 8, "meaning": "Entrance", "reading": "にゅうじょう" },
+      { "word": "入院", "level": 10, "meaning": "Hospitalization", "reading": "にゅういん" },
+      { "word": "入所", "level": 11, "meaning": "Admission", "reading": "にゅうしょ" },
       {
         "word": "入学試験",
         "level": 11,
         "meaning": "Entrance Exam",
         "reading": "にゅうがくしけん"
       },
-      {
-        "word": "入館料",
-        "level": 13,
-        "meaning": "Admission Fee",
-        "reading": "にゅうかんりょう"
-      },
+      { "word": "入館料", "level": 13, "meaning": "Admission Fee", "reading": "にゅうかんりょう" },
       {
         "word": "受け入れる",
         "level": 15,
         "meaning": "To Accept Something",
         "reading": "うけいれる"
       },
-      {
-        "word": "入門",
-        "level": 16,
-        "meaning": "Admission",
-        "reading": "にゅうもん"
-      },
-      {
-        "word": "書き入れる",
-        "level": 18,
-        "meaning": "To Write In",
-        "reading": "かきいれる"
-      },
-      {
-        "word": "入団",
-        "level": 19,
-        "meaning": "Enrollment",
-        "reading": "にゅうだん"
-      },
-      {
-        "word": "立入禁止",
-        "level": 20,
-        "meaning": "Do Not Enter",
-        "reading": "たちいりきんし"
-      },
-      {
-        "word": "収入",
-        "level": 23,
-        "meaning": "Income",
-        "reading": "しゅうにゅう"
-      },
-      {
-        "word": "輸入",
-        "level": 26,
-        "meaning": "Import",
-        "reading": "ゆにゅう"
-      },
-      {
-        "word": "入隊",
-        "level": 28,
-        "meaning": "Enlist In The Army",
-        "reading": "にゅうたい"
-      },
-      {
-        "word": "輸入する",
-        "level": 28,
-        "meaning": "To Import",
-        "reading": "ゆにゅうする"
-      },
-      {
-        "word": "入り江",
-        "level": 29,
-        "meaning": "Inlet",
-        "reading": "いりえ"
-      },
-      {
-        "word": "購入",
-        "level": 30,
-        "meaning": "Purchase",
-        "reading": "こうにゅう"
-      },
-      {
-        "word": "押入れ",
-        "level": 32,
-        "meaning": "Closet",
-        "reading": "おしいれ"
-      },
-      {
-        "word": "納入",
-        "level": 33,
-        "meaning": "Payment",
-        "reading": "のうにゅう"
-      },
-      {
-        "word": "介入",
-        "level": 35,
-        "meaning": "Intervention",
-        "reading": "かいにゅう"
-      },
-      {
-        "word": "入獄",
-        "level": 35,
-        "meaning": "Imprisonment",
-        "reading": "にゅうごく"
-      },
-      {
-        "word": "侵入",
-        "level": 41,
-        "meaning": "Intrusion",
-        "reading": "しんにゅう"
-      },
+      { "word": "入門", "level": 16, "meaning": "Admission", "reading": "にゅうもん" },
+      { "word": "書き入れる", "level": 18, "meaning": "To Write In", "reading": "かきいれる" },
+      { "word": "入団", "level": 19, "meaning": "Enrollment", "reading": "にゅうだん" },
+      { "word": "立入禁止", "level": 20, "meaning": "Do Not Enter", "reading": "たちいりきんし" },
+      { "word": "収入", "level": 23, "meaning": "Income", "reading": "しゅうにゅう" },
+      { "word": "輸入", "level": 26, "meaning": "Import", "reading": "ゆにゅう" },
+      { "word": "入隊", "level": 28, "meaning": "Enlist In The Army", "reading": "にゅうたい" },
+      { "word": "輸入する", "level": 28, "meaning": "To Import", "reading": "ゆにゅうする" },
+      { "word": "入り江", "level": 29, "meaning": "Inlet", "reading": "いりえ" },
+      { "word": "購入", "level": 30, "meaning": "Purchase", "reading": "こうにゅう" },
+      { "word": "押入れ", "level": 32, "meaning": "Closet", "reading": "おしいれ" },
+      { "word": "納入", "level": 33, "meaning": "Payment", "reading": "のうにゅう" },
+      { "word": "介入", "level": 35, "meaning": "Intervention", "reading": "かいにゅう" },
+      { "word": "入獄", "level": 35, "meaning": "Imprisonment", "reading": "にゅうごく" },
+      { "word": "侵入", "level": 41, "meaning": "Intrusion", "reading": "しんにゅう" },
       {
         "word": "入籍",
         "level": 45,
         "meaning": "Entry In Family Register",
         "reading": "にゅうせき"
       },
-      {
-        "word": "入れ墨",
-        "level": 46,
-        "meaning": "Tattoo",
-        "reading": "いれずみ"
-      },
-      {
-        "word": "歳入",
-        "level": 46,
-        "meaning": "Annual Revenue",
-        "reading": "さいにゅう"
-      },
-      {
-        "word": "挿入",
-        "level": 47,
-        "meaning": "Insertion",
-        "reading": "そうにゅう"
-      },
-      {
-        "word": "挿入する",
-        "level": 49,
-        "meaning": "To Insert",
-        "reading": "そうにゅうする"
-      }
+      { "word": "入れ墨", "level": 46, "meaning": "Tattoo", "reading": "いれずみ" },
+      { "word": "歳入", "level": 46, "meaning": "Annual Revenue", "reading": "さいにゅう" },
+      { "word": "挿入", "level": 47, "meaning": "Insertion", "reading": "そうにゅう" },
+      { "word": "挿入する", "level": 49, "meaning": "To Insert", "reading": "そうにゅうする" }
     ]
   },
   {
     "id": 446,
     "level": 1,
     "kanji": "八",
-    "onyomi": [
-      {
-        "reading": "はち",
-        "primary": true,
-        "accepted_answer": true,
-        "type": "onyomi"
-      }
-    ],
+    "onyomi": [{ "reading": "はち", "primary": true, "accepted_answer": true, "type": "onyomi" }],
     "kunyomi": [
-      {
-        "reading": "や",
-        "primary": false,
-        "accepted_answer": false,
-        "type": "kunyomi"
-      },
-      {
-        "reading": "よう",
-        "primary": false,
-        "accepted_answer": false,
-        "type": "kunyomi"
-      }
+      { "reading": "や", "primary": false, "accepted_answer": false, "type": "kunyomi" },
+      { "reading": "よう", "primary": false, "accepted_answer": false, "type": "kunyomi" }
     ],
-    "meanings": [
-      {
-        "meaning": "Eight",
-        "primary": true,
-        "accepted_answer": true
-      }
-    ],
+    "meanings": [{ "meaning": "Eight", "primary": true, "accepted_answer": true }],
     "meaning_mnemonic": "This isn't exactly the same as the <radical>fins</radical> radical, but it's close. Sometimes this will happen (where we have to use a slightly \"modified radical\" version of the original), so it's good to understand that now, early on. In this case, we have fins. How many fins? <kanji>Eight</kanji> fins. How do you know that? Because you caught four fish with two fins each.",
     "meaning_hint": "Count the fins out in front of you, all the way from one to eight. It'll help if you actually do this. Now smell each fin, and think \"Wow, I have to smell all eight of these?\" Yes, you do.",
     "reading_mnemonic": "After you count and smell all <kanji>eight</kanji> of your fins, it's time to put them away. You open a large <reading>hatch</reading> (はち) and put them in. This is where you keep your fins, always putting in eight at a time because that's what the boss wants.",
     "reading_hint": "You've asked him why you can only put eight fins at a time in the hatch, but he never wants to answer. What could be down in the hole that the hatch covers? Why is there a hatch at all? What's with numbers and hatches being mysterious?",
     "vocabulary": [
-      {
-        "word": "八つ",
-        "level": 1,
-        "meaning": "Eight Things",
-        "reading": "やっつ"
-      },
-      {
-        "word": "八日",
-        "level": 2,
-        "meaning": "Eighth Day",
-        "reading": "ようか"
-      },
-      {
-        "word": "八冊",
-        "level": 19,
-        "meaning": "Eight Books",
-        "reading": "はっさつ"
-      }
+      { "word": "八つ", "level": 1, "meaning": "Eight Things", "reading": "やっつ" },
+      { "word": "八日", "level": 2, "meaning": "Eighth Day", "reading": "ようか" },
+      { "word": "八冊", "level": 19, "meaning": "Eight Books", "reading": "はっさつ" }
     ]
   },
   {
@@ -2295,43 +575,16 @@
     "level": 1,
     "kanji": "力",
     "onyomi": [
-      {
-        "reading": "りょく",
-        "primary": true,
-        "accepted_answer": true,
-        "type": "onyomi"
-      },
-      {
-        "reading": "りき",
-        "primary": false,
-        "accepted_answer": true,
-        "type": "onyomi"
-      }
+      { "reading": "りょく", "primary": true, "accepted_answer": true, "type": "onyomi" },
+      { "reading": "りき", "primary": false, "accepted_answer": true, "type": "onyomi" }
     ],
     "kunyomi": [
-      {
-        "reading": "ちから",
-        "primary": false,
-        "accepted_answer": false,
-        "type": "kunyomi"
-      }
+      { "reading": "ちから", "primary": false, "accepted_answer": false, "type": "kunyomi" }
     ],
     "meanings": [
-      {
-        "meaning": "Power",
-        "primary": true,
-        "accepted_answer": true
-      },
-      {
-        "meaning": "Strength",
-        "primary": false,
-        "accepted_answer": true
-      },
-      {
-        "meaning": "Ability",
-        "primary": false,
-        "accepted_answer": true
-      }
+      { "meaning": "Power", "primary": true, "accepted_answer": true },
+      { "meaning": "Strength", "primary": false, "accepted_answer": true },
+      { "meaning": "Ability", "primary": false, "accepted_answer": true }
     ],
     "meaning_mnemonic": "The radical and the meaning of this kanji are the same. Both are <kanji>power</kanji>.",
     "meaning_hint": "If you know the radical, you should be feeling fine… No, you should feel powerful!",
@@ -2344,262 +597,59 @@
         "meaning": "With All One's Strength",
         "reading": "ちからいっぱい"
       },
-      {
-        "word": "入力",
-        "level": 2,
-        "meaning": "Input",
-        "reading": "にゅうりょく"
-      },
-      {
-        "word": "体力",
-        "level": 5,
-        "meaning": "Physical Strength",
-        "reading": "たいりょく"
-      },
-      {
-        "word": "全力",
-        "level": 6,
-        "meaning": "Full Effort",
-        "reading": "ぜんりょく"
-      },
-      {
-        "word": "強力",
-        "level": 7,
-        "meaning": "Strong",
-        "reading": "きょうりょく"
-      },
-      {
-        "word": "馬力",
-        "level": 8,
-        "meaning": "Horsepower",
-        "reading": "ばりき"
-      },
-      {
-        "word": "電力",
-        "level": 8,
-        "meaning": "Electric Power",
-        "reading": "でんりょく"
-      },
-      {
-        "word": "実力",
-        "level": 9,
-        "meaning": "True Strength",
-        "reading": "じつりょく"
-      },
-      {
-        "word": "努力",
-        "level": 11,
-        "meaning": "Great Effort",
-        "reading": "どりょく"
-      },
-      {
-        "word": "力士",
-        "level": 13,
-        "meaning": "Sumo Wrestler",
-        "reading": "りきし"
-      },
-      {
-        "word": "協力",
-        "level": 14,
-        "meaning": "Cooperation",
-        "reading": "きょうりょく"
-      },
-      {
-        "word": "能力",
-        "level": 14,
-        "meaning": "Ability",
-        "reading": "のうりょく"
-      },
-      {
-        "word": "無力",
-        "level": 17,
-        "meaning": "Powerless",
-        "reading": "むりょく"
-      },
-      {
-        "word": "原子力",
-        "level": 19,
-        "meaning": "Nuclear Power",
-        "reading": "げんしりょく"
-      },
-      {
-        "word": "暴力",
-        "level": 19,
-        "meaning": "Violence",
-        "reading": "ぼうりょく"
-      },
-      {
-        "word": "圧力",
-        "level": 20,
-        "meaning": "Pressure",
-        "reading": "あつりょく"
-      },
-      {
-        "word": "暴力団",
-        "level": 21,
-        "meaning": "Crime Syndicate",
-        "reading": "ぼうりょくだん"
-      },
-      {
-        "word": "勢力",
-        "level": 22,
-        "meaning": "Influence",
-        "reading": "せいりょく"
-      },
-      {
-        "word": "創造力",
-        "level": 28,
-        "meaning": "Creative Power",
-        "reading": "そうぞうりょく"
-      },
-      {
-        "word": "効力",
-        "level": 29,
-        "meaning": "Effectiveness",
-        "reading": "こうりょく"
-      },
-      {
-        "word": "魅力",
-        "level": 30,
-        "meaning": "Allure",
-        "reading": "みりょく"
-      },
-      {
-        "word": "聴力",
-        "level": 37,
-        "meaning": "Hearing Ability",
-        "reading": "ちょうりょく"
-      },
-      {
-        "word": "弾力",
-        "level": 37,
-        "meaning": "Elasticity",
-        "reading": "だんりょく"
-      },
-      {
-        "word": "握力",
-        "level": 42,
-        "meaning": "Grip",
-        "reading": "あくりょく"
-      },
-      {
-        "word": "助力",
-        "level": 44,
-        "meaning": "Assistance",
-        "reading": "じょりょく"
-      },
-      {
-        "word": "尽力",
-        "level": 48,
-        "meaning": "Efforts",
-        "reading": "じんりょく"
-      }
+      { "word": "入力", "level": 2, "meaning": "Input", "reading": "にゅうりょく" },
+      { "word": "体力", "level": 5, "meaning": "Physical Strength", "reading": "たいりょく" },
+      { "word": "全力", "level": 6, "meaning": "Full Effort", "reading": "ぜんりょく" },
+      { "word": "強力", "level": 7, "meaning": "Strong", "reading": "きょうりょく" },
+      { "word": "馬力", "level": 8, "meaning": "Horsepower", "reading": "ばりき" },
+      { "word": "電力", "level": 8, "meaning": "Electric Power", "reading": "でんりょく" },
+      { "word": "実力", "level": 9, "meaning": "True Strength", "reading": "じつりょく" },
+      { "word": "努力", "level": 11, "meaning": "Great Effort", "reading": "どりょく" },
+      { "word": "力士", "level": 13, "meaning": "Sumo Wrestler", "reading": "りきし" },
+      { "word": "協力", "level": 14, "meaning": "Cooperation", "reading": "きょうりょく" },
+      { "word": "能力", "level": 14, "meaning": "Ability", "reading": "のうりょく" },
+      { "word": "無力", "level": 17, "meaning": "Powerless", "reading": "むりょく" },
+      { "word": "原子力", "level": 19, "meaning": "Nuclear Power", "reading": "げんしりょく" },
+      { "word": "暴力", "level": 19, "meaning": "Violence", "reading": "ぼうりょく" },
+      { "word": "圧力", "level": 20, "meaning": "Pressure", "reading": "あつりょく" },
+      { "word": "暴力団", "level": 21, "meaning": "Crime Syndicate", "reading": "ぼうりょくだん" },
+      { "word": "勢力", "level": 22, "meaning": "Influence", "reading": "せいりょく" },
+      { "word": "創造力", "level": 28, "meaning": "Creative Power", "reading": "そうぞうりょく" },
+      { "word": "効力", "level": 29, "meaning": "Effectiveness", "reading": "こうりょく" },
+      { "word": "魅力", "level": 30, "meaning": "Allure", "reading": "みりょく" },
+      { "word": "聴力", "level": 37, "meaning": "Hearing Ability", "reading": "ちょうりょく" },
+      { "word": "弾力", "level": 37, "meaning": "Elasticity", "reading": "だんりょく" },
+      { "word": "握力", "level": 42, "meaning": "Grip", "reading": "あくりょく" },
+      { "word": "助力", "level": 44, "meaning": "Assistance", "reading": "じょりょく" },
+      { "word": "尽力", "level": 48, "meaning": "Efforts", "reading": "じんりょく" }
     ]
   },
   {
     "id": 448,
     "level": 1,
     "kanji": "十",
-    "onyomi": [
-      {
-        "reading": "じゅう",
-        "primary": true,
-        "accepted_answer": true,
-        "type": "onyomi"
-      }
-    ],
+    "onyomi": [{ "reading": "じゅう", "primary": true, "accepted_answer": true, "type": "onyomi" }],
     "kunyomi": [
-      {
-        "reading": "とお",
-        "primary": false,
-        "accepted_answer": false,
-        "type": "kunyomi"
-      }
+      { "reading": "とお", "primary": false, "accepted_answer": false, "type": "kunyomi" }
     ],
-    "meanings": [
-      {
-        "meaning": "Ten",
-        "primary": true,
-        "accepted_answer": true
-      }
-    ],
+    "meanings": [{ "meaning": "Ten", "primary": true, "accepted_answer": true }],
     "meaning_mnemonic": "This <radical>cross</radical> is the symbol for the number <kanji>ten</kanji>. A good way to remember this is to think about all the religions that have crosses and also important sets of tens. ",
     "meaning_hint": "If you're familiar with Christianity, they have a cross and ten commandments. Cross = ten, you see?",
     "reading_mnemonic": "This cross in particular has <kanji>ten</kanji> <reading>jew</reading>els (じゅう) on it. Two on each arm and two in the middle. That's ten jewels!",
     "reading_hint": "Picture the jewels on this cross. Maybe draw it out on a piece of paper so the visual really sticks. Each cross is really a symbol for different sets of ten things, and in this case, it's ten jewels.",
     "vocabulary": [
-      {
-        "word": "五十",
-        "level": 2,
-        "meaning": "Fifty",
-        "reading": "ごじゅう"
-      },
-      {
-        "word": "十六",
-        "level": 2,
-        "meaning": "Sixteen",
-        "reading": "じゅうろく"
-      },
-      {
-        "word": "十月",
-        "level": 2,
-        "meaning": "October",
-        "reading": "じゅうがつ"
-      },
-      {
-        "word": "十日",
-        "level": 2,
-        "meaning": "Tenth Day",
-        "reading": "とおか"
-      },
-      {
-        "word": "十万",
-        "level": 3,
-        "meaning": "One Hundred Thousand",
-        "reading": "じゅうまん"
-      },
-      {
-        "word": "十台",
-        "level": 3,
-        "meaning": "Ten Machines",
-        "reading": "じゅうだい"
-      },
-      {
-        "word": "四十",
-        "level": 4,
-        "meaning": "Forty",
-        "reading": "よんじゅう"
-      },
-      {
-        "word": "二十日",
-        "level": 4,
-        "meaning": "Twentieth Day",
-        "reading": "はつか"
-      },
-      {
-        "word": "三十代",
-        "level": 5,
-        "meaning": "One's Thirties",
-        "reading": "さんじゅうだい"
-      },
-      {
-        "word": "四十二",
-        "level": 6,
-        "meaning": "Forty Two",
-        "reading": "よんじゅうに"
-      },
-      {
-        "word": "十分",
-        "level": 6,
-        "meaning": "Enough",
-        "reading": "じゅうぶん"
-      },
-      {
-        "word": "十分間",
-        "level": 9,
-        "meaning": "Ten Minutes",
-        "reading": "じゅっぷんかん"
-      },
+      { "word": "五十", "level": 2, "meaning": "Fifty", "reading": "ごじゅう" },
+      { "word": "十六", "level": 2, "meaning": "Sixteen", "reading": "じゅうろく" },
+      { "word": "十月", "level": 2, "meaning": "October", "reading": "じゅうがつ" },
+      { "word": "十日", "level": 2, "meaning": "Tenth Day", "reading": "とおか" },
+      { "word": "十万", "level": 3, "meaning": "One Hundred Thousand", "reading": "じゅうまん" },
+      { "word": "十台", "level": 3, "meaning": "Ten Machines", "reading": "じゅうだい" },
+      { "word": "四十", "level": 4, "meaning": "Forty", "reading": "よんじゅう" },
+      { "word": "二十日", "level": 4, "meaning": "Twentieth Day", "reading": "はつか" },
+      { "word": "三十代", "level": 5, "meaning": "One's Thirties", "reading": "さんじゅうだい" },
+      { "word": "四十二", "level": 6, "meaning": "Forty Two", "reading": "よんじゅうに" },
+      { "word": "十分", "level": 6, "meaning": "Enough", "reading": "じゅうぶん" },
+      { "word": "十分間", "level": 9, "meaning": "Ten Minutes", "reading": "じゅっぷんかん" },
       {
         "word": "四十二階",
         "level": 12,
@@ -2612,12 +662,7 @@
         "meaning": "Aiueo Order",
         "reading": "ごじゅうおんじゅん"
       },
-      {
-        "word": "二十歳",
-        "level": 46,
-        "meaning": "Twenty Years Old",
-        "reading": "はたち"
-      }
+      { "word": "二十歳", "level": 46, "meaning": "Twenty Years Old", "reading": "はたち" }
     ]
   },
   {
@@ -2625,153 +670,37 @@
     "level": 1,
     "kanji": "口",
     "onyomi": [
-      {
-        "reading": "こう",
-        "primary": true,
-        "accepted_answer": true,
-        "type": "onyomi"
-      },
-      {
-        "reading": "く",
-        "primary": false,
-        "accepted_answer": true,
-        "type": "onyomi"
-      }
+      { "reading": "こう", "primary": true, "accepted_answer": true, "type": "onyomi" },
+      { "reading": "く", "primary": false, "accepted_answer": true, "type": "onyomi" }
     ],
     "kunyomi": [
-      {
-        "reading": "くち",
-        "primary": false,
-        "accepted_answer": false,
-        "type": "kunyomi"
-      }
+      { "reading": "くち", "primary": false, "accepted_answer": false, "type": "kunyomi" }
     ],
-    "meanings": [
-      {
-        "meaning": "Mouth",
-        "primary": true,
-        "accepted_answer": true
-      }
-    ],
+    "meanings": [{ "meaning": "Mouth", "primary": true, "accepted_answer": true }],
     "meaning_mnemonic": "The <radical>mouth</radical> radical and the <kanji>mouth</kanji> kanji are exactly the same!",
     "meaning_hint": "If you learned your radicals — which the WaniKani system forces you to do (unless you're cheating) — you'll already know the meaning of the kanji.",
-    "reading_mnemonic": "Do you remember seeing the construction worker こういち earlier in the 工 mnemonic? If you haven't yet, not to worry! \n\nFor kanji with こう readings (there are a lot of them!) we will use the character こういち every time. He's one of the people who started this website, so we'll do our best in the mnemonics to embarrass him as much as possible. Anyways, remember that whenever you see こう, think こういち.\n\nEveryone agrees, (<reading>こう</reading>いち)'s <kanji>mouth</kanji> is his best feature. You stare at it lovingly as he whispers sweet kanji readings to you.\n\n",
+    "reading_mnemonic": "Do you remember seeing the construction worker こういち earlier in the 工 mnemonic? If you haven't yet, not to worry!\n\nFor kanji with こう readings (there are a lot of them!) we will use the character こういち every time. He's one of the people who started this website, so we'll do our best in the mnemonics to embarrass him as much as possible. Anyways, remember that whenever you see こう, think こういち.\n\nEveryone agrees, the <kanji>mouth</kanji> is <reading>こう</reading>いち's best feature. You stare at it lovingly as he whispers sweet kanji readings to you.",
     "reading_hint": "You just can't forget all the cool things about kanji learning he said from that mouth. What a great mouth こういち has. How are the lips of his mouth both so skinny and fat at the same time?",
     "vocabulary": [
-      {
-        "word": "入り口",
-        "level": 1,
-        "meaning": "Entrance",
-        "reading": "いりぐち"
-      },
-      {
-        "word": "人口",
-        "level": 1,
-        "meaning": "Population",
-        "reading": "じんこう"
-      },
-      {
-        "word": "出口",
-        "level": 2,
-        "meaning": "Exit",
-        "reading": "でぐち"
-      },
-      {
-        "word": "戸口",
-        "level": 3,
-        "meaning": "Doorway",
-        "reading": "とぐち"
-      },
-      {
-        "word": "口にする",
-        "level": 4,
-        "meaning": "To Mention",
-        "reading": "くちにする"
-      },
-      {
-        "word": "早口",
-        "level": 6,
-        "meaning": "Fast Talker",
-        "reading": "はやくち"
-      },
-      {
-        "word": "南口",
-        "level": 8,
-        "meaning": "South Exit",
-        "reading": "みなみぐち"
-      },
-      {
-        "word": "東口",
-        "level": 8,
-        "meaning": "East Exit",
-        "reading": "ひがしぐち"
-      },
-      {
-        "word": "辛口",
-        "level": 9,
-        "meaning": "Spicy Taste",
-        "reading": "からくち"
-      },
-      {
-        "word": "口調",
-        "level": 10,
-        "meaning": "Tone",
-        "reading": "くちょう"
-      },
-      {
-        "word": "悪口",
-        "level": 14,
-        "meaning": "Bad-Mouthing",
-        "reading": "わるぐち"
-      },
-      {
-        "word": "非常口",
-        "level": 19,
-        "meaning": "Emergency Exit",
-        "reading": "ひじょうぐち"
-      },
-      {
-        "word": "口笛",
-        "level": 21,
-        "meaning": "Whistling",
-        "reading": "くちぶえ"
-      },
-      {
-        "word": "窓口",
-        "level": 33,
-        "meaning": "Ticket Window",
-        "reading": "まどぐち"
-      },
-      {
-        "word": "裏口",
-        "level": 33,
-        "meaning": "Back Door",
-        "reading": "うらぐち"
-      },
-      {
-        "word": "口紅",
-        "level": 36,
-        "meaning": "Lipstick",
-        "reading": "くちべに"
-      },
-      {
-        "word": "口笛を吹く",
-        "level": 42,
-        "meaning": "To Whistle",
-        "reading": "くちぶえをふく"
-      },
-      {
-        "word": "口癖",
-        "level": 46,
-        "meaning": "Favorite Phrase",
-        "reading": "くちぐせ"
-      },
-      {
-        "word": "蛇口",
-        "level": 51,
-        "meaning": "Faucet",
-        "reading": "じゃぐち"
-      }
+      { "word": "入り口", "level": 1, "meaning": "Entrance", "reading": "いりぐち" },
+      { "word": "人口", "level": 1, "meaning": "Population", "reading": "じんこう" },
+      { "word": "出口", "level": 2, "meaning": "Exit", "reading": "でぐち" },
+      { "word": "戸口", "level": 3, "meaning": "Doorway", "reading": "とぐち" },
+      { "word": "口にする", "level": 4, "meaning": "To Mention", "reading": "くちにする" },
+      { "word": "早口", "level": 6, "meaning": "Fast Talker", "reading": "はやくち" },
+      { "word": "南口", "level": 8, "meaning": "South Exit", "reading": "みなみぐち" },
+      { "word": "東口", "level": 8, "meaning": "East Exit", "reading": "ひがしぐち" },
+      { "word": "辛口", "level": 9, "meaning": "Spicy Taste", "reading": "からくち" },
+      { "word": "口調", "level": 10, "meaning": "Tone", "reading": "くちょう" },
+      { "word": "悪口", "level": 14, "meaning": "Bad-Mouthing", "reading": "わるぐち" },
+      { "word": "非常口", "level": 19, "meaning": "Emergency Exit", "reading": "ひじょうぐち" },
+      { "word": "口笛", "level": 21, "meaning": "Whistling", "reading": "くちぶえ" },
+      { "word": "窓口", "level": 33, "meaning": "Ticket Window", "reading": "まどぐち" },
+      { "word": "裏口", "level": 33, "meaning": "Back Door", "reading": "うらぐち" },
+      { "word": "口紅", "level": 36, "meaning": "Lipstick", "reading": "くちべに" },
+      { "word": "口笛を吹く", "level": 42, "meaning": "To Whistle", "reading": "くちぶえをふく" },
+      { "word": "口癖", "level": 46, "meaning": "Favorite Phrase", "reading": "くちぐせ" },
+      { "word": "蛇口", "level": 51, "meaning": "Faucet", "reading": "じゃぐち" }
     ]
   },
   {
@@ -2779,470 +708,112 @@
     "level": 1,
     "kanji": "大",
     "onyomi": [
-      {
-        "reading": "たい",
-        "primary": true,
-        "accepted_answer": true,
-        "type": "onyomi"
-      },
-      {
-        "reading": "だい",
-        "primary": false,
-        "accepted_answer": true,
-        "type": "onyomi"
-      }
+      { "reading": "たい", "primary": true, "accepted_answer": true, "type": "onyomi" },
+      { "reading": "だい", "primary": false, "accepted_answer": true, "type": "onyomi" }
     ],
     "kunyomi": [
-      {
-        "reading": "おお",
-        "primary": false,
-        "accepted_answer": false,
-        "type": "kunyomi"
-      }
+      { "reading": "おお", "primary": false, "accepted_answer": false, "type": "kunyomi" }
     ],
     "meanings": [
-      {
-        "meaning": "Big",
-        "primary": true,
-        "accepted_answer": true
-      },
-      {
-        "meaning": "Large",
-        "primary": false,
-        "accepted_answer": true
-      }
+      { "meaning": "Big", "primary": true, "accepted_answer": true },
+      { "meaning": "Large", "primary": false, "accepted_answer": true }
     ],
     "meaning_mnemonic": "The <radical>big</radical> radical and the <kanji>big</kanji> kanji are exactly the same!",
     "meaning_hint": "So, if you know the radical, you know the meaning of this kanji as well.",
     "reading_mnemonic": "There's this big guy (that's how you remember the radical, remember?), and he's wearing a huge <reading>Tie Dye</reading> (たい, だい) shirt. Because he's so huge, the tie dye shirt is also super huge. Everything about him is pretty big, but the tie dye stands out more than anything.",
     "reading_hint": "When you look at the big guy in your head, imagine him covered in tie dye head to toe. Think about how ridiculous it looks on him, especially since he's such a big guy. Shirt. Sweatpants. Hat. Shoes... it goes on and on.",
     "vocabulary": [
-      {
-        "word": "大きい",
-        "level": 1,
-        "meaning": "Big",
-        "reading": "おおきい"
-      },
-      {
-        "word": "大きさ",
-        "level": 1,
-        "meaning": "Size",
-        "reading": "おおきさ"
-      },
-      {
-        "word": "大した",
-        "level": 1,
-        "meaning": "Great",
-        "reading": "たいした"
-      },
-      {
-        "word": "大人",
-        "level": 1,
-        "meaning": "Adult",
-        "reading": "おとな"
-      },
-      {
-        "word": "大いに",
-        "level": 2,
-        "meaning": "Very",
-        "reading": "おおいに"
-      },
-      {
-        "word": "大切",
-        "level": 3,
-        "meaning": "Important",
-        "reading": "たいせつ"
-      },
-      {
-        "word": "大人しい",
-        "level": 3,
-        "meaning": "Obedient",
-        "reading": "おとなしい"
-      },
-      {
-        "word": "大気",
-        "level": 4,
-        "meaning": "Atmosphere",
-        "reading": "たいき"
-      },
-      {
-        "word": "大学",
-        "level": 5,
-        "meaning": "University",
-        "reading": "だいがく"
-      },
-      {
-        "word": "大作",
-        "level": 5,
-        "meaning": "Major Work",
-        "reading": "たいさく"
-      },
-      {
-        "word": "大声",
-        "level": 5,
-        "meaning": "Loud Voice",
-        "reading": "おおごえ"
-      },
-      {
-        "word": "大体",
-        "level": 5,
-        "meaning": "Generally",
-        "reading": "だいたい"
-      },
-      {
-        "word": "大文字",
-        "level": 6,
-        "meaning": "Uppercase Letters",
-        "reading": "おおもじ"
-      },
-      {
-        "word": "大学生",
-        "level": 7,
-        "meaning": "University Student",
-        "reading": "だいがくせい"
-      },
-      {
-        "word": "大きく",
-        "level": 7,
-        "meaning": "In A Big Way",
-        "reading": "おおきく"
-      },
-      {
-        "word": "大空",
-        "level": 7,
-        "meaning": "Heavens",
-        "reading": "おおぞら"
-      },
-      {
-        "word": "医大",
-        "level": 8,
-        "meaning": "Medical University",
-        "reading": "いだい"
-      },
-      {
-        "word": "大役",
-        "level": 8,
-        "meaning": "Important Task",
-        "reading": "たいやく"
-      },
-      {
-        "word": "私立大学",
-        "level": 8,
-        "meaning": "Private College",
-        "reading": "しりつだいがく"
-      },
-      {
-        "word": "大事",
-        "level": 9,
-        "meaning": "Important",
-        "reading": "だいじ"
-      },
-      {
-        "word": "私大",
-        "level": 10,
-        "meaning": "Private College",
-        "reading": "しだい"
-      },
-      {
-        "word": "大学院",
-        "level": 10,
-        "meaning": "Graduate School",
-        "reading": "だいがくいん"
-      },
-      {
-        "word": "大根",
-        "level": 12,
-        "meaning": "Daikon",
-        "reading": "だいこん"
-      },
+      { "word": "大きい", "level": 1, "meaning": "Big", "reading": "おおきい" },
+      { "word": "大きさ", "level": 1, "meaning": "Size", "reading": "おおきさ" },
+      { "word": "大した", "level": 1, "meaning": "Great", "reading": "たいした" },
+      { "word": "大人", "level": 1, "meaning": "Adult", "reading": "おとな" },
+      { "word": "大いに", "level": 2, "meaning": "Very", "reading": "おおいに" },
+      { "word": "大切", "level": 3, "meaning": "Important", "reading": "たいせつ" },
+      { "word": "大人しい", "level": 3, "meaning": "Obedient", "reading": "おとなしい" },
+      { "word": "大気", "level": 4, "meaning": "Atmosphere", "reading": "たいき" },
+      { "word": "大学", "level": 5, "meaning": "University", "reading": "だいがく" },
+      { "word": "大作", "level": 5, "meaning": "Major Work", "reading": "たいさく" },
+      { "word": "大声", "level": 5, "meaning": "Loud Voice", "reading": "おおごえ" },
+      { "word": "大体", "level": 5, "meaning": "Generally", "reading": "だいたい" },
+      { "word": "大文字", "level": 6, "meaning": "Uppercase Letters", "reading": "おおもじ" },
+      { "word": "大学生", "level": 7, "meaning": "University Student", "reading": "だいがくせい" },
+      { "word": "大きく", "level": 7, "meaning": "In A Big Way", "reading": "おおきく" },
+      { "word": "大空", "level": 7, "meaning": "Heavens", "reading": "おおぞら" },
+      { "word": "医大", "level": 8, "meaning": "Medical University", "reading": "いだい" },
+      { "word": "大役", "level": 8, "meaning": "Important Task", "reading": "たいやく" },
+      { "word": "私立大学", "level": 8, "meaning": "Private College", "reading": "しりつだいがく" },
+      { "word": "大事", "level": 9, "meaning": "Important", "reading": "だいじ" },
+      { "word": "私大", "level": 10, "meaning": "Private College", "reading": "しだい" },
+      { "word": "大学院", "level": 10, "meaning": "Graduate School", "reading": "だいがくいん" },
+      { "word": "大根", "level": 12, "meaning": "Daikon", "reading": "だいこん" },
       {
         "word": "大学院生",
         "level": 12,
         "meaning": "Graduate Student",
         "reading": "だいがくいんせい"
       },
-      {
-        "word": "大会",
-        "level": 13,
-        "meaning": "Convention",
-        "reading": "たいかい"
-      },
-      {
-        "word": "大好き",
-        "level": 13,
-        "meaning": "Really Like",
-        "reading": "だいすき"
-      },
-      {
-        "word": "大仏",
-        "level": 15,
-        "meaning": "Giant Buddha Statue",
-        "reading": "だいぶつ"
-      },
-      {
-        "word": "大変",
-        "level": 15,
-        "meaning": "Serious",
-        "reading": "たいへん"
-      },
-      {
-        "word": "大阪",
-        "level": 16,
-        "meaning": "Osaka",
-        "reading": "おおさか"
-      },
-      {
-        "word": "大阪弁",
-        "level": 18,
-        "meaning": "Osaka Dialect",
-        "reading": "おおさかべん"
-      },
-      {
-        "word": "大丈夫",
-        "level": 18,
-        "meaning": "Safe",
-        "reading": "だいじょうぶ"
-      },
-      {
-        "word": "大失敗",
-        "level": 19,
-        "meaning": "Total Failure",
-        "reading": "だいしっぱい"
-      },
+      { "word": "大会", "level": 13, "meaning": "Convention", "reading": "たいかい" },
+      { "word": "大好き", "level": 13, "meaning": "Really Like", "reading": "だいすき" },
+      { "word": "大仏", "level": 15, "meaning": "Giant Buddha Statue", "reading": "だいぶつ" },
+      { "word": "大変", "level": 15, "meaning": "Serious", "reading": "たいへん" },
+      { "word": "大阪", "level": 16, "meaning": "Osaka", "reading": "おおさか" },
+      { "word": "大阪弁", "level": 18, "meaning": "Osaka Dialect", "reading": "おおさかべん" },
+      { "word": "大丈夫", "level": 18, "meaning": "Safe", "reading": "だいじょうぶ" },
+      { "word": "大失敗", "level": 19, "meaning": "Total Failure", "reading": "だいしっぱい" },
       {
         "word": "大きい順",
         "level": 19,
         "meaning": "Decreasing Order",
         "reading": "おおきいじゅん"
       },
-      {
-        "word": "大敵",
-        "level": 21,
-        "meaning": "Arch Enemy",
-        "reading": "たいてき"
-      },
-      {
-        "word": "大勢",
-        "level": 22,
-        "meaning": "Crowd",
-        "reading": "おおぜい"
-      },
-      {
-        "word": "大統領",
-        "level": 22,
-        "meaning": "President",
-        "reading": "だいとうりょう"
-      },
-      {
-        "word": "大嫌い",
-        "level": 22,
-        "meaning": "Hate",
-        "reading": "だいきらい"
-      },
-      {
-        "word": "大量",
-        "level": 24,
-        "meaning": "Large Quantity",
-        "reading": "たいりょう"
-      },
+      { "word": "大敵", "level": 21, "meaning": "Arch Enemy", "reading": "たいてき" },
+      { "word": "大勢", "level": 22, "meaning": "Crowd", "reading": "おおぜい" },
+      { "word": "大統領", "level": 22, "meaning": "President", "reading": "だいとうりょう" },
+      { "word": "大嫌い", "level": 22, "meaning": "Hate", "reading": "だいきらい" },
+      { "word": "大量", "level": 24, "meaning": "Large Quantity", "reading": "たいりょう" },
       {
         "word": "副大統領",
         "level": 24,
         "meaning": "Vice President",
         "reading": "ふくだいとうりょう"
       },
-      {
-        "word": "莫大",
-        "level": 25,
-        "meaning": "Huge",
-        "reading": "ばくだい"
-      },
-      {
-        "word": "大違い",
-        "level": 26,
-        "meaning": "Big Difference",
-        "reading": "おおちがい"
-      },
-      {
-        "word": "大規模",
-        "level": 27,
-        "meaning": "Large Scale",
-        "reading": "だいきぼ"
-      },
-      {
-        "word": "巨大",
-        "level": 28,
-        "meaning": "Huge",
-        "reading": "きょだい"
-      },
-      {
-        "word": "大衆",
-        "level": 28,
-        "meaning": "General Public",
-        "reading": "たいしゅう"
-      },
-      {
-        "word": "大間違い",
-        "level": 28,
-        "meaning": "Big Mistake",
-        "reading": "おおまちがい"
-      },
-      {
-        "word": "大略",
-        "level": 29,
-        "meaning": "Broad Outline",
-        "reading": "たいりゃく"
-      },
-      {
-        "word": "大臣",
-        "level": 29,
-        "meaning": "Minister",
-        "reading": "だいじん"
-      },
-      {
-        "word": "総理大臣",
-        "level": 30,
-        "meaning": "Prime Minister",
-        "reading": "そうりだいじん"
-      },
+      { "word": "莫大", "level": 25, "meaning": "Huge", "reading": "ばくだい" },
+      { "word": "大違い", "level": 26, "meaning": "Big Difference", "reading": "おおちがい" },
+      { "word": "大規模", "level": 27, "meaning": "Large Scale", "reading": "だいきぼ" },
+      { "word": "巨大", "level": 28, "meaning": "Huge", "reading": "きょだい" },
+      { "word": "大衆", "level": 28, "meaning": "General Public", "reading": "たいしゅう" },
+      { "word": "大間違い", "level": 28, "meaning": "Big Mistake", "reading": "おおまちがい" },
+      { "word": "大略", "level": 29, "meaning": "Broad Outline", "reading": "たいりゃく" },
+      { "word": "大臣", "level": 29, "meaning": "Minister", "reading": "だいじん" },
+      { "word": "総理大臣", "level": 30, "meaning": "Prime Minister", "reading": "そうりだいじん" },
       {
         "word": "外務大臣",
         "level": 31,
         "meaning": "Minister Of Foreign Affairs",
         "reading": "がいむだいじん"
       },
-      {
-        "word": "大陸",
-        "level": 31,
-        "meaning": "Continent",
-        "reading": "たいりく"
-      },
-      {
-        "word": "大騒ぎ",
-        "level": 32,
-        "meaning": "Clamor",
-        "reading": "おおさわぎ"
-      },
-      {
-        "word": "拡大",
-        "level": 33,
-        "meaning": "Zoom",
-        "reading": "かくだい"
-      },
-      {
-        "word": "大損",
-        "level": 34,
-        "meaning": "Heavy Loss",
-        "reading": "おおぞん"
-      },
-      {
-        "word": "大将",
-        "level": 36,
-        "meaning": "General",
-        "reading": "たいしょう"
-      },
-      {
-        "word": "大幅",
-        "level": 36,
-        "meaning": "Large",
-        "reading": "おおはば"
-      },
-      {
-        "word": "大抵",
-        "level": 37,
-        "meaning": "Generally",
-        "reading": "たいてい"
-      },
-      {
-        "word": "大砲",
-        "level": 44,
-        "meaning": "Cannon",
-        "reading": "たいほう"
-      },
-      {
-        "word": "誇大",
-        "level": 46,
-        "meaning": "Exaggeration",
-        "reading": "こだい"
-      },
-      {
-        "word": "大佐",
-        "level": 47,
-        "meaning": "Colonel",
-        "reading": "たいさ"
-      },
-      {
-        "word": "大麻",
-        "level": 48,
-        "meaning": "Marijuana",
-        "reading": "たいま"
-      },
-      {
-        "word": "大概",
-        "level": 49,
-        "meaning": "In General",
-        "reading": "たいがい"
-      },
-      {
-        "word": "壮大",
-        "level": 50,
-        "meaning": "Magnificent",
-        "reading": "そうだい"
-      },
-      {
-        "word": "偉大",
-        "level": 51,
-        "meaning": "Greatness",
-        "reading": "いだい"
-      },
-      {
-        "word": "膨大",
-        "level": 52,
-        "meaning": "Huge",
-        "reading": "ぼうだい"
-      },
-      {
-        "word": "大輔",
-        "level": 52,
-        "meaning": "Daisuke",
-        "reading": "だいすけ"
-      },
-      {
-        "word": "寛大",
-        "level": 53,
-        "meaning": "Tolerance",
-        "reading": "かんだい"
-      },
-      {
-        "word": "大尉",
-        "level": 56,
-        "meaning": "Captain",
-        "reading": "たいい"
-      },
-      {
-        "word": "大腸",
-        "level": 57,
-        "meaning": "Large Intestine",
-        "reading": "だいちょう"
-      },
-      {
-        "word": "甚大",
-        "level": 59,
-        "meaning": "Immense",
-        "reading": "じんだい"
-      },
-      {
-        "word": "大胆",
-        "level": 59,
-        "meaning": "Bold",
-        "reading": "だいたん"
-      },
-      {
-        "word": "大腸菌",
-        "level": 59,
-        "meaning": "E. Coli",
-        "reading": "だいちょうきん"
-      }
+      { "word": "大陸", "level": 31, "meaning": "Continent", "reading": "たいりく" },
+      { "word": "大騒ぎ", "level": 32, "meaning": "Clamor", "reading": "おおさわぎ" },
+      { "word": "拡大", "level": 33, "meaning": "Zoom", "reading": "かくだい" },
+      { "word": "大損", "level": 34, "meaning": "Heavy Loss", "reading": "おおぞん" },
+      { "word": "大将", "level": 36, "meaning": "General", "reading": "たいしょう" },
+      { "word": "大幅", "level": 36, "meaning": "Large", "reading": "おおはば" },
+      { "word": "大抵", "level": 37, "meaning": "Generally", "reading": "たいてい" },
+      { "word": "大砲", "level": 44, "meaning": "Cannon", "reading": "たいほう" },
+      { "word": "誇大", "level": 46, "meaning": "Exaggeration", "reading": "こだい" },
+      { "word": "大佐", "level": 47, "meaning": "Colonel", "reading": "たいさ" },
+      { "word": "大麻", "level": 48, "meaning": "Marijuana", "reading": "たいま" },
+      { "word": "大概", "level": 49, "meaning": "In General", "reading": "たいがい" },
+      { "word": "壮大", "level": 50, "meaning": "Magnificent", "reading": "そうだい" },
+      { "word": "偉大", "level": 51, "meaning": "Greatness", "reading": "いだい" },
+      { "word": "膨大", "level": 52, "meaning": "Huge", "reading": "ぼうだい" },
+      { "word": "大輔", "level": 52, "meaning": "Daisuke", "reading": "だいすけ" },
+      { "word": "寛大", "level": 53, "meaning": "Tolerance", "reading": "かんだい" },
+      { "word": "大尉", "level": 56, "meaning": "Captain", "reading": "たいい" },
+      { "word": "大腸", "level": 57, "meaning": "Large Intestine", "reading": "だいちょう" },
+      { "word": "甚大", "level": 59, "meaning": "Immense", "reading": "じんだい" },
+      { "word": "大胆", "level": 59, "meaning": "Bold", "reading": "だいたん" },
+      { "word": "大腸菌", "level": 59, "meaning": "E. Coli", "reading": "だいちょうきん" }
     ]
   },
   {
@@ -3250,383 +821,99 @@
     "level": 1,
     "kanji": "女",
     "onyomi": [
-      {
-        "reading": "じょ",
-        "primary": true,
-        "accepted_answer": true,
-        "type": "onyomi"
-      },
-      {
-        "reading": "にょ",
-        "primary": false,
-        "accepted_answer": true,
-        "type": "onyomi"
-      },
-      {
-        "reading": "にょう",
-        "primary": false,
-        "accepted_answer": true,
-        "type": "onyomi"
-      }
+      { "reading": "じょ", "primary": true, "accepted_answer": true, "type": "onyomi" },
+      { "reading": "にょ", "primary": false, "accepted_answer": true, "type": "onyomi" },
+      { "reading": "にょう", "primary": false, "accepted_answer": true, "type": "onyomi" }
     ],
     "kunyomi": [
-      {
-        "reading": "おんな",
-        "primary": false,
-        "accepted_answer": false,
-        "type": "kunyomi"
-      },
-      {
-        "reading": "め",
-        "primary": false,
-        "accepted_answer": false,
-        "type": "kunyomi"
-      }
+      { "reading": "おんな", "primary": false, "accepted_answer": false, "type": "kunyomi" },
+      { "reading": "め", "primary": false, "accepted_answer": false, "type": "kunyomi" }
     ],
-    "meanings": [
-      {
-        "meaning": "Woman",
-        "primary": true,
-        "accepted_answer": true
-      }
-    ],
+    "meanings": [{ "meaning": "Woman", "primary": true, "accepted_answer": true }],
     "meaning_mnemonic": "The radical for <radical>woman</radical> and the kanji for <kanji>woman</kanji> are exactly the same.",
     "meaning_hint": "That means if you know your radicals well, you know the meaning of this kanji as well! How swell.",
     "reading_mnemonic": "When you think of a <kanji>woman</kanji>, think of <reading>Jo</reading>-Anne (じょ), though she usually goes by just \"Jo.\"",
     "reading_hint": "Whenever the reading じょ comes up, we will use the character Jo-Anne. She's quite a short woman, which is to help us differentiate じょ from じょう (who is the giant, oafish farmhand Joe). じょ is a smaller lady, じょう is a giant man.",
     "vocabulary": [
-      {
-        "word": "女の子",
-        "level": 2,
-        "meaning": "Girl",
-        "reading": "おんなのこ"
-      },
-      {
-        "word": "女子",
-        "level": 2,
-        "meaning": "Girl",
-        "reading": "じょし"
-      },
-      {
-        "word": "女王",
-        "level": 2,
-        "meaning": "Queen",
-        "reading": "じょおう"
-      },
-      {
-        "word": "王女",
-        "level": 2,
-        "meaning": "Princess",
-        "reading": "おうじょ"
-      },
-      {
-        "word": "少女",
-        "level": 3,
-        "meaning": "Girl",
-        "reading": "しょうじょ"
-      },
-      {
-        "word": "女の人",
-        "level": 3,
-        "meaning": "Woman",
-        "reading": "おんなのひと"
-      },
-      {
-        "word": "悪女",
-        "level": 12,
-        "meaning": "Evil Woman",
-        "reading": "あくじょ"
-      },
-      {
-        "word": "彼女",
-        "level": 13,
-        "meaning": "She",
-        "reading": "かのじょ"
-      },
-      {
-        "word": "女神",
-        "level": 13,
-        "meaning": "Goddess",
-        "reading": "めがみ"
-      },
-      {
-        "word": "女性",
-        "level": 14,
-        "meaning": "Female",
-        "reading": "じょせい"
-      },
-      {
-        "word": "女優",
-        "level": 25,
-        "meaning": "Actress",
-        "reading": "じょゆう"
-      },
-      {
-        "word": "魔女",
-        "level": 46,
-        "meaning": "Witch",
-        "reading": "まじょ"
-      },
-      {
-        "word": "女権",
-        "level": 47,
-        "meaning": "Women's Rights",
-        "reading": "じょけん"
-      },
-      {
-        "word": "淑女",
-        "level": 58,
-        "meaning": "Lady",
-        "reading": "しゅくじょ"
-      },
-      {
-        "word": "早乙女",
-        "level": 59,
-        "meaning": "Rice Planting Girl",
-        "reading": "さおとめ"
-      }
+      { "word": "女の子", "level": 2, "meaning": "Girl", "reading": "おんなのこ" },
+      { "word": "女子", "level": 2, "meaning": "Girl", "reading": "じょし" },
+      { "word": "女王", "level": 2, "meaning": "Queen", "reading": "じょおう" },
+      { "word": "王女", "level": 2, "meaning": "Princess", "reading": "おうじょ" },
+      { "word": "少女", "level": 3, "meaning": "Girl", "reading": "しょうじょ" },
+      { "word": "女の人", "level": 3, "meaning": "Woman", "reading": "おんなのひと" },
+      { "word": "悪女", "level": 12, "meaning": "Evil Woman", "reading": "あくじょ" },
+      { "word": "彼女", "level": 13, "meaning": "She", "reading": "かのじょ" },
+      { "word": "女神", "level": 13, "meaning": "Goddess", "reading": "めがみ" },
+      { "word": "女性", "level": 14, "meaning": "Female", "reading": "じょせい" },
+      { "word": "女優", "level": 25, "meaning": "Actress", "reading": "じょゆう" },
+      { "word": "魔女", "level": 46, "meaning": "Witch", "reading": "まじょ" },
+      { "word": "女権", "level": 47, "meaning": "Women's Rights", "reading": "じょけん" },
+      { "word": "淑女", "level": 58, "meaning": "Lady", "reading": "しゅくじょ" },
+      { "word": "早乙女", "level": 59, "meaning": "Rice Planting Girl", "reading": "さおとめ" }
     ]
   },
   {
     "id": 455,
     "level": 1,
     "kanji": "山",
-    "onyomi": [
-      {
-        "reading": "さん",
-        "primary": true,
-        "accepted_answer": true,
-        "type": "onyomi"
-      }
-    ],
+    "onyomi": [{ "reading": "さん", "primary": true, "accepted_answer": true, "type": "onyomi" }],
     "kunyomi": [
-      {
-        "reading": "やま",
-        "primary": false,
-        "accepted_answer": false,
-        "type": "kunyomi"
-      }
+      { "reading": "やま", "primary": false, "accepted_answer": false, "type": "kunyomi" }
     ],
-    "meanings": [
-      {
-        "meaning": "Mountain",
-        "primary": true,
-        "accepted_answer": true
-      }
-    ],
+    "meanings": [{ "meaning": "Mountain", "primary": true, "accepted_answer": true }],
     "meaning_mnemonic": "The <radical>mountain</radical> radical and the <kanji>mountain</kanji> kanji are the same.",
     "meaning_hint": "Make sure you're studying your radicals. If you are, then you're studying your kanji as well!",
     "reading_mnemonic": "Think about <kanji>mountains</kanji> talking to each other, calling each other by their names and adding the Japanese name-ender <reading>san</reading> (さん) to each of their names. \"Hello, Everest-<reading>san</reading>.\" \"Oh hi, Fuji-<reading>san</reading>.\"",
     "reading_hint": "Be sure to imagine this vividly. The more absurdly you can imagine it, the more likely you are to remember the reading, <reading>san</reading>.",
     "vocabulary": [
-      {
-        "word": "ふじ山",
-        "level": 1,
-        "meaning": "Mt Fuji",
-        "reading": "ふじさん"
-      },
-      {
-        "word": "火山",
-        "level": 2,
-        "meaning": "Volcano",
-        "reading": "かざん"
-      },
-      {
-        "word": "山びこ",
-        "level": 3,
-        "meaning": "Echo",
-        "reading": "やまびこ"
-      },
-      {
-        "word": "山道",
-        "level": 10,
-        "meaning": "Mountain Road",
-        "reading": "やまみち"
-      },
-      {
-        "word": "登山",
-        "level": 12,
-        "meaning": "Mountain Climbing",
-        "reading": "とざん"
-      },
-      {
-        "word": "山登り",
-        "level": 14,
-        "meaning": "Mountain Climbing",
-        "reading": "やまのぼり"
-      },
-      {
-        "word": "岡山県",
-        "level": 21,
-        "meaning": "Okayama Prefecture",
-        "reading": "おかやまけん"
-      },
-      {
-        "word": "沢山",
-        "level": 23,
-        "meaning": "A Lot",
-        "reading": "たくさん"
-      },
-      {
-        "word": "岡山城",
-        "level": 25,
-        "meaning": "Okayama Castle",
-        "reading": "おかやまじょう"
-      },
-      {
-        "word": "山脈",
-        "level": 31,
-        "meaning": "Mountain Range",
-        "reading": "さんみゃく"
-      },
-      {
-        "word": "富士山",
-        "level": 31,
-        "meaning": "Mt Fuji",
-        "reading": "ふじさん"
-      },
-      {
-        "word": "山中湖",
-        "level": 35,
-        "meaning": "Lake Yamanaka",
-        "reading": "やまなかこ"
-      },
-      {
-        "word": "銅山",
-        "level": 35,
-        "meaning": "Copper Mine",
-        "reading": "どうざん"
-      },
-      {
-        "word": "鉱山",
-        "level": 41,
-        "meaning": "A Mine",
-        "reading": "こうざん"
-      },
-      {
-        "word": "山岳",
-        "level": 45,
-        "meaning": "Mountains",
-        "reading": "さんがく"
-      },
-      {
-        "word": "山頂",
-        "level": 51,
-        "meaning": "Summit",
-        "reading": "さんちょう"
-      },
-      {
-        "word": "山荘",
-        "level": 54,
-        "meaning": "Mountain Retreat",
-        "reading": "さんそう"
-      },
-      {
-        "word": "山葵",
-        "level": 55,
-        "meaning": "Wasabi",
-        "reading": "わさび"
-      },
-      {
-        "word": "山賊",
-        "level": 57,
-        "meaning": "Bandit",
-        "reading": "さんぞく"
-      }
+      { "word": "ふじ山", "level": 1, "meaning": "Mt Fuji", "reading": "ふじさん" },
+      { "word": "火山", "level": 2, "meaning": "Volcano", "reading": "かざん" },
+      { "word": "山びこ", "level": 3, "meaning": "Echo", "reading": "やまびこ" },
+      { "word": "山道", "level": 10, "meaning": "Mountain Road", "reading": "やまみち" },
+      { "word": "登山", "level": 12, "meaning": "Mountain Climbing", "reading": "とざん" },
+      { "word": "山登り", "level": 14, "meaning": "Mountain Climbing", "reading": "やまのぼり" },
+      { "word": "岡山県", "level": 21, "meaning": "Okayama Prefecture", "reading": "おかやまけん" },
+      { "word": "沢山", "level": 23, "meaning": "A Lot", "reading": "たくさん" },
+      { "word": "岡山城", "level": 25, "meaning": "Okayama Castle", "reading": "おかやまじょう" },
+      { "word": "山脈", "level": 31, "meaning": "Mountain Range", "reading": "さんみゃく" },
+      { "word": "富士山", "level": 31, "meaning": "Mt Fuji", "reading": "ふじさん" },
+      { "word": "山中湖", "level": 35, "meaning": "Lake Yamanaka", "reading": "やまなかこ" },
+      { "word": "銅山", "level": 35, "meaning": "Copper Mine", "reading": "どうざん" },
+      { "word": "鉱山", "level": 41, "meaning": "A Mine", "reading": "こうざん" },
+      { "word": "山岳", "level": 45, "meaning": "Mountains", "reading": "さんがく" },
+      { "word": "山頂", "level": 51, "meaning": "Summit", "reading": "さんちょう" },
+      { "word": "山荘", "level": 54, "meaning": "Mountain Retreat", "reading": "さんそう" },
+      { "word": "山葵", "level": 55, "meaning": "Wasabi", "reading": "わさび" },
+      { "word": "山賊", "level": 57, "meaning": "Bandit", "reading": "さんぞく" }
     ]
   },
   {
     "id": 456,
     "level": 1,
     "kanji": "川",
-    "onyomi": [
-      {
-        "reading": "せん",
-        "primary": false,
-        "accepted_answer": false,
-        "type": "onyomi"
-      }
-    ],
-    "kunyomi": [
-      {
-        "reading": "かわ",
-        "primary": true,
-        "accepted_answer": true,
-        "type": "kunyomi"
-      }
-    ],
-    "meanings": [
-      {
-        "meaning": "River",
-        "primary": true,
-        "accepted_answer": true
-      }
-    ],
+    "onyomi": [{ "reading": "せん", "primary": false, "accepted_answer": false, "type": "onyomi" }],
+    "kunyomi": [{ "reading": "かわ", "primary": true, "accepted_answer": true, "type": "kunyomi" }],
+    "meanings": [{ "meaning": "River", "primary": true, "accepted_answer": true }],
     "meaning_mnemonic": "The <radical>river</radical> radical and the <kanji>river</kanji> kanji are the same as each other!",
     "meaning_hint": "So, if you know the radical you know the kanji as well.",
     "reading_mnemonic": "You're standing next to a <kanji>river</kanji> that's actually used as a <reading>ca</reading>r <reading>wa</reading>sh (かわ). ",
     "reading_hint": "Imagine standing by the river, watching all those cars floating by. They start off really dirty, but the river washes them all clean.",
     "vocabulary": [
-      {
-        "word": "川底",
-        "level": 17,
-        "meaning": "Riverbed",
-        "reading": "かわぞこ"
-      },
-      {
-        "word": "川崎",
-        "level": 23,
-        "meaning": "Kawasaki",
-        "reading": "かわさき"
-      },
-      {
-        "word": "徳川",
-        "level": 31,
-        "meaning": "Tokugawa",
-        "reading": "とくがわ"
-      },
+      { "word": "川底", "level": 17, "meaning": "Riverbed", "reading": "かわぞこ" },
+      { "word": "川崎", "level": 23, "meaning": "Kawasaki", "reading": "かわさき" },
+      { "word": "徳川", "level": 31, "meaning": "Tokugawa", "reading": "とくがわ" },
       {
         "word": "神奈川県",
         "level": 36,
         "meaning": "Kanagawa Prefecture",
         "reading": "かながわけん"
       },
-      {
-        "word": "香川県",
-        "level": 40,
-        "meaning": "Kagawa Prefecture",
-        "reading": "かがわけん"
-      },
-      {
-        "word": "堀川",
-        "level": 40,
-        "meaning": "Canal",
-        "reading": "ほりかわ"
-      },
-      {
-        "word": "滝川",
-        "level": 45,
-        "meaning": "Rapids",
-        "reading": "たきがわ"
-      },
-      {
-        "word": "川柳",
-        "level": 47,
-        "meaning": "Comic Haiku",
-        "reading": "せんりゅう"
-      },
-      {
-        "word": "淀川",
-        "level": 50,
-        "meaning": "Yodogawa",
-        "reading": "よどがわ"
-      },
-      {
-        "word": "梓川",
-        "level": 59,
-        "meaning": "Azusa River",
-        "reading": "あずさがわ"
-      }
+      { "word": "香川県", "level": 40, "meaning": "Kagawa Prefecture", "reading": "かがわけん" },
+      { "word": "堀川", "level": 40, "meaning": "Canal", "reading": "ほりかわ" },
+      { "word": "滝川", "level": 45, "meaning": "Rapids", "reading": "たきがわ" },
+      { "word": "川柳", "level": 47, "meaning": "Comic Haiku", "reading": "せんりゅう" },
+      { "word": "淀川", "level": 50, "meaning": "Yodogawa", "reading": "よどがわ" },
+      { "word": "梓川", "level": 59, "meaning": "Azusa River", "reading": "あずさがわ" }
     ]
   },
   {
@@ -3634,85 +921,27 @@
     "level": 1,
     "kanji": "工",
     "onyomi": [
-      {
-        "reading": "こう",
-        "primary": true,
-        "accepted_answer": true,
-        "type": "onyomi"
-      },
-      {
-        "reading": "く",
-        "primary": false,
-        "accepted_answer": true,
-        "type": "onyomi"
-      }
+      { "reading": "こう", "primary": true, "accepted_answer": true, "type": "onyomi" },
+      { "reading": "く", "primary": false, "accepted_answer": true, "type": "onyomi" }
     ],
     "kunyomi": [],
     "meanings": [
-      {
-        "meaning": "Construction",
-        "primary": true,
-        "accepted_answer": true
-      },
-      {
-        "meaning": "Industry",
-        "primary": false,
-        "accepted_answer": true
-      }
+      { "meaning": "Construction", "primary": true, "accepted_answer": true },
+      { "meaning": "Industry", "primary": false, "accepted_answer": true }
     ],
     "meaning_mnemonic": "The <radical>construction</radical> radical and the <kanji>construction</kanji> kanji are the same!\n\nThis kanji also means <kanji>industry</kanji>, which is what construction is, if you think about it. It's all part of the construction industry.",
     "meaning_hint": "Know your radicals and you'll know this kanji's meaning.",
     "reading_mnemonic": "Every time a kanji uses the こう reading (there are a lot!), we'll use the character こういち. He's one of the people who started this website, so we'll do our best in the mnemonics to embarrass him as much as possible. Like this:\n\nYou see some <kanji>construction</kanji> in front of you. There, standing shirtless (only suspenders and a hard hat) is <reading>こう</reading>いち, looking back at you.",
     "reading_hint": "If こういち as a construction worker somehow doesn't make your legs tremble, that's okay. Just make sure you take this story to a ridiculous enough level to construct a memory in that brain of yours. Be mad at him for not following construction site regulations — where's his shirt, shoes, and pants, and why is he using the bulldozer like that?!\n\n\nAlternatively, say you really like what you see (you're going to have to imagine a much better-looking version of こういち's face, though). You and こういち make eye contact a little too long. He nods, puts his cigarette out, and takes off his hard hat, letting his long Fabio-esque locks flow. You beckon him over and he comes. What happens next is up to you and your own imagination. My guess is you have a very deep conversation about kanji and the best ways to learn it.\n\n\nHint: When you see 工 in a kanji, it will often take the こう reading. Remember that, because it comes up quite a bit!",
     "vocabulary": [
-      {
-        "word": "人工",
-        "level": 1,
-        "meaning": "Artificial",
-        "reading": "じんこう"
-      },
-      {
-        "word": "工学",
-        "level": 5,
-        "meaning": "Engineering",
-        "reading": "こうがく"
-      },
-      {
-        "word": "工作",
-        "level": 5,
-        "meaning": "Handicraft",
-        "reading": "こうさく"
-      },
-      {
-        "word": "工学者",
-        "level": 8,
-        "meaning": "Engineer",
-        "reading": "こうがくしゃ"
-      },
-      {
-        "word": "工場",
-        "level": 8,
-        "meaning": "Factory",
-        "reading": "こうじょう"
-      },
-      {
-        "word": "工事",
-        "level": 9,
-        "meaning": "Construction",
-        "reading": "こうじ"
-      },
-      {
-        "word": "工業",
-        "level": 10,
-        "meaning": "Industry",
-        "reading": "こうぎょう"
-      },
-      {
-        "word": "飴細工",
-        "level": 18,
-        "meaning": "Sugar Sculpture",
-        "reading": "あめざいく"
-      }
+      { "word": "人工", "level": 1, "meaning": "Artificial", "reading": "じんこう" },
+      { "word": "工学", "level": 5, "meaning": "Engineering", "reading": "こうがく" },
+      { "word": "工作", "level": 5, "meaning": "Handicraft", "reading": "こうさく" },
+      { "word": "工学者", "level": 8, "meaning": "Engineer", "reading": "こうがくしゃ" },
+      { "word": "工場", "level": 8, "meaning": "Factory", "reading": "こうじょう" },
+      { "word": "工事", "level": 9, "meaning": "Construction", "reading": "こうじ" },
+      { "word": "工業", "level": 10, "meaning": "Industry", "reading": "こうぎょう" },
+      { "word": "飴細工", "level": 18, "meaning": "Sugar Sculpture", "reading": "あめざいく" }
     ]
   }
 ]

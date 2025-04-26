@@ -592,7 +592,7 @@
       { "meaning": "Thick", "primary": false }
     ],
     "reading": [{ "reading": "ふとい", "primary": true }],
-    "reading_mnemonic": "This is the kun'yomi reading of the kanji (because it's a single kanji, all alone with hiragana attached). The part you have to remember is the ふと portion. Let's use a mnemonic. \n\nThe <vocabulary>fat</vocabulary> guy never leaves his <reading>futo</reading>n (ふと).",
+    "reading_mnemonic": "This is the kun'yomi reading of the kanji (because it's a single kanji, all alone with hiragana attached). The part you have to remember is the ふと portion. Let's use a mnemonic.\n\nThe <vocabulary>fat</vocabulary> cat loves to curl up on the <reading>futo</reading>n (ふと) all day.",
     "allMeanings": [
       { "meaning": "Fat", "primary": true },
       { "meaning": "Thick", "primary": false }
@@ -973,7 +973,10 @@
       { "meaning": "Draft Beer", "primary": true },
       { "meaning": "Unpasteurized Beer", "primary": false }
     ],
-    "reading": [{ "reading": "なまびーる", "primary": true }],
+    "reading": [
+      { "reading": "なまびーる", "primary": true },
+      { "reading": "なまビール", "primary": false }
+    ],
     "reading_mnemonic": "Be careful to use kun'yomi for 生 here. Other than that, as long as you know your katakana, you should be good to go!",
     "allMeanings": [
       { "meaning": "Draft Beer", "primary": true },

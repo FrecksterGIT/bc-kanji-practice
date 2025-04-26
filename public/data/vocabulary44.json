@@ -679,18 +679,16 @@
     "word": "朱",
     "meanings": [
       { "meaning": "Vermilion", "primary": true },
-      { "meaning": "Scarlet Red", "primary": false },
-      { "meaning": "Blood", "primary": false }
+      { "meaning": "Scarlet Red", "primary": false }
     ],
     "reading": [
-      { "reading": "あけ", "primary": true },
-      { "reading": "しゅ", "primary": false }
+      { "reading": "しゅ", "primary": true },
+      { "reading": "あけ", "primary": false }
     ],
-    "reading_mnemonic": "The reading あけ is like the beginning of 開ける, which means \"to open.\" Just imagine you're opening (あけ) a person up, and out gushes a <vocabulary>vermilion</vocabulary> colored <vocabulary>blood</vocabulary>. You shouldn't open people up like that.",
+    "reading_mnemonic": "The reading can be either the on'yomi or kun'yomi reading, so you have a choice there. Since you learned the on'yomi しゅ with the kanji already, let's learn the あけ reading now.\n\nあけ sounds like the beginning of 開ける (to open). So imagine you <reading>開け</reading>る (あけ) a person up, to see what color they are inside. Turns out it's <vocabulary>vermilion</vocabulary>! Uh… you shouldn't open people up like that.\n\n朱 is mostly read しゅ, but it can also be read あけ in certain phrases, like 朱に染まる, which means \"to be covered in blood\" (literally, \"to be dyed in vermilion\").",
     "allMeanings": [
       { "meaning": "Vermilion", "primary": true },
-      { "meaning": "Scarlet Red", "primary": false },
-      { "meaning": "Blood", "primary": false }
+      { "meaning": "Scarlet Red", "primary": false }
     ]
   },
   {

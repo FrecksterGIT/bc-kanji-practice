@@ -516,7 +516,7 @@
       { "reading": "しな", "primary": true },
       { "reading": "ひん", "primary": false }
     ],
-    "reading_mnemonic": "When this kanji is used as a single-character vocabulary word, it is usually read as しな. You'll see it read as ひん more often in kanji combination words. That said, there is an expression, 品がない, which means \"unrefined\" or \"lacking taste,\" and the kanji is read ひん in this case. Here's a mnemonic to help you remember the しな reading:\n\nThink of it like a video game. The first time you see new goods there's a sheen (しな) about it. But when you bring it back to your place, the sheen is gone. Then when you go back to the store, wow! All the goods you don't already own have that sheen! Gotta buy them!",
+    "reading_mnemonic": "When this kanji is used as a single-character vocabulary word, it is usually read as しな. You'll see it read as ひん more often in kanji combination words. That said, there is an expression, 品がない, which means \"unrefined\" or \"lacking taste,\" and the kanji is read ひん in this case. Here's a mnemonic to help you remember the しな reading:\n\nThink of it like a video game. The first time you see new goods there's a <reading>sheen</reading> (しな) about it. But when you bring it back to your place, the sheen is gone. Then when you go back to the store, wow! All the goods you don't already own have that sheen! Gotta buy them!",
     "allMeanings": [
       { "meaning": "Article", "primary": true },
       { "meaning": "Item", "primary": false },

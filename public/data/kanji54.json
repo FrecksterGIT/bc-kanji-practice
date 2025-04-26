@@ -503,13 +503,13 @@
       { "reading": "あかね", "primary": true, "accepted_answer": true, "type": "kunyomi" }
     ],
     "meanings": [
-      { "meaning": "Red Dye", "primary": true, "accepted_answer": true },
-      { "meaning": "Madder", "primary": false, "accepted_answer": true }
+      { "meaning": "Rose Madder", "primary": true, "accepted_answer": true },
+      { "meaning": "Deep Red", "primary": false, "accepted_answer": true }
     ],
-    "meaning_mnemonic": "<radical>Flowers</radical> that grow in the <radical>west</radical> are colored by the sun setting so they turn bright red. That's why red flowers that grow in the west are used to make <kanji>red dye</kanji>. They're the closest to the actual color of the red sun, so they're prized by painters and other artists for their perfect color for dye.",
-    "meaning_hint": "Picture yourself sitting in the west as the red sun sets, smashing those pretty red flowers into a paste to make red dye. Your fingers get dyed red too and you crush the petals into a paste.",
-    "reading_mnemonic": "As you're smashing the flowers into <kanji>red dye</kanji>, a little girl comes up to you and points at the paste. She says, \"<reading>赤ね</reading> (あかね)?\" (That's red, right?) You look down at the red dye on your fingers and nod. She's right, it is red.",
-    "reading_hint": "Hear the little girl say あかね while pointing to the red dye. She's right. And the way she says it is so darn cute.",
+    "meaning_mnemonic": "What kind of <radical>flowers</radical> grow in the <radical>west</radical>? <kanji>Rose madder</kanji> flowers, of course. Don't know what those are? That's okay. Just know their roots are used to make dyes of a <kanji>deep red</kanji> color. Red like the rose in their name, but madder, wilder, deeper… And they grow in the west so they can take in those deep red colors of the setting sun.",
+    "meaning_hint": "Picture yourself sitting in the west as the red sun sets, smashing those little rose madder roots into a paste to make your deep red dyes. Your fingers turn red from the rose madder too.",
+    "reading_mnemonic": "As you smash the roots of the <kanji>rose madder</kanji> and stain your fingers a <kanji>deep red</kanji>, a little girl comes up to you and points. She says, \"<reading>赤ね</reading> (あかね)?\" (That's red, right?) You look down at the rose madder roots and your fingers, and nod. She's right, it is red. Deep red.",
+    "reading_hint": "Hear the little girl say あかね while pointing at the rose madder and your deep red fingers. She's right. And the way she says it is so darn cute.",
     "vocabulary": [
       { "word": "茜色", "level": 54, "meaning": "Madder Red", "reading": "あかねいろ" }
     ]

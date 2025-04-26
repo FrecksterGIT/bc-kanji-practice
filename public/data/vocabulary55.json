@@ -1002,7 +1002,7 @@
       { "meaning": "Thriving", "primary": false }
     ],
     "reading": [{ "reading": "はんじょう", "primary": true }],
-    "reading_mnemonic": "This is a jukugo word that uses the on'yomi readings of the kanji. You should be able to read this on your own.",
+    "reading_mnemonic": "This is a jukugo word that uses the on'yomi readings of the kanji. You should be able to read this on your own. Just watch out for the rendaku that changes しょう to じょう!",
     "allMeanings": [
       { "meaning": "Prosperity", "primary": true },
       { "meaning": "Flourishing", "primary": false },

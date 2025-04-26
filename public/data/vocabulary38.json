@@ -1030,7 +1030,7 @@
       { "meaning": "Domain", "primary": false }
     ],
     "reading": [{ "reading": "なわばり", "primary": true }],
-    "reading_mnemonic": "The reading is 縄 and 張る put together into one word.",
+    "reading_mnemonic": "The reading is 縄 and 張る put together into one word. Just watch out for the rendaku that changes the 張り reading to ばり. Here's a little mnemonic in case you need it:\n\nIn order to <vocabulary>rope off</vocabulary> your <vocabulary>turf</vocabulary> you go around screaming <reading>baa</reading> (ば), basically at anyone who gets near your <vocabulary>territory</vocabulary>. You walk around the perimeter of your house or yard and shout, \"This is my <vocabulary>domain</vocabulary>! Baa!\" Yeah, that'll show 'em. ",
     "allMeanings": [
       { "meaning": "Rope Off", "primary": true },
       { "meaning": "Turf", "primary": false },

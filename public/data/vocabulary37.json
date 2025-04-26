@@ -788,10 +788,16 @@
     "id": 6084,
     "level": 37,
     "word": "抵抗する",
-    "meanings": [{ "meaning": "To Resist", "primary": true }],
+    "meanings": [
+      { "meaning": "To Resist", "primary": true },
+      { "meaning": "To Withstand", "primary": false }
+    ],
     "reading": [{ "reading": "ていこうする", "primary": true }],
     "reading_mnemonic": "This is a jukugo word that uses the on'yomi readings of the kanji. You should be able to read this on your own.",
-    "allMeanings": [{ "meaning": "To Resist", "primary": true }]
+    "allMeanings": [
+      { "meaning": "To Resist", "primary": true },
+      { "meaning": "To Withstand", "primary": false }
+    ]
   },
   {
     "id": 6131,
@@ -1488,14 +1494,14 @@
     "level": 37,
     "word": "闘う",
     "meanings": [
-      { "meaning": "To Struggle", "primary": true },
-      { "meaning": "To Fight", "primary": false }
+      { "meaning": "To Fight", "primary": true },
+      { "meaning": "To Struggle", "primary": false }
     ],
     "reading": [{ "reading": "たたかう", "primary": true }],
     "reading_mnemonic": "Your neighborhood is fighting a struggle against car theft. Sadly, your car was stolen. So, you say: \"<reading>ta-ta, ca</reading>r (たたか). Ta-ta.\"",
     "allMeanings": [
-      { "meaning": "To Struggle", "primary": true },
-      { "meaning": "To Fight", "primary": false }
+      { "meaning": "To Fight", "primary": true },
+      { "meaning": "To Struggle", "primary": false }
     ]
   },
   {

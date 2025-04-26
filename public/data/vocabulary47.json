@@ -292,14 +292,14 @@
     "level": 47,
     "word": "墜落",
     "meanings": [
-      { "meaning": "Falling", "primary": true },
-      { "meaning": "Crashing", "primary": false }
+      { "meaning": "Crashing", "primary": true },
+      { "meaning": "Falling", "primary": false }
     ],
     "reading": [{ "reading": "ついらく", "primary": true }],
     "reading_mnemonic": "This is a jukugo word that uses the on'yomi readings of the kanji. You should be able to read this on your own.",
     "allMeanings": [
-      { "meaning": "Falling", "primary": true },
-      { "meaning": "Crashing", "primary": false }
+      { "meaning": "Crashing", "primary": true },
+      { "meaning": "Falling", "primary": false }
     ]
   },
   {
@@ -554,7 +554,7 @@
       { "meaning": "Paper Fan", "primary": false }
     ],
     "reading": [{ "reading": "せんす", "primary": true }],
-    "reading_mnemonic": "This is a jukugo word that uses the on'yomi readings of the kanji. You should be able to read this on your own.",
+    "reading_mnemonic": "This is a jukugo word that uses the on'yomi readings of the kanji. You've seen the す reading for 子 before, but here's a mnemonic just in case: \n\nThink about how you accidentally fanned some sweat droplets into a dude's face when you fanned yourself a little too hard with a <vocabulary>folding fan</vocabulary>, causing him to <reading>sue</reading> (す). Sued for a folding fan faux pas?! Americans really are litigious...",
     "allMeanings": [
       { "meaning": "Folding Fan", "primary": true },
       { "meaning": "Traditional Paper Fan", "primary": false },
@@ -587,7 +587,7 @@
       { "meaning": "Front Page", "primary": false }
     ],
     "reading": [{ "reading": "とびら", "primary": true }],
-    "reading_mnemonic": "Out of the <vocabulary>front door</vocabulary> <reading>jump</reading>s (飛び) <reading>Ra</reading> (ら). Every morning he can't wait to burst forth from the front door to soak in the Sun. He is the Egyptian sun god, after all.",
+    "reading_mnemonic": "Out of the <vocabulary>front door</vocabulary> jumps <reading>飛び Ra</reading> (とびら). They call him 飛び Ra because he's always flying (飛び) out the front door like that. Every morning 飛び Ra bursts forth from the front door to soak up the sun. He is the Egyptian sun god, after all.",
     "allMeanings": [
       { "meaning": "Front Door", "primary": true },
       { "meaning": "Door", "primary": false },
@@ -627,14 +627,14 @@
     "level": 47,
     "word": "掌",
     "meanings": [
-      { "meaning": "Palm Of One's Hand", "primary": true },
-      { "meaning": "Palm", "primary": false }
+      { "meaning": "Palm", "primary": true },
+      { "meaning": "Palm Of One's Hand", "primary": false }
     ],
     "reading": [{ "reading": "てのひら", "primary": true }],
-    "reading_mnemonic": "Where is the <vocabulary>palm of one's hand</vocabulary>? It's on your <reading>手のhere</reading> (てのひら). Right here. I point to my palm, and say \"hand here, is where my palm was.\"\n\nAnother noteworthy thing about this kanji is it can be read as たなごころ. You won't see it read this way as often though so we're only teaching you the main reading.",
+    "reading_mnemonic": "Where is your <vocabulary>palm</vocabulary>? It's on your <reading>手のhere</reading> (てのひら). Right here. I point to your palm and say, \"your hand here, that's where your palm is.\"\n\nAnother noteworthy thing about this kanji is it can be read as たなごころ. You won't see it read this way as often though so we're only teaching you the main reading.",
     "allMeanings": [
-      { "meaning": "Palm Of One's Hand", "primary": true },
-      { "meaning": "Palm", "primary": false }
+      { "meaning": "Palm", "primary": true },
+      { "meaning": "Palm Of One's Hand", "primary": false }
     ]
   },
   {

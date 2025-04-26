@@ -300,7 +300,7 @@
       { "word": "国債", "level": 36, "meaning": "National Debt", "reading": "こくさい" },
       { "word": "隣国", "level": 40, "meaning": "Neighboring Country", "reading": "りんごく" },
       { "word": "国柄", "level": 42, "meaning": "National Character", "reading": "くにがら" },
-      { "word": "国籍", "level": 43, "meaning": "Citizenship", "reading": "こくせき" },
+      { "word": "国籍", "level": 43, "meaning": "Nationality", "reading": "こくせき" },
       { "word": "帝国", "level": 46, "meaning": "Empire", "reading": "ていこく" },
       { "word": "帝国主義", "level": 48, "meaning": "Imperialism", "reading": "ていこくしゅぎ" },
       { "word": "鎖国", "level": 52, "meaning": "National Isolation", "reading": "さこく" },
@@ -775,7 +775,7 @@
       { "word": "有罪", "level": 20, "meaning": "Guilty", "reading": "ゆうざい" },
       { "word": "固有名詞", "level": 21, "meaning": "Proper Noun", "reading": "こゆうめいし" },
       { "word": "有り難う", "level": 22, "meaning": "Thank You", "reading": "ありがとう" },
-      { "word": "有職", "level": 23, "meaning": "Employed", "reading": "ゆうしょく" },
+      { "word": "有職", "level": 23, "meaning": "Having A Job", "reading": "ゆうしょく" },
       { "word": "有益", "level": 28, "meaning": "Beneficial", "reading": "ゆうえき" },
       { "word": "有意", "level": 35, "meaning": "Significance", "reading": "ゆうい" }
     ]

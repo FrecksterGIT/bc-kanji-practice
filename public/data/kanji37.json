@@ -664,16 +664,16 @@
     "kunyomi": [
       { "reading": "たたか", "primary": false, "accepted_answer": false, "type": "kunyomi" }
     ],
-    "meanings": [{ "meaning": "Struggle", "primary": true, "accepted_answer": true }],
-    "meaning_mnemonic": "At this <radical>gate</radical> you're trying to get some <radical>beans</radical> through, but the <radical>measurements</radical> were off and you're starting to <kanji>struggle</kanji>. No matter how you push or pull these beans, they're just too big to get through the gate.",
-    "meaning_hint": "\"I'm really struggling here, I thought you said you measured these beans?\" you ask the bean seller. \"I did! I mean, I struggled with the measurements, I'm not very good at math...\" Ugh.",
-    "reading_mnemonic": "You continue to <kanji>struggle</kanji> because you need to get these beans to the other side of the gate and into <reading>とう</reading>きょう. You usually struggle a little when people want to bring things through the gate to とうきょう, but this is ridiculous.",
-    "reading_hint": "\"How am I supposed to sell my beans if you struggle this much just to get them into とうきょう!\" the bean seller shouts. It's making you struggle more, and beans start falling on your head, ripping their way out of their sack.",
+    "meanings": [{ "meaning": "Fight", "primary": true, "accepted_answer": true }],
+    "meaning_mnemonic": "At this <radical>gate</radical> you're trying to get some <radical>beans</radical> through, but your <radical>measurements</radical> were off, leading to a big <kanji>fight</kanji>. The bean authorities at the gate always want to fight about bean sizes, and now you have to fight to get those beans through.",
+    "meaning_hint": "Imagine having to fight against the bean bureaucracy. It's so absurd! Who can say a bean is too big or too small, in this age of diversity?! Your fighting pays off though, and they let you squeeze your beans through the gate. Well fought, bean brethren. Well fought.",
+    "reading_mnemonic": "The gate you put up a <kanji>fight</kanji> at leads to <reading>とう</reading>きょう. The people of とうきょう need those beans for sustenance, and that's why you fight — for them!",
+    "reading_hint": "How are you supposed to get your beans into とうきょう if a fight breaks out at the gate every time? What a struggle. Fortunately those bean-counting bureaucrats of とうきょう were no match for your fight.",
     "vocabulary": [
-      { "word": "闘う", "level": 37, "meaning": "To Struggle", "reading": "たたかう" },
+      { "word": "闘う", "level": 37, "meaning": "To Fight", "reading": "たたかう" },
       { "word": "戦闘", "level": 37, "meaning": "Battle", "reading": "せんとう" },
       { "word": "闘志", "level": 37, "meaning": "Fighting Spirit", "reading": "とうし" },
-      { "word": "敢闘", "level": 57, "meaning": "Fight Bravely", "reading": "かんとう" }
+      { "word": "敢闘", "level": 57, "meaning": "Fighting Bravely", "reading": "かんとう" }
     ]
   },
   {

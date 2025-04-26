@@ -17,7 +17,7 @@ export const Mark: FC<MarkProps> = ({ level, meaning, word, reading }) => {
 
   return (
     <button
-      className="bg-purple-400 text-gray-700 px-1 rounded-sm mx-1 text-xl relative cursor-pointer flex items-end gap-2 text-nowrap"
+      className="bg-purple-500 text-gray-800  px-1 rounded-sm mx-1 text-xl relative cursor-pointer flex items-end gap-2 text-nowrap"
       onClick={() => speak(reading)}
       ref={markRef}
     >

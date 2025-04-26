@@ -169,16 +169,10 @@
     "id": 7330,
     "level": 49,
     "word": "俗語",
-    "meanings": [
-      { "meaning": "Colloquialism", "primary": true },
-      { "meaning": "Colloquial Language", "primary": false }
-    ],
+    "meanings": [{ "meaning": "Slang", "primary": true }],
     "reading": [{ "reading": "ぞくご", "primary": true }],
     "reading_mnemonic": "This is a jukugo word that uses the on'yomi readings of the kanji. You should be able to read this on your own.",
-    "allMeanings": [
-      { "meaning": "Colloquialism", "primary": true },
-      { "meaning": "Colloquial Language", "primary": false }
-    ]
+    "allMeanings": [{ "meaning": "Slang", "primary": true }]
   },
   {
     "id": 9285,
@@ -603,10 +597,16 @@
     "id": 7281,
     "level": 49,
     "word": "悟る",
-    "meanings": [{ "meaning": "To Realize", "primary": true }],
+    "meanings": [
+      { "meaning": "To Realize", "primary": true },
+      { "meaning": "To Attain Enlightenment", "primary": false }
+    ],
     "reading": [{ "reading": "さとる", "primary": true }],
-    "reading_mnemonic": "You realized something so amazing that you couldn't believe it. That comprehension, wow! The realization was so big that you <reading>sat</reading> (さと) down in disbelief. If you didn't you would have fallen on the ground.",
-    "allMeanings": [{ "meaning": "To Realize", "primary": true }]
+    "reading_mnemonic": "You just realized something so amazing that you can't believe it. That realization, wow! You were able <vocabulary>to realize</vocabulary> something so big that you <reading>sat</reading> (さと) down in disbelief. If you didn't you would have fallen on the ground.",
+    "allMeanings": [
+      { "meaning": "To Realize", "primary": true },
+      { "meaning": "To Attain Enlightenment", "primary": false }
+    ]
   },
   {
     "id": 8890,

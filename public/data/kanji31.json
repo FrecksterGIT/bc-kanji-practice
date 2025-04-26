@@ -591,10 +591,7 @@
     "kanji": "豪",
     "onyomi": [{ "reading": "ごう", "primary": true, "accepted_answer": true, "type": "onyomi" }],
     "kunyomi": [],
-    "meanings": [
-      { "meaning": "Exceptional", "primary": true, "accepted_answer": true },
-      { "meaning": "Luxurious", "primary": false, "accepted_answer": true }
-    ],
+    "meanings": [{ "meaning": "Exceptional", "primary": true, "accepted_answer": true }],
     "meaning_mnemonic": "You put a <radical>lid</radical> on a dish you're cooking, made up of the <radical>mouth</radical>s and <radical>forehead</radical>s of a <radical>pig</radical>. This is truly an <kanji>exceptional</kanji> dish you are cooking up.",
     "meaning_hint": "Mix those pig mouths and foreheads in your pot. Think of how exceptional your soup looks.",
     "reading_mnemonic": "<kanji>Exceptional</kanji> pig mouth forehead soup is a favorite of Grandpa <reading>ごう</reading>いち. You see him sniffing around your window, then he knocks and waves.",

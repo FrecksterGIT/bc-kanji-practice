@@ -961,7 +961,7 @@
       { "meaning": "Disease", "primary": false }
     ],
     "reading": [{ "reading": "しっぺい", "primary": true }],
-    "reading_mnemonic": "This is a jukugo word that uses the on'yomi readings of the kanji. You didn't learn this reading for 病 yet, so here's a mnemonic to help you:\n\nIf you don't treat an <vocabulary>illness</vocabulary> right away you'll end up <reading>pay</reading>ing (ぺい) with your life. And if you don't die, you'll still have to pay a lot for doctor and hospital fees. Yuck.",
+    "reading_mnemonic": "This is a jukugo word that uses on'yomi readings, but you haven't seen the へい reading for 病 yet. In fact, this is pretty much the only word it appears in, and on top of that it gets rendaku'd. So here's a mnemonic to help you out:\n\nIf you don't treat an <vocabulary>illness</vocabulary> right away, you might <reading>pay</reading> (ぺい) with your life. And if you don't die, you'll still have to pay a lot for doctor and hospital fees. Yuck.",
     "allMeanings": [
       { "meaning": "Illness", "primary": true },
       { "meaning": "Disease", "primary": false }
@@ -1189,14 +1189,14 @@
     "word": "茜色",
     "meanings": [
       { "meaning": "Madder Red", "primary": true },
-      { "meaning": "Dark Red", "primary": false },
+      { "meaning": "Deep Red", "primary": false },
       { "meaning": "Crimson", "primary": false }
     ],
     "reading": [{ "reading": "あかねいろ", "primary": true }],
     "reading_mnemonic": "The readings are the same as the ones you learned with the kanji.",
     "allMeanings": [
       { "meaning": "Madder Red", "primary": true },
-      { "meaning": "Dark Red", "primary": false },
+      { "meaning": "Deep Red", "primary": false },
       { "meaning": "Crimson", "primary": false }
     ]
   },

@@ -1616,7 +1616,7 @@
       { "meaning": "Good Luck", "primary": false }
     ],
     "reading": [{ "reading": "がんばれ", "primary": true }],
-    "reading_mnemonic": "The reading comes from 頑張る.",
+    "reading_mnemonic": "The reading comes from 頑張る. Just watch out for that rendaku on 張る! You've seen it before, but here's a mnemonic in case you need a refresher:\n\nRemember how when it's time to 頑張る (to persevere), you always scream \"baa\"? Not sure why, but it's a great motivator for you. So you do the same when you cheer for others. When you tell them <vocabulary>Do your best</vocabulary>, you also scream <reading>baa</reading> (ば) at them. When you tell them <vocabulary>Hang in there</vocabulary>, you scream \"baa!\" If it makes you persevere, it must work the same for others, right? Baa!",
     "allMeanings": [
       { "meaning": "Do Your Best", "primary": true },
       { "meaning": "Hang In There", "primary": false },

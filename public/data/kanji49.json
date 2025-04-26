@@ -11,7 +11,7 @@
     "reading_mnemonic": "This <kanji>vulgar</kanji> leader leads his Boso<reading>zoku</reading> (ぞく) bike gang through Vulgar Valley, patrolling the area and spreading vulgarity as he goes.",
     "reading_hint": "Hear the motorcycles rev and purr as they carouse the Vulgar Valley. Hear the leader screaming vulgar things as he and his Bosozoku bike gang ride all around.",
     "vocabulary": [
-      { "word": "俗語", "level": 49, "meaning": "Colloquialism", "reading": "ぞくご" },
+      { "word": "俗語", "level": 49, "meaning": "Slang", "reading": "ぞくご" },
       { "word": "民俗", "level": 49, "meaning": "Folk Customs", "reading": "みんぞく" }
     ]
   },
@@ -230,11 +230,11 @@
     "kunyomi": [
       { "reading": "さと", "primary": false, "accepted_answer": false, "type": "kunyomi" }
     ],
-    "meanings": [{ "meaning": "Comprehension", "primary": true, "accepted_answer": true }],
-    "meaning_mnemonic": "Your <radical>soul</radical> connects to <radical>five</radical> different <radical>mouths</radical>, enhancing your <kanji>comprehension</kanji>. You can easily comprehend what each of those souls belonging to those mouths wants and feels deep down.",
-    "meaning_hint": "Imagine being able to comprehend everything about not one, but five other people. Deep down you can feel everything they think and feel.",
-    "reading_mnemonic": "Your <kanji>comprehension</kanji> is the strongest with the fifth mouth, belonging to <reading>Go</reading>dzilla (ご). You finally get why he wants to destroy buildings and cities.",
-    "reading_hint": "Your comprehension of Godzilla reveals so much: he's warning the Japanese people about the use of new technology and warfare and experimentation. He just wants everyone to be able to comprehend these new, seemingly incomprehensible things!",
+    "meanings": [{ "meaning": "Realize", "primary": true, "accepted_answer": true }],
+    "meaning_mnemonic": "Your <radical>soul</radical> connects to <radical>five</radical> different <radical>mouths</radical>, allowing you to <kanji>realize</kanji> something. You can realize profound truths about the world with these five mouths speaking to your soul.",
+    "meaning_hint": "Maybe the five mouths are your five senses, \"speaking\" information to your soul so you can realize and perceive things about the world. Whoa, dude… ",
+    "reading_mnemonic": "Right now those five mouths are helping you to <kanji>realize</kanji> something about <reading>Go</reading>dzilla (ご). First you hear Godzilla, then you see him, then you smell him, then you touch him. Finally you taste Godzilla. Now you've realized exactly what kind of thing he is. You truly know Godzilla.",
+    "reading_hint": "You now realize why Godzilla destroys all those buildings: he's warning the Japanese people about the use of new technology and warfare and experimentation. He just wants everyone to realize what the consequences of these new things could be!",
     "vocabulary": [
       { "word": "悟る", "level": 49, "meaning": "To Realize", "reading": "さとる" },
       { "word": "覚悟", "level": 49, "meaning": "Mental Readiness", "reading": "かくご" }

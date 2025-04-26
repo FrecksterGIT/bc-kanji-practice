@@ -26,7 +26,11 @@ const MarkButton: FC = () => {
   }, [isMarked, item, setMarkedItem]);
 
   return (
-    <button className="cursor-pointer" onClick={handleMark} title={isMarked ? 'Unmark item' : 'Mark item'}>
+    <button
+      className="cursor-pointer"
+      onClick={handleMark}
+      title={isMarked ? 'Unmark item' : 'Mark item'}
+    >
       {isMarked ? <BookmarkFilled /> : <BookmarkEmpty />}
     </button>
   );

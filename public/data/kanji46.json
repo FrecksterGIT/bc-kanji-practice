@@ -514,9 +514,9 @@
     "kunyomi": [{ "reading": "ね", "primary": false, "accepted_answer": false, "type": "kunyomi" }],
     "meanings": [{ "meaning": "Tempering", "primary": true, "accepted_answer": true }],
     "meaning_mnemonic": "The <radical>gold</radical> from the <radical>east</radical> needs <kanji>tempering</kanji> before it can be sold. The gold from the east is good, it just needs some tempering before it's entirely presentable. You know, tempering like you'd do in a forge.",
-    "meaning_hint": "Imagine tempering this gold from the east. You're heat treating the gold when you're tempering it, so feel the heat from the fire on your face and arms.",
-    "reading_mnemonic": "The smithy where you’re doing the <kanji>tempering</kanji> is pretty fancy, but it’s just a <reading>ren</reading>tal (れん). You haven't sold enough gold to own a smithy as nice as this one yet, so for now, you rent one. It is pretty swanky though, even for a rental.",
-    "reading_hint": "Imagine yourself tempering your gold with this shabby rental forge. It keeps flaring up and almost burning off your eyebrows every time you try to work it. This shabby rental forge…",
+    "meaning_hint": "Imagine tempering this gold from the east. You're heat-treating the gold when you're tempering it, so feel the heat from the fire on your face and arms.",
+    "reading_mnemonic": "The smithy where you're doing the <kanji>tempering</kanji> is just a <reading>ren</reading>tal (れん). You need a rental for your tempering because you haven't sold enough gold to own your own smithy yet. It's seen its fair share of tempering, so it's a pretty shabby rental…",
+    "reading_hint": "Imagine yourself tempering your gold with this shabby rental forge. It keeps flaring up and almost burning off your eyebrows every time you try to work it. It's tough doing tempering with a rental! ",
     "vocabulary": [
       { "word": "鍛錬", "level": 46, "meaning": "Tempering", "reading": "たんれん" },
       { "word": "錬金術", "level": 46, "meaning": "Alchemy", "reading": "れんきんじゅつ" }
@@ -636,7 +636,7 @@
     "id": 1941,
     "level": 46,
     "kanji": "墨",
-    "onyomi": [],
+    "onyomi": [{ "reading": "ぼく", "primary": false, "accepted_answer": false, "type": "onyomi" }],
     "kunyomi": [{ "reading": "すみ", "primary": true, "accepted_answer": true, "type": "kunyomi" }],
     "meanings": [
       { "meaning": "Black Ink", "primary": true, "accepted_answer": true },

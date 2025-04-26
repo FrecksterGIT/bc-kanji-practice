@@ -564,10 +564,16 @@
     "id": 5712,
     "level": 33,
     "word": "散らかす",
-    "meanings": [{ "meaning": "To Scatter", "primary": true }],
+    "meanings": [
+      { "meaning": "To Scatter", "primary": true },
+      { "meaning": "To Make A Mess", "primary": false }
+    ],
     "reading": [{ "reading": "ちらかす", "primary": true }],
     "reading_mnemonic": "The reading of the 散 comes from 散る. So, go ahead and scatter more memories around your brain, you got this already.",
-    "allMeanings": [{ "meaning": "To Scatter", "primary": true }]
+    "allMeanings": [
+      { "meaning": "To Scatter", "primary": true },
+      { "meaning": "To Make A Mess", "primary": false }
+    ]
   },
   {
     "id": 7775,
@@ -780,7 +786,7 @@
     "word": "灰皿",
     "meanings": [{ "meaning": "Ashtray", "primary": true }],
     "reading": [{ "reading": "はいざら", "primary": true }],
-    "reading_mnemonic": "The reading is the two vocab words, 灰 and 皿, put together.",
+    "reading_mnemonic": "The reading is the two vocab words, <ja>灰</ja> and <ja>皿</ja>, put together. Just keep in mind that 皿 gets rendaku'd to <ja>ざら</ja>.",
     "allMeanings": [{ "meaning": "Ashtray", "primary": true }]
   },
   {

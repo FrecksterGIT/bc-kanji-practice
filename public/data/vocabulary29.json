@@ -913,7 +913,7 @@
       { "meaning": "Tokyo", "primary": false }
     ],
     "reading": [{ "reading": "えど", "primary": true }],
-    "reading_mnemonic": "The readings are the ones you learned with the kanji. Of course, it will be easy if you know the word <vocabulary>Edo</vocabulary> already.",
+    "reading_mnemonic": "The readings are the ones you learned with the kanji. Just watch out for that rendaku on 戸, which changes the reading to ど. Of course, it will be easy if you already know the word <vocabulary>Edo</vocabulary>!",
     "allMeanings": [
       { "meaning": "Edo", "primary": true },
       { "meaning": "Tokyo", "primary": false }
@@ -1318,16 +1318,14 @@
     "level": 29,
     "word": "緊張",
     "meanings": [
-      { "meaning": "Stress", "primary": true },
-      { "meaning": "Tension", "primary": false },
-      { "meaning": "Nervous", "primary": false }
+      { "meaning": "Nervousness", "primary": true },
+      { "meaning": "Tension", "primary": false }
     ],
     "reading": [{ "reading": "きんちょう", "primary": true }],
     "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.",
     "allMeanings": [
-      { "meaning": "Stress", "primary": true },
-      { "meaning": "Tension", "primary": false },
-      { "meaning": "Nervous", "primary": false }
+      { "meaning": "Nervousness", "primary": true },
+      { "meaning": "Tension", "primary": false }
     ]
   },
   {
@@ -1548,13 +1546,15 @@
     "word": "診断",
     "meanings": [
       { "meaning": "Diagnosis", "primary": true },
-      { "meaning": "Diagnose", "primary": false }
+      { "meaning": "Diagnosing", "primary": false },
+      { "meaning": "Assessment", "primary": false }
     ],
     "reading": [{ "reading": "しんだん", "primary": true }],
     "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.",
     "allMeanings": [
       { "meaning": "Diagnosis", "primary": true },
-      { "meaning": "Diagnose", "primary": false }
+      { "meaning": "Diagnosing", "primary": false },
+      { "meaning": "Assessment", "primary": false }
     ]
   },
   {

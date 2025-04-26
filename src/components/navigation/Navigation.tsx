@@ -38,7 +38,7 @@ const Navigation: FC = () => {
           <NavLink
             to="kanji"
             className={({ isActive }) =>
-              `px-3 py-2 rounded hover:bg-pink-400 ${isActive ? 'bg-pink-400' : ''}`
+              `px-3 py-2 rounded hover:bg-pink-500 ${isActive ? 'bg-pink-500' : ''}`
             }
           >
             Kanji
@@ -46,7 +46,7 @@ const Navigation: FC = () => {
           <NavLink
             to="vocabulary"
             className={({ isActive }) =>
-              `px-3 py-2 rounded hover:bg-purple-400 ${isActive ? 'bg-purple-400' : ''}`
+              `px-3 py-2 rounded hover:bg-purple-500 ${isActive ? 'bg-purple-500' : ''}`
             }
           >
             Vocabulary
@@ -71,7 +71,7 @@ const Navigation: FC = () => {
           <NavLink
             to="marked"
             className={({ isActive }) =>
-              `px-3 py-2 rounded hover:bg-gradient-to-br from-pink-400 to-purple-400 ${isActive ? 'bg-gradient-to-br' : ''}`
+              `px-3 py-2 rounded hover:bg-gradient-to-br from-pink-500 to-purple-500 ${isActive ? 'bg-gradient-to-br' : ''}`
             }
           >
             Marked Items <span className="text-xs">({markedItems.length})</span>

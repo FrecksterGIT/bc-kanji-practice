@@ -55,18 +55,16 @@
     "level": 30,
     "word": "一覧",
     "meanings": [
-      { "meaning": "A Look", "primary": true },
-      { "meaning": "A Glance", "primary": false },
-      { "meaning": "List", "primary": false },
-      { "meaning": "Table", "primary": false }
+      { "meaning": "A List", "primary": true },
+      { "meaning": "An Overview", "primary": false },
+      { "meaning": "Looking Over", "primary": false }
     ],
     "reading": [{ "reading": "いちらん", "primary": true }],
     "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.",
     "allMeanings": [
-      { "meaning": "A Look", "primary": true },
-      { "meaning": "A Glance", "primary": false },
-      { "meaning": "List", "primary": false },
-      { "meaning": "Table", "primary": false }
+      { "meaning": "A List", "primary": true },
+      { "meaning": "An Overview", "primary": false },
+      { "meaning": "Looking Over", "primary": false }
     ]
   },
   {
@@ -1151,15 +1149,13 @@
     "word": "絶える",
     "meanings": [
       { "meaning": "To Die Out", "primary": true },
-      { "meaning": "To End", "primary": false },
-      { "meaning": "To Be Cut Off", "primary": false }
+      { "meaning": "To Come To An End", "primary": false }
     ],
     "reading": [{ "reading": "たえる", "primary": true }],
     "reading_mnemonic": "The reading can come from 絶つ, so as long as you know that word you know this one as well.",
     "allMeanings": [
       { "meaning": "To Die Out", "primary": true },
-      { "meaning": "To End", "primary": false },
-      { "meaning": "To Be Cut Off", "primary": false }
+      { "meaning": "To Come To An End", "primary": false }
     ]
   },
   {
@@ -1171,7 +1167,7 @@
       { "meaning": "Japanese Prime Minister", "primary": false }
     ],
     "reading": [{ "reading": "そうり", "primary": true }],
-    "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.",
+    "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well. It'll also help if you remember the longer version of this word, 総理大臣.",
     "allMeanings": [
       { "meaning": "Prime Minister", "primary": true },
       { "meaning": "Japanese Prime Minister", "primary": false }
@@ -1186,7 +1182,7 @@
       { "meaning": "Japanese Prime Minister", "primary": false }
     ],
     "reading": [{ "reading": "そうりだいじん", "primary": true }],
-    "reading_mnemonic": "This is a jukugo word that uses the on'yomi readings of the kanji. You should be able to read this on your own. It's also a combination of two words you've learned before, 総理 and 大臣.",
+    "reading_mnemonic": "This is a jukugo word that uses the on'yomi readings of the kanji. You should be able to read this on your own. It also contains a vocab word you've learned recently, 大臣!",
     "allMeanings": [
       { "meaning": "Prime Minister", "primary": true },
       { "meaning": "Japanese Prime Minister", "primary": false }

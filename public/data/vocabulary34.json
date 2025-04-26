@@ -627,14 +627,14 @@
     "level": 34,
     "word": "歓迎",
     "meanings": [
-      { "meaning": "A Welcome", "primary": true },
-      { "meaning": "Welcome", "primary": false }
+      { "meaning": "Welcome", "primary": true },
+      { "meaning": "Welcoming", "primary": false }
     ],
     "reading": [{ "reading": "かんげい", "primary": true }],
     "reading_mnemonic": "This is a jukugo word that uses the on'yomi readings of the kanji. You should be able to read this on your own.",
     "allMeanings": [
-      { "meaning": "A Welcome", "primary": true },
-      { "meaning": "Welcome", "primary": false }
+      { "meaning": "Welcome", "primary": true },
+      { "meaning": "Welcoming", "primary": false }
     ]
   },
   {
@@ -1176,11 +1176,8 @@
       { "meaning": "Groin", "primary": false },
       { "meaning": "Fork", "primary": false }
     ],
-    "reading": [
-      { "reading": "また", "primary": true },
-      { "reading": "もも", "primary": false }
-    ],
-    "reading_mnemonic": "You learned the on’yomi for this kanji, but like many kanji it takes the kun’yomi when used by itself. You haven't learned the kun’yomi yet, so here’s a mnemonic to help you: \n\nYou’ve spilled something on your <vocabulary>crotch</vocabulary> again (また, get it?) but your pants are so stained at this point that it doesn’t even <reading>matter</reading> (また).",
+    "reading": [{ "reading": "また", "primary": true }],
+    "reading_mnemonic": "You learned the on'yomi for this kanji, but like many kanji it takes the kun'yomi when used by itself. You haven't learned the kun'yomi yet, so here's a mnemonic to help you:\n\nYou've spilled something on your <vocabulary>crotch</vocabulary> again, but your pants are so stained at this point that it doesn't even <reading>matter</reading> (また).",
     "allMeanings": [
       { "meaning": "Crotch", "primary": true },
       { "meaning": "Groin", "primary": false },

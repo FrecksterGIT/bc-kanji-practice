@@ -206,10 +206,16 @@
     "id": 6671,
     "level": 43,
     "word": "国籍",
-    "meanings": [{ "meaning": "Citizenship", "primary": true }],
+    "meanings": [
+      { "meaning": "Nationality", "primary": true },
+      { "meaning": "Citizenship", "primary": false }
+    ],
     "reading": [{ "reading": "こくせき", "primary": true }],
     "reading_mnemonic": "This is a jukugo word that uses the on'yomi readings of the kanji. You should be able to read this on your own.",
-    "allMeanings": [{ "meaning": "Citizenship", "primary": true }]
+    "allMeanings": [
+      { "meaning": "Nationality", "primary": true },
+      { "meaning": "Citizenship", "primary": false }
+    ]
   },
   {
     "id": 6695,
@@ -292,7 +298,7 @@
       { "meaning": "To Be Bossy", "primary": false }
     ],
     "reading": [{ "reading": "いばる", "primary": true }],
-    "reading_mnemonic": "The reading is from 威 and 張る.",
+    "reading_mnemonic": "The reading is from 威 and 張る. Just watch out for the rendaku that changes the 張る reading to ばる. Here's a little mnemonic to help with that:\n\nIf you're trying <vocabulary>to act big</vocabulary>, you should shout <reading>baa</reading> (ば) at people like a sheep. Why? Because sheep are known <vocabulary>to be arrogant</vocabulary>. Their \"baa\" is like an arrogant little laugh, don't you think? Baa, baa! That's why it's good to copy them and say \"baa\" when you want to act big and push people around.",
     "allMeanings": [
       { "meaning": "To Act Big", "primary": true },
       { "meaning": "To Be Arrogant", "primary": false },
@@ -329,7 +335,7 @@
     "word": "封建主義",
     "meanings": [{ "meaning": "Feudalism", "primary": true }],
     "reading": [{ "reading": "ほうけんしゅぎ", "primary": true }],
-    "reading_mnemonic": "This is a jukugo word that uses the on'yomi readings of the kanji. You should be able to read this on your own.",
+    "reading_mnemonic": "This is a jukugo word that uses the on'yomi readings of the kanji. You haven't seen the ほう reading for 封 yet though, so here's a mnemonic to help you out:\n\nEverything belonged to a feudal lord under <vocabulary>feudalism</vocabulary>, even your <reading>ho</reading>me (ほう). People didn't have private property in those days, so you could only live in a home if a feudal lord gave you permission to. I guess, in a way, that means under feudalism you were always sharing your home. With a feudal lord. Aww, how nice!",
     "allMeanings": [{ "meaning": "Feudalism", "primary": true }]
   },
   {

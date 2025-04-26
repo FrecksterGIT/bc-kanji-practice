@@ -43,14 +43,14 @@
     "level": 31,
     "word": "主催する",
     "meanings": [
-      { "meaning": "To Sponsor", "primary": true },
-      { "meaning": "To Promote", "primary": false }
+      { "meaning": "To Host", "primary": true },
+      { "meaning": "To Sponsor", "primary": false }
     ],
     "reading": [{ "reading": "しゅさいする", "primary": true }],
     "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well. It will help to know the word 主催 already as well.",
     "allMeanings": [
-      { "meaning": "To Sponsor", "primary": true },
-      { "meaning": "To Promote", "primary": false }
+      { "meaning": "To Host", "primary": true },
+      { "meaning": "To Sponsor", "primary": false }
     ]
   },
   {
@@ -627,16 +627,10 @@
     "id": 5495,
     "level": 31,
     "word": "徳川",
-    "meanings": [
-      { "meaning": "Tokugawa", "primary": true },
-      { "meaning": "Tokugawa Shogun", "primary": false }
-    ],
+    "meanings": [{ "meaning": "Tokugawa", "primary": true }],
     "reading": [{ "reading": "とくがわ", "primary": true }],
-    "reading_mnemonic": "The readings are 徳 and the vocab 川 put together into one word. Once you can read this, you'll know the meaning too, so focus on the reading for this one.",
-    "allMeanings": [
-      { "meaning": "Tokugawa", "primary": true },
-      { "meaning": "Tokugawa Shogun", "primary": false }
-    ]
+    "reading_mnemonic": "The readings are 徳 and the vocab 川 put together into one word. Once you can read this, you'll know the meaning too, so focus on the reading for this one. Just watch out for the rendaku that changes かわ to がわ!",
+    "allMeanings": [{ "meaning": "Tokugawa", "primary": true }]
   },
   {
     "id": 5403,
@@ -1083,16 +1077,14 @@
     "level": 31,
     "word": "緊張する",
     "meanings": [
-      { "meaning": "To Stress", "primary": true },
-      { "meaning": "To Stress Out", "primary": false },
-      { "meaning": "To Be Nervous", "primary": false }
+      { "meaning": "To Feel Nervous", "primary": true },
+      { "meaning": "To Get Tense", "primary": false }
     ],
     "reading": [{ "reading": "きんちょうする", "primary": true }],
     "reading_mnemonic": "This is a jukugo word, which usually means on'yomi readings from the kanji. If you know the readings of your kanji you'll know how to read this as well.",
     "allMeanings": [
-      { "meaning": "To Stress", "primary": true },
-      { "meaning": "To Stress Out", "primary": false },
-      { "meaning": "To Be Nervous", "primary": false }
+      { "meaning": "To Feel Nervous", "primary": true },
+      { "meaning": "To Get Tense", "primary": false }
     ]
   },
   {
@@ -1507,13 +1499,13 @@
     "word": "鼻詰まり",
     "meanings": [
       { "meaning": "Stuffy Nose", "primary": true },
-      { "meaning": "Blocked Nose", "primary": false }
+      { "meaning": "Nasal Congestion", "primary": false }
     ],
     "reading": [{ "reading": "はなづまり", "primary": true }],
     "reading_mnemonic": "The reading is 鼻 and 詰まる put together. the 詰まり is rendaku'd, probably because you're trying to say this word with a stuffy nose.",
     "allMeanings": [
       { "meaning": "Stuffy Nose", "primary": true },
-      { "meaning": "Blocked Nose", "primary": false }
+      { "meaning": "Nasal Congestion", "primary": false }
     ]
   }
 ]

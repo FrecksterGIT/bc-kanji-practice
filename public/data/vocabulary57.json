@@ -95,7 +95,7 @@
       { "meaning": "How Often", "primary": false }
     ],
     "reading": [{ "reading": "なんべん", "primary": true }],
-    "reading_mnemonic": "This is a jukugo word that uses the on'yomi readings of the kanji. You should be able to read this on your own. Just watch out because へん becomes べん here.",
+    "reading_mnemonic": "This is a jukugo word with an unusual reading, where the first kanji uses kun'yomi and the second uses on'yomi. You've seen these readings before, so you should be able to read this. Just watch out, because へん becomes べん here!",
     "allMeanings": [
       { "meaning": "How Many Times", "primary": true },
       { "meaning": "How Often", "primary": false }
@@ -249,16 +249,16 @@
     "level": 57,
     "word": "堕落",
     "meanings": [
-      { "meaning": "Corruption", "primary": true },
-      { "meaning": "Depravity", "primary": false },
-      { "meaning": "Degradation", "primary": false }
+      { "meaning": "Depravity", "primary": true },
+      { "meaning": "Degradation", "primary": false },
+      { "meaning": "Decadence", "primary": false }
     ],
     "reading": [{ "reading": "だらく", "primary": true }],
     "reading_mnemonic": "This is a jukugo word that uses the on'yomi readings of the kanji. You should be able to read this on your own.",
     "allMeanings": [
-      { "meaning": "Corruption", "primary": true },
-      { "meaning": "Depravity", "primary": false },
-      { "meaning": "Degradation", "primary": false }
+      { "meaning": "Depravity", "primary": true },
+      { "meaning": "Degradation", "primary": false },
+      { "meaning": "Decadence", "primary": false }
     ]
   },
   {
@@ -548,10 +548,10 @@
     "id": 8369,
     "level": 57,
     "word": "敢闘",
-    "meanings": [{ "meaning": "Fight Bravely", "primary": true }],
+    "meanings": [{ "meaning": "Fighting Bravely", "primary": true }],
     "reading": [{ "reading": "かんとう", "primary": true }],
     "reading_mnemonic": "This is a jukugo word that uses the on'yomi readings of the kanji. You should be able to read this on your own.",
-    "allMeanings": [{ "meaning": "Fight Bravely", "primary": true }]
+    "allMeanings": [{ "meaning": "Fighting Bravely", "primary": true }]
   },
   {
     "id": 8371,

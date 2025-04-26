@@ -469,11 +469,11 @@
     "kanji": "績",
     "onyomi": [{ "reading": "せき", "primary": true, "accepted_answer": true, "type": "onyomi" }],
     "kunyomi": [],
-    "meanings": [{ "meaning": "Exploits", "primary": true, "accepted_answer": true }],
-    "meaning_mnemonic": "Taking a piece of <radical>thread</radical> you <radical>blame</radical> the <kanji>exploits</kanji> of your past on poor judgment. You tie this thread around your finger to remind you of all the exploits you accomplished in your day. Most of them weren’t actually on purpose, so you blame them on poor judgment and accident.",
-    "meaning_hint": "Think up what exploits you accomplished. What sort of things might you have done, but not quite on purpose? Think about how it feels to be exalted for such exploits that were but mere accidents.",
-    "reading_mnemonic": "One of your <kanji>exploits</kanji> was when you got dressed in the dark and were wearing funny clothes and everyone thought that it was <reading>sexy</reading> (せき). The newspapers and fashion agencies couldn’t get enough of your sexy style.",
-    "reading_hint": "Imagine setting this sexy fashion trend on accident. Imagine what you were wearing when you got dressed in the dark. Probably a pretty strange, mismatched outfit.",
+    "meanings": [{ "meaning": "Achievement", "primary": true, "accepted_answer": true }],
+    "meaning_mnemonic": "Tie a <radical>thread</radical> to yourself whenever you take the <radical>blame</radical> for someone. This marks your <kanji>achievement</kanji>. Your achievement in blame-taking, I guess. Isn't it a great achievement to selflessly shield others from blame? Of course it is! So these little blame-threads are symbols of your achievement.",
+    "meaning_hint": "Pretty soon your fingers, toes, and whole body are covered in threads, for all your innumerable achievements. Think back on those achievements, on all those times you took the blame for someone. You're just so, so selfless. What a good person you are. Ahh, it feels good to be good.",
+    "reading_mnemonic": "But your latest <kanji>achievement</kanji> is covering yourself in these threads and everyone thinking it's <reading>sexy</reading> (せき). The newspapers and fashion mags can't get enough of your sexy style. See? If you're a good person, people will think your achievements are sexy.",
+    "reading_hint": "Imagine setting this sexy thread-based fashion trend. You're named the sexiest person alive and everyone dresses like spools of thread to copy you. But the achievements to match? Well, only you have those.",
     "vocabulary": [
       { "word": "功績", "level": 32, "meaning": "Achievement", "reading": "こうせき" },
       { "word": "成績", "level": 32, "meaning": "Grades", "reading": "せいせき" },
@@ -634,7 +634,7 @@
     "reading_hint": "You're really happy this cat pirate welcomes gay people aboard. Whether that's because you're gay or just because you're a baseline decent human being is up to you.\n\nAlso if you aren't the kind of person who would welcome gay people onto your cat pirate ship, you should just leave nyaow.",
     "vocabulary": [
       { "word": "迎える", "level": 32, "meaning": "To Pick Someone Up", "reading": "むかえる" },
-      { "word": "歓迎", "level": 34, "meaning": "A Welcome", "reading": "かんげい" },
+      { "word": "歓迎", "level": 34, "meaning": "Welcome", "reading": "かんげい" },
       { "word": "迎え", "level": 34, "meaning": "Meeting", "reading": "むかえ" },
       { "word": "迎賓館", "level": 57, "meaning": "Reception Hall", "reading": "げいひんかん" }
     ]

@@ -448,13 +448,15 @@
     "word": "化かす",
     "meanings": [
       { "meaning": "To Bewitch", "primary": true },
-      { "meaning": "To Enchant", "primary": false }
+      { "meaning": "To Trick", "primary": false },
+      { "meaning": "To Deceive", "primary": false }
     ],
     "reading": [{ "reading": "ばかす", "primary": true }],
     "reading_mnemonic": "The reading is the same as 化ける, so make sure you know that word and you'll be able to learn this word's reading as well.",
     "allMeanings": [
       { "meaning": "To Bewitch", "primary": true },
-      { "meaning": "To Enchant", "primary": false }
+      { "meaning": "To Trick", "primary": false },
+      { "meaning": "To Deceive", "primary": false }
     ]
   },
   {

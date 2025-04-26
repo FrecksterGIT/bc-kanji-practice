@@ -415,10 +415,10 @@
     "onyomi": [{ "reading": "かん", "primary": true, "accepted_answer": true, "type": "onyomi" }],
     "kunyomi": [],
     "meanings": [{ "meaning": "Simplicity", "primary": true, "accepted_answer": true }],
-    "meaning_mnemonic": "Keeping at a <radical>bamboo</radical> <radical>interval</radical> is the definition of <kanji>simplicity</kanji>. ",
-    "meaning_hint": "Just one bamboo wide, over and over. That is simplicity.",
-    "reading_mnemonic": "<kanji>Simplicity</kanji> is what Genghis <reading>Khan</reading> (かん) always demanded. Everything he decided was based on simplicity.",
-    "reading_hint": "Simplicity is how he took over so much of the world. If he didn't stick to simplicity, there's no way he'd have been able to do what he did. ",
+    "meaning_mnemonic": "You line up stalks of <radical>bamboo</radical> with an equal <radical>interval</radical> between each one. This pattern creates a sense of <kanji>simplicity</kanji>. ",
+    "meaning_hint": "Bamboo, interval, bamboo, interval, bamboo… Almost like a binary rhythm: 1, 0, 1, 0, 1. Now that's simplicity. It doesn't get simpler than that!",
+    "reading_mnemonic": "That kind of <kanji>simplicity</kanji> is what Genghis <reading>Khan</reading> (かん) always demanded. Everything he decided was based on simplicity.",
+    "reading_hint": "Simplicity is how he took over the world. Attack or don't attack? Boom, simple. If he hadn't stuck to simplicity, he wouldn't have been able to do what he did. Complex thoughts just get in the way of expansionist ambitions, you know?",
     "vocabulary": [
       { "word": "簡易", "level": 33, "meaning": "Simple", "reading": "かんい" },
       { "word": "簡単", "level": 33, "meaning": "Simple", "reading": "かんたん" }
