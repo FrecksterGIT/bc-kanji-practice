@@ -1,3 +1,10 @@
+## [1.4.5](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v1.4.4...v1.4.5) (2025-04-26)
+
+
+### Bug Fixes
+
+* hint display for kanji ([c87e75b](https://github.com/FrecksterGIT/bc-kanji-practice/commit/c87e75bea1e07d732e37debe6a27034f9eec5baa))
+
 ## [1.4.4](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v1.4.3...v1.4.4) (2025-04-26)
 
 
