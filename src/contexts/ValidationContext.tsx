@@ -9,4 +9,5 @@ export const ValidationContext = createContext<ValidationContextType>({
   isValid: false,
   validate: () => false,
   validItems: [],
+  moveToNext: () => {},
 });
