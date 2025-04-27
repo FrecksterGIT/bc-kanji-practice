@@ -1,3 +1,10 @@
+## [1.7.1](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v1.7.0...v1.7.1) (2025-04-27)
+
+
+### Bug Fixes
+
+* don't go to the next item after editing a correct answer ([2e3fa93](https://github.com/FrecksterGIT/bc-kanji-practice/commit/2e3fa93bb08b6de7268ae132a99de73bca173951))
+
 # [1.7.0](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v1.6.0...v1.7.0) (2025-04-27)
 
 
