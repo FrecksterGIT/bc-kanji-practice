@@ -1,6 +1,7 @@
 import { useSettingsStore } from '../../store/settingsStore.ts';
 import { ChangeEvent, type FC, useState, useEffect } from 'react';
 import { clearAllDataFileCaches } from '../../utils/dataLoader.ts';
+import useMarkedItems from '../../hooks/useMarkedItems.ts';
 
 const Settings: FC = () => {
   const {
@@ -13,6 +14,7 @@ const Settings: FC = () => {
     setLimitToCurrentLevel,
     setSortByNextReview,
   } = useSettingsStore();
+  const { randomizeMarkedItems, setMarkedItems } = useMarkedItems();
 
   const [apiKeyInput, setApiKeyInput] = useState(apiKey);
 
@@ -107,6 +109,25 @@ const Settings: FC = () => {
                 className="mr-2 h-4 w-4 rounded border-gray-300 focus:ring-blue-500"
               />
               <label htmlFor="sortByNextReview">Sort items by next review date</label>
+            </div>
+          </div>
+
+          <div className="mt-6 pt-6 border-t border-gray-200">
+            <h3 className="text-lg font-medium mb-4">Marked Items</h3>
+            <p className="text-sm text-gray-600 mb-4">Randomize the order of marked items.</p>
+            <div className="grid grid-cols-2 gap-4 justify-between">
+              <button
+                onClick={randomizeMarkedItems}
+                className="px-4 py-2 bg-gradient-to-br from-pink-500 to-purple-500 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
+              >
+                Randomize items
+              </button>
+              <button
+                onClick={() => setMarkedItems([])}
+                className="px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500"
+              >
+                Clear marked items
+              </button>
             </div>
           </div>
 

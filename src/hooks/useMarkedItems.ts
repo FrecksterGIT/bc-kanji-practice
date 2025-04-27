@@ -1,22 +1,31 @@
 import { KanjiItem, MarkedItem, VocabularyItem } from '../types';
 import { loadDataFile } from '../utils/dataLoader.ts';
 import { useLocalStorage } from 'usehooks-ts';
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { Dispatch, SetStateAction, useCallback, useEffect, useMemo, useState } from 'react';
 
 type UseMarkedItemsReturnType = {
   data: Array<KanjiItem | VocabularyItem>;
   loading: boolean;
   error: Error | null;
+  markedItems: MarkedItem[];
+  setMarkedItems: Dispatch<SetStateAction<MarkedItem[]>>;
+  randomizeMarkedItems: () => void;
 };
+
 type FileList = {
   type: 'kanji' | 'vocabulary';
   level: number;
 };
+
 const useMarkedItems = (): UseMarkedItemsReturnType => {
   const [data, setData] = useState<Array<KanjiItem | VocabularyItem>>([]);
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<Error | null>(null);
-  const [markedItems] = useLocalStorage<MarkedItem[]>('markedItems', []);
+  const [markedItems, setMarkedItems] = useLocalStorage<MarkedItem[]>('markedItems', []);
+
+  const randomizeMarkedItems = useCallback(() => {
+    setMarkedItems((prev) => [...prev].sort(() => Math.random() - 0.5));
+  }, [setMarkedItems]);
 
   const fileList = useMemo(
     () =>
@@ -33,9 +42,8 @@ const useMarkedItems = (): UseMarkedItemsReturnType => {
   );
 
   const filterData = useCallback(
-    (data: Array<KanjiItem | VocabularyItem>) => {
-      return data.filter((item) => markedItems.find((marked) => marked.id === item.id));
-    },
+    (data: Array<KanjiItem | VocabularyItem>) =>
+      markedItems.map((marked) => data.find((item) => item.id === marked.id)!),
     [markedItems]
   );
 
@@ -65,6 +73,9 @@ const useMarkedItems = (): UseMarkedItemsReturnType => {
     data,
     loading,
     error,
+    markedItems,
+    setMarkedItems,
+    randomizeMarkedItems,
   };
 };
 

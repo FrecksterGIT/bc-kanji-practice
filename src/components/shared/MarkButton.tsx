@@ -1,20 +1,19 @@
 import { FC, useCallback, useContext } from 'react';
 import { ValidationContext } from '../../contexts/ValidationContext.tsx';
-import { useLocalStorage } from 'usehooks-ts';
-import { type MarkedItem } from '../../types';
 import { BookmarkEmpty } from './icons/BookmarkEmpty.tsx';
 import { BookmarkFilled } from './icons/BookmarkFilled.tsx';
+import useMarkedItems from '../../hooks/useMarkedItems.ts';
 
 const MarkButton: FC = () => {
   const { item } = useContext(ValidationContext);
-  const [markedItems, setMarkedItem] = useLocalStorage<MarkedItem[]>('markedItems', [], {});
+  const { markedItems, setMarkedItems } = useMarkedItems();
   const isMarked = markedItems.some((marked) => marked.id === item.id);
 
   const handleMark = useCallback(() => {
     if (isMarked) {
-      setMarkedItem((prev) => prev.filter((marked) => marked.id !== item.id));
+      setMarkedItems((prev) => prev.filter((marked) => marked.id !== item.id));
     } else {
-      setMarkedItem((prev) => [
+      setMarkedItems((prev) => [
         ...prev,
         {
           id: item.id,
@@ -23,7 +22,7 @@ const MarkButton: FC = () => {
         },
       ]);
     }
-  }, [isMarked, item, setMarkedItem]);
+  }, [isMarked, item, setMarkedItems]);
 
   return (
     <button

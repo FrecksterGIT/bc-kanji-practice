@@ -1,7 +1,6 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 
-// Define the type for our settings state
 interface SettingsState {
   apiKey: string;
   limitToLearned: boolean;
@@ -15,18 +14,15 @@ interface SettingsState {
   setLevel: (level: number) => void;
 }
 
-// Create the store with persistence
 export const useSettingsStore = create(
   persist<SettingsState>(
     (set) => ({
-      // Initial state
       apiKey: '',
       limitToLearned: false,
       limitToCurrentLevel: false,
       sortByNextReview: false,
       level: 1,
 
-      // Actions to update the state
       setApiKey: (apiKey) => set({ apiKey }),
       setLimitToLearned: (limitToLearned) => set({ limitToLearned }),
       setLimitToCurrentLevel: (limitToCurrentLevel) => set({ limitToCurrentLevel }),
@@ -34,9 +30,7 @@ export const useSettingsStore = create(
       setLevel: (level) => set({ level }),
     }),
     {
-      name: 'settings-storage', // name of the item in the storage (must be unique)
-      // Storage can be localStorage or sessionStorage or custom
-      // Using localStorage by default
+      name: 'settings-storage',
     }
   )
 );

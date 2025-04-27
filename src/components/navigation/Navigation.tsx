@@ -2,13 +2,12 @@ import { ChangeEvent, useEffect, type FC } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useSettingsStore } from '../../store/settingsStore.ts';
 import useSession from '../../hooks/useSession.ts';
-import { useLocalStorage } from 'usehooks-ts';
-import type { MarkedItem } from '../../types';
+import useMarkedItems from '../../hooks/useMarkedItems.ts';
 
 const Navigation: FC = () => {
   const { user } = useSession();
   const { level, setLevel } = useSettingsStore();
-  const [markedItems] = useLocalStorage<MarkedItem[]>('markedItems', []);
+  const { markedItems } = useMarkedItems();
 
   const maxLevel = user?.level ?? 3;
 
