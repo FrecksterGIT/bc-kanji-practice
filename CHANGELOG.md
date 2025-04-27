@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v1.6.0...v1.7.0) (2025-04-27)
+
+
+### Features
+
+* validate on pressing the enter key ([90a9af1](https://github.com/FrecksterGIT/bc-kanji-practice/commit/90a9af18c6c2b89c828aed45ca5dc55e54fb5334))
+
 # [1.6.0](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v1.5.0...v1.6.0) (2025-04-27)
 
 
