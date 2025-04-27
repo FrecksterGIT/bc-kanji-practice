@@ -31,6 +31,9 @@ jobs:
       - name: Lint
         run: npm run lint
 
+      - name: Test Build before versioning
+        run: npm run build
+
       - name: Versioning
         run: npm run semantic-release
         env:
