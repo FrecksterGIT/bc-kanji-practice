@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v1.4.7...v1.5.0) (2025-04-27)
+
+
+### Features
+
+* manage marked items in settings ([03611d8](https://github.com/FrecksterGIT/bc-kanji-practice/commit/03611d8c6322e90ca5d715969ace597691b804e8))
+
 ## [1.4.7](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v1.4.6...v1.4.7) (2025-04-26)
 
 
