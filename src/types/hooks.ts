@@ -52,6 +52,7 @@ export interface ValidationContextType {
   validate: ValidationFunction;
   validItems: number[];
   isValid: boolean;
+  moveToNext: () => void;
 }
 
 export type MarkedItem = {

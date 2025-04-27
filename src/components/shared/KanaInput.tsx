@@ -1,31 +1,36 @@
-import { useState, ChangeEvent, useCallback, useContext, useEffect, FC, useRef } from 'react';
+import {
+  useState,
+  ChangeEvent,
+  useCallback,
+  useContext,
+  useEffect,
+  FC,
+  useRef,
+  FormEventHandler,
+} from 'react';
 import { toHiragana } from 'wanakana';
 import { Correct } from './icons/Correct.tsx';
 import { ValidationContext } from '../../contexts/ValidationContext.tsx';
 
 interface KanaInputProps {
   placeholder?: string;
-  className?: string;
   id?: string;
   name?: string;
 }
 
-/**
- * KanaInput component that automatically converts romaji input to hiragana
- * using the wanakana library.
- */
 const KanaInput: FC<KanaInputProps> = ({
   placeholder = 'Type the reading in hiragana...',
-  className = '',
   id,
   name,
 }) => {
   const ref = useRef<HTMLInputElement>(null);
-  const { validate, item, isValid } = useContext(ValidationContext);
+  const { validate, item, isValid, moveToNext } = useContext(ValidationContext);
+  const [validationFeedback, setValidationFeedback] = useState(0);
   const [internalValue, setInternalValue] = useState<string>('');
 
   useEffect(() => {
     setInternalValue('');
+    setValidationFeedback(0);
     ref.current?.focus();
   }, [item]);
 
@@ -41,32 +46,50 @@ const KanaInput: FC<KanaInputProps> = ({
         });
 
     setInternalValue(convertedInput);
-    validate(convertedInput);
   };
 
+  const handleSubmit: FormEventHandler<HTMLFormElement> = useCallback(
+    (event) => {
+      event.preventDefault();
+      const result = validate(internalValue);
+      if (validationFeedback === 2) {
+        moveToNext();
+      } else {
+        setValidationFeedback(result ? 2 : 1);
+      }
+    },
+    [internalValue, moveToNext, validate, validationFeedback]
+  );
+
   const getBorderColorClass = useCallback(() => {
-    if (isValid === null || !internalValue) return 'border-gray-600'; // Default
-    return isValid
-      ? 'border-green-500 focus:border-green-500'
-      : 'border-red-500 focus:border-red-500'; // Valid or Invalid
-  }, [isValid, internalValue]);
+    switch (validationFeedback) {
+      case 1:
+        return 'border-red-500 focus:border-red-500';
+      case 2:
+        return 'border-green-500 focus:border-green-500';
+      default:
+        return 'border-gray-600';
+    }
+  }, [validationFeedback]);
 
   return (
     <div className="relative">
-      <input
-        type="text"
-        value={internalValue}
-        onChange={handleInputChange}
-        placeholder={placeholder}
-        className={`mt-1 block w-full rounded-md focus-visible:outline-none text-4xl p-2 border bg-gray-700 ${getBorderColorClass()} ${className}`}
-        id={id}
-        name={name}
-        ref={ref}
-        autoComplete="off"
-        autoCorrect="off"
-        autoCapitalize="off"
-        spellCheck="false"
-      />
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          value={internalValue}
+          onChange={handleInputChange}
+          placeholder={placeholder}
+          className={`mt-1 block w-full rounded-md focus-visible:outline-none text-4xl p-2 border bg-gray-700 ${getBorderColorClass()}`}
+          id={id}
+          name={name}
+          ref={ref}
+          autoComplete="off"
+          autoCorrect="off"
+          autoCapitalize="off"
+          spellCheck="false"
+        />
+      </form>
       {isValid && (
         <span className="absolute h-full top-0 right-2 grid items-center pointer-events-none">
           <Correct />

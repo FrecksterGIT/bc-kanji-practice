@@ -51,7 +51,7 @@ const ValidationProvider: FC<ValidationProviderProps> = ({ items, children }) =>
     (input: string): boolean => {
       const result = validValues.includes(input);
       if (result) {
-        setValidItems((prev) => [...prev, item.id]);
+        setValidItems((prev) => (prev.includes(item.id) ? prev : [...prev, item.id]));
       } else {
         setValidItems((prev) => prev.filter((id) => id !== item.id));
       }
@@ -83,11 +83,6 @@ const ValidationProvider: FC<ValidationProviderProps> = ({ items, children }) =>
         case 'ArrowLeft':
           setSelectedIndex((prev) => (prev - 1 + items.length) % items.length);
           break;
-        case 'Enter':
-          if (isValid) {
-            setSelectedIndex((prev) => nextValidIndex(prev));
-          }
-          break;
       }
     };
 
@@ -95,7 +90,7 @@ const ValidationProvider: FC<ValidationProviderProps> = ({ items, children }) =>
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
     };
-  }, [isValid, items, nextValidIndex]);
+  }, [isValid, items]);
 
   useEffect(() => {
     if (items && items.length > 0) {
@@ -112,8 +107,11 @@ const ValidationProvider: FC<ValidationProviderProps> = ({ items, children }) =>
       validItems,
       validate: validateInput,
       isValid,
+      moveToNext: () => {
+        setSelectedIndex((prev) => nextValidIndex(prev));
+      },
     }),
-    [items, item, selectedIndex, validItems, validateInput, isValid]
+    [items, item, selectedIndex, validItems, validateInput, isValid, nextValidIndex]
   );
 
   return <ValidationContext value={contextValue}>{children}</ValidationContext>;

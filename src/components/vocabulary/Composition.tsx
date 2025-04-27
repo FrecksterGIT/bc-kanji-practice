@@ -29,8 +29,8 @@ export const Composition: FC<CompositionProps> = ({ word }) => {
       <tbody>
         {kanjiData.size === 0 ? (
           <tr>
-            <td colSpan={4} className="px-2 text-center text-gray-500">
-              {loadingKanji ? 'Loading...' : 'No KanjiPage in vocabulary word.'}
+            <td colSpan={4} className="px-2 pt-2 text-center text-gray-500">
+              {loadingKanji ? 'Loading...' : 'No Kanji in vocabulary.'}
             </td>
           </tr>
         ) : (
@@ -40,8 +40,8 @@ export const Composition: FC<CompositionProps> = ({ word }) => {
 
             return (
               <tr key={kanjiItem.id}>
-                <td className="px-2 pt-1 whitespace-nowrap text-white">{kanjiItem.kanji}</td>
-                <td className="px-2 pt-1 whitespace-nowrap">
+                <td className="px-2 pt-2 whitespace-nowrap text-white">{kanjiItem.kanji}</td>
+                <td className="px-2 pt-2 whitespace-nowrap">
                   {kanjiItem.onyomi.map((reading) => (
                     <span
                       key={reading.reading}
@@ -51,7 +51,7 @@ export const Composition: FC<CompositionProps> = ({ word }) => {
                     </span>
                   ))}
                 </td>
-                <td className="px-2 pt-1 whitespace-nowrap">
+                <td className="px-2 pt-2 whitespace-nowrap">
                   {kanjiItem.kunyomi.map((reading) => (
                     <span
                       key={reading.reading}
@@ -61,7 +61,7 @@ export const Composition: FC<CompositionProps> = ({ word }) => {
                     </span>
                   ))}
                 </td>
-                <td className="px-2 pt-1 whitespace-nowrap">
+                <td className="px-2 pt-2 whitespace-nowrap">
                   {kanjiItem.meanings.map((meaning) => (
                     <span
                       key={meaning.meaning}
