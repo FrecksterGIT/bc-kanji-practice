@@ -34,7 +34,7 @@ const KanaInput: FC<KanaInputProps> = ({
     ref.current?.focus();
   }, [item]);
 
-  const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
     const input = e.target.value;
 
     const shouldNotConvert = (input.endsWith('n') || input.endsWith('ny')) && !input.endsWith('nn');
@@ -46,7 +46,8 @@ const KanaInput: FC<KanaInputProps> = ({
         });
 
     setInternalValue(convertedInput);
-  };
+    setValidationFeedback(0);
+  }, []);
 
   const handleSubmit: FormEventHandler<HTMLFormElement> = useCallback(
     (event) => {
