@@ -5,7 +5,7 @@ import { WaniKaniApiClient } from '../utils/wanikaniApi';
 
 const WANIKANI_USER_CACHE_KEY = 'wanikani-user-cache';
 const PAGE_LOAD_KEY = 'wanikani-page-load';
-const CACHE_EXPIRATION_TIME = 60 * 60 * 1000;
+const CACHE_EXPIRATION_TIME = 5 * 60 * 1000;
 
 interface CachedData {
   user: WanikaniUserData;
@@ -86,6 +86,7 @@ function useWanikaniUser(): UseWanikaniUserResult {
         saveToCache(data.data);
       } catch (err) {
         setError(err instanceof Error ? err : new Error('An unknown error occurred'));
+        setUser(null);
         setLoading(false);
       } finally {
         setLoading(false);
@@ -100,6 +101,7 @@ function useWanikaniUser(): UseWanikaniUserResult {
       fetchUserData(shouldRefresh).then();
     } else {
       setLoading(false);
+      setUser(null);
     }
   }, [apiKey, fetchUserData]);
 

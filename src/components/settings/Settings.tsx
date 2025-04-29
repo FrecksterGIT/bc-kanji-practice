@@ -2,6 +2,7 @@ import { useSettingsStore } from '../../store/settingsStore.ts';
 import { ChangeEvent, type FC, useState, useEffect } from 'react';
 import { clearAllDataFileCaches } from '../../utils/dataLoader.ts';
 import useMarkedItems from '../../hooks/useMarkedItems.ts';
+import useSession from '../../hooks/useSession.ts';
 
 const Settings: FC = () => {
   const {
@@ -14,6 +15,7 @@ const Settings: FC = () => {
     setLimitToCurrentLevel,
     setSortByNextReview,
   } = useSettingsStore();
+  const { isLoggedIn } = useSession();
   const { randomizeMarkedItems, setMarkedItems } = useMarkedItems();
 
   const [apiKeyInput, setApiKeyInput] = useState(apiKey);
@@ -75,81 +77,84 @@ const Settings: FC = () => {
               </button>
             </div>
           </div>
+          {isLoggedIn && (
+            <>
+              <div className="space-y-4">
+                <div className="flex items-center">
+                  <input
+                    type="checkbox"
+                    id="limitToLearned"
+                    checked={limitToLearned}
+                    onChange={(e) => setLimitToLearned(e.target.checked)}
+                    className="mr-2 h-4 w-4 rounded border-gray-300 focus:ring-blue-500"
+                  />
+                  <label htmlFor="limitToLearned">Limit content to currently learned</label>
+                </div>
 
-          {/* Checkboxes */}
-          <div className="space-y-4">
-            <div className="flex items-center">
-              <input
-                type="checkbox"
-                id="limitToLearned"
-                checked={limitToLearned}
-                onChange={(e) => setLimitToLearned(e.target.checked)}
-                className="mr-2 h-4 w-4 rounded border-gray-300 focus:ring-blue-500"
-              />
-              <label htmlFor="limitToLearned">Limit content to currently learned</label>
-            </div>
+                <div className="flex items-center">
+                  <input
+                    type="checkbox"
+                    id="sortByNextReview"
+                    checked={sortByNextReview}
+                    onChange={(e) => setSortByNextReview(e.target.checked)}
+                    className="mr-2 h-4 w-4 rounded border-gray-300 focus:ring-blue-500"
+                  />
+                  <label htmlFor="sortByNextReview">Sort items by next review date</label>
+                </div>
 
-            <div className="flex items-center">
-              <input
-                type="checkbox"
-                id="limitToCurrentLevel"
-                checked={limitToCurrentLevel}
-                onChange={(e) => setLimitToCurrentLevel(e.target.checked)}
-                className="mr-2 h-4 w-4 rounded border-gray-300 focus:ring-blue-500"
-              />
-              <label htmlFor="limitToCurrentLevel">Limit shown vocabulary to current level</label>
-            </div>
-
-            <div className="flex items-center">
-              <input
-                type="checkbox"
-                id="sortByNextReview"
-                checked={sortByNextReview}
-                onChange={(e) => setSortByNextReview(e.target.checked)}
-                className="mr-2 h-4 w-4 rounded border-gray-300 focus:ring-blue-500"
-              />
-              <label htmlFor="sortByNextReview">Sort items by next review date</label>
-            </div>
-          </div>
-
-          <div className="mt-6 pt-6 border-t border-gray-200">
-            <h3 className="text-lg font-medium mb-4">Marked Items</h3>
-            <p className="text-sm text-gray-600 mb-4">Randomize the order of marked items.</p>
-            <div className="grid grid-cols-2 gap-4 justify-between">
-              <button
-                onClick={randomizeMarkedItems}
-                className="px-4 py-2 bg-gradient-to-br from-pink-500 to-purple-500 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
-              >
-                Randomize items
-              </button>
-              <button
-                onClick={() => setMarkedItems([])}
-                className="px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500"
-              >
-                Clear marked items
-              </button>
-            </div>
-          </div>
-
-          {/* Cache Management Section */}
-          <div className="mt-6 pt-6 border-t border-gray-200">
-            <h3 className="text-lg font-medium mb-4">Data Cache Management</h3>
-            <p className="text-sm text-gray-600 mb-4">
-              Clear all cached data files to fetch fresh data on next access.
-            </p>
-            <button
-              onClick={handleClearCache}
-              className="px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500"
-            >
-              Clear Data Cache
-            </button>
-
-            {cacheCleared && (
-              <div className="mt-2 p-2 bg-green-100 text-green-800 rounded-md">
-                Cache cleared successfully!
+                <div className="flex items-center">
+                  <input
+                    type="checkbox"
+                    id="limitToCurrentLevel"
+                    checked={limitToCurrentLevel}
+                    onChange={(e) => setLimitToCurrentLevel(e.target.checked)}
+                    className="mr-2 h-4 w-4 rounded border-gray-300 focus:ring-blue-500"
+                  />
+                  <label htmlFor="limitToCurrentLevel">
+                    Limit shown vocabulary to current level
+                  </label>
+                </div>
               </div>
-            )}
-          </div>
+
+              <div className="mt-6 pt-6 border-t border-gray-200">
+                <h3 className="text-lg font-medium mb-4">Marked Items</h3>
+                <p className="text-sm text-gray-600 mb-4">Randomize the order of marked items.</p>
+                <div className="grid grid-cols-2 gap-4 justify-between">
+                  <button
+                    onClick={randomizeMarkedItems}
+                    className="px-4 py-2 bg-gradient-to-br from-pink-500 to-purple-500 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
+                  >
+                    Randomize items
+                  </button>
+                  <button
+                    onClick={() => setMarkedItems([])}
+                    className="px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500"
+                  >
+                    Clear marked items
+                  </button>
+                </div>
+              </div>
+
+              <div className="mt-6 pt-6 border-t border-gray-200">
+                <h3 className="text-lg font-medium mb-4">Data Cache Management</h3>
+                <p className="text-sm text-gray-600 mb-4">
+                  Clear all cached data files to fetch fresh data on next access.
+                </p>
+                <button
+                  onClick={handleClearCache}
+                  className="px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500"
+                >
+                  Clear Data Cache
+                </button>
+
+                {cacheCleared && (
+                  <div className="mt-2 p-2 bg-green-100 text-green-800 rounded-md">
+                    Cache cleared successfully!
+                  </div>
+                )}
+              </div>
+            </>
+          )}
         </form>
       </div>
     </div>

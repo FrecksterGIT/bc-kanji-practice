@@ -36,6 +36,8 @@ export interface UseDataFilesResult<T extends KanjiItem | VocabularyItem> {
 
 export interface UserContextType {
   user: WanikaniUserData | null;
+  isLoggedIn: boolean;
+  maxLevel: number;
   loading: boolean;
   error: Error | null;
   refetch: () => void;

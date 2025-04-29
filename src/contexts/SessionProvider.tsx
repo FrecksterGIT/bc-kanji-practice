@@ -3,6 +3,7 @@ import useWanikaniUser from '../hooks/useWanikaniUser.ts';
 import { useSettingsStore } from '../store/settingsStore.ts';
 import { loadDataFile } from '../utils/dataLoader.ts';
 import { SessionContext } from './SessionContext.tsx';
+import { UserContextType } from '../types';
 
 interface UserProviderProps {
   children: ReactNode;
@@ -13,13 +14,13 @@ export const SessionProvider: FC<UserProviderProps> = ({ children }) => {
   const apiKey = useSettingsStore((state) => state.apiKey);
 
   const [voice, setVoice] = useState<SpeechSynthesisVoice | null>(null);
+  const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
+  const [maxLevel, setMaxLevel] = useState<number>(3);
   const [prefetching, setPrefetching] = useState<boolean>(false);
 
-  const loading = userLoading || prefetching;
+  const loading = useMemo(() => userLoading || prefetching, [userLoading, prefetching]);
 
   useEffect(() => {
-    const maxLevel = user?.level && apiKey ? user.level : 3;
-
     setPrefetching(true);
 
     const prefetchPromises = [];
@@ -35,7 +36,7 @@ export const SessionProvider: FC<UserProviderProps> = ({ children }) => {
     Promise.all(prefetchPromises).finally(() => {
       setPrefetching(false);
     });
-  }, [user, apiKey]);
+  }, [user, apiKey, maxLevel]);
 
   useEffect(() => {
     setPrefetching(true);
@@ -56,6 +57,16 @@ export const SessionProvider: FC<UserProviderProps> = ({ children }) => {
       setPrefetching(false);
     });
   }, []);
+
+  useEffect(() => {
+    if (user?.id) {
+      setIsLoggedIn(true);
+      setMaxLevel(user.level);
+    } else {
+      setIsLoggedIn(false);
+      setMaxLevel(3);
+    }
+  }, [user, loading]);
 
   useEffect(() => {
     if ('speechSynthesis' in window) {
@@ -85,16 +96,18 @@ export const SessionProvider: FC<UserProviderProps> = ({ children }) => {
     [voice]
   );
 
-  const value = useMemo(
+  const value: UserContextType = useMemo(
     () => ({
       user,
+      isLoggedIn,
+      maxLevel,
       loading,
       error,
       refetch,
       speak,
     }),
-    [user, loading, error, refetch, speak]
+    [user, isLoggedIn, maxLevel, loading, error, refetch, speak]
   );
 
-  return <SessionContext.Provider value={value}>{children}</SessionContext.Provider>;
+  return <SessionContext value={value}>{children}</SessionContext>;
 };
