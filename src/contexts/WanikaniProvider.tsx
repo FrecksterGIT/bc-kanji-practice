@@ -44,7 +44,8 @@ export const WanikaniProvider: FC<PropsWithChildren> = ({ children }) => {
   }, []);
 
   const catcher = useCallback(function catcher<T extends BasicDataType = BasicDataType>(
-    url: string, skipCache = false
+    url: string,
+    skipCache = false
   ): Promise<{ data: T[]; next_url?: string } | undefined> {
     return new Promise((resolve) => {
       if (skipCache) {
@@ -63,16 +64,14 @@ export const WanikaniProvider: FC<PropsWithChildren> = ({ children }) => {
 
   const fetcher = useCallback(
     function fetcher<T extends BasicDataType = BasicDataType>(
-      url: string, skipCache = false
+      url: string,
+      skipCache = false
     ): Promise<{ data: T[]; next_url?: string }> {
       return new Promise((resolve) => {
         catcher<T>(url, skipCache).then((cachedData) => {
           if (cachedData) {
             resolve(cachedData);
             return;
-          }
-          if (!loadingPromises.has(url)) {
-            console.log(`Fetching ${url}`);
           }
           const response = loadingPromises.has(url)
             ? loadingPromises.get(url)!
@@ -87,13 +86,16 @@ export const WanikaniProvider: FC<PropsWithChildren> = ({ children }) => {
           loadingPromises.set(url, response);
           response.then((result) => {
             if (result.ok) {
-              result.clone().json().then((data) => {
-                writeData<T>(data.data).then(() => {
-                  set(url, { data: data.data, next_url: data.pages?.next_url }).then(() => {
-                    resolve({ data: data.data, next_url: data.pages?.next_url });
+              result
+                .clone()
+                .json()
+                .then((data) => {
+                  writeData<T>(data.data).then(() => {
+                    set(url, { data: data.data, next_url: data.pages?.next_url }).then(() => {
+                      resolve({ data: data.data, next_url: data.pages?.next_url });
+                    });
                   });
                 });
-              });
             } else {
               resolve({ data: [], next_url: undefined });
             }
@@ -129,13 +131,13 @@ export const WanikaniProvider: FC<PropsWithChildren> = ({ children }) => {
             return item.data_updated_at;
           }
           return acc;
-        }, "")
-        console.log(`Latest ${type} data updated at: ${latest}`);
+        }, '');
+
         if (latest) {
-          url.searchParams.append("updated_after", latest);
+          url.searchParams.append('updated_after', latest);
           await fetcher<T>(url.toString(), true).then((data) => {
             allData.push(...data.data);
-          })
+          });
         }
       }
       return allData;
@@ -145,3 +147,4 @@ export const WanikaniProvider: FC<PropsWithChildren> = ({ children }) => {
 
   return <WanikaniContext value={{ load }}>{children}</WanikaniContext>;
 };
+
