@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v1.7.1...v1.8.0) (2025-04-29)
+
+
+### Features
+
+* require a valid Wanikani-API key to access to application ([16b5ffc](https://github.com/FrecksterGIT/bc-kanji-practice/commit/16b5ffc572d6fe6941d425d1ebd4d4e5a6ce03e7))
+
 ## [1.7.1](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v1.7.0...v1.7.1) (2025-04-27)
 
 
