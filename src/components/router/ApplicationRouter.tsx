@@ -6,6 +6,7 @@ import MarkedItems from '../sections/MarkedItems.tsx';
 import Settings from '../settings/Settings.tsx';
 import { FC } from 'react';
 import useSession from '../../hooks/useSession.ts';
+import { WanikaniProvider } from '../../contexts/WanikaniProvider.tsx';
 
 const routerLoggedOut = createBrowserRouter([
   {
@@ -63,5 +64,9 @@ export const ApplicationRouter: FC = () => {
       </div>
     );
   if (!isLoggedIn) return <RouterProvider router={routerLoggedOut} />;
-  return <RouterProvider router={routerLoggedIn} />;
+  return (
+    <WanikaniProvider>
+      <RouterProvider router={routerLoggedIn} />
+    </WanikaniProvider>
+  );
 };

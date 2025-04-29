@@ -1,4 +1,4 @@
-import { FC, PropsWithChildren, useCallback, useMemo } from 'react';
+import { FC, PropsWithChildren, useCallback, useEffect, useMemo, useState } from 'react';
 import { get, set, update } from 'idb-keyval';
 import {
   baseUrl,
@@ -10,6 +10,7 @@ import {
 import { useSettingsStore } from '../store/settingsStore.ts';
 
 export const WanikaniProvider: FC<PropsWithChildren> = ({ children }) => {
+  const [loading, setLoading] = useState(false);
   const apiKey = useSettingsStore((store) => store.apiKey);
   const loadingPromises = useMemo(() => new Map<string, Promise<Response>>(), []);
 
@@ -105,6 +106,7 @@ export const WanikaniProvider: FC<PropsWithChildren> = ({ children }) => {
     },
     [apiKey, catcher, loadingPromises, writeData]
   );
+
   const load = useCallback(
     async function load<T extends BasicDataType = BasicDataType>(type: ResourceType) {
       const url = new URL(resources[type].url, baseUrl);
@@ -140,11 +142,18 @@ export const WanikaniProvider: FC<PropsWithChildren> = ({ children }) => {
           });
         }
       }
+
       return allData;
     },
     [fetcher]
   );
 
-  return <WanikaniContext value={{ load }}>{children}</WanikaniContext>;
-};
+  useEffect(() => {
+    setLoading(true);
+    Promise.all([load(ResourceType.subjects), load(ResourceType.assignments)]).then(() => {
+      setLoading(false);
+    })
+  }, [load]);
 
+  return <WanikaniContext value={{ loading }}>{children}</WanikaniContext>;
+};

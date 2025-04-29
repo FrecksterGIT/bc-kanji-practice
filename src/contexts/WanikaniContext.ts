@@ -32,11 +32,9 @@ export const resources: Record<ResourceType, { url: string; params?: Record<stri
 };
 
 export type WanikaniContextType = {
-  load: <T extends BasicDataType = BasicDataType>(type: ResourceType) => Promise<T[]>;
+  loading: boolean;
 };
 
 export const WanikaniContext = createContext<WanikaniContextType>({
-  load: async () => {
-    return [];
-  },
+  loading: false,
 });
