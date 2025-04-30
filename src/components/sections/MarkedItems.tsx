@@ -1,9 +1,12 @@
-import { FC, useContext } from 'react';
+import { FC, useContext, useEffect, useMemo } from 'react';
 import ValidationProvider from '../../contexts/ValidationProvider.tsx';
 import MainKanji from '../kanji/MainKanji.tsx';
 import { ValidationContext } from '../../contexts/ValidationContext.tsx';
 import MainVocabulary from '../vocabulary/MainVocabulary.tsx';
 import useMarkedItems from '../../hooks/useMarkedItems.ts';
+import { useItems } from '../../hooks/useItems.ts';
+import { useLocalStorage } from 'usehooks-ts';
+import { MarkedItem } from '../../types';
 
 const ItemRenderer = () => {
   const { item } = useContext(ValidationContext);
@@ -17,6 +20,18 @@ const ItemRenderer = () => {
 
 const MarkedItems: FC = () => {
   const { data, loading, error } = useMarkedItems();
+  const [markedItems] = useLocalStorage<MarkedItem[]>('markedItems', []);
+  const markedItemsIds = useMemo(
+    () => ({
+      ids: markedItems.map((m) => m.id),
+    }),
+    [markedItems]
+  );
+  const { data: d1 } = useItems(markedItemsIds);
+
+  useEffect(() => {
+    console.log(d1);
+  }, [d1]);
 
   return (
     <div className="flex flex-col items-center py-12">
