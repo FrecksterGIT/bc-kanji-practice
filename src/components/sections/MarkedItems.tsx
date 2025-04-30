@@ -1,12 +1,11 @@
-import { FC, useContext, useEffect, useMemo } from 'react';
+import { FC, useContext, useEffect } from 'react';
 import ValidationProvider from '../../contexts/ValidationProvider.tsx';
 import MainKanji from '../kanji/MainKanji.tsx';
 import { ValidationContext } from '../../contexts/ValidationContext.tsx';
 import MainVocabulary from '../vocabulary/MainVocabulary.tsx';
 import useMarkedItems from '../../hooks/useMarkedItems.ts';
 import { useItems } from '../../hooks/useItems.ts';
-import { useLocalStorage } from 'usehooks-ts';
-import { MarkedItem } from '../../types';
+import { isKanaVocabulary, isKanji, isVocabulary } from '../../utils/type-check.ts';
 
 const ItemRenderer = () => {
   const { item } = useContext(ValidationContext);
@@ -20,17 +19,22 @@ const ItemRenderer = () => {
 
 const MarkedItems: FC = () => {
   const { data, loading, error } = useMarkedItems();
-  const [markedItems] = useLocalStorage<MarkedItem[]>('markedItems', []);
-  const markedItemsIds = useMemo(
-    () => ({
-      ids: markedItems.map((m) => m.id),
-    }),
-    [markedItems]
-  );
-  const { data: d1 } = useItems(markedItemsIds);
+  const { data: d1 } = useItems();
 
   useEffect(() => {
-    console.log(d1);
+    if (d1) {
+      d1.forEach((item) => {
+        if (isKanji(item)) {
+          console.log('Kanji', item.data.characters);
+        }
+        if (isVocabulary(item)) {
+          console.log('Vocabulary', item.data.characters);
+        }
+        if (isKanaVocabulary(item)) {
+          console.log('KanaVocabulary', item.data.characters);
+        }
+      });
+    }
   }, [d1]);
 
   return (
