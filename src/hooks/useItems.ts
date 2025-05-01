@@ -1,24 +1,14 @@
-import { get } from 'idb-keyval';
 import { useCallback, useEffect, useState } from 'react';
 import { useSettingsStore } from '../store/settingsStore.ts';
 import { useLocation } from 'react-router-dom';
 
-import {
-  WanikaniAssignment,
-  WanikaniKanaVocabularySubject,
-  WanikaniKanjiSubject,
-  WanikaniVocabularySubject,
-} from '../types';
+import { WanikaniSubject } from '../types';
 import useMarkedItems from './useMarkedItems.ts';
-
-type SubjectTypes =
-  | WanikaniKanaVocabularySubject
-  | WanikaniVocabularySubject
-  | WanikaniKanjiSubject;
+import { assignmentDB, subjectDB } from '../utils/db';
 
 export const useItems = () => {
   const [loading, setLoading] = useState(false);
-  const [data, setData] = useState<Array<SubjectTypes>>([]);
+  const [data, setData] = useState<Array<WanikaniSubject>>([]);
   const limitToLearned = useSettingsStore((state) => state.limitToLearned);
   const sortByNextReview = useSettingsStore((state) => state.sortByNextReview);
   const level = useSettingsStore((state) => state.level);
@@ -29,11 +19,11 @@ export const useItems = () => {
 
   useEffect(() => {
     if (limitToLearned || sortByNextReview) {
-      get<WanikaniAssignment[]>('assignment').then((data) => {
-        if (data) {
+      assignmentDB.getAll().then((assignments) => {
+        if (assignments) {
           const availableDatesMap = new Map<number, Date>();
           const started: number[] = [];
-          data.forEach((assignment) => {
+          assignments.forEach((assignment) => {
             if (assignment.data.started_at) {
               started.push(assignment.data.subject_id);
             }
@@ -52,7 +42,7 @@ export const useItems = () => {
   }, [limitToLearned, sortByNextReview]);
 
   const filterAndSort = useCallback(
-    (items: SubjectTypes[]) =>
+    (items: WanikaniSubject[]) =>
       items
         .filter(
           (item) =>
@@ -68,43 +58,29 @@ export const useItems = () => {
     [level, limitToLearned, startedAssignments, sortByNextReview, plannedAssignments]
   );
 
-  const filterMarked = useCallback(
-    (items: SubjectTypes[]) => {
-      return markedItems.map((marked) => items.find((item) => item.id === marked)!);
-    },
-    [markedItems]
-  );
-
   const loadMarkedItems = useCallback(() => {
     setLoading(true);
-    Promise.all([
-      get<WanikaniKanjiSubject[]>('kanji'),
-      get<WanikaniVocabularySubject[]>('vocabulary'),
-      get<WanikaniKanaVocabularySubject[]>('kana_vocabulary'),
-    ]).then((all) => {
-      if (all[0] && all[1] && all[2]) {
-        const items = [...all[0], ...all[1], ...all[2]];
-        setData(filterMarked(items));
-      }
+    subjectDB.getByIds(markedItems).then((items) => {
+      setData(items);
       setLoading(false);
     });
-  }, [filterMarked]);
+  }, [markedItems]);
 
   const loadKanji = useCallback(() => {
     setLoading(true);
-    get<WanikaniKanjiSubject[]>('kanji').then((items) => {
+    subjectDB.getByObjectAndLevel('kanji', level).then((items) => {
       if (items) {
         setData(filterAndSort(items));
       }
       setLoading(false);
     });
-  }, [filterAndSort]);
+  }, [filterAndSort, level]);
 
   const loadVocabulary = useCallback(() => {
     setLoading(true);
     Promise.all([
-      get<WanikaniVocabularySubject[]>('vocabulary'),
-      get<WanikaniKanaVocabularySubject[]>('kana_vocabulary'),
+      subjectDB.getByObjectAndLevel('vocabulary', level),
+      subjectDB.getByObjectAndLevel('kana_vocabulary', level),
     ]).then((all) => {
       if (all[0] && all[1]) {
         const items = [...all[0], ...all[1]];
@@ -112,7 +88,7 @@ export const useItems = () => {
       }
       setLoading(false);
     });
-  }, [filterAndSort]);
+  }, [filterAndSort, level]);
 
   useEffect(() => {
     if (pathname === '/marked') {

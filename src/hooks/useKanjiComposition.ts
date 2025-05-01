@@ -1,8 +1,8 @@
-import { useContext, useEffect, useMemo, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { ValidationContext } from '../contexts/ValidationContext.tsx';
 import { isVocabulary } from '../utils/type-check.ts';
 import { WanikaniKanjiSubject } from '../types';
-import { get } from 'idb-keyval';
+import { subjectDB } from '../utils/db';
 
 function useKanjiComposition() {
   const { item } = useContext(ValidationContext);
@@ -10,21 +10,15 @@ function useKanjiComposition() {
   const [allKanji, setAllKanji] = useState<WanikaniKanjiSubject[]>([]);
 
   useEffect(() => {
-    get<WanikaniKanjiSubject[]>('kanji').then((v) => {
-      if (v) {
-        setAllKanji(v);
-      }
-    });
-  }, []);
-
-  return useMemo(() => {
-    if (allKanji.length > 0 && vocabulary) {
-      return vocabulary.data.component_subject_ids
-        .map((id) => allKanji.find((k) => k.id === id)!)
-        .filter(Boolean);
+    if (!vocabulary) {
+      return;
     }
-    return [];
-  }, [allKanji, vocabulary]);
+    subjectDB
+      .getByIds(vocabulary.data.component_subject_ids)
+      .then((k) => setAllKanji(k as WanikaniKanjiSubject[]));
+  }, [vocabulary]);
+
+  return allKanji;
 }
 
 export default useKanjiComposition;
