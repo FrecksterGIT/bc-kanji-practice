@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from 'react';
 import { ValidationContext } from '../contexts/ValidationContext.tsx';
 import { isVocabulary } from '../utils/type-check.ts';
 import { WanikaniKanjiSubject } from '../types';
-import { subjectDB } from '../utils/db';
+import { getSubjectByIds } from '../utils/db/db.ts';
 
 function useKanjiComposition() {
   const { item } = useContext(ValidationContext);
@@ -13,9 +13,9 @@ function useKanjiComposition() {
     if (!vocabulary) {
       return;
     }
-    subjectDB
-      .getByIds(vocabulary.data.component_subject_ids)
-      .then((k) => setAllKanji(k as WanikaniKanjiSubject[]));
+    getSubjectByIds(vocabulary.data.component_subject_ids).then((k) =>
+      setAllKanji(k as WanikaniKanjiSubject[])
+    );
   }, [vocabulary]);
 
   return allKanji;

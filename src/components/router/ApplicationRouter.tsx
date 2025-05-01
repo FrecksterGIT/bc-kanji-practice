@@ -54,14 +54,14 @@ const routerLoggedIn = createBrowserRouter([
 
 export const ApplicationRouter: FC = () => {
   const { loading: sessionLoading, isLoggedIn } = useSession();
-  const { loading: wanikaniLoading } = useContext(WanikaniContext);
+  const { loading: wanikaniLoading, loadedCount } = useContext(WanikaniContext);
   const loading = sessionLoading || wanikaniLoading;
 
   if (loading)
     return (
       <div className="flex min-h-screen flex-col bg-gray-900 text-gray-400">
         <div className="flex-grow container mx-auto flex items-center justify-center">
-          <div className="text-xl">Loading user data...</div>
+          <div className="text-xl">Loading data... ({loadedCount} resources loaded)</div>
         </div>
       </div>
     );
