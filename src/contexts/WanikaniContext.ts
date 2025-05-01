@@ -1,12 +1,7 @@
 import { createContext } from 'react';
+import { WanikaniAssignment, WanikaniSubject } from '../types';
 
-export type BasicDataType = {
-  data: unknown;
-  data_updated_at: string;
-  id: number;
-  object: string;
-  url: string;
-};
+export type BasicDataType = WanikaniSubject | WanikaniAssignment;
 
 export enum ResourceType {
   'subjects' = 'subjects',

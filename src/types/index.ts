@@ -59,7 +59,7 @@ export interface WanikaniAssignment {
 
 export type WanikaniSubject =
   | WanikaniKanjiSubject
-  | WanikaniRadicalSubject
+  // | WanikaniRadicalSubject
   | WanikaniVocabularySubject
   | WanikaniKanaVocabularySubject;
 
