@@ -1,8 +1,7 @@
-import { UserContextType } from '../types';
 import { useContext } from 'react';
-import { SessionContext } from '../contexts/SessionContext.tsx';
+import { SessionContext, SessionContextType } from '../contexts/SessionContext.tsx';
 
-const useSession = (): UserContextType => {
+const useSession = (): SessionContextType => {
   const context = useContext(SessionContext);
   if (context === undefined) {
     throw new Error('useUser must be used within a SessionProvider');

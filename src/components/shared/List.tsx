@@ -1,14 +1,11 @@
 import { type FC, useContext } from 'react';
 import SelectableButton from './SelectableButton.tsx';
 import { ValidationContext } from '../../contexts/ValidationContext.tsx';
+import { isKanji } from '../../utils/type-check.ts';
 
-type ListProps = {
-  type: 'kanji' | 'vocabulary';
-};
-
-const List: FC<ListProps> = ({ type }) => {
-  const { items } = useContext(ValidationContext);
-  const borderColor = type === 'kanji' ? 'border-t-pink-400' : 'border-t-purple-400';
+const List: FC = () => {
+  const { items, item } = useContext(ValidationContext);
+  const borderColor = isKanji(item) ? 'border-t-pink-400' : 'border-t-purple-400';
 
   return (
     <div

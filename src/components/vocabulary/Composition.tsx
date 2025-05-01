@@ -1,12 +1,8 @@
 import { FC } from 'react';
 import useKanjiComposition from '../../hooks/useKanjiComposition.ts';
 
-type CompositionProps = {
-  word: string;
-};
-
-export const Composition: FC<CompositionProps> = ({ word }) => {
-  const { kanjiData, loading: loadingKanji } = useKanjiComposition(word);
+export const Composition: FC = () => {
+  const kanjiData = useKanjiComposition();
 
   return (
     <table className="max-w-min divide-y divide-gray-200 text-left">
@@ -27,42 +23,45 @@ export const Composition: FC<CompositionProps> = ({ word }) => {
         </tr>
       </thead>
       <tbody>
-        {kanjiData.size === 0 ? (
+        {kanjiData.length === 0 ? (
           <tr>
             <td colSpan={4} className="px-2 pt-2 text-center text-gray-500">
-              {loadingKanji ? 'Loading...' : 'No Kanji in vocabulary.'}
+              No Kanji in vocabulary.
             </td>
           </tr>
         ) : (
-          [...word].map((char) => {
-            const kanjiItem = kanjiData.get(char);
-            if (!kanjiItem) return null;
-
+          kanjiData.map((kanjiItem) => {
             return (
               <tr key={kanjiItem.id}>
-                <td className="px-2 pt-2 whitespace-nowrap text-white">{kanjiItem.kanji}</td>
-                <td className="px-2 pt-2 whitespace-nowrap">
-                  {kanjiItem.onyomi.map((reading) => (
-                    <span
-                      key={reading.reading}
-                      className={`separated-comma ${reading.primary ? 'text-white' : ''}`}
-                    >
-                      {reading.reading}
-                    </span>
-                  ))}
+                <td className="px-2 pt-2 whitespace-nowrap text-white">
+                  {kanjiItem.data.characters}
                 </td>
                 <td className="px-2 pt-2 whitespace-nowrap">
-                  {kanjiItem.kunyomi.map((reading) => (
-                    <span
-                      key={reading.reading}
-                      className={`separated-comma ${reading.primary ? 'text-white' : ''}`}
-                    >
-                      {reading.reading}
-                    </span>
-                  ))}
+                  {kanjiItem.data.readings
+                    .filter((r) => r.type === 'onyomi')
+                    .map((reading) => (
+                      <span
+                        key={reading.reading}
+                        className={`separated-comma ${reading.primary ? 'text-white' : ''}`}
+                      >
+                        {reading.reading}
+                      </span>
+                    ))}
                 </td>
                 <td className="px-2 pt-2 whitespace-nowrap">
-                  {kanjiItem.meanings.map((meaning) => (
+                  {kanjiItem.data.readings
+                    .filter((r) => r.type === 'kunyomi')
+                    .map((reading) => (
+                      <span
+                        key={reading.reading}
+                        className={`separated-comma ${reading.primary ? 'text-white' : ''}`}
+                      >
+                        {reading.reading}
+                      </span>
+                    ))}
+                </td>
+                <td className="px-2 pt-2 whitespace-nowrap">
+                  {kanjiItem.data.meanings.map((meaning) => (
                     <span
                       key={meaning.meaning}
                       className={`separated-comma ${meaning.primary ? 'text-white' : ''}`}

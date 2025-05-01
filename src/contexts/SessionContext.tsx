@@ -1,4 +1,12 @@
 import { createContext } from 'react';
-import { UserContextType } from '../types';
+import { WanikaniUserData } from '../types';
 
-export const SessionContext = createContext<UserContextType | undefined>(undefined);
+export interface SessionContextType {
+  user: WanikaniUserData | null;
+  isLoggedIn: boolean;
+  maxLevel: number;
+  loading: boolean;
+  speak: (text: string) => void;
+}
+
+export const SessionContext = createContext<SessionContextType | undefined>(undefined);

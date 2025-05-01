@@ -7,20 +7,13 @@ import useMarkedItems from '../../hooks/useMarkedItems.ts';
 const MarkButton: FC = () => {
   const { item } = useContext(ValidationContext);
   const { markedItems, setMarkedItems } = useMarkedItems();
-  const isMarked = markedItems.some((marked) => marked.id === item.id);
+  const isMarked = markedItems.some((marked) => marked === item.id);
 
   const handleMark = useCallback(() => {
     if (isMarked) {
-      setMarkedItems((prev) => prev.filter((marked) => marked.id !== item.id));
+      setMarkedItems((prev) => prev.filter((marked) => marked !== item.id));
     } else {
-      setMarkedItems((prev) => [
-        ...prev,
-        {
-          id: item.id,
-          type: 'kanji' in item ? 'kanji' : 'vocabulary',
-          level: item.level,
-        },
-      ]);
+      setMarkedItems((prev) => [...prev, item.id]);
     }
   }, [isMarked, item, setMarkedItems]);
 

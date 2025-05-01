@@ -1,72 +1,54 @@
 import { FC, ReactNode, useCallback, useEffect, useMemo, useState } from 'react';
-import useWanikaniUser from '../hooks/useWanikaniUser.ts';
+import { WanikaniUserResponse, WanikaniUserData } from '../types';
+import { SessionContext, SessionContextType } from './SessionContext.tsx';
 import { useSettingsStore } from '../store/settingsStore.ts';
-import { loadDataFile } from '../utils/dataLoader.ts';
-import { SessionContext } from './SessionContext.tsx';
-import { UserContextType } from '../types';
 
 interface UserProviderProps {
   children: ReactNode;
 }
 
 export const SessionProvider: FC<UserProviderProps> = ({ children }) => {
-  const { user, loading: userLoading, error, refetch } = useWanikaniUser();
   const apiKey = useSettingsStore((state) => state.apiKey);
+  const [user, setUser] = useState<WanikaniUserData | null>(null);
 
   const [voice, setVoice] = useState<SpeechSynthesisVoice | null>(null);
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(true);
   const [maxLevel, setMaxLevel] = useState<number>(3);
-  const [prefetching, setPrefetching] = useState<boolean>(false);
-
-  const loading = useMemo(() => userLoading || prefetching, [userLoading, prefetching]);
 
   useEffect(() => {
-    setPrefetching(true);
-
-    const prefetchPromises = [];
-    for (let i = 1; i <= maxLevel; i++) {
-      // Use the unified loadDataFile function from utils
-      prefetchPromises.push(
-        loadDataFile('kanji', i).catch((err) =>
-          console.error(`Error preloading kanji data for level ${i}:`, err)
-        )
-      );
-    }
-
-    Promise.all(prefetchPromises).finally(() => {
-      setPrefetching(false);
-    });
-  }, [user, apiKey, maxLevel]);
-
-  useEffect(() => {
-    setPrefetching(true);
-
-    const maxVocabularyLevel = 60;
-
-    const prefetchVocabularyPromises = [];
-    for (let i = 1; i <= maxVocabularyLevel; i++) {
-      // Use the unified loadDataFile function from utils
-      prefetchVocabularyPromises.push(
-        loadDataFile('vocabulary', i).catch((err) =>
-          console.error(`Error preloading vocabulary data for level ${i}:`, err)
-        )
-      );
-    }
-
-    Promise.all(prefetchVocabularyPromises).finally(() => {
-      setPrefetching(false);
-    });
-  }, []);
-
-  useEffect(() => {
-    if (user?.id) {
-      setIsLoggedIn(true);
-      setMaxLevel(user.level);
-    } else {
-      setIsLoggedIn(false);
-      setMaxLevel(3);
-    }
-  }, [user, loading]);
+    new Promise<void>(() => {
+      if (!apiKey) {
+        setUser(null);
+        setIsLoggedIn(false);
+        setMaxLevel(3);
+        setLoading(false);
+        return;
+      }
+      setLoading(true);
+      fetch('https://api.wanikani.com/v2/user', {
+        headers: {
+          Authorization: `Bearer ${apiKey}`,
+          'Content-Type': 'application/json',
+        },
+      })
+        .then((response) => {
+          return response.json() as Promise<WanikaniUserResponse>;
+        })
+        .then((data) => {
+          setUser(data.data);
+          setIsLoggedIn(true);
+          setMaxLevel(data.data.level);
+          setLoading(false);
+        })
+        .catch(() => {
+          setUser(null);
+          setIsLoggedIn(false);
+          setMaxLevel(3);
+          setLoading(false);
+        });
+    }).then();
+  }, [apiKey]);
 
   useEffect(() => {
     if ('speechSynthesis' in window) {
@@ -96,18 +78,16 @@ export const SessionProvider: FC<UserProviderProps> = ({ children }) => {
     [voice]
   );
 
-  const value: UserContextType = useMemo(
+  const value: SessionContextType = useMemo(
     () => ({
       user,
       isLoggedIn,
       maxLevel,
       loading,
-      error,
-      refetch,
       speak,
     }),
-    [user, isLoggedIn, maxLevel, loading, error, refetch, speak]
+    [user, isLoggedIn, maxLevel, loading, speak]
   );
 
-  return <SessionContext value={value}>{children}</SessionContext>;
+  return <SessionContext value={value}>{!loading && children}</SessionContext>;
 };

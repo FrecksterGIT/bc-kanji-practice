@@ -2,6 +2,7 @@ import { type FC, useContext, useMemo } from 'react';
 import { NoAnswer } from './icons/NoAnswer.tsx';
 import { CorrectAnswer } from './icons/CorrectAnswer.tsx';
 import { ValidationContext } from '../../contexts/ValidationContext.tsx';
+import { isKanji } from '../../utils/type-check.ts';
 
 interface SelectableButtonProps {
   position: number;
@@ -11,10 +12,10 @@ const SelectableButton: FC<SelectableButtonProps> = ({ position }) => {
   const { validItems, items, selectedIndex, setSelectedIndex } = useContext(ValidationContext);
   const selected = position === selectedIndex;
   const valid = validItems.includes(items[position].id);
-  const term = 'kanji' in items[position] ? items[position].kanji : items[position].word;
+  const term = items[position].data.characters;
 
   const backgroundColor = useMemo(() => {
-    if (selected) return 'kanji' in items[position] ? 'bg-pink-500' : 'bg-purple-500';
+    if (selected) return isKanji(items[position]) ? 'bg-pink-500' : 'bg-purple-500';
     return valid ? 'text-green-700' : 'text-gray-400';
   }, [selected, items, position, valid]);
 
