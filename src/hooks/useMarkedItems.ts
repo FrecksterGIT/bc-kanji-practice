@@ -1,15 +1,14 @@
 import { Dispatch, SetStateAction, useCallback } from 'react';
 import { useLocalStorage } from 'usehooks-ts';
-import { MarkedItem } from '../types';
 
 type UseMarkedItemsReturnType = {
-  markedItems: MarkedItem[];
-  setMarkedItems: Dispatch<SetStateAction<MarkedItem[]>>;
+  markedItems: number[];
+  setMarkedItems: Dispatch<SetStateAction<number[]>>;
   randomizeMarkedItems: () => void;
 };
 
 const useMarkedItems = (): UseMarkedItemsReturnType => {
-  const [markedItems, setMarkedItems] = useLocalStorage<MarkedItem[]>('markedItems', []);
+  const [markedItems, setMarkedItems] = useLocalStorage<number[]>('markedItems', []);
 
   const randomizeMarkedItems = useCallback(() => {
     setMarkedItems((prev) => [...prev].sort(() => Math.random() - 0.5));

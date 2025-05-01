@@ -1,11 +1,4 @@
-import {
-  FC,
-  PropsWithChildren,
-  useCallback,
-  useEffect,
-  useMemo,
-  useState,
-} from 'react';
+import { FC, PropsWithChildren, useCallback, useEffect, useMemo, useState } from 'react';
 import { get, set, update } from 'idb-keyval';
 import {
   baseUrl,
@@ -119,12 +112,7 @@ export const WanikaniProvider: FC<PropsWithChildren> = ({ children }) => {
 
   const load = useCallback(
     async function load<T extends BasicDataType = BasicDataType>(type: ResourceType) {
-      const url = new URL(resources[type].url, baseUrl);
-      if (resources[type].params) {
-        Object.entries(resources[type].params).forEach(([key, value]) => {
-          url.searchParams.append(key, value);
-        });
-      }
+      const url = new URL(resources[type], baseUrl);
       const result = await fetcher<T>(url.toString());
       const allData = [...result.data];
       if (result.next_url) {
@@ -146,7 +134,7 @@ export const WanikaniProvider: FC<PropsWithChildren> = ({ children }) => {
         }, '');
 
         if (latest) {
-          url.searchParams.append('updated_after', latest);
+          url.searchParams.set('updated_after', latest);
           await fetcher<T>(url.toString(), true).then((data) => {
             allData.push(...data.data);
           });

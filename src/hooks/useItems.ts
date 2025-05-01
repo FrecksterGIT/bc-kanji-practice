@@ -2,14 +2,14 @@ import { get } from 'idb-keyval';
 import { useCallback, useEffect, useState } from 'react';
 import { useSettingsStore } from '../store/settingsStore.ts';
 import { useLocation } from 'react-router-dom';
-import { useLocalStorage } from 'usehooks-ts';
+
 import {
-  MarkedItem,
   WanikaniAssignment,
   WanikaniKanaVocabularySubject,
   WanikaniKanjiSubject,
   WanikaniVocabularySubject,
 } from '../types';
+import useMarkedItems from './useMarkedItems.ts';
 
 type SubjectTypes =
   | WanikaniKanaVocabularySubject
@@ -22,8 +22,9 @@ export const useItems = () => {
   const limitToLearned = useSettingsStore((state) => state.limitToLearned);
   const sortByNextReview = useSettingsStore((state) => state.sortByNextReview);
   const level = useSettingsStore((state) => state.level);
-  const [markedItems] = useLocalStorage<MarkedItem[]>('markedItems', []);
-  const [startedAssignments, setStartedAssignments] = useState(new Map<number, Date>());
+  const { markedItems } = useMarkedItems();
+  const [plannedAssignments, setPlannedAssignments] = useState(new Map<number, Date>());
+  const [startedAssignments, setStartedAssignments] = useState<number[]>([]);
   const { pathname } = useLocation();
 
   useEffect(() => {
@@ -31,7 +32,11 @@ export const useItems = () => {
       get<WanikaniAssignment[]>('assignment').then((data) => {
         if (data) {
           const availableDatesMap = new Map<number, Date>();
+          const started: number[] = [];
           data.forEach((assignment) => {
+            if (assignment.data.started_at) {
+              started.push(assignment.data.subject_id);
+            }
             if (assignment.data.available_at) {
               availableDatesMap.set(
                 assignment.data.subject_id,
@@ -39,7 +44,8 @@ export const useItems = () => {
               );
             }
           });
-          setStartedAssignments(availableDatesMap);
+          setStartedAssignments(started);
+          setPlannedAssignments(availableDatesMap);
         }
       });
     }
@@ -50,21 +56,21 @@ export const useItems = () => {
       items
         .filter(
           (item) =>
-            item.data.level === level && (!limitToLearned || startedAssignments.has(item.id))
+            item.data.level === level && (!limitToLearned || startedAssignments.includes(item.id))
         )
         .sort((a, b) => {
           if (!sortByNextReview) return 0;
-          if (!startedAssignments.has(a.id) && !startedAssignments.has(b.id)) return 0;
-          if (!startedAssignments.has(a.id)) return 1;
-          if (!startedAssignments.has(b.id)) return -1;
-          return startedAssignments.get(a.id)!.getTime() - startedAssignments.get(b.id)!.getTime();
+          if (!plannedAssignments.has(a.id) && !plannedAssignments.has(b.id)) return 0;
+          if (!plannedAssignments.has(a.id)) return 1;
+          if (!plannedAssignments.has(b.id)) return -1;
+          return plannedAssignments.get(a.id)!.getTime() - plannedAssignments.get(b.id)!.getTime();
         }),
-    [level, limitToLearned, sortByNextReview, startedAssignments]
+    [level, limitToLearned, startedAssignments, sortByNextReview, plannedAssignments]
   );
 
   const filterMarked = useCallback(
     (items: SubjectTypes[]) => {
-      return markedItems.map((marked) => items.find((item) => item.id === marked.id)!);
+      return markedItems.map((marked) => items.find((item) => item.id === marked)!);
     },
     [markedItems]
   );
@@ -109,25 +115,22 @@ export const useItems = () => {
   }, [filterAndSort]);
 
   useEffect(() => {
-    switch (pathname) {
-      case '/marked': {
-        loadMarkedItems();
-        break;
-      }
-      case '/kanji': {
-        loadKanji();
-        break;
-      }
-      case '/vocabulary': {
-        loadVocabulary();
-        break;
-      }
-      default: {
-        setData([]);
-        setLoading(false);
-      }
+    if (pathname === '/marked') {
+      loadMarkedItems();
     }
-  }, [loadKanji, loadMarkedItems, loadVocabulary, pathname, startedAssignments]);
+  }, [loadMarkedItems, pathname]);
+
+  useEffect(() => {
+    if (pathname === '/kanji') {
+      loadKanji();
+    }
+  }, [loadKanji, pathname]);
+
+  useEffect(() => {
+    if (pathname === '/vocabulary') {
+      loadVocabulary();
+    }
+  }, [loadVocabulary, pathname]);
 
   return { loading, data };
 };

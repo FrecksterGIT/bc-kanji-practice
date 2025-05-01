@@ -1,6 +1,5 @@
 import { FC, PropsWithChildren, useCallback, useEffect, useMemo, useState } from 'react';
-import { ValidationContextType } from '../types';
-import { ValidationContext } from './ValidationContext.tsx';
+import { ValidationContext, ValidationContextType } from './ValidationContext.tsx';
 import { isKatakana, toHiragana } from 'wanakana';
 import { useItems } from '../hooks/useItems.ts';
 import { isKanaVocabulary, isKanji, isVocabulary } from '../utils/type-check.ts';
@@ -35,9 +34,14 @@ const ValidationProvider: FC<PropsWithChildren> = ({ children }) => {
         }, []);
     }
 
-  if (isKanaVocabulary(item)) {
-    return [item.data.characters.split('').map((c) => toHiragana(c)).join('')];
-  }
+    if (isKanaVocabulary(item)) {
+      return [
+        item.data.characters
+          .split('')
+          .map((c) => toHiragana(c))
+          .join(''),
+      ];
+    }
 
     return [];
   }, [item]);

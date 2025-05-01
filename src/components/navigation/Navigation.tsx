@@ -5,7 +5,7 @@ import useSession from '../../hooks/useSession.ts';
 import useMarkedItems from '../../hooks/useMarkedItems.ts';
 
 const Navigation: FC = () => {
-  const { maxLevel, isLoggedIn } = useSession();
+  const { user, maxLevel, isLoggedIn } = useSession();
   const { level, setLevel } = useSettingsStore();
   const { markedItems } = useMarkedItems();
   const levelOptions = useMemo(() => Array.from({ length: maxLevel }, (_, i) => i + 1), [maxLevel]);
@@ -79,7 +79,7 @@ const Navigation: FC = () => {
               `px-3 py-2 rounded hover:bg-gray-600 transition-colors ${isActive ? 'bg-gray-600' : ''}`
             }
           >
-            Settings
+            {user?.username ?? 'Settings'}
           </NavLink>
         </div>
       </div>

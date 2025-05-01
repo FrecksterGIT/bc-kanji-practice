@@ -15,20 +15,9 @@ export enum ResourceType {
 
 export const baseUrl = 'https://api.wanikani.com/';
 
-export const resources: Record<ResourceType, { url: string; params?: Record<string, string> }> = {
-  [ResourceType.subjects]: {
-    url: '/v2/subjects',
-    params: {
-      types: 'kanji,vocabulary,kana_vocabulary',
-    },
-  },
-  [ResourceType.assignments]: {
-    url: '/v2/assignments',
-    params: {
-      started: 'true',
-      burned: 'false',
-    },
-  },
+export const resources: Record<ResourceType, string> = {
+  [ResourceType.subjects]: '/v2/subjects?types=kanji,vocabulary,kana_vocabulary',
+  [ResourceType.assignments]: '/v2/assignments?started=true&burned=false',
 };
 
 export type WanikaniContextType = {

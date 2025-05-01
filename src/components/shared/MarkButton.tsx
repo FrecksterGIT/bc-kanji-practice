@@ -3,25 +3,17 @@ import { ValidationContext } from '../../contexts/ValidationContext.tsx';
 import { BookmarkEmpty } from './icons/BookmarkEmpty.tsx';
 import { BookmarkFilled } from './icons/BookmarkFilled.tsx';
 import useMarkedItems from '../../hooks/useMarkedItems.ts';
-import { isKanji } from '../../utils/type-check.ts';
 
 const MarkButton: FC = () => {
   const { item } = useContext(ValidationContext);
   const { markedItems, setMarkedItems } = useMarkedItems();
-  const isMarked = markedItems.some((marked) => marked.id === item.id);
+  const isMarked = markedItems.some((marked) => marked === item.id);
 
   const handleMark = useCallback(() => {
     if (isMarked) {
-      setMarkedItems((prev) => prev.filter((marked) => marked.id !== item.id));
+      setMarkedItems((prev) => prev.filter((marked) => marked !== item.id));
     } else {
-      setMarkedItems((prev) => [
-        ...prev,
-        {
-          id: item.id,
-          type: isKanji(item) ? 'kanji' : 'vocabulary',
-          level: item.data.level,
-        },
-      ]);
+      setMarkedItems((prev) => [...prev, item.id]);
     }
   }, [isMarked, item, setMarkedItems]);
 

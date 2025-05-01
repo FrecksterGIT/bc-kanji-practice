@@ -1,33 +1,55 @@
 import { FC, ReactNode, useCallback, useEffect, useMemo, useState } from 'react';
-import useWanikaniUser from '../hooks/useWanikaniUser.ts';
-import { SessionContext } from './SessionContext.tsx';
-import { UserContextType } from '../types';
+import { SessionContext, SessionContextType } from './SessionContext.tsx';
+import { WanikaniUserResponse } from '../types';
+import { useSettingsStore } from '../store/settingsStore.ts';
+import { WanikaniUserData } from '../types';
 
 interface UserProviderProps {
   children: ReactNode;
 }
 
 export const SessionProvider: FC<UserProviderProps> = ({ children }) => {
-  const { user, loading, refetch } = useWanikaniUser();
+  const apiKey = useSettingsStore((state) => state.apiKey);
+  const [user, setUser] = useState<WanikaniUserData | null>(null);
 
   const [voice, setVoice] = useState<SpeechSynthesisVoice | null>(null);
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
-  const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [loading, setLoading] = useState<boolean>(true);
   const [maxLevel, setMaxLevel] = useState<number>(3);
 
   useEffect(() => {
-    if (!loading) {
-      if (user?.id) {
-        setIsLoggedIn(true);
-        setMaxLevel(user.level);
-        setIsLoading(false);
-      } else {
+    new Promise<void>(() => {
+      if (!apiKey) {
+        setUser(null);
         setIsLoggedIn(false);
         setMaxLevel(3);
-        setIsLoading(false);
+        setLoading(false);
+        return;
       }
-    }
-  }, [user, loading]);
+      setLoading(true);
+      fetch('https://api.wanikani.com/v2/user', {
+        headers: {
+          Authorization: `Bearer ${apiKey}`,
+          'Content-Type': 'application/json',
+        },
+      })
+        .then((response) => {
+          return response.json() as Promise<WanikaniUserResponse>;
+        })
+        .then((data) => {
+          setUser(data.data);
+          setIsLoggedIn(true);
+          setMaxLevel(data.data.level);
+          setLoading(false);
+        })
+        .catch(() => {
+          setUser(null);
+          setIsLoggedIn(false);
+          setMaxLevel(3);
+          setLoading(false);
+        });
+    }).then();
+  }, [apiKey]);
 
   useEffect(() => {
     if ('speechSynthesis' in window) {
@@ -57,17 +79,16 @@ export const SessionProvider: FC<UserProviderProps> = ({ children }) => {
     [voice]
   );
 
-  const value: UserContextType = useMemo(
+  const value: SessionContextType = useMemo(
     () => ({
       user,
       isLoggedIn,
       maxLevel,
-      loading: isLoading,
-      refetch,
+      loading,
       speak,
     }),
-    [user, isLoggedIn, maxLevel, isLoading, refetch, speak]
+    [user, isLoggedIn, maxLevel, loading, speak]
   );
 
-  return <SessionContext value={value}>{!isLoading && children}</SessionContext>;
+  return <SessionContext value={value}>{!loading && children}</SessionContext>;
 };
