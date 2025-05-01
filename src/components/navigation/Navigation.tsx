@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { useSettingsStore } from '../../store/settingsStore.ts';
 import useSession from '../../hooks/useSession.ts';
 import useMarkedItems from '../../hooks/useMarkedItems.ts';
+import { useEventListener } from 'usehooks-ts';
 
 const Navigation: FC = () => {
   const { user, maxLevel, isLoggedIn } = useSession();
@@ -19,6 +20,16 @@ const Navigation: FC = () => {
     },
     [setLevel]
   );
+
+  useEventListener('keydown', (e) => {
+    if (e.key === 'ArrowDown' && e.altKey) {
+      const nextLevel = level < maxLevel ? level + 1 : 1;
+      setLevel(nextLevel);
+    } else if (e.key === 'ArrowUp' && e.altKey) {
+      const prevLevel = level > 1 ? level - 1 : maxLevel;
+      setLevel(prevLevel);
+    }
+  });
 
   return (
     <nav className="sticky top-0 z-10 bg-gray-700 text-white p-4 shadow-2xl">
