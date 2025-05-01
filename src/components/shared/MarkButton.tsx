@@ -3,6 +3,7 @@ import { ValidationContext } from '../../contexts/ValidationContext.tsx';
 import { BookmarkEmpty } from './icons/BookmarkEmpty.tsx';
 import { BookmarkFilled } from './icons/BookmarkFilled.tsx';
 import useMarkedItems from '../../hooks/useMarkedItems.ts';
+import { isKanji } from '../../utils/type-check.ts';
 
 const MarkButton: FC = () => {
   const { item } = useContext(ValidationContext);
@@ -17,8 +18,8 @@ const MarkButton: FC = () => {
         ...prev,
         {
           id: item.id,
-          type: 'kanji' in item ? 'kanji' : 'vocabulary',
-          level: item.level,
+          type: isKanji(item) ? 'kanji' : 'vocabulary',
+          level: item.data.level,
         },
       ]);
     }

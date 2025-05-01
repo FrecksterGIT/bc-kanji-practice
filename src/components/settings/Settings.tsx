@@ -1,6 +1,5 @@
 import { useSettingsStore } from '../../store/settingsStore.ts';
 import { ChangeEvent, type FC, useState, useEffect } from 'react';
-import { clearAllDataFileCaches } from '../../utils/dataLoader.ts';
 import useMarkedItems from '../../hooks/useMarkedItems.ts';
 import useSession from '../../hooks/useSession.ts';
 
@@ -24,28 +23,12 @@ const Settings: FC = () => {
     setApiKeyInput(apiKey);
   }, [apiKey]);
 
-  const [cacheCleared, setCacheCleared] = useState(false);
-
   const handleApiKeyChange = (e: ChangeEvent<HTMLInputElement>) => {
     setApiKeyInput(e.target.value);
   };
 
   const handleSaveApiKey = () => {
     setApiKey(apiKeyInput);
-  };
-
-  const handleClearCache = async () => {
-    try {
-      await clearAllDataFileCaches();
-      setCacheCleared(true);
-
-      setTimeout(() => {
-        setCacheCleared(false);
-        window.location.reload();
-      }, 3000);
-    } catch (error) {
-      console.error('Error clearing cache:', error);
-    }
   };
 
   return (
@@ -133,25 +116,6 @@ const Settings: FC = () => {
                     Clear marked items
                   </button>
                 </div>
-              </div>
-
-              <div className="mt-6 pt-6 border-t border-gray-200">
-                <h3 className="text-lg font-medium mb-4">Data Cache Management</h3>
-                <p className="text-sm text-gray-600 mb-4">
-                  Clear all cached data files to fetch fresh data on next access.
-                </p>
-                <button
-                  onClick={handleClearCache}
-                  className="px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500"
-                >
-                  Clear Data Cache
-                </button>
-
-                {cacheCleared && (
-                  <div className="mt-2 p-2 bg-green-100 text-green-800 rounded-md">
-                    Cache cleared successfully!
-                  </div>
-                )}
               </div>
             </>
           )}

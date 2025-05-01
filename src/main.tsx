@@ -4,11 +4,14 @@ import './index.css';
 
 import { SessionProvider } from './contexts/SessionProvider.tsx';
 import { ApplicationRouter } from './components/router/ApplicationRouter.tsx';
+import { WanikaniProvider } from './contexts/WanikaniProvider.tsx';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <SessionProvider>
-      <ApplicationRouter />
+      <WanikaniProvider>
+        <ApplicationRouter />
+      </WanikaniProvider>
     </SessionProvider>
   </StrictMode>
 );

@@ -1,50 +1,45 @@
 import { FC, PropsWithChildren, useCallback, useEffect, useMemo, useState } from 'react';
-import { KanjiItem, ValidationContextType, VocabularyItem } from '../types';
+import { ValidationContextType } from '../types';
 import { ValidationContext } from './ValidationContext.tsx';
 import { isKatakana, toHiragana } from 'wanakana';
+import { useItems } from '../hooks/useItems.ts';
+import { isKanaVocabulary, isKanji, isVocabulary } from '../utils/type-check.ts';
 
-type ValidationProviderProps = PropsWithChildren<{
-  items: Array<KanjiItem | VocabularyItem>;
-}>;
-
-const ValidationProvider: FC<ValidationProviderProps> = ({ items, children }) => {
+const ValidationProvider: FC<PropsWithChildren> = ({ children }) => {
+  const { data: items } = useItems();
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
   const item = useMemo(() => items?.[selectedIndex], [items, selectedIndex]);
   const [validItems, setValidItems] = useState<number[]>([]);
   const isValid = useMemo(() => item && validItems.includes(item.id), [item, validItems]);
 
   const validValues: string[] = useMemo(() => {
-    if (!item) return [];
-
-    if ('onyomi' in item) {
-      const validOnyomi = item.onyomi
-        .filter((reading) => reading.accepted_answer)
-        .map((reading) => reading.reading);
-
-      const validKunyomi = item.kunyomi
-        .filter((reading) => reading.accepted_answer)
-        .map((reading) => reading.reading);
-
-      return [...validOnyomi, ...validKunyomi];
+    if (isKanji(item)) {
+      return item.data.readings.filter((i) => i.accepted_answer).map((i) => i.reading);
     }
 
-    return item.reading
-      .map((reading) => reading.reading)
-      .reduce<string[]>((acc, value) => {
-        acc.push(value);
+    if (isVocabulary(item)) {
+      return item.data.readings
+        .filter((i) => i.accepted_answer)
+        .reduce<string[]>((r, i) => {
+          r.push(i.reading);
+          r.push(toHiragana(i.reading));
+          if (i.reading.split('').some(isKatakana)) {
+            r.push(
+              i.reading
+                .split('')
+                .map((c) => toHiragana(c))
+                .join('')
+            );
+          }
+          return r;
+        }, []);
+    }
 
-        const containsKatakana = value.split('').some(isKatakana);
-        if (containsKatakana) {
-          acc.push(
-            value
-              .split('')
-              .map((c) => toHiragana(c))
-              .join('')
-          );
-        }
-        acc.push(toHiragana(value));
-        return acc;
-      }, []);
+  if (isKanaVocabulary(item)) {
+    return [item.data.characters.split('').map((c) => toHiragana(c)).join('')];
+  }
+
+    return [];
   }, [item]);
 
   const validateInput = useCallback(

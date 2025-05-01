@@ -1,12 +1,9 @@
+import { FC } from 'react';
 import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom';
 import App from '../../App.tsx';
-import KanjiLevel from '../sections/KanjiLevel.tsx';
-import VocabularyLevel from '../sections/VocabularyLevel.tsx';
-import MarkedItems from '../sections/MarkedItems.tsx';
+import Items from '../sections/Items.tsx';
 import Settings from '../settings/Settings.tsx';
-import { FC } from 'react';
 import useSession from '../../hooks/useSession.ts';
-import { WanikaniProvider } from '../../contexts/WanikaniProvider.tsx';
 
 const routerLoggedOut = createBrowserRouter([
   {
@@ -14,12 +11,12 @@ const routerLoggedOut = createBrowserRouter([
     element: <App />,
     children: [
       {
-        path: '',
-        element: <Navigate to="settings" replace />,
-      },
-      {
         path: 'settings',
         element: <Settings />,
+      },
+      {
+        path: '*',
+        element: <Navigate to="/settings" replace />,
       },
     ],
   },
@@ -36,15 +33,15 @@ const routerLoggedIn = createBrowserRouter([
       },
       {
         path: 'kanji',
-        element: <KanjiLevel />,
+        element: <Items />,
       },
       {
         path: 'vocabulary',
-        element: <VocabularyLevel />,
+        element: <Items />,
       },
       {
         path: 'marked',
-        element: <MarkedItems />,
+        element: <Items />,
       },
       {
         path: 'settings',
@@ -63,10 +60,5 @@ export const ApplicationRouter: FC = () => {
         <div className="text-xl">Loading user data...</div>
       </div>
     );
-  if (!isLoggedIn) return <RouterProvider router={routerLoggedOut} />;
-  return (
-    <WanikaniProvider>
-      <RouterProvider router={routerLoggedIn} />
-    </WanikaniProvider>
-  );
+  return <RouterProvider router={isLoggedIn ? routerLoggedIn : routerLoggedOut} />;
 };

@@ -1,4 +1,11 @@
-import { FC, PropsWithChildren, useCallback, useEffect, useMemo, useState } from 'react';
+import {
+  FC,
+  PropsWithChildren,
+  useCallback,
+  useEffect,
+  useMemo,
+  useState,
+} from 'react';
 import { get, set, update } from 'idb-keyval';
 import {
   baseUrl,
@@ -68,6 +75,9 @@ export const WanikaniProvider: FC<PropsWithChildren> = ({ children }) => {
       url: string,
       skipCache = false
     ): Promise<{ data: T[]; next_url?: string }> {
+      if (!apiKey) {
+        return Promise.resolve({ data: [], next_url: undefined });
+      }
       return new Promise((resolve) => {
         catcher<T>(url, skipCache).then((cachedData) => {
           if (cachedData) {
@@ -152,7 +162,7 @@ export const WanikaniProvider: FC<PropsWithChildren> = ({ children }) => {
     setLoading(true);
     Promise.all([load(ResourceType.subjects), load(ResourceType.assignments)]).then(() => {
       setLoading(false);
-    })
+    });
   }, [load]);
 
   return <WanikaniContext value={{ loading }}>{children}</WanikaniContext>;

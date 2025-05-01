@@ -1,36 +1,8 @@
-import { WanikaniAssignment, WanikaniUserData } from './wanikani';
-import { KanjiItem, VocabularyItem } from './data';
+import { WanikaniSubject, WanikaniUserData } from './wanikani';
 
 export interface UseWanikaniUserResult {
   user: WanikaniUserData | null;
   loading: boolean;
-  error: Error | null;
-  refetch: () => void;
-}
-
-export interface UseWanikaniAssignmentsResult {
-  assignments: WanikaniAssignment[] | null;
-  loading: boolean;
-  error: Error | null;
-  refetch: () => void;
-}
-
-export interface UseRelatedVocabularyResult {
-  relatedVocabulary: VocabularyItem[];
-  loading: boolean;
-  error: Error | null;
-}
-
-export interface UseKanjiCompositionResult {
-  kanjiData: Map<string, KanjiItem>;
-  loading: boolean;
-  error: Error | null;
-}
-
-export interface UseDataFilesResult<T extends KanjiItem | VocabularyItem> {
-  data: T[] | null;
-  loading: boolean;
-  error: Error | null;
   refetch: () => void;
 }
 
@@ -39,7 +11,6 @@ export interface UserContextType {
   isLoggedIn: boolean;
   maxLevel: number;
   loading: boolean;
-  error: Error | null;
   refetch: () => void;
   speak: (text: string) => void;
 }
@@ -47,8 +18,8 @@ export interface UserContextType {
 export type ValidationFunction = (input: string) => boolean;
 
 export interface ValidationContextType {
-  items: Array<KanjiItem | VocabularyItem>;
-  item: KanjiItem | VocabularyItem;
+  items: Array<WanikaniSubject>;
+  item: WanikaniSubject;
   selectedIndex: number;
   setSelectedIndex: (index: number) => void;
   validate: ValidationFunction;

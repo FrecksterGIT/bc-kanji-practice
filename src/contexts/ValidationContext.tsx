@@ -1,9 +1,9 @@
 import { createContext } from 'react';
-import { KanjiItem, ValidationContextType } from '../types';
+import { ValidationContextType, WanikaniSubject } from '../types';
 
 export const ValidationContext = createContext<ValidationContextType>({
   items: [],
-  item: undefined as unknown as KanjiItem,
+  item: undefined as unknown as WanikaniSubject,
   selectedIndex: 0,
   setSelectedIndex: () => {},
   isValid: false,
