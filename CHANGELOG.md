@@ -1,3 +1,10 @@
+# [2.1.0](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.0.0...v2.1.0) (2025-05-01)
+
+
+### Features
+
+* add keyboard navigation for levels ([32cb993](https://github.com/FrecksterGIT/bc-kanji-practice/commit/32cb9933cbebc9b72f2ecbf7ed14ac601db0d5d5))
+
 # [2.0.0](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v1.8.0...v2.0.0) (2025-05-01)
 
 
