@@ -1,3 +1,11 @@
+# [2.2.0](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.1.0...v2.2.0) (2025-05-01)
+
+
+### Features
+
+* **db:** merge and simplify IndexedDB logic into a unified module ([a3dd6e1](https://github.com/FrecksterGIT/bc-kanji-practice/commit/a3dd6e11d37f3692354d9c7fad6301c931e10687))
+* **fetch:** dedupe api requests ([6592252](https://github.com/FrecksterGIT/bc-kanji-practice/commit/6592252d5ec9d73c55d41cb66ab08cfdcd58880f))
+
 # [2.1.0](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.0.0...v2.1.0) (2025-05-01)
 
 
