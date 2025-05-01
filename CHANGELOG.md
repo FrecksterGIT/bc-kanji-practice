@@ -1,3 +1,26 @@
+# [2.0.0](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v1.8.0...v2.0.0) (2025-05-01)
+
+
+### Features
+
+* use wanikani subject resources ([#15](https://github.com/FrecksterGIT/bc-kanji-practice/issues/15)) ([680439a](https://github.com/FrecksterGIT/bc-kanji-practice/commit/680439a710498c1c05ee198fe00eb438b50296d0))
+
+
+### BREAKING CHANGES
+
+* WaniKani-specific features and API dependencies have been removed.
+
+* refactor: optimize imports in SessionProvider
+
+- Group and reorder `WanikaniUserResponse` and `WanikaniUserData` imports.
+- Remove redundant import statements.
+
+* feat(Items): add fallback message for cases where no items are available
+
+* chore(data): remove local json resource files
+
+* chore(deps): cleanup unused dependencies
+
 # [1.8.0](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v1.7.1...v1.8.0) (2025-04-29)
 
 
