@@ -1,8 +1,7 @@
 import { FC, ReactNode, useCallback, useEffect, useMemo, useState } from 'react';
+import { WanikaniUserResponse, WanikaniUserData } from '../types';
 import { SessionContext, SessionContextType } from './SessionContext.tsx';
-import { WanikaniUserResponse } from '../types';
 import { useSettingsStore } from '../store/settingsStore.ts';
-import { WanikaniUserData } from '../types';
 
 interface UserProviderProps {
   children: ReactNode;
