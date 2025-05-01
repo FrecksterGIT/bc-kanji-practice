@@ -5,26 +5,19 @@ import KanjiDetails from '../kanji/KanjiDetails.tsx';
 import VocabularyDetails from '../vocabulary/VocabularyDetails.tsx';
 import List from '../shared/List.tsx';
 
-const ItemRenderer = () => {
+const Items: FC = () => {
   const { item } = useContext(ValidationContext);
 
-  if (isKanji(item)) {
-    return <KanjiDetails />;
-  }
-  if (isVocabulary(item) || isKanaVocabulary(item)) {
-    return <VocabularyDetails />;
-  }
-};
-
-const Items: FC = () => {
   return (
     <>
       <div className="flex flex-col items-center py-12">
         <div className="w-full">
-          <ItemRenderer />
+          {isKanji(item) && <KanjiDetails />}
+          {(isVocabulary(item) || isKanaVocabulary(item)) && <VocabularyDetails />}
+          {!item && <div className="text-center text-2xl">Sorry, couldn't find any items to show.</div>}
         </div>
       </div>
-      <List />
+      {item && <List />}
     </>
   );
 };
