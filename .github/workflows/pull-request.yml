@@ -1,7 +1,7 @@
 name: Build and Deploy
 
 on:
-  push:
+  pull_request:
     branches: ['main']
 
 jobs:
@@ -31,19 +31,3 @@ jobs:
 
       - name: Test Build before versioning
         run: npm run build
-
-      - name: Versioning
-        run: npm run semantic-release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Build
-        run: npm run build
-
-      - name: Deploy
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: w00592bd.kasserver.com
-          username: ${{ secrets.ftp_user }}
-          password: ${{ secrets.ftp_password }}
-          local-dir: ./dist/
