@@ -17,8 +17,10 @@ export const resources: Record<ResourceType, string> = {
 
 export type WanikaniContextType = {
   loading: boolean;
+  loadedCount: number;
 };
 
 export const WanikaniContext = createContext<WanikaniContextType>({
   loading: false,
+  loadedCount: 0
 });

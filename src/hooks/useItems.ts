@@ -4,7 +4,7 @@ import { useLocation } from 'react-router-dom';
 
 import { WanikaniSubject } from '../types';
 import useMarkedItems from './useMarkedItems.ts';
-import { assignmentDB, subjectDB } from '../utils/db';
+import { getAllAssignments, getSubjectByIds, getSubjectsByObjectAndLevel } from '../utils/db/db.ts';
 
 export const useItems = () => {
   const [loading, setLoading] = useState(false);
@@ -19,7 +19,7 @@ export const useItems = () => {
 
   useEffect(() => {
     if (limitToLearned || sortByNextReview) {
-      assignmentDB.getAll().then((assignments) => {
+      getAllAssignments().then((assignments) => {
         if (assignments) {
           const availableDatesMap = new Map<number, Date>();
           const started: number[] = [];
@@ -60,7 +60,7 @@ export const useItems = () => {
 
   const loadMarkedItems = useCallback(() => {
     setLoading(true);
-    subjectDB.getByIds(markedItems).then((items) => {
+    getSubjectByIds(markedItems).then((items) => {
       setData(items);
       setLoading(false);
     });
@@ -68,7 +68,7 @@ export const useItems = () => {
 
   const loadKanji = useCallback(() => {
     setLoading(true);
-    subjectDB.getByObjectAndLevel('kanji', level).then((items) => {
+    getSubjectsByObjectAndLevel('kanji', level).then((items) => {
       if (items) {
         setData(filterAndSort(items));
       }
@@ -79,8 +79,8 @@ export const useItems = () => {
   const loadVocabulary = useCallback(() => {
     setLoading(true);
     Promise.all([
-      subjectDB.getByObjectAndLevel('vocabulary', level),
-      subjectDB.getByObjectAndLevel('kana_vocabulary', level),
+      getSubjectsByObjectAndLevel('vocabulary', level),
+      getSubjectsByObjectAndLevel('kana_vocabulary', level),
     ]).then((all) => {
       if (all[0] && all[1]) {
         const items = [...all[0], ...all[1]];
