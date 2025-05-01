@@ -1,7 +1,8 @@
-import { FC, ReactNode, useCallback, useEffect, useMemo, useState } from 'react';
-import { WanikaniUserResponse, WanikaniUserData } from '../types';
+import { FC, ReactNode, useEffect, useMemo, useState } from 'react';
+import { WanikaniUserData } from '../types';
 import { SessionContext, SessionContextType } from './SessionContext.tsx';
 import { useSettingsStore } from '../store/settingsStore.ts';
+import cache from '../utils/data/fetchUrl.ts';
 
 interface UserProviderProps {
   children: ReactNode;
@@ -11,7 +12,6 @@ export const SessionProvider: FC<UserProviderProps> = ({ children }) => {
   const apiKey = useSettingsStore((state) => state.apiKey);
   const [user, setUser] = useState<WanikaniUserData | null>(null);
 
-  const [voice, setVoice] = useState<SpeechSynthesisVoice | null>(null);
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(true);
   const [maxLevel, setMaxLevel] = useState<number>(3);
@@ -26,15 +26,8 @@ export const SessionProvider: FC<UserProviderProps> = ({ children }) => {
         return;
       }
       setLoading(true);
-      fetch('https://api.wanikani.com/v2/user', {
-        headers: {
-          Authorization: `Bearer ${apiKey}`,
-          'Content-Type': 'application/json',
-        },
-      })
-        .then((response) => {
-          return response.json() as Promise<WanikaniUserResponse>;
-        })
+      cache
+        .fetchUser({ url: 'https://api.wanikani.com/v2/user', apiKey })
         .then((data) => {
           setUser(data.data);
           setIsLoggedIn(true);
@@ -50,43 +43,14 @@ export const SessionProvider: FC<UserProviderProps> = ({ children }) => {
     }).then();
   }, [apiKey]);
 
-  useEffect(() => {
-    if ('speechSynthesis' in window) {
-      const getVoice = () => {
-        setVoice(speechSynthesis.getVoices().find((voice) => voice.lang === 'ja-JP') ?? null);
-      };
-      speechSynthesis.addEventListener('voiceschanged', getVoice);
-      getVoice();
-
-      return () => {
-        speechSynthesis.removeEventListener('voiceschanged', getVoice);
-      };
-    }
-  }, []);
-
-  const speak = useCallback(
-    (text?: string) => {
-      if ('speechSynthesis' in window && text) {
-        speechSynthesis.cancel();
-        const utterance = new SpeechSynthesisUtterance(text);
-        utterance.voice = voice;
-        utterance.lang = 'ja-JP';
-
-        speechSynthesis.speak(utterance);
-      }
-    },
-    [voice]
-  );
-
   const value: SessionContextType = useMemo(
     () => ({
       user,
       isLoggedIn,
       maxLevel,
       loading,
-      speak,
     }),
-    [user, isLoggedIn, maxLevel, loading, speak]
+    [user, isLoggedIn, maxLevel, loading]
   );
 
   return <SessionContext value={value}>{!loading && children}</SessionContext>;

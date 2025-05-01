@@ -6,7 +6,6 @@ export interface SessionContextType {
   isLoggedIn: boolean;
   maxLevel: number;
   loading: boolean;
-  speak: (text: string) => void;
 }
 
 export const SessionContext = createContext<SessionContextType | undefined>(undefined);

@@ -10,12 +10,7 @@ export const RelatedVocabulary: FC = () => {
       <div className="flex gap-x-1 gap-y-4 flex-wrap justify-center">
         {relatedVocabulary.map((vocab) => (
           <div key={vocab.id}>
-            <Mark
-              level={vocab.data.level}
-              meaning={vocab.data.meanings[0].meaning}
-              word={vocab.data.characters}
-              reading={vocab.data.readings[0].reading}
-            />
+            <Mark vocabulary={vocab} />
           </div>
         ))}
       </div>
