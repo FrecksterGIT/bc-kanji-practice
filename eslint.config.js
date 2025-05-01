@@ -35,7 +35,6 @@ export default tseslint.config(
       ...reactHooks.configs.recommended.rules,
       'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
       '@tanstack/query/exhaustive-deps': 'off',
-      // All my custom rules //
     },
   },
   prettier

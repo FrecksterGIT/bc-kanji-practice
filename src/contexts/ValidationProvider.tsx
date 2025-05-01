@@ -89,7 +89,7 @@ const ValidationProvider: FC<PropsWithChildren> = ({ children }) => {
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
     };
-  }, [isValid, items]);
+  }, [items.length]);
 
   useEffect(() => {
     if (items && items.length > 0) {
