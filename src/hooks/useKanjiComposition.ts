@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from 'react';
 import { ValidationContext } from '../contexts/ValidationContext.tsx';
 import { isVocabulary } from '../utils/type-check.ts';
 import { WanikaniKanjiSubject } from '../types';
-import { getSubjectByIds } from '../utils/db/db.ts';
+import { getSubjectByIds } from '../utils/data/db.ts';
 
 function useKanjiComposition() {
   const { item } = useContext(ValidationContext);

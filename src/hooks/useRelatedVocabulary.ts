@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from 'react';
 import { ValidationContext } from '../contexts/ValidationContext.tsx';
 import { isKanji } from '../utils/type-check.ts';
 import { WanikaniVocabularySubject } from '../types';
-import { getSubjectByIds } from '../utils/db/db.ts';
+import { getSubjectByIds } from '../utils/data/db.ts';
 
 export const useRelatedVocabulary = () => {
   const { item } = useContext(ValidationContext);
