@@ -1,3 +1,10 @@
+# [2.4.0](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.3.1...v2.4.0) (2025-05-02)
+
+
+### Features
+
+* responsive menu ([67f3d89](https://github.com/FrecksterGIT/bc-kanji-practice/commit/67f3d896dbf9beeabd5156f592adcd7ecc823d00))
+
 ## [2.3.1](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.3.0...v2.3.1) (2025-05-02)
 
 
