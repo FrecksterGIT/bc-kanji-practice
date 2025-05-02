@@ -9,9 +9,7 @@ export const RelatedVocabulary: FC = () => {
     relatedVocabulary.length > 0 && (
       <div className="flex flex-wrap justify-center gap-x-1 gap-y-4">
         {relatedVocabulary.map((vocab) => (
-          <div key={vocab.id}>
-            <Mark vocabulary={vocab} />
-          </div>
+          <Mark key={vocab.id} vocabulary={vocab} />
         ))}
       </div>
     )

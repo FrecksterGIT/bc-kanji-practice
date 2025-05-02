@@ -1,8 +1,8 @@
 import { FC, ReactNode, useEffect, useMemo, useState } from 'react';
-import { WanikaniUserData } from '../types';
+import { WanikaniUserData } from '../wanikani';
 import { SessionContext, SessionContextType } from './SessionContext.tsx';
 import { useSettingsStore } from '../store/settingsStore.ts';
-import cache from '../utils/data/fetchUrl.ts';
+import wkLoad from '../utils/wkLoad.ts';
 
 interface UserProviderProps {
   children: ReactNode;
@@ -26,8 +26,8 @@ export const SessionProvider: FC<UserProviderProps> = ({ children }) => {
         return;
       }
       setLoading(true);
-      cache
-        .fetchUser({ url: 'https://api.wanikani.com/v2/user', apiKey })
+      wkLoad
+        .user({ url: 'https://api.wanikani.com/v2/user', apiKey })
         .then(({ data }) => {
           setUser(data);
           setIsLoggedIn(true);

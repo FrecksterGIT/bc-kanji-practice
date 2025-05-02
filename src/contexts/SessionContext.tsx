@@ -1,5 +1,5 @@
 import { createContext } from 'react';
-import { WanikaniUserData } from '../types';
+import { WanikaniUserData } from '../wanikani';
 
 export interface SessionContextType {
   user: WanikaniUserData | null;

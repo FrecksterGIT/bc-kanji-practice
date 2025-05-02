@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { isKanaVocabulary, isKanji, isVocabulary } from '../../utils/type-check.ts';
+import { isKanaVocabulary, isKanji, isVocabulary } from '../../utils/typeChecks.ts';
 import KanjiDetails from '../kanji/KanjiDetails.tsx';
 import VocabularyDetails from '../vocabulary/VocabularyDetails.tsx';
 import List from '../shared/List.tsx';

@@ -7,14 +7,14 @@ import {
   WanikaniContext,
 } from './WanikaniContext.ts';
 import { useSettingsStore } from '../store/settingsStore.ts';
-import { isAssignmentList, isSubjectList } from '../utils/type-check.ts';
+import { isAssignmentList, isSubjectList } from '../utils/typeChecks.ts';
 import {
   addManyAssignments,
   addManySubjects,
   getAllAssignments,
   getAllSubjects,
-} from '../utils/data/db.ts';
-import cache from '../utils/data/fetchUrl.ts';
+} from '../utils/itemDB.ts';
+import wkLoad from '../utils/wkLoad.ts';
 
 export const WanikaniProvider: FC<PropsWithChildren> = ({ children }) => {
   const [loading, setLoading] = useState(false);
@@ -45,13 +45,13 @@ export const WanikaniProvider: FC<PropsWithChildren> = ({ children }) => {
       }
       setLoadedCount((prev) => prev + 1);
       if (type === ResourceType.subjects) {
-        const data = await cache.fetchSubjects({ url, apiKey });
+        const data = await wkLoad.subjects({ url, apiKey });
         if (data.data.length > 0) {
           await writeData(data.data);
         }
         return { data: data.data as T[], next_url: data.pages?.next_url };
       } else if (type === ResourceType.assignments) {
-        const data = await cache.fetchAssignments({ url, apiKey });
+        const data = await wkLoad.assignments({ url, apiKey });
         if (data.data.length > 0) {
           await writeData(data.data);
         }

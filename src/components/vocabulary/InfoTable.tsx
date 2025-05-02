@@ -1,10 +1,10 @@
 import { type FC, useEffect } from 'react';
 import { isKatakana, toHiragana } from 'wanakana';
-import { WanikaniReading } from '../../types';
+import { WanikaniReading } from '../../wanikani';
 import { useToggle } from 'usehooks-ts';
-import { formatHint } from '../../utils/hintFormatter.ts';
+import { formatHint } from '../../utils/formatHint.ts';
 import { Composition } from './Composition.tsx';
-import { isKanaVocabulary, isVocabulary } from '../../utils/type-check.ts';
+import { isKanaVocabulary, isVocabulary } from '../../utils/typeChecks.ts';
 import useItems from '../../hooks/useItems.ts';
 
 const InfoTable: FC = () => {
@@ -53,7 +53,7 @@ const InfoTable: FC = () => {
             </thead>
             <tbody>
               <tr>
-                <td className="px-6 py-4 whitespace-nowrap">
+                <td className="px-6 py-4 whitespace-nowrap" lang="ja">
                   {isVocabulary(vocabulary) &&
                     vocabulary.data.readings.map((reading) => (
                       <span

@@ -1,7 +1,7 @@
 import { type FC, useEffect } from 'react';
 import { useToggle } from 'usehooks-ts';
-import { formatHint } from '../../utils/hintFormatter.ts';
-import { isKanji } from '../../utils/type-check.ts';
+import { formatHint } from '../../utils/formatHint.ts';
+import { isKanji } from '../../utils/typeChecks.ts';
 import useItems from '../../hooks/useItems.ts';
 
 const InfoTable: FC = () => {
@@ -36,7 +36,7 @@ const InfoTable: FC = () => {
             </thead>
             <tbody className="divide-y divide-gray-200">
               <tr>
-                <td className="px-6 py-4 whitespace-nowrap">
+                <td className="px-6 py-4 whitespace-nowrap" lang="ja">
                   {kanji.data.readings
                     .filter((r) => r.type === 'onyomi')
                     .map((reading) => (
@@ -48,7 +48,7 @@ const InfoTable: FC = () => {
                       </span>
                     ))}
                 </td>
-                <td className="px-6 py-4 whitespace-nowrap">
+                <td className="px-6 py-4 whitespace-nowrap" lang="ja">
                   {kanji.data.readings
                     .filter((r) => r.type === 'kunyomi')
                     .map((reading) => (

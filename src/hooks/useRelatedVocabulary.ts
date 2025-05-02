@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import { isKanji } from '../utils/type-check.ts';
-import { WanikaniVocabularySubject } from '../types';
-import { getSubjectByIds } from '../utils/data/db.ts';
+import { isKanji } from '../utils/typeChecks.ts';
+import { WanikaniVocabularySubject } from '../wanikani';
+import { getSubjectByIds } from '../utils/itemDB.ts';
 import { useSettingsStore } from '../store/settingsStore.ts';
 import useSession from './useSession.ts';
 import useItems from './useItems.ts';

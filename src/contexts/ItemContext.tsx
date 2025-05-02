@@ -1,5 +1,5 @@
 import { createContext, Dispatch, SetStateAction } from 'react';
-import { WanikaniSubject } from '../types';
+import { WanikaniSubject } from '../wanikani';
 
 export interface ItemContextType {
   items: Array<WanikaniSubject>;

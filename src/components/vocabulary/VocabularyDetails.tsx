@@ -3,10 +3,11 @@ import KanaInput from '../shared/KanaInput.tsx';
 import InfoTable from './InfoTable.tsx';
 import MarkButton from '../shared/MarkButton.tsx';
 import { ProgressBar } from '../shared/ProgressBar.tsx';
-import { isKanaVocabulary, isVocabulary } from '../../utils/type-check.ts';
+import { isKanaVocabulary, isVocabulary } from '../../utils/typeChecks.ts';
 import { Audio } from '../shared/icons/Audio.tsx';
 import { useAudioPlayerContext } from 'react-use-audio-player';
 import useItems from '../../hooks/useItems.ts';
+import Sentence from './Sentence.tsx';
 
 const VocabularyDetails: FC = () => {
   const { item, selectedIndex, items } = useItems();
@@ -34,7 +35,9 @@ const VocabularyDetails: FC = () => {
             {selectedIndex + 1} / {items.length}
           </div>
           <div className="relative w-full border-b-2 border-b-purple-400 bg-gray-700 p-8 text-center text-white">
-            <div className="text-9xl">{vocabulary.data.characters}</div>
+            <div className="text-9xl" lang="ja">
+              {vocabulary.data.characters}
+            </div>
             <div className="absolute top-2 right-2 flex gap-1">
               <button onClick={playAudio} className="cursor-pointer">
                 <Audio />
@@ -45,6 +48,11 @@ const VocabularyDetails: FC = () => {
           <ProgressBar />
           <div className="my-12 w-full max-w-1/2">
             <KanaInput id="reading" />
+          </div>
+          <div className="mb-12 grid w-full space-y-4">
+            {vocabulary.data.context_sentences.map((sentence) => (
+              <Sentence sentence={sentence} key={sentence.ja} />
+            ))}
           </div>
           <InfoTable />
         </div>
