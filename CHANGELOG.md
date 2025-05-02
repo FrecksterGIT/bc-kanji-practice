@@ -1,3 +1,11 @@
+# [2.3.0](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.2.0...v2.3.0) (2025-05-02)
+
+
+### Features
+
+* help dialog with some information ([d0f4676](https://github.com/FrecksterGIT/bc-kanji-practice/commit/d0f4676138e055a5adcff6e166e979ff6266fec1))
+* keyboard support for navigation and marking items ([c4e4c77](https://github.com/FrecksterGIT/bc-kanji-practice/commit/c4e4c77193e74267617fde28acac91558e33f807))
+
 # [2.2.0](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.1.0...v2.2.0) (2025-05-01)
 
 
