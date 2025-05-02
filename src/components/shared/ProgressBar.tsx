@@ -7,9 +7,9 @@ export const ProgressBar = () => {
   const correct = Math.min((validItems.length / items.length) * 100, 100);
 
   return (
-    <div className="relative w-full h-0.5">
+    <div className="relative h-0.5 w-full">
       <div
-        className={`${bgColor} absolute h-0.5 top-0 left-0 transition-all`}
+        className={`${bgColor} absolute top-0 left-0 h-0.5 transition-all`}
         style={{ width: `${correct}%` }}
       ></div>
     </div>

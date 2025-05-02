@@ -46,7 +46,7 @@ const List: FC = () => {
     [items.length, itemsPerRow, setSelectedIndex]
   );
 
-  useEventListener('keydown', handleKeyDown)
+  useEventListener('keydown', handleKeyDown);
 
   useResizeObserver({
     ref: listRef as RefObject<HTMLDivElement>,
@@ -63,7 +63,7 @@ const List: FC = () => {
 
   return (
     <div
-      className={`grid gap-2 auto-rows-auto ${borderColor} border-t-2 pt-6 pb-12 relative`}
+      className={`grid auto-rows-auto gap-2 ${borderColor} relative border-t-2 pt-6 pb-12`}
       style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(10rem, 1fr))' }}
       ref={listRef}
     >

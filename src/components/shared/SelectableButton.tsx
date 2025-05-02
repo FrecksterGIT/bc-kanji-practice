@@ -28,14 +28,14 @@ const SelectableButton: FC<SelectableButtonProps> = ({ position, ref }) => {
 
   return (
     <button
-      className={`cursor-pointer grid grid-cols-[min-content_auto] items-center gap-2 ${textColor}`}
+      className={`grid cursor-pointer grid-cols-[min-content_auto] items-center gap-2 ${textColor}`}
       onClick={() => setSelectedIndex(position)}
       ref={ref}
     >
       {!valid && <NoAnswer />}
       {valid && <CorrectAnswer />}
       <div
-        className={`text-xl text-nowrap max-w-min text-left px-2 py-1 rounded-lg ${backgroundColor}`}
+        className={`max-w-min rounded-lg px-2 py-1 text-left text-xl text-nowrap ${backgroundColor}`}
       >
         {term}
       </div>

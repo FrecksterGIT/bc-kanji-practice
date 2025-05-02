@@ -28,7 +28,7 @@ const MarkButton: FC = () => {
   });
 
   return (
-    <button className="cursor-pointer relative" onClick={handleMark} ref={markRef}>
+    <button className="relative cursor-pointer" onClick={handleMark} ref={markRef}>
       {isMarked ? <BookmarkFilled /> : <BookmarkEmpty />}
       {showTooltip && (
         <Tooltip left>

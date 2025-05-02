@@ -32,7 +32,7 @@ export const Mark: FC<MarkProps> = ({ vocabulary }) => {
 
   return (
     <button
-      className="bg-purple-500 text-gray-800  px-1 rounded-sm mx-1 text-xl relative cursor-pointer flex items-end gap-2 text-nowrap"
+      className="relative mx-1 flex cursor-pointer items-end gap-2 rounded-sm bg-purple-500 px-1 text-xl text-nowrap text-gray-800"
       onClick={() => playAudio()}
       ref={markRef}
     >

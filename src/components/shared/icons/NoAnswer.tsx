@@ -1,6 +1,6 @@
 export const NoAnswer = () => (
   <svg
-    className="w-[32px] h-[32px]"
+    className="h-[32px] w-[32px]"
     aria-hidden="true"
     xmlns="http://www.w3.org/2000/svg"
     width="24"

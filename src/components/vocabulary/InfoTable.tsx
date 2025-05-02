@@ -33,11 +33,11 @@ const InfoTable: FC = () => {
   return (
     vocabulary && (
       <button
-        className={`w-full ${show ? 'cursor-zoom-out' : 'blur-md cursor-zoom-in'}`}
+        className={`w-full ${show ? 'cursor-zoom-out' : 'cursor-zoom-in blur-md'}`}
         onClick={() => toggle()}
       >
-        <div className="overflow-x-auto min-h-[7rem]">
-          <table className="min-w-full divide-y divide-gray-200 border-b-gray-200 border-b-1 text-left mb-6">
+        <div className="min-h-[7rem] overflow-x-auto">
+          <table className="mb-6 min-w-full divide-y divide-gray-200 border-b-1 border-b-gray-200 text-left">
             <thead>
               <tr className="text-xs font-medium uppercase">
                 <th scope="col" className="px-6 py-3 tracking-wider">
@@ -46,7 +46,7 @@ const InfoTable: FC = () => {
                 <th scope="col" className="px-6 py-3 tracking-wider">
                   Meanings
                 </th>
-                <th scope="col" className="px-6 py-3 tracking-wider w-px">
+                <th scope="col" className="w-px px-6 py-3 tracking-wider">
                   Composition
                 </th>
               </tr>
@@ -74,7 +74,7 @@ const InfoTable: FC = () => {
                     </span>
                   ))}
                 </td>
-                <td className="pl-6 py-4 whitespace-nowrap">
+                <td className="py-4 pl-6 whitespace-nowrap">
                   <Composition />
                 </td>
               </tr>
@@ -84,7 +84,7 @@ const InfoTable: FC = () => {
             <table className="min-w-full text-left">
               <tbody>
                 <tr>
-                  <th className="px-6 py-4 leading-6 text-xs font-medium uppercase text-nowrap tracking-wider align-top">
+                  <th className="px-6 py-4 align-top text-xs leading-6 font-medium tracking-wider text-nowrap uppercase">
                     Reading Mnemonic
                   </th>
                   <td className="px-6 py-4 align-top">

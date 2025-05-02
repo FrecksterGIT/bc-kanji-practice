@@ -33,7 +33,7 @@ const VocabularyDetails: FC = () => {
           <div className="mb-12">
             {selectedIndex + 1} / {items.length}
           </div>
-          <div className="relative p-8 w-full text-center bg-gray-700 border-b-purple-400 border-b-2 text-white">
+          <div className="relative w-full border-b-2 border-b-purple-400 bg-gray-700 p-8 text-center text-white">
             <div className="text-9xl">{vocabulary.data.characters}</div>
             <div className="absolute top-2 right-2 flex gap-1">
               <button onClick={playAudio} className="cursor-pointer">
@@ -43,7 +43,7 @@ const VocabularyDetails: FC = () => {
             </div>
           </div>
           <ProgressBar />
-          <div className="w-full max-w-1/2 my-12">
+          <div className="my-12 w-full max-w-1/2">
             <KanaInput id="reading" />
           </div>
           <InfoTable />

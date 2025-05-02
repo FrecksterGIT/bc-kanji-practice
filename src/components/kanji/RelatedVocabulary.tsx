@@ -7,7 +7,7 @@ export const RelatedVocabulary: FC = () => {
 
   return (
     relatedVocabulary.length > 0 && (
-      <div className="flex gap-x-1 gap-y-4 flex-wrap justify-center">
+      <div className="flex flex-wrap justify-center gap-x-1 gap-y-4">
         {relatedVocabulary.map((vocab) => (
           <div key={vocab.id}>
             <Mark vocabulary={vocab} />

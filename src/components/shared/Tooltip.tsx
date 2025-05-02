@@ -9,7 +9,7 @@ export const Tooltip: FC<TooltipProps> = ({ left, children }) => {
 
   return (
     <div
-      className={`absolute text-nowrap text-gray-200 text-sm ${left ? `right-0` : `-translate-x-1/2 left-1/2`} bottom-full bg-black pt-1 pb-1 pl-3 pr-3 rounded-md mb-2`}
+      className={`absolute bottom-full mb-2 rounded-md bg-black pt-1 pr-3 pb-1 pl-3 text-sm text-nowrap text-gray-200 ${left ? 'right-0' : 'left-1/2 -translate-x-1/2'}`}
       ref={ref}
     >
       {children}

@@ -72,7 +72,7 @@ const KanaInput: FC<KanaInputProps> = ({
           value={internalValue}
           onChange={handleInputChange}
           placeholder={placeholder}
-          className={`mt-1 block w-full rounded-md focus-visible:outline-none text-4xl p-2 border bg-gray-700 ${getBorderColorClass()}`}
+          className={`mt-1 block w-full rounded-md border bg-gray-700 p-2 text-4xl focus-visible:outline-none ${getBorderColorClass()}`}
           id={id}
           name={name}
           ref={ref}
@@ -83,7 +83,7 @@ const KanaInput: FC<KanaInputProps> = ({
         />
       </form>
       {isValid && (
-        <span className="absolute h-full top-0 right-2 grid items-center pointer-events-none">
+        <span className="pointer-events-none absolute top-0 right-2 grid h-full items-center">
           <Correct />
         </span>
       )}

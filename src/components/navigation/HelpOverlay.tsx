@@ -6,7 +6,7 @@ interface HelpOverlayProps {
 }
 
 const Mono: FC<PropsWithChildren> = ({ children }) => (
-  <span className="font-mono bg-gray-700 px-1 rounded">{children}</span>
+  <span className="font-mono rounded bg-gray-700 px-1">{children}</span>
 );
 
 const HelpOverlay: FC<HelpOverlayProps> = ({ isOpen, onClose }) => {
@@ -39,16 +39,16 @@ const HelpOverlay: FC<HelpOverlayProps> = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+    <div className="bg-opacity-50 fixed inset-0 z-50 flex items-center justify-center bg-black">
       <div
         ref={overlayRef}
-        className="bg-gray-800 p-6 rounded-lg shadow-xl max-w-2xl w-full mx-4 text-gray-200"
+        className="mx-4 w-full max-w-2xl rounded-lg bg-gray-800 p-6 text-gray-200 shadow-xl"
       >
-        <div className="flex justify-between items-start mb-4">
+        <div className="mb-4 flex items-start justify-between">
           <h2 className="text-xl font-bold text-white">Help & Information</h2>
           <button onClick={onClose} className="text-gray-400 hover:text-white">
             <svg
-              className="w-5 h-5"
+              className="h-5 w-5"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -66,7 +66,7 @@ const HelpOverlay: FC<HelpOverlayProps> = ({ isOpen, onClose }) => {
 
         <div className="space-y-4">
           <section>
-            <h3 className="text-lg font-semibold text-white mb-2">About the Data</h3>
+            <h3 className="mb-2 text-lg font-semibold text-white">About the Data</h3>
             <p>
               This application relies on data from WaniKani, a Japanese language learning platform.
               The kanji and vocabulary items, along with their meanings, readings, and other
@@ -75,8 +75,8 @@ const HelpOverlay: FC<HelpOverlayProps> = ({ isOpen, onClose }) => {
           </section>
 
           <section>
-            <h3 className="text-lg font-semibold text-white mb-2">Keyboard Navigation</h3>
-            <ul className="list-disc pl-5 space-y-2">
+            <h3 className="mb-2 text-lg font-semibold text-white">Keyboard Navigation</h3>
+            <ul className="list-disc space-y-2 pl-5">
               <li>
                 <Mono>↑</Mono> <Mono>↓</Mono> <Mono>←</Mono> <Mono>→</Mono> - Use arrow keys to
                 navigate through items
@@ -91,7 +91,7 @@ const HelpOverlay: FC<HelpOverlayProps> = ({ isOpen, onClose }) => {
           </section>
 
           <section>
-            <h3 className="text-lg font-semibold text-white mb-2">Practice Tips</h3>
+            <h3 className="mb-2 text-lg font-semibold text-white">Practice Tips</h3>
             <p>
               Regular practice is key to mastering kanji and vocabulary. Use the marking feature to
               save items you find challenging for focused review later.

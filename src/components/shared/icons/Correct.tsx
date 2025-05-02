@@ -2,7 +2,7 @@
 
 export const Correct = () => (
   <svg
-    className="w-[32px] h-[32px] text-gray-800 dark:text-white"
+    className="h-[32px] w-[32px] text-gray-800 dark:text-white"
     aria-hidden="true"
     xmlns="http://www.w3.org/2000/svg"
     width="24"

@@ -16,20 +16,20 @@ const InfoTable: FC = () => {
   return (
     kanji && (
       <button
-        className={`min-w-2/3 ${show ? 'cursor-zoom-out' : 'blur-md cursor-zoom-in'}`}
+        className={`min-w-2/3 ${show ? 'cursor-zoom-out' : 'cursor-zoom-in blur-md'}`}
         onClick={() => toggle()}
       >
         <div className="overflow-x-auto">
-          <table className="min-w-full divide-y divide-gray-200 border-b-gray-200 border-b-1 text-left mb-6">
+          <table className="mb-6 min-w-full divide-y divide-gray-200 border-b-1 border-b-gray-200 text-left">
             <thead>
               <tr>
-                <th scope="col" className="px-6 py-3 text-xs font-medium uppercase tracking-wider">
+                <th scope="col" className="px-6 py-3 text-xs font-medium tracking-wider uppercase">
                   Onyomi
                 </th>
-                <th scope="col" className="px-6 py-3 text-xs font-medium uppercase tracking-wider">
+                <th scope="col" className="px-6 py-3 text-xs font-medium tracking-wider uppercase">
                   Kunyomi
                 </th>
-                <th scope="col" className="px-6 py-3 text-xs font-medium uppercase tracking-wider">
+                <th scope="col" className="px-6 py-3 text-xs font-medium tracking-wider uppercase">
                   Meanings
                 </th>
               </tr>
@@ -76,7 +76,7 @@ const InfoTable: FC = () => {
           <table className="min-w-full text-left">
             <tbody>
               <tr>
-                <th className="px-6 py-4 leading-6 text-xs font-medium uppercase text-nowrap tracking-wider align-top">
+                <th className="px-6 py-4 align-top text-xs leading-6 font-medium tracking-wider text-nowrap uppercase">
                   Meaning Mnemonic
                 </th>
                 <td className="px-6 py-4 align-top">
@@ -87,7 +87,7 @@ const InfoTable: FC = () => {
                 </td>
               </tr>
               <tr>
-                <th className="px-6 py-4 leading-6 text-xs font-medium uppercase text-nowrap tracking-wider align-top">
+                <th className="px-6 py-4 align-top text-xs leading-6 font-medium tracking-wider text-nowrap uppercase">
                   Reading Mnemonic
                 </th>
                 <td className="px-6 py-4 align-top">
