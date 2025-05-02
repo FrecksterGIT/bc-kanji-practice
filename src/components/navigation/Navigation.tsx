@@ -1,15 +1,18 @@
-import { type ChangeEventHandler, type FC, useCallback, useMemo } from 'react';
+import { type ChangeEventHandler, type FC, useCallback, useMemo, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useSettingsStore } from '../../store/settingsStore.ts';
 import useSession from '../../hooks/useSession.ts';
 import useMarkedItems from '../../hooks/useMarkedItems.ts';
 import { useEventListener } from 'usehooks-ts';
+import { Help } from '../shared/icons/Help.tsx';
+import HelpOverlay from './HelpOverlay.tsx';
 
 const Navigation: FC = () => {
   const { user, maxLevel, isLoggedIn } = useSession();
   const { level, setLevel } = useSettingsStore();
   const { markedItems } = useMarkedItems();
   const levelOptions = useMemo(() => Array.from({ length: maxLevel }, (_, i) => i + 1), [maxLevel]);
+  const [isHelpOpen, setIsHelpOpen] = useState(false);
 
   const handleLevelChange: ChangeEventHandler<HTMLSelectElement> = useCallback(
     (e) => {
@@ -87,13 +90,22 @@ const Navigation: FC = () => {
           <NavLink
             to="settings"
             className={({ isActive }) =>
-              `px-3 py-2 rounded hover:bg-gray-600 transition-colors ${isActive ? 'bg-gray-600' : ''}`
+              `mr-0 px-3 py-2 rounded hover:bg-gray-600 transition-colors ${isActive ? 'bg-gray-600' : ''}`
             }
           >
             {user?.username ?? 'Settings'}
           </NavLink>
+          <button
+            onClick={() => setIsHelpOpen(true)}
+            className="px-3 py-2 flex items-center cursor-pointer"
+            aria-label="Help"
+            title="Help & Information"
+          >
+            <Help />
+          </button>
         </div>
       </div>
+      <HelpOverlay isOpen={isHelpOpen} onClose={() => setIsHelpOpen(false)} />
     </nav>
   );
 };
