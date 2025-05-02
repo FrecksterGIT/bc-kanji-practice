@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import { isVocabulary } from '../utils/type-check.ts';
-import { WanikaniKanjiSubject } from '../types';
-import { getSubjectByIds } from '../utils/data/db.ts';
+import { isVocabulary } from '../utils/typeChecks.ts';
+import { WanikaniKanjiSubject } from '../wanikani';
+import { getSubjectByIds } from '../utils/itemDB.ts';
 import useItems from './useItems.ts';
 
 function useKanjiComposition() {

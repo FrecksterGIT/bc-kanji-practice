@@ -1,6 +1,6 @@
 import { type FC, RefObject, useCallback, useRef, useState } from 'react';
 import SelectableButton from './SelectableButton.tsx';
-import { isKanji } from '../../utils/type-check.ts';
+import { isKanji } from '../../utils/typeChecks.ts';
 import { useEventListener, useResizeObserver } from 'usehooks-ts';
 import useItems from '../../hooks/useItems.ts';
 

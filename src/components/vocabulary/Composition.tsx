@@ -33,10 +33,10 @@ export const Composition: FC = () => {
           kanjiData.map((kanjiItem) => {
             return (
               <tr key={kanjiItem.id}>
-                <td className="px-2 pt-2 whitespace-nowrap text-white">
+                <td className="px-2 pt-2 whitespace-nowrap text-white" lang="ja">
                   {kanjiItem.data.characters}
                 </td>
-                <td className="px-2 pt-2 whitespace-nowrap">
+                <td className="px-2 pt-2 whitespace-nowrap" lang="ja">
                   {kanjiItem.data.readings
                     .filter((r) => r.type === 'onyomi')
                     .map((reading) => (
@@ -48,7 +48,7 @@ export const Composition: FC = () => {
                       </span>
                     ))}
                 </td>
-                <td className="px-2 pt-2 whitespace-nowrap">
+                <td className="px-2 pt-2 whitespace-nowrap" lang="ja">
                   {kanjiItem.data.readings
                     .filter((r) => r.type === 'kunyomi')
                     .map((reading) => (

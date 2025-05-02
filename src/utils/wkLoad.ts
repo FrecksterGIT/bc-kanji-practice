@@ -4,7 +4,7 @@ import {
   WanikaniCollection,
   WanikaniSubject,
   WanikaniUserData,
-} from '../../types';
+} from '../wanikani';
 
 const fetchFn = async <T>({ url, apiKey }: { url: string; apiKey: string }): Promise<T> => {
   const response = await fetch(url, {
@@ -21,11 +21,11 @@ const fetchFn = async <T>({ url, apiKey }: { url: string; apiKey: string }): Pro
   return response.json();
 };
 
-const cache = createCache({
+const wkLoad = createCache({
   storage: { type: 'memory' },
 })
-  .define('fetchAssignments', fetchFn<WanikaniCollection<WanikaniAssignment>>)
-  .define('fetchSubjects', fetchFn<WanikaniCollection<WanikaniSubject>>)
-  .define('fetchUser', fetchFn<{ data: WanikaniUserData }>);
+  .define('assignments', fetchFn<WanikaniCollection<WanikaniAssignment>>)
+  .define('subjects', fetchFn<WanikaniCollection<WanikaniSubject>>)
+  .define('user', fetchFn<{ data: WanikaniUserData }>);
 
-export default cache;
+export default wkLoad;

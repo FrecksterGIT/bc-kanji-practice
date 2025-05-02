@@ -2,13 +2,13 @@ import { useCallback, useEffect, useState } from 'react';
 import { useSettingsStore } from '../store/settingsStore.ts';
 import { useLocation } from 'react-router-dom';
 
-import { WanikaniSubject } from '../types';
+import { WanikaniSubject } from '../wanikani';
 import useMarkedItems from './useMarkedItems.ts';
 import {
   getAllAssignments,
   getSubjectByIds,
   getSubjectsByObjectAndLevel,
-} from '../utils/data/db.ts';
+} from '../utils/itemDB.ts';
 
 export const useSelectedItems = () => {
   const [loading, setLoading] = useState(false);

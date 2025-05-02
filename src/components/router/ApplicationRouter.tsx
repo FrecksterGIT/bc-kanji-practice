@@ -1,8 +1,8 @@
 import { FC, useContext } from 'react';
 import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom';
 import App from '../../App.tsx';
-import Items from '../sections/Items.tsx';
-import Settings from '../settings/Settings.tsx';
+import Items from '../pages/Items.tsx';
+import Settings from '../pages/Settings.tsx';
 import useSession from '../../hooks/useSession.ts';
 import { WanikaniContext } from '../../contexts/WanikaniContext.ts';
 

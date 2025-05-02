@@ -1,7 +1,7 @@
 import { type FC, Ref, useMemo } from 'react';
 import { NoAnswer } from './icons/NoAnswer.tsx';
 import { CorrectAnswer } from './icons/CorrectAnswer.tsx';
-import { isKanji } from '../../utils/type-check.ts';
+import { isKanji } from '../../utils/typeChecks.ts';
 import useItems from '../../hooks/useItems.ts';
 
 interface SelectableButtonProps {
@@ -36,6 +36,7 @@ const SelectableButton: FC<SelectableButtonProps> = ({ position, ref }) => {
       {valid && <CorrectAnswer />}
       <div
         className={`max-w-min rounded-lg px-2 py-1 text-left text-xl text-nowrap ${backgroundColor}`}
+        lang="ja"
       >
         {term}
       </div>

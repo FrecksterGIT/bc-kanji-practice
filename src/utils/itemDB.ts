@@ -1,10 +1,10 @@
 import { DBSchema, openDB } from 'idb';
-import { WanikaniAssignment, WanikaniSubject } from '../../types';
+import { WanikaniAssignment, WanikaniSubject } from '../wanikani';
 
 type ValidValue<T> = Exclude<T, null | undefined | 0 | '' | false>;
 const BooleanFilter = <T>(x: T): x is ValidValue<T> => Boolean(x);
 
-interface DB extends DBSchema {
+interface ItemDB extends DBSchema {
   subjects: {
     value: WanikaniSubject;
     key: number;
@@ -19,7 +19,7 @@ interface DB extends DBSchema {
 }
 
 async function getDB() {
-  return openDB<DB>('db', 1, {
+  return openDB<ItemDB>('db', 1, {
     upgrade(database, oldVersion, newVersion) {
       if (oldVersion !== newVersion && oldVersion !== 0) {
         database.deleteObjectStore('subjects');

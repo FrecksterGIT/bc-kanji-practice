@@ -2,7 +2,7 @@ import { FC, PropsWithChildren, useCallback, useEffect, useMemo, useState } from
 import { ItemContext, ItemContextType } from './ItemContext.tsx';
 import { isKatakana, toHiragana } from 'wanakana';
 import { useSelectedItems } from '../hooks/useSelectedItems.ts';
-import { isKanaVocabulary, isKanji, isVocabulary } from '../utils/type-check.ts';
+import { isKanaVocabulary, isKanji, isVocabulary } from '../utils/typeChecks.ts';
 
 const ItemProvider: FC<PropsWithChildren> = ({ children }) => {
   const { data: items } = useSelectedItems();

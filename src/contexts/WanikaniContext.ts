@@ -1,5 +1,5 @@
 import { createContext } from 'react';
-import { WanikaniAssignment, WanikaniSubject } from '../types';
+import { WanikaniAssignment, WanikaniSubject } from '../wanikani';
 
 export type BasicDataType = WanikaniSubject | WanikaniAssignment;
 

@@ -4,7 +4,7 @@ import InfoTable from './InfoTable.tsx';
 import { RelatedVocabulary } from './RelatedVocabulary.tsx';
 import MarkButton from '../shared/MarkButton.tsx';
 import { ProgressBar } from '../shared/ProgressBar.tsx';
-import { isKanji } from '../../utils/type-check.ts';
+import { isKanji } from '../../utils/typeChecks.ts';
 import useItems from '../../hooks/useItems.ts';
 
 const KanjiDetails: FC = () => {
@@ -19,7 +19,9 @@ const KanjiDetails: FC = () => {
             {selectedIndex + 1} / {items.length}
           </div>
           <div className="relative w-full border-b-2 border-b-pink-400 bg-gray-700 p-8 text-center text-white">
-            <span className="text-9xl">{kanji.data.characters}</span>
+            <span className="text-9xl" lang="ja">
+              {kanji.data.characters}
+            </span>
             <div className="absolute top-2 right-1">
               <MarkButton />
             </div>

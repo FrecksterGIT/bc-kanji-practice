@@ -1,7 +1,7 @@
 import { FC, RefObject, useCallback, useRef } from 'react';
 import { useHover } from 'usehooks-ts';
 import { Tooltip } from './Tooltip.tsx';
-import { WanikaniVocabularySubject } from '../../types';
+import { WanikaniVocabularySubject } from '../../wanikani';
 import { useAudioPlayerContext } from 'react-use-audio-player';
 
 interface MarkProps {
@@ -36,13 +36,13 @@ export const Mark: FC<MarkProps> = ({ vocabulary }) => {
       onClick={() => playAudio()}
       ref={markRef}
     >
-      <span>{word}</span>
+      <span lang="ja">{word}</span>
       <span className="text-sm">{level}</span>
       {showTooltip && (
         <Tooltip>
           {meaning}
           <br />
-          {reading}
+          <span lang="ja">{reading}</span>
         </Tooltip>
       )}
     </button>
