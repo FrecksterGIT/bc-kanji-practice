@@ -1,4 +1,5 @@
 import { useState, ChangeEvent, useCallback, useEffect, FC, useRef, FormEventHandler } from 'react';
+import { useEventListener } from 'usehooks-ts';
 import { toHiragana } from 'wanakana';
 import { Correct } from './icons/Correct.tsx';
 import useItems from '../../hooks/useItems.ts';
@@ -24,6 +25,13 @@ const KanaInput: FC<KanaInputProps> = ({
     setValidationFeedback(0);
     ref.current?.focus();
   }, [item]);
+
+  useEventListener('click', (e) => {
+    const target = e.target as HTMLElement;
+    if (ref.current && target.tagName !== 'SELECT') {
+      ref.current.focus();
+    }
+  });
 
   const handleInputChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
     const input = e.target.value;
