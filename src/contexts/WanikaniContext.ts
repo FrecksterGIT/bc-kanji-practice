@@ -12,7 +12,7 @@ export const baseUrl = 'https://api.wanikani.com/';
 
 export const resources: Record<ResourceType, string> = {
   [ResourceType.subjects]: '/v2/subjects?types=kanji,vocabulary,kana_vocabulary',
-  [ResourceType.assignments]: '/v2/assignments?started=true&burned=false',
+  [ResourceType.assignments]: '/v2/assignments?started=true',
 };
 
 export type WanikaniContextType = {
@@ -22,5 +22,5 @@ export type WanikaniContextType = {
 
 export const WanikaniContext = createContext<WanikaniContextType>({
   loading: false,
-  loadedCount: 0
+  loadedCount: 0,
 });

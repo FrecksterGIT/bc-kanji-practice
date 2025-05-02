@@ -34,7 +34,7 @@ const Settings: FC = () => {
   return (
     <div className="flex flex-col items-center py-8">
       <h1 className="text-3xl font-bold mb-4">Settings</h1>
-      <div className="p-6 rounded-lg shadow-md max-w-md w-full">
+      <div className="px-6 max-w-md w-full">
         <p className="mb-4">Configure your application preferences here.</p>
         <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
           {/* API Key Input */}
@@ -48,7 +48,7 @@ const Settings: FC = () => {
                 id="apiKey"
                 value={apiKeyInput}
                 onChange={handleApiKeyChange}
-                className="mt-1 block w-full rounded-l-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm p-2 border"
+                className="mt-1 block w-full rounded-l-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-2 border"
                 placeholder="Enter your API key"
               />
               <button

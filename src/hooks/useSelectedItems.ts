@@ -4,7 +4,11 @@ import { useLocation } from 'react-router-dom';
 
 import { WanikaniSubject } from '../types';
 import useMarkedItems from './useMarkedItems.ts';
-import { getAllAssignments, getSubjectByIds, getSubjectsByObjectAndLevel } from '../utils/data/db.ts';
+import {
+  getAllAssignments,
+  getSubjectByIds,
+  getSubjectsByObjectAndLevel,
+} from '../utils/data/db.ts';
 
 export const useSelectedItems = () => {
   const [loading, setLoading] = useState(false);

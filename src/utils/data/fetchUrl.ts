@@ -6,19 +6,7 @@ import {
   WanikaniUserData,
 } from '../../types';
 
-const fetchFn = async <T>(params: unknown): Promise<T> => {
-  if (
-    typeof params !== 'object' ||
-    params === null ||
-    !('url' in params) ||
-    !('url' in params) ||
-    !('apiKey' in params) ||
-    typeof params.apiKey !== 'string' ||
-    typeof params.url !== 'string'
-  ) {
-    throw new Error('Missing url or apiKey in parameters');
-  }
-  const { url, apiKey } = params;
+const fetchFn = async <T>({ url, apiKey }: { url: string; apiKey: string }): Promise<T> => {
   const response = await fetch(url, {
     method: 'GET',
     headers: {

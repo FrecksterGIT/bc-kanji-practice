@@ -20,7 +20,11 @@ interface DB extends DBSchema {
 
 async function getDB() {
   return openDB<DB>('db', 1, {
-    upgrade(database) {
+    upgrade(database, oldVersion, newVersion) {
+      if (oldVersion !== newVersion && oldVersion !== 0) {
+        database.deleteObjectStore('subjects');
+        database.deleteObjectStore('assignments');
+      }
       const subjectStore = database.createObjectStore('subjects', {
         keyPath: 'id',
         autoIncrement: false,
