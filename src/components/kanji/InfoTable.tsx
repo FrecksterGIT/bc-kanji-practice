@@ -1,11 +1,11 @@
-import { type FC, useContext, useEffect } from 'react';
+import { type FC, useEffect } from 'react';
 import { useToggle } from 'usehooks-ts';
 import { formatHint } from '../../utils/hintFormatter.ts';
-import { ValidationContext } from '../../contexts/ValidationContext.tsx';
 import { isKanji } from '../../utils/type-check.ts';
+import useItems from '../../hooks/useItems.ts';
 
 const InfoTable: FC = () => {
-  const { item, isValid } = useContext(ValidationContext);
+  const { item, isValid } = useItems();
   const [show, toggle, set] = useToggle(isValid ?? false);
   const kanji = isKanji(item) ? item : null;
 
@@ -49,14 +49,16 @@ const InfoTable: FC = () => {
                     ))}
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap">
-                  {kanji.data.readings.filter(r => r.type === "kunyomi").map((reading) => (
-                    <span
-                      key={reading.reading}
-                      className={`separated-comma ${reading.primary ? 'text-white' : ''}`}
-                    >
-                      {reading.reading}
-                    </span>
-                  ))}
+                  {kanji.data.readings
+                    .filter((r) => r.type === 'kunyomi')
+                    .map((reading) => (
+                      <span
+                        key={reading.reading}
+                        className={`separated-comma ${reading.primary ? 'text-white' : ''}`}
+                      >
+                        {reading.reading}
+                      </span>
+                    ))}
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap">
                   {kanji.data.meanings.map((meaning) => (

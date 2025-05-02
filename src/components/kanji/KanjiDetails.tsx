@@ -1,38 +1,40 @@
-import { type FC, useContext } from 'react';
+import { type FC } from 'react';
 import KanaInput from '../shared/KanaInput.tsx';
 import InfoTable from './InfoTable.tsx';
 import { RelatedVocabulary } from './RelatedVocabulary.tsx';
-import { ValidationContext } from '../../contexts/ValidationContext.tsx';
 import MarkButton from '../shared/MarkButton.tsx';
 import { ProgressBar } from '../shared/ProgressBar.tsx';
 import { isKanji } from '../../utils/type-check.ts';
+import useItems from '../../hooks/useItems.ts';
 
 const KanjiDetails: FC = () => {
-  const { item, selectedIndex, items } = useContext(ValidationContext);
+  const { item, selectedIndex, items } = useItems();
   const kanji = isKanji(item) ? item : null;
 
   return (
-    kanji && <div className="mb-6">
-      <div className="flex flex-col items-center">
-        <div className="mb-12">
-          {selectedIndex + 1} / {items.length}
-        </div>
-        <div className="relative p-8 w-full text-center bg-gray-700 border-b-pink-400 border-b-2 text-white">
-          <span className="text-9xl">{kanji.data.characters}</span>
-          <div className="absolute top-2 right-1">
-            <MarkButton />
+    kanji && (
+      <div className="mb-6">
+        <div className="flex flex-col items-center">
+          <div className="mb-12">
+            {selectedIndex + 1} / {items.length}
           </div>
+          <div className="relative p-8 w-full text-center bg-gray-700 border-b-pink-400 border-b-2 text-white">
+            <span className="text-9xl">{kanji.data.characters}</span>
+            <div className="absolute top-2 right-1">
+              <MarkButton />
+            </div>
+          </div>
+          <ProgressBar />
+          <div className="w-full max-w-1/2 my-12">
+            <KanaInput id="reading" />
+          </div>
+          <div className="mb-8 w-full">
+            <RelatedVocabulary />
+          </div>
+          <InfoTable />
         </div>
-        <ProgressBar />
-        <div className="w-full max-w-1/2 my-12">
-          <KanaInput id="reading" />
-        </div>
-        <div className="mb-8 w-full">
-          <RelatedVocabulary />
-        </div>
-        <InfoTable />
       </div>
-    </div>
+    )
   );
 };
 

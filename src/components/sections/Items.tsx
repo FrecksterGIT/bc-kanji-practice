@@ -1,12 +1,12 @@
-import { FC, useContext } from 'react';
-import { ValidationContext } from '../../contexts/ValidationContext.tsx';
+import { FC } from 'react';
 import { isKanaVocabulary, isKanji, isVocabulary } from '../../utils/type-check.ts';
 import KanjiDetails from '../kanji/KanjiDetails.tsx';
 import VocabularyDetails from '../vocabulary/VocabularyDetails.tsx';
 import List from '../shared/List.tsx';
+import useItems from '../../hooks/useItems.ts';
 
 const Items: FC = () => {
-  const { item } = useContext(ValidationContext);
+  const { item } = useItems();
 
   return (
     <>
@@ -14,7 +14,9 @@ const Items: FC = () => {
         <div className="w-full">
           {isKanji(item) && <KanjiDetails />}
           {(isVocabulary(item) || isKanaVocabulary(item)) && <VocabularyDetails />}
-          {!item && <div className="text-center text-2xl">Sorry, couldn't find any items to show.</div>}
+          {!item && (
+            <div className="text-center text-2xl">Sorry, couldn't find any items to show.</div>
+          )}
         </div>
       </div>
       {item && <List />}

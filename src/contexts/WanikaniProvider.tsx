@@ -37,15 +37,27 @@ export const WanikaniProvider: FC<PropsWithChildren> = ({ children }) => {
 
   const fetcher = useCallback(
     async function fetcher<T extends BasicDataType = BasicDataType>(
-      url: string
-    ): Promise<{ data: T[]; next_url?: string }> {
+      url: string,
+      type: ResourceType
+    ): Promise<{ data: T[]; next_url?: string | null }> {
       if (!apiKey) {
         return Promise.resolve({ data: [], next_url: undefined });
       }
       setLoadedCount((prev) => prev + 1);
-      const data= await cache.fetchUrl({ url, apiKey });
-      await writeData<T>(data.data);
-      return { data: data.data, next_url: data.pages?.next_url };
+      if (type === ResourceType.subjects) {
+        const data = await cache.fetchSubjects({ url, apiKey });
+        if (data.data.length > 0) {
+          await writeData(data.data);
+        }
+        return { data: data.data as T[], next_url: data.pages?.next_url };
+      } else if (type === ResourceType.assignments) {
+        const data = await cache.fetchAssignments({ url, apiKey });
+        if (data.data.length > 0) {
+          await writeData(data.data);
+        }
+        return { data: data.data as T[], next_url: data.pages?.next_url };
+      }
+      return { data: [] };
     },
     [apiKey, writeData]
   );
@@ -56,19 +68,18 @@ export const WanikaniProvider: FC<PropsWithChildren> = ({ children }) => {
       latest: string | null
     ) {
       const url = new URL(resources[type], baseUrl);
-      if (!latest) {
-        const result = await fetcher<T>(url.toString());
-
+      if (latest) {
+        url.searchParams.set('updated_after', latest);
+        await fetcher<T>(url.toString(), type).then();
+      } else {
+        const result = await fetcher<T>(url.toString(), type);
         if (result.next_url) {
           let next = result.next_url;
           while (next) {
-            const nextData = await fetcher<T>(next);
+            const nextData = await fetcher<T>(next, type);
             next = nextData.next_url!;
           }
         }
-      } else {
-        url.searchParams.set('updated_after', latest);
-        await fetcher<T>(url.toString()).then();
       }
     },
     [fetcher]

@@ -1,6 +1,12 @@
 import { createCache } from 'async-cache-dedupe';
+import {
+  WanikaniAssignment,
+  WanikaniCollection,
+  WanikaniSubject,
+  WanikaniUserData,
+} from '../../types';
 
-const fetchFn = async (params: unknown) => {
+const fetchFn = async <T>(params: unknown): Promise<T> => {
   if (
     typeof params !== 'object' ||
     params === null ||
@@ -30,14 +36,8 @@ const fetchFn = async (params: unknown) => {
 const cache = createCache({
   storage: { type: 'memory' },
 })
-  .define(
-    'fetchUrl',
-    {
-      ttl: 60 * 60,
-      stale: 60 * 60,
-    },
-    fetchFn
-  )
-  .define('fetchUser', fetchFn);
+  .define('fetchAssignments', fetchFn<WanikaniCollection<WanikaniAssignment>>)
+  .define('fetchSubjects', fetchFn<WanikaniCollection<WanikaniSubject>>)
+  .define('fetchUser', fetchFn<{ data: WanikaniUserData }>);
 
 export default cache;

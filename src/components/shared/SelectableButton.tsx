@@ -1,15 +1,16 @@
-import { type FC, useContext, useMemo } from 'react';
+import { type FC, Ref, useMemo } from 'react';
 import { NoAnswer } from './icons/NoAnswer.tsx';
 import { CorrectAnswer } from './icons/CorrectAnswer.tsx';
-import { ValidationContext } from '../../contexts/ValidationContext.tsx';
 import { isKanji } from '../../utils/type-check.ts';
+import useItems from '../../hooks/useItems.ts';
 
 interface SelectableButtonProps {
   position: number;
+  ref?: Ref<HTMLButtonElement>;
 }
 
-const SelectableButton: FC<SelectableButtonProps> = ({ position }) => {
-  const { validItems, items, selectedIndex, setSelectedIndex } = useContext(ValidationContext);
+const SelectableButton: FC<SelectableButtonProps> = ({ position, ref }) => {
+  const { validItems, items, selectedIndex, setSelectedIndex } = useItems();
   const selected = position === selectedIndex;
   const valid = validItems.includes(items[position].id);
   const term = items[position].data.characters;
@@ -29,6 +30,7 @@ const SelectableButton: FC<SelectableButtonProps> = ({ position }) => {
     <button
       className={`cursor-pointer grid grid-cols-[min-content_auto] items-center gap-2 ${textColor}`}
       onClick={() => setSelectedIndex(position)}
+      ref={ref}
     >
       {!valid && <NoAnswer />}
       {valid && <CorrectAnswer />}

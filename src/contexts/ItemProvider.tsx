@@ -1,11 +1,11 @@
 import { FC, PropsWithChildren, useCallback, useEffect, useMemo, useState } from 'react';
-import { ValidationContext, ValidationContextType } from './ValidationContext.tsx';
+import { ItemContext, ItemContextType } from './ItemContext.tsx';
 import { isKatakana, toHiragana } from 'wanakana';
-import { useItems } from '../hooks/useItems.ts';
+import { useSelectedItems } from '../hooks/useSelectedItems.ts';
 import { isKanaVocabulary, isKanji, isVocabulary } from '../utils/type-check.ts';
 
-const ValidationProvider: FC<PropsWithChildren> = ({ children }) => {
-  const { data: items } = useItems();
+const ItemProvider: FC<PropsWithChildren> = ({ children }) => {
+  const { data: items } = useSelectedItems();
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
   const item = useMemo(() => items?.[selectedIndex], [items, selectedIndex]);
   const [validItems, setValidItems] = useState<number[]>([]);
@@ -74,30 +74,13 @@ const ValidationProvider: FC<PropsWithChildren> = ({ children }) => {
   );
 
   useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      switch (e.key) {
-        case 'ArrowRight':
-          setSelectedIndex((prev) => (prev + 1) % items.length);
-          break;
-        case 'ArrowLeft':
-          setSelectedIndex((prev) => (prev - 1 + items.length) % items.length);
-          break;
-      }
-    };
-
-    window.addEventListener('keydown', handleKeyDown);
-    return () => {
-      window.removeEventListener('keydown', handleKeyDown);
-    };
-  }, [items.length]);
-
-  useEffect(() => {
     if (items && items.length > 0) {
       setSelectedIndex(0);
+      setValidItems([]);
     }
   }, [items]);
 
-  const contextValue: ValidationContextType = useMemo(
+  const contextValue: ItemContextType = useMemo(
     () => ({
       items,
       item,
@@ -113,7 +96,7 @@ const ValidationProvider: FC<PropsWithChildren> = ({ children }) => {
     [items, item, selectedIndex, validItems, validateInput, isValid, nextValidIndex]
   );
 
-  return <ValidationContext value={contextValue}>{children}</ValidationContext>;
+  return <ItemContext value={contextValue}>{children}</ItemContext>;
 };
 
-export default ValidationProvider;
+export default ItemProvider;

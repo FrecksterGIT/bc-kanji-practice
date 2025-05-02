@@ -61,7 +61,7 @@ export const ApplicationRouter: FC = () => {
     return (
       <div className="flex min-h-screen flex-col bg-gray-900 text-gray-400">
         <div className="flex-grow container mx-auto flex items-center justify-center">
-          <div className="text-xl">Loading data... ({loadedCount} resources loaded)</div>
+          <div className="text-xl">Updating data... ({loadedCount} resources loaded)</div>
         </div>
       </div>
     );

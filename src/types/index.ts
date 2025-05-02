@@ -5,8 +5,6 @@ export interface WanikaniResourceResponse<T> {
   data: T;
 }
 
-export type WanikaniUserResponse = WanikaniResourceResponse<WanikaniUserData>;
-
 export interface WanikaniUserData {
   id: string;
   username: string;
@@ -59,7 +57,6 @@ export interface WanikaniAssignment {
 
 export type WanikaniSubject =
   | WanikaniKanjiSubject
-  // | WanikaniRadicalSubject
   | WanikaniVocabularySubject
   | WanikaniKanaVocabularySubject;
 
@@ -90,18 +87,6 @@ export interface WanikaniKanjiSubject extends WanikaniBaseSubject {
     meaning_hint: string | null;
     reading_mnemonic: string;
     reading_hint: string | null;
-  };
-}
-
-export interface WanikaniRadicalSubject extends WanikaniBaseSubject {
-  data: WanikaniBaseSubject['data'] & {
-    subject_type: 'radical';
-    characters: string | null;
-    character_images: WanikaniCharacterImage[];
-    meanings: WanikaniMeaning[];
-    amalgamation_subject_ids: number[];
-    meaning_mnemonic: string;
-    meaning_hint: string | null;
   };
 }
 
@@ -175,4 +160,17 @@ export interface WanikaniPronunciationAudio {
     voice_actor_name: string;
     voice_description: string;
   };
+}
+
+export interface WanikaniCollection<T> {
+  object: string;
+  url: string;
+  data_updated_at: string;
+  total_count: number;
+  pages: {
+    per_page: number;
+    next_url: string | null;
+    previous_url: string | null;
+  };
+  data: T[];
 }

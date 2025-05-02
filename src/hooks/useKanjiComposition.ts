@@ -1,11 +1,11 @@
-import { useContext, useEffect, useState } from 'react';
-import { ValidationContext } from '../contexts/ValidationContext.tsx';
+import { useEffect, useState } from 'react';
 import { isVocabulary } from '../utils/type-check.ts';
 import { WanikaniKanjiSubject } from '../types';
 import { getSubjectByIds } from '../utils/data/db.ts';
+import useItems from './useItems.ts';
 
 function useKanjiComposition() {
-  const { item } = useContext(ValidationContext);
+  const { item } = useItems();
   const vocabulary = isVocabulary(item) ? item : null;
   const [allKanji, setAllKanji] = useState<WanikaniKanjiSubject[]>([]);
 
