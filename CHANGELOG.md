@@ -1,3 +1,10 @@
+# [2.5.0](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.4.0...v2.5.0) (2025-05-02)
+
+
+### Features
+
+* display context sentences for vocabulary ([eef3086](https://github.com/FrecksterGIT/bc-kanji-practice/commit/eef30867e617c8285eba2f556417edb721d88bee))
+
 # [2.4.0](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.3.1...v2.4.0) (2025-05-02)
 
 
