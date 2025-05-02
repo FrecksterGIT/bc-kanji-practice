@@ -1,23 +1,30 @@
-import { type FC, useCallback, useContext, useRef } from 'react';
+import { type FC, useCallback } from 'react';
 import KanaInput from '../shared/KanaInput.tsx';
 import InfoTable from './InfoTable.tsx';
-import { ValidationContext } from '../../contexts/ValidationContext.tsx';
 import MarkButton from '../shared/MarkButton.tsx';
 import { ProgressBar } from '../shared/ProgressBar.tsx';
 import { isKanaVocabulary, isVocabulary } from '../../utils/type-check.ts';
 import { Audio } from '../shared/icons/Audio.tsx';
+import { useAudioPlayerContext } from 'react-use-audio-player';
+import useItems from '../../hooks/useItems.ts';
 
 const VocabularyDetails: FC = () => {
-  const { item, selectedIndex, items } = useContext(ValidationContext);
+  const { item, selectedIndex, items } = useItems();
   const vocabulary = isVocabulary(item) || isKanaVocabulary(item) ? item : null;
-  const audioRef = useRef<HTMLAudioElement>(null);
+  const { load } = useAudioPlayerContext();
 
   const playAudio = useCallback(() => {
-    const audio = audioRef.current;
-    if (audio) {
-      audio.play().then();
+    if (!vocabulary) return;
+    const url = vocabulary.data.pronunciation_audios.find(
+      (a) => a.metadata.gender === 'male' && a.content_type === 'audio/mpeg'
+    )?.url;
+    if (url) {
+      load(vocabulary.data.pronunciation_audios[1].url, {
+        format: 'mp3',
+        autoplay: true,
+      });
     }
-  }, []);
+  }, [load, vocabulary]);
 
   return (
     vocabulary && (
@@ -35,13 +42,6 @@ const VocabularyDetails: FC = () => {
               <MarkButton />
             </div>
           </div>
-          <audio ref={audioRef} key={vocabulary.url}>
-            {vocabulary.data.pronunciation_audios
-              .filter((a) => a.metadata.gender === 'male')
-              .map((a) => (
-                <source key={a.url} src={a.url} type={a.content_type} />
-              ))}
-          </audio>
           <ProgressBar />
           <div className="w-full max-w-1/2 my-12">
             <KanaInput id="reading" />

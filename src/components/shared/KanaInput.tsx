@@ -1,16 +1,7 @@
-import {
-  useState,
-  ChangeEvent,
-  useCallback,
-  useContext,
-  useEffect,
-  FC,
-  useRef,
-  FormEventHandler,
-} from 'react';
+import { useState, ChangeEvent, useCallback, useEffect, FC, useRef, FormEventHandler } from 'react';
 import { toHiragana } from 'wanakana';
 import { Correct } from './icons/Correct.tsx';
-import { ValidationContext } from '../../contexts/ValidationContext.tsx';
+import useItems from '../../hooks/useItems.ts';
 
 interface KanaInputProps {
   placeholder?: string;
@@ -24,7 +15,7 @@ const KanaInput: FC<KanaInputProps> = ({
   name,
 }) => {
   const ref = useRef<HTMLInputElement>(null);
-  const { validate, item, isValid, moveToNext } = useContext(ValidationContext);
+  const { validate, item, isValid, moveToNext } = useItems();
   const [validationFeedback, setValidationFeedback] = useState(0);
   const [internalValue, setInternalValue] = useState<string>('');
 

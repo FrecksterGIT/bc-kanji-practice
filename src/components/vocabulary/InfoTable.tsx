@@ -1,14 +1,14 @@
-import { type FC, useContext, useEffect } from 'react';
+import { type FC, useEffect } from 'react';
 import { isKatakana, toHiragana } from 'wanakana';
 import { WanikaniReading } from '../../types';
 import { useToggle } from 'usehooks-ts';
 import { formatHint } from '../../utils/hintFormatter.ts';
 import { Composition } from './Composition.tsx';
-import { ValidationContext } from '../../contexts/ValidationContext.tsx';
 import { isKanaVocabulary, isVocabulary } from '../../utils/type-check.ts';
+import useItems from '../../hooks/useItems.ts';
 
 const InfoTable: FC = () => {
-  const { item, isValid } = useContext(ValidationContext);
+  const { item, isValid } = useItems();
   const vocabulary = isVocabulary(item) || isKanaVocabulary(item) ? item : null;
   const [show, toggle, set] = useToggle(isValid ?? false);
 
@@ -54,14 +54,15 @@ const InfoTable: FC = () => {
             <tbody>
               <tr>
                 <td className="px-6 py-4 whitespace-nowrap">
-                  {isVocabulary(vocabulary) && vocabulary.data.readings.map((reading) => (
-                    <span
-                      key={reading.reading}
-                      className={`separated-comma ${reading.primary ? 'text-white' : ''}`}
-                    >
-                      {getReading(reading.reading, vocabulary.data.readings)}
-                    </span>
-                  ))}
+                  {isVocabulary(vocabulary) &&
+                    vocabulary.data.readings.map((reading) => (
+                      <span
+                        key={reading.reading}
+                        className={`separated-comma ${reading.primary ? 'text-white' : ''}`}
+                      >
+                        {getReading(reading.reading, vocabulary.data.readings)}
+                      </span>
+                    ))}
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap">
                   {vocabulary.data.meanings.map((meaning) => (

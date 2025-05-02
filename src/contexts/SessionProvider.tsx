@@ -28,10 +28,10 @@ export const SessionProvider: FC<UserProviderProps> = ({ children }) => {
       setLoading(true);
       cache
         .fetchUser({ url: 'https://api.wanikani.com/v2/user', apiKey })
-        .then((data) => {
-          setUser(data.data);
+        .then(({ data }) => {
+          setUser(data);
           setIsLoggedIn(true);
-          setMaxLevel(data.data.level);
+          setMaxLevel(data.level);
           setLoading(false);
         })
         .catch(() => {

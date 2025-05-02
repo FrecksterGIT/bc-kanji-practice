@@ -1,13 +1,17 @@
-import { FC, useCallback, useContext } from 'react';
-import { ValidationContext } from '../../contexts/ValidationContext.tsx';
+import { FC, RefObject, useCallback, useRef } from 'react';
 import { BookmarkEmpty } from './icons/BookmarkEmpty.tsx';
 import { BookmarkFilled } from './icons/BookmarkFilled.tsx';
 import useMarkedItems from '../../hooks/useMarkedItems.ts';
+import useItems from '../../hooks/useItems.ts';
+import { useEventListener, useHover } from 'usehooks-ts';
+import { Tooltip } from './Tooltip.tsx';
 
 const MarkButton: FC = () => {
-  const { item } = useContext(ValidationContext);
+  const { item } = useItems();
   const { markedItems, setMarkedItems } = useMarkedItems();
   const isMarked = markedItems.some((marked) => marked === item.id);
+  const markRef = useRef<HTMLButtonElement>(null);
+  const showTooltip = useHover(markRef as RefObject<HTMLButtonElement>);
 
   const handleMark = useCallback(() => {
     if (isMarked) {
@@ -17,13 +21,22 @@ const MarkButton: FC = () => {
     }
   }, [isMarked, item, setMarkedItems]);
 
+  useEventListener('keydown', (e) => {
+    if (e.key === 'm' && e.altKey) {
+      handleMark();
+    }
+  });
+
   return (
-    <button
-      className="cursor-pointer"
-      onClick={handleMark}
-      title={isMarked ? 'Unmark item' : 'Mark item'}
-    >
+    <button className="cursor-pointer relative" onClick={handleMark} ref={markRef}>
       {isMarked ? <BookmarkFilled /> : <BookmarkEmpty />}
+      {showTooltip && (
+        <Tooltip left>
+          {isMarked ? 'unmark item' : 'mark item'}
+          <br />
+          <span className="text-xs">(alt + m) to toggle</span>
+        </Tooltip>
+      )}
     </button>
   );
 };
