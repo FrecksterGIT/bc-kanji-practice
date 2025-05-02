@@ -1,3 +1,10 @@
+## [2.3.1](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.3.0...v2.3.1) (2025-05-02)
+
+
+### Bug Fixes
+
+* show burned items ([a7b4055](https://github.com/FrecksterGIT/bc-kanji-practice/commit/a7b4055725d49a0d0c60ac903d4e3a8dd59b666c))
+
 # [2.3.0](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.2.0...v2.3.0) (2025-05-02)
 
 
