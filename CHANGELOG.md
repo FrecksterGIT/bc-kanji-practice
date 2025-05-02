@@ -1,3 +1,10 @@
+## [2.5.1](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.5.0...v2.5.1) (2025-05-02)
+
+
+### Bug Fixes
+
+* keep focus on the kana input field ([0146feb](https://github.com/FrecksterGIT/bc-kanji-practice/commit/0146feb50a9f7e52e580419f9a7747bc348eae28))
+
 # [2.5.0](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.4.0...v2.5.0) (2025-05-02)
 
 
