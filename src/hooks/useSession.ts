@@ -4,7 +4,7 @@ import { SessionContext, SessionContextType } from '../contexts/SessionContext.t
 const useSession = (): SessionContextType => {
   const context = useContext(SessionContext);
   if (context === undefined) {
-    throw new Error('useUser must be used within a SessionProvider');
+    throw new Error('useSession must be used within a SessionProvider');
   }
   return context;
 };

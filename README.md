@@ -1,54 +1,101 @@
-# React + TypeScript + Vite
+# Kanji Practice Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A web application for practicing Japanese kanji and vocabulary using data from WaniKani. This tool helps users improve their Japanese language skills through interactive practice sessions.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Practice kanji and vocabulary based on WaniKani levels
+- Keyboard navigation for efficient practice
+- Mark items for later review
+- Audio playback for vocabulary items
+- Responsive design for desktop and mobile devices
+- Dark mode UI for comfortable viewing
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Frontend Framework**: React 19 with TypeScript
+- **Build Tool**: Vite 6
+- **Styling**: TailwindCSS 4
+- **Routing**: React Router 7
+- **State Management**: 
+  - React Context API
+  - Zustand 5 for global state
+- **Data Storage**: IndexedDB (via idb)
+- **API Integration**: WaniKani API
+- **Audio**: react-use-audio-player
+- **Japanese Text Processing**: wanakana
+- **Other Utilities**:
+  - usehooks-ts (custom React hooks)
+  - async-cache-dedupe (API request deduplication)
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-});
+## Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/FrecksterGIT/bc-kanji-practice.git
+
+# Navigate to the project directory
+cd bc-kanji-practice
+
+# Install dependencies
+npm ci
+
+# Start the development server
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Development
 
-```js
-// .eslintrc.js
-import reactX from 'eslint-plugin-react-x';
-import reactDom from 'eslint-plugin-react-dom';
+### NPM Scripts
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-});
-```
+- `npm run dev` - Start the development server
+- `npm run build` - Build the project for production
+- `npm run lint` - Run ESLint to check for code issues
+- `npm run preview` - Preview the production build locally
+- `npm run semantic-release` - Run semantic-release for versioning
+
+### GitHub Workflow
+
+The project uses GitHub Actions for CI/CD:
+
+#### Pull Request Workflow
+
+When a pull request is created against the main branch, the following steps are executed:
+1. Code checkout
+2. Node.js setup
+3. Dependencies installation
+4. Linting
+5. Test build
+
+#### Deployment Workflow
+
+When code is pushed to the main branch, the following steps are executed:
+1. Code checkout
+2. Node.js setup
+3. Dependencies installation
+4. Linting
+5. Test build
+6. Semantic versioning
+7. Production build
+8. Deployment to production server via FTP
+
+## Usage
+
+1. Visit the application and log in with your WaniKani API key
+2. Select a level to practice
+3. Practice kanji or vocabulary by typing the readings
+4. Use keyboard shortcuts for navigation:
+   - Arrow keys to navigate through items
+   - Alt + Up/Down to change levels
+   - Alt + M to mark items for later review
+5. Review marked items in the "Marked Items" section
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
