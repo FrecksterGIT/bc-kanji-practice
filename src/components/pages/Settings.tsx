@@ -1,6 +1,6 @@
-import { SortSetting, useSettingsStore } from '../../store/settingsStore.ts';
-import { ChangeEvent, type FC, useState, useEffect } from 'react';
+import { type FC, useRef } from 'react';
 import useSession from '../../hooks/useSession.ts';
+import { SortSetting } from '../../contexts/SessionContext.tsx';
 
 const Settings: FC = () => {
   const {
@@ -8,25 +8,16 @@ const Settings: FC = () => {
     limitToLearned,
     limitToCurrentLevel,
     sorting,
-    setApiKey,
-    setLimitToLearned,
-    setLimitToCurrentLevel,
-    setSorting,
-  } = useSettingsStore();
-  const { isLoggedIn } = useSession();
-  const setMarkedItems = useSettingsStore((state) => state.setMarkedItems);
-  const [apiKeyInput, setApiKeyInput] = useState(apiKey);
-
-  useEffect(() => {
-    setApiKeyInput(apiKey);
-  }, [apiKey]);
-
-  const handleApiKeyChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setApiKeyInput(e.target.value);
-  };
+    updateSettings,
+    setMarkedItems,
+    isLoggedIn,
+  } = useSession();
+  const apiKeyRef = useRef<HTMLInputElement>(null);
 
   const handleSaveApiKey = () => {
-    setApiKey(apiKeyInput);
+    if (apiKeyRef.current) {
+      updateSettings('apiKey', apiKeyRef.current.value);
+    }
   };
 
   return (
@@ -47,10 +38,10 @@ const Settings: FC = () => {
               <input
                 type="text"
                 id="apiKey"
-                value={apiKeyInput}
-                onChange={handleApiKeyChange}
+                defaultValue={apiKey}
                 className="mt-1 block w-full rounded-l-md border border-gray-300 p-2 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                 placeholder="Enter your API key"
+                ref={apiKeyRef}
               />
               <button
                 type="button"
@@ -71,7 +62,7 @@ const Settings: FC = () => {
                       type="checkbox"
                       id="limitToLearned"
                       checked={limitToLearned}
-                      onChange={(e) => setLimitToLearned(e.target.checked)}
+                      onChange={(e) => updateSettings('limitToLearned', e.target.checked)}
                       className="mr-2 h-4 w-4 rounded border-gray-300 focus:ring-blue-500"
                     />
                     <label htmlFor="limitToLearned">Limit content to currently learned</label>
@@ -82,7 +73,7 @@ const Settings: FC = () => {
                       type="checkbox"
                       id="limitToCurrentLevel"
                       checked={limitToCurrentLevel}
-                      onChange={(e) => setLimitToCurrentLevel(e.target.checked)}
+                      onChange={(e) => updateSettings('limitToCurrentLevel', e.target.checked)}
                       className="mr-2 h-4 w-4 rounded border-gray-300 focus:ring-blue-500"
                     />
                     <label htmlFor="limitToCurrentLevel">
@@ -101,7 +92,7 @@ const Settings: FC = () => {
                       id="sorting"
                       checked={sorting == SortSetting.id}
                       onChange={(e) => {
-                        if (e.target.checked) setSorting(SortSetting.id);
+                        if (e.target.checked) updateSettings('sorting', SortSetting.id);
                       }}
                       className="mr-2 h-4 w-4 rounded border-gray-300 focus:ring-blue-500"
                     />
@@ -113,7 +104,7 @@ const Settings: FC = () => {
                       id="nextReview"
                       checked={sorting == SortSetting.nextReview}
                       onChange={(e) => {
-                        if (e.target.checked) setSorting(SortSetting.nextReview);
+                        if (e.target.checked) updateSettings('sorting', SortSetting.nextReview);
                       }}
                       className="mr-2 h-4 w-4 rounded border-gray-300 focus:ring-blue-500"
                     />
@@ -125,7 +116,7 @@ const Settings: FC = () => {
                       id="randomize"
                       checked={sorting == SortSetting.randomize}
                       onChange={(e) => {
-                        if (e.target.checked) setSorting(SortSetting.randomize);
+                        if (e.target.checked) updateSettings('sorting', SortSetting.randomize);
                       }}
                       className="mr-2 h-4 w-4 rounded border-gray-300 focus:ring-blue-500"
                     />

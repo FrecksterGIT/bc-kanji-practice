@@ -1,5 +1,6 @@
 import { DBSchema, openDB } from 'idb';
 import { WanikaniAssignment, WanikaniSubject } from '../wanikani';
+import { PersistedSettings } from '../contexts/SessionContext.tsx';
 
 type ValidValue<T> = Exclude<T, null | undefined | 0 | '' | false>;
 const BooleanFilter = <T>(x: T): x is ValidValue<T> => Boolean(x);
@@ -16,6 +17,12 @@ interface ItemDB extends DBSchema {
     value: WanikaniAssignment;
     key: number;
   };
+  settings: {
+    value: PersistedSettings & {
+      key: string;
+    };
+    key: string;
+  };
 }
 
 async function getDB() {
@@ -24,6 +31,7 @@ async function getDB() {
       if (oldVersion !== newVersion && oldVersion !== 0) {
         database.deleteObjectStore('subjects');
         database.deleteObjectStore('assignments');
+        database.deleteObjectStore('settings');
       }
       const subjectStore = database.createObjectStore('subjects', {
         keyPath: 'id',
@@ -33,6 +41,12 @@ async function getDB() {
 
       database.createObjectStore('assignments', {
         keyPath: 'id',
+        autoIncrement: false,
+      });
+
+      database.createObjectStore('settings', {
+        keyPath: 'key',
+        autoIncrement: false,
       });
     },
   });
@@ -85,4 +99,14 @@ export async function getSubjectsByObjectAndLevel(
   return db
     .getAllFromIndex('subjects', 'level', level)
     .then((items) => items.filter((item) => item.object === objectType));
+}
+
+export async function getSettings(): Promise<ItemDB['settings']['value'] | undefined> {
+  const db = await getDB();
+  return db.get('settings', 'settings');
+}
+
+export async function saveSettings(settings: PersistedSettings): Promise<void> {
+  const db = await getDB();
+  await db.put('settings', { ...settings, key: 'settings' });
 }

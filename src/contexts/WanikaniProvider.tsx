@@ -6,7 +6,6 @@ import {
   ResourceType,
   WanikaniContext,
 } from './WanikaniContext.ts';
-import { useSettingsStore } from '../store/settingsStore.ts';
 import { isAssignmentList, isSubjectList } from '../utils/typeChecks.ts';
 import {
   addManyAssignments,
@@ -15,11 +14,12 @@ import {
   getAllSubjects,
 } from '../utils/itemDB.ts';
 import wkLoad from '../utils/wkLoad.ts';
+import useSession from '../hooks/useSession.ts';
 
 export const WanikaniProvider: FC<PropsWithChildren> = ({ children }) => {
   const [loading, setLoading] = useState(false);
   const [loadedCount, setLoadedCount] = useState(0);
-  const apiKey = useSettingsStore((store) => store.apiKey);
+  const { apiKey, isLoggedIn } = useSession();
 
   const writeData = useCallback(async function writeData<T extends BasicDataType = BasicDataType>(
     data: T[]
@@ -40,7 +40,7 @@ export const WanikaniProvider: FC<PropsWithChildren> = ({ children }) => {
       url: string,
       type: ResourceType
     ): Promise<{ data: T[]; next_url?: string | null }> {
-      if (!apiKey) {
+      if (!apiKey || !isLoggedIn) {
         return Promise.resolve({ data: [], next_url: undefined });
       }
       setLoadedCount((prev) => prev + 1);
@@ -59,7 +59,7 @@ export const WanikaniProvider: FC<PropsWithChildren> = ({ children }) => {
       }
       return { data: [] };
     },
-    [apiKey, writeData]
+    [apiKey, isLoggedIn, writeData]
   );
 
   const load = useCallback(

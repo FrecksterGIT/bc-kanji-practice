@@ -19,7 +19,6 @@ A web application for practicing Japanese kanji and vocabulary using data from W
 - **Routing**: React Router 7
 - **State Management**: 
   - React Context API
-  - Zustand 5 for global state
 - **Data Storage**: IndexedDB (via idb)
 - **API Integration**: WaniKani API
 - **Audio**: react-use-audio-player

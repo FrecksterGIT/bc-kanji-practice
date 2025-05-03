@@ -7,11 +7,9 @@ function App() {
   return (
     <ItemProvider>
       <AudioPlayerProvider>
-        <div className="flex min-h-screen flex-col bg-gray-900 text-gray-400">
-          <Navigation />
-          <div className="container mx-auto flex-grow">
-            <Outlet />
-          </div>
+        <Navigation />
+        <div className="container mx-auto flex-grow">
+          <Outlet />
         </div>
       </AudioPlayerProvider>
     </ItemProvider>

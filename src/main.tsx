@@ -8,10 +8,12 @@ import { WanikaniProvider } from './contexts/WanikaniProvider.tsx';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <SessionProvider>
-      <WanikaniProvider>
-        <ApplicationRouter />
-      </WanikaniProvider>
-    </SessionProvider>
+    <div className="flex min-h-screen flex-col bg-gray-900 text-gray-400">
+      <SessionProvider>
+        <WanikaniProvider>
+          <ApplicationRouter />
+        </WanikaniProvider>
+      </SessionProvider>
+    </div>
   </StrictMode>
 );

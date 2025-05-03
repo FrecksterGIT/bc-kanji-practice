@@ -1,19 +1,18 @@
 import { useEffect, useState } from 'react';
-import { isKanji } from '../utils/typeChecks.ts';
 import { WanikaniVocabularySubject } from '../wanikani';
+import { isKanji } from '../utils/typeChecks.ts';
 import { getSubjectByIds } from '../utils/itemDB.ts';
-import { useSettingsStore } from '../store/settingsStore.ts';
-import useSession from './useSession.ts';
 import useItems from './useItems.ts';
+import useSession from './useSession.ts';
 
 export const useRelatedVocabulary = () => {
   const { item } = useItems();
   const [allVocabulary, setAllVocabulary] = useState<WanikaniVocabularySubject[]>([]);
-  const limitToCurrentLevel = useSettingsStore((store) => store.limitToCurrentLevel);
-  const { user } = useSession();
+  const { limitToCurrentLevel, user } = useSession();
 
   useEffect(() => {
     if (!isKanji(item)) {
+      setAllVocabulary([]);
       return;
     }
     getSubjectByIds(item.data.amalgamation_subject_ids).then((k) =>
