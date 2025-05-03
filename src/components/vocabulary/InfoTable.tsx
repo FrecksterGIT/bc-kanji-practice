@@ -42,7 +42,7 @@ const InfoTable: FC = () => {
         className={`w-full ${show ? 'cursor-zoom-out' : 'cursor-zoom-in blur-md'}`}
         onClick={() => toggle()}
       >
-        <div className="min-h-[7rem] overflow-x-auto">
+        <div className="overflow-x-auto">
           <table className="mb-6 min-w-full divide-y divide-gray-200 border-b-1 border-b-gray-200 text-left">
             <thead>
               <tr className="text-xs font-medium uppercase">
@@ -70,7 +70,7 @@ const InfoTable: FC = () => {
                       </span>
                     ))}
                 </td>
-                <td className="px-6 py-4 whitespace-nowrap">
+                <td className="px-6 py-4">
                   {vocabulary.data.meanings.map((meaning) => (
                     <span
                       key={meaning.meaning}
@@ -87,23 +87,36 @@ const InfoTable: FC = () => {
             </tbody>
           </table>
           {isVocabulary(vocabulary) && vocabulary.data.reading_mnemonic && (
-            <table className="min-w-full text-left">
-              <tbody>
-                <tr>
-                  <th className="px-6 py-4 align-top text-xs leading-6 font-medium tracking-wider text-nowrap uppercase">
-                    Reading Mnemonic
-                  </th>
-                  <td className="px-6 py-4 align-top">
-                    <p
-                      className="max-w-2/3"
-                      dangerouslySetInnerHTML={{
-                        __html: formatHint(vocabulary.data.reading_mnemonic),
-                      }}
-                    ></p>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="flex items-center justify-around">
+              <table className="max-w-3/4 text-left">
+                <tbody>
+                  <tr>
+                    <th className="px-6 py-4 align-top text-xs leading-6 font-medium tracking-wider text-nowrap uppercase">
+                      Meaning Mnemonic
+                    </th>
+                    <td className="px-6 py-4 align-top">
+                      <p
+                        dangerouslySetInnerHTML={{
+                          __html: formatHint(vocabulary.data.meaning_mnemonic),
+                        }}
+                      ></p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th className="px-6 py-4 align-top text-xs leading-6 font-medium tracking-wider text-nowrap uppercase">
+                      Reading Mnemonic
+                    </th>
+                    <td className="px-6 py-4 align-top">
+                      <p
+                        dangerouslySetInnerHTML={{
+                          __html: formatHint(vocabulary.data.reading_mnemonic),
+                        }}
+                      ></p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           )}
         </div>
       </button>

@@ -22,7 +22,7 @@ const InfoTable: FC = () => {
   return (
     kanji && (
       <button
-        className={`min-w-2/3 ${show ? 'cursor-zoom-out' : 'cursor-zoom-in blur-md'}`}
+        className={`w-full ${show ? 'cursor-zoom-out' : 'cursor-zoom-in blur-md'}`}
         onClick={() => toggle()}
       >
         <div className="overflow-x-auto">
@@ -79,36 +79,36 @@ const InfoTable: FC = () => {
               </tr>
             </tbody>
           </table>
-          <table className="min-w-full text-left">
-            <tbody>
-              <tr>
-                <th className="px-6 py-4 align-top text-xs leading-6 font-medium tracking-wider text-nowrap uppercase">
-                  Meaning Mnemonic
-                </th>
-                <td className="px-6 py-4 align-top">
-                  <p
-                    className="max-w-2/3"
-                    dangerouslySetInnerHTML={{ __html: formatHint(kanji.data.meaning_mnemonic) }}
-                  />
-                </td>
-              </tr>
-              <tr>
-                <th className="px-6 py-4 align-top text-xs leading-6 font-medium tracking-wider text-nowrap uppercase">
-                  Reading Mnemonic
-                </th>
-                <td className="px-6 py-4 align-top">
-                  <p
-                    className="max-w-2/3"
-                    dangerouslySetInnerHTML={{ __html: formatHint(kanji.data.reading_mnemonic) }}
-                  />
-                  <p
-                    className="max-w-2/3 text-sm text-gray-500"
-                    dangerouslySetInnerHTML={{ __html: formatHint(kanji.data.reading_hint) }}
-                  />
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <div className="flex items-center justify-around">
+            <table className="max-w-3/4 text-left">
+              <tbody>
+                <tr>
+                  <th className="px-6 py-4 align-top text-xs leading-6 font-medium tracking-wider text-nowrap uppercase">
+                    Meaning Mnemonic
+                  </th>
+                  <td className="px-6 py-4 align-top">
+                    <p
+                      dangerouslySetInnerHTML={{ __html: formatHint(kanji.data.meaning_mnemonic) }}
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <th className="px-6 py-4 align-top text-xs leading-6 font-medium tracking-wider text-nowrap uppercase">
+                    Reading Mnemonic
+                  </th>
+                  <td className="px-6 py-4 align-top">
+                    <p
+                      dangerouslySetInnerHTML={{ __html: formatHint(kanji.data.reading_mnemonic) }}
+                    />
+                    <p
+                      className="text-sm text-gray-500"
+                      dangerouslySetInnerHTML={{ __html: formatHint(kanji.data.reading_hint) }}
+                    />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </button>
     )
