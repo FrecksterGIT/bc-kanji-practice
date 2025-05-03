@@ -14,7 +14,7 @@ const Items: FC<ItemsProps> = ({ section }) => {
   const { setSection, item } = useItems();
 
   useEffect(() => {
-    setSection(section)
+    setSection(section);
   }, [section, setSection]);
 
   return (
