@@ -1,3 +1,10 @@
+# [2.6.0](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.5.1...v2.6.0) (2025-05-03)
+
+
+### Features
+
+* extended sorting options ([f3b2794](https://github.com/FrecksterGIT/bc-kanji-practice/commit/f3b2794d25c786f0543a5663a81da26bc108458d))
+
 ## [2.5.1](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.5.0...v2.5.1) (2025-05-02)
 
 
