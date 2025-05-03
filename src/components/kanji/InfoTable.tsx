@@ -1,5 +1,5 @@
 import { type FC, useEffect } from 'react';
-import { useToggle } from 'usehooks-ts';
+import { useEventListener, useToggle } from 'usehooks-ts';
 import { formatHint } from '../../utils/formatHint.ts';
 import { isKanji } from '../../utils/typeChecks.ts';
 import useItems from '../../hooks/useItems.ts';
@@ -12,6 +12,12 @@ const InfoTable: FC = () => {
   useEffect(() => {
     set(isValid ?? false);
   }, [set, kanji, isValid]);
+
+  useEventListener('keydown', (e) => {
+    if (e.key === 's' && e.altKey) {
+      toggle();
+    }
+  });
 
   return (
     kanji && (

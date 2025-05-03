@@ -1,7 +1,7 @@
 import { type FC, useEffect } from 'react';
 import { isKatakana, toHiragana } from 'wanakana';
 import { WanikaniReading } from '../../wanikani';
-import { useToggle } from 'usehooks-ts';
+import { useEventListener, useToggle } from 'usehooks-ts';
 import { formatHint } from '../../utils/formatHint.ts';
 import { Composition } from './Composition.tsx';
 import { isKanaVocabulary, isVocabulary } from '../../utils/typeChecks.ts';
@@ -15,6 +15,12 @@ const InfoTable: FC = () => {
   useEffect(() => {
     set(isValid ?? false);
   }, [set, vocabulary, isValid]);
+
+  useEventListener('keydown', (e) => {
+    if (e.key === 's' && e.altKey) {
+      toggle();
+    }
+  });
 
   const getReading = (reading: string, allReadings: WanikaniReading[]) => {
     const containsKatakana = reading.split('').some(isKatakana);

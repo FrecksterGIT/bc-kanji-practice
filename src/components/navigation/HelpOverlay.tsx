@@ -1,4 +1,5 @@
 import { FC, PropsWithChildren, useEffect, useRef } from 'react';
+import { Close } from '../shared/icons/Close.tsx';
 
 interface HelpOverlayProps {
   isOpen: boolean;
@@ -47,26 +48,13 @@ const HelpOverlay: FC<HelpOverlayProps> = ({ isOpen, onClose }) => {
         <div className="mb-4 flex items-start justify-between">
           <h2 className="text-xl font-bold text-white">Help & Information</h2>
           <button onClick={onClose} className="text-gray-400 hover:text-white">
-            <svg
-              className="h-5 w-5"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M6 18L18 6M6 6l12 12"
-              ></path>
-            </svg>
+            <Close />
           </button>
         </div>
 
         <div className="space-y-4">
           <section>
-            <h3 className="mb-2 text-lg font-semibold text-white">About the Data</h3>
+            <h3 className="mb-2 text-lg font-semibold text-white">WaniKani data</h3>
             <p>
               This application relies on data from WaniKani, a Japanese language learning platform.
               The kanji and vocabulary items, along with their meanings, readings, and other
@@ -76,18 +64,21 @@ const HelpOverlay: FC<HelpOverlayProps> = ({ isOpen, onClose }) => {
 
           <section>
             <h3 className="mb-2 text-lg font-semibold text-white">Keyboard Navigation</h3>
-            <ul className="list-disc space-y-2 pl-5">
-              <li>
+            <div className="list-disc space-y-2 pl-5">
+              <p>
                 <Mono>↑</Mono> <Mono>↓</Mono> <Mono>←</Mono> <Mono>→</Mono> - Use arrow keys to
                 navigate through items
-              </li>
-              <li>
+              </p>
+              <p>
                 <Mono>Alt + ↑</Mono> <Mono>Alt + ↓</Mono> - Go to previous / next level
-              </li>
-              <li>
+              </p>
+              <p>
+                <Mono>Alt + S</Mono> - Show details of the current item
+              </p>
+              <p>
                 <Mono>Alt + M</Mono> - Mark the current item for later review
-              </li>
-            </ul>
+              </p>
+            </div>
           </section>
 
           <section>
