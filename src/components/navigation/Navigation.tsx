@@ -2,7 +2,6 @@ import { type ChangeEventHandler, type FC, useCallback, useMemo, useState } from
 import { NavLink } from 'react-router-dom';
 import { useSettingsStore } from '../../store/settingsStore.ts';
 import useSession from '../../hooks/useSession.ts';
-import useMarkedItems from '../../hooks/useMarkedItems.ts';
 import { useEventListener } from 'usehooks-ts';
 import { Help } from '../shared/icons/Help.tsx';
 import { Menu } from '../shared/icons/Menu.tsx';
@@ -11,8 +10,7 @@ import MobileMenu from './MobileMenu.tsx';
 
 const Navigation: FC = () => {
   const { user, maxLevel, isLoggedIn } = useSession();
-  const { level, setLevel } = useSettingsStore();
-  const { markedItems } = useMarkedItems();
+  const { level, setLevel, markedItems } = useSettingsStore();
   const levelOptions = useMemo(() => Array.from({ length: maxLevel }, (_, i) => i + 1), [maxLevel]);
   const [isHelpOpen, setIsHelpOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);

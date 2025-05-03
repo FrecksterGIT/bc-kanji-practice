@@ -1,14 +1,15 @@
 import { FC, RefObject, useCallback, useRef } from 'react';
 import { BookmarkEmpty } from './icons/BookmarkEmpty.tsx';
 import { BookmarkFilled } from './icons/BookmarkFilled.tsx';
-import useMarkedItems from '../../hooks/useMarkedItems.ts';
 import useItems from '../../hooks/useItems.ts';
 import { useEventListener, useHover } from 'usehooks-ts';
 import { Tooltip } from './Tooltip.tsx';
+import { useSettingsStore } from '../../store/settingsStore.ts';
 
 const MarkButton: FC = () => {
   const { item } = useItems();
-  const { markedItems, setMarkedItems } = useMarkedItems();
+  const markedItems = useSettingsStore((state) => state.markedItems);
+  const setMarkedItems = useSettingsStore((state) => state.setMarkedItems);
   const isMarked = markedItems.some((marked) => marked === item.id);
   const markRef = useRef<HTMLButtonElement>(null);
   const showTooltip = useHover(markRef as RefObject<HTMLButtonElement>);
