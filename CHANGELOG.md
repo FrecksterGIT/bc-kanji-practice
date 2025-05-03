@@ -1,3 +1,10 @@
+## [2.6.1](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.6.0...v2.6.1) (2025-05-03)
+
+
+### Bug Fixes
+
+* don't rely on location for item loading ([43a867b](https://github.com/FrecksterGIT/bc-kanji-practice/commit/43a867b6baeea7450cda47f63359746cd20a5d03))
+
 # [2.6.0](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.5.1...v2.6.0) (2025-05-03)
 
 
