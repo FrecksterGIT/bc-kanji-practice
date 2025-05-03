@@ -1,3 +1,10 @@
+# [2.9.0](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.8.0...v2.9.0) (2025-05-03)
+
+
+### Features
+
+* move item listings into an overlay ([7fa33a1](https://github.com/FrecksterGIT/bc-kanji-practice/commit/7fa33a1595f98e3f482a1d49499e47226ff2785b))
+
 # [2.8.0](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.7.0...v2.8.0) (2025-05-03)
 
 
