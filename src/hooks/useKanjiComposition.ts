@@ -11,6 +11,7 @@ function useKanjiComposition() {
 
   useEffect(() => {
     if (!vocabulary) {
+      setAllKanji([]);
       return;
     }
     getSubjectByIds(vocabulary.data.component_subject_ids).then((k) =>

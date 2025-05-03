@@ -1,16 +1,14 @@
 import { type ChangeEventHandler, type FC, useCallback, useMemo, useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { useSettingsStore } from '../../store/settingsStore.ts';
-import useSession from '../../hooks/useSession.ts';
 import { useEventListener } from 'usehooks-ts';
 import { Help } from '../shared/icons/Help.tsx';
 import { Menu } from '../shared/icons/Menu.tsx';
 import HelpOverlay from './HelpOverlay.tsx';
 import MobileMenu from './MobileMenu.tsx';
+import useSession from '../../hooks/useSession.ts';
 
 const Navigation: FC = () => {
-  const { user, maxLevel, isLoggedIn } = useSession();
-  const { level, setLevel, markedItems } = useSettingsStore();
+  const { user, maxLevel, isLoggedIn, level, updateSettings, markedItems } = useSession();
   const levelOptions = useMemo(() => Array.from({ length: maxLevel }, (_, i) => i + 1), [maxLevel]);
   const [isHelpOpen, setIsHelpOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -19,19 +17,19 @@ const Navigation: FC = () => {
     (e) => {
       const newLevel = parseInt(e.target.value, 10);
       if (!isNaN(newLevel) && newLevel > 0) {
-        setLevel(newLevel);
+        updateSettings('level', newLevel);
       }
     },
-    [setLevel]
+    [updateSettings]
   );
 
   useEventListener('keydown', (e) => {
     if (e.key === 'ArrowDown' && e.altKey) {
       const nextLevel = level < maxLevel ? level + 1 : 1;
-      setLevel(nextLevel);
+      updateSettings('level', nextLevel);
     } else if (e.key === 'ArrowUp' && e.altKey) {
       const prevLevel = level > 1 ? level - 1 : maxLevel;
-      setLevel(prevLevel);
+      updateSettings('level', prevLevel);
     }
   });
 

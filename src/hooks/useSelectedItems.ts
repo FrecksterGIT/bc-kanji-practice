@@ -1,21 +1,19 @@
 import { useCallback, useEffect, useState } from 'react';
 
-import { SortSetting, useSettingsStore } from '../store/settingsStore.ts';
 import { Section } from '../contexts/ItemContext.tsx';
 import { WanikaniSubject } from '../wanikani';
+import { SortSetting } from '../contexts/SessionContext.tsx';
 import {
   getAllAssignments,
   getSubjectByIds,
   getSubjectsByObjectAndLevel,
 } from '../utils/itemDB.ts';
+import useSession from './useSession.ts';
 
 export const useSelectedItems = (section: Section) => {
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState<Array<WanikaniSubject>>([]);
-  const limitToLearned = useSettingsStore((state) => state.limitToLearned);
-  const sorting = useSettingsStore((state) => state.sorting);
-  const level = useSettingsStore((state) => state.level);
-  const markedItems = useSettingsStore((state) => state.markedItems);
+  const { limitToLearned, sorting, level, markedItems } = useSession();
   const [plannedAssignments, setPlannedAssignments] = useState(new Map<number, Date>());
   const [startedAssignments, setStartedAssignments] = useState<number[]>([]);
 
