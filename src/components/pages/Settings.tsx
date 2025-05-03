@@ -1,6 +1,5 @@
 import { SortSetting, useSettingsStore } from '../../store/settingsStore.ts';
 import { ChangeEvent, type FC, useState, useEffect } from 'react';
-import useMarkedItems from '../../hooks/useMarkedItems.ts';
 import useSession from '../../hooks/useSession.ts';
 
 const Settings: FC = () => {
@@ -15,8 +14,7 @@ const Settings: FC = () => {
     setSorting,
   } = useSettingsStore();
   const { isLoggedIn } = useSession();
-  const { setMarkedItems } = useMarkedItems();
-
+  const setMarkedItems = useSettingsStore((state) => state.setMarkedItems);
   const [apiKeyInput, setApiKeyInput] = useState(apiKey);
 
   useEffect(() => {

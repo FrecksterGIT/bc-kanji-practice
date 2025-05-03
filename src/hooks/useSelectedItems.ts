@@ -3,7 +3,6 @@ import { useCallback, useEffect, useState } from 'react';
 import { SortSetting, useSettingsStore } from '../store/settingsStore.ts';
 import { Section } from '../contexts/ItemContext.tsx';
 import { WanikaniSubject } from '../wanikani';
-import useMarkedItems from './useMarkedItems.ts';
 import {
   getAllAssignments,
   getSubjectByIds,
@@ -16,7 +15,7 @@ export const useSelectedItems = (section: Section) => {
   const limitToLearned = useSettingsStore((state) => state.limitToLearned);
   const sorting = useSettingsStore((state) => state.sorting);
   const level = useSettingsStore((state) => state.level);
-  const { markedItems } = useMarkedItems();
+  const markedItems = useSettingsStore((state) => state.markedItems);
   const [plannedAssignments, setPlannedAssignments] = useState(new Map<number, Date>());
   const [startedAssignments, setStartedAssignments] = useState<number[]>([]);
 
