@@ -9,7 +9,7 @@ export const ProgressBar = () => {
   return (
     <div className="relative h-0.5 w-full">
       <div
-        className={`${bgColor} absolute top-0 left-0 h-0.5 transition-all`}
+        className={`${bgColor} absolute top-0 left-0 h-2 transition-all`}
         style={{ width: `${correct}%` }}
       ></div>
     </div>
