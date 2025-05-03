@@ -1,3 +1,11 @@
+# [2.8.0](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.7.0...v2.8.0) (2025-05-03)
+
+
+### Features
+
+* move the marked items list into state ([179f3cd](https://github.com/FrecksterGIT/bc-kanji-practice/commit/179f3cd539d4ea41a05bc1f8302c3cb4fb63c400))
+* persist settings in the database ([bf1377e](https://github.com/FrecksterGIT/bc-kanji-practice/commit/bf1377ef1bb4be8e26e1960d30196a36cc717e31))
+
 # [2.7.0](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.6.2...v2.7.0) (2025-05-03)
 
 
