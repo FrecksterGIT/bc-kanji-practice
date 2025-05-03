@@ -18,35 +18,34 @@ export const useSelectedItems = (section: Section) => {
   const [startedAssignments, setStartedAssignments] = useState<number[]>([]);
 
   useEffect(() => {
-    if (limitToLearned || sorting) {
-      getAllAssignments().then((assignments) => {
-        if (assignments) {
-          const availableDatesMap = new Map<number, Date>();
-          const started: number[] = [];
-          assignments.forEach((assignment) => {
-            if (assignment.data.started_at) {
-              started.push(assignment.data.subject_id);
-            }
-            if (assignment.data.available_at) {
-              availableDatesMap.set(
-                assignment.data.subject_id,
-                new Date(assignment.data.available_at)
-              );
-            }
-          });
-          setStartedAssignments(started);
-          setPlannedAssignments(availableDatesMap);
-        }
-      });
-    }
+    getAllAssignments().then((assignments) => {
+      if (assignments) {
+        const availableDatesMap = new Map<number, Date>();
+        const started: number[] = [];
+        assignments.forEach((assignment) => {
+          if (assignment.data.started_at) {
+            started.push(assignment.data.subject_id);
+          }
+          if (assignment.data.available_at) {
+            availableDatesMap.set(
+              assignment.data.subject_id,
+              new Date(assignment.data.available_at)
+            );
+          }
+        });
+        setStartedAssignments(started);
+        setPlannedAssignments(availableDatesMap);
+      }
+    });
   }, [limitToLearned, sorting]);
 
   const filterAndSort = useCallback(
-    (items: WanikaniSubject[]) =>
+    (items: WanikaniSubject[], filtering = true) =>
       items
         .filter(
           (item) =>
-            item.data.level === level && (!limitToLearned || startedAssignments.includes(item.id))
+            !filtering ||
+            (item.data.level === level && (!limitToLearned || startedAssignments.includes(item.id)))
         )
         .sort((a, b) => {
           if (sorting === SortSetting.nextReview) {
@@ -68,7 +67,7 @@ export const useSelectedItems = (section: Section) => {
   const loadMarkedItems = useCallback(() => {
     setLoading(true);
     getSubjectByIds(markedItems).then((items) => {
-      setData(filterAndSort(items));
+      setData(filterAndSort(items, false));
       setLoading(false);
     });
   }, [filterAndSort, markedItems]);

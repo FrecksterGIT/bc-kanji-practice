@@ -117,6 +117,7 @@ export interface WanikaniVocabularySubject extends WanikaniBaseSubject {
     reading_mnemonic: string;
     reading_hint: string | null;
     parts_of_speech: string[];
+    auxiliary_meanings: WanikaniAuxiliaryMeaning[];
   };
 }
 
@@ -131,6 +132,11 @@ export interface WanikaniKanaVocabularySubject extends WanikaniBaseSubject {
     meaning_hint: string | null;
     parts_of_speech: string[];
   };
+}
+
+export interface WanikaniAuxiliaryMeaning {
+  meaning: string;
+  type: 'whitelist' | 'blacklist';
 }
 
 export interface WanikaniMeaning {

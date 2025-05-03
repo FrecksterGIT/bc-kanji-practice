@@ -40,7 +40,7 @@ const HelpOverlay: FC<HelpOverlayProps> = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="bg-opacity-50 fixed inset-0 z-50 flex items-center justify-center bg-black">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
       <div
         ref={overlayRef}
         className="mx-4 w-full max-w-2xl rounded-lg bg-gray-800 p-6 text-gray-200 shadow-xl"
@@ -66,11 +66,13 @@ const HelpOverlay: FC<HelpOverlayProps> = ({ isOpen, onClose }) => {
             <h3 className="mb-2 text-lg font-semibold text-white">Keyboard Navigation</h3>
             <div className="list-disc space-y-2 pl-5">
               <p>
-                <Mono>↑</Mono> <Mono>↓</Mono> <Mono>←</Mono> <Mono>→</Mono> - Use arrow keys to
-                navigate through items
+                <Mono>←</Mono> <Mono>→</Mono> - Use arrow keys to navigate through items
               </p>
               <p>
                 <Mono>Alt + ↑</Mono> <Mono>Alt + ↓</Mono> - Go to previous / next level
+              </p>
+              <p>
+                <Mono>Alt + A</Mono> - Show list of all elements in the current level
               </p>
               <p>
                 <Mono>Alt + S</Mono> - Show details of the current item

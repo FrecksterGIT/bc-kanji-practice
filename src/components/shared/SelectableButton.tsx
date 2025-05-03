@@ -1,4 +1,4 @@
-import { type FC, Ref, useMemo } from 'react';
+import { type FC, Ref, useCallback, useMemo } from 'react';
 import { NoAnswer } from './icons/NoAnswer.tsx';
 import { CorrectAnswer } from './icons/CorrectAnswer.tsx';
 import { isKanji } from '../../utils/typeChecks.ts';
@@ -6,10 +6,11 @@ import useItems from '../../hooks/useItems.ts';
 
 interface SelectableButtonProps {
   position: number;
+  onClose: () => void;
   ref?: Ref<HTMLButtonElement>;
 }
 
-const SelectableButton: FC<SelectableButtonProps> = ({ position, ref }) => {
+const SelectableButton: FC<SelectableButtonProps> = ({ position, onClose, ref }) => {
   const { validItems, items, selectedIndex, setSelectedIndex } = useItems();
   const selected = position === selectedIndex;
   const valid = validItems.includes(items[position].id);
@@ -26,10 +27,15 @@ const SelectableButton: FC<SelectableButtonProps> = ({ position, ref }) => {
     return 'text-gray-400';
   }, [selected, valid]);
 
+  const selectByClick = useCallback(() => {
+    setSelectedIndex(position);
+    onClose();
+  }, [onClose, position, setSelectedIndex]);
+
   return (
     <button
       className={`grid cursor-pointer grid-cols-[min-content_auto] items-center gap-2 ${textColor}`}
-      onClick={() => setSelectedIndex(position)}
+      onClick={() => selectByClick()}
       ref={ref}
     >
       {!valid && <NoAnswer />}
