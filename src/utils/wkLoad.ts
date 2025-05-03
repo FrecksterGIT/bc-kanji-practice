@@ -2,6 +2,7 @@ import { createCache } from 'async-cache-dedupe';
 import {
   WanikaniAssignment,
   WanikaniCollection,
+  WanikaniResourceResponse,
   WanikaniSubject,
   WanikaniUserData,
 } from '../wanikani';
@@ -26,6 +27,6 @@ const wkLoad = createCache({
 })
   .define('assignments', fetchFn<WanikaniCollection<WanikaniAssignment>>)
   .define('subjects', fetchFn<WanikaniCollection<WanikaniSubject>>)
-  .define('user', fetchFn<{ data: WanikaniUserData }>);
+  .define('user', fetchFn<WanikaniResourceResponse<WanikaniUserData>>);
 
 export default wkLoad;

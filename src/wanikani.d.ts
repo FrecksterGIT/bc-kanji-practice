@@ -5,6 +5,19 @@ export interface WanikaniResourceResponse<T> {
   data: T;
 }
 
+export interface WanikaniCollection<T> {
+  object: string;
+  url: string;
+  data_updated_at: string;
+  total_count: number;
+  pages: {
+    per_page: number;
+    next_url: string | null;
+    previous_url: string | null;
+  };
+  data: T[];
+}
+
 export interface WanikaniUserData {
   id: string;
   username: string;
@@ -133,17 +146,6 @@ export interface WanikaniReading {
   reading: string;
 }
 
-export interface WanikaniCharacterImage {
-  url: string;
-  content_type: string;
-  metadata: {
-    inline_styles: boolean;
-    color: string;
-    dimensions: string;
-    style_name: string;
-  };
-}
-
 export interface WanikaniContextSentence {
   en: string;
   ja: string;
@@ -160,17 +162,4 @@ export interface WanikaniPronunciationAudio {
     voice_actor_name: string;
     voice_description: string;
   };
-}
-
-export interface WanikaniCollection<T> {
-  object: string;
-  url: string;
-  data_updated_at: string;
-  total_count: number;
-  pages: {
-    per_page: number;
-    next_url: string | null;
-    previous_url: string | null;
-  };
-  data: T[];
 }
