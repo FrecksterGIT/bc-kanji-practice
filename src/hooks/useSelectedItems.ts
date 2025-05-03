@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
-import { useSettingsStore } from '../store/settingsStore.ts';
+import { SortSetting, useSettingsStore } from '../store/settingsStore.ts';
 import { useLocation } from 'react-router-dom';
 
 import { WanikaniSubject } from '../wanikani';
@@ -14,7 +14,7 @@ export const useSelectedItems = () => {
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState<Array<WanikaniSubject>>([]);
   const limitToLearned = useSettingsStore((state) => state.limitToLearned);
-  const sortByNextReview = useSettingsStore((state) => state.sortByNextReview);
+  const sorting = useSettingsStore((state) => state.sorting);
   const level = useSettingsStore((state) => state.level);
   const { markedItems } = useMarkedItems();
   const [plannedAssignments, setPlannedAssignments] = useState(new Map<number, Date>());
@@ -22,7 +22,7 @@ export const useSelectedItems = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    if (limitToLearned || sortByNextReview) {
+    if (limitToLearned || sorting) {
       getAllAssignments().then((assignments) => {
         if (assignments) {
           const availableDatesMap = new Map<number, Date>();
@@ -43,7 +43,7 @@ export const useSelectedItems = () => {
         }
       });
     }
-  }, [limitToLearned, sortByNextReview]);
+  }, [limitToLearned, sorting]);
 
   const filterAndSort = useCallback(
     (items: WanikaniSubject[]) =>
@@ -53,22 +53,29 @@ export const useSelectedItems = () => {
             item.data.level === level && (!limitToLearned || startedAssignments.includes(item.id))
         )
         .sort((a, b) => {
-          if (!sortByNextReview) return 0;
-          if (!plannedAssignments.has(a.id) && !plannedAssignments.has(b.id)) return 0;
-          if (!plannedAssignments.has(a.id)) return 1;
-          if (!plannedAssignments.has(b.id)) return -1;
-          return plannedAssignments.get(a.id)!.getTime() - plannedAssignments.get(b.id)!.getTime();
+          if (sorting === SortSetting.nextReview) {
+            if (!plannedAssignments.has(a.id) && !plannedAssignments.has(b.id)) return 0;
+            if (!plannedAssignments.has(a.id)) return 1;
+            if (!plannedAssignments.has(b.id)) return -1;
+            return (
+              plannedAssignments.get(a.id)!.getTime() - plannedAssignments.get(b.id)!.getTime()
+            );
+          }
+          if (sorting === SortSetting.randomize) {
+            return Math.random() - 0.5;
+          }
+          return a.id - b.id;
         }),
-    [level, limitToLearned, startedAssignments, sortByNextReview, plannedAssignments]
+    [level, limitToLearned, startedAssignments, sorting, plannedAssignments]
   );
 
   const loadMarkedItems = useCallback(() => {
     setLoading(true);
     getSubjectByIds(markedItems).then((items) => {
-      setData(items);
+      setData(filterAndSort(items));
       setLoading(false);
     });
-  }, [markedItems]);
+  }, [filterAndSort, markedItems]);
 
   const loadKanji = useCallback(() => {
     setLoading(true);

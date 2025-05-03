@@ -1,4 +1,4 @@
-import { useSettingsStore } from '../../store/settingsStore.ts';
+import { SortSetting, useSettingsStore } from '../../store/settingsStore.ts';
 import { ChangeEvent, type FC, useState, useEffect } from 'react';
 import useMarkedItems from '../../hooks/useMarkedItems.ts';
 import useSession from '../../hooks/useSession.ts';
@@ -8,14 +8,14 @@ const Settings: FC = () => {
     apiKey,
     limitToLearned,
     limitToCurrentLevel,
-    sortByNextReview,
+    sorting,
     setApiKey,
     setLimitToLearned,
     setLimitToCurrentLevel,
-    setSortByNextReview,
+    setSorting,
   } = useSettingsStore();
   const { isLoggedIn } = useSession();
-  const { randomizeMarkedItems, setMarkedItems } = useMarkedItems();
+  const { setMarkedItems } = useMarkedItems();
 
   const [apiKeyInput, setApiKeyInput] = useState(apiKey);
 
@@ -35,11 +35,14 @@ const Settings: FC = () => {
     <div className="flex flex-col items-center py-8">
       <h1 className="mb-4 text-3xl font-bold">Settings</h1>
       <div className="w-full max-w-md px-6">
-        <p className="mb-4">Configure your application preferences here.</p>
+        <p className="mb-4">
+          Configure your application preferences here.
+          <br /> You need to set a valid WaniKani Api key for the application to work.
+        </p>
         <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
           {/* API Key Input */}
-          <div className="space-y-2">
-            <label htmlFor="apiKey" className="block text-sm font-medium">
+          <div className="mt-6 border-t border-gray-600 pt-6">
+            <label htmlFor="apiKey" className="mb-4 block text-lg font-medium">
               API Key
             </label>
             <div className="flex">
@@ -62,60 +65,86 @@ const Settings: FC = () => {
           </div>
           {isLoggedIn && (
             <>
-              <div className="space-y-4">
-                <div className="flex items-center">
-                  <input
-                    type="checkbox"
-                    id="limitToLearned"
-                    checked={limitToLearned}
-                    onChange={(e) => setLimitToLearned(e.target.checked)}
-                    className="mr-2 h-4 w-4 rounded border-gray-300 focus:ring-blue-500"
-                  />
-                  <label htmlFor="limitToLearned">Limit content to currently learned</label>
-                </div>
+              <div className="mt-6 border-t border-gray-600 pt-6">
+                <h3 className="mb-4 text-lg font-medium">Sorting</h3>
+                <div className="space-y-4">
+                  <div className="flex items-center">
+                    <input
+                      type="checkbox"
+                      id="limitToLearned"
+                      checked={limitToLearned}
+                      onChange={(e) => setLimitToLearned(e.target.checked)}
+                      className="mr-2 h-4 w-4 rounded border-gray-300 focus:ring-blue-500"
+                    />
+                    <label htmlFor="limitToLearned">Limit content to currently learned</label>
+                  </div>
 
-                <div className="flex items-center">
-                  <input
-                    type="checkbox"
-                    id="sortByNextReview"
-                    checked={sortByNextReview}
-                    onChange={(e) => setSortByNextReview(e.target.checked)}
-                    className="mr-2 h-4 w-4 rounded border-gray-300 focus:ring-blue-500"
-                  />
-                  <label htmlFor="sortByNextReview">Sort items by next review date</label>
-                </div>
-
-                <div className="flex items-center">
-                  <input
-                    type="checkbox"
-                    id="limitToCurrentLevel"
-                    checked={limitToCurrentLevel}
-                    onChange={(e) => setLimitToCurrentLevel(e.target.checked)}
-                    className="mr-2 h-4 w-4 rounded border-gray-300 focus:ring-blue-500"
-                  />
-                  <label htmlFor="limitToCurrentLevel">
-                    Limit shown vocabulary to current level
-                  </label>
+                  <div className="flex items-center">
+                    <input
+                      type="checkbox"
+                      id="limitToCurrentLevel"
+                      checked={limitToCurrentLevel}
+                      onChange={(e) => setLimitToCurrentLevel(e.target.checked)}
+                      className="mr-2 h-4 w-4 rounded border-gray-300 focus:ring-blue-500"
+                    />
+                    <label htmlFor="limitToCurrentLevel">
+                      Limit shown vocabulary to current level
+                    </label>
+                  </div>
                 </div>
               </div>
 
-              <div className="mt-6 border-t border-gray-200 pt-6">
-                <h3 className="mb-4 text-lg font-medium">Marked Items</h3>
-                <p className="mb-4 text-sm text-gray-600">Randomize the order of marked items.</p>
-                <div className="grid grid-cols-2 justify-between gap-4">
-                  <button
-                    onClick={randomizeMarkedItems}
-                    className="rounded-md bg-gradient-to-br from-pink-500 to-purple-500 px-4 py-2 text-white focus:ring-2 focus:ring-red-500 focus:outline-none"
-                  >
-                    Randomize items
-                  </button>
-                  <button
-                    onClick={() => setMarkedItems([])}
-                    className="rounded-md bg-red-600 px-4 py-2 text-white hover:bg-red-700 focus:ring-2 focus:ring-red-500 focus:outline-none"
-                  >
-                    Clear marked items
-                  </button>
+              <div className="mt-6 border-t border-gray-600 pt-6">
+                <h3 className="mb-4 text-lg font-medium">Sorting</h3>
+                <div className="space-y-4">
+                  <div className="flex items-center">
+                    <input
+                      type="radio"
+                      id="sorting"
+                      checked={sorting == SortSetting.id}
+                      onChange={(e) => {
+                        if (e.target.checked) setSorting(SortSetting.id);
+                      }}
+                      className="mr-2 h-4 w-4 rounded border-gray-300 focus:ring-blue-500"
+                    />
+                    <label htmlFor="sorting">by WaniKani id</label>
+                  </div>
+                  <div className="flex items-center">
+                    <input
+                      type="radio"
+                      id="nextReview"
+                      checked={sorting == SortSetting.nextReview}
+                      onChange={(e) => {
+                        if (e.target.checked) setSorting(SortSetting.nextReview);
+                      }}
+                      className="mr-2 h-4 w-4 rounded border-gray-300 focus:ring-blue-500"
+                    />
+                    <label htmlFor="nextReview">by next review date</label>
+                  </div>
+                  <div className="flex items-center">
+                    <input
+                      type="radio"
+                      id="randomize"
+                      checked={sorting == SortSetting.randomize}
+                      onChange={(e) => {
+                        if (e.target.checked) setSorting(SortSetting.randomize);
+                      }}
+                      className="mr-2 h-4 w-4 rounded border-gray-300 focus:ring-blue-500"
+                    />
+                    <label htmlFor="randomize">random order each time</label>
+                  </div>
                 </div>
+              </div>
+
+              <div className="mt-6 border-t border-gray-600 pt-6">
+                <h3 className="mb-4 text-lg font-medium">Marked Items</h3>
+                <p className="mb-4 text-sm text-gray-600">Remove all your marked items.</p>
+                <button
+                  onClick={() => setMarkedItems([])}
+                  className="rounded-md bg-red-600 px-4 py-2 text-white hover:bg-red-700 focus:ring-2 focus:ring-red-500 focus:outline-none"
+                >
+                  Clear marked items
+                </button>
               </div>
             </>
           )}
