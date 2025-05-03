@@ -1,6 +1,8 @@
 import { createContext, Dispatch, SetStateAction } from 'react';
 import { WanikaniSubject } from '../wanikani';
 
+export type Section = 'kanji' | 'vocabulary' | 'marked';
+
 export interface ItemContextType {
   items: Array<WanikaniSubject>;
   item: WanikaniSubject;
@@ -10,6 +12,8 @@ export interface ItemContextType {
   validItems: number[];
   isValid: boolean;
   moveToNext: () => void;
+  section: Section;
+  setSection: Dispatch<SetStateAction<Section>>;
 }
 
 export const ItemContext = createContext<ItemContextType>({
@@ -21,4 +25,6 @@ export const ItemContext = createContext<ItemContextType>({
   validate: () => false,
   validItems: [],
   moveToNext: () => {},
+  section: 'kanji',
+  setSection: () => {},
 });

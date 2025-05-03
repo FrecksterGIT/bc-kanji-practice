@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
-import { SortSetting, useSettingsStore } from '../store/settingsStore.ts';
-import { useLocation } from 'react-router-dom';
 
+import { SortSetting, useSettingsStore } from '../store/settingsStore.ts';
+import { Section } from '../contexts/ItemContext.tsx';
 import { WanikaniSubject } from '../wanikani';
 import useMarkedItems from './useMarkedItems.ts';
 import {
@@ -10,7 +10,7 @@ import {
   getSubjectsByObjectAndLevel,
 } from '../utils/itemDB.ts';
 
-export const useSelectedItems = () => {
+export const useSelectedItems = (section: Section) => {
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState<Array<WanikaniSubject>>([]);
   const limitToLearned = useSettingsStore((state) => state.limitToLearned);
@@ -19,7 +19,6 @@ export const useSelectedItems = () => {
   const { markedItems } = useMarkedItems();
   const [plannedAssignments, setPlannedAssignments] = useState(new Map<number, Date>());
   const [startedAssignments, setStartedAssignments] = useState<number[]>([]);
-  const { pathname } = useLocation();
 
   useEffect(() => {
     if (limitToLearned || sorting) {
@@ -102,22 +101,22 @@ export const useSelectedItems = () => {
   }, [filterAndSort, level]);
 
   useEffect(() => {
-    if (pathname === '/marked') {
+    if (section === 'marked') {
       loadMarkedItems();
     }
-  }, [loadMarkedItems, pathname]);
+  }, [loadMarkedItems, section]);
 
   useEffect(() => {
-    if (pathname === '/kanji') {
+    if (section === 'kanji') {
       loadKanji();
     }
-  }, [loadKanji, pathname]);
+  }, [loadKanji, section]);
 
   useEffect(() => {
-    if (pathname === '/vocabulary') {
+    if (section === 'vocabulary') {
       loadVocabulary();
     }
-  }, [loadVocabulary, pathname]);
+  }, [loadVocabulary, section]);
 
   return { loading, data };
 };

@@ -34,15 +34,15 @@ const routerLoggedIn = createBrowserRouter([
       },
       {
         path: 'kanji',
-        element: <Items />,
+        element: <Items section="kanji" />,
       },
       {
         path: 'vocabulary',
-        element: <Items />,
+        element: <Items section="vocabulary" />,
       },
       {
         path: 'marked',
-        element: <Items />,
+        element: <Items section="marked" />,
       },
       {
         path: 'settings',

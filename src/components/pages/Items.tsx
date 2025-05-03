@@ -1,12 +1,21 @@
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 import { isKanaVocabulary, isKanji, isVocabulary } from '../../utils/typeChecks.ts';
 import KanjiDetails from '../kanji/KanjiDetails.tsx';
 import VocabularyDetails from '../vocabulary/VocabularyDetails.tsx';
 import List from '../shared/List.tsx';
 import useItems from '../../hooks/useItems.ts';
+import { Section } from '../../contexts/ItemContext.tsx';
 
-const Items: FC = () => {
-  const { item } = useItems();
+type ItemsProps = {
+  section: Section;
+};
+
+const Items: FC<ItemsProps> = ({ section }) => {
+  const { setSection, item } = useItems();
+
+  useEffect(() => {
+    setSection(section)
+  }, [section, setSection]);
 
   return (
     <>

@@ -12,6 +12,12 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: (id) => {
+          if (id.includes('router')) {
+            return `router`;
+          }
+          if (id.includes('react')) {
+            return `react`;
+          }
           if (id.includes('node_modules')) {
             return `vendors`;
           }
