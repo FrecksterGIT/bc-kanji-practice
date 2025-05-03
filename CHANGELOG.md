@@ -1,3 +1,10 @@
+## [2.9.1](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.9.0...v2.9.1) (2025-05-03)
+
+
+### Bug Fixes
+
+* more prominent progress bar ([b3feca5](https://github.com/FrecksterGIT/bc-kanji-practice/commit/b3feca57761f039769d303083420a162b42ed1d7))
+
 # [2.9.0](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.8.0...v2.9.0) (2025-05-03)
 
 
