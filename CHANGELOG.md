@@ -1,3 +1,10 @@
+# [2.7.0](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.6.2...v2.7.0) (2025-05-03)
+
+
+### Features
+
+* additional keyboard shortcut to show details ([ffeef19](https://github.com/FrecksterGIT/bc-kanji-practice/commit/ffeef19f9fda90dd2ad1b66b49e892bc761747d7))
+
 ## [2.6.2](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.6.1...v2.6.2) (2025-05-03)
 
 
