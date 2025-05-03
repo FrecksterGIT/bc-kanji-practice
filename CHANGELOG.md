@@ -1,3 +1,10 @@
+## [2.6.2](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.6.1...v2.6.2) (2025-05-03)
+
+
+### Bug Fixes
+
+* revert vendor bundle splitting ([717941c](https://github.com/FrecksterGIT/bc-kanji-practice/commit/717941cd8063e7708a8d0f0228c69b32544fa667))
+
 ## [2.6.1](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.6.0...v2.6.1) (2025-05-03)
 
 
