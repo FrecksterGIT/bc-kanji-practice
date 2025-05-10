@@ -6,11 +6,13 @@ import { formatHint } from '../../utils/formatHint.ts';
 import { Composition } from './Composition.tsx';
 import { isKanaVocabulary, isVocabulary } from '../../utils/typeChecks.ts';
 import useItems from '../../hooks/useItems.ts';
+import useKanjiComposition from '../../hooks/useKanjiComposition.ts';
 
 const InfoTable: FC = () => {
   const { item, isValid } = useItems();
   const vocabulary = isVocabulary(item) || isKanaVocabulary(item) ? item : null;
   const [show, toggle, set] = useToggle(isValid ?? false);
+  const [firstKanji, ...moreKanji] = useKanjiComposition();
 
   useEffect(() => {
     set(isValid ?? false);
@@ -46,20 +48,38 @@ const InfoTable: FC = () => {
           <table className="mb-6 min-w-full divide-y divide-gray-200 border-b-1 border-b-gray-200 text-left">
             <thead>
               <tr className="text-xs font-medium uppercase">
-                <th scope="col" className="px-6 py-3 tracking-wider">
+                <th scope="col" className="px-6 py-3 tracking-wider" rowSpan={2}>
                   Reading
                 </th>
-                <th scope="col" className="px-6 py-3 tracking-wider">
+                <th scope="col" className="px-6 py-3 tracking-wider" rowSpan={2}>
                   Meanings
                 </th>
-                <th scope="col" className="w-px px-6 py-3 tracking-wider">
+                <th scope="colgroup" className="px-6 pt-3 tracking-wider" colSpan={4}>
                   Composition
+                </th>
+              </tr>
+              <tr className="text-xs font-medium uppercase">
+                <th scope="col" className="w-1 px-6 pb-3 tracking-wider">
+                  Kanji
+                </th>
+                <th scope="col" className="w-1 px-6 pb-3 tracking-wider">
+                  Onyomi
+                </th>
+                <th scope="col" className="w-1 px-6 pb-3 tracking-wider">
+                  Kunyomi
+                </th>
+                <th scope="col" className="w-1 px-6 pb-3 tracking-wider">
+                  Meaning
                 </th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td className="px-6 py-4 whitespace-nowrap" lang="ja">
+                <td
+                  className="px-6 py-4 whitespace-nowrap"
+                  lang="ja"
+                  rowSpan={moreKanji.length + 1}
+                >
                   {isVocabulary(vocabulary) &&
                     vocabulary.data.readings.map((reading) => (
                       <span
@@ -70,7 +90,7 @@ const InfoTable: FC = () => {
                       </span>
                     ))}
                 </td>
-                <td className="px-6 py-4">
+                <td className="row-span- px-6 py-4" rowSpan={moreKanji.length + 1}>
                   {vocabulary.data.meanings.map((meaning) => (
                     <span
                       key={meaning.meaning}
@@ -80,21 +100,30 @@ const InfoTable: FC = () => {
                     </span>
                   ))}
                 </td>
-                <td className="py-4 pl-6 whitespace-nowrap">
-                  <Composition />
-                </td>
+                {!firstKanji && (
+                  <td colSpan={4} className="px-6 py-4 text-center text-gray-500">
+                    No Kanji in vocabulary.
+                  </td>
+                )}
+                {firstKanji && (
+                  <Composition kanji={firstKanji} className="px-6 py-4 whitespace-nowrap" />
+                )}
               </tr>
+              {moreKanji.map((kanji) => (
+                <tr key={kanji.id}>
+                  <Composition kanji={kanji} className="px-6 pb-4 whitespace-nowrap" />
+                </tr>
+              ))}
             </tbody>
           </table>
+
           {isVocabulary(vocabulary) && vocabulary.data.reading_mnemonic && (
             <div className="flex items-center justify-around">
               <table className="max-w-3/4 text-left">
                 <tbody>
                   <tr>
-                    <th className="px-6 py-4 align-top text-xs leading-6 font-medium tracking-wider text-nowrap uppercase">
-                      Meaning Mnemonic
-                    </th>
-                    <td className="px-6 py-4 align-top">
+                    <th className="meaning-header">Meaning Mnemonic</th>
+                    <td className="meaning-content">
                       <p
                         dangerouslySetInnerHTML={{
                           __html: formatHint(vocabulary.data.meaning_mnemonic),
@@ -103,10 +132,8 @@ const InfoTable: FC = () => {
                     </td>
                   </tr>
                   <tr>
-                    <th className="px-6 py-4 align-top text-xs leading-6 font-medium tracking-wider text-nowrap uppercase">
-                      Reading Mnemonic
-                    </th>
-                    <td className="px-6 py-4 align-top">
+                    <th className="meaning-header">Reading Mnemonic</th>
+                    <td className="meaning-content">
                       <p
                         dangerouslySetInnerHTML={{
                           __html: formatHint(vocabulary.data.reading_mnemonic),

@@ -70,7 +70,7 @@ const InfoTable: FC = () => {
                   {kanji.data.meanings.map((meaning) => (
                     <span
                       key={meaning.meaning}
-                      className={`separated-comma ${meaning.primary ? 'font-bold text-white' : ''}`}
+                      className={`separated-comma ${meaning.primary ? 'text-white' : ''}`}
                     >
                       {meaning.meaning}
                     </span>
@@ -83,20 +83,16 @@ const InfoTable: FC = () => {
             <table className="max-w-3/4 text-left">
               <tbody>
                 <tr>
-                  <th className="px-6 py-4 align-top text-xs leading-6 font-medium tracking-wider text-nowrap uppercase">
-                    Meaning Mnemonic
-                  </th>
-                  <td className="px-6 py-4 align-top">
+                  <th className="meaning-header">Meaning Mnemonic</th>
+                  <td className="meaning-content">
                     <p
                       dangerouslySetInnerHTML={{ __html: formatHint(kanji.data.meaning_mnemonic) }}
                     />
                   </td>
                 </tr>
                 <tr>
-                  <th className="px-6 py-4 align-top text-xs leading-6 font-medium tracking-wider text-nowrap uppercase">
-                    Reading Mnemonic
-                  </th>
-                  <td className="px-6 py-4 align-top">
+                  <th className="meaning-header">Reading Mnemonic</th>
+                  <td className="meaning-content">
                     <p
                       dangerouslySetInnerHTML={{ __html: formatHint(kanji.data.reading_mnemonic) }}
                     />

@@ -10,3 +10,11 @@
   --font-*: initial;
   --font-sans: Noto Sans JP;
 }
+
+.meaning-header {
+  @apply px-6 py-4 align-top text-xs leading-6 font-medium tracking-wider text-nowrap uppercase;
+}
+
+.meaning-content {
+  @apply px-6 py-4 align-top;
+}
