@@ -1,3 +1,10 @@
+## [2.9.2](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.9.1...v2.9.2) (2025-05-10)
+
+
+### Bug Fixes
+
+* streamline kanji composition table for vocabulary ([c0ff318](https://github.com/FrecksterGIT/bc-kanji-practice/commit/c0ff318abdaeb459c95b862c0c9c900612c90207))
+
 ## [2.9.1](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.9.0...v2.9.1) (2025-05-03)
 
 
