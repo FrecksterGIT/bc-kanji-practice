@@ -1,14 +1,16 @@
 import { type ChangeEventHandler, type FC, useCallback, useMemo, useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { useEventListener } from 'usehooks-ts';
 import { Help } from '../shared/icons/Help.tsx';
 import { Menu } from '../shared/icons/Menu.tsx';
 import HelpOverlay from './HelpOverlay.tsx';
 import MobileMenu from './MobileMenu.tsx';
 import useSession from '../../hooks/useSession.ts';
+import { nanoid } from 'nanoid';
 
 const Navigation: FC = () => {
-  const { user, maxLevel, isLoggedIn, level, updateSettings, markedItems } = useSession();
+  const navigate = useNavigate();
+  const { user, maxLevel, isLoggedIn, level, updateSettings, markedItems, sorting } = useSession();
   const levelOptions = useMemo(() => Array.from({ length: maxLevel }, (_, i) => i + 1), [maxLevel]);
   const [isHelpOpen, setIsHelpOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -50,6 +52,12 @@ const Navigation: FC = () => {
                 className={({ isActive }) =>
                   `rounded px-3 py-2 hover:bg-pink-500 ${isActive ? 'bg-pink-500' : ''}`
                 }
+                onClick={(e) => {
+                  if (sorting === 'randomize') {
+                    e.preventDefault();
+                    navigate('kanji', { state: nanoid() });
+                  }
+                }}
               >
                 Kanji
               </NavLink>
@@ -58,6 +66,12 @@ const Navigation: FC = () => {
                 className={({ isActive }) =>
                   `rounded px-3 py-2 hover:bg-purple-500 ${isActive ? 'bg-purple-500' : ''}`
                 }
+                onClick={(e) => {
+                  if (sorting === 'randomize') {
+                    e.preventDefault();
+                    navigate('vocabulary', { state: nanoid() });
+                  }
+                }}
               >
                 Vocabulary
               </NavLink>
@@ -83,6 +97,12 @@ const Navigation: FC = () => {
                 className={({ isActive }) =>
                   `rounded from-pink-500 to-purple-500 px-3 py-2 hover:bg-gradient-to-br ${isActive ? 'bg-gradient-to-br' : ''}`
                 }
+                onClick={(e) => {
+                  if (sorting === 'randomize') {
+                    e.preventDefault();
+                    navigate('marked', { state: nanoid() });
+                  }
+                }}
               >
                 Marked Items <span className="text-xs">({markedItems.length})</span>
               </NavLink>

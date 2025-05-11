@@ -1,8 +1,8 @@
-import { FC, RefObject, useCallback, useRef } from 'react';
+import { FC, RefObject, useRef } from 'react';
 import { useHover } from 'usehooks-ts';
-import { Tooltip } from './Tooltip.tsx';
+import { Tooltip } from '../shared/Tooltip.tsx';
 import { WanikaniVocabularySubject } from '../../wanikani';
-import { useAudioPlayerContext } from 'react-use-audio-player';
+import { usePlayVocabulary } from '../../hooks/usePlayVocabulary.ts';
 
 interface MarkProps {
   vocabulary: WanikaniVocabularySubject;
@@ -11,19 +11,7 @@ interface MarkProps {
 export const Mark: FC<MarkProps> = ({ vocabulary }) => {
   const markRef = useRef<HTMLButtonElement>(null);
   const showTooltip = useHover(markRef as RefObject<HTMLButtonElement>);
-  const { load } = useAudioPlayerContext();
-
-  const playAudio = useCallback(() => {
-    const url = vocabulary.data.pronunciation_audios.find(
-      (a) => a.metadata.gender === 'male' && a.content_type === 'audio/mpeg'
-    )?.url;
-    if (url) {
-      load(vocabulary.data.pronunciation_audios[1].url, {
-        format: 'mp3',
-        autoplay: true,
-      });
-    }
-  }, [load, vocabulary.data.pronunciation_audios]);
+  const { playAudio } = usePlayVocabulary(vocabulary);
 
   const level = vocabulary.data.level;
   const meaning = vocabulary.data.meanings[0].meaning;
@@ -31,11 +19,7 @@ export const Mark: FC<MarkProps> = ({ vocabulary }) => {
   const reading = vocabulary.data.readings[0].reading;
 
   return (
-    <button
-      className="relative mx-1 flex cursor-pointer items-end gap-2 rounded-sm bg-purple-500 px-1 text-xl text-nowrap text-gray-800"
-      onClick={() => playAudio()}
-      ref={markRef}
-    >
+    <button className="mark" onClick={playAudio} ref={markRef}>
       <span lang="ja">{word}</span>
       <span className="text-sm">{level}</span>
       {showTooltip && (

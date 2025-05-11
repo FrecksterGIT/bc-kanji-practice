@@ -73,7 +73,7 @@ const KanaInput: FC<KanaInputProps> = ({
   }, [validationFeedback]);
 
   return (
-    <div className="relative">
+    <div className="relative my-12 w-full max-w-1/2">
       <form onSubmit={handleSubmit}>
         <input
           type="text"

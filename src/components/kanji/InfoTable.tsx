@@ -29,13 +29,13 @@ const InfoTable: FC = () => {
           <table className="mb-6 min-w-full divide-y divide-gray-200 border-b-1 border-b-gray-200 text-left">
             <thead>
               <tr>
-                <th scope="col" className="px-6 py-3 text-xs font-medium tracking-wider uppercase">
+                <th scope="col" className="table-header">
                   Onyomi
                 </th>
-                <th scope="col" className="px-6 py-3 text-xs font-medium tracking-wider uppercase">
+                <th scope="col" className="table-header">
                   Kunyomi
                 </th>
-                <th scope="col" className="px-6 py-3 text-xs font-medium tracking-wider uppercase">
+                <th scope="col" className="table-header">
                   Meanings
                 </th>
               </tr>

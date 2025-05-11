@@ -9,11 +9,13 @@ import {
   getSubjectsByObjectAndLevel,
 } from '../utils/itemDB.ts';
 import useSession from './useSession.ts';
+import { useLocation } from 'react-router-dom';
 
 export const useSelectedItems = (section: Section) => {
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState<Array<WanikaniSubject>>([]);
   const { limitToLearned, sorting, level, markedItems } = useSession();
+  const { state } = useLocation();
   const [plannedAssignments, setPlannedAssignments] = useState(new Map<number, Date>());
   const [startedAssignments, setStartedAssignments] = useState<number[]>([]);
 
@@ -100,19 +102,19 @@ export const useSelectedItems = (section: Section) => {
     if (section === 'marked') {
       loadMarkedItems();
     }
-  }, [loadMarkedItems, section]);
+  }, [loadMarkedItems, section, state]);
 
   useEffect(() => {
     if (section === 'kanji') {
       loadKanji();
     }
-  }, [loadKanji, section]);
+  }, [loadKanji, section, state]);
 
   useEffect(() => {
     if (section === 'vocabulary') {
       loadVocabulary();
     }
-  }, [loadVocabulary, section]);
+  }, [loadVocabulary, section, state]);
 
   return { loading, data };
 };

@@ -48,10 +48,10 @@ const InfoTable: FC = () => {
           <table className="mb-6 min-w-full divide-y divide-gray-200 border-b-1 border-b-gray-200 text-left">
             <thead>
               <tr className="text-xs font-medium uppercase">
-                <th scope="col" className="px-6 py-3 tracking-wider" rowSpan={2}>
+                <th scope="col" className="table-header" rowSpan={2}>
                   Reading
                 </th>
-                <th scope="col" className="px-6 py-3 tracking-wider" rowSpan={2}>
+                <th scope="col" className="table-header" rowSpan={2}>
                   Meanings
                 </th>
                 <th scope="colgroup" className="px-6 pt-3 tracking-wider" colSpan={4}>
@@ -59,16 +59,16 @@ const InfoTable: FC = () => {
                 </th>
               </tr>
               <tr className="text-xs font-medium uppercase">
-                <th scope="col" className="w-1 px-6 pb-3 tracking-wider">
+                <th scope="col" className="table-header-2">
                   Kanji
                 </th>
-                <th scope="col" className="w-1 px-6 pb-3 tracking-wider">
+                <th scope="col" className="table-header-2">
                   Onyomi
                 </th>
-                <th scope="col" className="w-1 px-6 pb-3 tracking-wider">
+                <th scope="col" className="table-header-2">
                   Kunyomi
                 </th>
-                <th scope="col" className="w-1 px-6 pb-3 tracking-wider">
+                <th scope="col" className="table-header-2">
                   Meaning
                 </th>
               </tr>
@@ -90,7 +90,7 @@ const InfoTable: FC = () => {
                       </span>
                     ))}
                 </td>
-                <td className="row-span- px-6 py-4" rowSpan={moreKanji.length + 1}>
+                <td className="px-6 py-4" rowSpan={moreKanji.length + 1}>
                   {vocabulary.data.meanings.map((meaning) => (
                     <span
                       key={meaning.meaning}

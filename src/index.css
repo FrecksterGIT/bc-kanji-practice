@@ -18,3 +18,19 @@
 .meaning-content {
   @apply px-6 py-4 align-top;
 }
+
+.table-header {
+  @apply px-6 py-3 text-xs font-medium tracking-wider uppercase;
+}
+
+.table-header-2 {
+  @apply w-1 px-6 pb-3 tracking-wider;
+}
+
+.mark {
+  @apply relative mx-1 flex cursor-pointer items-end gap-2 rounded-sm bg-purple-500 px-1 text-xl text-nowrap text-gray-800;
+}
+
+.context-sentence {
+  @apply grid cursor-pointer grid-cols-2 gap-x-6 border-b-1 border-b-gray-600 pb-4 text-2xl;
+}
