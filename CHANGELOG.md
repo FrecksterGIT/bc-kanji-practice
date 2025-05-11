@@ -1,3 +1,10 @@
+## [2.9.3](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.9.2...v2.9.3) (2025-05-11)
+
+
+### Bug Fixes
+
+* menu click reshuffles items ([d4dd8e5](https://github.com/FrecksterGIT/bc-kanji-practice/commit/d4dd8e5380cfefa9ea95237da7a5ce7e0c83f959))
+
 ## [2.9.2](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.9.1...v2.9.2) (2025-05-10)
 
 
