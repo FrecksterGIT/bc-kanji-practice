@@ -2,9 +2,9 @@ import { type FC, useEffect } from 'react';
 import { useEventListener, useToggle } from 'usehooks-ts';
 import { formatHint } from '../../utils/formatHint.ts';
 import { isKanji } from '../../utils/typeChecks.ts';
-import useItems from '../../hooks/useItems.ts';
+import { useItems } from '../../hooks/useItems.ts';
 
-const InfoTable: FC = () => {
+export const InfoTable: FC = () => {
   const { item, isValid } = useItems();
   const [show, toggle, set] = useToggle(isValid ?? false);
   const kanji = isKanji(item) ? item : null;
@@ -110,5 +110,3 @@ const InfoTable: FC = () => {
     )
   );
 };
-
-export default InfoTable;

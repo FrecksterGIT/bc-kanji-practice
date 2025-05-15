@@ -22,7 +22,7 @@ type ContextSentencesProps = {
   context_sentences: WanikaniContextSentence[];
 };
 
-const ContextSentences: FC<ContextSentencesProps> = ({ context_sentences }) => {
+export const ContextSentences: FC<ContextSentencesProps> = ({ context_sentences }) => {
   return (
     <div className="mb-12 grid w-full space-y-4">
       {context_sentences.map((sentence) => (
@@ -31,5 +31,3 @@ const ContextSentences: FC<ContextSentencesProps> = ({ context_sentences }) => {
     </div>
   );
 };
-
-export default ContextSentences;

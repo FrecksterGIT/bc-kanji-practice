@@ -2,7 +2,7 @@ import { useState, ChangeEvent, useCallback, useEffect, FC, useRef, FormEventHan
 import { useEventListener } from 'usehooks-ts';
 import { toHiragana } from 'wanakana';
 import { Correct } from './icons/Correct.tsx';
-import useItems from '../../hooks/useItems.ts';
+import { useItems } from '../../hooks/useItems.ts';
 
 interface KanaInputProps {
   placeholder?: string;
@@ -10,7 +10,7 @@ interface KanaInputProps {
   name?: string;
 }
 
-const KanaInput: FC<KanaInputProps> = ({
+export const KanaInput: FC<KanaInputProps> = ({
   placeholder = 'Type the reading in hiragana...',
   id,
   name,
@@ -98,5 +98,3 @@ const KanaInput: FC<KanaInputProps> = ({
     </div>
   );
 };
-
-export default KanaInput;

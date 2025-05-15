@@ -17,8 +17,7 @@ A web application for practicing Japanese kanji and vocabulary using data from W
 - **Build Tool**: Vite 6
 - **Styling**: TailwindCSS 4
 - **Routing**: React Router 7
-- **State Management**: 
-  - React Context API
+- **State Management**: React Context API
 - **Data Storage**: IndexedDB (via idb)
 - **API Integration**: WaniKani API
 - **Audio**: react-use-audio-player
@@ -60,6 +59,7 @@ The project uses GitHub Actions for CI/CD:
 #### Pull Request Workflow
 
 When a pull request is created against the main branch, the following steps are executed:
+
 1. Code checkout
 2. Node.js setup
 3. Dependencies installation
@@ -69,6 +69,7 @@ When a pull request is created against the main branch, the following steps are 
 #### Deployment Workflow
 
 When code is pushed to the main branch, the following steps are executed:
+
 1. Code checkout
 2. Node.js setup
 3. Dependencies installation

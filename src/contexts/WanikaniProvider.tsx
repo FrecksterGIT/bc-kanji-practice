@@ -13,8 +13,8 @@ import {
   getAllAssignments,
   getAllSubjects,
 } from '../utils/itemDB.ts';
-import wkLoad from '../utils/wkLoad.ts';
-import useSession from '../hooks/useSession.ts';
+import { wkLoad } from '../utils/wkLoad.ts';
+import { useSession } from '../hooks/useSession.ts';
 
 export const WanikaniProvider: FC<PropsWithChildren> = ({ children }) => {
   const [loading, setLoading] = useState(false);

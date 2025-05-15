@@ -22,11 +22,9 @@ const fetchFn = async <T>({ url, apiKey }: { url: string; apiKey: string }): Pro
   return response.json();
 };
 
-const wkLoad = createCache({
+export const wkLoad = createCache({
   storage: { type: 'memory' },
 })
   .define('assignments', fetchFn<WanikaniCollection<WanikaniAssignment>>)
   .define('subjects', fetchFn<WanikaniCollection<WanikaniSubject>>)
   .define('user', fetchFn<WanikaniResourceResponse<WanikaniUserData>>);
-
-export default wkLoad;

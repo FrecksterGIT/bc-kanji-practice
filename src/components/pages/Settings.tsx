@@ -1,8 +1,8 @@
 import { type FC, useRef } from 'react';
-import useSession from '../../hooks/useSession.ts';
+import { useSession } from '../../hooks/useSession.ts';
 import { SortSetting } from '../../contexts/SessionContext.tsx';
 
-const Settings: FC = () => {
+export const Settings: FC = () => {
   const {
     apiKey,
     limitToLearned,
@@ -142,5 +142,3 @@ const Settings: FC = () => {
     </div>
   );
 };
-
-export default Settings;

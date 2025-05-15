@@ -5,10 +5,10 @@ import { useEventListener, useToggle } from 'usehooks-ts';
 import { formatHint } from '../../utils/formatHint.ts';
 import { Composition } from './Composition.tsx';
 import { isKanaVocabulary, isVocabulary } from '../../utils/typeChecks.ts';
-import useItems from '../../hooks/useItems.ts';
-import useKanjiComposition from '../../hooks/useKanjiComposition.ts';
+import { useItems } from '../../hooks/useItems.ts';
+import { useKanjiComposition } from '../../hooks/useKanjiComposition.ts';
 
-const InfoTable: FC = () => {
+export const InfoTable: FC = () => {
   const { item, isValid } = useItems();
   const vocabulary = isVocabulary(item) || isKanaVocabulary(item) ? item : null;
   const [show, toggle, set] = useToggle(isValid ?? false);
@@ -150,5 +150,3 @@ const InfoTable: FC = () => {
     )
   );
 };
-
-export default InfoTable;

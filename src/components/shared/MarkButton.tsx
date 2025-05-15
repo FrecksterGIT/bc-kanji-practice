@@ -1,12 +1,12 @@
 import { FC, RefObject, useCallback, useRef } from 'react';
 import { useEventListener, useHover } from 'usehooks-ts';
-import useSession from '../../hooks/useSession.ts';
-import useItems from '../../hooks/useItems.ts';
+import { useSession } from '../../hooks/useSession.ts';
+import { useItems } from '../../hooks/useItems.ts';
 import { Tooltip } from './Tooltip.tsx';
 import { BookmarkEmpty } from './icons/BookmarkEmpty.tsx';
 import { BookmarkFilled } from './icons/BookmarkFilled.tsx';
 
-const MarkButton: FC = () => {
+export const MarkButton: FC = () => {
   const { item } = useItems();
   const { markedItems, setMarkedItems } = useSession();
 
@@ -41,5 +41,3 @@ const MarkButton: FC = () => {
     </button>
   );
 };
-
-export default MarkButton;

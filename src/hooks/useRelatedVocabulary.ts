@@ -2,8 +2,8 @@ import { useEffect, useState } from 'react';
 import { WanikaniVocabularySubject } from '../wanikani';
 import { isKanji } from '../utils/typeChecks.ts';
 import { getSubjectByIds } from '../utils/itemDB.ts';
-import useItems from './useItems.ts';
-import useSession from './useSession.ts';
+import { useItems } from './useItems.ts';
+import { useSession } from './useSession.ts';
 
 export const useRelatedVocabulary = () => {
   const { item } = useItems();

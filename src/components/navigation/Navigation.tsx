@@ -3,12 +3,12 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import { useEventListener } from 'usehooks-ts';
 import { Help } from '../shared/icons/Help.tsx';
 import { Menu } from '../shared/icons/Menu.tsx';
-import HelpOverlay from './HelpOverlay.tsx';
-import MobileMenu from './MobileMenu.tsx';
-import useSession from '../../hooks/useSession.ts';
+import { HelpOverlay } from './HelpOverlay.tsx';
+import { MobileMenu } from './MobileMenu.tsx';
+import { useSession } from '../../hooks/useSession.ts';
 import { nanoid } from 'nanoid';
 
-const Navigation: FC = () => {
+export const Navigation: FC = () => {
   const navigate = useNavigate();
   const { user, maxLevel, isLoggedIn, level, updateSettings, markedItems, sorting } = useSession();
   const levelOptions = useMemo(() => Array.from({ length: maxLevel }, (_, i) => i + 1), [maxLevel]);
@@ -155,5 +155,3 @@ const Navigation: FC = () => {
     </nav>
   );
 };
-
-export default Navigation;

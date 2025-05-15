@@ -1,15 +1,15 @@
 import { type FC, RefObject, useCallback, useRef, useState } from 'react';
-import SelectableButton from './SelectableButton.tsx';
+import { SelectableButton } from './SelectableButton.tsx';
 import { isKanji } from '../../utils/typeChecks.ts';
 import { useEventListener, useOnClickOutside, useResizeObserver } from 'usehooks-ts';
-import useItems from '../../hooks/useItems.ts';
+import { useItems } from '../../hooks/useItems.ts';
 import { Close } from './icons/Close.tsx';
 
 interface ListProps {
   onClose: () => void;
 }
 
-const List: FC<ListProps> = ({ onClose }) => {
+export const List: FC<ListProps> = ({ onClose }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const listRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
@@ -102,5 +102,3 @@ const List: FC<ListProps> = ({ onClose }) => {
     </div>
   );
 };
-
-export default List;

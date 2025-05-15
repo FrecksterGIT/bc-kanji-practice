@@ -8,7 +8,7 @@ import {
   getSubjectByIds,
   getSubjectsByObjectAndLevel,
 } from '../utils/itemDB.ts';
-import useSession from './useSession.ts';
+import { useSession } from './useSession.ts';
 import { useLocation } from 'react-router-dom';
 
 export const useSelectedItems = (section: Section) => {

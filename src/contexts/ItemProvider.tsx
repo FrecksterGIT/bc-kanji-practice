@@ -4,7 +4,7 @@ import { isKatakana, toHiragana } from 'wanakana';
 import { useSelectedItems } from '../hooks/useSelectedItems.ts';
 import { isKanaVocabulary, isKanji, isVocabulary } from '../utils/typeChecks.ts';
 
-const ItemProvider: FC<PropsWithChildren> = ({ children }) => {
+export const ItemProvider: FC<PropsWithChildren> = ({ children }) => {
   const [section, setSection] = useState<Section>('kanji');
   const { data: items } = useSelectedItems(section);
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
@@ -101,5 +101,3 @@ const ItemProvider: FC<PropsWithChildren> = ({ children }) => {
 
   return <ItemContext value={contextValue}>{children}</ItemContext>;
 };
-
-export default ItemProvider;

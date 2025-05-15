@@ -1,13 +1,13 @@
 import { type FC } from 'react';
-import KanaInput from '../shared/KanaInput.tsx';
-import InfoTable from './InfoTable.tsx';
+import { KanaInput } from '../shared/KanaInput.tsx';
+import { InfoTable } from './InfoTable.tsx';
 import { RelatedVocabulary } from './RelatedVocabulary.tsx';
 import { ProgressBar } from '../shared/ProgressBar.tsx';
 import { isKanji } from '../../utils/typeChecks.ts';
-import useItems from '../../hooks/useItems.ts';
-import MainTerm from '../shared/MainTerm.tsx';
+import { useItems } from '../../hooks/useItems.ts';
+import { MainTerm } from '../shared/MainTerm.tsx';
 
-const KanjiDetails: FC = () => {
+export const KanjiDetails: FC = () => {
   const { item } = useItems();
   const kanji = isKanji(item) ? item : null;
 
@@ -23,5 +23,3 @@ const KanjiDetails: FC = () => {
     )
   );
 };
-
-export default KanjiDetails;

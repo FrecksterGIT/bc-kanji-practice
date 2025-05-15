@@ -10,7 +10,7 @@ const Mono: FC<PropsWithChildren> = ({ children }) => (
   <span className="font-mono rounded bg-gray-700 px-1">{children}</span>
 );
 
-const HelpOverlay: FC<HelpOverlayProps> = ({ isOpen, onClose }) => {
+export const HelpOverlay: FC<HelpOverlayProps> = ({ isOpen, onClose }) => {
   const overlayRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -95,5 +95,3 @@ const HelpOverlay: FC<HelpOverlayProps> = ({ isOpen, onClose }) => {
     </div>
   );
 };
-
-export default HelpOverlay;

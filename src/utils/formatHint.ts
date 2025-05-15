@@ -1,11 +1,8 @@
 import { isJapanese } from 'wanakana';
 
-export const formatHint = (hint: string | null) => {
-  if (!hint) {
-    return '';
-  }
-  return hint
-    .split('')
+export const formatHint = (hint: string | null) =>
+  hint
+    ?.split('')
     .map((c) => (isJapanese(c) ? `<span class='font-semibold text-gray-300'>${c}</span>` : c))
     .join('')
     .replace(/(\n)+/g, '<br />')
@@ -17,5 +14,4 @@ export const formatHint = (hint: string | null) => {
     .replaceAll('<radical>', "<mark class='bg-blue-300 text-gray-800 px-1 rounded-sm mx-1'>")
     .replaceAll('</radical>', '</mark>')
     .replaceAll('<vocabulary>', "<mark class='bg-purple-500 text-gray-800 px-1 rounded-sm mx-1'>")
-    .replaceAll('</vocabulary>', '</mark>');
-};
+    .replaceAll('</vocabulary>', '</mark>') ?? '';

@@ -1,12 +1,12 @@
 import { FC } from 'react';
 
 import { Audio } from './icons/Audio.tsx';
-import MarkButton from './MarkButton.tsx';
-import useItems from '../../hooks/useItems.ts';
+import { MarkButton } from './MarkButton.tsx';
+import { useItems } from '../../hooks/useItems.ts';
 import { isKanji, isVocabulary } from '../../utils/typeChecks.ts';
 import { usePlayVocabulary } from '../../hooks/usePlayVocabulary.ts';
 
-const MainTerm: FC = () => {
+export const MainTerm: FC = () => {
   const { item } = useItems();
   const isVocab = isVocabulary(item);
   const borderColor = isKanji(item) ? 'border-b-pink-400' : 'border-b-purple-400';
@@ -30,5 +30,3 @@ const MainTerm: FC = () => {
     </div>
   );
 };
-
-export default MainTerm;

@@ -1,5 +1,5 @@
 import { isKanji } from '../../utils/typeChecks.ts';
-import useItems from '../../hooks/useItems.ts';
+import { useItems } from '../../hooks/useItems.ts';
 
 export const ProgressBar = () => {
   const { items, validItems, item } = useItems();

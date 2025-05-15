@@ -1,61 +1,67 @@
-import { FC, useContext } from 'react';
+import { FC, useContext, useMemo } from 'react';
 import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom';
-import App from '../../App.tsx';
-import Items from '../pages/Items.tsx';
-import Settings from '../pages/Settings.tsx';
-import useSession from '../../hooks/useSession.ts';
+import { App } from '../../App.tsx';
+import { Items } from '../pages/Items.tsx';
+import { Settings } from '../pages/Settings.tsx';
+import { useSession } from '../../hooks/useSession.ts';
 import { WanikaniContext } from '../../contexts/WanikaniContext.ts';
-
-const routerLoggedOut = createBrowserRouter([
-  {
-    path: '/',
-    element: <App />,
-    children: [
-      {
-        path: 'settings',
-        element: <Settings />,
-      },
-      {
-        path: '*',
-        element: <Navigate to="/settings" replace />,
-      },
-    ],
-  },
-]);
-
-const routerLoggedIn = createBrowserRouter([
-  {
-    path: '/',
-    element: <App />,
-    children: [
-      {
-        path: '',
-        element: <Navigate to="kanji" replace />,
-      },
-      {
-        path: 'kanji',
-        element: <Items section="kanji" />,
-      },
-      {
-        path: 'vocabulary',
-        element: <Items section="vocabulary" />,
-      },
-      {
-        path: 'marked',
-        element: <Items section="marked" />,
-      },
-      {
-        path: 'settings',
-        element: <Settings />,
-      },
-    ],
-  },
-]);
 
 export const ApplicationRouter: FC = () => {
   const { loading: sessionLoading, isLoggedIn } = useSession();
   const { loading: wanikaniLoading, loadedCount } = useContext(WanikaniContext);
   const loading = sessionLoading || wanikaniLoading;
+
+  const routerConfig = useMemo(
+    () =>
+      createBrowserRouter(
+        isLoggedIn
+          ? [
+              {
+                path: '/',
+                element: <App />,
+                children: [
+                  {
+                    path: '',
+                    element: <Navigate to="kanji" replace />,
+                  },
+                  {
+                    path: 'kanji',
+                    element: <Items section="kanji" />,
+                  },
+                  {
+                    path: 'vocabulary',
+                    element: <Items section="vocabulary" />,
+                  },
+                  {
+                    path: 'marked',
+                    element: <Items section="marked" />,
+                  },
+                  {
+                    path: 'settings',
+                    element: <Settings />,
+                  },
+                ],
+              },
+            ]
+          : [
+              {
+                path: '/',
+                element: <App />,
+                children: [
+                  {
+                    path: 'settings',
+                    element: <Settings />,
+                  },
+                  {
+                    path: '*',
+                    element: <Navigate to="/settings" replace />,
+                  },
+                ],
+              },
+            ]
+      ),
+    [isLoggedIn]
+  );
 
   if (loading)
     return (
@@ -65,5 +71,5 @@ export const ApplicationRouter: FC = () => {
         </div>
       </div>
     );
-  return <RouterProvider router={isLoggedIn ? routerLoggedIn : routerLoggedOut} />;
+  return <RouterProvider router={routerConfig} />;
 };

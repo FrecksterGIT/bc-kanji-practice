@@ -1,18 +1,18 @@
 import { FC, useEffect } from 'react';
 import { isKanaVocabulary, isKanji, isVocabulary } from '../../utils/typeChecks.ts';
-import KanjiDetails from '../kanji/KanjiDetails.tsx';
-import VocabularyDetails from '../vocabulary/VocabularyDetails.tsx';
-import useItems from '../../hooks/useItems.ts';
+import { KanjiDetails } from '../kanji/KanjiDetails.tsx';
+import { VocabularyDetails } from '../vocabulary/VocabularyDetails.tsx';
+import { useItems } from '../../hooks/useItems.ts';
 import { Section } from '../../contexts/ItemContext.tsx';
 import { AngleDown } from '../shared/icons/AngleDown.tsx';
-import List from '../shared/List.tsx';
+import { List } from '../shared/List.tsx';
 import { useEventListener, useToggle } from 'usehooks-ts';
 
 type ItemsProps = {
   section: Section;
 };
 
-const Items: FC<ItemsProps> = ({ section }) => {
+export const Items: FC<ItemsProps> = ({ section }) => {
   const { setSection, item, selectedIndex, setSelectedIndex, items } = useItems();
   const [open, toggle] = useToggle();
 
@@ -65,5 +65,3 @@ const Items: FC<ItemsProps> = ({ section }) => {
     </div>
   );
 };
-
-export default Items;

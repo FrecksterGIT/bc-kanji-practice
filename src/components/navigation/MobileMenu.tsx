@@ -15,7 +15,7 @@ interface MobileMenuProps {
   onHelpClick: () => void;
 }
 
-const MobileMenu: FC<MobileMenuProps> = ({
+export const MobileMenu: FC<MobileMenuProps> = ({
   isOpen,
   onClose,
   isLoggedIn,
@@ -147,5 +147,3 @@ const MobileMenu: FC<MobileMenuProps> = ({
     </div>
   );
 };
-
-export default MobileMenu;

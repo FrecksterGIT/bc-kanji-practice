@@ -6,8 +6,8 @@ import {
   SessionContextType,
   SortSetting,
 } from './SessionContext.tsx';
-import wkLoad from '../utils/wkLoad.ts';
-import * as itemDB from '../utils/itemDB.ts';
+import { wkLoad } from '../utils/wkLoad.ts';
+import { getSettings, saveSettings } from '../utils/itemDB.ts';
 
 interface UserProviderProps {
   children: ReactNode;
@@ -32,7 +32,7 @@ export const SessionProvider: FC<UserProviderProps> = ({ children }) => {
   useEffect(() => {
     setSettingsLoading(true);
     const loadSettings = async () => {
-      const settings = await itemDB.getSettings();
+      const settings = await getSettings();
       if (settings) {
         setPersistedSettings(settings);
       }
@@ -45,7 +45,7 @@ export const SessionProvider: FC<UserProviderProps> = ({ children }) => {
 
   useEffect(() => {
     if (persistedSettings && !settingsLoading) {
-      itemDB.saveSettings(persistedSettings).then();
+      saveSettings(persistedSettings).then();
     }
   }, [persistedSettings, settingsLoading]);
 
