@@ -1,3 +1,10 @@
+## [2.9.4](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.9.3...v2.9.4) (2025-05-15)
+
+
+### Bug Fixes
+
+* optimize imports and streamline configuration files ([8a18a5d](https://github.com/FrecksterGIT/bc-kanji-practice/commit/8a18a5d920a73a94a1cf35e2902f73849febd0c6))
+
 ## [2.9.3](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.9.2...v2.9.3) (2025-05-11)
 
 
