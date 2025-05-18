@@ -21,7 +21,7 @@ export const InfoTable: FC = () => {
 
   useEffect(() => {
     setShow(isValid ?? false);
-  }, [isValid]);
+  }, [isValid, currentItem]);
 
   const onKeyDown = useGlobalEvent<KeyboardEvent>('keydown');
   onKeyDown((e) => {

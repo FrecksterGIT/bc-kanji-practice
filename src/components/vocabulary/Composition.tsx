@@ -20,7 +20,7 @@ export const Composition: FC<CompositionProps> = ({ kanji, className }) => {
               key={reading.reading}
               className={`separated-comma ${reading.primary ? 'text-white' : ''}`}
             >
-              <span className={'text-nowrap'}>{reading.reading}</span>
+              <span className="text-nowrap">{reading.reading}</span>
             </span>
           ))}
       </td>
@@ -32,7 +32,7 @@ export const Composition: FC<CompositionProps> = ({ kanji, className }) => {
               key={reading.reading}
               className={`separated-comma ${reading.primary ? 'text-white' : ''}`}
             >
-              <span className={'text-nowrap'}>{reading.reading}</span>
+              <span className="text-nowrap">{reading.reading}</span>
             </span>
           ))}
       </td>
@@ -42,7 +42,7 @@ export const Composition: FC<CompositionProps> = ({ kanji, className }) => {
             key={meaning.meaning}
             className={`separated-comma ${meaning.primary ? 'text-white' : ''}`}
           >
-            <span className={'text-nowrap'}>{meaning.meaning}</span>
+            {meaning.meaning}
           </span>
         ))}
       </td>
