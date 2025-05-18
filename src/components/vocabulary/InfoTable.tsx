@@ -111,12 +111,13 @@ export const InfoTable: FC = () => {
               </tr>
               {moreKanji.map((kanji) => (
                 <tr key={kanji.id}>
-                  <Composition kanji={kanji} className="table-content text-nowrap" />
+                  <Composition kanji={kanji} className="table-content" />
                 </tr>
               ))}
             </tbody>
           </table>
-
+        </div>
+        <div>
           {isVocabulary(vocabulary) && vocabulary.data.reading_mnemonic && (
             <div className="flex items-center justify-around">
               <table className="max-w-full text-left lg:max-w-3/4">
