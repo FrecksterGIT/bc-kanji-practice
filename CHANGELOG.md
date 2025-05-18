@@ -1,3 +1,10 @@
+# [2.10.0](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.9.4...v2.10.0) (2025-05-18)
+
+
+### Features
+
+* support swiping for items ([7f738ae](https://github.com/FrecksterGIT/bc-kanji-practice/commit/7f738ae914b89e08c4d67db38314f6bf27e9aee0))
+
 ## [2.9.4](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.9.3...v2.9.4) (2025-05-15)
 
 
