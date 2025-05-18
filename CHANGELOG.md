@@ -1,3 +1,10 @@
+## [2.10.1](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.10.0...v2.10.1) (2025-05-18)
+
+
+### Bug Fixes
+
+* the swipe direction was not natural ([232cccf](https://github.com/FrecksterGIT/bc-kanji-practice/commit/232cccf6cbe16eeca8cfad42dbb2ab0b44f204c9))
+
 # [2.10.0](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.9.4...v2.10.0) (2025-05-18)
 
 
