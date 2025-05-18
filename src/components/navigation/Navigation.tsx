@@ -1,12 +1,12 @@
 import { type ChangeEventHandler, type FC, useCallback, useMemo, useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
-import { useEventListener } from 'usehooks-ts';
 import { Help } from '../shared/icons/Help.tsx';
 import { Menu } from '../shared/icons/Menu.tsx';
 import { HelpOverlay } from './HelpOverlay.tsx';
 import { MobileMenu } from './MobileMenu.tsx';
 import { useSession } from '../../hooks/useSession.ts';
 import { nanoid } from 'nanoid';
+import useGlobalEvent from 'beautiful-react-hooks/useGlobalEvent';
 
 export const Navigation: FC = () => {
   const navigate = useNavigate();
@@ -25,7 +25,8 @@ export const Navigation: FC = () => {
     [updateSettings]
   );
 
-  useEventListener('keydown', (e) => {
+  const onKeyDown = useGlobalEvent<KeyboardEvent>('keydown');
+  onKeyDown((e) => {
     if (e.key === 'ArrowDown' && e.altKey) {
       const nextLevel = level < maxLevel ? level + 1 : 1;
       updateSettings('level', nextLevel);
@@ -43,7 +44,6 @@ export const Navigation: FC = () => {
           <span className="text-sm">v{__APP_VERSION__}</span>
         </div>
 
-        {/* Desktop Navigation - Hidden on small screens */}
         <div className="hidden items-center space-x-4 lg:flex">
           {isLoggedIn && (
             <>
@@ -126,7 +126,6 @@ export const Navigation: FC = () => {
           </button>
         </div>
 
-        {/* Mobile Menu Button - Visible only on small screens */}
         <button
           className="rounded p-2 transition-colors hover:bg-gray-600 lg:hidden"
           onClick={() => setIsMobileMenuOpen(true)}
@@ -136,7 +135,6 @@ export const Navigation: FC = () => {
         </button>
       </div>
 
-      {/* Overlays */}
       <HelpOverlay isOpen={isHelpOpen} onClose={() => setIsHelpOpen(false)} />
       <MobileMenu
         isOpen={isMobileMenuOpen}

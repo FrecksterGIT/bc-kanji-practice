@@ -1,5 +1,3 @@
-// https://flowbite.com/icons/ size: 32 stroke width: 1
-
 export const Correct = () => (
   <svg
     className="h-[32px] w-[32px] text-gray-800 dark:text-white"

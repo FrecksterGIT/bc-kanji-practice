@@ -5,7 +5,7 @@ export type Section = 'kanji' | 'vocabulary' | 'marked';
 
 export interface ItemContextType {
   items: Array<WanikaniSubject>;
-  item: WanikaniSubject;
+  currentItem: WanikaniSubject;
   selectedIndex: number;
   setSelectedIndex: Dispatch<SetStateAction<number>>;
   validate: (input: string) => boolean;
@@ -18,7 +18,7 @@ export interface ItemContextType {
 
 export const ItemContext = createContext<ItemContextType>({
   items: [],
-  item: undefined as unknown as WanikaniSubject,
+  currentItem: undefined as unknown as WanikaniSubject,
   selectedIndex: 0,
   setSelectedIndex: () => {},
   isValid: false,

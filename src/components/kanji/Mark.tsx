@@ -1,8 +1,8 @@
-import { FC, RefObject, useRef } from 'react';
-import { useHover } from 'usehooks-ts';
+import { FC, useRef } from 'react';
 import { Tooltip } from '../shared/Tooltip.tsx';
 import { WanikaniVocabularySubject } from '../../wanikani';
 import { usePlayVocabulary } from '../../hooks/usePlayVocabulary.ts';
+import { useHover } from '../../hooks/useHover.ts';
 
 interface MarkProps {
   vocabulary: WanikaniVocabularySubject;
@@ -10,7 +10,7 @@ interface MarkProps {
 
 export const Mark: FC<MarkProps> = ({ vocabulary }) => {
   const markRef = useRef<HTMLButtonElement>(null);
-  const showTooltip = useHover(markRef as RefObject<HTMLButtonElement>);
+  const showTooltip = useHover(markRef);
   const { playAudio } = usePlayVocabulary(vocabulary);
 
   const level = vocabulary.data.level;

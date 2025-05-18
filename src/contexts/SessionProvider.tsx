@@ -14,7 +14,6 @@ interface UserProviderProps {
 }
 
 export const SessionProvider: FC<UserProviderProps> = ({ children }) => {
-  // User state
   const [user, setUser] = useState<WanikaniUserData | null>(null);
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
   const [userLoading, setUserLoading] = useState<boolean>(true);
@@ -69,7 +68,6 @@ export const SessionProvider: FC<UserProviderProps> = ({ children }) => {
     []
   );
 
-  // Load user data when apiKey changes
   useEffect(() => {
     if (settingsLoading) {
       return;

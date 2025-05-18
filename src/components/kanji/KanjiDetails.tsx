@@ -8,8 +8,8 @@ import { useItems } from '../../hooks/useItems.ts';
 import { MainTerm } from '../shared/MainTerm.tsx';
 
 export const KanjiDetails: FC = () => {
-  const { item } = useItems();
-  const kanji = isKanji(item) ? item : null;
+  const { currentItem } = useItems();
+  const kanji = isKanji(currentItem) ? currentItem : null;
 
   return (
     kanji && (

@@ -1,6 +1,7 @@
 # Kanji Practice Application
 
-A web application for practicing Japanese kanji and vocabulary using data from WaniKani. This tool helps users improve their Japanese language skills through interactive practice sessions.
+A web application for practicing Japanese kanji and vocabulary using data from WaniKani. This tool helps users improve
+their Japanese language skills through interactive practice sessions.
 
 ## Features
 
@@ -22,9 +23,6 @@ A web application for practicing Japanese kanji and vocabulary using data from W
 - **API Integration**: WaniKani API
 - **Audio**: react-use-audio-player
 - **Japanese Text Processing**: wanakana
-- **Other Utilities**:
-  - usehooks-ts (custom React hooks)
-  - async-cache-dedupe (API request deduplication)
 
 ## Installation
 
@@ -85,9 +83,9 @@ When code is pushed to the main branch, the following steps are executed:
 2. Select a level to practice
 3. Practice kanji or vocabulary by typing the readings
 4. Use keyboard shortcuts for navigation:
-   - Arrow keys to navigate through items
-   - Alt + Up/Down to change levels
-   - Alt + M to mark items for later review
+    - Arrow keys to navigate through items
+    - Alt + Up/Down to change levels
+    - Alt + M to mark items for later review
 5. Review marked items in the "Marked Items" section
 
 ## Contributing

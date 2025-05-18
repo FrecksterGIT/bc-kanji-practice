@@ -5,8 +5,8 @@ import { getSubjectByIds } from '../utils/itemDB.ts';
 import { useItems } from './useItems.ts';
 
 export const useKanjiComposition = () => {
-  const { item } = useItems();
-  const vocabulary = isVocabulary(item) ? item : null;
+  const { currentItem } = useItems();
+  const vocabulary = isVocabulary(currentItem) ? currentItem : null;
   const [allKanji, setAllKanji] = useState<WanikaniKanjiSubject[]>([]);
 
   useEffect(() => {

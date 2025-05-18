@@ -8,8 +8,9 @@ import { MainTerm } from '../shared/MainTerm.tsx';
 import { ContextSentences } from './ContextSentences.tsx';
 
 export const VocabularyDetails: FC = () => {
-  const { item } = useItems();
-  const vocabulary = isVocabulary(item) || isKanaVocabulary(item) ? item : null;
+  const { currentItem } = useItems();
+  const vocabulary =
+    isVocabulary(currentItem) || isKanaVocabulary(currentItem) ? currentItem : null;
 
   return (
     vocabulary && (

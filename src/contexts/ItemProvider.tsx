@@ -84,7 +84,7 @@ export const ItemProvider: FC<PropsWithChildren> = ({ children }) => {
   const contextValue: ItemContextType = useMemo(
     () => ({
       items,
-      item,
+      currentItem: item,
       selectedIndex,
       setSelectedIndex,
       validItems,

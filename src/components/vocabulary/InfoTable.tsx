@@ -1,24 +1,30 @@
-import { type FC, useEffect } from 'react';
+import { type FC, useCallback, useEffect, useState } from 'react';
 import { isKatakana, toHiragana } from 'wanakana';
 import { WanikaniReading } from '../../wanikani';
-import { useEventListener, useToggle } from 'usehooks-ts';
 import { formatHint } from '../../utils/formatHint.ts';
 import { Composition } from './Composition.tsx';
 import { isKanaVocabulary, isVocabulary } from '../../utils/typeChecks.ts';
 import { useItems } from '../../hooks/useItems.ts';
 import { useKanjiComposition } from '../../hooks/useKanjiComposition.ts';
+import useGlobalEvent from 'beautiful-react-hooks/useGlobalEvent';
 
 export const InfoTable: FC = () => {
-  const { item, isValid } = useItems();
-  const vocabulary = isVocabulary(item) || isKanaVocabulary(item) ? item : null;
-  const [show, toggle, set] = useToggle(isValid ?? false);
+  const { currentItem, isValid } = useItems();
+  const vocabulary =
+    isVocabulary(currentItem) || isKanaVocabulary(currentItem) ? currentItem : null;
+  const [show, setShow] = useState(isValid ?? false);
   const [firstKanji, ...moreKanji] = useKanjiComposition();
 
-  useEffect(() => {
-    set(isValid ?? false);
-  }, [set, vocabulary, isValid]);
+  const toggle = useCallback(() => {
+    setShow((prev) => !prev);
+  }, []);
 
-  useEventListener('keydown', (e) => {
+  useEffect(() => {
+    setShow(isValid ?? false);
+  }, [isValid]);
+
+  const onKeyDown = useGlobalEvent<KeyboardEvent>('keydown');
+  onKeyDown((e) => {
     if (e.key === 's' && e.altKey) {
       toggle();
     }

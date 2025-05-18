@@ -29,7 +29,6 @@ export const Settings: FC = () => {
           <br /> You need to set a valid WaniKani Api key for the application to work.
         </p>
         <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
-          {/* API Key Input */}
           <div className="mt-6 border-t border-gray-600 pt-6">
             <label htmlFor="apiKey" className="mb-4 block text-lg font-medium">
               API Key

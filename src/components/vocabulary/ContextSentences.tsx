@@ -1,5 +1,4 @@
-import { FC } from 'react';
-import { useToggle } from 'usehooks-ts';
+import { FC, useState } from 'react';
 import { WanikaniContextSentence } from '../../wanikani';
 
 type SentenceProps = {
@@ -7,9 +6,10 @@ type SentenceProps = {
 };
 
 const Sentence: FC<SentenceProps> = ({ sentence: { ja, en } }) => {
-  const [blur, toggle] = useToggle(true);
+  const [blur, setBlur] = useState(true);
+
   return (
-    <button className="context-sentence" onClick={toggle}>
+    <button className="context-sentence" onClick={() => setBlur((prev) => !prev)}>
       <p className="text-right" lang="ja">
         {ja}
       </p>

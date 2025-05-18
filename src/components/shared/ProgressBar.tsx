@@ -2,8 +2,8 @@ import { isKanji } from '../../utils/typeChecks.ts';
 import { useItems } from '../../hooks/useItems.ts';
 
 export const ProgressBar = () => {
-  const { items, validItems, item } = useItems();
-  const bgColor = isKanji(item) ? 'bg-pink-400' : 'bg-purple-400';
+  const { items, validItems, currentItem } = useItems();
+  const bgColor = isKanji(currentItem) ? 'bg-pink-400' : 'bg-purple-400';
   const correct = Math.min((validItems.length / items.length) * 100, 100);
 
   return (

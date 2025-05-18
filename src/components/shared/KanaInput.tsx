@@ -1,8 +1,8 @@
 import { useState, ChangeEvent, useCallback, useEffect, FC, useRef, FormEventHandler } from 'react';
-import { useEventListener } from 'usehooks-ts';
 import { toHiragana } from 'wanakana';
 import { Correct } from './icons/Correct.tsx';
 import { useItems } from '../../hooks/useItems.ts';
+import useGlobalEvent from 'beautiful-react-hooks/useGlobalEvent';
 
 interface KanaInputProps {
   placeholder?: string;
@@ -16,7 +16,7 @@ export const KanaInput: FC<KanaInputProps> = ({
   name,
 }) => {
   const ref = useRef<HTMLInputElement>(null);
-  const { validate, item, isValid, moveToNext } = useItems();
+  const { validate, currentItem, isValid, moveToNext } = useItems();
   const [validationFeedback, setValidationFeedback] = useState(0);
   const [internalValue, setInternalValue] = useState<string>('');
 
@@ -24,9 +24,10 @@ export const KanaInput: FC<KanaInputProps> = ({
     setInternalValue('');
     setValidationFeedback(0);
     ref.current?.focus();
-  }, [item]);
+  }, [currentItem]);
 
-  useEventListener('click', (e) => {
+  const onKeyDown = useGlobalEvent<MouseEvent>('click');
+  onKeyDown((e) => {
     const target = e.target as HTMLElement;
     if (ref.current && target.tagName !== 'SELECT') {
       ref.current.focus();

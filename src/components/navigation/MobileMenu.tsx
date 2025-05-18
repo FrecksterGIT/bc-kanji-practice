@@ -44,7 +44,6 @@ export const MobileMenu: FC<MobileMenuProps> = ({
     if (isOpen) {
       document.addEventListener('mousedown', handleClickOutside);
       document.addEventListener('keydown', handleEscapeKey);
-      // Prevent scrolling when menu is open
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = '';

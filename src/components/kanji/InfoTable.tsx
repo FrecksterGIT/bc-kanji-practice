@@ -1,21 +1,22 @@
-import { type FC, useEffect } from 'react';
-import { useEventListener, useToggle } from 'usehooks-ts';
+import { type FC, useEffect, useState } from 'react';
 import { formatHint } from '../../utils/formatHint.ts';
 import { isKanji } from '../../utils/typeChecks.ts';
 import { useItems } from '../../hooks/useItems.ts';
+import useGlobalEvent from 'beautiful-react-hooks/useGlobalEvent';
 
 export const InfoTable: FC = () => {
-  const { item, isValid } = useItems();
-  const [show, toggle, set] = useToggle(isValid ?? false);
-  const kanji = isKanji(item) ? item : null;
+  const { currentItem, isValid } = useItems();
+  const [show, setShow] = useState(isValid ?? false);
+  const kanji = isKanji(currentItem) ? currentItem : null;
 
   useEffect(() => {
-    set(isValid ?? false);
-  }, [set, kanji, isValid]);
+    setShow(isValid ?? false);
+  }, [isValid]);
 
-  useEventListener('keydown', (e) => {
+  const onKeyDown = useGlobalEvent<KeyboardEvent>('keydown');
+  onKeyDown((e) => {
     if (e.key === 's' && e.altKey) {
-      toggle();
+      setShow((prev) => !prev);
     }
   });
 
@@ -23,7 +24,7 @@ export const InfoTable: FC = () => {
     kanji && (
       <button
         className={`w-full ${show ? 'cursor-zoom-out' : 'cursor-zoom-in blur-md'}`}
-        onClick={() => toggle()}
+        onClick={() => setShow((prev) => !prev)}
       >
         <div className="overflow-x-auto">
           <table className="mb-6 min-w-full divide-y divide-gray-200 border-b-1 border-b-gray-200 text-left">

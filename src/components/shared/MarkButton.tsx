@@ -1,28 +1,30 @@
-import { FC, RefObject, useCallback, useRef } from 'react';
-import { useEventListener, useHover } from 'usehooks-ts';
+import { FC, useCallback, useRef } from 'react';
 import { useSession } from '../../hooks/useSession.ts';
 import { useItems } from '../../hooks/useItems.ts';
 import { Tooltip } from './Tooltip.tsx';
 import { BookmarkEmpty } from './icons/BookmarkEmpty.tsx';
 import { BookmarkFilled } from './icons/BookmarkFilled.tsx';
+import useGlobalEvent from 'beautiful-react-hooks/useGlobalEvent';
+import { useHover } from '../../hooks/useHover.ts';
 
 export const MarkButton: FC = () => {
-  const { item } = useItems();
+  const { currentItem } = useItems();
   const { markedItems, setMarkedItems } = useSession();
 
-  const isMarked = markedItems.some((marked) => marked === item.id);
+  const isMarked = markedItems.some((marked) => marked === currentItem.id);
   const markRef = useRef<HTMLButtonElement>(null);
-  const showTooltip = useHover(markRef as RefObject<HTMLButtonElement>);
+  const showTooltip = useHover(markRef);
 
   const handleMark = useCallback(() => {
     if (isMarked) {
-      setMarkedItems((prev) => prev.filter((marked) => marked !== item.id));
+      setMarkedItems((prev) => prev.filter((marked) => marked !== currentItem.id));
     } else {
-      setMarkedItems((prev) => [...prev, item.id]);
+      setMarkedItems((prev) => [...prev, currentItem.id]);
     }
-  }, [isMarked, item, setMarkedItems]);
+  }, [isMarked, currentItem, setMarkedItems]);
 
-  useEventListener('keydown', (e) => {
+  const onKeyDown = useGlobalEvent<KeyboardEvent>('keydown');
+  onKeyDown((e) => {
     if (e.key === 'm' && e.altKey) {
       handleMark();
     }
