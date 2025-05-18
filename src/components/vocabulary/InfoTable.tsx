@@ -107,9 +107,7 @@ export const InfoTable: FC = () => {
                     No Kanji in vocabulary.
                   </td>
                 )}
-                {firstKanji && (
-                  <Composition kanji={firstKanji} className="table-content text-nowrap" />
-                )}
+                {firstKanji && <Composition kanji={firstKanji} className="table-content" />}
               </tr>
               {moreKanji.map((kanji) => (
                 <tr key={kanji.id}>
