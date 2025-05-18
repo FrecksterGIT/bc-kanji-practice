@@ -29,9 +29,9 @@ export const MainTerm: FC = () => {
     if (isSwiping && !swipe.swiping) {
       setIsSwiping(false);
       if (swipe.direction === 'left') {
-        setSelectedIndex((prev) => (prev - 1 + items.length) % items.length);
-      } else if (swipe.direction === 'right') {
         setSelectedIndex((prev) => (prev + 1) % items.length);
+      } else if (swipe.direction === 'right') {
+        setSelectedIndex((prev) => (prev - 1 + items.length) % items.length);
       }
     }
   }, [isSwiping, items.length, setSelectedIndex, swipe]);
