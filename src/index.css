@@ -12,7 +12,7 @@
 }
 
 .meaning-header {
-  @apply px-6 py-4 align-top text-xs leading-6 font-medium tracking-wider text-nowrap uppercase;
+  @apply px-6 py-4 align-top text-xs leading-6 font-medium tracking-wider uppercase lg:text-nowrap;
 }
 
 .meaning-content {
@@ -20,11 +20,19 @@
 }
 
 .table-header {
-  @apply px-6 py-3 text-xs font-medium tracking-wider uppercase;
+  @apply px-2 py-3 text-xs font-medium tracking-wider uppercase md:px-6;
 }
 
-.table-header-2 {
-  @apply w-1 px-6 pb-3 tracking-wider;
+.table-header-composition {
+  @apply px-2 pt-3 text-xs font-medium tracking-wider uppercase md:px-6;
+}
+
+.table-header-composition-2 {
+  @apply w-1 px-2 pb-3 text-xs font-medium tracking-wider uppercase md:px-6;
+}
+
+.table-content {
+  @apply px-2 py-4 md:px-6;
 }
 
 .mark {

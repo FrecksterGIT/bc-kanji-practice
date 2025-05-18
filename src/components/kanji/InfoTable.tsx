@@ -43,7 +43,7 @@ export const InfoTable: FC = () => {
             </thead>
             <tbody className="divide-y divide-gray-200">
               <tr>
-                <td className="px-6 py-4 whitespace-nowrap" lang="ja">
+                <td className="table-content" lang="ja">
                   {kanji.data.readings
                     .filter((r) => r.type === 'onyomi')
                     .map((reading) => (
@@ -51,11 +51,11 @@ export const InfoTable: FC = () => {
                         key={reading.reading}
                         className={`separated-comma ${reading.primary ? 'text-white' : ''}`}
                       >
-                        {reading.reading}
+                        <span className="text-nowrap">{reading.reading}</span>
                       </span>
                     ))}
                 </td>
-                <td className="px-6 py-4 whitespace-nowrap" lang="ja">
+                <td className="table-content" lang="ja">
                   {kanji.data.readings
                     .filter((r) => r.type === 'kunyomi')
                     .map((reading) => (
@@ -63,11 +63,11 @@ export const InfoTable: FC = () => {
                         key={reading.reading}
                         className={`separated-comma ${reading.primary ? 'text-white' : ''}`}
                       >
-                        {reading.reading}
+                        <span className="text-nowrap">{reading.reading}</span>
                       </span>
                     ))}
                 </td>
-                <td className="px-6 py-4 whitespace-nowrap">
+                <td className="table-content">
                   {kanji.data.meanings.map((meaning) => (
                     <span
                       key={meaning.meaning}
@@ -81,7 +81,7 @@ export const InfoTable: FC = () => {
             </tbody>
           </table>
           <div className="flex items-center justify-around">
-            <table className="max-w-3/4 text-left">
+            <table className="max-w-full text-left lg:max-w-3/4">
               <tbody>
                 <tr>
                   <th className="meaning-header">Meaning Mnemonic</th>
