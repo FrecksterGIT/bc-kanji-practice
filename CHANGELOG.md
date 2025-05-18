@@ -1,3 +1,10 @@
+## [2.10.4](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.10.3...v2.10.4) (2025-05-18)
+
+
+### Bug Fixes
+
+* improvements for smaller viewports ([bdef232](https://github.com/FrecksterGIT/bc-kanji-practice/commit/bdef232c8fb2e281f1c526237512e3c7fc86dc9d))
+
 ## [2.10.3](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.10.2...v2.10.3) (2025-05-18)
 
 
