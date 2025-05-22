@@ -1,14 +1,14 @@
-import { FC, useContext, useMemo } from 'react';
+import { FC, useMemo } from 'react';
 import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom';
 import { App } from '../../App.tsx';
 import { Items } from '../pages/Items.tsx';
 import { Settings } from '../pages/Settings.tsx';
 import { useSession } from '../../hooks/useSession.ts';
-import { WanikaniContext } from '../../contexts/WanikaniContext.ts';
+import { useWanikani } from '../../hooks/useWanikani.ts';
 
 export const ApplicationRouter: FC = () => {
   const { loading: sessionLoading, isLoggedIn } = useSession();
-  const { loading: wanikaniLoading, loadedCount } = useContext(WanikaniContext);
+  const { loading: wanikaniLoading, loadedCount } = useWanikani();
   const loading = sessionLoading || wanikaniLoading;
 
   const routerConfig = useMemo(

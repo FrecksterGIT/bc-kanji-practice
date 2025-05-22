@@ -31,7 +31,12 @@ export const MarkButton: FC = () => {
   });
 
   return (
-    <button className="relative cursor-pointer" onClick={handleMark} ref={markRef}>
+    <button
+      className="relative cursor-pointer"
+      onClick={handleMark}
+      ref={markRef}
+      aria-label={isMarked ? 'unmark item' : 'mark item'}
+    >
       {isMarked ? <BookmarkFilled /> : <BookmarkEmpty />}
       {showTooltip && (
         <Tooltip left>

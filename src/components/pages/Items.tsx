@@ -54,7 +54,7 @@ export const Items: FC<ItemsProps> = ({ section }) => {
               <span>
                 {selectedIndex + 1} / {items.length}
               </span>
-              <button onClick={toggle} className="cursor-pointer">
+              <button onClick={toggle} className="cursor-pointer" title="Show list of items">
                 <AngleDown />
               </button>
               {open && <List onClose={toggle} />}
