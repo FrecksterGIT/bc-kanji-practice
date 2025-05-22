@@ -1,3 +1,10 @@
+# [2.11.0](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.10.5...v2.11.0) (2025-05-22)
+
+
+### Features
+
+* accessibility improvements ([f076d68](https://github.com/FrecksterGIT/bc-kanji-practice/commit/f076d68610baf68c029e6c7c3744ba6389389aa1))
+
 ## [2.10.5](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.10.4...v2.10.5) (2025-05-18)
 
 
