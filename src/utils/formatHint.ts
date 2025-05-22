@@ -1,17 +1,36 @@
 import { isJapanese } from 'wanakana';
 
-export const formatHint = (hint: string | null) =>
-  hint
-    ?.split('')
-    .map((c) => (isJapanese(c) ? `<span class='font-semibold text-gray-300'>${c}</span>` : c))
+const TAG_REPLACEMENTS: Record<string, string> = {
+  reading: 'bg-gray-500',
+  kanji: 'bg-pink-500',
+  radical: 'bg-blue-300',
+  vocabulary: 'bg-purple-500',
+};
+
+const isInsideTag = (text: string, index: number) => {
+  return text.substring(0, index).split('>').length % 2 === 0;
+};
+
+export const formatHint = (hint: string | null) => {
+  if (!hint) return '';
+
+  const markedSpecialText = hint
+    .split('')
+    .map((char, index) => {
+      if (isJapanese(char) && !isInsideTag(hint, index)) {
+        return `<span class='font-semibold text-gray-300'>${char}</span>`;
+      }
+      return char;
+    })
     .join('')
     .replace(/(\n)+/g, '<br />')
-    .replace(/rendaku/gi, "<span class='text-gray-300'>rendaku</span>")
-    .replaceAll('<reading>', "<mark class='bg-gray-500 text-gray-800 px-1 rounded-sm mx-1'>")
-    .replaceAll('</reading>', '</mark>')
-    .replaceAll('<kanji>', "<mark class='bg-pink-500 text-gray-800 px-1 rounded-sm mx-1'>")
-    .replaceAll('</kanji>', '</mark>')
-    .replaceAll('<radical>', "<mark class='bg-blue-300 text-gray-800 px-1 rounded-sm mx-1'>")
-    .replaceAll('</radical>', '</mark>')
-    .replaceAll('<vocabulary>', "<mark class='bg-purple-500 text-gray-800 px-1 rounded-sm mx-1'>")
-    .replaceAll('</vocabulary>', '</mark>') ?? '';
+    .replace(/rendaku/gi, "<span class='text-gray-300'>rendaku</span>");
+
+  return Object.entries(TAG_REPLACEMENTS).reduce<string>((acc, [tag, bgColor]) => {
+    const openTag = `<${tag}>`;
+    const openTagReplace = `<mark class='${bgColor} text-gray-900 px-1 rounded-sm mx-1'>`;
+    const closeTag = `</${tag}>`;
+    const closeTagReplace = `</mark>`;
+    return acc.replaceAll(openTag, openTagReplace).replaceAll(closeTag, closeTagReplace);
+  }, markedSpecialText);
+};
