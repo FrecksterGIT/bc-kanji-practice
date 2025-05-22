@@ -7,7 +7,7 @@ describe('formatHint', () => {
       'Hint with <reading>にほんご</reading> and <kanji>日本語</kanji>. Some more japanese (日本語) text.';
     const formattedHint = formatHint(hint);
     expect(formattedHint).toContain(
-      "<mark class='bg-gray-500 text-gray-800 px-1 rounded-sm mx-1'>にほんご</mark>"
+      "<mark class='bg-gray-500 text-gray-900 px-1 rounded-sm mx-1'>にほんご</mark>"
     );
     expect(formattedHint).toContain(
       "<span class='font-semibold text-gray-300'>本</span>"
