@@ -1,3 +1,10 @@
+## [2.11.1](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.11.0...v2.11.1) (2025-06-02)
+
+
+### Bug Fixes
+
+* **deps:** replace react-router-dom with react-router ([d377e44](https://github.com/FrecksterGIT/bc-kanji-practice/commit/d377e44d6c96f2d693a156700fd95d9961f46c8c))
+
 # [2.11.0](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.10.5...v2.11.0) (2025-05-22)
 
 
