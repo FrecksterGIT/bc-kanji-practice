@@ -1,5 +1,5 @@
 import { type ChangeEventHandler, type FC, useCallback, useMemo, useState } from 'react';
-import { NavLink, useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router';
 import { Help } from '../shared/icons/Help.tsx';
 import { Menu } from '../shared/icons/Menu.tsx';
 import { HelpOverlay } from './HelpOverlay.tsx';

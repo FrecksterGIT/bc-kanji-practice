@@ -9,7 +9,7 @@ import {
   getSubjectsByObjectAndLevel,
 } from '../utils/itemDB.ts';
 import { useSession } from './useSession.ts';
-import { useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router';
 
 export const useSelectedItems = (section: Section) => {
   const [loading, setLoading] = useState(false);

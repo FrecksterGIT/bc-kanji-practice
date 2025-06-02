@@ -1,5 +1,5 @@
 import { FC, useEffect, useRef } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router';
 import { Help } from '../shared/icons/Help';
 import { Close } from '../shared/icons/Close.tsx';
 
