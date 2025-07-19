@@ -1,3 +1,10 @@
+## [2.11.5](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.11.4...v2.11.5) (2025-07-19)
+
+
+### Bug Fixes
+
+* extract term lists into a component ([18d76f3](https://github.com/FrecksterGIT/bc-kanji-practice/commit/18d76f38bf14453b0e013fcb67c6fbca3507ba17))
+
 ## [2.11.4](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.11.3...v2.11.4) (2025-07-18)
 
 
