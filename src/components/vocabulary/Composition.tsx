@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import { WanikaniKanjiSubject } from '../../wanikani';
+import { TermListEntry } from '../shared/TermListEntry.tsx';
 
 type CompositionProps = {
   kanji: WanikaniKanjiSubject;
@@ -16,34 +17,19 @@ export const Composition: FC<CompositionProps> = ({ kanji, className }) => {
         {kanji.data.readings
           .filter((r) => r.type === 'onyomi')
           .map((reading) => (
-            <span
-              key={reading.reading}
-              className={`separated-comma ${reading.primary ? 'text-white' : ''}`}
-            >
-              <span className="text-nowrap">{reading.reading}</span>
-            </span>
+            <TermListEntry key={reading.reading} word={reading.reading} primary={reading.primary} />
           ))}
       </td>
       <td className={className} lang="ja">
         {kanji.data.readings
           .filter((r) => r.type === 'kunyomi')
           .map((reading) => (
-            <span
-              key={reading.reading}
-              className={`separated-comma ${reading.primary ? 'text-white' : ''}`}
-            >
-              <span className="text-nowrap">{reading.reading}</span>
-            </span>
+            <TermListEntry key={reading.reading} word={reading.reading} primary={reading.primary} />
           ))}
       </td>
       <td className={className}>
         {kanji.data.meanings.map((meaning) => (
-          <span
-            key={meaning.meaning}
-            className={`separated-comma ${meaning.primary ? 'text-white' : ''}`}
-          >
-            {meaning.meaning}
-          </span>
+          <TermListEntry key={meaning.meaning} word={meaning.meaning} primary={meaning.primary} />
         ))}
       </td>
     </>

@@ -3,6 +3,7 @@ import { formatHint } from '../../utils/formatHint.ts';
 import { isKanji } from '../../utils/typeChecks.ts';
 import { useItems } from '../../hooks/useItems.ts';
 import useGlobalEvent from 'beautiful-react-hooks/useGlobalEvent';
+import { TermListEntry } from '../shared/TermListEntry.tsx';
 
 export const InfoTable: FC = () => {
   const { currentItem, isValid } = useItems();
@@ -47,34 +48,31 @@ export const InfoTable: FC = () => {
                   {kanji.data.readings
                     .filter((r) => r.type === 'onyomi')
                     .map((reading) => (
-                      <span
+                      <TermListEntry
                         key={reading.reading}
-                        className={`separated-comma ${reading.primary ? 'text-white' : ''}`}
-                      >
-                        <span className="text-nowrap">{reading.reading}</span>
-                      </span>
+                        word={reading.reading}
+                        primary={reading.primary}
+                      />
                     ))}
                 </td>
                 <td className="table-content" lang="ja">
                   {kanji.data.readings
                     .filter((r) => r.type === 'kunyomi')
                     .map((reading) => (
-                      <span
+                      <TermListEntry
                         key={reading.reading}
-                        className={`separated-comma ${reading.primary ? 'text-white' : ''}`}
-                      >
-                        <span className="text-nowrap">{reading.reading}</span>
-                      </span>
+                        word={reading.reading}
+                        primary={reading.primary}
+                      />
                     ))}
                 </td>
                 <td className="table-content">
                   {kanji.data.meanings.map((meaning) => (
-                    <span
+                    <TermListEntry
                       key={meaning.meaning}
-                      className={`separated-comma ${meaning.primary ? 'text-white' : ''}`}
-                    >
-                      {meaning.meaning}
-                    </span>
+                      word={meaning.meaning}
+                      primary={meaning.primary}
+                    />
                   ))}
                 </td>
               </tr>

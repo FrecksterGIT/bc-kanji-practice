@@ -7,6 +7,7 @@ import { isKanaVocabulary, isVocabulary } from '../../utils/typeChecks.ts';
 import { useItems } from '../../hooks/useItems.ts';
 import { useKanjiComposition } from '../../hooks/useKanjiComposition.ts';
 import useGlobalEvent from 'beautiful-react-hooks/useGlobalEvent';
+import { TermListEntry } from '../shared/TermListEntry.tsx';
 
 export const InfoTable: FC = () => {
   const { currentItem, isValid } = useItems();
@@ -84,22 +85,20 @@ export const InfoTable: FC = () => {
                 <td className="table-content" lang="ja" rowSpan={moreKanji.length + 1}>
                   {isVocabulary(vocabulary) &&
                     vocabulary.data.readings.map((reading) => (
-                      <span
+                      <TermListEntry
                         key={reading.reading}
-                        className={`separated-comma ${reading.primary ? 'text-white' : ''}`}
-                      >
-                        {getReading(reading.reading, vocabulary.data.readings)}
-                      </span>
+                        word={getReading(reading.reading, vocabulary.data.readings)}
+                        primary={reading.primary}
+                      />
                     ))}
                 </td>
                 <td className="table-content" rowSpan={moreKanji.length + 1}>
                   {vocabulary.data.meanings.map((meaning) => (
-                    <span
+                    <TermListEntry
                       key={meaning.meaning}
-                      className={`separated-comma ${meaning.primary ? 'text-white' : ''}`}
-                    >
-                      {meaning.meaning}
-                    </span>
+                      word={meaning.meaning}
+                      primary={meaning.primary}
+                    />
                   ))}
                 </td>
                 {!firstKanji && (
