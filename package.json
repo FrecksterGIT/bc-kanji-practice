@@ -12,7 +12,7 @@
     "test": "vitest"
   },
   "dependencies": {
-    "async-cache-dedupe": "2.2.0",
+    "async-cache-dedupe": "3.0.0",
     "beautiful-react-hooks": "5.0.3",
     "idb": "8.0.3",
     "nanoid": "5.1.5",
