@@ -9,17 +9,13 @@ describe('formatHint', () => {
     expect(formattedHint).toContain(
       "<mark class='bg-gray-500 text-gray-900 px-1 rounded-sm mx-1'>にほんご</mark>"
     );
-    expect(formattedHint).toContain(
-      "<span class='font-semibold text-gray-300'>本</span>"
-    );
+    expect(formattedHint).toContain("<span class='font-semibold text-gray-300'>本</span>");
   });
 
   it('should highlight the word rendaku', () => {
     const hint = 'This is a rendaku test.';
     const formattedHint = formatHint(hint);
-    expect(formattedHint).toContain(
-      "<span class='text-gray-300'>rendaku</span>"
-    );
+    expect(formattedHint).toContain("<span class='text-gray-300'>rendaku</span>");
   });
 
   it('should handle null hints', () => {
@@ -27,3 +23,4 @@ describe('formatHint', () => {
     expect(formattedHint).toBe('');
   });
 });
+

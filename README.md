@@ -15,7 +15,7 @@ their Japanese language skills through interactive practice sessions.
 ## Tech Stack
 
 - **Frontend Framework**: React 19 with TypeScript
-- **Build Tool**: Vite 6
+- **Build Tool**: Vite 7
 - **Styling**: TailwindCSS 4
 - **Routing**: React Router 7
 - **State Management**: React Context API
@@ -83,9 +83,9 @@ When code is pushed to the main branch, the following steps are executed:
 2. Select a level to practice
 3. Practice kanji or vocabulary by typing the readings
 4. Use keyboard shortcuts for navigation:
-    - Arrow keys to navigate through items
-    - Alt + Up/Down to change levels
-    - Alt + M to mark items for later review
+   - Arrow keys to navigate through items
+   - Alt + Up/Down to change levels
+   - Alt + M to mark items for later review
 5. Review marked items in the "Marked Items" section
 
 ## Contributing

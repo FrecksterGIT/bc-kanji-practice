@@ -1,121 +1,104 @@
 ## [2.11.8](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.11.7...v2.11.8) (2025-08-05)
 
-
 ### Bug Fixes
 
-* **deps:** update dependencies to latest versions ([cb45eb2](https://github.com/FrecksterGIT/bc-kanji-practice/commit/cb45eb27fcff0dd8992caa8d1c401698f7ab7602))
+- **deps:** update dependencies to latest versions ([cb45eb2](https://github.com/FrecksterGIT/bc-kanji-practice/commit/cb45eb27fcff0dd8992caa8d1c401698f7ab7602))
 
 ## [2.11.7](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.11.6...v2.11.7) (2025-08-02)
 
-
 ### Bug Fixes
 
-* **deps:** update dependencies to latest versions ([beb20fc](https://github.com/FrecksterGIT/bc-kanji-practice/commit/beb20fcb0fb013290b7f8c3e8c981407f2e24922))
+- **deps:** update dependencies to latest versions ([beb20fc](https://github.com/FrecksterGIT/bc-kanji-practice/commit/beb20fcb0fb013290b7f8c3e8c981407f2e24922))
 
 ## [2.11.6](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.11.5...v2.11.6) (2025-07-26)
 
-
 ### Bug Fixes
 
-* **deps:** update dependencies to latest versions ([ecc3934](https://github.com/FrecksterGIT/bc-kanji-practice/commit/ecc3934d3025430afaaafdacde3f5083340b722d))
+- **deps:** update dependencies to latest versions ([ecc3934](https://github.com/FrecksterGIT/bc-kanji-practice/commit/ecc3934d3025430afaaafdacde3f5083340b722d))
 
 ## [2.11.5](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.11.4...v2.11.5) (2025-07-19)
 
-
 ### Bug Fixes
 
-* extract term lists into a component ([18d76f3](https://github.com/FrecksterGIT/bc-kanji-practice/commit/18d76f38bf14453b0e013fcb67c6fbca3507ba17))
+- extract term lists into a component ([18d76f3](https://github.com/FrecksterGIT/bc-kanji-practice/commit/18d76f38bf14453b0e013fcb67c6fbca3507ba17))
 
 ## [2.11.4](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.11.3...v2.11.4) (2025-07-18)
 
-
 ### Bug Fixes
 
-* **deps:** update dependencies to latest versions ([587fbe1](https://github.com/FrecksterGIT/bc-kanji-practice/commit/587fbe1398ba6bbba1908d4f1cbdf1e2a9d7cf49))
+- **deps:** update dependencies to latest versions ([587fbe1](https://github.com/FrecksterGIT/bc-kanji-practice/commit/587fbe1398ba6bbba1908d4f1cbdf1e2a9d7cf49))
 
 ## [2.11.3](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.11.2...v2.11.3) (2025-07-12)
 
-
 ### Bug Fixes
 
-* **deps:** update dependencies to latest versions ([b572887](https://github.com/FrecksterGIT/bc-kanji-practice/commit/b5728875038546edfbc989ea87933bd5cb40f337))
+- **deps:** update dependencies to latest versions ([b572887](https://github.com/FrecksterGIT/bc-kanji-practice/commit/b5728875038546edfbc989ea87933bd5cb40f337))
 
 ## [2.11.2](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.11.1...v2.11.2) (2025-06-13)
 
-
 ### Bug Fixes
 
-* **deps:** update dependencies to latest versions ([b75d0df](https://github.com/FrecksterGIT/bc-kanji-practice/commit/b75d0df3adc6e97d6537479255b9654aca96feff))
+- **deps:** update dependencies to latest versions ([b75d0df](https://github.com/FrecksterGIT/bc-kanji-practice/commit/b75d0df3adc6e97d6537479255b9654aca96feff))
 
 ## [2.11.1](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.11.0...v2.11.1) (2025-06-02)
 
-
 ### Bug Fixes
 
-* **deps:** replace react-router-dom with react-router ([d377e44](https://github.com/FrecksterGIT/bc-kanji-practice/commit/d377e44d6c96f2d693a156700fd95d9961f46c8c))
+- **deps:** replace react-router-dom with react-router ([d377e44](https://github.com/FrecksterGIT/bc-kanji-practice/commit/d377e44d6c96f2d693a156700fd95d9961f46c8c))
 
 # [2.11.0](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.10.5...v2.11.0) (2025-05-22)
 
-
 ### Features
 
-* accessibility improvements ([f076d68](https://github.com/FrecksterGIT/bc-kanji-practice/commit/f076d68610baf68c029e6c7c3744ba6389389aa1))
+- accessibility improvements ([f076d68](https://github.com/FrecksterGIT/bc-kanji-practice/commit/f076d68610baf68c029e6c7c3744ba6389389aa1))
 
 ## [2.10.5](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.10.4...v2.10.5) (2025-05-18)
 
-
 ### Bug Fixes
 
-* improvements for smaller viewports ([d270705](https://github.com/FrecksterGIT/bc-kanji-practice/commit/d270705591a1c78ee70b61866054538141dfe87e))
+- improvements for smaller viewports ([d270705](https://github.com/FrecksterGIT/bc-kanji-practice/commit/d270705591a1c78ee70b61866054538141dfe87e))
 
 ## [2.10.4](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.10.3...v2.10.4) (2025-05-18)
 
-
 ### Bug Fixes
 
-* improvements for smaller viewports ([bdef232](https://github.com/FrecksterGIT/bc-kanji-practice/commit/bdef232c8fb2e281f1c526237512e3c7fc86dc9d))
+- improvements for smaller viewports ([bdef232](https://github.com/FrecksterGIT/bc-kanji-practice/commit/bdef232c8fb2e281f1c526237512e3c7fc86dc9d))
 
 ## [2.10.3](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.10.2...v2.10.3) (2025-05-18)
 
-
 ### Bug Fixes
 
-* improvements for smaller viewports ([d9cc55d](https://github.com/FrecksterGIT/bc-kanji-practice/commit/d9cc55d10b11db0d2928e9a9bb4a1cd92111fd80))
+- improvements for smaller viewports ([d9cc55d](https://github.com/FrecksterGIT/bc-kanji-practice/commit/d9cc55d10b11db0d2928e9a9bb4a1cd92111fd80))
 
 ## [2.10.2](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.10.1...v2.10.2) (2025-05-18)
 
-
 ### Bug Fixes
 
-* improvements for smaller viewports ([954e183](https://github.com/FrecksterGIT/bc-kanji-practice/commit/954e183b0efdfe493abb67e00dc7f4b11af6d3fb))
+- improvements for smaller viewports ([954e183](https://github.com/FrecksterGIT/bc-kanji-practice/commit/954e183b0efdfe493abb67e00dc7f4b11af6d3fb))
 
 ## [2.10.1](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.10.0...v2.10.1) (2025-05-18)
 
-
 ### Bug Fixes
 
-* the swipe direction was not natural ([232cccf](https://github.com/FrecksterGIT/bc-kanji-practice/commit/232cccf6cbe16eeca8cfad42dbb2ab0b44f204c9))
+- the swipe direction was not natural ([232cccf](https://github.com/FrecksterGIT/bc-kanji-practice/commit/232cccf6cbe16eeca8cfad42dbb2ab0b44f204c9))
 
 # [2.10.0](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.9.4...v2.10.0) (2025-05-18)
 
-
 ### Features
 
-* support swiping for items ([7f738ae](https://github.com/FrecksterGIT/bc-kanji-practice/commit/7f738ae914b89e08c4d67db38314f6bf27e9aee0))
+- support swiping for items ([7f738ae](https://github.com/FrecksterGIT/bc-kanji-practice/commit/7f738ae914b89e08c4d67db38314f6bf27e9aee0))
 
 ## [2.9.4](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.9.3...v2.9.4) (2025-05-15)
 
-
 ### Bug Fixes
 
-* optimize imports and streamline configuration files ([8a18a5d](https://github.com/FrecksterGIT/bc-kanji-practice/commit/8a18a5d920a73a94a1cf35e2902f73849febd0c6))
+- optimize imports and streamline configuration files ([8a18a5d](https://github.com/FrecksterGIT/bc-kanji-practice/commit/8a18a5d920a73a94a1cf35e2902f73849febd0c6))
 
 ## [2.9.3](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.9.2...v2.9.3) (2025-05-11)
 
-
 ### Bug Fixes
 
-* menu click reshuffles items ([d4dd8e5](https://github.com/FrecksterGIT/bc-kanji-practice/commit/d4dd8e5380cfefa9ea95237da7a5ce7e0c83f959))
+- menu click reshuffles items ([d4dd8e5](https://github.com/FrecksterGIT/bc-kanji-practice/commit/d4dd8e5380cfefa9ea95237da7a5ce7e0c83f959))
 
 ## [2.9.2](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.9.1...v2.9.2) (2025-05-10)
 
