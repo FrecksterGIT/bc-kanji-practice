@@ -1,3 +1,10 @@
+## [2.11.9](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.11.8...v2.11.9) (2025-08-08)
+
+
+### Bug Fixes
+
+* maintenance ([2c1955c](https://github.com/FrecksterGIT/bc-kanji-practice/commit/2c1955c9d2a17e15f3faa35614477e62e8dc313e))
+
 ## [2.11.8](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.11.7...v2.11.8) (2025-08-05)
 
 ### Bug Fixes
