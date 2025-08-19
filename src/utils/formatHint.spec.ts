@@ -23,4 +23,3 @@ describe('formatHint', () => {
     expect(formattedHint).toBe('');
   });
 });
-
