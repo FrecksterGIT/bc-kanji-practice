@@ -1,23 +1,20 @@
 ## [2.11.24](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.11.23...v2.11.24) (2026-03-20)
 
-
 ### Bug Fixes
 
-* **deps:** update to latest versions ([b50717a](https://github.com/FrecksterGIT/bc-kanji-practice/commit/b50717aad17c1358c4eeb4b64e5f5f1987e6ce50))
+- **deps:** update to latest versions ([b50717a](https://github.com/FrecksterGIT/bc-kanji-practice/commit/b50717aad17c1358c4eeb4b64e5f5f1987e6ce50))
 
 ## [2.11.23](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.11.22...v2.11.23) (2025-11-14)
 
-
 ### Bug Fixes
 
-* **deps:** update to latest versions ([bef6304](https://github.com/FrecksterGIT/bc-kanji-practice/commit/bef6304c9b739349ff5f557224ea2f0378255a74))
+- **deps:** update to latest versions ([bef6304](https://github.com/FrecksterGIT/bc-kanji-practice/commit/bef6304c9b739349ff5f557224ea2f0378255a74))
 
 ## [2.11.22](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.11.21...v2.11.22) (2025-11-11)
 
-
 ### Bug Fixes
 
-* **deps:** update to latest versions ([ffd75bc](https://github.com/FrecksterGIT/bc-kanji-practice/commit/ffd75bc007b8021e7b2b73f0305061fb24d8a96f))
+- **deps:** update to latest versions ([ffd75bc](https://github.com/FrecksterGIT/bc-kanji-practice/commit/ffd75bc007b8021e7b2b73f0305061fb24d8a96f))
 
 ## [2.11.21](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.11.20...v2.11.21) (2025-11-02)
 

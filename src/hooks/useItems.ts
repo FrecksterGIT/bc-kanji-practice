@@ -1,8 +1,8 @@
-import { useContext } from 'react';
+import { use } from 'react';
 import { ItemContext, ItemContextType } from '../contexts/ItemContext.tsx';
 
 export const useItems = (): ItemContextType => {
-  const context = useContext(ItemContext);
+  const context = use(ItemContext);
   if (context === undefined) {
     throw new Error('useItems must be used within a ItemProvider');
   }

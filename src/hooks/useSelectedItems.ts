@@ -16,7 +16,7 @@ export const useSelectedItems = (section: Section) => {
   const [data, setData] = useState<Array<WanikaniSubject>>([]);
   const { limitToLearned, sorting, level, markedItems } = useSession();
   const { state } = useLocation();
-  const [plannedAssignments, setPlannedAssignments] = useState(new Map<number, Date>());
+  const [plannedAssignments, setPlannedAssignments] = useState(() => new Map<number, Date>());
   const [startedAssignments, setStartedAssignments] = useState<number[]>([]);
 
   useEffect(() => {

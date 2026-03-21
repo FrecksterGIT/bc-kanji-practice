@@ -8,6 +8,7 @@ import { useItems } from '../../hooks/useItems.ts';
 import { useKanjiComposition } from '../../hooks/useKanjiComposition.ts';
 import useGlobalEvent from 'beautiful-react-hooks/useGlobalEvent';
 import { TermListEntry } from '../shared/TermListEntry.tsx';
+import { HtmlParagraph } from '../shared/HtmlParagraph.tsx';
 
 export const InfoTable: FC = () => {
   const { currentItem, isValid } = useItems();
@@ -124,21 +125,13 @@ export const InfoTable: FC = () => {
                   <tr>
                     <th className="meaning-header">Meaning Mnemonic</th>
                     <td className="meaning-content">
-                      <p
-                        dangerouslySetInnerHTML={{
-                          __html: formatHint(vocabulary.data.meaning_mnemonic),
-                        }}
-                      ></p>
+                      <HtmlParagraph>{formatHint(vocabulary.data.meaning_mnemonic)}</HtmlParagraph>
                     </td>
                   </tr>
                   <tr>
                     <th className="meaning-header">Reading Mnemonic</th>
                     <td className="meaning-content">
-                      <p
-                        dangerouslySetInnerHTML={{
-                          __html: formatHint(vocabulary.data.reading_mnemonic),
-                        }}
-                      ></p>
+                      <HtmlParagraph>{formatHint(vocabulary.data.reading_mnemonic)}</HtmlParagraph>
                     </td>
                   </tr>
                 </tbody>

@@ -4,6 +4,7 @@ import { isKanji } from '../../utils/typeChecks.ts';
 import { useItems } from '../../hooks/useItems.ts';
 import useGlobalEvent from 'beautiful-react-hooks/useGlobalEvent';
 import { TermListEntry } from '../shared/TermListEntry.tsx';
+import { HtmlParagraph } from '../shared/HtmlParagraph.tsx';
 
 export const InfoTable: FC = () => {
   const { currentItem, isValid } = useItems();
@@ -84,21 +85,16 @@ export const InfoTable: FC = () => {
                 <tr>
                   <th className="meaning-header">Meaning Mnemonic</th>
                   <td className="meaning-content">
-                    <p
-                      dangerouslySetInnerHTML={{ __html: formatHint(kanji.data.meaning_mnemonic) }}
-                    />
+                    <HtmlParagraph>{formatHint(kanji.data.meaning_mnemonic)}</HtmlParagraph>
                   </td>
                 </tr>
                 <tr>
                   <th className="meaning-header">Reading Mnemonic</th>
                   <td className="meaning-content">
-                    <p
-                      dangerouslySetInnerHTML={{ __html: formatHint(kanji.data.reading_mnemonic) }}
-                    />
-                    <p
-                      className="text-sm text-gray-500"
-                      dangerouslySetInnerHTML={{ __html: formatHint(kanji.data.reading_hint) }}
-                    />
+                    <HtmlParagraph>{formatHint(kanji.data.reading_mnemonic)}</HtmlParagraph>
+                    <HtmlParagraph className="text-sm text-gray-500">
+                      {formatHint(kanji.data.reading_hint)}
+                    </HtmlParagraph>
                   </td>
                 </tr>
               </tbody>

@@ -120,7 +120,5 @@ export const SessionProvider: FC<UserProviderProps> = ({ children }) => {
     ]
   );
 
-  return (
-    <SessionContext.Provider value={value}>{!userLoading && children}</SessionContext.Provider>
-  );
+  return <SessionContext value={value}>{!userLoading && children}</SessionContext>;
 };
