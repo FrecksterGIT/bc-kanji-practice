@@ -1,3 +1,10 @@
+## [2.11.29](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.11.28...v2.11.29) (2026-04-07)
+
+
+### Bug Fixes
+
+* **deps:** update to latest versions ([0dcb9b9](https://github.com/FrecksterGIT/bc-kanji-practice/commit/0dcb9b927b8967d253c5d781142d782d813dd0d1))
+
 ## [2.11.28](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.11.27...v2.11.28) (2026-04-03)
 
 
