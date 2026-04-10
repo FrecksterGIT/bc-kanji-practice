@@ -1,37 +1,32 @@
 ## [2.11.29](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.11.28...v2.11.29) (2026-04-07)
 
-
 ### Bug Fixes
 
-* **deps:** update to latest versions ([0dcb9b9](https://github.com/FrecksterGIT/bc-kanji-practice/commit/0dcb9b927b8967d253c5d781142d782d813dd0d1))
+- **deps:** update to latest versions ([0dcb9b9](https://github.com/FrecksterGIT/bc-kanji-practice/commit/0dcb9b927b8967d253c5d781142d782d813dd0d1))
 
 ## [2.11.28](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.11.27...v2.11.28) (2026-04-03)
 
-
 ### Bug Fixes
 
-* **deps:** update to latest versions ([78bff0e](https://github.com/FrecksterGIT/bc-kanji-practice/commit/78bff0ed53fbbcc5d2f84b6cadd8c651ea9ed17f))
+- **deps:** update to latest versions ([78bff0e](https://github.com/FrecksterGIT/bc-kanji-practice/commit/78bff0ed53fbbcc5d2f84b6cadd8c651ea9ed17f))
 
 ## [2.11.27](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.11.26...v2.11.27) (2026-04-01)
 
-
 ### Bug Fixes
 
-* **deps:** update to latest versions ([f4de8df](https://github.com/FrecksterGIT/bc-kanji-practice/commit/f4de8df58ec001027f2f3424ea3eb6da5f6d9685))
+- **deps:** update to latest versions ([f4de8df](https://github.com/FrecksterGIT/bc-kanji-practice/commit/f4de8df58ec001027f2f3424ea3eb6da5f6d9685))
 
 ## [2.11.26](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.11.25...v2.11.26) (2026-03-28)
 
-
 ### Bug Fixes
 
-* **deps:** update to latest versions ([5729dee](https://github.com/FrecksterGIT/bc-kanji-practice/commit/5729deed9e6bdfc6fabb0228067d1ca4b3744505))
+- **deps:** update to latest versions ([5729dee](https://github.com/FrecksterGIT/bc-kanji-practice/commit/5729deed9e6bdfc6fabb0228067d1ca4b3744505))
 
 ## [2.11.25](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.11.24...v2.11.25) (2026-03-21)
 
-
 ### Bug Fixes
 
-* **deps:** update to latest versions ([70eb653](https://github.com/FrecksterGIT/bc-kanji-practice/commit/70eb653526d647d4b0fbadc7bcdf5817a5c286ba))
+- **deps:** update to latest versions ([70eb653](https://github.com/FrecksterGIT/bc-kanji-practice/commit/70eb653526d647d4b0fbadc7bcdf5817a5c286ba))
 
 ## [2.11.24](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.11.23...v2.11.24) (2026-03-20)
 
