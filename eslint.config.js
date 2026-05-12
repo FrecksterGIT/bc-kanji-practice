@@ -16,15 +16,11 @@ export default defineConfig(
     ],
     languageOptions: {
       parser: tseslint.parser,
-      ecmaVersion: 2020,
       globals: globals.browser,
       parserOptions: {
         projectService: true,
         tsconfigRootDir: import.meta.dirname,
       },
-    },
-    rules: {
-      '@eslint-react/no-missing-key': 'warn',
     },
   },
   prettier
