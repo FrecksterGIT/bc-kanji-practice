@@ -22,7 +22,7 @@
     "react-dom": "19.2.7",
     "react-router": "7.17.0",
     "react-use-audio-player": "4.0.2",
-    "tailwindcss": "4.3.0",
+    "tailwindcss": "4.3.1",
     "wanakana": "5.3.1"
   },
   "devDependencies": {
