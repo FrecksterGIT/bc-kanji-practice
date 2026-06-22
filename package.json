@@ -17,7 +17,7 @@
     "async-cache-dedupe": "3.4.0",
     "beautiful-react-hooks": "5.0.3",
     "idb": "8.0.3",
-    "nanoid": "5.1.11",
+    "nanoid": "5.1.15",
     "react": "19.2.7",
     "react-dom": "19.2.7",
     "react-router": "7.18.0",
