@@ -2,9 +2,9 @@ import { createContext } from 'react';
 import { WanikaniUserData } from '../wanikani';
 
 export enum SortSetting {
-  'id' = 'id',
-  'nextReview' = 'nextReview',
-  'randomize' = 'randomize',
+  id = 'id',
+  nextReview = 'nextReview',
+  randomize = 'randomize',
 }
 
 export type PersistedSettings = {

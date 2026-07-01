@@ -1,16 +1,14 @@
 ## [2.11.49](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.11.48...v2.11.49) (2026-06-28)
 
-
 ### Bug Fixes
 
-* **deps:** update to latest versions ([39436a8](https://github.com/FrecksterGIT/bc-kanji-practice/commit/39436a8cbfbb2036965fa322356d1e091bd6d99c))
+- **deps:** update to latest versions ([39436a8](https://github.com/FrecksterGIT/bc-kanji-practice/commit/39436a8cbfbb2036965fa322356d1e091bd6d99c))
 
 ## [2.11.48](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.11.47...v2.11.48) (2026-06-16)
 
-
 ### Bug Fixes
 
-* **deps:** update to latest versions ([6ef5f5a](https://github.com/FrecksterGIT/bc-kanji-practice/commit/6ef5f5a28728e48e689b24d443aafc09ceeecadb))
+- **deps:** update to latest versions ([6ef5f5a](https://github.com/FrecksterGIT/bc-kanji-practice/commit/6ef5f5a28728e48e689b24d443aafc09ceeecadb))
 
 ## [2.11.47](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.11.46...v2.11.47) (2026-06-09)
 

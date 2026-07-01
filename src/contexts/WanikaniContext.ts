@@ -4,8 +4,8 @@ import { WanikaniAssignment, WanikaniSubject } from '../wanikani';
 export type BasicDataType = WanikaniSubject | WanikaniAssignment;
 
 export enum ResourceType {
-  'subjects' = 'subjects',
-  'assignments' = 'assignments',
+  subjects = 'subjects',
+  assignments = 'assignments',
 }
 
 export const baseUrl = 'https://api.wanikani.com/';
