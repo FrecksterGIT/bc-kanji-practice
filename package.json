@@ -1,7 +1,7 @@
 {
   "name": "bc-kanji-practice",
   "private": true,
-  "version": "2.11.62",
+  "version": "2.11.63",
   "type": "module",
   "scripts": {
     "dev": "vite",
