@@ -1,3 +1,9 @@
+## [2.13.1](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.13.0...v2.13.1) (2026-10-31)
+
+### Bug Fixes
+
+- **deps:** update TypeScript to v7.0.2 ([a920159](https://github.com/FrecksterGIT/bc-kanji-practice/commit/a9201599661df19875adedd53f30b2cb985701c4))
+
 # [2.13.0](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.12.2...v2.13.0) (2026-10-31)
 
 ### Features
