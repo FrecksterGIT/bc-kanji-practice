@@ -34,21 +34,21 @@ git clone https://github.com/FrecksterGIT/bc-kanji-practice.git
 cd bc-kanji-practice
 
 # Install dependencies
-npm ci
+pnpm install
 
 # Start the development server
-npm run dev
+pnpm run dev
 ```
 
 ## Development
 
-### NPM Scripts
+### Package Scripts
 
-- `npm run dev` - Start the development server
-- `npm run build` - Build the project for production
-- `npm run lint` - Run ESLint to check for code issues
-- `npm run preview` - Preview the production build locally
-- `npm run semantic-release` - Run semantic-release for versioning
+- `pnpm run dev` - Start the development server
+- `pnpm run build` - Build the project for production
+- `pnpm run lint` - Run ESLint to check for code issues
+- `pnpm run preview` - Preview the production build locally
+- `pnpm run semantic-release` - Run semantic-release for versioning
 
 ### GitHub Workflow
 
