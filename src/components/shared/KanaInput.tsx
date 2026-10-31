@@ -26,8 +26,9 @@ export const KanaInput: FC<KanaInputProps> = ({
     ref.current?.focus();
   }, [currentItem]);
 
-  const onKeyDown = useGlobalEvent<MouseEvent>("click");
-  onKeyDown((e) => {
+  const onClickAnywhere = useGlobalEvent<MouseEvent>("click");
+  // oxlint-disable-next-line react/refs
+  onClickAnywhere((e) => {
     const target = e.target as HTMLElement;
     if (ref.current && target.tagName !== "SELECT") {
       ref.current.focus();

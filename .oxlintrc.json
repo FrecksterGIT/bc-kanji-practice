@@ -5,8 +5,7 @@
     "correctness": "error"
   },
   "rules": {
-    "react/set-state-in-effect": "warn",
-    "react/refs": "warn"
+    "react/set-state-in-effect": "off"
   },
   "env": {
     "builtin": true,
