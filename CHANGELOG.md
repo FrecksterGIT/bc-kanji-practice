@@ -1,3 +1,9 @@
+## [2.12.2](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.12.1...v2.12.2) (2026-10-31)
+
+### Bug Fixes
+
+- **deps:** update eslint to v10.14.0 across dependencies ([edbfa06](https://github.com/FrecksterGIT/bc-kanji-practice/commit/edbfa067dc937b0eff92b726d0195b03b16aa384))
+
 ## [2.12.1](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.12.0...v2.12.1) (2026-10-31)
 
 ### Bug Fixes
