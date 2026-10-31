@@ -1,3 +1,9 @@
+## [2.13.2](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.13.1...v2.13.2) (2026-10-31)
+
+### Bug Fixes
+
+- **deps:** update semantic-release plugins and reorganize `tailwindcss` ([85a87bf](https://github.com/FrecksterGIT/bc-kanji-practice/commit/85a87bf9490a64d40bac726ec21d257ed7b54c03))
+
 ## [2.13.1](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.13.0...v2.13.1) (2026-10-31)
 
 ### Bug Fixes
