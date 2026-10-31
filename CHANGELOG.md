@@ -1,3 +1,9 @@
+## [2.13.3](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.13.2...v2.13.3) (2026-10-31)
+
+### Bug Fixes
+
+- version rendering ([5c96442](https://github.com/FrecksterGIT/bc-kanji-practice/commit/5c964420ca39064fd4e1d21099401a3ddb1caa24))
+
 ## [2.13.2](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.13.1...v2.13.2) (2026-10-31)
 
 ### Bug Fixes
