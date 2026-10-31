@@ -1,3 +1,9 @@
+# [2.12.0](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.11.69...v2.12.0) (2026-10-31)
+
+### Features
+
+- switch to pnpm ([#245](https://github.com/FrecksterGIT/bc-kanji-practice/issues/245)) ([fa59519](https://github.com/FrecksterGIT/bc-kanji-practice/commit/fa59519cc9c264f25f5c5056e27cac31307dc5ac))
+
 ## [2.11.69](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.11.68...v2.11.69) (2026-10-26)
 
 ### Bug Fixes
