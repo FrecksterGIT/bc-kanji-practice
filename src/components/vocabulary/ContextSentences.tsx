@@ -1,5 +1,5 @@
-import { FC, useState } from 'react';
-import { WanikaniContextSentence } from '../../wanikani';
+import { FC, useState } from "react";
+import { WanikaniContextSentence } from "../../wanikani";
 
 type SentenceProps = {
   sentence: WanikaniContextSentence;
@@ -13,7 +13,7 @@ const Sentence: FC<SentenceProps> = ({ sentence: { ja, en } }) => {
       <p className="text-right" lang="ja">
         {ja}
       </p>
-      <p className={`text-left ${blur ? 'blur-sm' : ''}`}>{en}</p>
+      <p className={`text-left ${blur ? "blur-sm" : ""}`}>{en}</p>
     </button>
   );
 };

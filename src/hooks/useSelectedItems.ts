@@ -1,15 +1,15 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from "react";
 
-import { Section } from '../contexts/ItemContext.tsx';
-import { WanikaniSubject } from '../wanikani';
-import { SortSetting } from '../contexts/SessionContext.tsx';
+import { Section } from "../contexts/ItemContext.tsx";
+import { WanikaniSubject } from "../wanikani";
+import { SortSetting } from "../contexts/SessionContext.tsx";
 import {
   getAllAssignments,
   getSubjectByIds,
   getSubjectsByObjectAndLevel,
-} from '../utils/itemDB.ts';
-import { useSession } from './useSession.ts';
-import { useLocation } from 'react-router';
+} from "../utils/itemDB.ts";
+import { useSession } from "./useSession.ts";
+import { useLocation } from "react-router";
 
 export const useSelectedItems = (section: Section) => {
   const [loading, setLoading] = useState(false);
@@ -31,7 +31,7 @@ export const useSelectedItems = (section: Section) => {
           if (assignment.data.available_at) {
             availableDatesMap.set(
               assignment.data.subject_id,
-              new Date(assignment.data.available_at)
+              new Date(assignment.data.available_at),
             );
           }
         });
@@ -47,7 +47,8 @@ export const useSelectedItems = (section: Section) => {
         .filter(
           (item) =>
             !filtering ||
-            (item.data.level === level && (!limitToLearned || startedAssignments.includes(item.id)))
+            (item.data.level === level &&
+              (!limitToLearned || startedAssignments.includes(item.id))),
         )
         .sort((a, b) => {
           if (sorting === SortSetting.nextReview) {
@@ -63,7 +64,7 @@ export const useSelectedItems = (section: Section) => {
           }
           return a.id - b.id;
         }),
-    [level, limitToLearned, startedAssignments, sorting, plannedAssignments]
+    [level, limitToLearned, startedAssignments, sorting, plannedAssignments],
   );
 
   const loadMarkedItems = useCallback(() => {
@@ -76,7 +77,7 @@ export const useSelectedItems = (section: Section) => {
 
   const loadKanji = useCallback(() => {
     setLoading(true);
-    getSubjectsByObjectAndLevel('kanji', level).then((items) => {
+    getSubjectsByObjectAndLevel("kanji", level).then((items) => {
       if (items) {
         setData(filterAndSort(items));
       }
@@ -87,8 +88,8 @@ export const useSelectedItems = (section: Section) => {
   const loadVocabulary = useCallback(() => {
     setLoading(true);
     Promise.all([
-      getSubjectsByObjectAndLevel('vocabulary', level),
-      getSubjectsByObjectAndLevel('kana_vocabulary', level),
+      getSubjectsByObjectAndLevel("vocabulary", level),
+      getSubjectsByObjectAndLevel("kana_vocabulary", level),
     ]).then((all) => {
       if (all[0] && all[1]) {
         const items = [...all[0], ...all[1]];
@@ -99,19 +100,19 @@ export const useSelectedItems = (section: Section) => {
   }, [filterAndSort, level]);
 
   useEffect(() => {
-    if (section === 'marked') {
+    if (section === "marked") {
       loadMarkedItems();
     }
   }, [loadMarkedItems, section, state]);
 
   useEffect(() => {
-    if (section === 'kanji') {
+    if (section === "kanji") {
       loadKanji();
     }
   }, [loadKanji, section, state]);
 
   useEffect(() => {
-    if (section === 'vocabulary') {
+    if (section === "vocabulary") {
       loadVocabulary();
     }
   }, [loadVocabulary, section, state]);

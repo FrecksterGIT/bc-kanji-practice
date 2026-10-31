@@ -1,11 +1,11 @@
-import { FC, useCallback, useRef } from 'react';
-import { useSession } from '../../hooks/useSession.ts';
-import { useItems } from '../../hooks/useItems.ts';
-import { Tooltip } from './Tooltip.tsx';
-import { BookmarkEmpty } from './icons/BookmarkEmpty.tsx';
-import { BookmarkFilled } from './icons/BookmarkFilled.tsx';
-import useGlobalEvent from 'beautiful-react-hooks/useGlobalEvent';
-import { useHover } from '../../hooks/useHover.ts';
+import { FC, useCallback, useRef } from "react";
+import { useSession } from "../../hooks/useSession.ts";
+import { useItems } from "../../hooks/useItems.ts";
+import { Tooltip } from "./Tooltip.tsx";
+import { BookmarkEmpty } from "./icons/BookmarkEmpty.tsx";
+import { BookmarkFilled } from "./icons/BookmarkFilled.tsx";
+import useGlobalEvent from "beautiful-react-hooks/useGlobalEvent";
+import { useHover } from "../../hooks/useHover.ts";
 
 export const MarkButton: FC = () => {
   const { currentItem } = useItems();
@@ -23,9 +23,9 @@ export const MarkButton: FC = () => {
     }
   }, [isMarked, currentItem, setMarkedItems]);
 
-  const onKeyDown = useGlobalEvent<KeyboardEvent>('keydown');
+  const onKeyDown = useGlobalEvent<KeyboardEvent>("keydown");
   onKeyDown((e) => {
-    if (e.key === 'm' && e.altKey) {
+    if (e.key === "m" && e.altKey) {
       handleMark();
     }
   });
@@ -35,12 +35,12 @@ export const MarkButton: FC = () => {
       className="relative cursor-pointer"
       onClick={handleMark}
       ref={markRef}
-      aria-label={isMarked ? 'unmark item' : 'mark item'}
+      aria-label={isMarked ? "unmark item" : "mark item"}
     >
       {isMarked ? <BookmarkFilled /> : <BookmarkEmpty />}
       {showTooltip && (
         <Tooltip left>
-          {isMarked ? 'unmark item' : 'mark item'}
+          {isMarked ? "unmark item" : "mark item"}
           <br />
           <span className="text-xs">(alt + m) to toggle</span>
         </Tooltip>

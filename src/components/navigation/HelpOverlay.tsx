@@ -1,5 +1,5 @@
-import { FC, PropsWithChildren, useEffect, useRef } from 'react';
-import { Close } from '../shared/icons/Close.tsx';
+import { FC, PropsWithChildren, useEffect, useRef } from "react";
+import { Close } from "../shared/icons/Close.tsx";
 
 interface HelpOverlayProps {
   isOpen: boolean;
@@ -21,19 +21,19 @@ export const HelpOverlay: FC<HelpOverlayProps> = ({ isOpen, onClose }) => {
     };
 
     const handleEscapeKey = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') {
+      if (event.key === "Escape") {
         onClose();
       }
     };
 
     if (isOpen) {
-      document.addEventListener('mousedown', handleClickOutside);
-      document.addEventListener('keydown', handleEscapeKey);
+      document.addEventListener("mousedown", handleClickOutside);
+      document.addEventListener("keydown", handleEscapeKey);
     }
 
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-      document.removeEventListener('keydown', handleEscapeKey);
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("keydown", handleEscapeKey);
     };
   }, [isOpen, onClose]);
 

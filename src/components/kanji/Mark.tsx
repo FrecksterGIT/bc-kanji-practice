@@ -1,8 +1,8 @@
-import { FC, useRef } from 'react';
-import { Tooltip } from '../shared/Tooltip.tsx';
-import { WanikaniVocabularySubject } from '../../wanikani';
-import { usePlayVocabulary } from '../../hooks/usePlayVocabulary.ts';
-import { useHover } from '../../hooks/useHover.ts';
+import { FC, useRef } from "react";
+import { Tooltip } from "../shared/Tooltip.tsx";
+import { WanikaniVocabularySubject } from "../../wanikani";
+import { usePlayVocabulary } from "../../hooks/usePlayVocabulary.ts";
+import { useHover } from "../../hooks/useHover.ts";
 
 interface MarkProps {
   vocabulary: WanikaniVocabularySubject;

@@ -1,12 +1,12 @@
-import { FC, useCallback, useEffect, useState } from 'react';
-import { isKanaVocabulary, isKanji, isVocabulary } from '../../utils/typeChecks.ts';
-import { KanjiDetails } from '../kanji/KanjiDetails.tsx';
-import { VocabularyDetails } from '../vocabulary/VocabularyDetails.tsx';
-import { useItems } from '../../hooks/useItems.ts';
-import { Section } from '../../contexts/ItemContext.tsx';
-import { AngleDown } from '../shared/icons/AngleDown.tsx';
-import { List } from '../shared/List.tsx';
-import useGlobalEvent from 'beautiful-react-hooks/useGlobalEvent';
+import { FC, useCallback, useEffect, useState } from "react";
+import { isKanaVocabulary, isKanji, isVocabulary } from "../../utils/typeChecks.ts";
+import { KanjiDetails } from "../kanji/KanjiDetails.tsx";
+import { VocabularyDetails } from "../vocabulary/VocabularyDetails.tsx";
+import { useItems } from "../../hooks/useItems.ts";
+import { Section } from "../../contexts/ItemContext.tsx";
+import { AngleDown } from "../shared/icons/AngleDown.tsx";
+import { List } from "../shared/List.tsx";
+import useGlobalEvent from "beautiful-react-hooks/useGlobalEvent";
 
 type ItemsProps = {
   section: Section;
@@ -24,21 +24,21 @@ export const Items: FC<ItemsProps> = ({ section }) => {
     setOpen((prev) => !prev);
   }, []);
 
-  const onKeyDown = useGlobalEvent<KeyboardEvent>('keydown');
+  const onKeyDown = useGlobalEvent<KeyboardEvent>("keydown");
   onKeyDown((e) => {
     if (items.length > 0) {
       switch (e.key) {
-        case 'a': {
+        case "a": {
           if (e.altKey) {
             e.preventDefault();
             toggle();
           }
           break;
         }
-        case 'ArrowRight':
+        case "ArrowRight":
           if (!open) setSelectedIndex((prev) => (prev + 1) % items.length);
           break;
-        case 'ArrowLeft':
+        case "ArrowLeft":
           if (!open) setSelectedIndex((prev) => (prev - 1 + items.length) % items.length);
           break;
       }

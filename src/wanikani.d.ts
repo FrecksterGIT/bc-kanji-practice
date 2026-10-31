@@ -69,7 +69,9 @@ export interface WanikaniAssignment {
 }
 
 export type WanikaniSubject =
-  WanikaniKanjiSubject | WanikaniVocabularySubject | WanikaniKanaVocabularySubject;
+  | WanikaniKanjiSubject
+  | WanikaniVocabularySubject
+  | WanikaniKanaVocabularySubject;
 
 export interface WanikaniBaseSubject {
   id: number;
@@ -86,8 +88,8 @@ export interface WanikaniBaseSubject {
 }
 
 export interface WanikaniKanjiSubject extends WanikaniBaseSubject {
-  data: WanikaniBaseSubject['data'] & {
-    subject_type: 'kanji';
+  data: WanikaniBaseSubject["data"] & {
+    subject_type: "kanji";
     characters: string;
     meanings: WanikaniMeaning[];
     readings: WanikaniReading[];
@@ -102,8 +104,8 @@ export interface WanikaniKanjiSubject extends WanikaniBaseSubject {
 }
 
 export interface WanikaniVocabularySubject extends WanikaniBaseSubject {
-  data: WanikaniBaseSubject['data'] & {
-    subject_type: 'vocabulary';
+  data: WanikaniBaseSubject["data"] & {
+    subject_type: "vocabulary";
     characters: string;
     meanings: WanikaniMeaning[];
     readings: WanikaniReading[];
@@ -120,8 +122,8 @@ export interface WanikaniVocabularySubject extends WanikaniBaseSubject {
 }
 
 export interface WanikaniKanaVocabularySubject extends WanikaniBaseSubject {
-  data: WanikaniBaseSubject['data'] & {
-    subject_type: 'kana_vocabulary';
+  data: WanikaniBaseSubject["data"] & {
+    subject_type: "kana_vocabulary";
     characters: string;
     meanings: WanikaniMeaning[];
     context_sentences: WanikaniContextSentence[];
@@ -134,7 +136,7 @@ export interface WanikaniKanaVocabularySubject extends WanikaniBaseSubject {
 
 export interface WanikaniAuxiliaryMeaning {
   meaning: string;
-  type: 'whitelist' | 'blacklist';
+  type: "whitelist" | "blacklist";
 }
 
 export interface WanikaniMeaning {
@@ -144,7 +146,7 @@ export interface WanikaniMeaning {
 }
 
 export interface WanikaniReading {
-  type: 'kunyomi' | 'onyomi' | 'nanori';
+  type: "kunyomi" | "onyomi" | "nanori";
   primary: boolean;
   accepted_answer: boolean;
   reading: string;

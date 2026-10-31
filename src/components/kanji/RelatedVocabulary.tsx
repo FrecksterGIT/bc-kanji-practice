@@ -1,6 +1,6 @@
-import { FC } from 'react';
-import { Mark } from './Mark.tsx';
-import { useRelatedVocabulary } from '../../hooks/useRelatedVocabulary.ts';
+import { FC } from "react";
+import { Mark } from "./Mark.tsx";
+import { useRelatedVocabulary } from "../../hooks/useRelatedVocabulary.ts";
 
 export const RelatedVocabulary: FC = () => {
   const relatedVocabulary = useRelatedVocabulary();

@@ -1,7 +1,7 @@
-import { Outlet } from 'react-router';
-import { Navigation } from './components/navigation/Navigation.tsx';
-import { ItemProvider } from './contexts/ItemProvider.tsx';
-import { AudioPlayerProvider } from 'react-use-audio-player';
+import { Outlet } from "react-router";
+import { Navigation } from "./components/navigation/Navigation.tsx";
+import { ItemProvider } from "./contexts/ItemProvider.tsx";
+import { AudioPlayerProvider } from "react-use-audio-player";
 
 export const App = () => (
   <ItemProvider>

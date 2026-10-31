@@ -1,6 +1,6 @@
-import { type FC, useRef } from 'react';
-import { useSession } from '../../hooks/useSession.ts';
-import { SortSetting } from '../../contexts/SessionContext.tsx';
+import { type FC, useRef } from "react";
+import { useSession } from "../../hooks/useSession.ts";
+import { SortSetting } from "../../contexts/SessionContext.tsx";
 
 export const Settings: FC = () => {
   const {
@@ -16,7 +16,7 @@ export const Settings: FC = () => {
 
   const handleSaveApiKey = () => {
     if (apiKeyRef.current) {
-      updateSettings('apiKey', apiKeyRef.current.value);
+      updateSettings("apiKey", apiKeyRef.current.value);
     }
   };
 
@@ -61,7 +61,7 @@ export const Settings: FC = () => {
                       type="checkbox"
                       id="limitToLearned"
                       checked={limitToLearned}
-                      onChange={(e) => updateSettings('limitToLearned', e.target.checked)}
+                      onChange={(e) => updateSettings("limitToLearned", e.target.checked)}
                       className="mr-2 h-4 w-4 rounded border-gray-300 focus:ring-blue-500"
                     />
                     <label htmlFor="limitToLearned">Limit content to currently learned</label>
@@ -72,7 +72,7 @@ export const Settings: FC = () => {
                       type="checkbox"
                       id="limitToCurrentLevel"
                       checked={limitToCurrentLevel}
-                      onChange={(e) => updateSettings('limitToCurrentLevel', e.target.checked)}
+                      onChange={(e) => updateSettings("limitToCurrentLevel", e.target.checked)}
                       className="mr-2 h-4 w-4 rounded border-gray-300 focus:ring-blue-500"
                     />
                     <label htmlFor="limitToCurrentLevel">
@@ -91,7 +91,7 @@ export const Settings: FC = () => {
                       id="sorting"
                       checked={sorting == SortSetting.id}
                       onChange={(e) => {
-                        if (e.target.checked) updateSettings('sorting', SortSetting.id);
+                        if (e.target.checked) updateSettings("sorting", SortSetting.id);
                       }}
                       className="mr-2 h-4 w-4 rounded border-gray-300 focus:ring-blue-500"
                     />
@@ -103,7 +103,7 @@ export const Settings: FC = () => {
                       id="nextReview"
                       checked={sorting == SortSetting.nextReview}
                       onChange={(e) => {
-                        if (e.target.checked) updateSettings('sorting', SortSetting.nextReview);
+                        if (e.target.checked) updateSettings("sorting", SortSetting.nextReview);
                       }}
                       className="mr-2 h-4 w-4 rounded border-gray-300 focus:ring-blue-500"
                     />
@@ -115,7 +115,7 @@ export const Settings: FC = () => {
                       id="randomize"
                       checked={sorting == SortSetting.randomize}
                       onChange={(e) => {
-                        if (e.target.checked) updateSettings('sorting', SortSetting.randomize);
+                        if (e.target.checked) updateSettings("sorting", SortSetting.randomize);
                       }}
                       className="mr-2 h-4 w-4 rounded border-gray-300 focus:ring-blue-500"
                     />

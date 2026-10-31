@@ -1,10 +1,10 @@
-import { createContext } from 'react';
-import { WanikaniUserData } from '../wanikani';
+import { createContext } from "react";
+import { WanikaniUserData } from "../wanikani";
 
 export enum SortSetting {
-  id = 'id',
-  nextReview = 'nextReview',
-  randomize = 'randomize',
+  id = "id",
+  nextReview = "nextReview",
+  randomize = "randomize",
 }
 
 export type PersistedSettings = {
@@ -24,7 +24,7 @@ export interface SessionContextType extends PersistedSettings {
   setMarkedItems: (markedItems: number[] | ((prev: number[]) => number[])) => void;
   updateSettings: (
     key: keyof PersistedSettings,
-    value: PersistedSettings[keyof PersistedSettings]
+    value: PersistedSettings[keyof PersistedSettings],
   ) => void;
 }
 

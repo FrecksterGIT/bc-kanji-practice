@@ -1,11 +1,11 @@
-import { type FC, RefObject, useEffect, useRef, useState } from 'react';
-import { SelectableButton } from './SelectableButton.tsx';
-import { isKanji } from '../../utils/typeChecks.ts';
-import { useItems } from '../../hooks/useItems.ts';
-import { Close } from './icons/Close.tsx';
-import useGlobalEvent from 'beautiful-react-hooks/useGlobalEvent';
-import useResizeObserver from 'beautiful-react-hooks/useResizeObserver';
-import { useOnClickOutside } from '../../hooks/useOnClickOutside.ts';
+import { type FC, RefObject, useEffect, useRef, useState } from "react";
+import { SelectableButton } from "./SelectableButton.tsx";
+import { isKanji } from "../../utils/typeChecks.ts";
+import { useItems } from "../../hooks/useItems.ts";
+import { Close } from "./icons/Close.tsx";
+import useGlobalEvent from "beautiful-react-hooks/useGlobalEvent";
+import useResizeObserver from "beautiful-react-hooks/useResizeObserver";
+import { useOnClickOutside } from "../../hooks/useOnClickOutside.ts";
 
 interface ListProps {
   onClose: () => void;
@@ -17,22 +17,22 @@ export const List: FC<ListProps> = ({ onClose }) => {
   const buttonRef = useRef<HTMLButtonElement>(null);
   const { items, currentItem, setSelectedIndex } = useItems();
   const [itemsPerRow, setItemsPerRow] = useState(0);
-  const borderColor = isKanji(currentItem) ? 'border-t-pink-400' : 'border-t-purple-400';
+  const borderColor = isKanji(currentItem) ? "border-t-pink-400" : "border-t-purple-400";
 
-  const onKeyDown = useGlobalEvent<KeyboardEvent>('keydown');
+  const onKeyDown = useGlobalEvent<KeyboardEvent>("keydown");
   onKeyDown((e) => {
     switch (e.key) {
-      case 'Escape':
-      case 'Enter':
+      case "Escape":
+      case "Enter":
         onClose();
         break;
-      case 'ArrowRight':
+      case "ArrowRight":
         setSelectedIndex((prev) => (prev + 1) % items.length);
         break;
-      case 'ArrowLeft':
+      case "ArrowLeft":
         setSelectedIndex((prev) => (prev - 1 + items.length) % items.length);
         break;
-      case 'ArrowUp':
+      case "ArrowUp":
         if (!e.altKey)
           setSelectedIndex((prev) => {
             const maxRow = Math.floor(items.length / itemsPerRow);
@@ -45,7 +45,7 @@ export const List: FC<ListProps> = ({ onClose }) => {
             return newRow * itemsPerRow + currentPosition;
           });
         break;
-      case 'ArrowDown':
+      case "ArrowDown":
         if (!e.altKey)
           setSelectedIndex((prev) => {
             const currentRow = Math.floor(prev / itemsPerRow);
@@ -85,7 +85,7 @@ export const List: FC<ListProps> = ({ onClose }) => {
         </div>
         <div
           className={`grid w-full auto-rows-auto gap-2 ${borderColor} border-t-2 px-6 pt-6 pb-12`}
-          style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(10rem, 1fr))' }}
+          style={{ gridTemplateColumns: "repeat(auto-fill, minmax(10rem, 1fr))" }}
           ref={listRef}
         >
           {items.map((item, index) => (

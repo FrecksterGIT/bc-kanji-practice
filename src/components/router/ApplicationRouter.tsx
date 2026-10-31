@@ -1,10 +1,10 @@
-import { FC, useMemo } from 'react';
-import { createBrowserRouter, Navigate, RouterProvider } from 'react-router';
-import { App } from '../../App.tsx';
-import { Items } from '../pages/Items.tsx';
-import { Settings } from '../pages/Settings.tsx';
-import { useSession } from '../../hooks/useSession.ts';
-import { useWanikani } from '../../hooks/useWanikani.ts';
+import { FC, useMemo } from "react";
+import { createBrowserRouter, Navigate, RouterProvider } from "react-router";
+import { App } from "../../App.tsx";
+import { Items } from "../pages/Items.tsx";
+import { Settings } from "../pages/Settings.tsx";
+import { useSession } from "../../hooks/useSession.ts";
+import { useWanikani } from "../../hooks/useWanikani.ts";
 
 export const ApplicationRouter: FC = () => {
   const { loading: sessionLoading, isLoggedIn } = useSession();
@@ -17,27 +17,27 @@ export const ApplicationRouter: FC = () => {
         isLoggedIn
           ? [
               {
-                path: '/',
+                path: "/",
                 element: <App />,
                 children: [
                   {
-                    path: '',
+                    path: "",
                     element: <Navigate to="kanji" replace />,
                   },
                   {
-                    path: 'kanji',
+                    path: "kanji",
                     element: <Items section="kanji" />,
                   },
                   {
-                    path: 'vocabulary',
+                    path: "vocabulary",
                     element: <Items section="vocabulary" />,
                   },
                   {
-                    path: 'marked',
+                    path: "marked",
                     element: <Items section="marked" />,
                   },
                   {
-                    path: 'settings',
+                    path: "settings",
                     element: <Settings />,
                   },
                 ],
@@ -45,22 +45,22 @@ export const ApplicationRouter: FC = () => {
             ]
           : [
               {
-                path: '/',
+                path: "/",
                 element: <App />,
                 children: [
                   {
-                    path: 'settings',
+                    path: "settings",
                     element: <Settings />,
                   },
                   {
-                    path: '*',
+                    path: "*",
                     element: <Navigate to="/settings" replace />,
                   },
                 ],
               },
-            ]
+            ],
       ),
-    [isLoggedIn]
+    [isLoggedIn],
   );
 
   if (loading)
