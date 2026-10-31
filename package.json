@@ -4,14 +4,14 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "format": "oxfmt",
-    "format:check": "oxfmt --check",
-    "lint": "oxlint",
-    "preview": "vite preview",
+    "dev": "vp dev",
+    "build": "vp build",
+    "format": "vp fmt",
+    "format:check": "vp fmt --check",
+    "lint": "vp lint",
+    "preview": "vp preview",
     "semantic-release": "semantic-release",
-    "test": "vitest",
+    "test": "vp test",
     "typecheck": "tsc -p tsconfig.app.json --noEmit"
   },
   "dependencies": {
@@ -35,12 +35,10 @@
     "@types/react": "19.3.0",
     "@types/react-dom": "19.3.0",
     "@vitejs/plugin-react": "6.1.2",
-    "oxfmt": "0.75.0",
-    "oxlint": "1.90.0",
     "semantic-release": "25.0.9",
     "typescript": "7.0.2",
-    "vite": "8.3.5",
-    "vitest": "5.0.5"
+    "vite": "catalog:",
+    "vite-plus": "catalog:"
   },
   "packageManager": "pnpm@12.16.1"
 }

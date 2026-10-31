@@ -29,20 +29,17 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Format check
-        run: pnpm run format:check
-
-      - name: Lint
-        run: pnpm run lint
+      - name: Check
+        run: pnpm exec vp check
 
       - name: Typecheck
         run: pnpm run typecheck
 
       - name: Test
-        run: pnpm test
+        run: pnpm exec vp test
 
       - name: Test Build before versioning
-        run: pnpm run build
+        run: pnpm exec vp build
 
       - name: Versioning
         run: pnpm run semantic-release
@@ -50,7 +47,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build
-        run: pnpm run build
+        run: pnpm exec vp build
 
       - name: Deploy
         uses: SamKirkland/FTP-Deploy-Action@v4.4.0

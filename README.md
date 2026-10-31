@@ -15,7 +15,7 @@ their Japanese language skills through interactive practice sessions.
 ## Tech Stack
 
 - **Frontend Framework**: React 19 with TypeScript
-- **Build Tool**: Vite 7
+- **Build Tool**: Vite+ (Vite 8, Rolldown, Vitest, Oxlint, and Oxfmt)
 - **Styling**: TailwindCSS 4
 - **Routing**: React Router 7
 - **State Management**: React Context API
@@ -44,10 +44,12 @@ pnpm run dev
 
 ### Package Scripts
 
-- `pnpm run dev` - Start the development server
-- `pnpm run build` - Build the project for production
-- `pnpm run lint` - Run ESLint to check for code issues
-- `pnpm run preview` - Preview the production build locally
+- `vp dev` (or `pnpm run dev`) - Start the development server
+- `vp build` (or `pnpm run build`) - Build the project for production
+- `vp check` - Format and lint the project
+- `pnpm run typecheck` - Run the TypeScript type checker
+- `vp test` (or `pnpm test`) - Run tests
+- `vp preview` (or `pnpm run preview`) - Preview the production build locally
 - `pnpm run semantic-release` - Run semantic-release for versioning
 
 ### GitHub Workflow

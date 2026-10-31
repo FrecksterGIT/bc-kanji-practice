@@ -7,7 +7,7 @@
     [
       "@semantic-release/exec",
       {
-        "prepareCmd": "pnpm exec oxfmt CHANGELOG.md"
+        "prepareCmd": "pnpm exec vp fmt CHANGELOG.md"
       }
     ],
     [
