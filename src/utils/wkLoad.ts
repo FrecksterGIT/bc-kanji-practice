@@ -1,18 +1,18 @@
-import { createCache } from 'async-cache-dedupe';
+import { createCache } from "async-cache-dedupe";
 import {
   WanikaniAssignment,
   WanikaniCollection,
   WanikaniResourceResponse,
   WanikaniSubject,
   WanikaniUserData,
-} from '../wanikani';
+} from "../wanikani";
 
 const fetchFn = async <T>({ url, apiKey }: { url: string; apiKey: string }): Promise<T> => {
   const response = await fetch(url, {
-    method: 'GET',
+    method: "GET",
     headers: {
-      'Content-Type': 'application/json',
-      'Wanikani-Revision': '20170710',
+      "Content-Type": "application/json",
+      "Wanikani-Revision": "20170710",
       Authorization: `Bearer ${apiKey}`,
     },
   });
@@ -23,8 +23,8 @@ const fetchFn = async <T>({ url, apiKey }: { url: string; apiKey: string }): Pro
 };
 
 export const wkLoad = createCache({
-  storage: { type: 'memory' },
+  storage: { type: "memory" },
 })
-  .define('assignments', fetchFn<WanikaniCollection<WanikaniAssignment>>)
-  .define('subjects', fetchFn<WanikaniCollection<WanikaniSubject>>)
-  .define('user', fetchFn<WanikaniResourceResponse<WanikaniUserData>>);
+  .define("assignments", fetchFn<WanikaniCollection<WanikaniAssignment>>)
+  .define("subjects", fetchFn<WanikaniCollection<WanikaniSubject>>)
+  .define("user", fetchFn<WanikaniResourceResponse<WanikaniUserData>>);

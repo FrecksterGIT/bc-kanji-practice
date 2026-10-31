@@ -1,13 +1,13 @@
-import { FC, ReactNode, useCallback, useEffect, useMemo, useState } from 'react';
-import { WanikaniUserData } from '../wanikani';
+import { FC, ReactNode, useCallback, useEffect, useMemo, useState } from "react";
+import { WanikaniUserData } from "../wanikani";
 import {
   PersistedSettings,
   SessionContext,
   SessionContextType,
   SortSetting,
-} from './SessionContext.tsx';
-import { wkLoad } from '../utils/wkLoad.ts';
-import { getSettings, saveSettings } from '../utils/itemDB.ts';
+} from "./SessionContext.tsx";
+import { wkLoad } from "../utils/wkLoad.ts";
+import { getSettings, saveSettings } from "../utils/itemDB.ts";
 
 interface UserProviderProps {
   children: ReactNode;
@@ -20,7 +20,7 @@ export const SessionProvider: FC<UserProviderProps> = ({ children }) => {
   const [settingsLoading, setSettingsLoading] = useState<boolean>(true);
   const [maxLevel, setMaxLevel] = useState<number>(3);
   const [persistedSettings, setPersistedSettings] = useState<PersistedSettings>({
-    apiKey: '',
+    apiKey: "",
     limitToLearned: false,
     limitToCurrentLevel: false,
     sorting: SortSetting.id,
@@ -55,7 +55,7 @@ export const SessionProvider: FC<UserProviderProps> = ({ children }) => {
         [key]: value,
       }));
     },
-    []
+    [],
   );
 
   const setMarkedItems = useCallback(
@@ -63,9 +63,9 @@ export const SessionProvider: FC<UserProviderProps> = ({ children }) => {
       setPersistedSettings((prev) => ({
         ...prev,
         markedItems:
-          typeof newMarkedItems === 'function' ? newMarkedItems(prev.markedItems) : newMarkedItems,
+          typeof newMarkedItems === "function" ? newMarkedItems(prev.markedItems) : newMarkedItems,
       })),
-    []
+    [],
   );
 
   useEffect(() => {
@@ -82,7 +82,7 @@ export const SessionProvider: FC<UserProviderProps> = ({ children }) => {
       }
       setUserLoading(true);
       wkLoad
-        .user({ url: 'https://api.wanikani.com/v2/user', apiKey: persistedSettings.apiKey })
+        .user({ url: "https://api.wanikani.com/v2/user", apiKey: persistedSettings.apiKey })
         .then(({ data }) => {
           setUser(data);
           setIsLoggedIn(true);
@@ -117,7 +117,7 @@ export const SessionProvider: FC<UserProviderProps> = ({ children }) => {
       updateSettings,
       user,
       userLoading,
-    ]
+    ],
   );
 
   return <SessionContext value={value}>{!userLoading && children}</SessionContext>;

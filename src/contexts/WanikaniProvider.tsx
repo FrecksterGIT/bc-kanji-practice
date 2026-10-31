@@ -1,20 +1,20 @@
-import { FC, PropsWithChildren, useCallback, useEffect, useState } from 'react';
+import { FC, PropsWithChildren, useCallback, useEffect, useState } from "react";
 import {
   baseUrl,
   BasicDataType,
   resources,
   ResourceType,
   WanikaniContext,
-} from './WanikaniContext.ts';
-import { isAssignmentList, isSubjectList } from '../utils/typeChecks.ts';
+} from "./WanikaniContext.ts";
+import { isAssignmentList, isSubjectList } from "../utils/typeChecks.ts";
 import {
   addManyAssignments,
   addManySubjects,
   getAllAssignments,
   getAllSubjects,
-} from '../utils/itemDB.ts';
-import { wkLoad } from '../utils/wkLoad.ts';
-import { useSession } from '../hooks/useSession.ts';
+} from "../utils/itemDB.ts";
+import { wkLoad } from "../utils/wkLoad.ts";
+import { useSession } from "../hooks/useSession.ts";
 
 export const WanikaniProvider: FC<PropsWithChildren> = ({ children }) => {
   const [loading, setLoading] = useState(false);
@@ -22,7 +22,7 @@ export const WanikaniProvider: FC<PropsWithChildren> = ({ children }) => {
   const { apiKey, isLoggedIn } = useSession();
 
   const writeData = useCallback(async function writeData<T extends BasicDataType = BasicDataType>(
-    data: T[]
+    data: T[],
   ): Promise<void> {
     if (!data || data.length === 0) {
       return;
@@ -38,7 +38,7 @@ export const WanikaniProvider: FC<PropsWithChildren> = ({ children }) => {
   const fetcher = useCallback(
     async function fetcher<T extends BasicDataType = BasicDataType>(
       url: string,
-      type: ResourceType
+      type: ResourceType,
     ): Promise<{ data: T[]; next_url?: string | null }> {
       if (!apiKey || !isLoggedIn) {
         return Promise.resolve({ data: [], next_url: undefined });
@@ -59,17 +59,17 @@ export const WanikaniProvider: FC<PropsWithChildren> = ({ children }) => {
       }
       return { data: [] };
     },
-    [apiKey, isLoggedIn, writeData]
+    [apiKey, isLoggedIn, writeData],
   );
 
   const load = useCallback(
     async function load<T extends BasicDataType = BasicDataType>(
       type: ResourceType,
-      latest: string | null
+      latest: string | null,
     ) {
       const url = new URL(resources[type], baseUrl);
       if (latest) {
-        url.searchParams.set('updated_after', latest);
+        url.searchParams.set("updated_after", latest);
         await fetcher<T>(url.toString(), type).then();
       } else {
         const result = await fetcher<T>(url.toString(), type);
@@ -82,7 +82,7 @@ export const WanikaniProvider: FC<PropsWithChildren> = ({ children }) => {
         }
       }
     },
-    [fetcher]
+    [fetcher],
   );
 
   const getLatest = useCallback(
@@ -95,7 +95,7 @@ export const WanikaniProvider: FC<PropsWithChildren> = ({ children }) => {
         }
         return acc;
       }, null),
-    []
+    [],
   );
 
   const initializeLoading = useCallback(async () => {

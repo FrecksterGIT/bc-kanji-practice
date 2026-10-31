@@ -1,22 +1,22 @@
-import { FC, RefObject, useEffect, useRef, useState } from 'react';
+import { FC, RefObject, useEffect, useRef, useState } from "react";
 
-import { Audio } from './icons/Audio.tsx';
-import { MarkButton } from './MarkButton.tsx';
-import { useItems } from '../../hooks/useItems.ts';
-import { isKanji, isVocabulary } from '../../utils/typeChecks.ts';
-import { usePlayVocabulary } from '../../hooks/usePlayVocabulary.ts';
-import useSwipe from 'beautiful-react-hooks/useSwipe';
+import { Audio } from "./icons/Audio.tsx";
+import { MarkButton } from "./MarkButton.tsx";
+import { useItems } from "../../hooks/useItems.ts";
+import { isKanji, isVocabulary } from "../../utils/typeChecks.ts";
+import { usePlayVocabulary } from "../../hooks/usePlayVocabulary.ts";
+import useSwipe from "beautiful-react-hooks/useSwipe";
 
 export const MainTerm: FC = () => {
   const { currentItem, setSelectedIndex, items } = useItems();
   const isVocab = isVocabulary(currentItem);
-  const borderColor = isKanji(currentItem) ? 'border-b-pink-400' : 'border-b-purple-400';
+  const borderColor = isKanji(currentItem) ? "border-b-pink-400" : "border-b-purple-400";
   const { playAudio } = usePlayVocabulary(currentItem);
   const ref = useRef<HTMLDivElement>(null);
 
   const swipe = useSwipe(ref as RefObject<HTMLDivElement>, {
     threshold: 100,
-    direction: 'horizontal',
+    direction: "horizontal",
     passive: true,
     preventDefault: false,
   });
@@ -28,9 +28,9 @@ export const MainTerm: FC = () => {
     }
     if (isSwiping && !swipe.swiping) {
       setIsSwiping(false);
-      if (swipe.direction === 'left') {
+      if (swipe.direction === "left") {
         setSelectedIndex((prev) => (prev + 1) % items.length);
-      } else if (swipe.direction === 'right') {
+      } else if (swipe.direction === "right") {
         setSelectedIndex((prev) => (prev - 1 + items.length) % items.length);
       }
     }

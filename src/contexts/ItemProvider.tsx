@@ -1,11 +1,11 @@
-import { FC, PropsWithChildren, useCallback, useEffect, useMemo, useState } from 'react';
-import { ItemContext, ItemContextType, Section } from './ItemContext.tsx';
-import { isKatakana, toHiragana } from 'wanakana';
-import { useSelectedItems } from '../hooks/useSelectedItems.ts';
-import { isKanaVocabulary, isKanji, isVocabulary } from '../utils/typeChecks.ts';
+import { FC, PropsWithChildren, useCallback, useEffect, useMemo, useState } from "react";
+import { ItemContext, ItemContextType, Section } from "./ItemContext.tsx";
+import { isKatakana, toHiragana } from "wanakana";
+import { useSelectedItems } from "../hooks/useSelectedItems.ts";
+import { isKanaVocabulary, isKanji, isVocabulary } from "../utils/typeChecks.ts";
 
 export const ItemProvider: FC<PropsWithChildren> = ({ children }) => {
-  const [section, setSection] = useState<Section>('kanji');
+  const [section, setSection] = useState<Section>("kanji");
   const { data: items } = useSelectedItems(section);
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
   const item = useMemo(() => items?.[selectedIndex], [items, selectedIndex]);
@@ -23,12 +23,12 @@ export const ItemProvider: FC<PropsWithChildren> = ({ children }) => {
         .reduce<string[]>((r, i) => {
           r.push(i.reading);
           r.push(toHiragana(i.reading));
-          if (i.reading.split('').some(isKatakana)) {
+          if (i.reading.split("").some(isKatakana)) {
             r.push(
               i.reading
-                .split('')
+                .split("")
                 .map((c) => toHiragana(c))
-                .join('')
+                .join(""),
             );
           }
           return r;
@@ -38,9 +38,9 @@ export const ItemProvider: FC<PropsWithChildren> = ({ children }) => {
     if (isKanaVocabulary(item)) {
       return [
         item.data.characters
-          .split('')
+          .split("")
           .map((c) => toHiragana(c))
-          .join(''),
+          .join(""),
       ];
     }
 
@@ -57,7 +57,7 @@ export const ItemProvider: FC<PropsWithChildren> = ({ children }) => {
       }
       return result;
     },
-    [item, validValues]
+    [item, validValues],
   );
 
   const nextValidIndex = useCallback(
@@ -71,7 +71,7 @@ export const ItemProvider: FC<PropsWithChildren> = ({ children }) => {
       }
       return next;
     },
-    [items, validItems]
+    [items, validItems],
   );
 
   useEffect(() => {
@@ -96,7 +96,7 @@ export const ItemProvider: FC<PropsWithChildren> = ({ children }) => {
       section,
       setSection,
     }),
-    [items, item, selectedIndex, validItems, validateInput, isValid, section, nextValidIndex]
+    [items, item, selectedIndex, validItems, validateInput, isValid, section, nextValidIndex],
   );
 
   return <ItemContext value={contextValue}>{children}</ItemContext>;

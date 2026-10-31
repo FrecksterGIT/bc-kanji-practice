@@ -1,6 +1,6 @@
-import { FC } from 'react';
-import { WanikaniKanjiSubject } from '../../wanikani';
-import { TermListEntry } from '../shared/TermListEntry.tsx';
+import { FC } from "react";
+import { WanikaniKanjiSubject } from "../../wanikani";
+import { TermListEntry } from "../shared/TermListEntry.tsx";
 
 type CompositionProps = {
   kanji: WanikaniKanjiSubject;
@@ -15,14 +15,14 @@ export const Composition: FC<CompositionProps> = ({ kanji, className }) => {
       </td>
       <td className={className} lang="ja">
         {kanji.data.readings
-          .filter((r) => r.type === 'onyomi')
+          .filter((r) => r.type === "onyomi")
           .map((reading) => (
             <TermListEntry key={reading.reading} word={reading.reading} primary={reading.primary} />
           ))}
       </td>
       <td className={className} lang="ja">
         {kanji.data.readings
-          .filter((r) => r.type === 'kunyomi')
+          .filter((r) => r.type === "kunyomi")
           .map((reading) => (
             <TermListEntry key={reading.reading} word={reading.reading} primary={reading.primary} />
           ))}

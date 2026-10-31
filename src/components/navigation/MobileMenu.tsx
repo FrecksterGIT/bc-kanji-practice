@@ -1,7 +1,7 @@
-import { FC, useEffect, useRef } from 'react';
-import { NavLink } from 'react-router';
-import { Help } from '../shared/icons/Help';
-import { Close } from '../shared/icons/Close.tsx';
+import { FC, useEffect, useRef } from "react";
+import { NavLink } from "react-router";
+import { Help } from "../shared/icons/Help";
+import { Close } from "../shared/icons/Close.tsx";
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -36,23 +36,23 @@ export const MobileMenu: FC<MobileMenuProps> = ({
     };
 
     const handleEscapeKey = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') {
+      if (event.key === "Escape") {
         onClose();
       }
     };
 
     if (isOpen) {
-      document.addEventListener('mousedown', handleClickOutside);
-      document.addEventListener('keydown', handleEscapeKey);
-      document.body.style.overflow = 'hidden';
+      document.addEventListener("mousedown", handleClickOutside);
+      document.addEventListener("keydown", handleEscapeKey);
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = '';
+      document.body.style.overflow = "";
     }
 
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-      document.removeEventListener('keydown', handleEscapeKey);
-      document.body.style.overflow = '';
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("keydown", handleEscapeKey);
+      document.body.style.overflow = "";
     };
   }, [isOpen, onClose]);
 
@@ -87,7 +87,7 @@ export const MobileMenu: FC<MobileMenuProps> = ({
               <NavLink
                 to="kanji"
                 className={({ isActive }) =>
-                  `rounded px-3 py-2 hover:bg-pink-500 ${isActive ? 'bg-pink-500' : ''}`
+                  `rounded px-3 py-2 hover:bg-pink-500 ${isActive ? "bg-pink-500" : ""}`
                 }
                 onClick={onClose}
               >
@@ -96,7 +96,7 @@ export const MobileMenu: FC<MobileMenuProps> = ({
               <NavLink
                 to="vocabulary"
                 className={({ isActive }) =>
-                  `rounded px-3 py-2 hover:bg-purple-500 ${isActive ? 'bg-purple-500' : ''}`
+                  `rounded px-3 py-2 hover:bg-purple-500 ${isActive ? "bg-purple-500" : ""}`
                 }
                 onClick={onClose}
               >
@@ -123,7 +123,7 @@ export const MobileMenu: FC<MobileMenuProps> = ({
                 to="marked"
                 className={({ isActive }) =>
                   `rounded from-pink-500 to-purple-500 px-3 py-2 hover:bg-gradient-to-br ${
-                    isActive ? 'bg-gradient-to-br from-pink-500 to-purple-500' : ''
+                    isActive ? "bg-gradient-to-br from-pink-500 to-purple-500" : ""
                   }`
                 }
                 onClick={onClose}
@@ -135,11 +135,11 @@ export const MobileMenu: FC<MobileMenuProps> = ({
           <NavLink
             to="settings"
             className={({ isActive }) =>
-              `rounded px-3 py-2 transition-colors hover:bg-gray-600 ${isActive ? 'bg-gray-600' : ''}`
+              `rounded px-3 py-2 transition-colors hover:bg-gray-600 ${isActive ? "bg-gray-600" : ""}`
             }
             onClick={onClose}
           >
-            {username ?? 'Settings'}
+            {username ?? "Settings"}
           </NavLink>
         </div>
       </div>

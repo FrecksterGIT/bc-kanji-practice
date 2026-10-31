@@ -1,8 +1,8 @@
 openapi: 3.0.3
 info:
   title: WaniKani
-  description: 'WaniKani: The API'
-  version: '20170710.0'
+  description: "WaniKani: The API"
+  version: "20170710.0"
 servers:
   - url: https://api.wanikani.com/v2
 security:
@@ -87,11 +87,11 @@ paths:
               type: integer
         - in: query
           name: subject_types
-          description: 'Only assignments where data.subject_type matches one of the array values are returned. Valid values are: radical, kanji, or vocabulary.'
+          description: "Only assignments where data.subject_type matches one of the array values are returned. Valid values are: radical, kanji, or vocabulary."
           schema:
             type: array
             items:
-              $ref: '#/components/schemas/SubjectType'
+              $ref: "#/components/schemas/SubjectType"
         - in: query
           name: unlocked
           description: When set to true, returns assignments that have a value in data.unlocked_at. Returns assignments with a null data.unlocked_at if false.
@@ -110,60 +110,60 @@ paths:
             type: integer
 
       responses:
-        '200':
+        "200":
           description: All Assignments
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Assignments'
+                $ref: "#/components/schemas/Assignments"
               example:
                 {
-                  'object': 'collection',
-                  'url': 'https://api.wanikani.com/v2/assignments',
-                  'pages':
+                  "object": "collection",
+                  "url": "https://api.wanikani.com/v2/assignments",
+                  "pages":
                     {
-                      'per_page': 500,
-                      'next_url': 'https://api.wanikani.com/v2/assignments?page_after_id=80469434',
-                      'previous_url': null,
+                      "per_page": 500,
+                      "next_url": "https://api.wanikani.com/v2/assignments?page_after_id=80469434",
+                      "previous_url": null,
                     },
-                  'total_count': 1600,
-                  'data_updated_at': '2017-11-29T19:37:03.571377Z',
-                  'data':
+                  "total_count": 1600,
+                  "data_updated_at": "2017-11-29T19:37:03.571377Z",
+                  "data":
                     [
                       {
-                        'id': 80463006,
-                        'object': 'assignment',
-                        'url': 'https://api.wanikani.com/v2/assignments/80463006',
-                        'data_updated_at': '2017-10-30T01:51:10.438432Z',
-                        'data':
+                        "id": 80463006,
+                        "object": "assignment",
+                        "url": "https://api.wanikani.com/v2/assignments/80463006",
+                        "data_updated_at": "2017-10-30T01:51:10.438432Z",
+                        "data":
                           {
-                            'created_at': '2017-09-05T23:38:10.695133Z',
-                            'subject_id': 8761,
-                            'subject_type': 'radical',
-                            'srs_stage': 8,
-                            'unlocked_at': '2017-09-05T23:38:10.695133Z',
-                            'started_at': '2017-09-05T23:41:28.980679Z',
-                            'passed_at': '2017-09-07T17:14:14.491889Z',
-                            'burned_at': null,
-                            'available_at': '2018-02-27T00:00:00.000000Z',
-                            'resurrected_at': null,
+                            "created_at": "2017-09-05T23:38:10.695133Z",
+                            "subject_id": 8761,
+                            "subject_type": "radical",
+                            "srs_stage": 8,
+                            "unlocked_at": "2017-09-05T23:38:10.695133Z",
+                            "started_at": "2017-09-05T23:41:28.980679Z",
+                            "passed_at": "2017-09-07T17:14:14.491889Z",
+                            "burned_at": null,
+                            "available_at": "2018-02-27T00:00:00.000000Z",
+                            "resurrected_at": null,
                           },
                       },
                     ],
                 }
-        '401':
-          $ref: '#/components/responses/Unauthorized'
-        '403':
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
           description: Forbidden
-        '404':
+        "404":
           description: Resource not found
-        '422':
-          $ref: '#/components/responses/UnprocessableEntity'
-        '429':
+        "422":
+          $ref: "#/components/responses/UnprocessableEntity"
+        "429":
           description: Too Many Requests
-        '500':
+        "500":
           description: Internal Server Error
-        '503':
+        "503":
           description: Service Unavailable
   /assignments/{id}:
     get:
@@ -172,48 +172,48 @@ paths:
       description: Retrieves a specific assignment by its id.
       tags: [Assignment]
       parameters:
-        - $ref: '#/components/parameters/resourceId'
+        - $ref: "#/components/parameters/resourceId"
       responses:
-        '200':
+        "200":
           description: Requested Assignment
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Assignment'
+                $ref: "#/components/schemas/Assignment"
               example:
                 {
-                  'id': 80463006,
-                  'object': 'assignment',
-                  'url': 'https://api.wanikani.com/v2/assignments/80463006',
-                  'data_updated_at': '2017-11-29T19:37:03.571377Z',
-                  'data':
+                  "id": 80463006,
+                  "object": "assignment",
+                  "url": "https://api.wanikani.com/v2/assignments/80463006",
+                  "data_updated_at": "2017-11-29T19:37:03.571377Z",
+                  "data":
                     {
-                      'created_at': '2017-09-05T23:38:10.695133Z',
-                      'subject_id': 8761,
-                      'subject_type': 'radical',
-                      'level': 1,
-                      'srs_stage': 8,
-                      'unlocked_at': '2017-09-05T23:38:10.695133Z',
-                      'started_at': '2017-09-05T23:41:28.980679Z',
-                      'passed_at': '2017-09-07T17:14:14.491889Z',
-                      'burned_at': null,
-                      'available_at': '2018-02-27T00:00:00.000000Z',
-                      'resurrected_at': null,
+                      "created_at": "2017-09-05T23:38:10.695133Z",
+                      "subject_id": 8761,
+                      "subject_type": "radical",
+                      "level": 1,
+                      "srs_stage": 8,
+                      "unlocked_at": "2017-09-05T23:38:10.695133Z",
+                      "started_at": "2017-09-05T23:41:28.980679Z",
+                      "passed_at": "2017-09-07T17:14:14.491889Z",
+                      "burned_at": null,
+                      "available_at": "2018-02-27T00:00:00.000000Z",
+                      "resurrected_at": null,
                     },
                 }
-        '401':
-          $ref: '#/components/responses/Unauthorized'
-        '403':
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
           description: Forbidden
-        '404':
+        "404":
           description: Resource not found
-        '422':
-          $ref: '#/components/responses/UnprocessableEntity'
-        '429':
+        "422":
+          $ref: "#/components/responses/UnprocessableEntity"
+        "429":
           description: Too Many Requests
-        '500':
+        "500":
           description: Internal Server Error
-        '503':
+        "503":
           description: Service Unavailable
   /assignments/{id}/start:
     put:
@@ -222,54 +222,54 @@ paths:
       description: Mark the assignment as started, moving the assignment from the lessons queue to the review queue. Returns the updated assignment.
       tags: [Assignment]
       parameters:
-        - $ref: '#/components/parameters/resourceId'
+        - $ref: "#/components/parameters/resourceId"
       requestBody:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/StartAssignmentRequest'
-            example: { 'started_at': '2017-09-05T23:41:28.980679Z' }
+              $ref: "#/components/schemas/StartAssignmentRequest"
+            example: { "started_at": "2017-09-05T23:41:28.980679Z" }
       responses:
-        '200':
+        "200":
           description: The started Assignment
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Assignment'
+                $ref: "#/components/schemas/Assignment"
               example:
                 {
-                  'id': 80463006,
-                  'object': 'assignment',
-                  'url': 'https://api.wanikani.com/v2/assignments/80463006',
-                  'data_updated_at': '2017-11-29T19:37:03.571377Z',
-                  'data':
+                  "id": 80463006,
+                  "object": "assignment",
+                  "url": "https://api.wanikani.com/v2/assignments/80463006",
+                  "data_updated_at": "2017-11-29T19:37:03.571377Z",
+                  "data":
                     {
-                      'created_at': '2017-09-05T23:38:10.695133Z',
-                      'subject_id': 8761,
-                      'subject_type': 'radical',
-                      'level': 1,
-                      'srs_stage': 8,
-                      'unlocked_at': '2017-09-05T23:38:10.695133Z',
-                      'started_at': '2017-09-05T23:41:28.980679Z',
-                      'passed_at': '2017-09-07T17:14:14.491889Z',
-                      'burned_at': null,
-                      'available_at': '2018-02-27T00:00:00.000000Z',
-                      'resurrected_at': null,
+                      "created_at": "2017-09-05T23:38:10.695133Z",
+                      "subject_id": 8761,
+                      "subject_type": "radical",
+                      "level": 1,
+                      "srs_stage": 8,
+                      "unlocked_at": "2017-09-05T23:38:10.695133Z",
+                      "started_at": "2017-09-05T23:41:28.980679Z",
+                      "passed_at": "2017-09-07T17:14:14.491889Z",
+                      "burned_at": null,
+                      "available_at": "2018-02-27T00:00:00.000000Z",
+                      "resurrected_at": null,
                     },
                 }
-        '401':
-          $ref: '#/components/responses/Unauthorized'
-        '403':
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
           description: Forbidden
-        '404':
+        "404":
           description: Resource not found
-        '422':
-          $ref: '#/components/responses/UnprocessableEntity'
-        '429':
+        "422":
+          $ref: "#/components/responses/UnprocessableEntity"
+        "429":
           description: Too Many Requests
-        '500':
+        "500":
           description: Internal Server Error
-        '503':
+        "503":
           description: Service Unavailable
   /level_progressions:
     get:
@@ -292,52 +292,52 @@ paths:
             type: string
             format: date-time
       responses:
-        '200':
+        "200":
           description: All Level Progressions
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/LevelProgressions'
+                $ref: "#/components/schemas/LevelProgressions"
               example:
                 {
-                  'object': 'collection',
-                  'url': 'https://api.wanikani.com/v2/level_progressions',
-                  'pages': { 'per_page': 500, 'next_url': null, 'previous_url': null },
-                  'total_count': 42,
-                  'data_updated_at': '2017-09-21T11:45:01.691388Z',
-                  'data':
+                  "object": "collection",
+                  "url": "https://api.wanikani.com/v2/level_progressions",
+                  "pages": { "per_page": 500, "next_url": null, "previous_url": null },
+                  "total_count": 42,
+                  "data_updated_at": "2017-09-21T11:45:01.691388Z",
+                  "data":
                     [
                       {
-                        'id': 49392,
-                        'object': 'level_progression',
-                        'url': 'https://api.wanikani.com/v2/level_progressions/49392',
-                        'data_updated_at': '2017-03-30T11:31:20.438432Z',
-                        'data':
+                        "id": 49392,
+                        "object": "level_progression",
+                        "url": "https://api.wanikani.com/v2/level_progressions/49392",
+                        "data_updated_at": "2017-03-30T11:31:20.438432Z",
+                        "data":
                           {
-                            'created_at': '2017-03-30T08:21:51.439918Z',
-                            'level': 42,
-                            'unlocked_at': '2017-03-30T08:21:51.439918Z',
-                            'started_at': '2017-03-30T11:31:20.438432Z',
-                            'passed_at': null,
-                            'completed_at': null,
-                            'abandoned_at': null,
+                            "created_at": "2017-03-30T08:21:51.439918Z",
+                            "level": 42,
+                            "unlocked_at": "2017-03-30T08:21:51.439918Z",
+                            "started_at": "2017-03-30T11:31:20.438432Z",
+                            "passed_at": null,
+                            "completed_at": null,
+                            "abandoned_at": null,
                           },
                       },
                     ],
                 }
-        '401':
-          $ref: '#/components/responses/Unauthorized'
-        '403':
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
           description: Forbidden
-        '404':
+        "404":
           description: Resource not found
-        '422':
-          $ref: '#/components/responses/UnprocessableEntity'
-        '429':
+        "422":
+          $ref: "#/components/responses/UnprocessableEntity"
+        "429":
           description: Too Many Requests
-        '500':
+        "500":
           description: Internal Server Error
-        '503':
+        "503":
           description: Service Unavailable
   /level_progressions/{id}:
     get:
@@ -346,44 +346,44 @@ paths:
       description: Retrieves a specific level progression by its id.
       tags: [Level Progression]
       parameters:
-        - $ref: '#/components/parameters/resourceId'
+        - $ref: "#/components/parameters/resourceId"
       responses:
-        '200':
+        "200":
           description: Requested Level Progression
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/LevelProgression'
+                $ref: "#/components/schemas/LevelProgression"
               example:
                 {
-                  'id': 49392,
-                  'object': 'level_progression',
-                  'url': 'https://api.wanikani.com/v2/level_progressions/49392',
-                  'data_updated_at': '2017-03-30T11:31:20.438432Z',
-                  'data':
+                  "id": 49392,
+                  "object": "level_progression",
+                  "url": "https://api.wanikani.com/v2/level_progressions/49392",
+                  "data_updated_at": "2017-03-30T11:31:20.438432Z",
+                  "data":
                     {
-                      'created_at': '2017-03-30T08:21:51.439918Z',
-                      'level': 42,
-                      'unlocked_at': '2017-03-30T08:21:51.439918Z',
-                      'started_at': '2017-03-30T11:31:20.438432Z',
-                      'passed_at': null,
-                      'completed_at': null,
-                      'abandoned_at': null,
+                      "created_at": "2017-03-30T08:21:51.439918Z",
+                      "level": 42,
+                      "unlocked_at": "2017-03-30T08:21:51.439918Z",
+                      "started_at": "2017-03-30T11:31:20.438432Z",
+                      "passed_at": null,
+                      "completed_at": null,
+                      "abandoned_at": null,
                     },
                 }
-        '401':
-          $ref: '#/components/responses/Unauthorized'
-        '403':
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
           description: Forbidden
-        '404':
+        "404":
           description: Resource not found
-        '422':
-          $ref: '#/components/responses/UnprocessableEntity'
-        '429':
+        "422":
+          $ref: "#/components/responses/UnprocessableEntity"
+        "429":
           description: Too Many Requests
-        '500':
+        "500":
           description: Internal Server Error
-        '503':
+        "503":
           description: Service Unavailable
   /resets:
     get:
@@ -406,49 +406,49 @@ paths:
             type: string
             format: date-time
       responses:
-        '200':
+        "200":
           description: All Resets
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Resets'
+                $ref: "#/components/schemas/Resets"
               example:
                 {
-                  'object': 'collection',
-                  'url': 'https://api.wanikani.com/v2/resets',
-                  'pages': { 'per_page': 500, 'next_url': null, 'previous_url': null },
-                  'total_count': 2,
-                  'data_updated_at': '2017-11-29T19:37:03.571377Z',
-                  'data':
+                  "object": "collection",
+                  "url": "https://api.wanikani.com/v2/resets",
+                  "pages": { "per_page": 500, "next_url": null, "previous_url": null },
+                  "total_count": 2,
+                  "data_updated_at": "2017-11-29T19:37:03.571377Z",
+                  "data":
                     [
                       {
-                        'id': 234,
-                        'object': 'reset',
-                        'url': 'https://api.wanikani.com/v2/resets/80463006',
-                        'data_updated_at': '2017-12-20T00:24:47.048380Z',
-                        'data':
+                        "id": 234,
+                        "object": "reset",
+                        "url": "https://api.wanikani.com/v2/resets/80463006",
+                        "data_updated_at": "2017-12-20T00:24:47.048380Z",
+                        "data":
                           {
-                            'created_at': '2017-12-20T00:03:56.642838Z',
-                            'original_level': 42,
-                            'target_level': 8,
-                            'confirmed_at': '2017-12-19T23:31:18.077268Z',
+                            "created_at": "2017-12-20T00:03:56.642838Z",
+                            "original_level": 42,
+                            "target_level": 8,
+                            "confirmed_at": "2017-12-19T23:31:18.077268Z",
                           },
                       },
                     ],
                 }
-        '401':
-          $ref: '#/components/responses/Unauthorized'
-        '403':
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
           description: Forbidden
-        '404':
+        "404":
           description: Resource not found
-        '422':
-          $ref: '#/components/responses/UnprocessableEntity'
-        '429':
+        "422":
+          $ref: "#/components/responses/UnprocessableEntity"
+        "429":
           description: Too Many Requests
-        '500':
+        "500":
           description: Internal Server Error
-        '503':
+        "503":
           description: Service Unavailable
   /resets/{id}:
     get:
@@ -457,41 +457,41 @@ paths:
       description: Retrieves a specific reset by its id.
       tags: [Reset]
       parameters:
-        - $ref: '#/components/parameters/resourceId'
+        - $ref: "#/components/parameters/resourceId"
       responses:
-        '200':
+        "200":
           description: Requested Reset
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Reset'
+                $ref: "#/components/schemas/Reset"
               example:
                 {
-                  'id': 234,
-                  'object': 'reset',
-                  'url': 'https://api.wanikani.com/v2/resets/234',
-                  'data_updated_at': '2017-03-30T11:31:20.438432Z',
-                  'data':
+                  "id": 234,
+                  "object": "reset",
+                  "url": "https://api.wanikani.com/v2/resets/234",
+                  "data_updated_at": "2017-03-30T11:31:20.438432Z",
+                  "data":
                     {
-                      'created_at': '2017-12-20T00:03:56.642838Z',
-                      'original_level': 42,
-                      'target_level': 8,
-                      'confirmed_at': '2017-12-19T23:31:18.077268Z',
+                      "created_at": "2017-12-20T00:03:56.642838Z",
+                      "original_level": 42,
+                      "target_level": 8,
+                      "confirmed_at": "2017-12-19T23:31:18.077268Z",
                     },
                 }
-        '401':
-          $ref: '#/components/responses/Unauthorized'
-        '403':
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
           description: Forbidden
-        '404':
+        "404":
           description: Resource not found
-        '422':
-          $ref: '#/components/responses/UnprocessableEntity'
-        '429':
+        "422":
+          $ref: "#/components/responses/UnprocessableEntity"
+        "429":
           description: Too Many Requests
-        '500':
+        "500":
           description: Internal Server Error
-        '503':
+        "503":
           description: Service Unavailable
   /reviews:
     get:
@@ -528,174 +528,174 @@ paths:
             items:
               type: integer
       responses:
-        '200':
+        "200":
           description: All Reviews
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Reviews'
+                $ref: "#/components/schemas/Reviews"
               example:
                 {
-                  'object': 'collection',
-                  'url': 'https://api.wanikani.com/v2/reviews',
-                  'pages':
+                  "object": "collection",
+                  "url": "https://api.wanikani.com/v2/reviews",
+                  "pages":
                     {
-                      'per_page': 1000,
-                      'next_url': 'https://api.wanikani.com/v2/reviews?page_after_id=534345',
-                      'previous_url': null,
+                      "per_page": 1000,
+                      "next_url": "https://api.wanikani.com/v2/reviews?page_after_id=534345",
+                      "previous_url": null,
                     },
-                  'total_count': 19201,
-                  'data_updated_at': '2017-12-20T01:10:17.578705Z',
-                  'data':
+                  "total_count": 19201,
+                  "data_updated_at": "2017-12-20T01:10:17.578705Z",
+                  "data":
                     [
                       {
-                        'id': 534342,
-                        'object': 'review',
-                        'url': 'https://api.wanikani.com/v2/reviews/534342',
-                        'data_updated_at': '2017-12-20T01:00:59.255427Z',
-                        'data':
+                        "id": 534342,
+                        "object": "review",
+                        "url": "https://api.wanikani.com/v2/reviews/534342",
+                        "data_updated_at": "2017-12-20T01:00:59.255427Z",
+                        "data":
                           {
-                            'created_at': '2017-12-20T01:00:59.255427Z',
-                            'assignment_id': 32132,
-                            'spaced_repetition_system_id': 1,
-                            'subject_id': 8,
-                            'starting_srs_stage': 4,
-                            'ending_srs_stage': 2,
-                            'incorrect_meaning_answers': 1,
-                            'incorrect_reading_answers': 0,
+                            "created_at": "2017-12-20T01:00:59.255427Z",
+                            "assignment_id": 32132,
+                            "spaced_repetition_system_id": 1,
+                            "subject_id": 8,
+                            "starting_srs_stage": 4,
+                            "ending_srs_stage": 2,
+                            "incorrect_meaning_answers": 1,
+                            "incorrect_reading_answers": 0,
                           },
                       },
                     ],
                 }
-        '401':
-          $ref: '#/components/responses/Unauthorized'
-        '403':
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
           description: Forbidden
-        '404':
+        "404":
           description: Resource not found
-        '422':
-          $ref: '#/components/responses/UnprocessableEntity'
-        '429':
+        "422":
+          $ref: "#/components/responses/UnprocessableEntity"
+        "429":
           description: Too Many Requests
-        '500':
+        "500":
           description: Internal Server Error
-        '503':
+        "503":
           description: Service Unavailable
     post:
       operationId: createReview
       summary: Create a review
       description:
-        'Creates a review for a specific assignment_id. Using the related subject_id is also a valid alternative to using assignment_id.
+        "Creates a review for a specific assignment_id. Using the related subject_id is also a valid alternative to using assignment_id.
 
 
         Some criteria must be met in order for a review to be created: available_at must be not null and in the past.
 
 
-        When a review is registered, the associated assignment and review_statistic are both updated. These are returned in the response body under resources_updated.'
+        When a review is registered, the associated assignment and review_statistic are both updated. These are returned in the response body under resources_updated."
       tags: [Review]
       requestBody:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/CreateReviewRequest'
+              $ref: "#/components/schemas/CreateReviewRequest"
             example:
               {
-                'review':
+                "review":
                   {
-                    'assignment_id': 1422,
-                    'incorrect_meaning_answers': 1,
-                    'incorrect_reading_answers': 2,
-                    'created_at': '2017-09-30T01:42:13.453291Z',
+                    "assignment_id": 1422,
+                    "incorrect_meaning_answers": 1,
+                    "incorrect_reading_answers": 2,
+                    "created_at": "2017-09-30T01:42:13.453291Z",
                   },
               }
       responses:
-        '200':
+        "200":
           description: The registered review
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CreateReviewResponse'
+                $ref: "#/components/schemas/CreateReviewResponse"
               example:
                 {
-                  'id': 72,
-                  'object': 'review',
-                  'url': 'https://api.wanikani.com/v2/reviews/72',
-                  'data_updated_at': '2018-05-13T03:34:54.000000Z',
-                  'data':
+                  "id": 72,
+                  "object": "review",
+                  "url": "https://api.wanikani.com/v2/reviews/72",
+                  "data_updated_at": "2018-05-13T03:34:54.000000Z",
+                  "data":
                     {
-                      'created_at': '2018-05-13T03:34:54.000000Z',
-                      'assignment_id': 1422,
-                      'spaced_repetition_system_id': 1,
-                      'subject_id': 997,
-                      'starting_srs_stage': 1,
-                      'ending_srs_stage': 1,
-                      'incorrect_meaning_answers': 1,
-                      'incorrect_reading_answers': 2,
+                      "created_at": "2018-05-13T03:34:54.000000Z",
+                      "assignment_id": 1422,
+                      "spaced_repetition_system_id": 1,
+                      "subject_id": 997,
+                      "starting_srs_stage": 1,
+                      "ending_srs_stage": 1,
+                      "incorrect_meaning_answers": 1,
+                      "incorrect_reading_answers": 2,
                     },
-                  'resources_updated':
+                  "resources_updated":
                     {
-                      'assignment':
+                      "assignment":
                         {
-                          'id': 1422,
-                          'object': 'assignment',
-                          'url': 'https://api.wanikani.com/v2/assignments/1422',
-                          'data_updated_at': '2018-05-14T03:35:34.180006Z',
-                          'data':
+                          "id": 1422,
+                          "object": "assignment",
+                          "url": "https://api.wanikani.com/v2/assignments/1422",
+                          "data_updated_at": "2018-05-14T03:35:34.180006Z",
+                          "data":
                             {
-                              'created_at': '2018-01-24T21:32:38.967244Z',
-                              'subject_id': 997,
-                              'subject_type': 'vocabulary',
-                              'level': 2,
-                              'srs_stage': 1,
-                              'unlocked_at': '2018-01-24T21:32:39.888359Z',
-                              'started_at': '2018-01-24T21:52:47.926376Z',
-                              'passed_at': null,
-                              'burned_at': null,
-                              'available_at': '2018-05-14T07:00:00.000000Z',
-                              'resurrected_at': null,
-                              'passed': false,
-                              'resurrected': false,
-                              'hidden': false,
+                              "created_at": "2018-01-24T21:32:38.967244Z",
+                              "subject_id": 997,
+                              "subject_type": "vocabulary",
+                              "level": 2,
+                              "srs_stage": 1,
+                              "unlocked_at": "2018-01-24T21:32:39.888359Z",
+                              "started_at": "2018-01-24T21:52:47.926376Z",
+                              "passed_at": null,
+                              "burned_at": null,
+                              "available_at": "2018-05-14T07:00:00.000000Z",
+                              "resurrected_at": null,
+                              "passed": false,
+                              "resurrected": false,
+                              "hidden": false,
                             },
                         },
-                      'review_statistic':
+                      "review_statistic":
                         {
-                          'id': 342,
-                          'object': 'review_statistic',
-                          'url': 'https://api.wanikani.com/v2/review_statistics/342',
-                          'data_updated_at': '2018-05-14T03:35:34.223515Z',
-                          'data':
+                          "id": 342,
+                          "object": "review_statistic",
+                          "url": "https://api.wanikani.com/v2/review_statistics/342",
+                          "data_updated_at": "2018-05-14T03:35:34.223515Z",
+                          "data":
                             {
-                              'created_at': '2018-01-24T21:35:55.127513Z',
-                              'subject_id': 997,
-                              'subject_type': 'vocabulary',
-                              'meaning_correct': 1,
-                              'meaning_incorrect': 1,
-                              'meaning_max_streak': 1,
-                              'meaning_current_streak': 1,
-                              'reading_correct': 1,
-                              'reading_incorrect': 2,
-                              'reading_max_streak': 1,
-                              'reading_current_streak': 1,
-                              'percentage_correct': 67,
-                              'hidden': false,
+                              "created_at": "2018-01-24T21:35:55.127513Z",
+                              "subject_id": 997,
+                              "subject_type": "vocabulary",
+                              "meaning_correct": 1,
+                              "meaning_incorrect": 1,
+                              "meaning_max_streak": 1,
+                              "meaning_current_streak": 1,
+                              "reading_correct": 1,
+                              "reading_incorrect": 2,
+                              "reading_max_streak": 1,
+                              "reading_current_streak": 1,
+                              "percentage_correct": 67,
+                              "hidden": false,
                             },
                         },
                     },
                 }
-        '401':
-          $ref: '#/components/responses/Unauthorized'
-        '403':
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
           description: Forbidden
-        '404':
+        "404":
           description: Resource not found
-        '422':
-          $ref: '#/components/responses/UnprocessableEntity'
-        '429':
+        "422":
+          $ref: "#/components/responses/UnprocessableEntity"
+        "429":
           description: Too Many Requests
-        '500':
+        "500":
           description: Internal Server Error
-        '503':
+        "503":
           description: Service Unavailable
   /reviews/{id}:
     get:
@@ -704,44 +704,44 @@ paths:
       description: Retrieves a specific review by its id.
       tags: [Review]
       parameters:
-        - $ref: '#/components/parameters/resourceId'
+        - $ref: "#/components/parameters/resourceId"
       responses:
-        '200':
+        "200":
           description: Requested Review
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Review'
+                $ref: "#/components/schemas/Review"
               example:
                 {
-                  'id': 534342,
-                  'object': 'review',
-                  'url': 'https://api.wanikani.com/v2/reviews/80463006',
-                  'data_updated_at': '2017-12-20T01:00:59.255427Z',
-                  'data':
+                  "id": 534342,
+                  "object": "review",
+                  "url": "https://api.wanikani.com/v2/reviews/80463006",
+                  "data_updated_at": "2017-12-20T01:00:59.255427Z",
+                  "data":
                     {
-                      'created_at': '2017-12-20T01:00:59.255427Z',
-                      'assignment_id': 32132,
-                      'spaced_repetition_system_id': 1,
-                      'subject_id': 8,
-                      'starting_srs_stage': 4,
-                      'incorrect_meaning_answers': 1,
-                      'incorrect_reading_answers': 0,
+                      "created_at": "2017-12-20T01:00:59.255427Z",
+                      "assignment_id": 32132,
+                      "spaced_repetition_system_id": 1,
+                      "subject_id": 8,
+                      "starting_srs_stage": 4,
+                      "incorrect_meaning_answers": 1,
+                      "incorrect_reading_answers": 0,
                     },
                 }
-        '401':
-          $ref: '#/components/responses/Unauthorized'
-        '403':
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
           description: Forbidden
-        '404':
+        "404":
           description: Resource not found
-        '422':
-          $ref: '#/components/responses/UnprocessableEntity'
-        '429':
+        "422":
+          $ref: "#/components/responses/UnprocessableEntity"
+        "429":
           description: Too Many Requests
-        '500':
+        "500":
           description: Internal Server Error
-        '503':
+        "503":
           description: Service Unavailable
   /review_statistics:
     get:
@@ -777,11 +777,11 @@ paths:
               type: integer
         - in: query
           name: subject_types
-          description: 'Only review statistics where data.subject_type matches one of the array values are returned. Valid values are: radical, kanji, or vocabulary.'
+          description: "Only review statistics where data.subject_type matches one of the array values are returned. Valid values are: radical, kanji, or vocabulary."
           schema:
             type: array
             items:
-              $ref: '#/components/schemas/SubjectType'
+              $ref: "#/components/schemas/SubjectType"
         - in: query
           name: percentages_greater_than
           description: Return review statistics where the percentage_correct is greater than the value.
@@ -793,63 +793,63 @@ paths:
           schema:
             type: integer
       responses:
-        '200':
+        "200":
           description: All Review Statistics
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ReviewStatistics'
+                $ref: "#/components/schemas/ReviewStatistics"
               example:
                 {
-                  'object': 'collection',
-                  'url': 'https://api.wanikani.com/v2/review_statistics',
-                  'pages':
+                  "object": "collection",
+                  "url": "https://api.wanikani.com/v2/review_statistics",
+                  "pages":
                     {
-                      'per_page': 500,
-                      'next_url': 'https://api.wanikani.com/v2/review_statistics?page_after_id=80461982',
-                      'previous_url': null,
+                      "per_page": 500,
+                      "next_url": "https://api.wanikani.com/v2/review_statistics?page_after_id=80461982",
+                      "previous_url": null,
                     },
-                  'total_count': 980,
-                  'data_updated_at': '2018-04-06T14:43:14.337681Z',
-                  'data':
+                  "total_count": 980,
+                  "data_updated_at": "2018-04-06T14:43:14.337681Z",
+                  "data":
                     [
                       {
-                        'id': 80461982,
-                        'object': 'review_statistic',
-                        'url': 'https://api.wanikani.com/v2/review_statistics/80461982',
-                        'data_updated_at': '2018-04-03T11:50:31.558505Z',
-                        'data':
+                        "id": 80461982,
+                        "object": "review_statistic",
+                        "url": "https://api.wanikani.com/v2/review_statistics/80461982",
+                        "data_updated_at": "2018-04-03T11:50:31.558505Z",
+                        "data":
                           {
-                            'created_at': '2017-09-05T23:38:10.964821Z',
-                            'subject_id': 8761,
-                            'subject_type': 'radical',
-                            'meaning_correct': 8,
-                            'meaning_incorrect': 0,
-                            'meaning_max_streak': 8,
-                            'meaning_current_streak': 8,
-                            'reading_correct': 0,
-                            'reading_incorrect': 0,
-                            'reading_max_streak': 0,
-                            'reading_current_streak': 0,
-                            'percentage_correct': 100,
-                            'hidden': false,
+                            "created_at": "2017-09-05T23:38:10.964821Z",
+                            "subject_id": 8761,
+                            "subject_type": "radical",
+                            "meaning_correct": 8,
+                            "meaning_incorrect": 0,
+                            "meaning_max_streak": 8,
+                            "meaning_current_streak": 8,
+                            "reading_correct": 0,
+                            "reading_incorrect": 0,
+                            "reading_max_streak": 0,
+                            "reading_current_streak": 0,
+                            "percentage_correct": 100,
+                            "hidden": false,
                           },
                       },
                     ],
                 }
-        '401':
-          $ref: '#/components/responses/Unauthorized'
-        '403':
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
           description: Forbidden
-        '404':
+        "404":
           description: Resource not found
-        '422':
-          $ref: '#/components/responses/UnprocessableEntity'
-        '429':
+        "422":
+          $ref: "#/components/responses/UnprocessableEntity"
+        "429":
           description: Too Many Requests
-        '500':
+        "500":
           description: Internal Server Error
-        '503':
+        "503":
           description: Service Unavailable
   /review_statistics/{id}:
     get:
@@ -858,50 +858,50 @@ paths:
       description: Retrieves a specific review statistic by its id.
       tags: [Review Statistics]
       parameters:
-        - $ref: '#/components/parameters/resourceId'
+        - $ref: "#/components/parameters/resourceId"
       responses:
-        '200':
+        "200":
           description: Requested Review Statistic
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ReviewStatistic'
+                $ref: "#/components/schemas/ReviewStatistic"
               example:
                 {
-                  'id': 80461982,
-                  'object': 'review_statistic',
-                  'url': 'https://api.wanikani.com/v2/review_statistics/80461982',
-                  'data_updated_at': '2018-04-03T11:50:31.558505Z',
-                  'data':
+                  "id": 80461982,
+                  "object": "review_statistic",
+                  "url": "https://api.wanikani.com/v2/review_statistics/80461982",
+                  "data_updated_at": "2018-04-03T11:50:31.558505Z",
+                  "data":
                     {
-                      'created_at': '2017-09-05T23:38:10.964821Z',
-                      'subject_id': 8761,
-                      'subject_type': 'radical',
-                      'meaning_correct': 8,
-                      'meaning_incorrect': 0,
-                      'meaning_max_streak': 8,
-                      'meaning_current_streak': 8,
-                      'reading_correct': 0,
-                      'reading_incorrect': 0,
-                      'reading_max_streak': 0,
-                      'reading_current_streak': 0,
-                      'percentage_correct': 100,
-                      'hidden': false,
+                      "created_at": "2017-09-05T23:38:10.964821Z",
+                      "subject_id": 8761,
+                      "subject_type": "radical",
+                      "meaning_correct": 8,
+                      "meaning_incorrect": 0,
+                      "meaning_max_streak": 8,
+                      "meaning_current_streak": 8,
+                      "reading_correct": 0,
+                      "reading_incorrect": 0,
+                      "reading_max_streak": 0,
+                      "reading_current_streak": 0,
+                      "percentage_correct": 100,
+                      "hidden": false,
                     },
                 }
-        '401':
-          $ref: '#/components/responses/Unauthorized'
-        '403':
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
           description: Forbidden
-        '404':
+        "404":
           description: Resource not found
-        '422':
-          $ref: '#/components/responses/UnprocessableEntity'
-        '429':
+        "422":
+          $ref: "#/components/responses/UnprocessableEntity"
+        "429":
           description: Too Many Requests
-        '500':
+        "500":
           description: Internal Server Error
-        '503':
+        "503":
           description: Service Unavailable
   /spaced_repetition_systems:
     get:
@@ -937,100 +937,100 @@ paths:
               type: integer
         - in: query
           name: subject_types
-          description: 'Only study material records where data.subject_type matches one of the array values are returned. Valid values are: radical, kanji, or vocabulary.'
+          description: "Only study material records where data.subject_type matches one of the array values are returned. Valid values are: radical, kanji, or vocabulary."
           schema:
             type: array
             items:
-              $ref: '#/components/schemas/SubjectType'
+              $ref: "#/components/schemas/SubjectType"
       responses:
-        '200':
+        "200":
           description: All Spaced Repetition Systems
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/SpacedRepetitionSystems'
+                $ref: "#/components/schemas/SpacedRepetitionSystems"
               example:
                 {
-                  'object': 'collection',
-                  'url': 'https://api.wanikani.com/v2/spaced_repetition_systems',
-                  'pages': { 'per_page': 500, 'next_url': null, 'previous_url': null },
-                  'total_count': 2,
-                  'data_updated_at': '2020-06-09T03:38:01.007395Z',
-                  'data':
+                  "object": "collection",
+                  "url": "https://api.wanikani.com/v2/spaced_repetition_systems",
+                  "pages": { "per_page": 500, "next_url": null, "previous_url": null },
+                  "total_count": 2,
+                  "data_updated_at": "2020-06-09T03:38:01.007395Z",
+                  "data":
                     [
                       {
-                        'id': 1,
-                        'object': 'spaced_repetition_system',
-                        'url': 'https://api.wanikani.com/v2/spaced_repetition_systems/1',
-                        'data_updated_at': '2020-06-09T03:36:51.134752Z',
-                        'data':
+                        "id": 1,
+                        "object": "spaced_repetition_system",
+                        "url": "https://api.wanikani.com/v2/spaced_repetition_systems/1",
+                        "data_updated_at": "2020-06-09T03:36:51.134752Z",
+                        "data":
                           {
-                            'created_at': '2020-05-21T20:46:06.464460Z',
-                            'name': 'Default system for dictionary subjects',
-                            'description': 'The original spaced repetition system',
-                            'unlocking_stage_position': 0,
-                            'starting_stage_position': 1,
-                            'passing_stage_position': 5,
-                            'burning_stage_position': 9,
-                            'stages':
+                            "created_at": "2020-05-21T20:46:06.464460Z",
+                            "name": "Default system for dictionary subjects",
+                            "description": "The original spaced repetition system",
+                            "unlocking_stage_position": 0,
+                            "starting_stage_position": 1,
+                            "passing_stage_position": 5,
+                            "burning_stage_position": 9,
+                            "stages":
                               [
-                                { 'interval': null, 'position': 0, 'interval_unit': null },
-                                { 'interval': 14400, 'position': 1, 'interval_unit': 'seconds' },
-                                { 'interval': 28800, 'position': 2, 'interval_unit': 'seconds' },
-                                { 'interval': 82800, 'position': 3, 'interval_unit': 'seconds' },
-                                { 'interval': 169200, 'position': 4, 'interval_unit': 'seconds' },
-                                { 'interval': 601200, 'position': 5, 'interval_unit': 'seconds' },
-                                { 'interval': 1206000, 'position': 6, 'interval_unit': 'seconds' },
-                                { 'interval': 2588400, 'position': 7, 'interval_unit': 'seconds' },
-                                { 'interval': 10364400, 'position': 8, 'interval_unit': 'seconds' },
-                                { 'interval': null, 'position': 9, 'interval_unit': null },
+                                { "interval": null, "position": 0, "interval_unit": null },
+                                { "interval": 14400, "position": 1, "interval_unit": "seconds" },
+                                { "interval": 28800, "position": 2, "interval_unit": "seconds" },
+                                { "interval": 82800, "position": 3, "interval_unit": "seconds" },
+                                { "interval": 169200, "position": 4, "interval_unit": "seconds" },
+                                { "interval": 601200, "position": 5, "interval_unit": "seconds" },
+                                { "interval": 1206000, "position": 6, "interval_unit": "seconds" },
+                                { "interval": 2588400, "position": 7, "interval_unit": "seconds" },
+                                { "interval": 10364400, "position": 8, "interval_unit": "seconds" },
+                                { "interval": null, "position": 9, "interval_unit": null },
                               ],
                           },
                       },
                       {
-                        'id': 2,
-                        'object': 'spaced_repetition_system',
-                        'url': 'https://api.wanikani.com/v2/spaced_repetition_systems/2',
-                        'data_updated_at': '2020-06-09T03:38:01.007395Z',
-                        'data':
+                        "id": 2,
+                        "object": "spaced_repetition_system",
+                        "url": "https://api.wanikani.com/v2/spaced_repetition_systems/2",
+                        "data_updated_at": "2020-06-09T03:38:01.007395Z",
+                        "data":
                           {
-                            'created_at': '2020-05-21T20:48:06.470578Z',
-                            'name': 'Default accelerated system for dictionary subjects',
-                            'description': 'The original spaced repetition system, but accelerated',
-                            'unlocking_stage_position': 0,
-                            'starting_stage_position': 1,
-                            'passing_stage_position': 5,
-                            'burning_stage_position': 9,
-                            'stages':
+                            "created_at": "2020-05-21T20:48:06.470578Z",
+                            "name": "Default accelerated system for dictionary subjects",
+                            "description": "The original spaced repetition system, but accelerated",
+                            "unlocking_stage_position": 0,
+                            "starting_stage_position": 1,
+                            "passing_stage_position": 5,
+                            "burning_stage_position": 9,
+                            "stages":
                               [
-                                { 'interval': null, 'position': 0, 'interval_unit': null },
-                                { 'interval': 7200, 'position': 1, 'interval_unit': 'seconds' },
-                                { 'interval': 14400, 'position': 2, 'interval_unit': 'seconds' },
-                                { 'interval': 28800, 'position': 3, 'interval_unit': 'seconds' },
-                                { 'interval': 82800, 'position': 4, 'interval_unit': 'seconds' },
-                                { 'interval': 601200, 'position': 5, 'interval_unit': 'seconds' },
-                                { 'interval': 1206000, 'position': 6, 'interval_unit': 'seconds' },
-                                { 'interval': 2588400, 'position': 7, 'interval_unit': 'seconds' },
-                                { 'interval': 10364400, 'position': 8, 'interval_unit': 'seconds' },
-                                { 'interval': null, 'position': 9, 'interval_unit': null },
+                                { "interval": null, "position": 0, "interval_unit": null },
+                                { "interval": 7200, "position": 1, "interval_unit": "seconds" },
+                                { "interval": 14400, "position": 2, "interval_unit": "seconds" },
+                                { "interval": 28800, "position": 3, "interval_unit": "seconds" },
+                                { "interval": 82800, "position": 4, "interval_unit": "seconds" },
+                                { "interval": 601200, "position": 5, "interval_unit": "seconds" },
+                                { "interval": 1206000, "position": 6, "interval_unit": "seconds" },
+                                { "interval": 2588400, "position": 7, "interval_unit": "seconds" },
+                                { "interval": 10364400, "position": 8, "interval_unit": "seconds" },
+                                { "interval": null, "position": 9, "interval_unit": null },
                               ],
                           },
                       },
                     ],
                 }
-        '401':
-          $ref: '#/components/responses/Unauthorized'
-        '403':
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
           description: Forbidden
-        '404':
+        "404":
           description: Resource not found
-        '422':
-          $ref: '#/components/responses/UnprocessableEntity'
-        '429':
+        "422":
+          $ref: "#/components/responses/UnprocessableEntity"
+        "429":
           description: Too Many Requests
-        '500':
+        "500":
           description: Internal Server Error
-        '503':
+        "503":
           description: Service Unavailable
   /spaced_repetition_systems/{id}:
     get:
@@ -1039,57 +1039,57 @@ paths:
       description: Retrieves a specific spaced repetition system by its id.
       tags: [Spaced Repetition System]
       parameters:
-        - $ref: '#/components/parameters/resourceId'
+        - $ref: "#/components/parameters/resourceId"
       responses:
-        '200':
+        "200":
           description: Requested Spaced Repetition System
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/SpacedRepetitionSystem'
+                $ref: "#/components/schemas/SpacedRepetitionSystem"
               example:
                 {
-                  'id': 1,
-                  'object': 'spaced_repetition_system',
-                  'url': 'https://api.wanikani.com/v2/spaced_repetition_systems/1',
-                  'data_updated_at': '2020-05-27T16:42:06.705681Z',
-                  'data':
+                  "id": 1,
+                  "object": "spaced_repetition_system",
+                  "url": "https://api.wanikani.com/v2/spaced_repetition_systems/1",
+                  "data_updated_at": "2020-05-27T16:42:06.705681Z",
+                  "data":
                     {
-                      'created_at': '2020-05-21T20:46:06.464460Z',
-                      'name': 'Default system for dictionary subjects',
-                      'description': 'The original spaced repetition system',
-                      'unlocking_stage_position': 0,
-                      'starting_stage_position': 1,
-                      'passing_stage_position': 5,
-                      'burning_stage_position': 9,
-                      'stages':
+                      "created_at": "2020-05-21T20:46:06.464460Z",
+                      "name": "Default system for dictionary subjects",
+                      "description": "The original spaced repetition system",
+                      "unlocking_stage_position": 0,
+                      "starting_stage_position": 1,
+                      "passing_stage_position": 5,
+                      "burning_stage_position": 9,
+                      "stages":
                         [
-                          { 'interval': null, 'position': 0, 'interval_unit': null },
-                          { 'interval': 14400, 'position': 1, 'interval_unit': 'seconds' },
-                          { 'interval': 28800, 'position': 2, 'interval_unit': 'seconds' },
-                          { 'interval': 82800, 'position': 3, 'interval_unit': 'seconds' },
-                          { 'interval': 169200, 'position': 4, 'interval_unit': 'seconds' },
-                          { 'interval': 601200, 'position': 5, 'interval_unit': 'seconds' },
-                          { 'interval': 1206000, 'position': 6, 'interval_unit': 'seconds' },
-                          { 'interval': 2588400, 'position': 7, 'interval_unit': 'seconds' },
-                          { 'interval': 10364400, 'position': 8, 'interval_unit': 'seconds' },
-                          { 'interval': null, 'position': 9, 'interval_unit': null },
+                          { "interval": null, "position": 0, "interval_unit": null },
+                          { "interval": 14400, "position": 1, "interval_unit": "seconds" },
+                          { "interval": 28800, "position": 2, "interval_unit": "seconds" },
+                          { "interval": 82800, "position": 3, "interval_unit": "seconds" },
+                          { "interval": 169200, "position": 4, "interval_unit": "seconds" },
+                          { "interval": 601200, "position": 5, "interval_unit": "seconds" },
+                          { "interval": 1206000, "position": 6, "interval_unit": "seconds" },
+                          { "interval": 2588400, "position": 7, "interval_unit": "seconds" },
+                          { "interval": 10364400, "position": 8, "interval_unit": "seconds" },
+                          { "interval": null, "position": 9, "interval_unit": null },
                         ],
                     },
                 }
-        '401':
-          $ref: '#/components/responses/Unauthorized'
-        '403':
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
           description: Forbidden
-        '404':
+        "404":
           description: Resource not found
-        '422':
-          $ref: '#/components/responses/UnprocessableEntity'
-        '429':
+        "422":
+          $ref: "#/components/responses/UnprocessableEntity"
+        "429":
           description: Too Many Requests
-        '500':
+        "500":
           description: Internal Server Error
-        '503':
+        "503":
           description: Service Unavailable
   /study_materials:
     get:
@@ -1112,56 +1112,56 @@ paths:
             type: string
             format: date-time
       responses:
-        '200':
+        "200":
           description: All Study Materials
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/StudyMaterials'
+                $ref: "#/components/schemas/StudyMaterials"
               example:
                 {
-                  'object': 'collection',
-                  'url': 'https://api.wanikani.com/v2/study_materials',
-                  'pages':
+                  "object": "collection",
+                  "url": "https://api.wanikani.com/v2/study_materials",
+                  "pages":
                     {
-                      'per_page': 500,
-                      'next_url': 'https://api.wanikani.com/v2/study_materials?page_after_id=52342',
-                      'previous_url': null,
+                      "per_page": 500,
+                      "next_url": "https://api.wanikani.com/v2/study_materials?page_after_id=52342",
+                      "previous_url": null,
                     },
-                  'total_count': 88,
-                  'data_updated_at': '2017-12-21T22:42:11.468155Z',
-                  'data':
+                  "total_count": 88,
+                  "data_updated_at": "2017-12-21T22:42:11.468155Z",
+                  "data":
                     [
                       {
-                        'id': 65231,
-                        'object': 'study_material',
-                        'url': 'https://api.wanikani.com/v2/study_materials/65231',
-                        'data_updated_at': '2017-09-30T01:42:13.453291Z',
-                        'data':
+                        "id": 65231,
+                        "object": "study_material",
+                        "url": "https://api.wanikani.com/v2/study_materials/65231",
+                        "data_updated_at": "2017-09-30T01:42:13.453291Z",
+                        "data":
                           {
-                            'created_at': '2017-09-30T01:42:13.453291Z',
-                            'subject_id': 241,
-                            'subject_type': 'radical',
-                            'meaning_note': 'I like turtles',
-                            'reading_note': 'I like durtles',
-                            'meaning_synonyms': ['burn', 'sizzle'],
+                            "created_at": "2017-09-30T01:42:13.453291Z",
+                            "subject_id": 241,
+                            "subject_type": "radical",
+                            "meaning_note": "I like turtles",
+                            "reading_note": "I like durtles",
+                            "meaning_synonyms": ["burn", "sizzle"],
                           },
                       },
                     ],
                 }
-        '401':
-          $ref: '#/components/responses/Unauthorized'
-        '403':
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
           description: Forbidden
-        '404':
+        "404":
           description: Resource not found
-        '422':
-          $ref: '#/components/responses/UnprocessableEntity'
-        '429':
+        "422":
+          $ref: "#/components/responses/UnprocessableEntity"
+        "429":
           description: Too Many Requests
-        '500':
+        "500":
           description: Internal Server Error
-        '503':
+        "503":
           description: Service Unavailable
   /study_materials/{id}:
     get:
@@ -1170,43 +1170,43 @@ paths:
       description: Retrieves a specific study material by its id.
       tags: [Study Material]
       parameters:
-        - $ref: '#/components/parameters/resourceId'
+        - $ref: "#/components/parameters/resourceId"
       responses:
-        '200':
+        "200":
           description: Requested Study Material
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/StudyMaterial'
+                $ref: "#/components/schemas/StudyMaterial"
               example:
                 {
-                  'id': 65231,
-                  'object': 'study_material',
-                  'url': 'https://api.wanikani.com/v2/study_materials/65231',
-                  'data_updated_at': '2017-09-30T01:42:13.453291Z',
-                  'data':
+                  "id": 65231,
+                  "object": "study_material",
+                  "url": "https://api.wanikani.com/v2/study_materials/65231",
+                  "data_updated_at": "2017-09-30T01:42:13.453291Z",
+                  "data":
                     {
-                      'created_at': '2017-09-30T01:42:13.453291Z',
-                      'subject_id': 241,
-                      'subject_type': 'radical',
-                      'meaning_note': 'I like turtles',
-                      'reading_note': 'I like durtles',
-                      'meaning_synonyms': ['burn', 'sizzle'],
+                      "created_at": "2017-09-30T01:42:13.453291Z",
+                      "subject_id": 241,
+                      "subject_type": "radical",
+                      "meaning_note": "I like turtles",
+                      "reading_note": "I like durtles",
+                      "meaning_synonyms": ["burn", "sizzle"],
                     },
                 }
-        '401':
-          $ref: '#/components/responses/Unauthorized'
-        '403':
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
           description: Forbidden
-        '404':
+        "404":
           description: Resource not found
-        '422':
-          $ref: '#/components/responses/UnprocessableEntity'
-        '429':
+        "422":
+          $ref: "#/components/responses/UnprocessableEntity"
+        "429":
           description: Too Many Requests
-        '500':
+        "500":
           description: Internal Server Error
-        '503':
+        "503":
           description: Service Unavailable
   /subjects:
     get:
@@ -1228,7 +1228,7 @@ paths:
           schema:
             type: array
             items:
-              $ref: '#/components/schemas/SubjectType'
+              $ref: "#/components/schemas/SubjectType"
         - in: query
           name: slugs
           description: Return subjects of the specified slug.
@@ -1255,88 +1255,88 @@ paths:
             type: string
             format: date-time
       responses:
-        '200':
+        "200":
           description: All Subjects
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Subjects'
+                $ref: "#/components/schemas/Subjects"
               example:
                 {
-                  'object': 'collection',
-                  'url': 'https://api.wanikani.com/v2/subjects?types=kanji',
-                  'pages':
+                  "object": "collection",
+                  "url": "https://api.wanikani.com/v2/subjects?types=kanji",
+                  "pages":
                     {
-                      'per_page': 1000,
-                      'next_url': "https://api.wanikani.com/v2/subjects?page_after_id=1439\u0026types=kanji",
-                      'previous_url': null,
+                      "per_page": 1000,
+                      "next_url": "https://api.wanikani.com/v2/subjects?page_after_id=1439\u0026types=kanji",
+                      "previous_url": null,
                     },
-                  'total_count': 2027,
-                  'data_updated_at': '2018-04-09T18:08:59.946969Z',
-                  'data':
+                  "total_count": 2027,
+                  "data_updated_at": "2018-04-09T18:08:59.946969Z",
+                  "data":
                     [
                       {
-                        'id': 440,
-                        'object': 'kanji',
-                        'url': 'https://api.wanikani.com/v2/subjects/440',
-                        'data_updated_at': '2018-03-29T23:14:30.805034Z',
-                        'data':
+                        "id": 440,
+                        "object": "kanji",
+                        "url": "https://api.wanikani.com/v2/subjects/440",
+                        "data_updated_at": "2018-03-29T23:14:30.805034Z",
+                        "data":
                           {
-                            'created_at': '2012-02-27T19:55:19.000000Z',
-                            'level': 1,
-                            'slug': '一',
-                            'hidden_at': null,
-                            'document_url': 'https://www.wanikani.com/kanji/%E4%B8%80',
-                            'characters': '一',
-                            'meanings':
-                              [{ 'meaning': 'One', 'primary': true, 'accepted_answer': true }],
-                            'readings':
+                            "created_at": "2012-02-27T19:55:19.000000Z",
+                            "level": 1,
+                            "slug": "一",
+                            "hidden_at": null,
+                            "document_url": "https://www.wanikani.com/kanji/%E4%B8%80",
+                            "characters": "一",
+                            "meanings":
+                              [{ "meaning": "One", "primary": true, "accepted_answer": true }],
+                            "readings":
                               [
                                 {
-                                  'type': 'onyomi',
-                                  'primary': true,
-                                  'accepted_answer': true,
-                                  'reading': 'いち',
+                                  "type": "onyomi",
+                                  "primary": true,
+                                  "accepted_answer": true,
+                                  "reading": "いち",
                                 },
                                 {
-                                  'type': 'kunyomi',
-                                  'primary': false,
-                                  'accepted_answer': false,
-                                  'reading': 'ひと',
+                                  "type": "kunyomi",
+                                  "primary": false,
+                                  "accepted_answer": false,
+                                  "reading": "ひと",
                                 },
                                 {
-                                  'type': 'nanori',
-                                  'primary': false,
-                                  'accepted_answer': false,
-                                  'reading': 'かず',
+                                  "type": "nanori",
+                                  "primary": false,
+                                  "accepted_answer": false,
+                                  "reading": "かず",
                                 },
                               ],
-                            'component_subject_ids': [1],
-                            'amalgamation_subject_ids': [56, 88, 91],
-                            'visually_similar_subject_ids': [],
-                            'meaning_mnemonic': "Lying on the <radical>ground</radical> is something that looks just like the ground, the number <kanji>One</kanji>. Why is this One lying down? It's been shot by the number two. It's lying there, bleeding out and dying. The number One doesn't have long to live.",
-                            'meaning_hint': 'To remember the meaning of <kanji>One</kanji>, imagine yourself there at the scene of the crime. You grab <kanji>One</kanji> in your arms, trying to prop it up, trying to hear its last words. Instead, it just splatters some blood on your face. "Who did this to you?" you ask. The number One points weakly, and you see number Two running off into an alleyway. He''s always been jealous of number One and knows he can be number one now that he''s taken the real number one out.',
-                            'reading_mnemonic': "As you're sitting there next to <kanji>One</kanji>, holding him up, you start feeling a weird sensation all over your skin. From the wound comes a fine powder (obviously coming from the special bullet used to kill One) that causes the person it touches to get extremely <reading>itchy</reading> (いち)",
-                            'reading_hint': "Make sure you feel the ridiculously <reading>itchy</reading> sensation covering your body. It climbs from your hands, where you're holding the number <kanji>One</kanji> up, and then goes through your arms, crawls up your neck, goes down your body, and then covers everything. It becomes uncontrollable, and you're scratching everywhere, writhing on the ground. It's so itchy that it's the most painful thing you've ever experienced (you should imagine this vividly, so you remember the reading of this kanji).",
-                            'lesson_position': 2,
-                            'spaced_repetition_system_id': 1,
+                            "component_subject_ids": [1],
+                            "amalgamation_subject_ids": [56, 88, 91],
+                            "visually_similar_subject_ids": [],
+                            "meaning_mnemonic": "Lying on the <radical>ground</radical> is something that looks just like the ground, the number <kanji>One</kanji>. Why is this One lying down? It's been shot by the number two. It's lying there, bleeding out and dying. The number One doesn't have long to live.",
+                            "meaning_hint": 'To remember the meaning of <kanji>One</kanji>, imagine yourself there at the scene of the crime. You grab <kanji>One</kanji> in your arms, trying to prop it up, trying to hear its last words. Instead, it just splatters some blood on your face. "Who did this to you?" you ask. The number One points weakly, and you see number Two running off into an alleyway. He''s always been jealous of number One and knows he can be number one now that he''s taken the real number one out.',
+                            "reading_mnemonic": "As you're sitting there next to <kanji>One</kanji>, holding him up, you start feeling a weird sensation all over your skin. From the wound comes a fine powder (obviously coming from the special bullet used to kill One) that causes the person it touches to get extremely <reading>itchy</reading> (いち)",
+                            "reading_hint": "Make sure you feel the ridiculously <reading>itchy</reading> sensation covering your body. It climbs from your hands, where you're holding the number <kanji>One</kanji> up, and then goes through your arms, crawls up your neck, goes down your body, and then covers everything. It becomes uncontrollable, and you're scratching everywhere, writhing on the ground. It's so itchy that it's the most painful thing you've ever experienced (you should imagine this vividly, so you remember the reading of this kanji).",
+                            "lesson_position": 2,
+                            "spaced_repetition_system_id": 1,
                           },
                       },
                     ],
                 }
-        '401':
-          $ref: '#/components/responses/Unauthorized'
-        '403':
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
           description: Forbidden
-        '404':
+        "404":
           description: Resource not found
-        '422':
-          $ref: '#/components/responses/UnprocessableEntity'
-        '429':
+        "422":
+          $ref: "#/components/responses/UnprocessableEntity"
+        "429":
           description: Too Many Requests
-        '500':
+        "500":
           description: Internal Server Error
-        '503':
+        "503":
           description: Service Unavailable
   /subjects/{id}:
     get:
@@ -1345,183 +1345,183 @@ paths:
       description: Retrieves a specific subject by its id. The structure of the response depends on the subject type. See the section on subject data structure for details.
       tags: [Subject]
       parameters:
-        - $ref: '#/components/parameters/resourceId'
+        - $ref: "#/components/parameters/resourceId"
       responses:
-        '200':
+        "200":
           description: Requested Subject
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Subject'
+                $ref: "#/components/schemas/Subject"
               examples:
                 Radical:
                   value:
                     {
-                      'id': 1,
-                      'object': 'radical',
-                      'url': 'https://api.wanikani.com/v2/subjects/1',
-                      'data_updated_at': '2018-03-29T23:13:14.064836Z',
-                      'data':
+                      "id": 1,
+                      "object": "radical",
+                      "url": "https://api.wanikani.com/v2/subjects/1",
+                      "data_updated_at": "2018-03-29T23:13:14.064836Z",
+                      "data":
                         {
-                          'amalgamation_subject_ids': [5, 4, 98],
-                          'auxiliary_meanings': [{ 'meaning': 'ground', 'type': 'blacklist' }],
-                          'characters': '一',
-                          'character_images':
+                          "amalgamation_subject_ids": [5, 4, 98],
+                          "auxiliary_meanings": [{ "meaning": "ground", "type": "blacklist" }],
+                          "characters": "一",
+                          "character_images":
                             [
                               {
-                                'url': 'https://cdn.wanikani.com/images/legacy/576-subject-1-without-css-original.svg?1520987227',
-                                'metadata': { 'inline_styles': false },
-                                'content_type': 'image/svg+xml',
+                                "url": "https://cdn.wanikani.com/images/legacy/576-subject-1-without-css-original.svg?1520987227",
+                                "metadata": { "inline_styles": false },
+                                "content_type": "image/svg+xml",
                               },
                             ],
-                          'created_at': '2012-02-27T18:08:16.000000Z',
-                          'document_url': 'https://www.wanikani.com/radicals/ground',
-                          'hidden_at': null,
-                          'lesson_position': 1,
-                          'level': 1,
-                          'meanings':
-                            [{ 'meaning': 'Ground', 'primary': true, 'accepted_answer': true }],
-                          'meaning_mnemonic': "This radical consists of a single, horizontal stroke. What's the biggest, single, horizontal stroke? That's the ground. Look at the <radical>ground</radical>, look at this radical, now look at the ground again. Kind of the same, right?",
-                          'slug': 'ground',
-                          'spaced_repetition_system_id': 2,
+                          "created_at": "2012-02-27T18:08:16.000000Z",
+                          "document_url": "https://www.wanikani.com/radicals/ground",
+                          "hidden_at": null,
+                          "lesson_position": 1,
+                          "level": 1,
+                          "meanings":
+                            [{ "meaning": "Ground", "primary": true, "accepted_answer": true }],
+                          "meaning_mnemonic": "This radical consists of a single, horizontal stroke. What's the biggest, single, horizontal stroke? That's the ground. Look at the <radical>ground</radical>, look at this radical, now look at the ground again. Kind of the same, right?",
+                          "slug": "ground",
+                          "spaced_repetition_system_id": 2,
                         },
                     }
                 Kanji:
                   value:
                     {
-                      'id': 440,
-                      'object': 'kanji',
-                      'url': 'https://api.wanikani.com/v2/subjects/440',
-                      'data_updated_at': '2018-03-29T23:14:30.805034Z',
-                      'data':
+                      "id": 440,
+                      "object": "kanji",
+                      "url": "https://api.wanikani.com/v2/subjects/440",
+                      "data_updated_at": "2018-03-29T23:14:30.805034Z",
+                      "data":
                         {
-                          'amalgamation_subject_ids': [56, 88, 91],
-                          'auxiliary_meanings':
+                          "amalgamation_subject_ids": [56, 88, 91],
+                          "auxiliary_meanings":
                             [
-                              { 'meaning': 'one', 'type': 'blacklist' },
-                              { 'meaning': 'flat', 'type': 'whitelist' },
+                              { "meaning": "one", "type": "blacklist" },
+                              { "meaning": "flat", "type": "whitelist" },
                             ],
-                          'characters': '一',
-                          'component_subject_ids': [1],
-                          'created_at': '2012-02-27T19:55:19.000000Z',
-                          'document_url': 'https://www.wanikani.com/kanji/%E4%B8%80',
-                          'hidden_at': null,
-                          'lesson_position': 2,
-                          'level': 1,
-                          'meanings':
-                            [{ 'meaning': 'One', 'primary': true, 'accepted_answer': true }],
-                          'meaning_hint': 'To remember the meaning of <kanji>One</kanji>, imagine yourself there at the scene of the crime. You grab <kanji>One</kanji> in your arms, trying to prop it up, trying to hear its last words. Instead, it just splatters some blood on your face. "Who did this to you?" you ask. The number One points weakly, and you see number Two running off into an alleyway. He''s always been jealous of number One and knows he can be number one now that he''s taken the real number one out.',
-                          'meaning_mnemonic': "Lying on the <radical>ground</radical> is something that looks just like the ground, the number <kanji>One</kanji>. Why is this One lying down? It's been shot by the number two. It's lying there, bleeding out and dying. The number One doesn't have long to live.",
-                          'readings':
+                          "characters": "一",
+                          "component_subject_ids": [1],
+                          "created_at": "2012-02-27T19:55:19.000000Z",
+                          "document_url": "https://www.wanikani.com/kanji/%E4%B8%80",
+                          "hidden_at": null,
+                          "lesson_position": 2,
+                          "level": 1,
+                          "meanings":
+                            [{ "meaning": "One", "primary": true, "accepted_answer": true }],
+                          "meaning_hint": 'To remember the meaning of <kanji>One</kanji>, imagine yourself there at the scene of the crime. You grab <kanji>One</kanji> in your arms, trying to prop it up, trying to hear its last words. Instead, it just splatters some blood on your face. "Who did this to you?" you ask. The number One points weakly, and you see number Two running off into an alleyway. He''s always been jealous of number One and knows he can be number one now that he''s taken the real number one out.',
+                          "meaning_mnemonic": "Lying on the <radical>ground</radical> is something that looks just like the ground, the number <kanji>One</kanji>. Why is this One lying down? It's been shot by the number two. It's lying there, bleeding out and dying. The number One doesn't have long to live.",
+                          "readings":
                             [
                               {
-                                'type': 'onyomi',
-                                'primary': true,
-                                'accepted_answer': true,
-                                'reading': 'いち',
+                                "type": "onyomi",
+                                "primary": true,
+                                "accepted_answer": true,
+                                "reading": "いち",
                               },
                               {
-                                'type': 'kunyomi',
-                                'primary': false,
-                                'accepted_answer': false,
-                                'reading': 'ひと',
+                                "type": "kunyomi",
+                                "primary": false,
+                                "accepted_answer": false,
+                                "reading": "ひと",
                               },
                               {
-                                'type': 'nanori',
-                                'primary': false,
-                                'accepted_answer': false,
-                                'reading': 'かず',
+                                "type": "nanori",
+                                "primary": false,
+                                "accepted_answer": false,
+                                "reading": "かず",
                               },
                             ],
-                          'reading_mnemonic': "As you're sitting there next to <kanji>One</kanji>, holding him up, you start feeling a weird sensation all over your skin. From the wound comes a fine powder (obviously coming from the special bullet used to kill One) that causes the person it touches to get extremely <reading>itchy</reading> (いち)",
-                          'reading_hint': "Make sure you feel the ridiculously <reading>itchy</reading> sensation covering your body. It climbs from your hands, where you're holding the number <kanji>One</kanji> up, and then goes through your arms, crawls up your neck, goes down your body, and then covers everything. It becomes uncontrollable, and you're scratching everywhere, writhing on the ground. It's so itchy that it's the most painful thing you've ever experienced (you should imagine this vividly, so you remember the reading of this kanji).",
-                          'slug': '一',
-                          'visually_similar_subject_ids': [],
-                          'spaced_repetition_system_id': 1,
+                          "reading_mnemonic": "As you're sitting there next to <kanji>One</kanji>, holding him up, you start feeling a weird sensation all over your skin. From the wound comes a fine powder (obviously coming from the special bullet used to kill One) that causes the person it touches to get extremely <reading>itchy</reading> (いち)",
+                          "reading_hint": "Make sure you feel the ridiculously <reading>itchy</reading> sensation covering your body. It climbs from your hands, where you're holding the number <kanji>One</kanji> up, and then goes through your arms, crawls up your neck, goes down your body, and then covers everything. It becomes uncontrollable, and you're scratching everywhere, writhing on the ground. It's so itchy that it's the most painful thing you've ever experienced (you should imagine this vividly, so you remember the reading of this kanji).",
+                          "slug": "一",
+                          "visually_similar_subject_ids": [],
+                          "spaced_repetition_system_id": 1,
                         },
                     }
                 Vocabulary:
                   value:
                     {
-                      'id': 2467,
-                      'object': 'vocabulary',
-                      'url': 'https://api.wanikani.com/v2/subjects/2467',
-                      'data_updated_at': '2018-12-12T23:09:52.234049Z',
-                      'data':
+                      "id": 2467,
+                      "object": "vocabulary",
+                      "url": "https://api.wanikani.com/v2/subjects/2467",
+                      "data_updated_at": "2018-12-12T23:09:52.234049Z",
+                      "data":
                         {
-                          'auxiliary_meanings': [{ 'type': 'whitelist', 'meaning': '1' }],
-                          'characters': '一',
-                          'component_subject_ids': [440],
-                          'context_sentences':
+                          "auxiliary_meanings": [{ "type": "whitelist", "meaning": "1" }],
+                          "characters": "一",
+                          "component_subject_ids": [440],
+                          "context_sentences":
                             [
-                              { 'en': 'Let’s meet up once.', 'ja': '一ど、あいましょう。' },
+                              { "en": "Let’s meet up once.", "ja": "一ど、あいましょう。" },
                               {
-                                'en': 'First place was an American.',
-                                'ja': '一いはアメリカ人でした。',
+                                "en": "First place was an American.",
+                                "ja": "一いはアメリカ人でした。",
                               },
                               {
-                                'en': 'I’m the weakest man in the world.',
-                                'ja': 'ぼくはせかいで一ばんよわい。',
+                                "en": "I’m the weakest man in the world.",
+                                "ja": "ぼくはせかいで一ばんよわい。",
                               },
                             ],
-                          'created_at': '2012-02-28T08:04:47.000000Z',
-                          'document_url': 'https://www.wanikani.com/vocabulary/%E4%B8%80',
-                          'hidden_at': null,
-                          'lesson_position': 44,
-                          'level': 1,
-                          'meanings':
-                            [{ 'meaning': 'One', 'primary': true, 'accepted_answer': true }],
-                          'meaning_mnemonic': "As is the case with most vocab words that consist of a single kanji, this vocab word has the same meaning as the kanji it parallels, which is \u003cvocabulary\u003eone\u003c/vocabulary\u003e.",
-                          'parts_of_speech': ['numeral'],
-                          'pronunciation_audios':
+                          "created_at": "2012-02-28T08:04:47.000000Z",
+                          "document_url": "https://www.wanikani.com/vocabulary/%E4%B8%80",
+                          "hidden_at": null,
+                          "lesson_position": 44,
+                          "level": 1,
+                          "meanings":
+                            [{ "meaning": "One", "primary": true, "accepted_answer": true }],
+                          "meaning_mnemonic": "As is the case with most vocab words that consist of a single kanji, this vocab word has the same meaning as the kanji it parallels, which is \u003cvocabulary\u003eone\u003c/vocabulary\u003e.",
+                          "parts_of_speech": ["numeral"],
+                          "pronunciation_audios":
                             [
                               {
-                                'url': 'https://cdn.wanikani.com/audios/3020-subject-2467.mp3?1547862356',
-                                'metadata':
+                                "url": "https://cdn.wanikani.com/audios/3020-subject-2467.mp3?1547862356",
+                                "metadata":
                                   {
-                                    'gender': 'male',
-                                    'source_id': 2711,
-                                    'pronunciation': 'いち',
-                                    'voice_actor_id': 2,
-                                    'voice_actor_name': 'Kenichi',
-                                    'voice_description': 'Tokyo accent',
+                                    "gender": "male",
+                                    "source_id": 2711,
+                                    "pronunciation": "いち",
+                                    "voice_actor_id": 2,
+                                    "voice_actor_name": "Kenichi",
+                                    "voice_description": "Tokyo accent",
                                   },
-                                'content_type': 'audio/mpeg',
+                                "content_type": "audio/mpeg",
                               },
                               {
-                                'url': 'https://cdn.wanikani.com/audios/3018-subject-2467.ogg?1547862356',
-                                'metadata':
+                                "url": "https://cdn.wanikani.com/audios/3018-subject-2467.ogg?1547862356",
+                                "metadata":
                                   {
-                                    'gender': 'male',
-                                    'source_id': 2711,
-                                    'pronunciation': 'いち',
-                                    'voice_actor_id': 2,
-                                    'voice_actor_name': 'Kenichi',
-                                    'voice_description': 'Tokyo accent',
+                                    "gender": "male",
+                                    "source_id": 2711,
+                                    "pronunciation": "いち",
+                                    "voice_actor_id": 2,
+                                    "voice_actor_name": "Kenichi",
+                                    "voice_description": "Tokyo accent",
                                   },
-                                'content_type': 'audio/ogg',
+                                "content_type": "audio/ogg",
                               },
                             ],
-                          'readings':
-                            [{ 'primary': true, 'reading': 'いち', 'accepted_answer': true }],
-                          'reading_mnemonic': "When a vocab word is all alone and has no okurigana (hiragana attached to kanji) connected to it, it usually uses the kun'yomi reading. Numbers are an exception, however. When a number is all alone, with no kanji or okurigana, it is going to be the on'yomi reading, which you learned with the kanji.  Just remember this exception for alone numbers and you'll be able to read future number-related vocab to come.",
-                          'slug': '一',
-                          'spaced_repetition_system_id': 1,
+                          "readings":
+                            [{ "primary": true, "reading": "いち", "accepted_answer": true }],
+                          "reading_mnemonic": "When a vocab word is all alone and has no okurigana (hiragana attached to kanji) connected to it, it usually uses the kun'yomi reading. Numbers are an exception, however. When a number is all alone, with no kanji or okurigana, it is going to be the on'yomi reading, which you learned with the kanji.  Just remember this exception for alone numbers and you'll be able to read future number-related vocab to come.",
+                          "slug": "一",
+                          "spaced_repetition_system_id": 1,
                         },
                     }
-        '401':
-          $ref: '#/components/responses/Unauthorized'
-        '403':
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
           description: Forbidden
-        '404':
+        "404":
           description: Resource not found
-        '422':
-          $ref: '#/components/responses/UnprocessableEntity'
-        '429':
+        "422":
+          $ref: "#/components/responses/UnprocessableEntity"
+        "429":
           description: Too Many Requests
-        '500':
+        "500":
           description: Internal Server Error
-        '503':
+        "503":
           description: Service Unavailable
   /summary:
     get:
@@ -1530,50 +1530,50 @@ paths:
       description: Retrieves a summary report.
       tags: [Summary]
       responses:
-        '200':
+        "200":
           description: Summary
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Summary'
+                $ref: "#/components/schemas/Summary"
               example:
                 {
-                  'object': 'report',
-                  'url': 'https://api.wanikani.com/v2/summary',
-                  'data_updated_at': '2018-04-11T21:00:00.000000Z',
-                  'data':
+                  "object": "report",
+                  "url": "https://api.wanikani.com/v2/summary",
+                  "data_updated_at": "2018-04-11T21:00:00.000000Z",
+                  "data":
                     {
-                      'lessons':
+                      "lessons":
                         [
                           {
-                            'available_at': '2018-04-11T21:00:00.000000Z',
-                            'subject_ids': [25, 26],
+                            "available_at": "2018-04-11T21:00:00.000000Z",
+                            "subject_ids": [25, 26],
                           },
                         ],
-                      'next_reviews_at': '2018-04-11T21:00:00.000000Z',
-                      'reviews':
+                      "next_reviews_at": "2018-04-11T21:00:00.000000Z",
+                      "reviews":
                         [
                           {
-                            'available_at': '2018-04-11T21:00:00.000000Z',
-                            'subject_ids': [21, 23, 24],
+                            "available_at": "2018-04-11T21:00:00.000000Z",
+                            "subject_ids": [21, 23, 24],
                           },
-                          { 'available_at': '2018-04-11T22:00:00.000000Z', 'subject_ids': [] },
+                          { "available_at": "2018-04-11T22:00:00.000000Z", "subject_ids": [] },
                         ],
                     },
                 }
-        '401':
-          $ref: '#/components/responses/Unauthorized'
-        '403':
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
           description: Forbidden
-        '404':
+        "404":
           description: Resource not found
-        '422':
-          $ref: '#/components/responses/UnprocessableEntity'
-        '429':
+        "422":
+          $ref: "#/components/responses/UnprocessableEntity"
+        "429":
           description: Too Many Requests
-        '500':
+        "500":
           description: Internal Server Error
-        '503':
+        "503":
           description: Service Unavailable
   /user:
     get:
@@ -1582,56 +1582,56 @@ paths:
       description: Returns a summary of user information.
       tags: [User]
       responses:
-        '200':
+        "200":
           description: Requested User Information
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/User'
+                $ref: "#/components/schemas/User"
               example:
                 {
-                  'object': 'user',
-                  'url': 'https://api.wanikani.com/v2/user',
-                  'data_updated_at': '2018-04-06T14:26:53.022245Z',
-                  'data':
+                  "object": "user",
+                  "url": "https://api.wanikani.com/v2/user",
+                  "data_updated_at": "2018-04-06T14:26:53.022245Z",
+                  "data":
                     {
-                      'id': '5a6a5234-a392-4a87-8f3f-33342afe8a42',
-                      'username': 'example_user',
-                      'level': 5,
-                      'profile_url': 'https://www.wanikani.com/users/example_user',
-                      'started_at': '2012-05-11T00:52:18.958466Z',
-                      'current_vacation_started_at': null,
-                      'subscription':
+                      "id": "5a6a5234-a392-4a87-8f3f-33342afe8a42",
+                      "username": "example_user",
+                      "level": 5,
+                      "profile_url": "https://www.wanikani.com/users/example_user",
+                      "started_at": "2012-05-11T00:52:18.958466Z",
+                      "current_vacation_started_at": null,
+                      "subscription":
                         {
-                          'active': true,
-                          'type': 'recurring',
-                          'max_level_granted': 60,
-                          'period_ends_at': '2018-12-11T13:32:19.485748Z',
+                          "active": true,
+                          "type": "recurring",
+                          "max_level_granted": 60,
+                          "period_ends_at": "2018-12-11T13:32:19.485748Z",
                         },
-                      'preferences':
+                      "preferences":
                         {
-                          'default_voice_actor_id': 1,
-                          'lessons_autoplay_audio': false,
-                          'lessons_batch_size': 5,
-                          'lessons_presentation_order': 'ascending_level_then_subject',
-                          'reviews_autoplay_audio': false,
-                          'reviews_display_srs_indicator': true,
+                          "default_voice_actor_id": 1,
+                          "lessons_autoplay_audio": false,
+                          "lessons_batch_size": 5,
+                          "lessons_presentation_order": "ascending_level_then_subject",
+                          "reviews_autoplay_audio": false,
+                          "reviews_display_srs_indicator": true,
                         },
                     },
                 }
-        '401':
-          $ref: '#/components/responses/Unauthorized'
-        '403':
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
           description: Forbidden
-        '404':
+        "404":
           description: Resource not found
-        '422':
-          $ref: '#/components/responses/UnprocessableEntity'
-        '429':
+        "422":
+          $ref: "#/components/responses/UnprocessableEntity"
+        "429":
           description: Too Many Requests
-        '500':
+        "500":
           description: Internal Server Error
-        '503':
+        "503":
           description: Service Unavailable
   /voice_actors:
     get:
@@ -1654,49 +1654,49 @@ paths:
             type: string
             format: date-time
       responses:
-        '200':
+        "200":
           description: All Voice Actors
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/VoiceActors'
+                $ref: "#/components/schemas/VoiceActors"
               example:
                 {
-                  'object': 'collection',
-                  'url': 'https://api.wanikani.com/v2/voice_actors',
-                  'pages': { 'per_page': 500, 'next_url': null, 'previous_url': null },
-                  'total_count': 2,
-                  'data_updated_at': '2017-11-29T19:37:03.571377Z',
-                  'data':
+                  "object": "collection",
+                  "url": "https://api.wanikani.com/v2/voice_actors",
+                  "pages": { "per_page": 500, "next_url": null, "previous_url": null },
+                  "total_count": 2,
+                  "data_updated_at": "2017-11-29T19:37:03.571377Z",
+                  "data":
                     [
                       {
-                        'id': 234,
-                        'object': 'voice_actor',
-                        'url': 'https://api.wanikani.com/v2/voice_actors/1',
-                        'data_updated_at': '2017-12-20T00:24:47.048380Z',
-                        'data':
+                        "id": 234,
+                        "object": "voice_actor",
+                        "url": "https://api.wanikani.com/v2/voice_actors/1",
+                        "data_updated_at": "2017-12-20T00:24:47.048380Z",
+                        "data":
                           {
-                            'created_at': '2017-12-20T00:03:56.642838Z',
-                            'name': 'Kyoko',
-                            'gender': 'female',
-                            'description': 'Tokyo accent',
+                            "created_at": "2017-12-20T00:03:56.642838Z",
+                            "name": "Kyoko",
+                            "gender": "female",
+                            "description": "Tokyo accent",
                           },
                       },
                     ],
                 }
-        '401':
-          $ref: '#/components/responses/Unauthorized'
-        '403':
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
           description: Forbidden
-        '404':
+        "404":
           description: Resource not found
-        '422':
-          $ref: '#/components/responses/UnprocessableEntity'
-        '429':
+        "422":
+          $ref: "#/components/responses/UnprocessableEntity"
+        "429":
           description: Too Many Requests
-        '500':
+        "500":
           description: Internal Server Error
-        '503':
+        "503":
           description: Service Unavailable
   /voice_actors/{id}:
     get:
@@ -1705,41 +1705,41 @@ paths:
       description: Retrieves a specific voice actor by its id.
       tags: [Voice Actor]
       parameters:
-        - $ref: '#/components/parameters/resourceId'
+        - $ref: "#/components/parameters/resourceId"
       responses:
-        '200':
+        "200":
           description: Requested Voice Actor
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/VoiceActor'
+                $ref: "#/components/schemas/VoiceActor"
               example:
                 {
-                  'id': 234,
-                  'object': 'voice_actor',
-                  'url': 'https://api.wanikani.com/v2/voice_actors/1',
-                  'data_updated_at': '2017-12-20T00:24:47.048380Z',
-                  'data':
+                  "id": 234,
+                  "object": "voice_actor",
+                  "url": "https://api.wanikani.com/v2/voice_actors/1",
+                  "data_updated_at": "2017-12-20T00:24:47.048380Z",
+                  "data":
                     {
-                      'created_at': '2017-12-20T00:03:56.642838Z',
-                      'name': 'Kyoko',
-                      'gender': 'female',
-                      'description': 'Tokyo accent',
+                      "created_at": "2017-12-20T00:03:56.642838Z",
+                      "name": "Kyoko",
+                      "gender": "female",
+                      "description": "Tokyo accent",
                     },
                 }
-        '401':
-          $ref: '#/components/responses/Unauthorized'
-        '403':
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
           description: Forbidden
-        '404':
+        "404":
           description: Resource not found
-        '422':
-          $ref: '#/components/responses/UnprocessableEntity'
-        '429':
+        "422":
+          $ref: "#/components/responses/UnprocessableEntity"
+        "429":
           description: Too Many Requests
-        '500':
+        "500":
           description: Internal Server Error
-        '503':
+        "503":
           description: Service Unavailable
 components:
   securitySchemes:
@@ -1752,13 +1752,13 @@ components:
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/BaseError'
+            $ref: "#/components/schemas/BaseError"
     UnprocessableEntity:
       description: Unprocessable Entity
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/BaseError'
+            $ref: "#/components/schemas/BaseError"
   schemas:
     BaseError:
       type: object
@@ -1776,7 +1776,7 @@ components:
         id:
           type: integer
         object:
-          $ref: '#/components/schemas/ResourceObjectType'
+          $ref: "#/components/schemas/ResourceObjectType"
         url:
           type: string
         data_updated_at:
@@ -1806,7 +1806,7 @@ components:
       required: [object, url, pages, total_count, data_updated_at]
       properties:
         object:
-          $ref: '#/components/schemas/CollectionObjectType'
+          $ref: "#/components/schemas/CollectionObjectType"
         url:
           type: string
         pages:
@@ -1828,7 +1828,7 @@ components:
           format: date-time
     Assignment:
       allOf:
-        - $ref: '#/components/schemas/BaseResource'
+        - $ref: "#/components/schemas/BaseResource"
         - type: object
           required: [data]
           properties:
@@ -1888,7 +1888,7 @@ components:
                   type: integer
                   description: Unique identifier of the associated subject.
                 subject_type:
-                  $ref: '#/components/schemas/SubjectType'
+                  $ref: "#/components/schemas/SubjectType"
                 unlocked_at:
                   type: string
                   format: date-time
@@ -1896,17 +1896,17 @@ components:
                   description: The timestamp when the related subject has its prerequisites satisfied and is made available in lessons.
     Assignments:
       allOf:
-        - $ref: '#/components/schemas/BaseCollection'
+        - $ref: "#/components/schemas/BaseCollection"
         - type: object
           required: [data]
           properties:
             data:
               type: array
               items:
-                $ref: '#/components/schemas/Assignment'
+                $ref: "#/components/schemas/Assignment"
     LevelProgression:
       allOf:
-        - $ref: '#/components/schemas/BaseResource'
+        - $ref: "#/components/schemas/BaseResource"
         - type: object
           required: [data]
           properties:
@@ -1949,17 +1949,17 @@ components:
                   nullable: true
     LevelProgressions:
       allOf:
-        - $ref: '#/components/schemas/BaseCollection'
+        - $ref: "#/components/schemas/BaseCollection"
         - type: object
           required: [data]
           properties:
             data:
               type: array
               items:
-                $ref: '#/components/schemas/LevelProgression'
+                $ref: "#/components/schemas/LevelProgression"
     Reset:
       allOf:
-        - $ref: '#/components/schemas/BaseResource'
+        - $ref: "#/components/schemas/BaseResource"
         - type: object
           required: [data]
           properties:
@@ -1984,17 +1984,17 @@ components:
                   description: The user's level after the reset, from 1 to 60. It must be less than or equal to original_level.
     Resets:
       allOf:
-        - $ref: '#/components/schemas/BaseCollection'
+        - $ref: "#/components/schemas/BaseCollection"
         - type: object
           required: [data]
           properties:
             data:
               type: array
               items:
-                $ref: '#/components/schemas/Reset'
+                $ref: "#/components/schemas/Reset"
     Review:
       allOf:
-        - $ref: '#/components/schemas/BaseResource'
+        - $ref: "#/components/schemas/BaseResource"
         - type: object
           required: [data]
           properties:
@@ -2039,14 +2039,14 @@ components:
                   description: Unique identifier of the associated subject.
     Reviews:
       allOf:
-        - $ref: '#/components/schemas/BaseCollection'
+        - $ref: "#/components/schemas/BaseCollection"
         - type: object
           required: [data]
           properties:
             data:
               type: array
               items:
-                $ref: '#/components/schemas/Review'
+                $ref: "#/components/schemas/Review"
     StartAssignmentRequest:
       type: object
       properties:
@@ -2057,23 +2057,23 @@ components:
       type: object
       properties:
         review:
-          $ref: '#/components/schemas/CreateReview'
+          $ref: "#/components/schemas/CreateReview"
     CreateReviewResponse:
       allOf:
-        - $ref: '#/components/schemas/BaseResource'
+        - $ref: "#/components/schemas/BaseResource"
         - type: object
           required: [data, resources_updated]
           properties:
             data:
-              $ref: '#/components/schemas/CreateReview'
+              $ref: "#/components/schemas/CreateReview"
             resources_updated:
               type: object
               required: [assignment, review_statistic]
               properties:
                 assignment:
-                  $ref: '#/components/schemas/Assignment'
+                  $ref: "#/components/schemas/Assignment"
                 review_statistic:
-                  $ref: '#/components/schemas/ReviewStatistic'
+                  $ref: "#/components/schemas/ReviewStatistic"
     CreateReview:
       type: object
       required: [assignment_id, incorrect_meaning_answers, incorrect_reading_answers, subject_id]
@@ -2105,7 +2105,7 @@ components:
           description: Unique identifier of the associated subject.
     ReviewStatistic:
       allOf:
-        - $ref: '#/components/schemas/BaseResource'
+        - $ref: "#/components/schemas/BaseResource"
         - type: object
           required: [data]
           properties:
@@ -2166,17 +2166,17 @@ components:
                   type: integer
                   description: Unique identifier of the associated subject.
                 subject_type:
-                  $ref: '#/components/schemas/SubjectType'
+                  $ref: "#/components/schemas/SubjectType"
     ReviewStatistics:
       allOf:
-        - $ref: '#/components/schemas/BaseCollection'
+        - $ref: "#/components/schemas/BaseCollection"
         - type: object
           required: [data]
           properties:
             data:
               type: array
               items:
-                $ref: '#/components/schemas/ReviewStatistic'
+                $ref: "#/components/schemas/ReviewStatistic"
     StageAttributes:
       type: object
       required: [interval, interval_unit, position]
@@ -2188,14 +2188,14 @@ components:
         interval_unit:
           type: string
           enum: [milliseconds, seconds, minutes, hours, days, weeks]
-          description: 'Unit of time. Can be the following: milliseconds, seconds, minutes, hours, days, and weeks.'
+          description: "Unit of time. Can be the following: milliseconds, seconds, minutes, hours, days, and weeks."
           nullable: true
         position:
           type: integer
           description: The position of the stage within the continuous order.
     SpacedRepetitionSystem:
       allOf:
-        - $ref: '#/components/schemas/BaseResource'
+        - $ref: "#/components/schemas/BaseResource"
         - type: object
           required: [data]
           properties:
@@ -2232,7 +2232,7 @@ components:
                 stages:
                   type: array
                   items:
-                    $ref: '#/components/schemas/StageAttributes'
+                    $ref: "#/components/schemas/StageAttributes"
                   description: A collection of stages. See table below for the object structure.
                 starting_stage_position:
                   type: integer
@@ -2242,17 +2242,17 @@ components:
                   description: position of the unlocking stage.
     SpacedRepetitionSystems:
       allOf:
-        - $ref: '#/components/schemas/BaseCollection'
+        - $ref: "#/components/schemas/BaseCollection"
         - type: object
           required: [data]
           properties:
             data:
               type: array
               items:
-                $ref: '#/components/schemas/SpacedRepetitionSystem'
+                $ref: "#/components/schemas/SpacedRepetitionSystem"
     StudyMaterial:
       allOf:
-        - $ref: '#/components/schemas/BaseResource'
+        - $ref: "#/components/schemas/BaseResource"
         - type: object
           required: [data]
           properties:
@@ -2293,17 +2293,17 @@ components:
                   type: integer
                   description: Unique identifier of the associated subject.
                 subject_type:
-                  $ref: '#/components/schemas/SubjectType'
+                  $ref: "#/components/schemas/SubjectType"
     StudyMaterials:
       allOf:
-        - $ref: '#/components/schemas/BaseCollection'
+        - $ref: "#/components/schemas/BaseCollection"
         - type: object
           required: [data]
           properties:
             data:
               type: array
               items:
-                $ref: '#/components/schemas/StudyMaterial'
+                $ref: "#/components/schemas/StudyMaterial"
     AuxiliaryMeaning:
       type: object
       required: [meaning, type]
@@ -2329,7 +2329,7 @@ components:
           description: Indicates if the meaning is used to evaluate user input for correctness.
     SubjectType:
       type: string
-      description: 'The type of the associated subject, one of: kanji, radical, or vocabulary.'
+      description: "The type of the associated subject, one of: kanji, radical, or vocabulary."
       enum: [kanji, radical, vocabulary]
     CommonSubject:
       type: object
@@ -2351,7 +2351,7 @@ components:
         auxiliary_meanings:
           type: array
           items:
-            $ref: '#/components/schemas/AuxiliaryMeaning'
+            $ref: "#/components/schemas/AuxiliaryMeaning"
           description: Collection of auxiliary meanings. See table below for the object structure.
         characters:
           type: string
@@ -2380,7 +2380,7 @@ components:
         meanings:
           type: array
           items:
-            $ref: '#/components/schemas/Meaning'
+            $ref: "#/components/schemas/Meaning"
           description: The subject meanings.
         slug:
           type: string
@@ -2390,7 +2390,7 @@ components:
           description: Unique identifier of the associated spaced_repetition_system.
     RadicalSubject:
       allOf:
-        - $ref: '#/components/schemas/CommonSubject'
+        - $ref: "#/components/schemas/CommonSubject"
         - type: object
           required: [amalgamation_subject_ids, characters, character_images]
           properties:
@@ -2406,11 +2406,11 @@ components:
             character_images:
               type: array
               items:
-                $ref: '#/components/schemas/RadicalCharacterImage'
+                $ref: "#/components/schemas/RadicalCharacterImage"
               description: A collection of images of the radical. See table below for the object structure.
     KanjiSubject:
       allOf:
-        - $ref: '#/components/schemas/CommonSubject'
+        - $ref: "#/components/schemas/CommonSubject"
         - type: object
           required:
             [
@@ -2447,7 +2447,7 @@ components:
             readings:
               type: array
               items:
-                $ref: '#/components/schemas/KanjiReading'
+                $ref: "#/components/schemas/KanjiReading"
               description: Selected readings for the kanji. See table below for the object structure.
             visually_similar_subject_ids:
               type: array
@@ -2456,7 +2456,7 @@ components:
               description: An array of numeric identifiers for kanji which are visually similar to the kanji in question.
     VocabSubject:
       allOf:
-        - $ref: '#/components/schemas/CommonSubject'
+        - $ref: "#/components/schemas/CommonSubject"
         - type: object
           required:
             [
@@ -2477,7 +2477,7 @@ components:
             context_sentences:
               type: array
               items:
-                $ref: '#/components/schemas/ContextSentence'
+                $ref: "#/components/schemas/ContextSentence"
               description: A collection of context sentences. See table below for the object structure.
             meaning_mnemonic:
               type: string
@@ -2490,12 +2490,12 @@ components:
             pronunciation_audios:
               type: array
               items:
-                $ref: '#/components/schemas/PronunciationAudio'
+                $ref: "#/components/schemas/PronunciationAudio"
               description: A collection of pronunciation audio. See table below for the object structure.
             readings:
               type: array
               items:
-                $ref: '#/components/schemas/VocabReading'
+                $ref: "#/components/schemas/VocabReading"
               description: Selected readings for the vocabulary. See table below for the object structure.
             reading_mnemonic:
               type: string
@@ -2559,7 +2559,7 @@ components:
           description: Indicates if the reading is used to evaluate user input for correctness.
     KanjiReading:
       allOf:
-        - $ref: '#/components/schemas/BaseReading'
+        - $ref: "#/components/schemas/BaseReading"
         - type: object
           required: [type]
           properties:
@@ -2568,7 +2568,7 @@ components:
               enum: [kunyomi, nanori, onyomi]
               description: "The kanji reading's classfication: kunyomi, nanori, or onyomi."
     VocabReading:
-      $ref: '#/components/schemas/BaseReading'
+      $ref: "#/components/schemas/BaseReading"
     RadicalCharacterImage:
       type: object
       required: [url, content_type, metadata]
@@ -2582,8 +2582,8 @@ components:
         metadata:
           description: Details about the image. Each content_type returns a uniquely structured object.
           oneOf:
-            - $ref: '#/components/schemas/ImagePngMetadata'
-            - $ref: '#/components/schemas/ImageSvgMetadata'
+            - $ref: "#/components/schemas/ImagePngMetadata"
+            - $ref: "#/components/schemas/ImageSvgMetadata"
     ImageSvgMetadata:
       type: object
       required: [inline_styles]
@@ -2606,28 +2606,28 @@ components:
           description: A name descriptor
     Subject:
       allOf:
-        - $ref: '#/components/schemas/BaseResource'
+        - $ref: "#/components/schemas/BaseResource"
         - type: object
           required: [data]
           properties:
             data:
               oneOf:
-                - $ref: '#/components/schemas/RadicalSubject'
-                - $ref: '#/components/schemas/KanjiSubject'
-                - $ref: '#/components/schemas/VocabSubject'
+                - $ref: "#/components/schemas/RadicalSubject"
+                - $ref: "#/components/schemas/KanjiSubject"
+                - $ref: "#/components/schemas/VocabSubject"
     Subjects:
       allOf:
-        - $ref: '#/components/schemas/BaseCollection'
+        - $ref: "#/components/schemas/BaseCollection"
         - type: object
           required: [data]
           properties:
             data:
               type: array
               items:
-                $ref: '#/components/schemas/Subject'
+                $ref: "#/components/schemas/Subject"
     VoiceActor:
       allOf:
-        - $ref: '#/components/schemas/BaseResource'
+        - $ref: "#/components/schemas/BaseResource"
         - type: object
           required: [data]
           properties:
@@ -2646,14 +2646,14 @@ components:
                   description: The voice actor's name
     VoiceActors:
       allOf:
-        - $ref: '#/components/schemas/BaseCollection'
+        - $ref: "#/components/schemas/BaseCollection"
         - type: object
           required: [data]
           properties:
             data:
               type: array
               items:
-                $ref: '#/components/schemas/VoiceActor'
+                $ref: "#/components/schemas/VoiceActor"
     UserPreferences:
       type: object
       description: User settings specific to the WaniKani application. See table below for the object structure.
@@ -2705,10 +2705,10 @@ components:
         type:
           type: string
           enum: [free, recurring, lifetime]
-          description: 'The type of subscription the user has. Options are following: free, recurring, and lifetime.'
+          description: "The type of subscription the user has. Options are following: free, recurring, and lifetime."
     User:
       allOf:
-        - $ref: '#/components/schemas/BaseResource'
+        - $ref: "#/components/schemas/BaseResource"
         - type: object
           required: [data]
           properties:
@@ -2734,7 +2734,7 @@ components:
                   type: integer
                   description: The current level of the user. This ignores subscription status.
                 preferences:
-                  $ref: '#/components/schemas/UserPreferences'
+                  $ref: "#/components/schemas/UserPreferences"
                 profile_url:
                   type: string
                   description: The URL to the user's public facing profile page.
@@ -2743,7 +2743,7 @@ components:
                   format: date-time
                   description: The signup date for the user.
                 subscription:
-                  $ref: '#/components/schemas/UserSubscription'
+                  $ref: "#/components/schemas/UserSubscription"
                 username:
                   type: string
                   description: The user's username.
@@ -2773,7 +2773,7 @@ components:
           description: Collection of unique identifiers for subjects.
     Summary:
       allOf:
-        - $ref: '#/components/schemas/BaseResource'
+        - $ref: "#/components/schemas/BaseResource"
         - type: object
           required: [data]
           properties:
@@ -2784,7 +2784,7 @@ components:
                 lessons:
                   type: array
                   items:
-                    $ref: '#/components/schemas/SummaryLessons'
+                    $ref: "#/components/schemas/SummaryLessons"
                   description: Details about subjects available for lessons. See table below for object structure.
                 next_reviews_at:
                   type: string
@@ -2794,7 +2794,7 @@ components:
                 reviews:
                   type: array
                   items:
-                    $ref: '#/components/schemas/SummaryReviews'
+                    $ref: "#/components/schemas/SummaryReviews"
                   description: Details about subjects available for reviews now and in the next 24 hours by the hour (total of 25 objects). See table below for object structure.
 
   parameters:

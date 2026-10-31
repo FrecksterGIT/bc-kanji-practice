@@ -1,8 +1,8 @@
-import { DBSchema, openDB } from 'idb';
-import { WanikaniAssignment, WanikaniSubject } from '../wanikani';
-import { PersistedSettings } from '../contexts/SessionContext.tsx';
+import { DBSchema, openDB } from "idb";
+import { WanikaniAssignment, WanikaniSubject } from "../wanikani";
+import { PersistedSettings } from "../contexts/SessionContext.tsx";
 
-type ValidValue<T> = Exclude<T, null | undefined | 0 | '' | false>;
+type ValidValue<T> = Exclude<T, null | undefined | 0 | "" | false>;
 const BooleanFilter = <T>(x: T): x is ValidValue<T> => Boolean(x);
 
 interface ItemDB extends DBSchema {
@@ -26,26 +26,26 @@ interface ItemDB extends DBSchema {
 }
 
 async function getDB() {
-  return openDB<ItemDB>('db', 1, {
+  return openDB<ItemDB>("db", 1, {
     upgrade(database, oldVersion, newVersion) {
       if (oldVersion !== newVersion && oldVersion !== 0) {
-        database.deleteObjectStore('subjects');
-        database.deleteObjectStore('assignments');
-        database.deleteObjectStore('settings');
+        database.deleteObjectStore("subjects");
+        database.deleteObjectStore("assignments");
+        database.deleteObjectStore("settings");
       }
-      const subjectStore = database.createObjectStore('subjects', {
-        keyPath: 'id',
+      const subjectStore = database.createObjectStore("subjects", {
+        keyPath: "id",
         autoIncrement: false,
       });
-      subjectStore.createIndex('level', 'data.level');
+      subjectStore.createIndex("level", "data.level");
 
-      database.createObjectStore('assignments', {
-        keyPath: 'id',
+      database.createObjectStore("assignments", {
+        keyPath: "id",
         autoIncrement: false,
       });
 
-      database.createObjectStore('settings', {
-        keyPath: 'key',
+      database.createObjectStore("settings", {
+        keyPath: "key",
         autoIncrement: false,
       });
     },
@@ -54,8 +54,8 @@ async function getDB() {
 
 export async function addManySubjects(data: WanikaniSubject[]): Promise<void> {
   const db = await getDB();
-  const tx = db.transaction('subjects', 'readwrite');
-  const store = tx.objectStore('subjects');
+  const tx = db.transaction("subjects", "readwrite");
+  const store = tx.objectStore("subjects");
 
   for (const entry of data) {
     await store.put(entry);
@@ -65,8 +65,8 @@ export async function addManySubjects(data: WanikaniSubject[]): Promise<void> {
 
 export async function addManyAssignments(data: WanikaniAssignment[]): Promise<void> {
   const db = await getDB();
-  const tx = db.transaction('assignments', 'readwrite');
-  const store = tx.objectStore('assignments');
+  const tx = db.transaction("assignments", "readwrite");
+  const store = tx.objectStore("assignments");
 
   for (const entry of data) {
     await store.put(entry);
@@ -76,37 +76,37 @@ export async function addManyAssignments(data: WanikaniAssignment[]): Promise<vo
 
 export async function getAllSubjects(): Promise<WanikaniSubject[]> {
   const db = await getDB();
-  return db.getAll('subjects');
+  return db.getAll("subjects");
 }
 
 export async function getAllAssignments(): Promise<WanikaniAssignment[]> {
   const db = await getDB();
-  return db.getAll('assignments');
+  return db.getAll("assignments");
 }
 
 export async function getSubjectByIds(ids: number[]): Promise<WanikaniSubject[]> {
   const db = await getDB();
-  return await Promise.all(ids.map((id) => db.get('subjects', id))).then((d) =>
-    d.filter(BooleanFilter)
+  return await Promise.all(ids.map((id) => db.get("subjects", id))).then((d) =>
+    d.filter(BooleanFilter),
   );
 }
 
 export async function getSubjectsByObjectAndLevel(
   objectType: string,
-  level: number
+  level: number,
 ): Promise<WanikaniSubject[]> {
   const db = await getDB();
   return db
-    .getAllFromIndex('subjects', 'level', level)
+    .getAllFromIndex("subjects", "level", level)
     .then((items) => items.filter((item) => item.object === objectType));
 }
 
-export async function getSettings(): Promise<ItemDB['settings']['value'] | undefined> {
+export async function getSettings(): Promise<ItemDB["settings"]["value"] | undefined> {
   const db = await getDB();
-  return db.get('settings', 'settings');
+  return db.get("settings", "settings");
 }
 
 export async function saveSettings(settings: PersistedSettings): Promise<void> {
   const db = await getDB();
-  await db.put('settings', { ...settings, key: 'settings' });
+  await db.put("settings", { ...settings, key: "settings" });
 }

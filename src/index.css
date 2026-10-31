@@ -1,8 +1,8 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @utility separated-comma {
   &:not(:empty) ~ &:not(:empty):before {
-    content: ', ';
+    content: ", ";
   }
 }
 

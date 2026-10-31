@@ -1,14 +1,14 @@
-import { type FC, useCallback, useEffect, useState } from 'react';
-import { isKatakana, toHiragana } from 'wanakana';
-import { WanikaniReading } from '../../wanikani';
-import { formatHint } from '../../utils/formatHint.ts';
-import { Composition } from './Composition.tsx';
-import { isKanaVocabulary, isVocabulary } from '../../utils/typeChecks.ts';
-import { useItems } from '../../hooks/useItems.ts';
-import { useKanjiComposition } from '../../hooks/useKanjiComposition.ts';
-import useGlobalEvent from 'beautiful-react-hooks/useGlobalEvent';
-import { TermListEntry } from '../shared/TermListEntry.tsx';
-import { HtmlParagraph } from '../shared/HtmlParagraph.tsx';
+import { type FC, useCallback, useEffect, useState } from "react";
+import { isKatakana, toHiragana } from "wanakana";
+import { WanikaniReading } from "../../wanikani";
+import { formatHint } from "../../utils/formatHint.ts";
+import { Composition } from "./Composition.tsx";
+import { isKanaVocabulary, isVocabulary } from "../../utils/typeChecks.ts";
+import { useItems } from "../../hooks/useItems.ts";
+import { useKanjiComposition } from "../../hooks/useKanjiComposition.ts";
+import useGlobalEvent from "beautiful-react-hooks/useGlobalEvent";
+import { TermListEntry } from "../shared/TermListEntry.tsx";
+import { HtmlParagraph } from "../shared/HtmlParagraph.tsx";
 
 export const InfoTable: FC = () => {
   const { currentItem, isValid } = useItems();
@@ -25,20 +25,20 @@ export const InfoTable: FC = () => {
     setShow(isValid ?? false);
   }, [isValid, currentItem]);
 
-  const onKeyDown = useGlobalEvent<KeyboardEvent>('keydown');
+  const onKeyDown = useGlobalEvent<KeyboardEvent>("keydown");
   onKeyDown((e) => {
-    if (e.key === 's' && e.altKey) {
+    if (e.key === "s" && e.altKey) {
       toggle();
     }
   });
 
   const getReading = (reading: string, allReadings: WanikaniReading[]) => {
-    const containsKatakana = reading.split('').some(isKatakana);
+    const containsKatakana = reading.split("").some(isKatakana);
     if (containsKatakana) {
       const pureHiragana = reading
-        .split('')
+        .split("")
         .map((c) => toHiragana(c))
-        .join('');
+        .join("");
       if (!allReadings.some((r) => r.reading === pureHiragana)) {
         return `${reading} (${pureHiragana})`;
       }
@@ -49,7 +49,7 @@ export const InfoTable: FC = () => {
   return (
     vocabulary && (
       <button
-        className={`w-full ${show ? 'cursor-zoom-out' : 'cursor-zoom-in blur-md'}`}
+        className={`w-full ${show ? "cursor-zoom-out" : "cursor-zoom-in blur-md"}`}
         onClick={() => toggle()}
       >
         <div className="overflow-x-auto">

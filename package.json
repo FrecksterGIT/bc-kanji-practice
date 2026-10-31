@@ -3,11 +3,11 @@
   "private": true,
   "version": "2.12.2",
   "type": "module",
-  "packageManager": "pnpm@12.16.1",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "format": "prettier --write .",
+    "format": "oxfmt",
+    "format:check": "oxfmt --check",
     "lint": "oxlint",
     "preview": "vite preview",
     "semantic-release": "semantic-release",
@@ -35,12 +35,12 @@
     "@types/react": "19.3.0",
     "@types/react-dom": "19.3.0",
     "@vitejs/plugin-react": "6.1.2",
+    "oxfmt": "0.75.0",
     "oxlint": "1.90.0",
-    "prettier": "3.9.10",
-    "prettier-plugin-tailwindcss": "0.8.1",
     "semantic-release": "25.0.9",
     "typescript": "6.0.3",
     "vite": "8.3.5",
     "vitest": "5.0.5"
-  }
+  },
+  "packageManager": "pnpm@12.16.1"
 }

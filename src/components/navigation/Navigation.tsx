@@ -1,12 +1,12 @@
-import { type ChangeEventHandler, type FC, useCallback, useMemo, useState } from 'react';
-import { NavLink, useNavigate } from 'react-router';
-import { Help } from '../shared/icons/Help.tsx';
-import { Menu } from '../shared/icons/Menu.tsx';
-import { HelpOverlay } from './HelpOverlay.tsx';
-import { MobileMenu } from './MobileMenu.tsx';
-import { useSession } from '../../hooks/useSession.ts';
-import { nanoid } from 'nanoid';
-import useGlobalEvent from 'beautiful-react-hooks/useGlobalEvent';
+import { type ChangeEventHandler, type FC, useCallback, useMemo, useState } from "react";
+import { NavLink, useNavigate } from "react-router";
+import { Help } from "../shared/icons/Help.tsx";
+import { Menu } from "../shared/icons/Menu.tsx";
+import { HelpOverlay } from "./HelpOverlay.tsx";
+import { MobileMenu } from "./MobileMenu.tsx";
+import { useSession } from "../../hooks/useSession.ts";
+import { nanoid } from "nanoid";
+import useGlobalEvent from "beautiful-react-hooks/useGlobalEvent";
 
 export const Navigation: FC = () => {
   const navigate = useNavigate();
@@ -19,20 +19,20 @@ export const Navigation: FC = () => {
     (e) => {
       const newLevel = parseInt(e.target.value, 10);
       if (!isNaN(newLevel) && newLevel > 0) {
-        updateSettings('level', newLevel);
+        updateSettings("level", newLevel);
       }
     },
-    [updateSettings]
+    [updateSettings],
   );
 
-  const onKeyDown = useGlobalEvent<KeyboardEvent>('keydown');
+  const onKeyDown = useGlobalEvent<KeyboardEvent>("keydown");
   onKeyDown((e) => {
-    if (e.key === 'ArrowDown' && e.altKey) {
+    if (e.key === "ArrowDown" && e.altKey) {
       const nextLevel = level < maxLevel ? level + 1 : 1;
-      updateSettings('level', nextLevel);
-    } else if (e.key === 'ArrowUp' && e.altKey) {
+      updateSettings("level", nextLevel);
+    } else if (e.key === "ArrowUp" && e.altKey) {
       const prevLevel = level > 1 ? level - 1 : maxLevel;
-      updateSettings('level', prevLevel);
+      updateSettings("level", prevLevel);
     }
   });
 
@@ -50,12 +50,12 @@ export const Navigation: FC = () => {
               <NavLink
                 to="kanji"
                 className={({ isActive }) =>
-                  `rounded px-3 py-2 hover:bg-pink-500 ${isActive ? 'bg-pink-500' : ''}`
+                  `rounded px-3 py-2 hover:bg-pink-500 ${isActive ? "bg-pink-500" : ""}`
                 }
                 onClick={(e) => {
-                  if (sorting === 'randomize') {
+                  if (sorting === "randomize") {
                     e.preventDefault();
-                    navigate('kanji', { state: nanoid() });
+                    navigate("kanji", { state: nanoid() });
                   }
                 }}
               >
@@ -64,12 +64,12 @@ export const Navigation: FC = () => {
               <NavLink
                 to="vocabulary"
                 className={({ isActive }) =>
-                  `rounded px-3 py-2 hover:bg-purple-500 ${isActive ? 'bg-purple-500' : ''}`
+                  `rounded px-3 py-2 hover:bg-purple-500 ${isActive ? "bg-purple-500" : ""}`
                 }
                 onClick={(e) => {
-                  if (sorting === 'randomize') {
+                  if (sorting === "randomize") {
                     e.preventDefault();
-                    navigate('vocabulary', { state: nanoid() });
+                    navigate("vocabulary", { state: nanoid() });
                   }
                 }}
               >
@@ -95,12 +95,12 @@ export const Navigation: FC = () => {
               <NavLink
                 to="marked"
                 className={({ isActive }) =>
-                  `rounded from-pink-500 to-purple-500 px-3 py-2 hover:bg-gradient-to-br ${isActive ? 'bg-gradient-to-br' : ''}`
+                  `rounded from-pink-500 to-purple-500 px-3 py-2 hover:bg-gradient-to-br ${isActive ? "bg-gradient-to-br" : ""}`
                 }
                 onClick={(e) => {
-                  if (sorting === 'randomize') {
+                  if (sorting === "randomize") {
                     e.preventDefault();
-                    navigate('marked', { state: nanoid() });
+                    navigate("marked", { state: nanoid() });
                   }
                 }}
               >
@@ -111,10 +111,10 @@ export const Navigation: FC = () => {
           <NavLink
             to="settings"
             className={({ isActive }) =>
-              `mr-0 rounded px-3 py-2 transition-colors hover:bg-gray-600 ${isActive ? 'bg-gray-600' : ''}`
+              `mr-0 rounded px-3 py-2 transition-colors hover:bg-gray-600 ${isActive ? "bg-gray-600" : ""}`
             }
           >
-            {user?.username ?? 'Settings'}
+            {user?.username ?? "Settings"}
           </NavLink>
           <button
             onClick={() => setIsHelpOpen(true)}

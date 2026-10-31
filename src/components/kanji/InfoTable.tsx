@@ -1,10 +1,10 @@
-import { type FC, useEffect, useState } from 'react';
-import { formatHint } from '../../utils/formatHint.ts';
-import { isKanji } from '../../utils/typeChecks.ts';
-import { useItems } from '../../hooks/useItems.ts';
-import useGlobalEvent from 'beautiful-react-hooks/useGlobalEvent';
-import { TermListEntry } from '../shared/TermListEntry.tsx';
-import { HtmlParagraph } from '../shared/HtmlParagraph.tsx';
+import { type FC, useEffect, useState } from "react";
+import { formatHint } from "../../utils/formatHint.ts";
+import { isKanji } from "../../utils/typeChecks.ts";
+import { useItems } from "../../hooks/useItems.ts";
+import useGlobalEvent from "beautiful-react-hooks/useGlobalEvent";
+import { TermListEntry } from "../shared/TermListEntry.tsx";
+import { HtmlParagraph } from "../shared/HtmlParagraph.tsx";
 
 export const InfoTable: FC = () => {
   const { currentItem, isValid } = useItems();
@@ -15,9 +15,9 @@ export const InfoTable: FC = () => {
     setShow(isValid ?? false);
   }, [isValid]);
 
-  const onKeyDown = useGlobalEvent<KeyboardEvent>('keydown');
+  const onKeyDown = useGlobalEvent<KeyboardEvent>("keydown");
   onKeyDown((e) => {
-    if (e.key === 's' && e.altKey) {
+    if (e.key === "s" && e.altKey) {
       setShow((prev) => !prev);
     }
   });
@@ -25,7 +25,7 @@ export const InfoTable: FC = () => {
   return (
     kanji && (
       <button
-        className={`w-full ${show ? 'cursor-zoom-out' : 'cursor-zoom-in blur-md'}`}
+        className={`w-full ${show ? "cursor-zoom-out" : "cursor-zoom-in blur-md"}`}
         onClick={() => setShow((prev) => !prev)}
       >
         <div className="overflow-x-auto">
@@ -47,7 +47,7 @@ export const InfoTable: FC = () => {
               <tr>
                 <td className="table-content" lang="ja">
                   {kanji.data.readings
-                    .filter((r) => r.type === 'onyomi')
+                    .filter((r) => r.type === "onyomi")
                     .map((reading) => (
                       <TermListEntry
                         key={reading.reading}
@@ -58,7 +58,7 @@ export const InfoTable: FC = () => {
                 </td>
                 <td className="table-content" lang="ja">
                   {kanji.data.readings
-                    .filter((r) => r.type === 'kunyomi')
+                    .filter((r) => r.type === "kunyomi")
                     .map((reading) => (
                       <TermListEntry
                         key={reading.reading}

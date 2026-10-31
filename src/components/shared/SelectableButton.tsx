@@ -1,8 +1,8 @@
-import { type FC, Ref, useCallback, useMemo } from 'react';
-import { NoAnswer } from './icons/NoAnswer.tsx';
-import { CorrectAnswer } from './icons/CorrectAnswer.tsx';
-import { isKanji } from '../../utils/typeChecks.ts';
-import { useItems } from '../../hooks/useItems.ts';
+import { type FC, Ref, useCallback, useMemo } from "react";
+import { NoAnswer } from "./icons/NoAnswer.tsx";
+import { CorrectAnswer } from "./icons/CorrectAnswer.tsx";
+import { isKanji } from "../../utils/typeChecks.ts";
+import { useItems } from "../../hooks/useItems.ts";
 
 interface SelectableButtonProps {
   position: number;
@@ -17,14 +17,14 @@ export const SelectableButton: FC<SelectableButtonProps> = ({ position, onClose,
   const term = items[position].data.characters;
 
   const backgroundColor = useMemo(() => {
-    if (selected) return isKanji(items[position]) ? 'bg-pink-500' : 'bg-purple-500';
-    return valid ? 'text-green-700' : 'text-gray-400';
+    if (selected) return isKanji(items[position]) ? "bg-pink-500" : "bg-purple-500";
+    return valid ? "text-green-700" : "text-gray-400";
   }, [selected, items, position, valid]);
 
   const textColor = useMemo(() => {
-    if (selected) return 'text-white';
-    if (valid) return 'text-green-700';
-    return 'text-gray-400';
+    if (selected) return "text-white";
+    if (valid) return "text-green-700";
+    return "text-gray-400";
   }, [selected, valid]);
 
   const selectByClick = useCallback(() => {
