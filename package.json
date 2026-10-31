@@ -6,9 +6,7 @@
   "scripts": {
     "dev": "vp dev",
     "build": "vp build",
-    "format": "vp fmt",
-    "format:check": "vp fmt --check",
-    "lint": "vp lint",
+    "check": "vp check",
     "preview": "vp preview",
     "semantic-release": "semantic-release",
     "test": "vp test",

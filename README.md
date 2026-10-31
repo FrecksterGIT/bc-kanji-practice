@@ -44,12 +44,12 @@ pnpm run dev
 
 ### Package Scripts
 
-- `vp dev` (or `pnpm run dev`) - Start the development server
-- `vp build` (or `pnpm run build`) - Build the project for production
-- `vp check` - Format and lint the project
+- `pnpm run dev` - Start the development server
+- `pnpm run build` - Build the project for production
+- `pnpm run check` - Format and lint the project
 - `pnpm run typecheck` - Run the TypeScript type checker
-- `vp test` (or `pnpm test`) - Run tests
-- `vp preview` (or `pnpm run preview`) - Preview the production build locally
+- `pnpm run test` - Run tests
+- `pnpm run preview` - Preview the production build locally
 - `pnpm run semantic-release` - Run semantic-release for versioning
 
 ### GitHub Workflow
