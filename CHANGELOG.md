@@ -1,3 +1,9 @@
+# [2.13.0](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.12.2...v2.13.0) (2026-10-31)
+
+### Features
+
+- **tooling:** replace prettier and eslint with ox tools ([#246](https://github.com/FrecksterGIT/bc-kanji-practice/issues/246)) ([9fc8c78](https://github.com/FrecksterGIT/bc-kanji-practice/commit/9fc8c7878dc426a2668662a86182e29ad63c9b86))
+
 ## [2.12.2](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.12.1...v2.12.2) (2026-10-31)
 
 ### Bug Fixes
