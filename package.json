@@ -10,7 +10,9 @@
     "preview": "vp preview",
     "semantic-release": "semantic-release",
     "test": "vp test",
-    "typecheck": "tsc -p tsconfig.app.json --noEmit"
+    "typecheck": "tsc -p tsconfig.app.json --noEmit && tsc -p tsconfig.e2e.json --noEmit",
+    "e2e": "playwright test",
+    "e2e:record": "UPDATE_HAR=1 playwright test e2e/record.setup.ts && vpx e2e/scripts/sanitize-har.ts"
   },
   "dependencies": {
     "async-cache-dedupe": "3.4.0",
@@ -26,6 +28,7 @@
   "devDependencies": {
     "@playwright/cli": "catalog:",
     "@playwright/mcp": "catalog:",
+    "@playwright/test": "catalog:",
     "@semantic-release/changelog": "7.0.0",
     "@semantic-release/commit-analyzer": "13.0.1",
     "@semantic-release/exec": "7.1.0",

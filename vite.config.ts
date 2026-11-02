@@ -9,6 +9,9 @@ export default defineConfig({
       stylesheet: "./src/index.css",
     },
   },
+  test: {
+    exclude: ["**/node_modules/**", "e2e/**"],
+  },
   lint: {
     plugins: ["react", "typescript", "unicorn", "oxc", "vitest"],
     categories: {

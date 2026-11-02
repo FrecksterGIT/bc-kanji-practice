@@ -191,7 +191,10 @@ WaniKani mnemonics contain tags such as `<reading>` and `<kanji>`. `formatHint` 
 
 ## Quality, CI and release
 
-- Tests: Vitest through `vp test`. Only `src/utils/formatHint.spec.ts` exists.
+- **Tests:** two layers.
+  - _Unit tests:_ Vitest through `vp test`. Only `src/utils/formatHint.spec.ts` exists.
+  - _End-to-end tests:_ Playwright Test (`pnpm run e2e`). Five spec files under `e2e/` cover login and sync, answer input, navigation, marking, and settings. They replay a committed HAR file (`e2e/fixtures/wanikani.har`) instead of calling the real WaniKani API, so they run offline and without credentials.
+- **Re-recording the HAR:** run `pnpm run e2e:record` with a valid `wkapikey` in `.env`. The recorder opens the app, logs in, waits for the full sync, and writes the raw HAR. Then `e2e/scripts/sanitize-har.ts` trims it to levels 1–2, replaces account details with fixed values, strips all request headers (including the Authorization header), and fails the script if the API key is still present anywhere in the output.
 - Lint and format: Oxlint (`correctness` = error, not type-aware) and Oxfmt, both through `vp check`.
 - `.github/workflows/pull-request.yml` (PRs to `main`): frozen-lockfile install, check, typecheck, test, build.
 - `.github/workflows/deploy.yml` (push to `main`): the same checks, then `semantic-release`, a production build and an FTP upload of `dist/`. The FTP step needs the secrets `ftp_server`, `ftp_user` and `ftp_password`.

@@ -53,7 +53,9 @@ pnpm run dev
 - `pnpm run build` - Build the project for production
 - `pnpm run check` - Format and lint the project
 - `pnpm run typecheck` - Run the TypeScript type checker
-- `pnpm run test` - Run tests
+- `pnpm run test` - Run unit tests (Vitest)
+- `pnpm run e2e` - Run end-to-end tests (Playwright, HAR-backed, no credentials needed)
+- `pnpm run e2e:record` - Re-record the WaniKani HAR from the real API (requires `wkapikey` in `.env`)
 - `pnpm run preview` - Preview the production build locally
 - `pnpm run semantic-release` - Run semantic-release for versioning
 

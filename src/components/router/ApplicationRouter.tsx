@@ -49,6 +49,10 @@ export const ApplicationRouter: FC = () => {
                 element: <App />,
                 children: [
                   {
+                    index: true,
+                    element: <Navigate to="settings" replace />,
+                  },
+                  {
                     path: "settings",
                     element: <Settings />,
                   },
@@ -66,7 +70,7 @@ export const ApplicationRouter: FC = () => {
   if (loading)
     return (
       <div className="flex min-h-screen flex-col bg-gray-900 text-gray-400">
-        <div className="container mx-auto flex flex-grow items-center justify-center">
+        <div className="container mx-auto flex grow items-center justify-center">
           <div className="text-xl">Updating data... ({loadedCount} resources loaded)</div>
         </div>
       </div>
