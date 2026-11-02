@@ -1,3 +1,9 @@
+# [2.14.0](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.13.3...v2.14.0) (2026-11-02)
+
+### Features
+
+- add Playwright e2e tests with WaniKani HAR fixtures ([5e76ee9](https://github.com/FrecksterGIT/bc-kanji-practice/commit/5e76ee9269511330386626d15069bc904c302451))
+
 ## [2.13.3](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.13.2...v2.13.3) (2026-10-31)
 
 ### Bug Fixes
