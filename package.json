@@ -24,6 +24,8 @@
     "wanakana": "5.3.1"
   },
   "devDependencies": {
+    "@playwright/cli": "catalog:",
+    "@playwright/mcp": "catalog:",
     "@semantic-release/changelog": "7.0.0",
     "@semantic-release/commit-analyzer": "13.0.1",
     "@semantic-release/exec": "7.1.0",
@@ -36,6 +38,7 @@
     "@types/react": "19.3.0",
     "@types/react-dom": "19.3.0",
     "@vitejs/plugin-react": "6.1.2",
+    "playwright": "catalog:",
     "semantic-release": "25.0.9",
     "tailwindcss": "4.3.3",
     "typescript": "7.0.2",

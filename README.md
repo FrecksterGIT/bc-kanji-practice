@@ -3,6 +3,11 @@
 A web application for practicing Japanese kanji and vocabulary using data from WaniKani. This tool helps users improve
 their Japanese language skills through interactive practice sessions.
 
+## Documentation
+
+- [User guide](docs/user-guide.md): setup, practising, settings, shortcuts, troubleshooting
+- [Technical documentation](docs/technical.md): architecture, data flow, CI and release, known limitations
+
 ## Features
 
 - Practice kanji and vocabulary based on WaniKani levels
@@ -17,7 +22,7 @@ their Japanese language skills through interactive practice sessions.
 - **Frontend Framework**: React 19 with TypeScript
 - **Build Tool**: Vite+ (Vite 8, Rolldown, Vitest, Oxlint, and Oxfmt)
 - **Styling**: TailwindCSS 4
-- **Routing**: React Router 7
+- **Routing**: React Router 8
 - **State Management**: React Context API
 - **Data Storage**: IndexedDB (via idb)
 - **API Integration**: WaniKani API
