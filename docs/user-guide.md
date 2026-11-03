@@ -168,8 +168,8 @@ Check that the level has items and turn off **Limit content to currently learned
 **New or changed WaniKani items are missing.**
 Reload the page. The app asks WaniKani for changes at every start. After a long absence a very large update may not be fully picked up on the first reload, so reload once more.
 
-**It stays on "Updating data...".**
-The sync probably failed (network error or a rejected token). Check your connection and key, then reload.
+**The latest WaniKani data is missing after startup.**
+If sync fails, the app opens with the data stored on this device. Check your connection and key, then reload to fetch the latest data.
 
 **Does the app change my WaniKani progress?**
 No. Answers here are not sent to WaniKani and do not count as reviews.

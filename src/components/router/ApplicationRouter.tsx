@@ -4,12 +4,9 @@ import { App } from "../../App.tsx";
 import { Items } from "../pages/Items.tsx";
 import { Settings } from "../pages/Settings.tsx";
 import { useSession } from "../../hooks/useSession.ts";
-import { useWanikani } from "../../hooks/useWanikani.ts";
 
 export const ApplicationRouter: FC = () => {
-  const { loading: sessionLoading, isLoggedIn } = useSession();
-  const { loading: wanikaniLoading, loadedCount } = useWanikani();
-  const loading = sessionLoading || wanikaniLoading;
+  const { isLoggedIn } = useSession();
 
   const routerConfig = useMemo(
     () =>
@@ -67,13 +64,5 @@ export const ApplicationRouter: FC = () => {
     [isLoggedIn],
   );
 
-  if (loading)
-    return (
-      <div className="flex min-h-screen flex-col bg-gray-900 text-gray-400">
-        <div className="container mx-auto flex grow items-center justify-center">
-          <div className="text-xl">Updating data... ({loadedCount} resources loaded)</div>
-        </div>
-      </div>
-    );
   return <RouterProvider router={routerConfig} />;
 };

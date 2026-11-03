@@ -55,14 +55,16 @@ Per `AGENTS.md`: run `vp install` after pulling, and `vp check` and `vp test` be
 
 ```
 src/
-  main.tsx                 mounts SessionProvider > WanikaniProvider > ApplicationRouter
+  main.tsx                 mounts Suspense > SessionProvider > WanikaniProvider > ApplicationRouter
   App.tsx                  layout route: ItemProvider + audio provider + Navigation + <Outlet>
   wanikani.d.ts            types for subjects, assignments, collections, user
   contexts/                SessionContext/Provider, WanikaniContext/Provider, ItemContext/Provider
-  hooks/                   useSession, useWanikani, useItems, useSelectedItems,
-                           useRelatedVocabulary, useKanjiComposition, usePlayVocabulary, ...
-  utils/                   itemDB.ts (IndexedDB), wkLoad.ts (API + cache),
-                           typeChecks.ts (type guards), formatHint.ts (mnemonic markup)
+  hooks/                   useSession, useItems, useSelectedItems, useRelatedVocabulary,
+                           useKanjiComposition, usePlayVocabulary, ...
+  utils/                   itemDB.ts (IndexedDB), wkLoad.ts (API + request cache),
+                           wkSync.ts (sync promise cache), session.ts (startup promise cache),
+                           syncProgress.ts (loading counter store), typeChecks.ts (type guards),
+                           formatHint.ts (mnemonic markup)
   components/
     router/                ApplicationRouter.tsx
     pages/                 Items.tsx (practice), Settings.tsx
@@ -80,13 +82,14 @@ docs/                      this documentation + WaniKani API reference (wanikani
 
 ```
 StrictMode
- └ SessionProvider        settings (IndexedDB), API key validation, user, maxLevel
-    └ WanikaniProvider    sync WaniKani -> IndexedDB, loading screen
-       └ ApplicationRouter
-          └ App           (layout route)
-             └ ItemProvider      current section, item list, selected index, answer validation
-                └ AudioPlayerProvider
-                   └ Navigation + <Outlet>
+ └ Suspense               shared "Updating data..." loading screen
+    └ SessionProvider     settings (IndexedDB), API key validation, user, maxLevel
+       └ WanikaniProvider sync gate for WaniKani -> IndexedDB
+          └ ApplicationRouter
+             └ App           (layout route)
+                └ ItemProvider      current section, item list, selected index, answer validation
+                   └ AudioPlayerProvider
+                      └ Navigation + <Outlet>
 ```
 
 State is plain React Context. There is no state library and no router loader layer.
@@ -103,7 +106,7 @@ State is plain React Context. There is no state library and no router loader lay
 - Logged in: `/` redirects to `/kanji`. Routes are `/kanji`, `/vocabulary`, `/marked`, `/settings`.
 - Logged out: only `/settings` exists and everything else redirects there.
 
-`SessionProvider` renders its children only once the user lookup has finished.
+`SessionProvider` always renders its children once it is active. The shared Suspense boundary in `main.tsx` shows the loading screen while the persisted settings, user lookup, and WaniKani sync promises resolve.
 
 **Logged-out root is blank.** The catch-all `path: "*"` route sits under the `/` layout route and does not match the bare `/`, so a logged-out visit to `/` renders the navigation bar and an empty page instead of redirecting to `/settings`. Any other path redirects correctly. Adding an index route with `<Navigate to="/settings" replace />` would fix it.
 
@@ -111,15 +114,15 @@ State is plain React Context. There is no state library and no router loader lay
 
 A single `fetchFn` sends `GET` with `Authorization: Bearer <apiKey>` and `Wanikani-Revision: 20170710`. A non-2xx response throws. It is registered three times on an in-memory `async-cache-dedupe` cache as `subjects`, `assignments` and `user`, so identical concurrent requests are de-duplicated and repeated ones are cached for the page's lifetime.
 
-### Sync (`src/contexts/WanikaniProvider.tsx`)
+### Sync (`src/utils/wkSync.ts`)
 
 1. Read all subjects and assignments from IndexedDB and take the newest `data_updated_at` of each.
 2. If a newest date exists, request `/subjects` or `/assignments` once with `updated_after=<date>` (incremental update).
 3. Otherwise do a full load: request the first page, then follow `pages.next_url` until it is empty.
 4. Every page is written to IndexedDB (`put`) as it arrives.
-5. While syncing, a full-screen "Updating data... (N resources loaded)" message is shown. `N` counts requests.
+5. While syncing, Suspense shows a full-screen "Updating data... (N resources loaded)" message. `N` counts requests through `syncProgress.ts`, which is an external store so the fallback can update outside the suspended provider tree.
 
-The effect runs again whenever the API key or login state changes.
+`WanikaniProvider` is a thin gate: when logged in, it calls `use(getSync(apiKey))`. The sync promise is cached per API key, so StrictMode retries do not duplicate the sync. Changing the API key creates a new cached promise and suspends until that key's sync completes. If sync fails, the error is logged to the console and the app opens with the data already stored in IndexedDB; the failed key is removed from the sync cache so a later reload can retry.
 
 ### Persistence (`src/utils/itemDB.ts`)
 
@@ -133,7 +136,7 @@ Database `db`, version 1:
 
 The upgrade handler deletes and recreates all stores when the version changes, so a version bump wipes the cached data and the settings, including the API key and marked items.
 
-Persisted settings (`PersistedSettings`, `src/contexts/SessionContext.tsx`): `apiKey`, `limitToLearned`, `limitToCurrentLevel`, `sorting` (`id` | `nextReview` | `randomize`), `level`, `markedItems` (subject ids). They are saved on every change.
+Persisted settings (`PersistedSettings`, `src/contexts/SessionContext.tsx`): `apiKey`, `limitToLearned`, `limitToCurrentLevel`, `sorting` (`id` | `nextReview` | `randomize`), `level`, `markedItems` (subject ids). They are saved on every change. If the saved settings cannot be read, they are cleared and the app starts with the default settings; the API key and marked items must then be entered again.
 
 ### Item selection (`src/hooks/useSelectedItems.ts`)
 
@@ -204,13 +207,13 @@ WaniKani mnemonics contain tags such as `<reading>` and `<kanji>`. `formatHint` 
 
 ## Known limitations
 
-- **Incremental sync is not paginated.** `load()` in `WanikaniProvider.tsx` fetches once when a `updated_after` date exists and ignores `next_url`. A large delta (for example after a long absence) is truncated until a later sync picks up the rest.
+- **Incremental sync is not paginated.** `load()` in `src/utils/wkSync.ts` fetches once when a `updated_after` date exists and ignores `next_url`. A large delta (for example after a long absence) is truncated until a later sync picks up the rest.
 - **The API key is stored unencrypted** in IndexedDB, and the Settings field is a plain `type="text"` input, so the key is visible on screen.
 - **No offline mode** (no service worker or manifest).
 - **Blank page on `/` when logged out** (see [Login and routing](#login-and-routing)).
 - **A database version bump wipes all local data**, including settings.
 - **Duplicate heading on Settings.** Both the limit checkboxes and the sort radios sit under a heading called "Sorting".
-- **A failed sync is not reported.** The loading flag is only cleared in the `.then` of `Promise.all`, so a rejected request can leave the loading screen up.
+- **A failed sync is only reported in the console.** The app opens with locally cached data after a rejected sync request, so the user may see stale data until the next successful reload.
 - **Test coverage is minimal.**
 
 ## Verification status

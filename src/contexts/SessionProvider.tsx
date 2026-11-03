@@ -1,52 +1,38 @@
-import { FC, ReactNode, useCallback, useEffect, useMemo, useState } from "react";
-import { WanikaniUserData } from "../wanikani";
+import { FC, ReactNode, use, useCallback, useEffect, useMemo, useState } from "react";
 import {
   PersistedSettings,
   SessionContext,
   SessionContextType,
   SortSetting,
 } from "./SessionContext.tsx";
-import { wkLoad } from "../utils/wkLoad.ts";
-import { getSettings, saveSettings } from "../utils/itemDB.ts";
+import { saveSettings } from "../utils/itemDB.ts";
+import { getInitialSettings, getUser } from "../utils/session.ts";
 
 interface UserProviderProps {
   children: ReactNode;
 }
 
+const DEFAULT_SETTINGS: PersistedSettings = {
+  apiKey: "",
+  limitToLearned: false,
+  limitToCurrentLevel: false,
+  sorting: SortSetting.id,
+  level: 1,
+  markedItems: [],
+};
+
 export const SessionProvider: FC<UserProviderProps> = ({ children }) => {
-  const [user, setUser] = useState<WanikaniUserData | null>(null);
-  const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
-  const [userLoading, setUserLoading] = useState<boolean>(true);
-  const [settingsLoading, setSettingsLoading] = useState<boolean>(true);
-  const [maxLevel, setMaxLevel] = useState<number>(3);
-  const [persistedSettings, setPersistedSettings] = useState<PersistedSettings>({
-    apiKey: "",
-    limitToLearned: false,
-    limitToCurrentLevel: false,
-    sorting: SortSetting.id,
-    level: 1,
-    markedItems: [],
-  });
+  const storedSettings = use(getInitialSettings());
+  const [persistedSettings, setPersistedSettings] = useState<PersistedSettings>(
+    () => storedSettings ?? DEFAULT_SETTINGS,
+  );
+  const user = use(getUser(persistedSettings.apiKey));
+  const isLoggedIn = !!user;
+  const maxLevel = user?.level ?? 3;
 
   useEffect(() => {
-    setSettingsLoading(true);
-    const loadSettings = async () => {
-      const settings = await getSettings();
-      if (settings) {
-        setPersistedSettings(settings);
-      }
-    };
-
-    loadSettings().then(() => {
-      setSettingsLoading(false);
-    });
-  }, []);
-
-  useEffect(() => {
-    if (persistedSettings && !settingsLoading) {
-      saveSettings(persistedSettings).then();
-    }
-  }, [persistedSettings, settingsLoading]);
+    saveSettings(persistedSettings).then();
+  }, [persistedSettings]);
 
   const updateSettings = useCallback(
     (key: keyof PersistedSettings, value: PersistedSettings[keyof PersistedSettings]) => {
@@ -68,57 +54,17 @@ export const SessionProvider: FC<UserProviderProps> = ({ children }) => {
     [],
   );
 
-  useEffect(() => {
-    if (settingsLoading) {
-      return;
-    }
-    new Promise<void>(() => {
-      if (!persistedSettings.apiKey) {
-        setUser(null);
-        setIsLoggedIn(false);
-        setMaxLevel(3);
-        setUserLoading(false);
-        return;
-      }
-      setUserLoading(true);
-      wkLoad
-        .user({ url: "https://api.wanikani.com/v2/user", apiKey: persistedSettings.apiKey })
-        .then(({ data }) => {
-          setUser(data);
-          setIsLoggedIn(true);
-          setMaxLevel(data.level);
-          setUserLoading(false);
-        })
-        .catch(() => {
-          setUser(null);
-          setIsLoggedIn(false);
-          setMaxLevel(3);
-          setUserLoading(false);
-        });
-    }).then();
-  }, [persistedSettings.apiKey, settingsLoading]);
-
   const value: SessionContextType = useMemo(
     () => ({
       user,
       isLoggedIn,
       maxLevel,
-      loading: userLoading || settingsLoading,
       updateSettings,
       setMarkedItems,
       ...persistedSettings,
     }),
-    [
-      isLoggedIn,
-      maxLevel,
-      persistedSettings,
-      setMarkedItems,
-      settingsLoading,
-      updateSettings,
-      user,
-      userLoading,
-    ],
+    [isLoggedIn, maxLevel, persistedSettings, setMarkedItems, updateSettings, user],
   );
 
-  return <SessionContext value={value}>{!userLoading && children}</SessionContext>;
+  return <SessionContext value={value}>{children}</SessionContext>;
 };
