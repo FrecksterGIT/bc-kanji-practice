@@ -20,7 +20,6 @@ export interface SessionContextType extends PersistedSettings {
   user: WanikaniUserData | null;
   isLoggedIn: boolean;
   maxLevel: number;
-  loading: boolean;
   setMarkedItems: (markedItems: number[] | ((prev: number[]) => number[])) => void;
   updateSettings: (
     key: keyof PersistedSettings,

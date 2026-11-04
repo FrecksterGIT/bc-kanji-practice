@@ -106,6 +106,11 @@ export async function getSettings(): Promise<ItemDB["settings"]["value"] | undef
   return db.get("settings", "settings");
 }
 
+export async function clearSettings(): Promise<void> {
+  const db = await getDB();
+  await db.delete("settings", "settings");
+}
+
 export async function saveSettings(settings: PersistedSettings): Promise<void> {
   const db = await getDB();
   await db.put("settings", { ...settings, key: "settings" });
