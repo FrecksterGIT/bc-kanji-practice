@@ -1,3 +1,13 @@
+# [3.0.0](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.14.0...v3.0.0) (2026-11-04)
+
+### Features
+
+- replace loading state with Suspense and cached sync promises ([#248](https://github.com/FrecksterGIT/bc-kanji-practice/issues/248)) ([8d40f2e](https://github.com/FrecksterGIT/bc-kanji-practice/commit/8d40f2e0558c044ed7bbb618d975cb1bf2768018))
+
+### BREAKING CHANGES
+
+- The previous loading-state behavior has been removed in favor of Suspense.
+
 # [2.14.0](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.13.3...v2.14.0) (2026-11-02)
 
 ### Features
