@@ -2,7 +2,7 @@
 
 Kanji Practice helps you drill the readings of the kanji and vocabulary you study in [WaniKani](https://www.wanikani.com). You type the reading, the app tells you whether it is right, and then shows the meanings, readings and mnemonics.
 
-> The screenshots were taken from the running app (v2.13.3) in a 1280 px wide browser window. Your username and API key are masked.
+> The screenshots were taken from the running app (v2.14.0) in a 1280 px wide browser window (390 px for the phone screens). Your username and API key are masked.
 
 ## What you need
 
@@ -12,13 +12,13 @@ Kanji Practice helps you drill the readings of the kanji and vocabulary you stud
 
 ## 1. Get started
 
-1. Open the app and go to **Settings**. Until you have a valid key, Settings is the only page. If you land on a blank page with only the "Settings" link in the top bar, click that link.
+1. Open the app and go to **Settings**. Until you have a valid key, Settings is the only page.
 2. In WaniKani, open your account settings, go to API tokens and create or copy a token.
 3. Paste the token into **API Key** and click **Save**.
 
    ![Settings page before login](images/01-settings-logged-out.png)
 
-4. The app checks the token. If it is valid, your username replaces "Settings" in the top bar and the **Kanji**, **Vocabulary** and **Marked Items** links appear.
+4. The app checks the token while the "Updating data..." screen is shown. If it is valid, your username replaces "Settings" in the top bar and the **Kanji**, **Vocabulary** and **Marked Items** links appear.
 5. The first time, the app downloads all WaniKani content. A full-screen message "Updating data... (N resources loaded)" shows progress. Later starts only fetch what changed.
 
    ![Updating data screen](images/02-updating-data.png)
@@ -155,9 +155,6 @@ The keyboard shortcuts need a keyboard, so on a phone use the on-screen controls
 | Esc          | Close the help overlay, menu or item list     |
 
 ## 9. Troubleshooting and FAQ
-
-**I only see a blank page with a "Settings" link.**
-You have no valid key yet. Click **Settings** and save your token.
 
 **Only Settings is available.**
 No key is saved, or WaniKani rejected it. Create a new token and save it again.
