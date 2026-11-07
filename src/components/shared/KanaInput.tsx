@@ -3,6 +3,7 @@ import { toHiragana } from "wanakana";
 import { Correct } from "./icons/Correct.tsx";
 import { useItems } from "../../hooks/useItems.ts";
 import useGlobalEvent from "beautiful-react-hooks/useGlobalEvent";
+import { toSubmittedReading } from "../../utils/kanaInput.ts";
 
 interface KanaInputProps {
   placeholder?: string;
@@ -53,7 +54,7 @@ export const KanaInput: FC<KanaInputProps> = ({
   const handleSubmit: FormEventHandler<HTMLFormElement> = useCallback(
     (event) => {
       event.preventDefault();
-      const result = validate(internalValue);
+      const result = validate(toSubmittedReading(internalValue));
       if (validationFeedback === 2) {
         moveToNext();
       } else {
