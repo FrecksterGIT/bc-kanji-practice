@@ -3,13 +3,13 @@ import { FC, RefObject, useEffect, useRef, useState } from "react";
 import { Audio } from "./icons/Audio.tsx";
 import { MarkButton } from "./MarkButton.tsx";
 import { useItems } from "../../hooks/useItems.ts";
-import { isKanji, isVocabulary } from "../../utils/typeChecks.ts";
+import { isKanaVocabulary, isKanji, isVocabulary } from "../../utils/typeChecks.ts";
 import { usePlayVocabulary } from "../../hooks/usePlayVocabulary.ts";
 import useSwipe from "beautiful-react-hooks/useSwipe";
 
 export const MainTerm: FC = () => {
   const { currentItem, setSelectedIndex, items } = useItems();
-  const isVocab = isVocabulary(currentItem);
+  const hasAudio = isVocabulary(currentItem) || isKanaVocabulary(currentItem);
   const borderColor = isKanji(currentItem) ? "border-b-pink-400" : "border-b-purple-400";
   const { playAudio } = usePlayVocabulary(currentItem);
   const ref = useRef<HTMLDivElement>(null);
@@ -45,7 +45,7 @@ export const MainTerm: FC = () => {
         {currentItem.data.characters}
       </div>
       <div className="absolute top-2 right-2 flex gap-1">
-        {isVocab && (
+        {hasAudio && (
           <button onClick={playAudio} className="cursor-pointer">
             <Audio />
           </button>
