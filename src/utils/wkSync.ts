@@ -59,16 +59,13 @@ async function load<T extends BasicDataType = BasicDataType>(
   const url = new URL(resources[type], baseUrl);
   if (latest) {
     url.searchParams.set("updated_after", latest);
-    await fetcher<T>(apiKey, url.toString(), type).then();
-  } else {
-    const result = await fetcher<T>(apiKey, url.toString(), type);
-    if (result.next_url) {
-      let next = result.next_url;
-      while (next) {
-        const nextData = await fetcher<T>(apiKey, next, type);
-        next = nextData.next_url!;
-      }
-    }
+  }
+  // Incremental and full syncs both follow next_url: WaniKani pages at 500 items, and
+  // next_url keeps the updated_after filter, so an incremental sync can span many pages.
+  let next: string | null | undefined = url.toString();
+  while (next) {
+    const page: { next_url?: string | null } = await fetcher<T>(apiKey, next, type);
+    next = page.next_url;
   }
 }
 
