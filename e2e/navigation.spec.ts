@@ -1,10 +1,14 @@
 import { test, expect } from "./support/test.ts";
 
-test("level dropdown lists levels 1 and 2", async ({ page, loggedIn: _loggedIn }) => {
+test("level dropdown lists levels 1 up to the subscription cap", async ({
+  page,
+  loggedIn: _loggedIn,
+}) => {
+  // Fixture: level 2 account with subscription.max_level_granted 60.
   const select = page.locator("#level-select");
-  await expect(select.locator("option")).toHaveCount(2);
+  await expect(select.locator("option")).toHaveCount(60);
   await expect(select.locator("option").nth(0)).toHaveText("1");
-  await expect(select.locator("option").nth(1)).toHaveText("2");
+  await expect(select.locator("option").nth(59)).toHaveText("60");
 });
 
 test("Alt+Down advances to next level", async ({ page, loggedIn: _loggedIn }) => {
@@ -14,11 +18,11 @@ test("Alt+Down advances to next level", async ({ page, loggedIn: _loggedIn }) =>
   await expect(select).toHaveValue("2");
 });
 
-test("Alt+Up wraps from level 1 to level 2", async ({ page, loggedIn: _loggedIn }) => {
+test("Alt+Up wraps from level 1 to the highest level", async ({ page, loggedIn: _loggedIn }) => {
   const select = page.locator("#level-select");
   await expect(select).toHaveValue("1");
   await page.keyboard.press("Alt+ArrowUp");
-  await expect(select).toHaveValue("2");
+  await expect(select).toHaveValue("60");
 });
 
 test("Alt+A opens item list", async ({ page, loggedIn: _loggedIn }) => {
