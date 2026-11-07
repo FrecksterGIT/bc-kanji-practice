@@ -27,27 +27,26 @@ interface ItemDB extends DBSchema {
 
 async function getDB() {
   return openDB<ItemDB>("db", 1, {
-    upgrade(database, oldVersion, newVersion) {
-      if (oldVersion !== newVersion && oldVersion !== 0) {
-        database.deleteObjectStore("subjects");
-        database.deleteObjectStore("assignments");
-        database.deleteObjectStore("settings");
+    upgrade(database, oldVersion) {
+      // Version 1: initial schema. Future versions add their own `if (oldVersion < n)` block
+      // and must never drop "settings", which holds the API key and marked items.
+      if (oldVersion < 1) {
+        const subjectStore = database.createObjectStore("subjects", {
+          keyPath: "id",
+          autoIncrement: false,
+        });
+        subjectStore.createIndex("level", "data.level");
+
+        database.createObjectStore("assignments", {
+          keyPath: "id",
+          autoIncrement: false,
+        });
+
+        database.createObjectStore("settings", {
+          keyPath: "key",
+          autoIncrement: false,
+        });
       }
-      const subjectStore = database.createObjectStore("subjects", {
-        keyPath: "id",
-        autoIncrement: false,
-      });
-      subjectStore.createIndex("level", "data.level");
-
-      database.createObjectStore("assignments", {
-        keyPath: "id",
-        autoIncrement: false,
-      });
-
-      database.createObjectStore("settings", {
-        keyPath: "key",
-        autoIncrement: false,
-      });
     },
   });
 }

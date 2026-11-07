@@ -7,6 +7,16 @@ import {
   WanikaniUserData,
 } from "../wanikani";
 
+export class WanikaniHttpError extends Error {
+  constructor(
+    readonly status: number,
+    statusText: string,
+  ) {
+    super(`Error fetching data: ${statusText}`);
+    this.name = "WanikaniHttpError";
+  }
+}
+
 const fetchFn = async <T>({ url, apiKey }: { url: string; apiKey: string }): Promise<T> => {
   const response = await fetch(url, {
     method: "GET",
@@ -17,7 +27,7 @@ const fetchFn = async <T>({ url, apiKey }: { url: string; apiKey: string }): Pro
     },
   });
   if (!response.ok) {
-    throw new Error(`Error fetching data: ${response.statusText}`);
+    throw new WanikaniHttpError(response.status, response.statusText);
   }
   return response.json();
 };
