@@ -20,7 +20,6 @@ Kanji Practice is a client-side single-page app for drilling kanji and vocabular
 | Styling         | Tailwind CSS 4 via `@tailwindcss/vite` (`src/index.css`)                  |
 | Routing         | `react-router` 8                                                          |
 | Storage         | IndexedDB via `idb`                                                       |
-| HTTP cache      | `async-cache-dedupe` (in-memory, de-duplicates requests)                  |
 | Kana input      | `wanakana`                                                                |
 | Audio           | `react-use-audio-player`                                                  |
 | Misc hooks      | `beautiful-react-hooks` (`useGlobalEvent`, `useResizeObserver`), `nanoid` |
@@ -64,8 +63,8 @@ src/
                            WanikaniContext.ts (API base URL, resource paths, ResourceType; no React context)
   hooks/                   useSession, useItems, useSelectedItems, useRelatedVocabulary,
                            useKanjiComposition, usePlayVocabulary, ...
-  utils/                   itemDB.ts (IndexedDB), wkLoad.ts (API + request cache),
-                           wkSync.ts (sync promise cache), session.ts (startup promise cache),
+  utils/                   itemDB.ts (IndexedDB), wkLoad.ts (API client with backoff),
+                           wkSync.ts (resumable sync, cached per key), session.ts (startup promise cache),
                            syncProgress.ts (loading counter store), typeChecks.ts (type guards),
                            formatHint.ts (mnemonic markup)
   components/
@@ -117,29 +116,33 @@ The user lookup is cached per API key in `session.ts`. A failed lookup (network 
 
 ### API client (`src/utils/wkLoad.ts`)
 
-A single `fetchFn` sends `GET` with `Authorization: Bearer <apiKey>` and `Wanikani-Revision: 20170710`. A non-2xx response throws. It is registered three times on an in-memory `async-cache-dedupe` cache as `subjects`, `assignments` and `user`. The cache TTL is the library default of 0 seconds, so it only de-duplicates identical requests that are in flight at the same time; a finished response is not kept. The per-key caching happens one level up: `getUser` (`session.ts`) and `getSync` (`wkSync.ts`) each keep one promise per API key for the page's lifetime.
+A single `fetchFn` sends `GET` with `Authorization: Bearer <apiKey>` and `Wanikani-Revision: 20170710` and is exposed as `wkLoad.subjects`, `wkLoad.assignments` and `wkLoad.user`. There is no request cache. Responses with status 429 or 5xx are retried up to three times. For 429 it waits until the `RateLimit-Reset` time (at most 60 seconds); otherwise it backs off 1, 2 and 4 seconds. Other non-2xx responses (for example 401) throw `WanikaniHttpError` at once, and network failures (`fetch` rejecting) are not retried. The per-key caching happens one level up: `getUser` (`session.ts`) and `getSync` (`wkSync.ts`) each keep one promise per API key for the page's lifetime.
 
 ### Sync (`src/utils/wkSync.ts`)
 
-1. Read all subjects and assignments from IndexedDB and take the newest `data_updated_at` of each.
+1. Read the "last synced" timestamp of each resource and the stored sync scope from the `meta` store. A resource whose timestamp is less than `SYNC_MAX_AGE_MS` (12 hours) old is skipped, and a resource without one gets a full sync. Skipped resources are not requested and their timestamps are not touched, so the next load after 12 hours syncs them. The scope is `<user id>:<max_level_granted>` (`syncScopeFor`). If it differs from the current account's, every timestamp is ignored: both resources get a full sync, and assignments are cleared first, because they belong to one account. The scope is written only after both resources finish. The user lookup (`/v2/user`) is not part of this step and runs on every page load (see `getUser` above).
 2. Load subjects (`/v2/subjects?types=kanji,vocabulary,kana_vocabulary`) and assignments (`/v2/assignments?started=true`) in parallel (`Promise.allSettled`).
-3. Per resource: if a newest date exists, request it once with `updated_after=<date>` (incremental update, not paginated). Otherwise do a full load: request the first page, then follow `pages.next_url` until it is empty.
+3. Per resource: request the first page (with `updated_after=<timestamp>` for an incremental sync), then follow `pages.next_url` until it is empty. This applies to full and incremental syncs alike.
 4. Every page is written to IndexedDB (`put`) as it arrives.
-5. While syncing, Suspense shows a full-screen "Updating data... (N resources loaded)" message. `N` counts requests through `syncProgress.ts`, which is an external store so the fallback can update outside the suspended provider tree.
+5. Only after the last page of a resource is stored, its timestamp is written to `meta`. The value is the client clock from before the first request, minus a five-minute margin for clock skew and items that changed during the run. A run that stops half-way therefore leaves the old timestamp in place and the next run starts again from there; nothing is skipped.
+6. While syncing, Suspense shows a full-screen "Updating data... (N resources loaded)" message. `N` counts requests through `syncProgress.ts`, which is an external store so the fallback can update outside the suspended provider tree.
 
-`WanikaniProvider` is a thin gate: when logged in, it calls `use(getSync(apiKey))`. The sync promise is cached per API key, so StrictMode retries do not duplicate the sync. Changing the API key creates a new cached promise and suspends until that key's sync completes, so saving a new key in Settings shows the loading screen: first the user lookup, then the sync. If sync fails, the error is logged to the console and the app opens with the data already stored in IndexedDB. The key is also recorded in `failedSyncKeys`, so it is not retried in the same page session, even if it is saved again. Only a reload retries.
+`getSync` resolves to a `SyncResult`: `{ status: "ok" }` or `{ status: "failed", error }`. It never rejects.
+
+`WanikaniProvider` gates on it: when logged in, it calls `use(getSync(apiKey, syncScopeFor(user)))`. The result is cached per API key, so StrictMode retries do not duplicate the sync. Changing the API key creates a new cached result and suspends until that key's sync completes, so saving a new key in Settings shows the loading screen: first the user lookup, then the sync. On a reload within 12 hours of the last sync, the sync resolves at once without requests, so only the user lookup remains and the loading screen is barely visible. If the sync failed, the error is logged to the console, a red banner ("Updating data from WaniKani failed...") with a **Try again** button appears above the app, and the app keeps working with the data already in IndexedDB. **Try again** calls `retrySync(apiKey)` and remounts the children, so the item hooks read the new data.
 
 ### Persistence (`src/utils/itemDB.ts`)
 
-Database `db`, version 1:
+Database `db`, version 2:
 
-| Object store  | Key                         | Notes                         |
-| ------------- | --------------------------- | ----------------------------- |
-| `subjects`    | `id`                        | index `level` on `data.level` |
-| `assignments` | `id`                        |                               |
-| `settings`    | `key` (always `"settings"`) | one record                    |
+| Object store  | Key                         | Notes                                        |
+| ------------- | --------------------------- | -------------------------------------------- |
+| `subjects`    | `id`                        | index `level` on `data.level`                |
+| `assignments` | `id`                        |                                              |
+| `settings`    | `key` (always `"settings"`) | one record                                   |
+| `meta`        | `key`                       | `syncedAt:<resource>` and `syncScope` values |
 
-The upgrade handler deletes and recreates all stores when the version changes, so a version bump wipes the cached data and the settings, including the API key and marked items.
+The upgrade handler has one `if (oldVersion < n)` block per version and never drops `settings`. Version 2 adds `meta`. Because an upgraded database has no `syncedAt` values, the first start after the upgrade does a full sync, which also re-fetches anything an older, truncated incremental sync missed.
 
 Persisted settings (`PersistedSettings`, `src/contexts/SessionContext.tsx`): `apiKey`, `limitToLearned`, `limitToCurrentLevel`, `sorting` (`id` | `nextReview` | `randomize`), `level`, `markedItems` (subject ids). They are saved on every change. If the saved settings cannot be read, they are cleared and the app starts with the default settings; the API key and marked items must then be entered again.
 
@@ -200,7 +203,7 @@ WaniKani mnemonics contain tags such as `<reading>` and `<kanji>`. `formatHint` 
 ## Quality, CI and release
 
 - **Tests:** two layers.
-  - _Unit tests:_ Vitest through `vp test`. Three specs in `src/utils/`: `formatHint.spec.ts` (mnemonic markup), `session.spec.ts` (saved settings are read, and cleared when the read fails) and `syncProgress.spec.ts` (the loading counter store). Vitest excludes `e2e/**`. The sync logic in `wkSync.ts` has no unit tests.
+  - _Unit tests:_ Vitest through `vp test`. Specs sit next to their sources in `src/`; the sync-related ones are `wkSync.spec.ts` (pagination, resume, the 12-hour freshness rule, the scope guard, failure and retry), `wkLoad.spec.ts` (429/5xx backoff) and `syncProgress.spec.ts` (the loading counter store). Vitest excludes `e2e/**`.
   - _End-to-end tests:_ Playwright Test (`pnpm run e2e`). Five spec files under `e2e/` cover login and sync, answer input, navigation, marking, and settings. They replay a committed HAR file (`e2e/fixtures/wanikani.har`) instead of calling the real WaniKani API, so they run offline and without credentials. `playwright.config.ts` runs Chromium only at 1280x800 and starts `pnpm run dev` on port 5173; it reuses a dev server that is already running, except in CI.
 - **Re-recording the HAR:** run `pnpm run e2e:record` with a valid `wkapikey` in `.env`. The recorder opens the app, logs in, waits for the full sync, and writes the raw HAR. Then `e2e/scripts/sanitize-har.ts` trims it to levels 1–2, replaces account details with fixed values, strips all request headers (including the Authorization header), and fails the script if the API key is still present anywhere in the output.
 - Lint and format: Oxlint (`correctness` = error, not type-aware) and Oxfmt, both through `vp check`.
@@ -213,14 +216,11 @@ WaniKani mnemonics contain tags such as `<reading>` and `<kanji>`. `formatHint` 
 
 ## Known limitations
 
-- **Incremental sync is not paginated.** `load()` in `src/utils/wkSync.ts` fetches once when a `updated_after` date exists and ignores `next_url`. A large delta (for example after a long absence) is truncated until a later sync picks up the rest.
 - **The API key is stored unencrypted** in IndexedDB, and the Settings field is a plain `type="text"` input, so the key is visible on screen.
 - **No offline mode** (no service worker or manifest).
-- **A database version bump wipes all local data**, including settings.
 - **Duplicate heading on Settings.** Both the limit checkboxes and the sort radios sit under a heading called "Sorting".
-- **A failed sync is only reported in the console.** The app opens with locally cached data after a rejected sync request. That key is not synced again until the page reloads, so the user may see stale data until then.
 - **A failed token check is remembered until reload.** Re-saving the same key does not look it up again.
-- **Test coverage is minimal.** `wkSync.ts` (sync, including its failure handling) and `wkLoad.ts` (the API client) have no unit tests. The e2e suite exercises them only through the replayed HAR.
+- **Test coverage is partial.** There are no unit tests for the item hooks (`useSelectedItems`, `ItemProvider`) or for `itemDB.ts` itself (the DB upgrade path is untested).
 
 ## Verification status
 
