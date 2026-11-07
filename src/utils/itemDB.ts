@@ -110,6 +110,18 @@ export async function clearSettings(): Promise<void> {
   await db.delete("settings", "settings");
 }
 
+/** Removes everything stored in this browser: cached WaniKani data, settings and marks. */
+export async function clearLocalData(): Promise<void> {
+  const db = await getDB();
+  const tx = db.transaction(["subjects", "assignments", "settings"], "readwrite");
+  await Promise.all([
+    tx.objectStore("subjects").clear(),
+    tx.objectStore("assignments").clear(),
+    tx.objectStore("settings").clear(),
+  ]);
+  await tx.done;
+}
+
 export async function saveSettings(settings: PersistedSettings): Promise<void> {
   const db = await getDB();
   await db.put("settings", { ...settings, key: "settings" });
