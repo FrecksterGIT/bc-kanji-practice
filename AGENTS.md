@@ -10,6 +10,10 @@ Docs are local at `node_modules/vite-plus/docs` or online at https://viteplus.de
 
 `vp <name>` runs a built-in command. `vp run <name>` runs a `package.json` script or a `vite.config.ts` task. Scripts cannot overwrite built-ins, so `vp dev` and `vp run dev` may do different things. Check `package.json` and `vite.config.ts` first, and run `vp run <name>` when the project defines a script or task with that name.
 
+### Prefer pnpm scripts
+
+Check the `scripts` in `package.json` first. When a matching script exists, run it with `pnpm <script>` (for example `pnpm check`, `pnpm test`, `pnpm build`, `pnpm dev`, `pnpm typecheck`, `pnpm e2e`) instead of calling `vp` directly. Call `vp` directly only when no script exists, for example `vp install`, `vp env doctor`, `vp toolchain`, `vp why`, or `vp help`.
+
 ## Running Scripts
 
 Run TypeScript and JavaScript files with `vpx <file>`, for example `vpx ./scripts/seed.ts --dry-run`. It handles enums, decorators, JSX, and tsconfig `paths`, so do not add `tsx` or `ts-node` to run scripts. `vpx --watch <file>` reruns the file when a file it uses changes, in place of `tsx watch`. `vp node <file>` runs plain Node.js.
@@ -24,8 +28,8 @@ release. Add a tool name to select part of the graph. For example, run
 ## Review Checklist
 
 - [ ] Run `vp install` after pulling remote changes and before getting started.
-- [ ] Run `vp check` and `vp test` to format, lint, type check and test changes.
-- [ ] Check if there are `vite.config.ts` tasks or `package.json` scripts necessary for validation, run via `vp run <script>`.
+- [ ] Run `pnpm check` and `pnpm test` to format, lint, type check and test changes. Run `pnpm typecheck` for the full tsc check, since the `check` script alone may not cover the e2e tsconfig.
+- [ ] Scripts in `package.json` are the default entry point for validation. Run any other script needed for validation via `pnpm <script>`, and use `vp run <script>` only for `vite.config.ts` tasks that have no `package.json` script.
 - [ ] If setup, runtime, or package-manager behavior looks wrong, run `vp env doctor` and include its output when asking for help.
 
 <!--VITE PLUS END-->
