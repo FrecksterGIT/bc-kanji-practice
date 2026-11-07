@@ -31,3 +31,6 @@ dist-ssr
 # Playwright test output
 test-results/
 playwright-report/
+
+# IntelliJ module file
+*.iml

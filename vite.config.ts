@@ -1,6 +1,9 @@
+import { readFileSync } from "node:fs";
 import { defineConfig, lazyPlugins } from "vite-plus";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
+
+const packageJson = JSON.parse(readFileSync(new URL("./package.json", import.meta.url), "utf8"));
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -39,7 +42,7 @@ export default defineConfig({
   },
   plugins: lazyPlugins(() => [react(), tailwindcss()]),
   define: {
-    __APP_VERSION__: JSON.stringify(process.env.npm_package_version),
+    __APP_VERSION__: JSON.stringify(packageJson.version),
   },
   build: {
     rolldownOptions: {
