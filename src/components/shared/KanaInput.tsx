@@ -2,7 +2,7 @@ import { useState, ChangeEvent, useCallback, useEffect, FC, useRef, FormEventHan
 import { toHiragana } from "wanakana";
 import { Correct } from "./icons/Correct.tsx";
 import { useItems } from "../../hooks/useItems.ts";
-import useGlobalEvent from "beautiful-react-hooks/useGlobalEvent";
+import { useGlobalEvent } from "../../hooks/useGlobalEvent.ts";
 import { toSubmittedReading } from "../../utils/kanaInput.ts";
 
 interface KanaInputProps {
@@ -27,9 +27,7 @@ export const KanaInput: FC<KanaInputProps> = ({
     ref.current?.focus();
   }, [currentItem]);
 
-  const onClickAnywhere = useGlobalEvent<MouseEvent>("click");
-  // oxlint-disable-next-line react/refs
-  onClickAnywhere((e) => {
+  useGlobalEvent("click", (e) => {
     const target = e.target as HTMLElement;
     if (ref.current && target.tagName !== "SELECT") {
       ref.current.focus();

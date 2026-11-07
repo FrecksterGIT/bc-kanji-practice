@@ -1,10 +1,10 @@
-import { type FC, RefObject, useEffect, useRef, useState } from "react";
+import { type FC, useEffect, useRef, useState } from "react";
 import { SelectableButton } from "./SelectableButton.tsx";
 import { isKanji } from "../../utils/typeChecks.ts";
 import { useItems } from "../../hooks/useItems.ts";
 import { Close } from "./icons/Close.tsx";
-import useGlobalEvent from "beautiful-react-hooks/useGlobalEvent";
-import useResizeObserver from "beautiful-react-hooks/useResizeObserver";
+import { useGlobalEvent } from "../../hooks/useGlobalEvent.ts";
+import { useResizeObserver } from "../../hooks/useResizeObserver.ts";
 import { useOnClickOutside } from "../../hooks/useOnClickOutside.ts";
 
 interface ListProps {
@@ -19,8 +19,7 @@ export const List: FC<ListProps> = ({ onClose }) => {
   const [itemsPerRow, setItemsPerRow] = useState(0);
   const borderColor = isKanji(currentItem) ? "border-t-pink-400" : "border-t-purple-400";
 
-  const onKeyDown = useGlobalEvent<KeyboardEvent>("keydown");
-  onKeyDown((e) => {
+  useGlobalEvent("keydown", (e) => {
     switch (e.key) {
       case "Escape":
       case "Enter":
@@ -60,7 +59,7 @@ export const List: FC<ListProps> = ({ onClose }) => {
 
   useOnClickOutside(containerRef, onClose);
 
-  const listDimensions = useResizeObserver(listRef as RefObject<HTMLDivElement>);
+  const listDimensions = useResizeObserver(listRef);
   useEffect(() => {
     if (buttonRef.current && listDimensions?.width) {
       const buttonWidth = buttonRef.current.offsetWidth;

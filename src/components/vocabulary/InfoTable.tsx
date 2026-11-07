@@ -6,7 +6,7 @@ import { Composition } from "./Composition.tsx";
 import { isKanaVocabulary, isVocabulary } from "../../utils/typeChecks.ts";
 import { useItems } from "../../hooks/useItems.ts";
 import { useKanjiComposition } from "../../hooks/useKanjiComposition.ts";
-import useGlobalEvent from "beautiful-react-hooks/useGlobalEvent";
+import { useGlobalEvent } from "../../hooks/useGlobalEvent.ts";
 import { TermListEntry } from "../shared/TermListEntry.tsx";
 import { HtmlParagraph } from "../shared/HtmlParagraph.tsx";
 
@@ -25,8 +25,7 @@ export const InfoTable: FC = () => {
     setShow(isValid ?? false);
   }, [isValid, currentItem]);
 
-  const onKeyDown = useGlobalEvent<KeyboardEvent>("keydown");
-  onKeyDown((e) => {
+  useGlobalEvent("keydown", (e) => {
     if (e.key === "s" && e.altKey) {
       toggle();
     }

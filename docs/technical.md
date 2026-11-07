@@ -13,18 +13,18 @@ Kanji Practice is a client-side single-page app for drilling kanji and vocabular
 
 ## Tech stack
 
-| Area            | Choice                                                                    |
-| --------------- | ------------------------------------------------------------------------- |
-| UI              | React 19, TypeScript                                                      |
-| Toolchain       | Vite+ (`vp` CLI: Vite, Rolldown, Vitest, Oxlint, Oxfmt)                   |
-| Styling         | Tailwind CSS 4 via `@tailwindcss/vite` (`src/index.css`)                  |
-| Routing         | `react-router` 8                                                          |
-| Storage         | IndexedDB via `idb`                                                       |
-| Kana input      | `wanakana`                                                                |
-| Audio           | `react-use-audio-player`                                                  |
-| Misc hooks      | `beautiful-react-hooks` (`useGlobalEvent`, `useResizeObserver`), `nanoid` |
-| Package manager | pnpm                                                                      |
-| Release         | semantic-release (conventional commits)                                   |
+| Area            | Choice                                                   |
+| --------------- | -------------------------------------------------------- |
+| UI              | React 19, TypeScript                                     |
+| Toolchain       | Vite+ (`vp` CLI: Vite, Rolldown, Vitest, Oxlint, Oxfmt)  |
+| Styling         | Tailwind CSS 4 via `@tailwindcss/vite` (`src/index.css`) |
+| Routing         | `react-router` 8                                         |
+| Storage         | IndexedDB via `idb`                                      |
+| Kana input      | `wanakana`                                               |
+| Audio           | `react-use-audio-player`                                 |
+| Misc hooks      | In-house hooks (`src/hooks`), `nanoid`                   |
+| Package manager | pnpm                                                     |
+| Release         | semantic-release (conventional commits)                  |
 
 Exact versions are in `package.json`.
 

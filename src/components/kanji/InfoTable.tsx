@@ -2,7 +2,7 @@ import { type FC, useEffect, useState } from "react";
 import { formatHint } from "../../utils/formatHint.ts";
 import { isKanji } from "../../utils/typeChecks.ts";
 import { useItems } from "../../hooks/useItems.ts";
-import useGlobalEvent from "beautiful-react-hooks/useGlobalEvent";
+import { useGlobalEvent } from "../../hooks/useGlobalEvent.ts";
 import { TermListEntry } from "../shared/TermListEntry.tsx";
 import { HtmlParagraph } from "../shared/HtmlParagraph.tsx";
 
@@ -15,8 +15,7 @@ export const InfoTable: FC = () => {
     setShow(isValid ?? false);
   }, [isValid]);
 
-  const onKeyDown = useGlobalEvent<KeyboardEvent>("keydown");
-  onKeyDown((e) => {
+  useGlobalEvent("keydown", (e) => {
     if (e.key === "s" && e.altKey) {
       setShow((prev) => !prev);
     }

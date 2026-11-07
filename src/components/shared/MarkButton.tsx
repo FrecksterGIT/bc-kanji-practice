@@ -4,7 +4,7 @@ import { useItems } from "../../hooks/useItems.ts";
 import { Tooltip } from "./Tooltip.tsx";
 import { BookmarkEmpty } from "./icons/BookmarkEmpty.tsx";
 import { BookmarkFilled } from "./icons/BookmarkFilled.tsx";
-import useGlobalEvent from "beautiful-react-hooks/useGlobalEvent";
+import { useGlobalEvent } from "../../hooks/useGlobalEvent.ts";
 import { useHover } from "../../hooks/useHover.ts";
 
 export const MarkButton: FC = () => {
@@ -23,8 +23,7 @@ export const MarkButton: FC = () => {
     }
   }, [isMarked, currentItem, setMarkedItems]);
 
-  const onKeyDown = useGlobalEvent<KeyboardEvent>("keydown");
-  onKeyDown((e) => {
+  useGlobalEvent("keydown", (e) => {
     if (e.key === "m" && e.altKey) {
       handleMark();
     }

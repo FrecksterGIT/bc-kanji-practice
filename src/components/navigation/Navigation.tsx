@@ -6,7 +6,7 @@ import { HelpOverlay } from "./HelpOverlay.tsx";
 import { MobileMenu } from "./MobileMenu.tsx";
 import { useSession } from "../../hooks/useSession.ts";
 import { nanoid } from "nanoid";
-import useGlobalEvent from "beautiful-react-hooks/useGlobalEvent";
+import { useGlobalEvent } from "../../hooks/useGlobalEvent.ts";
 
 export const Navigation: FC = () => {
   const navigate = useNavigate();
@@ -25,8 +25,7 @@ export const Navigation: FC = () => {
     [updateSettings],
   );
 
-  const onKeyDown = useGlobalEvent<KeyboardEvent>("keydown");
-  onKeyDown((e) => {
+  useGlobalEvent("keydown", (e) => {
     if (e.key === "ArrowDown" && e.altKey) {
       const nextLevel = level < maxLevel ? level + 1 : 1;
       updateSettings("level", nextLevel);

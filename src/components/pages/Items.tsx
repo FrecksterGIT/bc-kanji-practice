@@ -6,7 +6,7 @@ import { useItems } from "../../hooks/useItems.ts";
 import { Section } from "../../contexts/ItemContext.tsx";
 import { AngleDown } from "../shared/icons/AngleDown.tsx";
 import { List } from "../shared/List.tsx";
-import useGlobalEvent from "beautiful-react-hooks/useGlobalEvent";
+import { useGlobalEvent } from "../../hooks/useGlobalEvent.ts";
 
 type ItemsProps = {
   section: Section;
@@ -24,8 +24,7 @@ export const Items: FC<ItemsProps> = ({ section }) => {
     setOpen((prev) => !prev);
   }, []);
 
-  const onKeyDown = useGlobalEvent<KeyboardEvent>("keydown");
-  onKeyDown((e) => {
+  useGlobalEvent("keydown", (e) => {
     if (items.length > 0) {
       switch (e.key) {
         case "a": {
