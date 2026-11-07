@@ -28,8 +28,34 @@ test("bad token keeps the user logged out", async ({ page }) => {
   await page.goto("/settings");
   await page.getByLabel("API Key").fill("bad-token");
   await page.getByRole("button", { name: "Save" }).click();
-  await page.waitForTimeout(2000);
+  await expect(page.getByText("WaniKani did not accept this API key")).toBeVisible();
   await expect(page.getByRole("link", { name: "Kanji" })).not.toBeVisible();
+});
+
+test("network failure shows a retry instead of the logged-out state", async ({ page }) => {
+  let offline = true;
+  await page.routeFromHAR("e2e/fixtures/wanikani.har", {
+    url: /api\.wanikani\.com/,
+    notFound: "abort",
+  });
+  await page.route(
+    (url) => url.hostname === "api.wanikani.com" && url.pathname === "/v2/user",
+    async (route) => {
+      if (offline) {
+        await route.abort();
+      } else {
+        await route.fallback();
+      }
+    },
+  );
+  await page.goto("/settings");
+  await page.getByLabel("API Key").fill("test-token");
+  await page.getByRole("button", { name: "Save" }).click();
+  await expect(page.getByText("Could not reach WaniKani")).toBeVisible();
+
+  offline = false;
+  await page.getByRole("button", { name: "Try again" }).click();
+  await expect(page.getByRole("link", { name: "Kanji" })).toBeVisible({ timeout: 30_000 });
 });
 
 test("good token shows updating screen then nav with username", async ({

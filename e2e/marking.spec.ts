@@ -23,6 +23,7 @@ test("clear marked items resets count to zero", async ({ page, loggedIn: _logged
   await page.keyboard.press("Alt+m");
   await expect(page.getByRole("link", { name: /Marked Items \(1\)/ })).toBeVisible();
   await page.goto("/settings");
+  page.once("dialog", (dialog) => dialog.accept());
   await page.getByRole("button", { name: "Clear marked items" }).click();
   await expect(page.getByRole("link", { name: /Marked Items \(0\)/ })).toBeVisible();
 });
