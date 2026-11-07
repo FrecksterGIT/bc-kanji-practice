@@ -1,3 +1,9 @@
+## [3.0.2](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v3.0.1...v3.0.2) (2026-11-07)
+
+### Bug Fixes
+
+- make WaniKani sync resumable and retryable ([9e6e7f3](https://github.com/FrecksterGIT/bc-kanji-practice/commit/9e6e7f3352006c7a9e3de8173ecf2ab7ce06a51e))
+
 ## [3.0.1](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v3.0.0...v3.0.1) (2026-11-07)
 
 ### Bug Fixes
