@@ -16,9 +16,14 @@ export type PersistedSettings = {
   markedItems: number[];
 };
 
+export type ConnectionStatus = "no-key" | "ok" | "invalid-key" | "unreachable";
+
 export interface SessionContextType extends PersistedSettings {
   user: WanikaniUserData | null;
   isLoggedIn: boolean;
+  /** Distinguishes a bad key ("invalid-key") from a failed request ("unreachable"). */
+  connectionStatus: ConnectionStatus;
+  retryConnection: () => void;
   maxLevel: number;
   setMarkedItems: (markedItems: number[] | ((prev: number[]) => number[])) => void;
   updateSettings: (

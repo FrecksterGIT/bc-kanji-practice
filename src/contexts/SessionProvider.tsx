@@ -1,34 +1,29 @@
-import { FC, ReactNode, use, useCallback, useEffect, useMemo, useState } from "react";
-import {
-  PersistedSettings,
-  SessionContext,
-  SessionContextType,
-  SortSetting,
-} from "./SessionContext.tsx";
+import { FC, ReactNode, use, useCallback, useEffect, useMemo, useReducer, useState } from "react";
+import { PersistedSettings, SessionContext, SessionContextType } from "./SessionContext.tsx";
 import { saveSettings } from "../utils/itemDB.ts";
-import { getInitialSettings, getUser } from "../utils/session.ts";
+import { getInitialSettings, getUser, retryUser } from "../utils/session.ts";
+import { clampLevel, maxLevelFor, mergeSettings } from "../utils/settings.ts";
 
 interface UserProviderProps {
   children: ReactNode;
 }
 
-const DEFAULT_SETTINGS: PersistedSettings = {
-  apiKey: "",
-  limitToLearned: false,
-  limitToCurrentLevel: false,
-  sorting: SortSetting.id,
-  level: 1,
-  markedItems: [],
-};
-
 export const SessionProvider: FC<UserProviderProps> = ({ children }) => {
   const storedSettings = use(getInitialSettings());
-  const [persistedSettings, setPersistedSettings] = useState<PersistedSettings>(
-    () => storedSettings ?? DEFAULT_SETTINGS,
+  const [persistedSettings, setPersistedSettings] = useState<PersistedSettings>(() =>
+    mergeSettings(storedSettings),
   );
-  const user = use(getUser(persistedSettings.apiKey));
+  const connection = use(getUser(persistedSettings.apiKey));
+  const user = connection.status === "ok" ? connection.user : null;
   const isLoggedIn = !!user;
-  const maxLevel = user?.level ?? 3;
+  const connectionStatus = connection.status;
+  const [, bumpRetry] = useReducer((count: number) => count + 1, 0);
+  const retryConnection = useCallback(() => {
+    retryUser(persistedSettings.apiKey);
+    bumpRetry();
+  }, [persistedSettings.apiKey]);
+  const maxLevel = maxLevelFor(user);
+  const level = clampLevel(persistedSettings.level, maxLevel);
 
   useEffect(() => {
     saveSettings(persistedSettings).then();
@@ -58,12 +53,25 @@ export const SessionProvider: FC<UserProviderProps> = ({ children }) => {
     () => ({
       user,
       isLoggedIn,
+      connectionStatus,
+      retryConnection,
       maxLevel,
       updateSettings,
       setMarkedItems,
       ...persistedSettings,
+      level,
     }),
-    [isLoggedIn, maxLevel, persistedSettings, setMarkedItems, updateSettings, user],
+    [
+      connectionStatus,
+      isLoggedIn,
+      level,
+      maxLevel,
+      persistedSettings,
+      retryConnection,
+      setMarkedItems,
+      updateSettings,
+      user,
+    ],
   );
 
   return <SessionContext value={value}>{children}</SessionContext>;
