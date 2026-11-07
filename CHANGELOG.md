@@ -1,3 +1,18 @@
+## [3.0.1](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v3.0.0...v3.0.1) (2026-11-07)
+
+### Bug Fixes
+
+- convert trailing n on submit and play audio for kana vocabulary ([6aaf766](https://github.com/FrecksterGIT/bc-kanji-practice/commit/6aaf766eeea47a95a66b1468362f56ffd5cbfb32))
+- incremental sync follows next_url past the first page ([29a358e](https://github.com/FrecksterGIT/bc-kanji-practice/commit/29a358e8c949b092e24e1957d1e93ba7ed1fdfe1))
+- keep saved settings on IndexedDB upgrade and merge defaults ([3a013f1](https://github.com/FrecksterGIT/bc-kanji-practice/commit/3a013f172ae0aebe7a2e9321056bcdeaa78a9fcb))
+- render mnemonic markup as React nodes instead of innerHTML ([d6093b0](https://github.com/FrecksterGIT/bc-kanji-practice/commit/d6093b0bcbb7b5dfe88b56726ea22ed9f191fb72))
+- settings page handles invalid keys, retries and destructive actions ([d4eaeb8](https://github.com/FrecksterGIT/bc-kanji-practice/commit/d4eaeb8e9a9c66c37c8f2f52bfe08523e2fd75b9))
+- tell an invalid API key apart from a failed WaniKani request ([34276ef](https://github.com/FrecksterGIT/bc-kanji-practice/commit/34276ef0295e269bab39615353c6b445d74b8272))
+
+### Performance Improvements
+
+- self-host Noto Sans JP instead of loading it from Google Fonts ([69af7b8](https://github.com/FrecksterGIT/bc-kanji-practice/commit/69af7b872fdc2f104f7386b088cfc478c7a76c7c))
+
 # [3.0.0](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v2.14.0...v3.0.0) (2026-11-04)
 
 ### Features
