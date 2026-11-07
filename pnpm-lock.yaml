@@ -189,6 +189,9 @@ importers:
 
   .:
     dependencies:
+      '@fontsource-variable/noto-sans-jp':
+        specifier: ^5.3.1
+        version: 5.3.1
       async-cache-dedupe:
         specifier: 3.4.0
         version: 3.4.0
@@ -313,6 +316,9 @@ packages:
   '@colors/colors@1.5.0':
     resolution: {integrity: sha512-ooWCrlZP11i8GImSjTHYHLkvFDP48nS4+204nGb1RiX/WXYHmJA2III9/e2DWVabCESdW7hBAEzHRqUn9OUVvQ==}
     engines: {node: '>=0.1.90'}
+
+  '@fontsource-variable/noto-sans-jp@5.3.1':
+    resolution: {integrity: sha512-/anGvJFc5y36f8DJ+3TSh2+KAvaRLA9PaLUMvneeY5s4j8m+8X4F3lE/sjTuG9YI5BX4sykvCk4TuJMG7ecMRQ==}
 
   '@jridgewell/gen-mapping@0.3.13':
     resolution: {integrity: sha512-2kkt/7niJ6MgEPxF0bYdQ6etZaA+fQvDcLKckhy1yIQOzaoKjBBjSj63/aLVjYE3qhRt5dvM+uUyfCg6UKCBbA==}
@@ -2891,6 +2897,8 @@ snapshots:
 
   '@colors/colors@1.5.0':
     optional: true
+
+  '@fontsource-variable/noto-sans-jp@5.3.1': {}
 
   '@jridgewell/gen-mapping@0.3.13':
     dependencies:
