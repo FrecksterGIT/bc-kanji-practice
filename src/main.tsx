@@ -1,5 +1,6 @@
 import { StrictMode, Suspense } from "react";
 import { createRoot } from "react-dom/client";
+import "@fontsource-variable/noto-sans-jp";
 import "./index.css";
 
 import { SessionProvider } from "./contexts/SessionProvider.tsx";

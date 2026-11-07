@@ -15,6 +15,7 @@
     "e2e:record": "UPDATE_HAR=1 playwright test e2e/record.setup.ts && vpx e2e/scripts/sanitize-har.ts"
   },
   "dependencies": {
+    "@fontsource-variable/noto-sans-jp": "^5.3.1",
     "async-cache-dedupe": "3.4.0",
     "beautiful-react-hooks": "5.0.3",
     "idb": "8.0.4",
