@@ -163,10 +163,10 @@ No key is saved, or WaniKani rejected it. Create a new token and save it again.
 Check that the level has items and turn off **Limit content to currently learned** if you have not started that level in WaniKani. The Marked Items page is empty until you mark something.
 
 **New or changed WaniKani items are missing.**
-Reload the page. The app asks WaniKani for changes at every start. After a long absence a very large update may not be fully picked up on the first reload, so reload once more.
+After a reload, the app checks WaniKani for changes at most every 12 hours. Until then it only checks your account, so changes made on WaniKani can take up to 12 hours to appear. There is no refresh button. To check right away, log out and clear local data in Settings, then enter your key again. This also removes your marked items. Next-review sorting and **Limit content to currently learned** can lag up to 12 hours behind reviews you have done on WaniKani.
 
 **The latest WaniKani data is missing after startup.**
-If sync fails, the app opens with the data stored on this device. Check your connection and key, then reload to fetch the latest data.
+If sync fails, the app opens with the data stored on this device and shows a red banner with a **Try again** button. Check your connection and key, then click it. A sync that was interrupted never skips data: the next one starts again from the last complete sync.
 
 **Does the app change my WaniKani progress?**
 No. Answers here are not sent to WaniKani and do not count as reviews.
