@@ -1,6 +1,6 @@
 catalog:
   "@playwright/cli": 0.1.23
-  "@playwright/mcp": 0.0.84
+  "@playwright/mcp": 0.0.85
   "@playwright/test": 1.65.0
   playwright: 1.65.0
   playwright-core: 1.65.0
