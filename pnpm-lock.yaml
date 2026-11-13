@@ -165,8 +165,8 @@ settings:
 catalogs:
   default:
     '@playwright/cli':
-      specifier: 0.1.23
-      version: 0.1.23
+      specifier: 0.1.24
+      version: 0.1.24
     '@playwright/mcp':
       specifier: 0.0.84
       version: 0.0.84
@@ -216,7 +216,7 @@ importers:
     devDependencies:
       '@playwright/cli':
         specifier: 'catalog:'
-        version: 0.1.23
+        version: 0.1.24
       '@playwright/mcp':
         specifier: 'catalog:'
         version: 0.0.84
@@ -669,8 +669,8 @@ packages:
     resolution: {integrity: sha512-Fh+SOBxMu7/pbSk84WG4BN6npcxxlF4jWNQJ+S4IUNyvSVeQwOVTFQMD/Dx2EqBQ1lVeCADcJ+0rzT1BKQ9cUA==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
 
-  '@playwright/cli@0.1.23':
-    resolution: {integrity: sha512-+TuHfVgpK1SIlwyV7bcZ9SRRhnVOAIwJwxZCgEh5LWkZuyGfSYnHNx8J7H78dhCwMyLkJtGb/j5XICjzEKzrfg==}
+  '@playwright/cli@0.1.24':
+    resolution: {integrity: sha512-AIO0AiPHh1ZB9e+i+ZiRwSTfqlkJtWcojgtPnW/BbBCgr96OojlL15dc1jWWclfbjdwPv5900qxuDyEHghjSqw==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -2982,7 +2982,7 @@ snapshots:
 
   '@oxlint/plugins@1.91.0': {}
 
-  '@playwright/cli@0.1.23':
+  '@playwright/cli@0.1.24':
     dependencies:
       playwright: 1.65.0
       playwright-core: 1.65.0
