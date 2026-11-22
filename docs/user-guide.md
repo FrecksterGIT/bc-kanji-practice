@@ -102,6 +102,7 @@ Mark items you find hard and come back to them:
 - Click the bookmark icon, or press **Alt+M**.
 - The **Marked Items (n)** count in the top bar goes up.
 - Open **Marked Items** to practice only those items, from every level.
+- To unmark an item there, click the bookmark icon or press **Alt+M** again. The item leaves the list, the next item is shown (the first one if you removed the last), and the answers you already gave to the other items are kept.
 
 ![Marked items](images/10-marked.png)
 

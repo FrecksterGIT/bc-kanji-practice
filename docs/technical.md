@@ -154,6 +154,8 @@ Persisted settings (`PersistedSettings`, `src/contexts/SessionContext.tsx`): `ap
 | `vocabulary` | `vocabulary` and `kana_vocabulary` of the selected level            |
 | `marked`     | subjects whose ids are in `markedItems`, any level, no level filter |
 
+The `marked` list is loaded when the view is entered. Unmarking an item afterwards removes it from the shown list in place (`useSelectedItems` derives `data` from `source`); it does not reload or re-shuffle, and `ItemProvider` keeps the answers and moves to the next item.
+
 Level-based sections are filtered to the selected level, and further to subjects with an assignment that has `started_at` when `limitToLearned` is on. Sorting:
 
 - `id`: by WaniKani id.
