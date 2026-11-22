@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 import { Section } from "../contexts/ItemContext.tsx";
 import { WanikaniSubject } from "../wanikani";
@@ -13,8 +13,14 @@ import { useLocation } from "react-router";
 
 export const useSelectedItems = (section: Section) => {
   const [loading, setLoading] = useState(false);
-  const [data, setData] = useState<Array<WanikaniSubject>>([]);
+  const [source, setSource] = useState<Array<WanikaniSubject>>([]);
   const { limitToLearned, sorting, level, markedItems } = useSession();
+  // The marked list is loaded when the view is entered. Un(marking) afterwards must not reload
+  // (and re-shuffle) it, so the loader reads the marks from a ref instead of depending on them.
+  const latestMarkedItems = useRef(markedItems);
+  useEffect(() => {
+    latestMarkedItems.current = markedItems;
+  }, [markedItems]);
   const { state } = useLocation();
   const [plannedAssignments, setPlannedAssignments] = useState(() => new Map<number, Date>());
   const [startedAssignments, setStartedAssignments] = useState<number[]>([]);
@@ -69,17 +75,17 @@ export const useSelectedItems = (section: Section) => {
 
   const loadMarkedItems = useCallback(() => {
     setLoading(true);
-    getSubjectByIds(markedItems).then((items) => {
-      setData(filterAndSort(items, false));
+    getSubjectByIds(latestMarkedItems.current).then((items) => {
+      setSource(filterAndSort(items, false));
       setLoading(false);
     });
-  }, [filterAndSort, markedItems]);
+  }, [filterAndSort]);
 
   const loadKanji = useCallback(() => {
     setLoading(true);
     getSubjectsByObjectAndLevel("kanji", level).then((items) => {
       if (items) {
-        setData(filterAndSort(items));
+        setSource(filterAndSort(items));
       }
       setLoading(false);
     });
@@ -93,7 +99,7 @@ export const useSelectedItems = (section: Section) => {
     ]).then((all) => {
       if (all[0] && all[1]) {
         const items = [...all[0], ...all[1]];
-        setData(filterAndSort(items));
+        setSource(filterAndSort(items));
       }
       setLoading(false);
     });
@@ -117,5 +123,14 @@ export const useSelectedItems = (section: Section) => {
     }
   }, [loadVocabulary, section, state]);
 
-  return { loading, data };
+  // Items unmarked after loading drop out of the marked list in place, keeping the order.
+  const data = useMemo(() => {
+    if (section !== "marked") {
+      return source;
+    }
+    const marked = new Set(markedItems);
+    return source.filter((item) => marked.has(item.id));
+  }, [section, source, markedItems]);
+
+  return { loading, source, data };
 };

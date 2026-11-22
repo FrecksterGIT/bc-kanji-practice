@@ -6,10 +6,18 @@ import { isKanaVocabulary, isKanji, isVocabulary } from "../utils/typeChecks.ts"
 
 export const ItemProvider: FC<PropsWithChildren> = ({ children }) => {
   const [section, setSection] = useState<Section>("kanji");
-  const { data: items } = useSelectedItems(section);
-  const [selectedIndex, setSelectedIndex] = useState<number>(0);
+  const { source, data: items } = useSelectedItems(section);
+  const [storedIndex, setSelectedIndex] = useState<number>(0);
+  // When the shown list shrinks (an item was unmarked in the Marked view) the item that moved
+  // into the removed position is the next one; past the end we wrap around to the first.
+  const selectedIndex = storedIndex < items.length ? storedIndex : 0;
   const item = useMemo(() => items?.[selectedIndex], [items, selectedIndex]);
-  const [validItems, setValidItems] = useState<number[]>([]);
+  const [answeredIds, setValidItems] = useState<number[]>([]);
+  // Ids of items that are no longer in the list must not count towards the progress.
+  const validItems = useMemo(() => {
+    const ids = new Set(items.map((i) => i.id));
+    return answeredIds.filter((id) => ids.has(id));
+  }, [answeredIds, items]);
   const isValid = useMemo(() => item && validItems.includes(item.id), [item, validItems]);
 
   const validValues: string[] = useMemo(() => {
@@ -75,11 +83,18 @@ export const ItemProvider: FC<PropsWithChildren> = ({ children }) => {
   );
 
   useEffect(() => {
-    if (items && items.length > 0) {
+    if (storedIndex !== selectedIndex) {
+      setSelectedIndex(selectedIndex);
+    }
+  }, [storedIndex, selectedIndex]);
+
+  // Only a freshly loaded list starts a new round; removing items from it keeps the progress.
+  useEffect(() => {
+    if (source.length > 0) {
       setSelectedIndex(0);
       setValidItems([]);
     }
-  }, [items]);
+  }, [source]);
 
   const contextValue: ItemContextType = useMemo(
     () => ({
