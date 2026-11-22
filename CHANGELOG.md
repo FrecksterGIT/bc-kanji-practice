@@ -1,3 +1,9 @@
+## [3.0.3](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v3.0.2...v3.0.3) (2026-11-22)
+
+### Bug Fixes
+
+- update frontend tooling dependencies- [#260](https://github.com/FrecksterGIT/bc-kanji-practice/issues/260)⁠ ([3c9a3b0](https://github.com/FrecksterGIT/bc-kanji-practice/commit/3c9a3b099c7fb2e020738fc39f39e7b3443efb25))
+
 ## [3.0.2](https://github.com/FrecksterGIT/bc-kanji-practice/compare/v3.0.1...v3.0.2) (2026-11-07)
 
 ### Bug Fixes
