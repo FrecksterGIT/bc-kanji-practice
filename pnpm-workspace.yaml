@@ -3,7 +3,7 @@ catalog:
   "@playwright/mcp": 0.0.86
   "@playwright/test": 1.65.1
   playwright: 1.65.1
-  playwright-core: 1.65.0
+  playwright-core: 1.65.1
   vite: npm:@voidzero-dev/vite-plus-core@8.3.8000
   vite-plus: 1.7.0
 overrides:

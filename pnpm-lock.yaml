@@ -183,7 +183,7 @@ catalogs:
 overrides:
   vite@*: npm:@voidzero-dev/vite-plus-core@8.3.8000
   playwright: 1.65.1
-  playwright-core: 1.65.0
+  playwright-core: 1.65.1
 
 importers:
 
@@ -2320,8 +2320,8 @@ packages:
     resolution: {integrity: sha512-C+VUP+8jis7EsQZIhDYmS5qlNtjv2yP4SNtjXK9AP1ZcTRlnSfuumaTnRfYZnYgUUYVIKqL0fRvmUGDV2fmp6g==}
     engines: {node: '>=4'}
 
-  playwright-core@1.65.0:
-    resolution: {integrity: sha512-vNSKgH6YqtN7cdT/L334zo0a+YwkrpicyrHJlWWPIm/Q+Nn2SWInil01oT0mbu96U4GgoRtCYQD9CzJQgju+lA==}
+  playwright-core@1.65.1:
+    resolution: {integrity: sha512-hqPpz7blSMPxWVdoeE1yiBSzXsKiVOd2k+kjCvmUywD2GPO2Dd9HfcWnq9NN0GHbNZDFgZ9JfBFr+X5/BLo0qw==}
     engines: {node: '>=20'}
     hasBin: true
 
@@ -3095,12 +3095,12 @@ snapshots:
   '@playwright/cli@0.1.25':
     dependencies:
       playwright: 1.65.1
-      playwright-core: 1.65.0
+      playwright-core: 1.65.1
 
   '@playwright/mcp@0.0.86':
     dependencies:
       playwright: 1.65.1
-      playwright-core: 1.65.0
+      playwright-core: 1.65.1
 
   '@playwright/test@1.65.1':
     dependencies:
@@ -4447,11 +4447,11 @@ snapshots:
       find-up: 2.1.0
       load-json-file: 4.0.0
 
-  playwright-core@1.65.0: {}
+  playwright-core@1.65.1: {}
 
   playwright@1.65.1:
     dependencies:
-      playwright-core: 1.65.0
+      playwright-core: 1.65.1
 
   pngjs@7.0.0: {}
 
